@@ -1,0 +1,160 @@
+.myNewsBox{
+	width: 100%;
+	height: 100%;
+	overflow:hidden;
+	position: relative;
+    padding-top: 1.706rem;
+}
+.myNewsContentsBox{
+	width: 100%;
+	height: 100%;
+	padding-top: 1.045rem;
+	position: relative;
+}
+.myNewsContentsBox .myNewsContentsTopBox{
+    width: 100%;
+    height: 1.045rem;
+    position: absolute;
+    left: 0;
+    top:0;
+    padding: 0 0.3733rem;
+    background: #fff;
+    z-index: 101;
+}
+.myNewsContentsBox .myNewsContentsTopBox span{
+	display: block;
+	width: auto;
+	height: 100%;
+	line-height: 1.045rem;
+	font-size: 0.32rem;
+	color: #666666;
+}
+.myNewsContentsBox .myNewsContentsTopBox span i{
+	font-style: normal;
+}
+.myNewsContentsBox .myNewsContentsTopBox .myNewsCheckbox{
+	height: 100%;
+	line-height: 1.045rem;
+	font-size: 0.32rem;
+	color: #666666;
+	background: url(../images/project/checkbox.png) left center no-repeat;
+	background-size: 0.32rem;
+	padding-left: 0.48rem;
+}
+.myNewsContentsBox .myNewsContentsTopBox .myNewsSelectCheckbox{
+	background: url(../images/project/checkbox_select.png) left center no-repeat;
+	background-size: 0.32rem;
+}
+.myNewsContentsBox .myNewsContentsDownBox{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.myNewsContentsBox .searchCommonBox{
+	z-index: 1000;
+}
+.myNewsContentsBox .searchCommonBox .searchCommentContent {
+	padding-top: 0.8rem;
+}
+.myNewsContentsBox .searchCommonBox .searchCommentContent .searchCommentDown{
+	padding-top: 0;
+}
+.myNewsContentsBox .searchCommonBox .searchCommentContent .searchCommentTop div{
+	padding:0 0.3733rem;
+}
+.myNewsContentsBox .myNewsContentsDownBox .myNewsListBox{
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	position: relative;
+}
+.myNewsUlBox{
+	width: 100%;
+	height: auto;
+}
+.myNewsUlBox li{
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+	padding-left: 0.5332rem;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+	position: relative;
+}
+.myNewsUlBox li:active{
+	background-color: rgba(0,0,0,.1);
+}
+.myNewsUlBox li a{
+	width: 100%;
+	font-size: 0.32rem;
+    color: #B8B8B8;
+    letter-spacing: 0;
+    text-decoration: none;
+    display: inline-block;
+    padding-left: 2.8%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box; /* Firefox */
+    -webkit-box-sizing:border-box; /* Safari */
+}
+.myNewsUlBox li a i{
+	display: block;
+    width: 0.16rem;
+    height: 0.16rem;
+    background-image: url(../images/index/circle.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: absolute;
+    left: 0.35rem;
+    top: 0.5rem;  
+}
+.myNewsUlBox li a i.showRead{
+	display: block;
+}
+.myNewsUlBox li a i.hideRead{
+	display: none;
+}
+.myNewsUlBox li a h2{
+	margin: 0;
+	width: 100%;
+	height: auto;
+	color: #333;
+	box-sizing: border-box;
+    font-size: 0.3733rem;
+    line-height: 0.48rem;
+    font-weight: normal;
+    padding-top: 0.3733rem;
+    padding-bottom: 0.3733rem;
+    padding-right: 0.3733rem;
+}
+.myNewsUlBox li a h2 span{
+	color: #21528C;
+}
+.myNewsUlBox li a p{
+	width: 100%;
+	background-image: url(../images/index/icon-time.png);
+    background-repeat: no-repeat;
+    background-size: 0.32rem 0.32rem;
+    background-position: 0 1px;
+    line-height: 0.32rem;
+    font-size: 0.32rem;
+    color: #666666;
+    padding-left: 0.53rem;
+    padding-bottom: 0.4rem;
+}
+
+.loadMore{
+	width: 100%;
+	padding: 0.2rem;
+	font-size: 0.3733rem;
+	color: #333;
+	text-align: center;
+	background-color: #fff;
+	position: relative;
+}
+.searchCommonBox .searchCommentContent .searchCommentDown .searchScrollCommentDown{
+	width: 100%;
+	min-height: 100%;
+	height: auto;
+	position: relative;
+}

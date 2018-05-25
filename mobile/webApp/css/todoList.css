@@ -1,0 +1,222 @@
+.todoBox{
+	width: 100%;
+	height: 100%;
+	padding-top: 2.906rem;
+	position: relative;
+}
+.todoBox .m_common_search{
+	top:1.2rem;
+}
+.todoBox .todoTabBox{
+	width: 100%;
+	height: 1.2rem;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 110;
+}
+.todoBox .todoTabBox ul{
+	width: 100%;
+	height: 100%;
+	display: -webkit-flex; /* Safari */
+  	display: flex;
+}
+.todoBox .todoTabBox ul li{
+	flex:1;
+	font-size: 0.4266rem;
+	line-height: 1.2rem;
+	letter-spacing: 0;
+	text-align: center;
+}
+.todoBox .todoTabBox ul li a{
+	color: #333333;
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+}
+.todoBox .todoTabBox ul li a span.selectBorder{
+	display: none;
+	width: 1.333rem;
+	height: 0.0533rem;
+	background: #21528C;
+	position: absolute;
+	left: -0.24rem;
+	bottom: 0;
+}
+.todoBox .todoTabBox ul li.selectLi a span.selectBorder{
+	display: inline-block;
+}
+.todoBox .todoContentBox{
+	width: 100%;
+	height: 100%;
+	background:rgba(242, 242, 242, 0.5);
+	overflow: hidden;
+}
+.todoScrollBox{
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	position: relative;
+}
+.loadMore{
+	width: 100%;
+	padding: 0.2rem;
+	font-size: 0.3733rem;
+	color: #333;
+	text-align: center;
+	background-color: #fff;
+	position: relative;
+	/*display: none;*/
+}
+.searchCommonBox .searchCommentContent{
+	padding-top: 0.8rem;
+}
+.searchCommonBox .searchCommentContent .todeContentBox{
+	width: 100%;
+	height: 100%;
+	padding-top: 0;
+	overflow: hidden;
+}
+.todoSearchScrollBox{
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	position: relative;
+}
+.searchCommonBox .searchCommentContent .todeContentBox > ul{
+	width: 100%;
+	height: auto;
+    position: relative;
+}
+.searchCommonBox .searchCommentContent .todeContentBox > ul:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.searchCommonBox .searchCommentContent .todeContentBox ul.flowSeachList{
+	width: 100%;
+	height:100%;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+.searchCommonBox .searchCommentContent .todeContentBox ul.flowSeachList li{
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	background: #fff;
+	padding-left: 0.266rem;
+}
+.searchCommonBox .searchCommentContent .todeContentBox ul.flowSeachList li a{
+	display: inline-block;
+	width: 100%;
+	height: 1.6rem;
+	box-sizing: border-box;
+	padding: 0.266rem 0 0.133rem 0;
+}
+.searchCommonBox .searchCommentContent .todeContentBox ul.flowSeachList li a h2{
+	margin: 0;
+	padding: 0;
+	font-weight: normal;
+	font-size: 0.4rem;
+	color: #333333;
+	margin-bottom: 0.16rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow:ellipsis;
+	box-sizing: border-box;
+	padding-right: 0.266rem;
+}
+.searchCommonBox .searchCommentContent .todeContentBox ul.flowSeachList li a h2 span{
+	color: #21528C;
+}
+.searchCommonBox .searchCommentContent .todeContentBox ul.flowSeachList li a h2 span.mkhColor{
+	color: #b8b8b8;
+}
+.searchCommonBox .searchCommentContent .todeContentBox ul.flowSeachList li a p{
+	font-size: 0.32rem;
+	color: #666666;
+}
+ul.todoScrollBoxUl{
+	width: 100%;
+	height: auto;
+}
+ul.todoScrollBoxUl li{
+	height: auto;
+	// max-height: 2.4rem;
+	position: relative;
+	background: #fff;
+	padding-left:2.8%; /*左右边距*/
+	box-sizing: border-box;
+}
+ul.todoScrollBoxUl li i{
+	display: block;
+	width:  0.16rem;
+	height: 0.16rem;
+	background-image: url(../images/index/circle.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	position: absolute;
+	top: 0.54rem;
+}
+ul.todoScrollBoxUl li i.noRead{
+	display: none;
+}
+ul.todoScrollBoxUl li p{
+	margin-left: 0.5332rem;
+	padding-top: 0.3733rem;
+	margin-bottom: 0.3733rem;
+	height: auto;
+	max-height: 0.96rem;
+	font-size: 0.3733rem;
+	color: #333333;
+	letter-spacing: 0;
+	line-height: 0.48rem;
+	overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	padding-right: 0.453rem;
+}
+ul.todoScrollBoxUl li p span{
+	color: #21528C;
+}
+ul.todoScrollBoxUl li .info{
+	display: flex;
+	height: 0.7466rem;
+	margin-left: 0.5332rem;
+	padding-bottom: 0.4rem;
+}
+ul.todoScrollBoxUl li .info span,ul.todoScrollBoxUl li .info label{
+	display: block;
+	box-sizing: border-box;
+}
+ul.todoScrollBoxUl li .info span{
+	background-image: url(../images/index/icon-time.png);
+	background-repeat: no-repeat;
+	background-size:0.32rem 0.32rem;
+	padding-left: 0.53rem;
+	background-position: 0 center;
+	height: 0.32rem;
+	line-height: 0.32rem;
+	font-size: 0.32rem;
+	color: #666666;
+	letter-spacing: 0;
+	flex:1;
+}
+ul.todoScrollBoxUl li .info span.infoEndTime{
+	padding-left: 0;
+}
+ul.todoScrollBoxUl li .info span.noIcon{
+	background: none;
+}
+ul.todoScrollBoxUl li .info label{
+	margin-right:1.718rem;
+	padding-left: 0.53rem;
+	font-size: 0.32rem;
+	color: #666666;
+	letter-spacing: 0;
+	height: 0.32rem;
+	line-height: 0.32rem;
+}

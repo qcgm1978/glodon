@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<button id="btn">拷贝</button>
+<script type="text/javascript" src="js/libs/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/libs/js/cordova.js"></script>
+<script type="text/javascript">
+	$("#btn").on("click",function(){
+		var urlSS = 'bim.wanda-dev.cn:81/share/share.html?viewpointId=1112803607856608&projectId=1103569664811232&projectVersionId=1103569664811232&projectName=质监标准网络版测试--北京院A_01&fileVersionId=1103569801412960';
+	    function sucbackAction(){
+	        alert("close menu!");
+	    }
+	    function onFail(message) {
+	        alert('Failed because: ' + message);
+	    }
+	    cordova.exec(sucbackAction, onFail,"WDPasteboardPlugin", "copyString",[urlSS]);
+	})
+</script>
+</body>
+</html>

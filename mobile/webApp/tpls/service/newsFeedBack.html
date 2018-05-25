@@ -1,0 +1,25 @@
+<div class="newsFeedBack" id="newsFeedBack">
+	<div class="listScrollBox">
+		<dl id="listComponent" style="display: none;">
+			<dt>{{userLogo}}</dt>
+			<dd>
+				<em>{{createTime}}</em>
+	            <h2><b>{{adviceType}}</b>{{title}}</h2>
+				<p class="{{contentBool}}">{{content}}</p>
+				<div class="uploadImgBox {{showUpload}}">
+					<ul class="border-bottom-color">
+						{{imgComponent}}
+					</ul>
+				</div>
+				<div class="uploadAttachmentBox {{showUpload}}">
+					<ul class="serviceRelatedListBox" id="listBox">
+						{{attachmentComponent}}
+					</ul>
+				</div>
+				<div class="replyBox {{showReply}}">
+	                {{reply}}
+	            </div>
+			</dd>
+		</dl>
+	</div>
+</div>

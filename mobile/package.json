@@ -1,0 +1,22 @@
+{
+  "name": "bim_static_mobile",
+  "version": "1.0.0",
+  "description": "Hello bim_static_mobile",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "start http://127.0.0.1:81/outerLogin.html && livereload",
+    "nginx": "d:&&cd nginx-1.8.0&&echo 'begin nginx' && nginx",
+    "macSN":"sudo brew services start nginx",
+    "macStopN":"sudo nginx -s stop",
+    "macRN":"sudo brew services restart nginx",
+    "stop": "d:&&cd nginx-1.8.0&&echo 'beg in stop'&&nginx -s stop",
+    "fkill": "fkill 3000 -f -v"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://geek.glodon.com/scm/wandacloud/bim_static_mobile.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

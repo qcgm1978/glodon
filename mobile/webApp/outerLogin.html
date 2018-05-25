@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-control" content="no-cache">
+<meta http-equiv="Cache" content="no-cache">
+<link rel="stylesheet" type="text/css" href="css/comm.css" />
+<link rel="stylesheet" type="text/css" href="css/outerLogin.css" />
+</head>
+<body>
+	<div class="outerLoginBox">
+		<div id="mainHeader" class="mainHeader" style="display: block;">
+		    <div class="mobileBar"></div>
+		    <header>
+		        <div class="header-close" style="display: block;">
+		            <a href="javascript:;" id="closeBtn">
+		                <span class="header-close-1"></span>
+		                <span class="header-close-2"></span>
+		            </a>
+		        </div>
+		    </header>
+		</div>
+		<div class="outerLoginLogo"><img src="images/comm/login_banner.png"></div>
+		<div class="outerLoginContent">
+			<div class="inputBox">
+				<input type="text" id="userName" placeholder="用户名">
+			</div>
+			<div class="inputBox passWordClass">
+				<input type="passWord" id="passWord" placeholder="密码">
+			</div>
+			<button id="outerLoginBtn">登录</button>
+			<!-- <a href="http://139.217.25.150/mobile/a.html">下载page</button> -->
+		</div>
+		
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/libs/js/cordova.js"></script>
+<script type="text/javascript" src="js/libs/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="js/libs/js/jquery.cookie.js"></script>
+<script type="text/javascript">
+;(function($,win,doc){
+	var outerLogin = {
+		defaults:{
+			userName:'',
+			passWord:'',
+			rememerMe:false,
+			flag:true,
+			domainStr:"",//访问的是ip还是域名
+		},
+		init:function(options){
+			this.defaults = $.extend({},this.defaults, options);
+			this.checkHostHandle();//检查访问的是域名换是ip
+			this.initTipHandle();//初始化弹出提示的dom结构
+			this.initHandle();//初始化一些使用的方法
+			this.initTopHandle();//初始化自己的头部关闭按钮
+		},
+		initTopHandle:function(){//初始化自己的头部关闭按钮
+			$("#closeBtn").on("click",function(){//关闭浏览器
+				cordova.exec(null, null,"WDNaviPlugin","backAction",["1"]);
+			})
+		},
+		initTipHandle:function(){
+			var divDom = document.createElement("div");
+			divDom.innerHTML = "";
+			divDom.id = "tipId";
+			divDom.className = "tipClass";
+			document.body.appendChild(divDom);
+		},
+		initHandle:function(){//初始化一些使用的方法
+			var _this = this;
+			var outerLoginBtn = $("#outerLoginBtn");
+			var userName = $("#userName");
+			var passWord = $("#passWord");
+			userName.val(this.defaults.userName);
+			passWord.val(this.defaults.passWord);
+			outerLoginBtn.on("click",function(){
+				if((userName.val().trim().length==0 && passWord.val().trim().length==0)||userName.val().trim().length==0){
+					_this.tipHandle("请输入用户名");
+					// userName.focus();
+					return;
+				}
+				if(_this.strLen(userName.val().trim())>30){
+					_this.tipHandle("用户名最多30字符");
+					return;
+				}
+				if(passWord.val().trim().length==0){
+					_this.tipHandle("请输入密码");
+					// userName.focus();
+					return;
+				}
+				if(_this.strLen(passWord.val().trim())>30){
+					_this.tipHandle("密码最多30字符");
+					return;
+				}
+				_this.defaults.userName = userName.val().trim();
+				_this.defaults.passWord = passWord.val().trim();
+				_this.submitLogin(outerLoginBtn);//执行登录提交方法
+			})
+		},
+		tipHandle:function(tipText){//控制弹出提示的方法
+			var tipId = $("#tipId");
+			tipId.html(tipText).fadeIn("normal",function(){
+				setTimeout(function(){
+					tipId.fadeOut();
+				},500)
+			});
+		},
+		strLen:function(str){//计算输入字符串的长度
+			var strLen=0;
+			for(var i=0,len=str.length;i<len;i++){
+				if (str.charCodeAt(i) >= 0 && str.charCodeAt(i) <= 128) {
+					strLen += 1;
+				}else{
+					strLen += 2;
+				}
+			}
+			return strLen;
+		},
+		setCookieHandle:function(cookieName,cookieVal){//设置cookie
+			var domainStr = this.defaults.domainStr;
+			var Days = 1, //0.02
+			exp = new Date();
+			exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+			document.cookie = cookieName + "=" + cookieVal + ";expires=" + exp.toGMTString() + ";domain=" + domainStr + ";path=/";
+		},
+		temporaryHandle:function(obj){
+			var dialogBg = $('<div class="dialogBg"></div>');
+			var dialogBox = $('<div class="dialogBox"><div class="dialogTitleBox" id="dialogTitleBox"></div><div class="dialogContentBox" id="dialogContentBox"></div><div class="dialogBottonBox" id="dialogBottonBox"><span>我知道了</span></div></div>');
+			$("body").append(dialogBg);
+			$("body").append(dialogBox);
+			var dialogBox = $(".dialogBox");
+			var dialogTitleBox = $("#dialogTitleBox");
+			var dialogContentBox = $("#dialogContentBox");
+			var dialogBottonBox = $("#dialogBottonBox");
+			dialogTitleBox.html(obj.tipTitle);
+			dialogContentBox.html(obj.tipContent);
+			var dialogTitleBoxH = dialogTitleBox.height();
+			var dialogContentBoxH = dialogContentBox.outerHeight();
+			var dialogBottonBoxH = dialogBottonBox.height();
+			dialogBox.height(dialogTitleBoxH+dialogContentBoxH+dialogBottonBoxH);
+			dialogBox.css("margin-left",-1*dialogBox.width()/2);
+			dialogBox.css("margin-top",-1*dialogBox.height()/2);
+			dialogBottonBox.off("click");
+			dialogBottonBox.on("click",function(){
+				$(".dialogBox").hide().remove();
+				$(".dialogBg").hide().remove();
+			})
+		},
+		submitLogin:function(ele){//执行登录提交方法
+			if(!this.defaults.flag){
+				return;
+			}
+			var _this = this;
+			var data = {
+				userid:this.defaults.userName,
+				password:this.defaults.passWord,
+				ostype:1,
+			}
+			ele.html("登录中");
+			this.defaults.flag = false;
+			$.ajax({
+				type: "POST",
+				url: "/platform/login",
+				data: data,
+				dataType: "json",
+				success: function(data){
+					ele.html("登录");
+					_this.defaults.flag = true;
+					if(data.code == 0){
+						var innerArr = ['userId','requestts','appkey','signature','isCookie','AuthUser_AuthToken1',"yesKnow","AuthUser_AuthToken1","ostype"];
+						for(var i=0,len=innerArr.length;i<len;i++){
+						   _this.clearCookieHandle(innerArr[i]);//清楚内网用户的cookie
+						}
+						for(key in data.cookie){
+							_this.setCookieHandle(key,data.cookie[key]);
+						}
+						if(_this.defaults.rememerMe){
+							_this.setCookieHandle("userName",_this.defaults.userName);
+							_this.setCookieHandle("passWord",_this.defaults.passWord);
+							_this.setCookieHandle("rememerMe",true);
+						}else{
+							if($.cookie("userName") || $.cookie("passWord") || $.cookie("rememerMe")){
+								_this.setCookieHandle("userName","");
+								_this.setCookieHandle("passWord","");
+								_this.setCookieHandle("rememerMe","");
+							}
+						}
+						_this.getCurrentHandle();//获取用户信息的方法
+					}else{
+						if(data.ssoChangePwdUrl){
+							var dialogText = "您的密码是临时密码，请您到电脑上登录万达筑云项目管理平台（bim.wanda.cn）后修改密码。";
+							_this.temporaryHandle({
+								tipTitle:"温馨提示",
+								tipContent:dialogText,
+							});
+						}else{
+							_this.tipHandle(data.messageCN);
+						}
+					}
+				}
+			})
+		},
+		getCurrentHandle:function(){
+			var _this = this;
+			$.ajax({
+				url: "/platform/user/current",
+				success:function(data){
+					if(data.code==0){
+						window.mobileApp = data.data;
+						if(location.host.endsWith(81)){
+							location.href = "/#/index";
+						}else{
+							location.href = "/mobile";
+						}
+					}else if(data.code==1000){
+						_this.temporaryHandle({
+							tipTitle:"温馨提示",
+							tipContent:"登录失败，用户名在组织机构中不存在，请联系运维",
+						});
+					}
+				}
+			});
+		},
+		clearCookieHandle:function(name){//清除内网用户的cookie
+			var exp = new Date();
+			exp.setTime(exp.getTime() - 31 * 24 * 60 * 60 * 1000);
+			var cval = this.getCookieHandle(name);
+			if (cval != null)
+			    document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString() + ";domain=" + this.defaults.domainStr + ";path=/";
+		},
+		getCookieHandle:function(keyName){
+			var result;
+			var cookies = document.cookie;
+			var cookiesArr = cookies.split("; ");
+			for(var i=0,len=cookiesArr.length;i<len;i++){
+				var cookieStr = cookiesArr[i];
+				var pos = cookieStr.indexOf("=");
+				var cookieName = cookieStr.substring(0,pos);
+				if(cookieName == keyName){
+					result = cookieStr.substr(pos + 1);
+					break;
+				}
+			}
+			return result;
+		},
+		checkHostHandle:function(){//检查是域名登录换是ip登录
+            var hostname = window.location.hostname;
+            var re=/^(\d+)\.(\d+)\.(\d+)\.(\d+)$/;//正则表达式
+            if(re.test(hostname)){
+                this.defaults.domainStr = hostname;
+            }else{
+                this.defaults.domainStr = hostname.substring(hostname.indexOf("."));
+            }
+        },
+	}
+	win.outerLogin = outerLogin;
+})(jQuery,window,document)
+$(function(){
+	var cookieObj = {
+		userName:outerLogin.getCookieHandle("userName")?outerLogin.getCookieHandle("userName"):"",
+		passWord:outerLogin.getCookieHandle("passWord")?outerLogin.getCookieHandle("passWord"):"",
+		rememerMe:outerLogin.getCookieHandle("rememerMe")?outerLogin.getCookieHandle("rememerMe"):false,
+	}
+	outerLogin.init(cookieObj);//执行外部用户登录的方法	
+})
+</script>
