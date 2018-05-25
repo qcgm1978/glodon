@@ -1,0 +1,69 @@
+{
+  "messageId": "240b56572b024fc7aae3f58264ab1ef4",
+  "messageType": null,
+  "timestamp": 1472803910120,
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "parentname": null,
+      "name": "周雄科",
+      "id": "4116",
+      "type": "1"
+    },
+    {
+      "parentname": "商业物业部",
+      "name": "周录录",
+      "id": "750098144",
+      "type": "1"
+    },
+    {
+      "parentname": "营运组",
+      "name": "周崇鑫",
+      "id": "1303061732",
+      "type": "1"
+    },
+    {
+      "parentname": "餐饮部",
+      "name": "周琦",
+      "id": "1592887487",
+      "type": "1"
+    },
+    {
+      "parentname": null,
+      "name": "周月秋",
+      "id": "112246",
+      "type": "1"
+    },
+    {
+      "parentname": "华夏时报",
+      "name": "地产周刊",
+      "id": "95430034",
+      "type": "2"
+    },
+    {
+      "parentname": "国际评论部",
+      "name": "慈善周刊",
+      "id": "95429946",
+      "type": "2"
+    },
+    {
+      "parentname": "上海周浦万达广场",
+      "name": "周浦店",
+      "id": "72061",
+      "type": "2"
+    },
+    {
+      "parentname": "各地门店",
+      "name": "上海周浦中心店",
+      "id": "1516284938",
+      "type": "2"
+    },
+    {
+      "parentname": "各直属店",
+      "name": "上海周浦店",
+      "id": "70816",
+      "type": "2"
+    }
+  ]
+}

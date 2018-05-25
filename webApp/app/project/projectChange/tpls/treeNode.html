@@ -1,0 +1,49 @@
+
+
+ 
+
+
+ 
+<div class="itemContent" data-code="<%= code %>">  
+     <div class="repertoireCode comm">
+     <% var mLeft=deep*6;%>
+     	<% if(obj.children && obj.children.length>0){%>
+ 			<i class="nodeSwitch" style="margin-left:<%=mLeft%>px;"></i>
+     	<%}else{%>
+ 			<i class="noneSwitch" style="margin-left:<%=mLeft%>px;"></i>
+     	<%}%>
+       
+     	
+     </i>
+			 <% if(url){%>
+			 <a href="<%= url%>" target="_blank">
+				 <span class="text" style="left:<%=mLeft+11%>px;"><%= code %></span></a>
+
+				 <%}else{%>
+			 <span class="text" style="left:<%=mLeft+11%>px;"><%= code %></span>
+
+			 <%}%>
+
+		 </div>
+     <div class="repertoireName comm"><span class="text"><%= name %></span></div>
+     <div class="beforeChange comm"><span class="text"><%= obj.baseTotalQuantity %><%= obj.baseUnit %></span></div>
+     <div class="afterChange comm <%= obj.baseTotalQuantity && obj.baseTotalQuantity!=obj.totalQuantity ?'changeColor':''%>"><span class="text"><%= totalQuantity %><%= unit %></span></div> 
+</div>
+
+ 
+<% if(obj.children && obj.children.length>0){ %>
+	 
+<% var count= obj.children.length; %>
+
+	<%for(var i=0;i<count;i++){%>
+
+		<ul class="contrastTree contrastTreeSub treeContent">
+			<li class="node" > 
+			    <% obj.children[i].deep=deep+1; %>  
+				<%= arguments.callee(obj.children[i]) %>
+			</li>
+		</ul> 
+
+	<% } %> 
+
+<% } %>

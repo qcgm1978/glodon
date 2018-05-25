@@ -1,0 +1,27 @@
+<div class="buttonBox">
+	<button class="newTextNotice">新建文本公告</button>
+	<button class="newLinkNotice">新建链接公告</button>
+	<button class="editNotice disable"><%= App.Local.data['drawing-model'].Edit || '编辑' %></button>
+	<button class="deleteNotice disable"><%= App.Local.data['drawing-model'].Delete || '删除' %></button>
+	<button class="publishNotice disable">发布</button>
+	<button class="previewNotice disable"><%= App.Local.data['system-module'].Preview || '预览' %></button>
+	<button class="stickNotice disable">置顶</button>
+	<button class="cancelStickNotice disable">取消置顶</button>
+	<button class="withdrawNotice disable">撤回</button>
+</div>
+<div class="noticeTopSearch">
+	<input type="text" placeholder="按标题、状态查询" value="">
+</div>
+<script type="text/javascript">
+$(".newTextNotice").html(App.Local.getTranslation('system-module.CTt'));
+$(".newLinkNotice").html(App.Local.getTranslation('system-module.CLt'));
+$(".editNotice").html(App.Local.getTranslation('system-module.Edit'));
+$(".deleteNotice").html(App.Local.getTranslation('system-module.Delete'));
+$(".publishNotice").html(App.Local.getTranslation('system-module.Release'));
+$(".previewNotice").html(App.Local.getTranslation('system-module.Preview'));
+$(".stickNotice").html(App.Local.getTranslation('system-module.Sticky'));
+$(".cancelStickNotice").html(App.Local.getTranslation('system-module.unSticky'));
+$(".withdrawNotice").html(App.Local.getTranslation('system-module.Recall'));
+$(".noticeTopSearch").find("input").attr("placeholder",App.Local.getTranslation('system-module.sbesbs'));
+
+</script>

@@ -1,0 +1,87 @@
+<h2><label><%= App.Local.data['drawing-model'].IPs||模型集成状态 %></label>：<%= obj.allStatusName %></h2>
+<h3><%= App.Local.data['drawing-model'].Cps1||'rvt文件转换状态' %>：</h3>
+<table>
+	<thead>
+		<tr>
+			<!--<td><%= App.Local.data['drawing-model'].Wfn || "等待处理" %></td>-->
+			<td><%= App.Local.data['drawing-model'].Cg || "转换中" %></td>
+			<td><%= App.Local.data['drawing-model'].Csd||转换成功 %></td>
+			<td><%= App.Local.data['drawing-model'].Cfd || "转换失败" %></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<!--<td><%= obj.rvtQueueCount %></td>-->
+			<td><%= obj.rvtExecuteCount %></td>
+			<td><%= obj.rvtSuccessCount %></td>
+			<td><span class="lookRvtFailList" data-failcount="<%= obj.rvtFailCount %>"><%= obj.rvtFailCount %></span></td>
+		</tr>
+	</tbody>
+</table>
+<div class="failItemBox rvtFailBox">
+	<table>
+		<thead>
+			<tr>
+				<td width="285"><%= App.Local.data['drawing-model'].ErrorFileName || "错误文件名字" %></td>
+				<td width="100"><%= App.Local.data['drawing-model'].ErrorFileType || "错误文件类型" %></td>
+				<td width="256"><%= App.Local.data['drawing-model'].ErrorFileId || "错误文件ID" %></td>
+			</tr>
+		</thead>
+	</table>
+	<div class="fileStateFail">
+		<table>
+			<tbody>
+			<% _.each(obj.rvtFailList,function(item){%>
+				<tr>
+					<td width="285"><%= item.source_name %></td>
+					<td width="100"><%= item.type %></td>
+					<td width="256"><%= item.source_id %></td>
+				</tr>
+			<%})%>
+			</tbody>
+		</table>
+	</div>
+</div>
+<h3><%= App.Local.data['drawing-model'].Cps || "dwg文件转换状态" %>：</h3>
+<table>
+	<thead>
+		<tr>
+			<!--<td><%= App.Local.data['drawing-model'].Wfn || "等待处理" %></td>-->
+			<td><%= App.Local.data['drawing-model'].Cg || "转换中" %></td>
+			<td><%= App.Local.data['drawing-model'].Csd || "转换成功" %></td>
+			<td><%= App.Local.data['drawing-model'].Cfd || "转换失败" %></td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<!--<td><%= obj.dwgQueueCount %></td>-->
+			<td><%= obj.dwgExecuteCount %></td>
+			<td><%= obj.dwgSuccessCount %></td>
+			<td><span class="lookDwgFailList" data-failcount="<%= obj.dwgFailCount %>"><%= obj.dwgFailCount %></span></td>
+		</tr>
+	</tbody>
+</table>
+<div class="failItemBox dwgFailBox">
+	<table>
+		<thead>
+			<tr>
+				<td width="285"><%= App.Local.data['drawing-model'].ErrorFileName || "错误文件名字" %></td>
+				<td width="100"><%= App.Local.data['drawing-model'].ErrorFileType || "错误文件类型" %></td>
+				<td width="256"><%= App.Local.data['drawing-model'].ErrorFileId || "错误文件ID" %></td>
+			</tr>
+		</thead>
+	</table>
+	<div class="fileStateFail">
+		<table>
+			<tbody>
+			<% _.each(obj.dwgFailList,function(item){%>
+				<tr>
+					<td width="285"><%= item.source_name %></td>
+					<td width="100"><%= item.type %></td>
+					<td width="256"><%= item.source_id %></td>
+				</tr>
+			<%})%>
+			</tbody>
+		</table>
+	</div>
+</div>

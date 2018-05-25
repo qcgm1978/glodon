@@ -1,0 +1,32 @@
+<div class="commentDialog">
+  <div class="content">
+    <div class="header">
+      <span><%= App.Local.data['drawing-model'].Save || '保存快照' %></span>
+      <div class="dialogClose"></div>
+    </div>
+    <div class="body">
+      <div class="img"><img src="<%= pic %>" alt="" width="80" height="60" /></div>
+      <div class="context">
+        <div class="input"><input type="text" class="name" placeholder="请输入快照名称" value="<%= name %>" /></div>
+        <div class="input"><textarea class="summary" placeholder="<%= App.Local.data['drawing-model'].Pdt || '请输入快照描述' %>"><%= description %></textarea></div>
+        <div class="type">
+          <div class="cur" data-type="<%= type %>">
+            <% if(type==0){ %>
+              <i class="iconUser"></i><span>个人快照</span>
+            <% }else{ %>
+              <i class="iconPublic"></i><span>项目快照</span>
+            <% } %>
+          </div>
+          <ul class="typeList">
+            <li value="0"><i class="iconUser"></i><span>个人快照</span></li>
+            <li value="1"><i class="iconPublic"></i><span>项目快照</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <input type="button" class="saveBtn" value="<%= App.Local.data['drawing-model'].Save || '保存' %>" />
+      <!-- <input type="button" class="saveBtn" value="保存并分享" /> -->
+    </div>
+  </div>
+</div>

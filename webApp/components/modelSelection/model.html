@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>模型选择器</title>
+    <script src="/static/dist/components/modelSelection/js/modelSelection.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        jQuery.support.cors = true;
+     function GetRequest() {   
+       var url = location.search; //获取url中"?"符后的字串   
+       var theRequest = new Object();   
+       if (url.indexOf("?") != -1) {   
+          var str = url.substr(1);   
+          strs = str.split("&");   
+          for(var i = 0; i < strs.length; i ++) {   
+             theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);   
+          }   
+       }   
+       return theRequest;   
+    } 
+    var Request = GetRequest();  
+    var viewer = new ModelSelection({
+        type:Request.type,
+        sourceId: Request.sourceId,
+        etag: Request.etag,
+        host:'http://'+location.host,
+        token:Request.token,
+        appKey:Request.appKey,
+        projectId:Request.projectId,
+        projectVersionId: Request.projectVersionId,
+        callback:function(){
+        }
+    });
+
+    function getData(){
+        var $n=$('#modelTree .del'),
+            c=[];
+        $n.each(function(){
+            var id=$(this).data('userId'),
+                    fileId=viewer.Project.fileIds[id]||"";
+            c.push({
+                id:id,
+                fileUniqueId:fileId+id.slice(id.indexOf('.')),
+                axis:viewer.Project.axis[id],
+                location:viewer.Project.location[id],
+                locationName:viewer.Project.locationName[id]
+            })
+        })
+        var data={
+            components:c,
+            markers:viewer.Project.Settings.markers
+        }
+        var result=JSON.stringify(data);
+        return result;
+    }
+    </script>
+</body>
+
+</html>

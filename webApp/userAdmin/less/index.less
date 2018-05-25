@@ -1,0 +1,560 @@
+.addViewUserContent{
+	& div{
+		box-sizing: border-box;
+	}
+	width: 100%;
+	height: 100%;
+	padding-top: 16px;
+	position: relative;
+	.viewUserTopTab{
+		width: 100%;
+		height: 38px;
+	    background-color: #eee;
+	    border: 1px solid #ccc;
+	    border-width: 1px 0px;
+	    position: absolute;
+	    top: 16px;
+	    left: 0;
+	    padding: 8px 0 0 20px;
+	    z-index: 10;
+	    .viewUlTab{
+	    	width: 100%;
+	    	height: 100%;
+	    }
+	    & li{
+	    	border-top: 2px solid #eee;
+		    float: left;
+		    line-height: 27px;
+		    height: 29px;
+		    width: 98px;
+		    text-align: center;
+		    cursor: pointer;
+		    &.selected{
+		    	border: 1px #ccc solid;
+		    	border-top: 2px solid #006ecf;
+		    	border-bottom-color: #fff;
+		    	background-color: #fff;
+		    }
+	    }
+	}
+	.viewUserContent{
+		width: 100%;
+	    height: 100%;
+	    padding-top: 36px;
+    	&>div{
+    		width: 100%;
+    		height: 100%;
+			padding: 20px 20px 50px 20px;
+			position: relative;
+    		display: none;
+    		a{
+    		    text-decoration: none;
+    		    display: inline-block;
+    		    cursor: pointer;
+    		    border: 1px solid #ccc;
+    		    color: #333;
+    		    width: 100px;
+    		    height: 30px;
+    		    font-size: 14px;
+    		    line-height: 30px;
+    		    text-align: center;
+    			z-index: 10;
+    		    &:hover{
+    		    	color: #333;
+    		    }
+    		    i{
+    		    	display: inline-block;
+    		    	width: 14px;
+    		    	height: 14px;
+    		    	margin: 0 8px 0 0;
+    		    	position: relative;
+    		    	top: 2px;
+    		    }
+    		}
+    		#addViewUserBtn{
+    			position: absolute;
+    			left: 20px;
+    			top: 20px;
+    			z-index: 10;
+    		}
+    		.searchUserListBox{
+    			position: absolute;
+    			left: 136px;
+    			top: 20px;
+    			width: auto;
+    			z-index: 10;
+    			display: inline-block;
+    			label{
+					float: left;
+					width: 70px;
+					line-height: 30px;
+					height: 30px;
+					font-size: 14px;
+					color: #333;
+					font-weight: normal;
+    			}
+    			.inputBox{
+    				float: left;
+    				width:170px;
+    				margin-left: 10px;
+    				input{
+    					resize: none;
+    					width:170px;
+    					height: 30px;
+    					padding: 6px 8px;
+    					outline: none;
+    					font-size: 12px;
+    					line-height: 1.2;
+    					color: #333;
+    					background-color: #fff;
+    					border: 1px solid #ccc;
+    					-webkit-box-sizing: border-box;
+    					-moz-box-sizing: border-box;
+    					box-sizing: border-box;
+    				}
+    			}
+    			.addViewUserInput{
+    				float: left;
+    				margin-left: 16px;
+    				label{
+    					width: auto;
+    				}
+    				.iconCal {
+    				  background: url(/static/dist/images/comm/images/commIcon.png) no-repeat 6px -232px;
+    				  position: absolute;
+    				  right: 5px;
+    				  width: 28px;
+    				  height: 28px;
+    				  top: 1px;
+    				  background-color: #eee;
+    				  border-left: 1px #ccc solid;
+    				}
+    			}
+    			.searchBtnBox{
+    				float: left;
+    				margin-left: 10px;
+    				button{
+    					background-color: #117EE1;
+					    display: inline-block;
+					    width: 80px;
+					    height: 30px;
+					    text-align: center;
+					    line-height: 30px;
+					    color: #fff;
+					    margin-left: 30px;
+					    letter-spacing: 10px;
+					    padding-left: 9px;
+					    box-sizing: border-box;
+					    cursor: pointer;
+					    border: 0;
+    				}
+    			}
+    		}
+    		.nullViewUserList{
+				position: fixed;
+				width: 280px;
+				height: 30px;
+				line-height: 30px;
+				left: 0;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				font-size: 16px;
+				color: #333;
+			}
+    	}
+		.viewUserList{
+			.viewUserListBox{
+				width: 100%;
+				height: 100%;
+	    		padding-top: 50px;
+	    		position: relative;
+	    		.loading{
+	    			width: 100%;
+	    			height: 36px;
+	    			line-height: 36px;
+	    			text-align: center;
+	    		}
+    			.pagingBox{
+    				position: absolute;
+    				bottom: -40px;
+    				left:0;
+    				right: 0;
+					.sumDesc { float: left; height: 25px; line-height: 25px;}
+					.listPagination { float: right;
+						a{
+							text-decoration: none;
+							border: solid 1px #ccc;
+							color: #666;
+							width: auto;
+							display: inline-block;
+							vertical-align: middle;
+							padding: 0px 5px;
+							margin-right: 5px;
+							margin-bottom:0;
+							min-width: 1em;
+							height: 25px;
+							line-height: 25px;
+							text-align: center;
+							font-size: 12px;
+							&:hover{
+								border-color: #0075df;
+								color: #0075df;
+							}
+						}
+						span{
+							margin-bottom: 0;
+						}
+					}
+					.pagination {margin: 0px;}
+				}
+	    		.mCSB_scrollTools_vertical{
+	    			right: -18px!important;
+	    		}
+	    		.userAdminClassName{
+	    			height: 100%;
+	    			position: relative;
+	    		}
+	    		.userAdminListClass{
+	    			height:100%;
+	    		}
+	    		table{
+	    			width: 100%;
+	    			border: #aaa solid 1px;
+	    			thead{
+	    				background-color: #ccc;
+	    				tr td{
+	    					border-right: #aaa solid 1px;
+	    					font-size: 16px;
+	    					width: 15%;
+	    				}
+	    			}
+	    			tbody tr td{
+	    				font-size: 14px;
+	    				width: 15%;
+	    			}
+	    		}
+	    		table tr td{
+	    			height: 48px;
+	    			line-height: 48px;
+	    			color: #333;
+	    			text-align: left;
+	    			border-bottom: #aaa solid 1px;
+	    			border-right: #aaa solid 1px;
+	    			padding-left: 16px;
+	    			a.viewUserItem{
+	    				border: 0;
+	    				width: auto;
+	    				margin-right: 32px;
+	    				&:hover{
+	    					color: #408cdf;
+	    					text-decoration: underline;
+	    				}
+	    			}
+	    		}
+	    		table tr td:nth-child(":last"){
+	    			border-bottom: 0;
+	    			border-right: 0;
+	    		}
+			}
+		}
+		.viewUserSet{
+			width: 100%;
+			height: 100%;
+			padding-bottom: 20px;
+			#addViewUserPrefixFun{
+				position: absolute;
+				left: 20px;
+				top: 20px;
+			}
+			.viewUserSetBox{
+				width: 100%;
+				height: 100%;
+	    		padding-top: 54px;
+	    		.mCSB_scrollTools_vertical{
+	    			right: -18px!important;
+	    		}
+	    		.userAdminClassName,.userAdminListClass{
+	    			height:100%;
+	    		}
+	    		table{
+	    			width: 100%;
+	    			border: #aaa solid 1px;
+	    			thead{
+	    				background-color: #ccc;
+	    				tr td{
+	    					border-right: #aaa solid 1px;
+	    					font-size: 16px;
+	    				}
+	    			}
+	    			tbody tr td{
+	    				font-size: 14px;
+	    				width: 20%;
+	    			}
+	    		}
+	    		table tr td{
+	    			height: 48px;
+	    			line-height: 48px;
+	    			color: #333;
+	    			text-align: left;
+	    			border-bottom: #aaa solid 1px;
+	    			border-right: #aaa solid 1px;
+	    			padding-left: 16px;
+	    			a.viewUserItem{
+	    				border: 0;
+	    				width: auto;
+	    				margin-right: 32px;
+	    				&:hover{
+	    					color: #408cdf;
+	    					text-decoration: underline;
+	    				}
+	    			}
+	    		}
+	    		table tr td:nth-child(":last"){
+	    			border-bottom: 0;
+	    			border-right: 0;
+	    		}
+	    		.loading{
+	    			width: 100%;
+	    			height: 36px;
+	    			line-height: 36px;
+	    			text-align: center;
+	    		}
+			}
+		}
+	}
+}
+
+/*start 添加用户样式代码**/
+.addViewUserBox{
+	width: 100%;
+	height: 400px;
+	.addViewUserInput{
+		width: 100%;
+		min-height: 54px;
+		height: auto;
+		font-size: 14px;
+		color: #333;
+		float: left;
+		position: relative;
+		label{
+			height: 48px;
+			line-height: 48px;
+			width: 80px;
+			float: left;
+			font-weight: normal;
+		}
+		.inputBox{
+			width: 460px;
+			height: 48px;
+			line-height: 48px;
+			float: left;
+			position: relative;
+			input{
+				width: 456px;
+				height: 32px;
+				line-height: 32px;
+				padding: 0 8px;
+			}
+			input::-webkit-input-placeholder{
+		　　	color: #333 !important;
+		　　}
+			.errorBox{
+				position: absolute;
+				left: 0;
+				padding-left: 8px;
+				top: 39px;
+				color: red;
+				height: 25px;
+				line-height: 25px;
+				font-size: 12px;
+				font-weight: bold;
+				display: none;
+			}
+			.selectPrefixBox{
+				width: 456px;
+				height: 32px;
+				line-height: 32px;
+				padding: 0 6px;
+				&>option{
+					width: 100%;
+					height: 32px;
+					line-height: 32px;
+
+				}
+			}
+		}
+		.iconCal {
+		  background: url(/static/dist/images/comm/images/commIcon.png) no-repeat 6px -230px;
+		  position: absolute;
+		  right: 5px;
+		  width: 28px;
+		  height: 30px;
+		  top: 9px;
+		  background-color: #eee;
+		  border-left: 1px #ccc solid;
+		}
+		.dialogProjectList{
+			height: 162px!important;
+			padding-top: 14px;
+			.loading{
+				width: 100%;
+				height: 100%;
+				line-height: 148px;
+				text-align: center;
+			}
+		}
+		button{
+			width: 260px;
+			height: 32px;
+			line-height: 32px;
+			background:none;
+			margin:0;
+			padding:0;
+			border: 0;
+			background-color: #ccc;
+			color: #333;
+			font-size: 14px;
+			&:hover{
+				color: #408cdf;
+			}
+		}
+		ul.projectUlBox{
+			// max-height: 125px;
+			li{
+				height: 25px;
+				line-height: 25px;
+				width:25%;
+				float: left;
+				padding-right: 10px;
+				cursor: default;
+				white-space:nowrap;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				label{
+					display: inline-block;
+					width: 13px;
+					height: 20px;
+					background: transparent url(/static/dist/images/services/images/service_ico.png) 0 -375px no-repeat;
+    				margin-right: 8px;
+				}
+				label.selectCheckBox {
+    				background-position: 0 -415px;
+    			}
+			}
+		}
+		ul:after{clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;}
+		.projectErrorBox{
+			position: absolute;
+			left: 88px;
+			bottom: -30px;
+			color: red;
+			height: 25px;
+			line-height: 25px;
+			font-size: 12px;
+			font-weight: bold;
+			display: none;
+		}
+	}
+	.addViewUserBox:after {clear:both;content:'.';display:block;width: 0;height: 0;visibility:hidden;}
+	.last_addViewUserInput{
+		min-height:32px;
+		height: 32px;
+		margin-top: 35px;
+	}
+	
+}
+.addViewUserPrefixBox{
+	width: 100%;
+	height: 100%;
+	.addViewUserPrefixInput{
+		width: 100%;
+		height: 36px;
+		label{
+			height: 36px;
+			line-height: 36px;
+			width: 80px;
+			float: left;
+			font-weight: normal;
+		}
+		.inputBox{
+			width: 260px;
+			float: left;
+			position: relative;
+			input{
+				width: 256px;
+				height: 36px;
+				line-height: 36px;
+				padding: 0 8px;
+			}
+			input::-webkit-input-placeholder{
+		　　	color: #333 !important;
+		　　}
+			.errorBox{
+				position: absolute;
+				left: 0;
+				padding-left: 8px;
+				top: 37px;
+				color: red;
+				height: 25px;
+				line-height: 25px;
+				font-size: 12px;
+				font-weight: bold;
+				display: none;
+			}
+		}
+		button{
+			width: 256px;
+			height: 36px;
+			line-height: 36px;
+			background:none;
+			margin:0;
+			padding:0;
+			border: 0;
+			background-color: #ccc;
+			color: #333;
+			font-size: 14px;
+			&:hover{
+				color: #408cdf;
+			}
+		}
+	}
+	.last_addViewUserInput{
+		margin-top: 28px;
+	}
+}
+.deleteViewUserBox{
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	position: relative;
+	p{
+	    width: 100%;
+	    height: 30px;
+	    line-height: 30px;
+	}
+	button{
+		width: 44px;
+		height: 30px;
+		line-height: 30px;
+		background: none;
+		border: 0;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: -22px;
+		outline: none;
+		&:hover{
+			color: #51a6f2;
+		}
+	}
+}
+.demoLoading{
+	font-size: 16px; 
+	color: #000; 
+	text-align: center;
+	margin-top: 100px;
+}
+/*end 添加用户样式代码**/

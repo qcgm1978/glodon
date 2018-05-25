@@ -1,0 +1,844 @@
+.overflowEllipsis {
+  vertical-align: middle;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.edgeNum {
+  padding: 0 2px;
+  border-radius: 8px;
+  display: none;
+  background: #FF0000;
+  font-family: "Microsoft YaHei";
+  font-size: 12px;
+  color: #FFF;
+  font-weight: bold;
+  min-width: 16px;
+  text-align: center;
+  & span {
+    display: inline-block;
+    -webkit-transform: scale(0.67);
+    -moz-transform: scale(0.67);
+    -ms-transform: scale(0.67);
+  }
+}
+
+a:visited, a:active, a:focus {
+  text-decoration: none;
+}
+
+#contains {
+  position: relative;
+  min-width: 1100px;
+  margin: 0 auto;
+  height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  margin-top: -50px;
+  padding-top: 50px;
+}
+
+.hidden {
+  display: none;
+}
+
+.right {
+  float: right;
+}
+
+.relative {
+  position: relative;
+}
+
+.left {
+  float: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.myHidden {
+  display: none;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+#pageLoading, #dataLoading {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  bottom: 0px;
+  z-index: 9999;
+  background: #fff url('/comm/images/load.gif') no-repeat center;
+}
+
+#dataLoading {
+  display: none;
+}
+
+.overflow2 {
+  word-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* bootstrap  */
+.txtInput {
+  resize: none;
+  height: 30px;
+  padding: 6px 8px;
+  outline: none;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #666;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.txtInput:focus {
+  border-color: #0075df;
+}
+
+.txtInput.disabled {
+  border-color: #ccc;
+  background-color: #eee;
+  color: #333;
+}
+
+.txtNoneBorder {
+  border: 1px #ccc solid;
+}
+
+.myBtn {
+  height: 30px;
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 6px 10px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  min-width: 80px;
+}
+
+.myBtn:focus, .myBtn:active:focus, .myBtn.active:focus, .myBtn.focus, .myBtn:active.focus, .myBtn.active.focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
+.myBtn:hover, .myBtn:focus, .myBtn.focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.myBtn:active, .myBtn.active {
+  background-image: none;
+  outline: 0;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+  box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+
+.sm {
+  height: 25px;
+  padding: 3px 8px;
+  min-width: 60px;
+}
+
+.myBtn-default {
+  color: #666;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.myBtn-default:hover {
+  color: #999;
+  border-color: #ccc;
+}
+
+.myBtn-default:active, .myBtn-default.active {
+  color: #666;
+  background-color: #ddd;
+  border-color: #ccc;
+}
+
+.myBtn-default.disabled {
+  background-color: #eee;
+  border-color: #ccc;
+  color: #ccc;
+}
+
+.myBtn-primary {
+  color: #fff;
+  background-color: #208aee;
+}
+
+.myBtn-primary:hover {
+  background-color: #51a6f2;
+  color: #fff;
+}
+
+.myBtn-primary:active, .myBtn-primary.active {
+  color: #fff;
+  background-color: #106bbe;
+}
+
+.myBtn-primary.disabled {
+  background-color: #bcdcfa;
+  color: #fff;
+}
+
+.btnRadio {
+  cursor: pointer;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 15px;
+  line-height: 1.2;
+  height: 15px;
+  .iconPic {
+    background: url(../images/comm/images/commIcon.png) no-repeat 0px -80px;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: top;
+  }
+  &.selected {
+    .iconPic {
+      background-position: 0px -60px;
+    }
+    &.disable {
+      .iconPic {
+        background-position: 0px -100px;
+      }
+    }
+  }
+  &.disable {
+    .iconPic {
+      background-position: 0px -120px;
+    }
+  }
+}
+
+.btnNormal.disable {
+  background: #eee;
+  color: #ccc;
+  border-color: #ccc;
+  cursor: default;
+}
+
+.btnCk {
+  cursor: pointer;
+  margin-right: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 15px;
+  line-height: 1.2;
+  height: 15px;
+  .iconPic {
+    background: url(../images/comm/images/commIcon.png) no-repeat 0px -160px;
+    display: inline-block;
+    width: 18px;
+    height: 15px;
+    vertical-align: -4px;
+  }
+  &.selected {
+    .iconPic {
+      background-position: 0px -140px;
+    }
+    &.disable {
+      .iconPic {
+        background-position: 0px -180px;
+      }
+    }
+  }
+  &.disable {
+    .iconPic {
+      background-position: 0px -200px;
+    }
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.btnNormal {
+  padding: 4px 12px;
+  display: inline-block;
+  border: 1px #ccc solid;
+  cursor: pointer;
+  margin-right: 3px;
+  i {
+    color: #85B200;
+    font-size: 20px;
+    vertical-align: -3px;
+    margin-right: 5px;
+  }
+}
+
+/*  面包屑导� */
+.breadcrumbNav {
+  line-height: 37px;
+  padding-left: 20px;
+  font-size: 14px;
+  position: relative;
+  .projectText, .breadItem {
+    float: left;
+  }
+  .projectText a {
+    color: #000;
+    text-decoration: none;
+  }
+  .breadItem {
+    margin-left: 6px;
+    .icon-angle-right {
+      font-size: 16px;
+      margin-left: 6px;
+    }
+    .breadItemText {
+      margin-left: 6px;
+      cursor: pointer;
+      .icon-sort-down {
+        font-size: 16px;
+        margin-left: 11px;
+        vertical-align: 2px;
+      }
+    }
+    .listContent {
+      padding-bottom: 5px;
+    }
+    .projectList, .projectVersionList {
+      display: none;
+      .container {
+        width: 100%;
+        padding: 0;
+        max-height: 305px;
+        overflow-y: auto;
+        .header {
+          margin-top: 5px;
+          height: 26px;
+          line-height: 25px;
+          font-size: 12px;
+          background-color: #ddd;
+          width: 100%;
+          cursor: pointer;
+          padding-left: 12px;
+        }
+        .item {
+          display: block;
+          cursor: pointer;
+          height: 26px;
+          line-height: 25px;
+          font-size: 12px;
+          padding-left: 12px;
+          color: #A599B2;
+          margin-top: 5px;
+          text-decoration: none;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          &:hover {
+            background-color: #A8DBFD;
+          }
+        }
+      }
+      .loading {
+        text-align: center;
+        color: #ccc;
+      }
+    }
+    .projectList {
+      position: absolute;
+      width: 248px;
+      background-color: #fff;
+      max-height: 420px;
+      overflow-y: auto;
+      border: 1px #ccc solid;
+      top: 32;
+      left: 0px;
+      .txtSearch {
+        margin: 5px 10px 1px 10px;
+        width: 214px;
+        margin-right: 0px;
+      }
+    }
+    .projectVersionList {
+      position: absolute;
+      top: 32px;
+      border: 1px #ccc solid;
+      background-color: #fff;
+      left: 0px;
+      width: 288px;
+      max-height: 378px;
+      .listContent {
+        display: none;
+        .changeVersionBox {
+          display: none;
+        }
+        .nav {
+          height: 34px;
+          border-bottom: 1px #ccc solid;
+          padding-left: 10px;
+          position: relative;
+          z-index: 1;
+          padding-top: 10px;
+          font-size: 12px;
+          .item {
+            border-top: 2px solid #FFF;
+            color: #999;
+            display: block;
+            cursor: pointer;
+            float: left;
+            height: 24px;
+            line-height: 24px;
+            width: 132px;
+            text-align: center;
+            &.selected {
+              border: 1px #ccc solid;
+              color: #333;
+              border-top: 2px solid #006ecf;
+              border-bottom-color: #fff;
+              background-color: #fff;
+            }
+          }
+        }
+        .txtSearch {
+          margin: 5px 10px 1px 10px;
+          width: 265px;
+        }
+        .vName {
+          width: 72px;
+          margin-right: 8px;
+        }
+        .vStatus {
+          width: 60px;
+          margin-right: 5px;
+        }
+        .vDate {
+          width: 76px;
+          margin-left: 3px;
+        }
+      }
+    }
+    // .fileModelList { display: none; left: 12px; position: absolute; background-color: #fff; top: 32px; width: 126px; border: 1px #ccc solid;
+    // 	.fileNavUl { padding: 6px 0px;
+    // 		li { padding-left: 12px; cursor: pointer; color: #666; height: 26px; line-height: 26px; font-size: 12px;
+    // 			&:hover { background-color: #A8DBFD; }
+    // }
+    // }
+    // }
+  }
+  .fileNav {
+    margin-left: 15px;
+    .commSpan {
+      cursor: pointer;
+      width: 40px;
+      font-size: 12px;
+      text-align: center;
+      display: inline-block;
+      border: 1px #006ECF solid;
+      height: 20px;
+      line-height: 17px;
+      border-radius: 3px 0 0 3px;
+      color: #006ECF;
+      &.selected {
+        background-color: #006ECF;
+        color: #fff;
+      }
+    }
+    .model {
+      border-radius: 0 3px 3px 0px;
+      margin-left: -4px;
+    }
+  }
+  .allProject {
+    cursor: pointer
+  }
+}
+
+/*  left nav */
+.projectNav {
+  min-width: 396px;
+  width: 100%;
+  padding-left: 10px;
+  background-color: #ddd;
+  height: 40px;
+  font-size: 12px;
+  color: #666;
+  .item {
+    float: left;
+    line-height: 30px;
+    height: 30px;
+    margin-right: 10px;
+    //width: 80px;
+    border: 1px #ddd solid;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 0 10px;
+    &:hover {
+      border-color: #ccc;
+      color: #333;
+    }
+    &.selected {
+      color: #333;
+      border: 1px #ccc solid;
+      border-top-width: 2px;
+      border-top-color: #3e78e6;
+      border-bottom-color: #fff;
+      background-color: #fff;
+    }
+  }
+  .projectNavContentBox {
+    margin-top: 1px;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+    bottom: 0px;
+    overflow: auto;
+
+    /* 设计 */
+    .designVerification, .designProperties {
+      display: none;
+    }
+  }
+}
+
+.leftNavContent {
+  overflow: hidden;
+  .projectNav {
+    min-width: 198px;
+  }
+}
+
+/* list */
+.fileContent, .fileContentHeader {
+  border: 1px #ccc solid;
+  margin-top: 10px;
+  border-bottom: 0;
+  &.zIndex {
+    position: relative;
+    z-index: 1;
+  }
+  .inlineBlock {
+    display: inline-block;
+  }
+  .filecKAll {
+    width: 5%;
+    text-align: center;
+    overflow: hidden;
+  }
+  .fileName {
+    width: 43%;
+    overflow: hidden;
+    padding-left: 10px;
+    .fileType {
+      margin-right: 10px;
+      display: inline-block;
+      margin-top: 5px;
+      vertical-align: top;
+      width: 35px;
+      height: 30px;
+      background: url('/projects/images/fileicon.png') no-repeat;
+      &.rvt {
+        background-position: 0px -39px;
+      }
+      &.dwg {
+        background-position: 0px -79px;
+      }
+      &.rfa {
+        background-position: 0px -558px;
+      }
+      &.other {
+        background-position: 0px -519px;
+      }
+    }
+    .text {
+      cursor: pointer;
+      width: 84%;
+      .searchText {
+        color: #ff7f00;
+        display: inline;
+        float: none;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    .textFolder {
+      cursor: default;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    .fileTypeImg {
+      height: 30px;
+      width: 35px;
+      vertical-align: top;
+      margin-top: 3px;
+      margin-right: 10px;
+    }
+  }
+  .fileStatus {
+    width: 11%;
+    overflow: hidden;
+  }
+  .fileOp {
+    width: 11%;
+  }
+  .fileSize {
+    width: 11%;
+    overflow: hidden;
+  }
+  .fileDate {
+    width: 16%;
+  }
+  .header, .item {
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px #ccc solid;
+    &.selected {
+      background-color: #A8DBFD;
+    }
+  }
+  .header {
+    background-color: #eee;
+    & > span {
+      float: left;
+    }
+  }
+  .item {
+    width: 100%;
+    float: left;
+    span {
+      float: left;
+      display: block;
+      height: 38px;
+      line-height: 38px;
+    }
+  }
+  &.changeContrastBox {
+    .fileName {
+      width: 32%;
+      overflow: hidden;
+      padding-left: 10px;
+    }
+    .changeContrast {
+      width: 7%;
+      text-align: center;
+      overflow: hidden;
+    }
+    .fileStatus {
+      width: 10%;
+      overflow: hidden;
+    }
+    .fileOp {
+      width: 10%;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; /*add by wuweiwei*/
+    }
+    .fileDate {
+      width: 22%;
+      position: relative;
+      height: 36px;
+      vertical-align: top;
+      .text {
+        position: absolute;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.jqContextMenu {
+  width: 100px;
+  border: 1px #ccc solid;
+  background-color: #fff;
+  position: absolute;
+  z-index: 500;
+  li {
+    height: 30px;
+    line-height: 30px;
+    padding-left: 8px;
+    a {
+      display: block;
+      margin-left: -8px;
+      padding-left: 8px;
+    }
+    &:hover {
+      background-color: #A8DBFD;
+      cursor: pointer;
+    }
+    &.disable {
+      color: #999;
+      opacity: .5;
+      cursor: default;
+      display: none
+    }
+  }
+}
+
+.btnNormal {
+  .myIcon-upload, .myIcon-download, .myIcon-del {
+    width: 17px;
+    height: 15px;
+  }
+}
+
+.dragSize {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  width: 10px;
+  right: -6px;
+  cursor: col-resize;
+  z-index: 999;
+  display: none;
+}
+
+.slideBar {
+  top: 40px;
+  width: 15px;
+  height: 32px;
+  right: -15px;
+  z-index: 99;
+  position: absolute;
+  display: none;
+  background-color: #fff;
+  border: 2px #ccc solid;
+  line-height: 26px;
+  box-sizing: border-box;
+  padding-left: 2px;
+  cursor: pointer;
+}
+
+.sourceFileType {
+  background: url('/projects/images/fileicon.png') no-repeat 0px -200px;
+  width: 105px;
+  height: 80px;
+  &.folder {
+    background-position: 0px -120px;
+  }
+  &.dwg {
+    background-position: 0px -276px;
+  }
+  &.other {
+    background-position: 0px -439px;
+  }
+}
+
+ul li.loading {
+  text-align: center;
+  font-size: 14px;
+  padding-top: 30px;
+  color: #ccc;
+}
+
+/**mmh tip**/
+.mmhTip {
+  position: fixed;
+  left: 0;
+  top: -100px;
+  right: 0;
+  text-align: center;
+  z-index: 999999;
+  & .content {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #666;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 46px;
+    padding-right: 20px;
+    background: #FFFFFF;
+    & i {
+      position: absolute;
+      left: 20px;
+      top: 12px;
+      width: 16px;
+      height: 16px;
+      background: url(../images/icon.png) no-repeat;
+    }
+    &.success {
+      border: 1px solid #80C729;
+      & i {
+        background-position: -0px -0px;
+      }
+    }
+    &.common {
+      border: 1px solid #2DB7F5;
+      & i {
+        background-position: -18px -0px;
+      }
+    }
+    &.alarm {
+      border: 1px solid #ffaa00;
+      & i {
+        background-position: -36px -0px;
+      }
+    }
+  }
+}
+
+.returnBack.theEnd {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.theEnd:hover {
+  color: #ccc;
+  text-decoration: none;
+  cursor: default;
+}
+
+#contains {
+  .nullTip {
+    font-size: 18px;
+    color: #ccc;
+    text-align: center;
+    padding-top: 150px;
+  }
+}
+
+.bim .fly canvas {
+  cursor: crosshair;
+}
+
+/*add by wuweiwei : 文件转换状态,包括(图纸模型、基础资源)*/
+.fileStateDialogClass .lookRvtFailList {
+  color: #F00;
+  min-width: 20px;
+  display: block;
+  cursor: pointer;
+}
+
+.fileStateDialogClass .lookDwgFailList {
+  color: #F00;
+  min-width: 20px;
+  display: block;
+  cursor: pointer;
+}

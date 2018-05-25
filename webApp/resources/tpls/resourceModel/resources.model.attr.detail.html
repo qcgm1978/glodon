@@ -1,0 +1,23 @@
+<% var count=obj.length,item; %>
+
+<% for(var i=0;i<count;i++){ %>
+	<% item=obj[i]; %>
+<div class="modle">
+	<i class="modleShowHide"></i> <h1 class="modleName"><%= item.group%></h1>
+	<ul class="modleList">
+
+	<% var subItems=item.items,subCount=subItems.length,subItem %>
+
+	<% for(var j=0;j<subCount;j++){ %>
+		<% subItem=subItems[j];  %>
+		<li class="modleItem">
+			<span class="modleName"><div class="modleNameText overflowEllipsis" title="<%=subItem.name%>"><%=subItem.name%></div></span> <span class="modleVal"><%=subItem.value%><%=subItem.unit%></span>
+		</li>
+
+		<% } %> 
+
+	</ul>
+
+</div>
+
+<% } %>

@@ -1,0 +1,208 @@
+.designCollision{height:100%;}
+  .designCollSetting{font-size:14px;
+    .collLabel{display:table;width:100%;margin-bottom:10px;
+      .labelName{width:1%;white-space:nowrap;display:table-cell;padding-right:5px;}
+      .labelInput{width:100%;height:30px;padding:0 5px;border:1px solid #ccc;border-radius:0;outline:none;}
+      .error{border-color:#f00;}
+    }
+    .formTree{padding:10px;
+      &:after{content:'';display:table;clear:both;}
+      .panel{width:50%;float:left;height:270px;border:1px solid #ccc;margin-left:-10px;position:relative;
+        .panelHead{position:absolute;padding:5px;background:#fff;left:10px;top:-13px;color:#999;}
+      }
+      .panel + .panel{float:right;margin-right:-10px;}
+      .tree{margin:20px 0 10px;padding:0 10px;height:240px;overflow-x:hidden;overflow-y:auto;
+        .treeView{padding-left:10px;
+          .itemContent{display:block;padding:4px 0;
+            .nodeSwitch{display:inline-block;width:10px;height:10px;margin-right:5px;background:url(/comm/images/commIcon.png) no-repeat 0 -39px;}
+            .fileIcon{display:inline-block;width:16px;height:13px;margin-right:5px;background:url(/comm/images/commIcon.png) no-repeat 0 -500px;}
+            .inputCheckbox{float:right;}
+          }
+          .itemContent.open{
+            .nodeSwitch{background-position:0 -49px;}
+            &+.subTree{display:block;}
+          }
+          .subTree{padding-left:15px;display:none;font-size:12px;}
+        }
+      }
+      .itemNode.file{
+        margin-bottom: 9px;
+      }
+    }
+  }
+.rightProperty {
+  .designVerification { height: 100%; }
+  .modle {
+    & .modleTitleBar{
+       border-bottom: 1px #ccc solid;
+       &:hover{cursor: pointer;}
+    }
+    .modleShowHide { transition: all .5s; background: url(/comm/images/commIcon.png) no-repeat 0px -256px; float: right; margin-right: 12px; margin-top: 6px; height: 14px; width: 14px; cursor: pointer;
+      &.down { transform: rotate(180deg); -ms-transform: rotate(180deg); -moz-transform: rotate(180deg); -webkit-transform: rotate(180deg); -o-transform: rotate(180deg); }
+    }
+    .modleName { font-weight: bold; height: 24px; line-height: 24px; padding-left: 12px;.modleNameText {    vertical-align: top;width: 95%;} }
+    .modleList { background-color: #eee; 
+      .modleItem { border-bottom: 1px #ccc solid;
+        .modleName { width: 25%; display: inline-block; box-sizing: border-box; padding-left: 12px; border-right: 1px #ccc solid; }
+        .modleVal { display: inline-block; width: 72%; box-sizing: border-box; padding-left: 12px; margin-left: -3px; }
+        .modelLink { display: inline-block; padding-left: 12px; color: #3F8CDF; height: 24px; line-height: 24px; }
+      }
+    }
+  }
+  .ckBox { overflow: auto; height: 100%;
+
+    .ckTable { min-width: 500px; width: 100%;
+      th { height: 24px; line-height: 24px; text-align: center; }
+      td, th { border: 1px #ccc solid; }
+      .issue { width: 55%; }
+      .status { width: 11%; }
+      .category { width: 10%; }
+      .specialty { width: 12%; }
+      .professional { width: 12%; }
+    }
+    tbody { td { padding-top: 10px; padding-bottom: 10px; vertical-align: middle; text-align: center; }
+      .issue { text-align: left;
+        .ckImg { float: left; padding: 0px 10px; background:#fff;}
+        .ckHeader {
+          margin-left: 84px;
+          .detailicon{
+            float: right;
+            width: 15px;
+            height: 15px;
+            background:url(/comm/images/commIcon.png) no-repeat;background-position:0 -660px;
+          }
+        }
+      }
+    }
+  }
+  .collBox {height:100%;position:relative;padding-bottom:40px;
+    .collTips{text-align:center; padding-top:50px; font-size:14px;
+      .nothingIcon{width:80px;height:80px;display:inline-block;background:url(../images/collision.png) no-repeat;background-position:0 0;}
+      .runningIcon{width:80px;height:80px;display:inline-block;background:url(../images/collision.png) no-repeat;background-position:0 -80px;}
+      .failedIcon{width:80px;height:80px;display:inline-block;background:url(../images/collision.png) no-repeat;background-position:0 -160px;}
+      p{margin:1em 0;color:#ccc;}
+      a{color:#006ecf;}
+    }
+    .tfoot{
+      position: absolute;
+      width: 100%;
+      bottom: 41px;
+      .th{padding:0 10px;background:#e4e4e4;text-align:right;height: 20px;
+        line-height: 20px;}
+      .pointTotal{float:left;}
+      a{color:#006ecf;text-decoration:none;
+        &.disabled{color:#ccc;}
+      }
+      .cur{color:#006ecf;}
+      .nextPage,.prePage,.pages,.cur{
+        float: right;
+      }
+      .pages,.prePage{
+        margin-right: 4px;
+      }
+    }
+    .ckTable { width: 100%; min-width: 390px;margin-top:-1px;
+      th { height: 24px; line-height: 24px; text-align: center; }
+      td, th { border: 1px #ccc solid; }
+      .collList { width: 85%;}
+      .collLev { width: 15%; min-width:50px;}
+      .selected{background:#cef0ff;}
+      tbody { td { padding-top: 10px; padding-bottom: 10px; vertical-align: middle; text-align: center; }
+        .collList { text-align: left;position:relative;
+          .ckImg { float: left;height:56px;padding:0 10px;
+            img{display:block;width:80px;height:56px;}
+            img:hover{width:200px;height:140px;position:absolute;z-index:99;border:1px solid #ccc;left:-1px;top:-42px;}
+          }
+          .ckHeader { margin-left: 100px;
+            .ckName{color:#000;}
+            .date{color:#ccc;margin-top:10px;}
+            .detailicon{
+              float: right;
+              width: 15px;
+              height: 15px;
+              background:url(/comm/images/commIcon.png) no-repeat;background-position:0 -660px;
+            }
+          }
+        }
+      }
+      tfoot{
+        th{padding:0 10px;background:#e4e4e4;text-align:right;}
+        .pointTotal{float:left;}
+        a{color:#006ecf;text-decoration:none;
+          &.disabled{color:#ccc;}
+        }
+        .cur{color:#006ecf;}
+      }
+    }
+  }
+  .detailList{height:100%;overflow:hidden;padding:46px 0 0;}
+  .collHead{position:absolute;border-bottom:1px solid #ccc;left:0;top:0;width:100%;background:#fff;z-index:2;
+    &:after{content:''; display:table; clear:both; }
+    .filterBox{ padding:10px 80px 10px 10px; border-left:1px solid #ccc; border-right:1px solid #ccc; position:relative;height:100%;
+      .selectBox{display:block;position:relative;
+        .inputBox{display:block;
+          &:after{width:8px;height:4px;content:'';display:block;background:url(/comm/images/commIcon.png) no-repeat;background-position:0 0;position:absolute;right:10px;top:10px;}
+        }
+      }
+      .currColl{width:100%; height:25px; outline:none; padding-left: 10px;}
+      .addButton{position:absolute; right:10px; top:10px; width:60px; height:25px; text-align:center; line-height:25px; border:1px solid #ccc; cursor:pointer;
+        .addIcon{
+          display:inline-block;width:12px;height:12px;background:url(/comm/images/commIcon.png) no-repeat;background-position:0 -420px;vertical-align:text-top;
+        }
+      }
+      .collSelect{ display:none;width:100%; position:absolute; z-index:2; left:0px; top:25px; padding-top:10px; border:1px solid #ccc; border-top:none; background:#fff;overflow:auto;max-height:240px;
+        .serch{
+          input{width:100%; height:25px; outline:none; }
+        }
+        .tips{padding-bottom:10px;}
+        .collList{
+          .collItem{ height:24px; padding:5px 74px 5px 10px; overflow:hidden; cursor:pointer;
+            &:hover{background-color:#cef0ff;}            
+            &.selected{background-color:#cef0ff;}
+          }
+          .collName{display:block; width:100%; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+          .collStatus{width:64px; color:#b2b2b2; text-align:right; margin-right:-64px; float:right; }
+        }
+        .collPage{width:100%;border-top:1px solid #ccc;padding:5px 0;display:table;
+          .totalNum{display:table-cell;width:15%;}
+          .page{display:table-cell;width:85%;text-align:right;}
+          .page{
+            .currPage{margin:0 5px;
+              .curr{color:#006dce;}
+            }
+            a{color:#006dce; margin:0 5px;
+              &.disabled{color:#ccc;}
+            }
+          }
+        }
+      }
+    }
+    .level{width:15%; padding:10px 0;min-width:50px; line-height:25px; text-align:center; float:left; }
+  }
+  .collFooter{position:absolute;height:40px;padding-top:5px; left:0; bottom:0;background:#fff;z-index:2;width:100%;
+    .viewSetting,.export{height:30px;margin-left:10px;display:inline-block;padding:5px 10px;border:1px solid #ccc;line-height:18px;}
+    .settingIcon,.exportIcon{display:inline-block;background:url(/comm/images/commIcon.png) no-repeat;vertical-align:text-bottom;}
+    .settingIcon{width:12px;height:12px;background-position:0 -440px;}
+    .exportIcon{width:16px;height:15px;background-position:0 -460px;}
+  }
+  .planBox { position: absolute; top: 62px; bottom: 0px; left: 0px; right: 0px;
+    .planContent { height: 100%;
+      .tbPlan { border: 1px #ccc solid; width: 100%; min-width: 398px;
+        th, td { border: 1px #ccc solid; }
+        th { text-align: center; height: 28px; line-height: 28px; }
+        td { height: 24px; line-height: 24px; }
+        tbody { td { box-sizing: border-box; padding-left: 8px; }
+        }
+      }
+      .ckItem { width: 7%; }
+      .planId { width: 9%; }
+      .operationalMatters { width: 40%; }
+      .start { width: 20%; }
+      .end { width: 20%; }
+    }
+  }
+}
+
+#projectContainer .fileContainerScroll .fileContainerScrollContent .mCSB_container{
+    height:auto!important;
+}

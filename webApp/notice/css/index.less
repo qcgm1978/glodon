@@ -1,0 +1,90 @@
+.noticeListContent {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  .noticeTopSearch {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    height: 30px;
+    z-index: 10;
+    input {
+      width: 200px;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 10px;
+    }
+  }
+  .noticeDownList {
+    width: 100%;
+    height: 95%;
+    padding-top: 40px;
+    position: relative;
+    td {
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      border-left: 1px solid #ccc;
+      &:nth-child(1) {
+        border-left: 0;
+        width: 80%;
+      }
+      &:nth-child(2) {
+        width: 20%;
+      }
+    }
+    .noticeDownTopTitle {
+      width: 100%;
+      height: 32px;
+      position: absolute;
+      left: 0;
+      top: 40px;
+      z-index: 10;
+      background: #eee;
+      table {
+        width: 100%;
+        height: 30px;
+        border: 1px solid #ccc;
+      }
+    }
+    .noticeDownListBox {
+      width: 100%;
+      height: 102%;
+      padding-top: 30px;
+      .scrollBox {
+        width: 100%;
+        height: auto;
+        table {
+          width: 100%;
+          border: 1px solid #ccc;
+          border-top: 0;
+          td {
+            height: 36px;
+            line-height: 36px;
+            border-bottom: 1px solid #ccc;
+          }
+          tr:nth-last-child(1) {
+            td {
+              border-bottom: 0;
+            }
+          }
+        }
+        #mCSB_1_scrollbar_vertical {
+          right: -20px;
+        }
+      }
+    }
+  }
+  .sumDesc {
+    float: left;
+    margin-left: 13px;
+  }
+
+  .pagination {
+    float: right;
+    margin-right: 21px;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>材料设备模型组件</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/static/dist/components/device/css/device.css">
+    <!--     <script src="http://bim.wanda-dev.cn/static/dist/components/device/js/device.js"></script>
+     -->
+    <script src="/static/dist/components/device/js/device.js"></script>
+</head>
+<body>
+<!--
+<script>
+    var data=[{
+        fileName:"WDGC-Q-ST-基础1.rvt",//文件名称
+        revitFileId:"048f7312796d85eda6c800602e6fc9c9",//文件ID
+        uniqueId: "0d9d7d7c-1653-41d2-992b-405a02cbd02d-000311e0",
+        boundingbox: {
+            "min" : {
+                "x" : -4781.154296875,
+                "y" : 60440.47265625,
+                "z" : -9160
+            },
+            "max" : {
+                "x" : -5581.154296875,
+                "y" : 59640.47265625,
+                "z" : -29259.998046875
+            }
+        }
+    },{
+        fileName:"WDGC-Q-ST-B011.rvt",//文件名称
+        revitFileId:"72cda601e045bdc77576a5589e43f9c1",//文件ID
+        uniqueId: "3909c2cb-03f4-4fc0-934c-754bf06a756e-00099618",
+        boundingbox: {
+            "min" : {
+                "x" : -122431.734375,
+                "y" : 60264.5234375,
+                "z" : -50
+            },
+            "max" : {
+                "x" : -123131.7265625,
+                "y" : 59564.5234375,
+                "z" : -4899.99951171875
+            }
+        }
+    },{
+        fileName:"WDGC-Q-PL-F021.rvt",//文件名称
+        revitFileId:"ff0402f57d49241819fa245e3239777b",//文件ID
+        uniqueId: "6c0fd922-7f0b-4c97-a77e-f35c72d33e7e-0023af3b",
+        boundingbox: {
+            "min" : {
+                "x" : 119838.0703125,
+                "y" : 4144.0263671875,
+                "z" : 10800.0009765625
+            },
+            "max" : {
+                "x" : 119679.0625,
+                "y" : 3985.02197265625,
+                "z" : 10040.3125
+            }
+        }
+    }];
+
+
+    var selectedData=null;
+    //构件id: modelId.uniqueId
+    //modeId:通过接口获取(P:fileName,projectId...)
+
+    //初始化模型组件
+    new DeviceSelection({
+        data:data,//构件数据列表、必须的
+        selectedData:selectedData,
+        height: "580px",//模型高度
+        width:"1200px",//模型宽度
+        projectCode: '20000305',//项目ProjectCode
+        token: "4aeba9fa8574d9a704453d760171a1fde94812671e2f2a37ca0d26f91c63d001e7b42a4a1ad4aaff0cd0e360cb0f60fa650833130c13f2056d9fce17a9569a4942b39cec528fac5785bcfe9cf6cb03910ed2bd605c5863ce85b2b57b32eb8744c9645dc78be2e3b7cb1b4530efb538c85438a67e0db6069e",
+        appKey: "60e8a1d9fc1d44d7b6a4cf85ae2987ed",
+        callback: function (res) {
+            //回调函数
+            //用户点击确认时、执行的回调、传回数据
+            alert(JSON.stringify(res))
+        }
+    })
+</script>
+-->
+<script>
+    // var allData1 =
+    //     "[{\"uniqueId\":\"b124b193-60ee-41d7-a6a4-2a124ce9e5b9-0012046b\",\"revitFileId\":\"1ec8f5ad-c2d9-4d25-94ca-58ce3c77eace\",\"fileName\":\"WDGC-Q-AR-F03.rvt\",\"boundingBox\":\"{\\\"min\\\": {\\\"x\\\":-2621.0000000002151, \\\"y\\\":7078.9999999993124,\\\"z\\\":10600.000000000015},\\\"max\\\": {\\\"x\\\":25300.155283540542, \\\"y\\\":7199.9999999994025,\\\"z\\\":15699.999999999998}}\"},{\"uniqueId\":\"6e3b528e-f963-4c49-b444-3941dfc0a269-000b962a\",\"revitFileId\":\"1ec8f5ad-c2d9-4d25-94ca-58ce3c77eace\",\"fileName\":\"WDGC-Q-AR-F03.rvt\",\"boundingBox\":\"{\\\"min\\\": {\\\"x\\\": 40849.999905375174, \\\"y\\\": 44081.999999999862,\\\"z\\\":10750.000000000015},\\\"max\\\": {\\\"x\\\":41594.49999999976, \\\"y\\\": 44099.999999999985,\\\"z\\\":14099.999999999998}}\"}]"; //obj.AllComData;
+
+    var allData1 = "[{\"fileName\":\"wdgc-q-in&gs-f01.rvt\",\"revitFileId\":\"2\",\"uniqueId\":\"839cf5d3-3a89-49ec-9411-370ab6fc50a4-0009b7d9\",\"boundingbox\":\"{\\\"min\\\": {\\\"x\\\":44000.0776121822,\\\"y\\\":3299.99039349041,\\\"z\\\":1199.99999999999},\\\"max\\\":{\\\"x\\\":44400.0776121822,\\\"y\\\":3356.95191771751,\\\"z\\\":2400.00000000001}}\",\"id\":\"rid_uuid_1\",\"componentId\":\"2a1cc34d105bc42c82f314802e8429e4.839cf5d3-3a89-49ec-9411-370ab6fc50a4-0009b7d9\"},{\"fileName\":\"wdgc-q-in&gs-f01.rvt\",\"revitFileId\":\"2\",\"uniqueId\":\"839cf5d3-3a89-49ec-9411-370ab6fc50a4-0009b762\",\"boundingbox\":\"{\\\"min\\\": {\\\"x\\\":41160.0776121822,\\\"y\\\":3299.99039349041,\\\"z\\\":1199.99999999999},\\\"max\\\":{\\\"x\\\":41560.0776121822,\\\"y\\\":3356.95191771752,\\\"z\\\":2400.00000000001}}\",\"id\":\"rid_uuid_2\",\"componentId\":\"2a1cc34d105bc42c82f314802e8429e4.839cf5d3-3a89-49ec-9411-370ab6fc50a4-0009b762\"}]";
+
+    var allData2 = JSON.parse(allData1);
+    var selectData = []; //JSON.parse(obj.AllSelectComData);
+    var ad = [];
+    for (var i = 0; i < allData2.length; i++) {
+        var mm = allData2[i];
+        var m = new Object();
+        var p = {
+            fileName: mm.fileName, revitFileId: mm.revitFileId, uniqueId: mm.uniqueId,
+            boundingbox: JSON.parse(mm.boundingbox)
+        };
+        ad[i] = p;
+    }
+    var allData = ad;
+    //初始化模型组件
+    new DeviceSelection({
+        data: allData,//构件数据列表、必须的
+        //已选的构件列表[{fileName:'',uniqueId:''}]
+        selectedData: selectData,
+        height: "580px", //模型高度
+        width: "1300px", //模型宽度
+        isShowConfirm: true,
+        //etag:"7e3f213e10dd223e9de9359bd9d4acd3",
+        //projectCode:"ZJMN1035681309025728",//"@ViewData["ProjectCode"]", //项目ProjectCode
+        projectCode: "b1fe4ed9-1ac6-461c-b7db-1a451eb4dedb",
+        token: "123",
+        appKey: "60e8a1d9fc1d44d7b6a4cf85ae2987ed",
+//            appKey:"b35e9a6e29c94d55b9a671032fa1cacc",//测试环境
+        callback: function (res) {
+            //回调函数
+            //用户点击确认时、执行的回调、传回数据
+            alert(JSON.stringify(res))
+        }
+    });
+
+</script>
+</body>
+</html>

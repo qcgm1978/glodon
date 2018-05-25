@@ -1,0 +1,45 @@
+
+<%if(folder || (suffix!='rvt' && suffix!='rfa' && suffix!='dwg' && suffix!='rte'  ) ){%>
+  <span data-id="<%=id%>" data-isfolder="<%=folder%>" class="boxText">
+  
+<%}else{%>
+  
+  
+       <a data-id="<%=id%>" href="/static/dist/app/project/single/filePreview.html?id=<%=fileVersionId%>&model=<%=modelId%>&projectId=<%=projectId%>&projectVersionId=<%=App.ResourceModel.Settings.CurrentVersion.id%>&famLibs=famLibs" target="_blank" data-isfolder="<%=folder%>" class="boxText">
+<%}%>
+
+
+<span data-fileversionid="<%=fileVersionId%>" class="filecKAll"><input type="checkbox" class="ckMe" /></span>
+ 
+<%if(folder){%>
+	<div class="thumBg sourceFileType folder"></div> 
+<%}else{%>
+ 
+	<%if(thumbnail){%>
+	<img class="thumbnailImg" src="/model/<%=modelId%>/<%=thumbnail%>" alt="" />
+	<%}else{%>
+	<div class="thumBg sourceFileType <%=App.Comm.fileSuffix(suffix)%> "></div>
+	<%}%>
+
+<%}%>
+
+<span class="fileName">
+
+ <span data-id="<%=id%>" title="<%=name%>" data-isfolder="<%=folder%>" 
+  class="text overflowEllipsis <%= id=='createNew'?'hidden':'' %> <%= folder ? '':'textFolder' %>">
+  <%= App.ResourceModel.getName(name)  %> </span>
+
+<%if(folder){%> 
+    <% if(id=='createNew'){%>
+    	<input type="text" value="<%=name%>" class="txtEdit txtInput" /> 
+    	<span class="btnEnter myIcon-enter"></span>
+    	<span class="btnCalcel pointer myIcon-cancel"></span>
+    <%}%>
+<%} %> 
+</span> 
+
+<%if(folder || (suffix!='rvt' && suffix!='rfa' && suffix!='dwg' && suffix!='rte' )){%>
+   </span> 
+<%}else{%>
+  </a> 
+<%}%>

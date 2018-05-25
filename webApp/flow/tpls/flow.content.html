@@ -1,0 +1,13 @@
+<%  _.each(data,function(item){ %>
+<% if(item.itemNames.length) {%>
+<fieldset class="classify">
+    <legend><i class="micon <%=App.Flow.Controller.toIcon(item.categoryName)%>"></i><%=item.categoryName%></legend>
+    <ul>
+        <% _.each(item.itemNames,function(i){ %>
+        <li class="item"><span class="text" title="<%=i%>"><%=i.replace('【<span-i data-i18n="data.drawing-model.Module">模块化</span-i>】','<span>【<span-i data-i18n="data.drawing-model.Module">模块化</span-i>】</span>')%></span>
+        </li>
+        <% }) %>
+    </ul>
+</fieldset>
+<% } %>
+<% }) %>

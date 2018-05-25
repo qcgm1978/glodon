@@ -1,0 +1,13 @@
+ 
+
+<span class="proImg"><img src="<%= logoUrl.small%>" /></span>
+ 
+<span class="proName"><a class="aProName" href="/#BIMperformance/<%=id %>/<%= version && version.id || 'noVersion'  %>" data-id="<%=id %>"><%=name%></a></span>
+<span class="proType"><%=App.Projects.projectType[subType]%></span> 
+<span class="proType"><%=App.Projects.projectModel[estateType]%></span> 
+<span class="proRetailing"><%=App.Projects.proRetailing[projectType]%></span>
+<span class="proProvince overflowEllipsis" title="<%=province||city%>"><%=province||city%></span>
+<span class="proCity"><%=region%></span> 
+<span class="proStar"><%= delistingDate ? new Date(delistingDate).format("yyyy-MM-dd"): "" %></span>
+<span class="proEnd"><%= openTime ? new Date(openTime).format("yyyy-MM-dd"):"" %></span>
+ 

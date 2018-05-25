@@ -1,0 +1,27 @@
+<div class="topBar">
+    <span class="textSum">业务流程(<span class="count">0</span>)</span>
+    <a href="javascript:void(0);" class="create">+ 新建</a>
+</div>
+<ul class="flowList flowListHeader">
+    <li class="item">
+        <div class="code left">
+            index
+        </div>
+        <div class="name left">
+            业务名
+        </div>
+        <div class="performance left">
+            功能：URL
+        </div>
+        <div class="op left">
+            操作
+        </div>
+    </li>
+</ul>
+<div class="flowListBodybox">
+    <div class="flowListBodScroll">
+        <ul class="flowList flowListBody">
+            <li class="loading"><%= App.Local.data['system']['l-g'] || '正在加载，请稍候……' %></li>
+        </ul>
+    </div>
+</div>

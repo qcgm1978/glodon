@@ -1,0 +1,31 @@
+<!-- <div class="serch">
+    <input type="text">
+    <i class="serchIcon"></i>
+</div> -->
+<ul class="collList">
+  <% _.forEach(data.reverse(),function(item){ %>
+    <li class="collItem" data-pId="<%=item.projectId%>" data-vId="<%=item.projectVersionId%>" data-id="<%=item.id%>" data-status="<%= item.status %>">
+      <span class="collStatus">
+        <% switch(item.status){case 0: %>
+          [待碰撞]
+        <% break;case 1: %>
+          [碰撞中]
+        <% break;case 2: %>
+          [碰撞成功]
+        <% break;case 3: %>
+          [碰撞失败]
+        <% break;} %>
+      </span>
+      <span class="collName" data-id="<%= item.jobId %>"><%= item.name %></span>
+    </li>
+  <% }) %>
+</ul>
+<!-- <div class="collPage">
+    <span class="totalNum">98条</span>
+    <span class="page">
+        <span class="currPage"><span class="curr">1</span>/10</span>
+        <a href="javascript:;" class="disabled">上一页</a>
+        <a href="javascript:;" >下一页</a>
+    </span>
+</div> -->
+

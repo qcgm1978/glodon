@@ -1,0 +1,40 @@
+<div class="onlineServices">
+    <div class="xwOnline" id="robotDiv">
+        <div id="small-robot-div"></div>
+    </div>
+    <div class="onlineSide">
+        <div class="tilePanel resourcePanel">
+            <div class="header">
+                <span class="title"><i class="osIcon pic_9"></i><%= App.Local.data['online-service'].Rs || '相关资源' %></span>
+                <span class="tools"><a target="_blank" href="#services/more" data-i18n="data.online-service.Me"><%= App.Local.data['drawing-model'].More || "更多" %></a></span>
+            </div>
+            <div class="content" id="resourceList">
+                <ul class="resourceList">
+                    
+                </ul>
+            </div>
+        </div>
+        <div class="tilePanel  toolPanel">
+            <div class="content">
+                <div class="tileIcon" name="suggest">
+                    <div class="icon osIcon pic_12"></div>
+                    <span><%= App.Local.data['online-service'].Fk || '建议反馈' %></span>
+                </div>
+                <div class="tileIcon" name="onlineStudy"><!-- http://lms.wanda.cn/jsp/wandabim/bim.jsp -->
+                <a target="_blank" id="onlineBtn" href="javascript:;">
+                    <div class="icon osIcon pic_13"></div>
+                    <span data-i18n="data.online-service.Og">在线培训</span>
+                </a>
+                </div>
+            </div>
+        </div>
+        <div class="tilePanel wxPanel">
+            <div class="header">
+                <span class="title" data-i18n="[append]data.online-service.WM"><i class="osIcon pic_6"></i><!--万达BIM官方微信--></span>
+            </div>
+            <div class="content">
+                <img src="/static/dist/images/services/images/wdwx.png">
+            </div>
+        </div>
+    </div>
+</div>

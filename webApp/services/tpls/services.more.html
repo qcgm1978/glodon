@@ -1,0 +1,244 @@
+﻿<style>
+    html, body {
+        font-family: "Microsoft YaHei";
+        height: 100%;
+        position: relative;
+    }
+
+    .servicesMore {
+        width: 100%;
+        height: 100%;
+    }
+
+    .nav {
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #ccc;
+        color: #7d7d7d;
+        padding-left: 20px;
+        font-weight: bold;
+        font-size: 14px;
+    }
+
+    .moreContainer {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        margin-top: -110px !important;
+        padding-top: 140px !important;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .moreContainer .moreTable {
+        width: 100%;
+        height: 100%;
+        border: 1px solid #ccc;
+    }
+
+    .moreContainer .moreTable div {
+        float: left;
+    }
+
+    .moreContainer .moreTable dt, .moreContainer .table dd {
+        clear: both;
+    }
+
+    .moreContainer .moreTable dt {
+        background-color: #eee;
+        color: #c1c1c1;
+        height: 38px;
+        line-height: 38px;
+        border-bottom: 1px solid #ccc;
+        position: relative;
+        z-index: 20;
+    }
+
+    .moreContainer .moreTable dd {
+        width: 100%;
+        height: 100%;
+        margin-top: -38px;
+        color: #888;
+        background-color: #FFF;
+        position: relative;
+        padding-top: 44px;
+    }
+
+    .moreContainer .moreTable dd .scrollBox {
+        width: 100%;
+        height: 100%;
+    }
+
+    .moreContainer .moreTable dd .scrollBox .mCSB_outside, .moreContainer .moreTable dd .scrollBox .mCSB_outside .mCS_no_scrollbar_y {
+        width: 100% !important;
+    }
+
+    .moreContainer .moreTable dd .scrollBox .mCSB_scrollTools_vertical {
+        right: -20px;
+    }
+
+    .moreContainer .moreTable dd .resourceListBox {
+        width: 100%;
+        height: 100%;
+    }
+
+    .resourceListBox .listItem {
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+        border-bottom: #ccc solid 1px;
+    }
+
+    .resourceListBox .listItem:nth-last-child(1) {
+        /*border-bottom: 0;*/
+    }
+
+    .resourceListBox .loading {
+        width: 100%;
+        height: 36px;
+        line-height: 36px;
+        text-align: center;
+    }
+
+    .resourceListBox .listItem:hover {
+        background-color: #eee;
+    }
+
+    .resourceListBox .listItem:hover .fileName {
+        font-size: 18px;
+    }
+
+    dl, dt, dd {
+        padding: 0;
+        margin: 0;
+    }
+
+    .moreContainer .moreTable .fileName {
+        padding-left: 20px;
+        transition: all .3s;
+    }
+
+    .moreContainer .moreTable .type {
+        width: 200px;
+        float: right;
+    }
+
+    .moreContainer .moreTable .volume {
+        width: 180px;
+        float: right;
+    }
+
+    .moreContainer .moreTable .time {
+        width: 200px;
+        float: right;
+    }
+
+    .moreContainer .moreTable dd {
+        position: relative;
+    }
+
+    .moreContainer .moreTable dd#pageBoxDd {
+        padding-bottom: 44px;
+    }
+
+    .moreContainer .moreTable dd .pagingBox {
+        position: absolute;
+        bottom: 0px;
+        left: 20px;
+        right: 20px;
+        line-height: 40px;
+    }
+
+    .moreContainer .moreTable dd .pagingBox .sumDesc {
+        float: left;
+        margin-left: 20px;
+    }
+
+    .moreContainer .moreTable dd .pagingBox .listPagination {
+        float: right;
+        margin-right: 20px;
+    }
+
+    .moreContainer .moreTable dd .pagingBox .pagination {
+        margin: 0px;
+    }
+
+    .moreContainer .moreTable dd .pagingBox .moreContainer .moreTable dd .fileName {
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
+
+    a:visited {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
+    .noBorderB {
+        border-bottom: none !important;
+    }
+
+    .moreContainer .pageNo {
+        float: right;
+        margin-top: 20px;
+        margin-right: 30px;
+        right: 0px;
+        bottom: 20px;
+    }
+
+    .moreContainer .pageNo dt, .moreContainer .pageNo dd {
+        float: left;
+        padding: 5px;
+        margin-left: 10px;
+    }
+
+    .moreContainer .pageNo dt {
+        background-color: #f1f1f1;
+        color: #ddd;
+        border: 1px solid #ccc;
+    }
+
+    .moreContainer .pageNo dd {
+        color: #FFF;
+        background-color: #4C9EE3;
+        border: 1px solid #4C9EE3;
+    }
+</style>
+<div id="topBar">
+    <div class="logo"><span class="text"></span></div>
+</div>
+<div class="nav" data-i18n="data.online-service.Os">
+    在线服务 > 相关资源
+</div>
+<div class="moreContainer" id="contains">
+    <dl class="moreTable" id="resourceMore">
+        <dt>
+            <div class="fileName" data-i18n="data.online-service.Ne">文件名称</div>
+            <div class="time" data-i18n="data.online-service.Td">发布时间</div>
+            <div class="volume" data-i18n="data.online-service.Se"><%= App.Local.data['drawing-model'].Size || "大小" %>
+            </div>
+            <div class="type" data-i18n="data.online-service.Te">资源类型</div>
+        </dt>
+        <dd id="pageBoxDd">
+            <div class="scrollBox">
+                <div class="resourceListBox">
+
+                </div>
+            </div>
+            <div class="pagingBox">
+                <div class="sumDesc"></div>
+                <div class="listPagination"></div>
+            </div>
+        </dd>
+    </dl>
+</div>

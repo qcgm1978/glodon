@@ -1,0 +1,19 @@
+<li>
+	<span>项目成员（<%= data.length %>）</span>
+	<a id="addMemberBtn">
+		<i style="background:url('/static/dist/images/services/images/service_ico.png')no-repeat 0 -220px"></i>添加成员
+	</a>
+</li>
+<ul id="memberList">
+<% _.each(data,function(item,index) { %>
+<li class="member" id="<%=item.id%>">
+	<span class="<% if(item.org){ %>iconFile<% }else{ %>iconUser<% } %>"></span>
+	<p><span class="name"><%= item.name %></span> <span class="direction" title="<% if(item.project){ %><%=item.project%><% }else{ %> -- <% } %>"><% if(item.project){ %><%=item.project%><% }else{ %> -- <% } %></span></p>
+	<div class="remove" data-outer="<%= item.outer %>" data-type="<% if(item.org){ %>org<% }else{ %>user<% } %>" data-user="<%= item.id %>" data-userName="<%= item.name %>"><i style="background:url('/static/dist/images/services/images/service_ico.png')no-repeat 0 -280px"></i>移除</div>
+</li>
+<% }) %>
+
+<% if(data.length==0){ %>
+<li class="noDataText2">暂无项目成员，请点击“添加成员”按钮!</li>
+<%}%>
+</ul>

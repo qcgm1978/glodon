@@ -1,0 +1,20 @@
+<span class="myDropText">
+	<span><%=data[selected[0]].specialtyName%>：</span>
+	<span class="text"><%=data[selected[0]].comparisons[selected[1]].fileName%></span>
+	<i class="myDropArrorw"></i>
+</span>
+<ul class="myDropList" style="display: none;">
+  <% $.each(data,function(i,item){ %>
+    <li class="myItemGroup"><span><%=item.specialtyName%></span></li>
+    <ul class="groups">
+      <% $.each(item.comparisons,function(i,item){  %>
+        <li class="myItem" data-id="<%= item.comparisonId %>"
+          data-basemodel="<%=item.baseModel%>"
+          data-currentmodel="<%=item.currentModel%>"
+          data-change="<%=item.output%>">
+		      <%=item.fileName%>
+	      </li>
+      <% }) %>
+    </ul>
+  <% }) %>
+</ul>

@@ -1,0 +1,16 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "id":"1",
+      "name":"home",
+      "viewPoint":"eyJwb3NpdGlvbiI6eyJ4Ijo2LjI5Njc2ODAzMjc2NzA5MSwieSI6NS40ODAyMDkxMTU1NjUwNzksInoiOjEyLjYzODI4MDM0NjU1MTA5Mn0sInRhcmdldCI6eyJ4IjowLjk1MjkzMzY2MzcyNzcwNzMsInkiOi0yLjU4OTEyMTgxOTAwNDIyMDQsInoiOi0xLjc1NDE4Njg2MDY3ODA4MjR9LCJ1cCI6eyJ4IjowLCJ5IjoxLCJ6IjowfX0="
+    },
+    {
+      "id":"2",
+      "name":"我的视点",
+      "viewPoint":"eyJwb3NpdGlvbiI6eyJ4IjotMy45Nzc4MTE1MTEyODQwNzEsInkiOjEuOTU3NDY1NDc0MTE4MywieiI6LTEuMTM3OTIzNDQ4NTk5OTExfSwidGFyZ2V0Ijp7IngiOi0xLjUzMzg2NTQ2MjQ0MzY0MywieSI6MC4wNzI1Nzk4MTE2NzIzMTk3NSwieiI6LTEuMDQ1NzY1OTM3MTA4MjExNX0sInVwIjp7IngiOjAsInkiOjEsInoiOjB9fQ=="
+    }
+  ]
+}

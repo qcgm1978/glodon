@@ -1,0 +1,121 @@
+/**
+ * @require /components/less/reset.less
+ */
+#fileSelectionMask { position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; filter: alpha(opacity=50); opacity: .5; background-color: #000; z-index: 9998; }
+#fileSelectionDialog { .bg { background: url(../images/fileSelection.png) no-repeat 0 0; }
+	width: 960px; height: 600px; position: absolute; top: 50%; left: 50%; margin-top: -300px; margin-left: -480px; border: 1px #ccc solid; border-radius: 3px; background-color: #fff; z-index: 9999;
+	.header { height: 40px; line-height: 40px;
+		h2 { font-size: 16px; color: #333; margin-left: 15px; }
+		.close { width: 16px; float: right; height: 13px; margin-top: 12px; margin-right: 15px; cursor: pointer; }
+	}
+	.container { height: 500px;
+		.loading { display: block; height: 100%; text-align: center; font-size: 18px; color: #ccc; line-height: 100%; line-height: 428px; }
+		.leftFile, .contentBox, .rightEnter { display: none; }
+		.leftFile { float: left; width: 180px; border-right: 1px #ccc solid;
+			.title { height: 50px; background-color: #eee; text-align: center; line-height: 50px; }
+			.treeViewBox { height: 450px; border-bottom: 1px #ccc solid;
+				.treeViewScroll { height: 100%; overflow: auto; }
+			}
+		}
+		.rightEnter { float: right; width: 220px;border-left: 1px #ccc solid;
+			.title { height: 50px; background-color: #ddd; line-height: 50px; }
+			.fileSelection-title{ height: 50px; background-color: #ddd; line-height: 50px;}
+			.fileEnterBox { height: 450px; border-bottom: 1px #ccc solid;
+				.bindScroll { height: 100%; overflow: auto; }
+			}
+			.btnEnter { margin-left: 15px; }
+			.fileSelText_tmd { margin-left: 12px; }
+			.fileCount { color: red; margin: 0px 2px; }
+			.null { font-size: 18px; padding-top: 100px; color: #ccc; text-align: center; }
+			.ckBg { display: inline-block; width: 14px; height: 14px; background-position: 0px -118px; vertical-align: -1px; }
+			.delFile { display: none; width: 16px; height: 13px; background-position: 3px -173px; vertical-align: top; position: absolute; top: 0px; right: 0px; }
+			.item-content:hover .delFile { display: inline-block; }
+		}
+		.contentBox {  margin: 0px 220px 0px 180px; height: 500px; border-bottom: 1px #ccc solid;
+			.tbFile, .fileBody { width: 558px;
+				span { &.ckAll, &.name, &.status, &.op, &.mmhDate, &.size { float: left; text-align: center; }
+				}
+				.ckAll { width: 30px; }
+				.name { width: 208px; text-align: left; }
+				.status { width: 54px; }
+				.op, .divOp { width: 60px; }
+				.mmhDate { width: 104px; }
+				.size { width: 82px; }
+				.ck {vertical-align: middle; display: inline-block; width: 14px; height: 14px; background-position: 0px -46px;
+					&.selected { background-position: 0px -32px; }
+					&.disable { background-position: 0px -74px; }
+				}
+				.downBg { display: inline-block; width: 15px; height: 14px; background-position: 0px -88px; vertical-align: top; margin-top: 1px; }
+				li { height: 50px; background-color: #eee; line-height: 50px; }
+				.fileType { width: 44px; display: inline-block; height: 28px; background-position: 0px -213px; vertical-align: top; margin-top: 4px;
+					&.folder { background-position: 0px -186px; }
+					&.disable { background-position: 0px -60px; }
+				}
+			}
+			.fileBodyScrollBox { height: 449px; width: 558px;
+				.fileBodyScroll { height: 100%; overflow: auto; overflow-x: hidden; }
+			}
+			.fileBody { li { text-align: left; text-align: center; border-bottom: 1px #ccc solid; height: 38px; line-height: 38px; background-color: #fff; }
+				.fileName { text-align: left; }
+				.null { border-bottom: 0; font-size: 18px; color: #ccc; line-height: 150px; height: 150px; }
+				.error { color: red; }
+				span { &.ckAll, &.name, &.status, &.op, &.date, &.size { height: 38px; }
+				}
+				.fileName:hover { text-decoration: underline; cursor: pointer; }
+			}
+			.treeViewScroll { height: 100%; overflow: auto; }
+			.fileName { vertical-align: top; margin-left: -45px; width: 100%; padding-left: 45px; }
+		}
+		.contentBox  .tbFile span.name { text-align: left; }
+	}
+	.footer { text-align: right; height: 50px; line-height: 50px; padding-right: 20px; display: none; }
+}
+
+/* treeview */
+#fileSelectionDialog { .treeViewMar { padding-top: 15px; padding-left: 15px;
+		.nodeSwitch { background-position: 0px -12px; margin-top: 3px; display: inline-block; width: 12px; height: 10px; line-height: 8px; vertical-align: top; text-align: center; cursor: pointer;
+			&.on { background-position: 0px -22px; }
+		}
+		.noneSwitch { display: inline-block; width: 11px; }
+		.item-content { height: 22px; position: relative; width: 136px;
+			&.file { .text-field { margin-left: 10px; }
+				.folderIcon+.text-field { margin-left: 0px; }
+			}
+			.folderIcon { background-position: 0px -146px; margin-top: 1px; display: inline-block; width: 23px; height: 13px; vertical-align: top; }
+		}
+		.treeViewSub { margin-left: 20px; display: none; width: 100%;
+			&.noneIcon { margin-left: 8px; }
+			&.mIconAndCk { margin-left: 30px; }
+		}
+		.text-field { cursor: default; width: 92px;
+			&.selected { background-color: #A8DBFD; }
+			&.over { position: absolute; left: 40px; right: 11px; }
+		}
+		.ckSelect { vertical-align: top; width: 16px; height: 14px; margin-top: -2px; }
+	}
+}
+#fileSelectionDialog { .overflowEllipsis { display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+	/* botton  */
+	.myBtn { height: 30px; box-sizing: border-box; display: inline-block; padding: 6px 10px; font-weight: normal; line-height: 1.42857143; text-align: center; white-space: nowrap; vertical-align: middle; -ms-touch-action: manipulation; touch-action: manipulation; cursor: pointer; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; border: 1px solid transparent; min-width: 80px; }
+	.myBtn:focus, .myBtn:active:focus, .myBtn.active:focus, .myBtn.focus, .myBtn:active.focus, .myBtn.active.focus { outline: thin dotted; outline: 5px auto -webkit-focus-ring-color; outline-offset: -2px; }
+	.myBtn:hover, .myBtn:focus, .myBtn.focus { color: #333; text-decoration: none; }
+	.myBtn:active, .myBtn.active { background-image: none; outline: 0; -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125); box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125); }
+	.sm { height: 25px; padding: 3px 8px; min-width: 60px; }
+	.myBtn-default { color: #666; background-color: #fff; border-color: #ccc;    margin: 0;
+    vertical-align: middle; background: linear-gradient(to bottom, #dedede 0%,#fafafa 100%);}
+	.myBtn-default:hover { color: #999; border-color: #ccc; }
+	.myBtn-default:active, .myBtn-default.active { color: #666; background-color: #ddd; border-color: #ccc; }
+	.myBtn-default.disabled { background-color: #eee; border-color: #ccc; color: #ccc; }
+	.myBtn-primary { color: #fff; background-color: #208aee; }
+	.myBtn-primary:focus { color: #fff; }
+	.myBtn-primary:hover { background-color: #51a6f2; color: #fff; }
+	.myBtn-primary:active, .myBtn-primary.active { color: #fff; background-color: #106bbe; }
+	.myBtn-primary.disabled { background-color: #bcdcfa; color: #fff; }
+	div, span, h1, h2, a, img, form, label, table, tbody, tfoot, thead, tr, th, td,ul,li { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; outline: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; font-family: 'Lantinghei SC', 'Hiragino Sans GB', 'Microsoft Yahei', STHeiti, Verdana, Arial, sans-serif; font-size: 12px; }
+	ol, ul { list-style: none; }
+	table { border-collapse: collapse; border-spacing: 0; }
+	img { border: 0; max-width: 100%; }
+	p { font-size: 1.2em; line-height: 1.0em; color: #333; }
+	a { color: #337ab7; text-decoration: none; }
+}

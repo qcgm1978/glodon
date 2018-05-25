@@ -1,0 +1,14 @@
+<% $.each(data,function(i,item){ %>
+  <tr>
+                <td class="inspecId"><%=item.no%></td>
+                <td class="businessMatters"><%=item.businessItem%></td>
+            </tr>
+
+<% }) %>
+
+<% if(data.length<=0){%> 
+    <tr>
+        <td colspan="2" class="noDataTd"><%= App.Local.data['drawing-model'].Ndd1 || '暂无数据' %></td>
+    </tr>
+    
+<%}%>

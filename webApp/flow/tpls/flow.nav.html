@@ -1,0 +1,7 @@
+<% _.each(data,function(item,index){ %>
+    <li class="flowTabItem <%=index==0?'itemSelected':''%>"  data-id="<%=item.id%>" data-link="<%=item.planLink%>">
+        <div class="numberFlag numberFlag<%=index+1%>"></div>
+    </li>
+<% }) %>
+<li id="flowAdminBtn" class="flowMoreBtn adminAbsi"><a href="javascript:;" target="_blank"><%= App.Local.data.source.MB || '管理依据' %></a></li>
+<li id="flowMoreBtn" class="flowMoreBtn less-1300"><a href="<%=data[0].planLink%>" target="_blank"><%= App.Local.data.source.Items || '模块化节点' %></a></li>

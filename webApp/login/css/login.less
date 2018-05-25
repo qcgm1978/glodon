@@ -1,0 +1,350 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym,
+ address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt,
+  var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, 
+  thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, 
+  menu, nav, output, ruby, section, summary, time, mark, audio, video {
+   margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;
+    outline: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; 
+    font-family: "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", STHeiti, Verdana, Arial, sans-serif;
+  }
+  input{ font-size: 14px; font-family: "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", STHeiti, Verdana, Arial, sans-serif;}
+body { font-size: 12px; line-height: 1;  }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+ol, ul { list-style: none; }
+blockquote, q { quotes: none; }
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+strong { font-weight: bold; }
+table { border-collapse: collapse; border-spacing: 0; }
+img { border: 0; max-width: 100%; }
+p { font-size: 1.2em; line-height: 1.0em; color: #333; }
+.clear { clear: both; }
+a { color: #fff; text-decoration: none; }
+.relative { position: relative; }
+@color: #4D926F;
+.rounded-corners (@radius:4px) { -webkit-border-radius: @radius; -moz-border-radius: @radius; -ms-border-radius: @radius; -o-border-radius: @radius; border-radius: @radius; }
+.loginDialogWidth() { width: 260px; box-sizing: border-box; display: block; margin: 0 auto; margin-top: 10px; }
+.layout { position: absolute; top: 0; left: 0; right: 0; bottom: 0; min-width: 1000px; min-height: 720px; background: url('/login/images/login-bg.jpg') no-repeat; background-size: cover;filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/login/images/login-bg.jpg', sizingMethod='scale');}
+.loginForm { position: absolute; bottom: 202px; top: 0; left: 0; right: 0; }
+#mainBox { height: 100%; padding-top: 1px;
+  .logo { margin: 38px 0px 0px 50px; width: 128px; height: 30px; background: url('/login/images/logo.png') no-repeat; float: left; }
+  .headTitle { width: 524px; font-size: 40px; color: #fff; top: 18%; position: absolute; left: 50%; margin-left: -262px;
+    .introduction { margin-top: 15px; font-size: 26px; height: 30px;    margin-left: 37px;
+      .item { width: 125px; float: left; margin-left: 28px; padding-left: 20px;
+        &.first { margin-left: 0px; }
+      }
+    }
+    h1 {text-align: center;}
+  }
+  .loginDialog { width: 300px; height: 300px; background: #000; background-color: rgba(0, 0, 0, 0.5); color: #fff; top: 40%; position: absolute; left: 50%; margin-left: -150px; z-index: 6;
+    .header { margin-top: 24px; font-size: 20px; text-align: center; }
+    .errorMSG { border: 1px solid #FFCF85; background-color: #FFFDEA; color: #FF6649; height: 28px; padding-left: 5px;padding-right: 5px;  line-height: 28px; .loginDialogWidth; .rounded-corners; visibility: hidden;
+      
+      &.show { visibility: visible;a.errorDesc{
+        display: inline-block;float: right;color: #FF6649;
+      } }
+      .iconWarning { display: inline-block; height: 16px; width: 22px; background: url('/login/images/icons.png') no-repeat; vertical-align: top; margin-top: 6px; }
+    }
+    .txtInput { height: 20px; border: 0; outline: 0; padding-left: 42px; padding-right: 5px; padding-top: 12px; padding-bottom: 12px; width: 213px; display: block; margin: 0 auto; margin-top: 10px; .rounded-corners; }
+    .txtIcon { background: url('/login/images/icons.png') no-repeat 0px -17px; position: absolute; width: 20px; height: 20px; top: 11px; left: 30px;
+      &.userPwd { background-position: 0px -37px; }
+    }
+    .loginHelper { .loginDialogWidth;
+      .remember { background: url('/login/images/icons.png') no-repeat 0px -59px; padding: 1px 1px 1px 20px; cursor: pointer; width: 112px;
+        &.selected { background-position: 0px -75px; }
+      }
+      .forgotPwd { float: right;    margin-bottom: 10px; }
+    }
+    .btnLogin { display: block; margin: 0 auto; margin-top: 10px; text-align: center; width: 260px; height: 40px; .rounded-corners; border: 0; background-color: #418CDF; color: #fff; font-size: 18px; }
+    .btnLogin:hover { background-color: #56A0E4; }
+  }
+}
+.footerWrap { height: 202px; background: #EEE; position: absolute; bottom: 0; left: 0; right: 0; }
+.footer { width: 1000px; margin: 0 auto; padding-top: 40px; height: 176px; background-color: #eee;
+  .item { margin-right: 30px; float: left; display: inline; }
+  .iconBg { width: 72px; height: 72px; float: left; background: url('/login/images/icons.png') no-repeat; }
+  .iconPlanning { background-position: 0px -88px; }
+  .iconPlan { background-position: 0px -160px; }
+  .iconCost { background-position: 0px -232px; }
+  .iconQuality { background-position: 0px -305px; }
+  .introduction { margin-left: 80px; width: 145px; }
+  .title { font-size: 20px; color: #000; }
+  .desc { color: #999; margin-top: 10px; line-height: 20px;font-size: 12px; }
+  .last { margin-right: 0px; }
+}
+.copyrightBox {
+  position: absolute; z-index: 4; left: 0; right: 0; bottom: 0; height: 36px; border-top: 1px #ccc solid; text-align: center; background-color: #eee; line-height: 36px; color: #999;
+  a{
+    text-decoration: none;
+    color: #999;
+  }
+}
+.login_demo{
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  font-size: 14px;
+  span{
+    display: inline-block;
+    margin: 0 15px;
+  }
+  &>a{
+    &:hover{
+      color: #418CDF;
+    }
+    &.hoverClass{
+      color: #418CDF;
+    }
+  }
+}
+.bodyBgDialog{
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 99998;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+.dialogAlertBox{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 999999;
+  width: 682px;
+  height: 502px;
+  background-color: #fff;
+  border:#ccc solid 1px;
+  margin-left: -300px;
+  margin-top: -250px;
+  display: none;
+  .dialogAlertBox_header{
+    width: 100%;
+    position: relative;
+    height: 40px;
+    &>a{
+      width: 16px;
+      height: 16px;
+      position: absolute;
+      right: 20px;
+      top: 16px;
+      background: url(/static/dist/images/comm/images/dialogs/close.png) no-repeat;
+      cursor: pointer;
+      opacity: .8;
+      &:hover{
+        background: url(/static/dist/images/comm/images/dialogs/close-hover.png) no-repeat;
+      }
+    }
+  }
+  .dialogAlertBox_content{
+    width: 100%;
+    height: 392px;
+    color: #333;
+    padding: 0 20px;
+    h1{
+      font-family: "Microsoft Yahei";
+      width: 100%;
+      height: 26px;
+      line-height: 26px;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    h2{
+      font-family: "Microsoft Yahei";
+      width: 100%;
+      height: 24px;
+      line-height: 24px;
+      font-size: 12px;
+      text-align: center;
+      margin-top: 8px;
+    }
+    p{
+      font-family: "Microsoft Yahei";
+      width: 100%;
+      line-height: 22px;
+      text-indent: 2em;
+      font-size: 14px;
+      color: #333;
+      &.center{
+        width: 320px;
+        font-size: 12px;
+        text-align: center;
+        margin: 0 auto 8px auto;
+        color: #666;
+        line-height: 20px;
+
+      }
+      &.downLoad{
+        font-size: 12px;
+        width: 100%;
+        a{
+          color: #4990e2;
+          text-decoration: underline;
+        } 
+      }
+    }
+  }
+  .dialogAlertBox_footer{
+    width: 100%;
+    position: relative;
+    height: 50px;
+    padding-top: 10px;
+    text-align: center;
+    &>button{
+      border:0;
+      font-family: "Microsoft Yahei";
+      color: #fff;
+      width: 200px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      background: #408cdf;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+  }
+}
+.enMainBox{
+  .headTitle{
+    width: 650px!important;
+    margin-left: -325px!important;
+    #messageTitle{
+      font-size: 24px!important;
+    }
+    .introduction{
+      margin-left: 0!important;
+      font-size: 14px!important;
+      li{
+        width: 33.33%!important;
+        margin-left: 0!important;
+        padding-left: 0!important;
+        text-align: center;
+      }
+    }
+  }
+  .loginDialog{
+    .header{
+      font-size: 16px!important;
+    }
+    .relative{
+      input{
+
+      }
+    }
+    .forgotPwd{
+      a{
+        font-size: 10px!important;
+      }
+    }
+    .btnLogin{
+      font-size: 14px!important;
+    }
+    .login_demo{
+      a{
+        font-size: 10px!important;
+      }
+    }
+  }
+}
+#dialogAlertEnBox{
+  height: 670px;
+  margin-top: -335px;
+  .dialogAlertBox_content{
+    height: auto;
+  }
+}
+.rightDragBox{
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+  top: 80%;
+  background: #005BAC;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.43);
+  border-radius: 2px 0 0 2px;
+  overflow: hidden;
+  padding-bottom: 10px;
+  cursor: move;
+  -moz-transition: width 0.3s ease-in,height 0.2s ease-in; 
+  -webkit-transition: width 0.3s ease-in,height 0.2s ease-in; 
+  -o-transition: width 0.3s ease-in,height 0.2s ease-in; 
+  transition: width 0.3s ease-in,height 0.2s ease-in;
+  z-index: 1000;
+  &.showPhoneBox{
+    width: 160px;
+    height: auto;
+    cursor: default;
+  }
+  dl{
+    width: 100%;
+    height: auto;
+    dt{
+      width: 100%;
+      height: 40px;
+      line-height: 40px;
+      color: #fff;
+      font-size: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+      & i{
+        width: 22px;
+        height: 22px;
+        margin: 8px 10px 10px 12px;
+        display: block;
+        background: url(../images/phone_icon.png) 0 center no-repeat;
+        cursor: pointer;
+        float: left;
+      }
+    }
+    dd{
+      display: none;
+      width: 100%;
+      height: 22px;
+      line-height: 22px;
+      color:#fff;
+      font-size: 12px;
+      padding-left: 14px;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+}
+.tipBox{
+  width: 300px;
+  height: auto;
+  padding: 10px 20px 8px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  top: 310px;
+  &:before{
+    content: "";
+    display: block;
+    position: absolute;
+    top: -14px;
+    left: 84px;
+    width: 0;
+    height: 0;
+    border-left:7px solid transparent;
+    border-right:7px solid transparent;
+    border-top:7px solid transparent;
+    border-bottom: 7px solid rgba(0, 0, 0, 0.5);
+  }
+  &>dl{
+    width: 100%;
+    height: 100%;
+    color: #fc0;
+    dt{
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    dd{
+      line-height: 18px;
+      font-size: 12px;
+    }
+    
+  }
+}

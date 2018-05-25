@@ -1,0 +1,32 @@
+
+
+
+<% $.each(items,function(i,item){ %>
+<tr class="<%= i%2==0 && 'odd' || '' %>" data-id='<%=item.id%>'>
+    <td class="issue">
+        <img class="ckImg" src="/projects/images/proDefault.png" alt="" />
+        <div class="ckHeader"> 
+            <div class="ckDesc" title="<%= item.name %>"><%= item.name %></div>
+            <div class="date">
+                <span><%= App.Local.data['source-model'].dc || '创建日期' %>：</span><span><%= item.discoverDate?new Date(item.discoverDate).format('yyyy-MM-dd'):'' %></span>
+            </div>
+            <div class="date">
+                <span><%= App.Local.data['source-model'].Rte || '整改日期' %>：</span><span><%= item.rectifyDate?new Date(item.rectifyDate).format('yyyy-MM-dd'):''  %></span>
+            </div>
+            <div class="upCount">
+                <span><%= App.Local.data['source-model'].Tnor || '整改次数' %>：</span><span><%= item.rectifyCount %></span><div class="detailicon"></div>
+            </div>
+        </div>
+    </td>
+    <td class="status"> <span class="status" style="color:<%=App.Project.mapData.statusColor[item.status]%>">
+        <%=App.Project.mapData.designStatus[item.status]%>
+     </span> </td>
+    <td class="category"> <span class="security"><%=App.Project.mapData.designCategory[item.ratingCategoryId]%></span> </td>
+    <td class="specialty"> <span><%= item.specialtyName %></span> </td>
+    <td class="professional"><span><%= App.Project.mapData.designUnit[item.organizationTypeId]%></span></td>
+</tr>
+<% }) %>
+
+<%if(items.length<=0){%> 
+  <%=App.Project.NullPage.designVerification%>  
+<%}%>

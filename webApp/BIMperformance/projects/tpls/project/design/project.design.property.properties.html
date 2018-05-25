@@ -1,0 +1,113 @@
+<% var count=obj.length,item; %>
+    <% for(var i=0;i<count;i++){ %>
+        <% item=obj[i];if(item.group=='设计'){continue}else if(item.group=='构件名称'){ %>
+           <div class="modle">
+               <ul class="modleList">
+                   <li class="modleItem">
+                       <span class="modleName" ><div class="modleNameText overflowEllipsis">构件名称</div></span> <span class="modleVal overflowEllipsis" title='<%=item.items[0]["value"]%>'><%=item.items[0]['value']%></span>
+                   </li>
+               </ul>
+           </div>
+
+        <% }else{%>
+
+            <div class="modle">
+                <div class="modleTitleBar">
+                    <i class="modleShowHide down"></i>
+                    <h1 class="modleName overflowEllipsis"><%= item.group%></h1>
+                </div>
+                <ul class="modleList">
+                    <% var subItems=item.items,subCount=subItems.length,subItem %>
+                        <% for(var j=0;j<subCount;j++){ %>
+                            <% subItem=subItems[j];  %>
+                                <li class="modleItem">
+                                    <span class="modleName"><div title='<%=subItem.name%>' class="modleNameText overflowEllipsis"><%=subItem.name%></div></span> <span class="modleVal overflowEllipsis" title="<%=subItem.value%><%=subItem.unit%>"><%=subItem.value%><%=subItem.unit%></span>
+                                </li>
+                        <% } %>
+                </ul>
+            </div>
+        <% } %>
+    <% } %>
+<div class="fordesign"></div>
+<!--<div class="attrPlanBox">-->
+    <!--<div class="modle">-->
+        <!--<i class="modleShowHide down"></i>-->
+        <!--<h1 class="modleName">计划</h1>-->
+        <!--<ul class="modleList">-->
+            <!--<li class="modleItem">-->
+                <!--<span class="modleName overflowEllipsis"><div class="modleNameText overflowEllipsis">业务事项</div></span> <span class="modleVal name"> </span>-->
+            <!--</li>-->
+            <!--<li class="modleItem">-->
+                <!--<span class="modleName overflowEllipsis"><div class="modleNameText overflowEllipsis">计划开始</div></span> <span class="modleVal strat"></span>-->
+            <!--</li>-->
+            <!--<li class="modleItem">-->
+                <!--<span class="modleName overflowEllipsis"><div class="modleNameText overflowEllipsis">计划结束</div></span> <span class="modleVal end"></span>-->
+            <!--</li>-->
+            <!--<li class="modleItem">-->
+                <!--<span class="modleName overflowEllipsis"><div class="modleNameText overflowEllipsis">实际结束</div></span> <span class="modleVal rEnd"></span>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="attrCostBox">-->
+	<!--<div class="modle">-->
+		<!--<i class="modleShowHide down"></i>-->
+    	<!--<h1 class="modleName">成本</h1>-->
+	<!--</div>-->
+ <!-- -->
+<!--</div>-->
+<!--<div class="attrQualityBox">-->
+    <!--<div class="modle">-->
+        <!--<i class="modleShowHide"></i>-->
+        <!--<h1 class="modleName">质监标准</h1>-->
+        <!--<ul class="modleList">-->
+        <!--</ul>-->
+    <!--</div>-->
+<!--</div>-->
+
+<div class="attrDwgBox">
+    <div class="modle">
+        <i class="modleShowHide down"></i>
+        <h1 class="modleName"><%= App.Local.data['drawing-model'].Drawing || '图纸' %></h1>
+        <ul class="modleList">
+        </ul>
+    </div>
+</div>
+<div class="attrClassBox"></div>
+                <!--
+<div class="modle">
+	<i class="modleShowHide"></i> <h1 class="modleName">成本</h1>
+	<ul class="modleList">
+		<li class="modleItem">
+			<span class="modleName">A104</span> <span class="modleVal">混凝土工程</span>
+		</li>
+
+		<li class="modleItem">
+			<span class="modleName">B101</span> <span class="modleVal">粗装修工程</span>
+		</li> 
+	</ul>
+
+</div>
+
+<div class="modle">
+	<i class="modleShowHide"></i> <h1 class="modleName">质监标准</h1>
+	<ul class="modleList">
+		<li class="modleItem">
+			 <a class="modelLink" href="javascript:void(0);">混凝土工程质量验收标准</a>
+		</li> 
+	</ul>
+
+</div>
+
+<div class="modle">
+	<i class="modleShowHide"></i> <h1 class="modleName">图纸</h1>
+	<ul class="modleList">
+		<li class="modleItem">
+			 <a class="modelLink" href="javascript:void(0);">CBS-WP-RIDE-WWI-GroupI.dwg</a>
+		</li> 
+		<li class="modleItem">
+			 <a class="modelLink" href="javascript:void(0);">CBS-WP-RIDE-WWI-GroupII.dwg</a>
+		</li> 
+	</ul>
+
+</div> -->

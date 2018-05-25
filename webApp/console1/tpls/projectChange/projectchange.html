@@ -1,0 +1,454 @@
+
+
+<div class="consoleBox"><div class="consoleHeader">
+  7.1	项目模型变更申请表发起</div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">流程标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p11" value="abc">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">新变更版本名称</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p12" value="2016版项目">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">基准项目模型</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s11">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">基准项目模型版本</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s12">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">变更说明</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p13" value="变更说明信息">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">创建时间</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p14" value="20161118">
+        </div>
+      </div>
+      <div class="form-group">
+        <label id="p16" for="inputPassword3" class="col-sm-2 control-label btn-danger">选择变更文件</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p15" value="">
+        </div>
+      </div>
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">变更文件ID集合(以逗号隔开)</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="p14" value="">-->
+        <!--</div>-->
+        <!--testcode-->
+      <!--</div>-->
+
+
+      <div class="form-group">
+
+        <div class="col-sm-10">
+                    <textarea name="" id="data1" cols="40" rows="40">
+        {
+            "title": "项目模型变更申请表发起",
+            "auditFinishTime": 1461141508953,
+            "createTime": 1461141508953,
+            "description": "描述",
+            "projectVersionName": "新变更版本名称",
+            "refProjectModelCode": "20160512",
+            "refProjectModelName": "0430版模型",
+            "refProjectModelVersionId": 201605121042,
+            "workflowId": "4f26391485fc496b9fff9b3049c3563f",
+            "status": 8,
+            "initiator": {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}],
+            "changedFiles": [{"fileId":"","fileName":"","versionId":""}]
+          }
+
+                    </textarea>
+                     <textarea name="" id="" cols="40" rows="40">
+title	流程标题	string
+workflowId	流程实例	guid
+projectVersionName	新变更版本名称	string
+refProjectModelCode	基准项目模型ID	string
+refProjectModelName	基准项目模型名称	string
+refProjectModelVersionId	基准项目模型版本Id	long
+description	变更说明	string
+auditFinishTime	表单审核时间	long
+createTime	创建时间	long
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+ProjectModelChangeFiles实体
+参数	参数说明	类型	备注
+fileId	变更文件ID	long
+changedFiles	变更文件集合	格式为[{"fileId":"1","fileName":"2","versionId":"3"},{"fileId":"4","fileName":"5","versionId":"6"}]
+
+
+
+                       必填项：changedFiles
+                    </textarea>
+                                        <textarea name="" id="result1" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit4" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="consoleBox"><div class="consoleHeader">
+  7.2	项目模型变更申请表审批（通过、驳回等）<span class="btn btn-primary" onclick="App.Console.fn['7.2']()">更新</span></div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">流程标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p21" value="项目模型变更申请表审批">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">变更申请表</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s21">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-10">
+                    <textarea name="" id="data2" cols="40" rows="40">
+            {
+            "createTime": 1461141509399,
+            "auditFinishTime": 1461141509399,
+            "description": "描述",
+            "status": 16,
+            "workflowId":"123",
+            "title": "项目模型变更申请表审批",
+            "initiator": {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+          }
+
+                    </textarea>
+                     <textarea name="" id="" cols="40" rows="40">
+title	流程标题	string
+workflowId	项目模型变更申请表workflowId	guid
+description	变更说明	string
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+
+                    </textarea>
+                                        <textarea name="" id="result2" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">申请表</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<select class="form-control referenceResources" id="p21">-->
+          <!--</select>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit5" class="btn btn-primary">通过</button>
+          <button type="button" id="submit55" class="btn btn-primary">驳回</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="consoleBox"><div class="consoleHeader">
+  7.3	项目模型变更报审表单发起<span class="btn btn-primary" onclick="App.Console.fn['7.3']()">更新</span></div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">流程标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p31" value="项目模型变更报审表单发起">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">项目模型变更申请</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s31">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">项目模型变更版本</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s311">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-10">
+                    <textarea name="" id="data3" cols="40" rows="40">
+           {
+            "createTime": 1461141509417,
+            "description": "描述",
+            "projectModelChangeApplyWorkflowId": "7f89166b28454048a23ce178d5c423d2",
+            "status": 8,
+            "workflowId": "27dcddc066f44491ae89be14fb5a0f0c",
+            "title": "项目模型变更报审表单发起",
+            "initiator": {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+
+          }
+
+                    </textarea>
+                     <textarea name="" id="" cols="40" rows="40">
+title	流程标题	string
+workflowId	流程实例	guid
+projectModelChangeApplyWorkflowId	项目模型变更申请表单workflowId	guid
+description	审批说明	string
+createTime	表单创建时间	long
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+
+ProjectModelChangeFiles实体
+参数	参数说明	类型	备注
+fileId	签出变更文件ID	guid
+
+                    </textarea>
+                                        <textarea name="" id="result3" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit6" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="consoleBox"><div class="consoleHeader">
+  7.4	项目模型变更报审表单状态变化（审批通过、驳回等）<span class="btn btn-primary" onclick="App.Console.fn['7.4']()">更新</span></div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">流程标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p41" value="项目模型变更报审表单状态变化">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">项目模型变更报审表单</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s41">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-10">
+                    <textarea name="" id="data4" cols="40" rows="40">
+          {
+            "createTime": 1461141509399,
+            "auditFinishTime": 1461141509426,
+            "description": "描述",
+            "status": 16,
+            "workflowId": "54adf13e70ee46d68ec8882a889ace2e",
+            "title": "项目模型变更报审表单状态变化",
+           "initiator": {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+
+          }
+
+                    </textarea>
+                     <textarea name="" id="" cols="40" rows="40">
+title	流程标题	string
+workflowId	项目模型变更报审表单workflowId
+description	审批说明	string
+auditFinishTime	表单审核时间	long
+createTime	表单创建时间	long
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+
+ProjectModelChangeFiles实体
+参数	参数说明	类型	备注
+fileId	签出变更文件ID	guid
+
+
+                    </textarea>
+                                        <textarea name="" id="result4" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit7" class="btn btn-primary">通过</button>
+          <button type="button" id="submit77" class="btn btn-primary">驳回</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="consoleBox"><div class="consoleHeader">
+  7.5	项目模型变更移交表单发起<span class="btn btn-primary" onclick="App.Console.fn['7.5']()">更新</span></div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">流程标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p51" value="项目模型变更移交表单发起">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">项目模型变更报审</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s51">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">项目模型变更报审版本</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s511">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-10">
+                    <textarea name="" id="data5" cols="40" rows="40">
+        {
+            "createTime": 1461141509435,
+            "description": "描述",
+            "projectModelChangeAprovalWorkflowId": "76016d7db44b4f5b8d0ddcb8446616fe",
+            "status": 8,
+            "workflowId": "a2a6f2461d9f4276b6978575f63230f8",
+            "title": "项目模型变更移交表单发起",
+            "initiator": {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+
+          }
+
+                    </textarea>
+                     <textarea name="" id="" cols="40" rows="40">
+title	流程标题	string
+workflowId	流程实例	guid
+projectModelChangeAprovalWorkflowId	项目模型变更报审表单workflowId	guid
+changeProjectModelId	变更项目模型ID	int	该字段于项目ID有何区别呢？
+description	移交说明	string
+createTime	表单创建时间	long
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+
+
+
+                    </textarea>
+                                        <textarea name="" id="result5" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit8" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="consoleBox"><div class="consoleHeader">
+  7.6	项目模型变更移交表单状态变化（审批通过、驳回等）<span class="btn btn-primary" onclick="App.Console.fn['7.6']()">更新</span></div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">项目模型变更审核单</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s61">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-10">
+                    <textarea name="" id="data6" cols="40" rows="40">
+          {
+            "createTime": 1461141509399,
+            "auditFinishTime": 1461141509442,
+            "description": "描述",
+            "projectModelChangeTransferWorkflowId": "cad1f469462c402cb21d416184da07b0",
+            "status": 16,
+            "workflowId": "c7e1c92f98094eee9e31343945819618",
+            "title": "项目模型变更移交表单状态变化",
+            "initiator": {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+
+          }
+
+                    </textarea>
+                     <textarea name="" id="" cols="40" rows="40">
+title	流程标题	string
+projectCode	项目ID	guid
+projectName	项目名称	string
+workflowId	项目模型变更移交表单workflowId
+projectModelChangeTransferWorkflowId	项目模型变更审核单WorkflowId	guid
+changeProjectModelId	变更项目模型ID	int	该字段于项目ID有何区别呢？
+description	移交说明	string
+createTime	表单创建时间	long
+auditFinishTime	表单审核时间	long
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+
+
+
+                    </textarea>
+                                        <textarea name="" id="result6" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit9" class="btn btn-primary">通过</button>
+          <button type="button" id="submit99" class="btn btn-primary">驳回</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<link rel="stylesheet" href="/static/dist/components/fileSelection/css/fileSelection.css">
+<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.6.1/jquery.min.js"></script>
+
+
+

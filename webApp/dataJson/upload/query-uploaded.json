@@ -1,0 +1,11 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "id": null,
+    "projectId": 1216265221490112,
+    "projectVersionId": 1216265221490112,
+    "filePath": "/t1/t2/t3",
+    "fileName": "wanda.jpg"
+  }
+}

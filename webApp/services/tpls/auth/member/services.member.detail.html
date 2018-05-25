@@ -1,0 +1,19 @@
+<div class="pers" data-i18n="data.system-module.Authorize"><!--角色授权--><%= App.Local.data['system-module'].Authorize%></div>
+<div class="sele">
+    <div class="left">
+            <i class="memCheck"></i>
+            <span class="ushead<%= obj.orgId ? ' oz' : '' %>">
+                <% if(obj.photoUrl){%>
+                <img src="<%= obj.photoUrl %>" width="100%">
+                <%}%>
+            </span>
+            <span class=" <%= obj.orgId ? 'name' : '' %>"><%= obj.name %></span>
+    </div>
+
+    <div class="roles">
+        <%if(obj.role && obj.role.length) { %>
+        <% for(var i  =0 ; i< obj.role.length;i++){%>
+        <span id="role<%=obj.role[i].roleId%>" class="<%= obj.role[i].roleId==999999 ? 'adm' : ''%> <%= obj.role[i].inherit ? 'inherit' : ''%>"><%=obj.role[i].name%></span>
+        <%}}%>
+    </div>
+</div>

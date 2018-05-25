@@ -1,0 +1,8 @@
+<select name="condition">
+    <option value="">请选择条件</option>
+    <% _.each(floorCondition,function(item){ %>
+    <option value="<%=item.code%>"><%=item.name%></option>
+    <% }) %>
+</select>
+<input name="floorValue" value="" type="text" placeholder="请输入楼层规则...">
+<a href="javascript:;" onclick="$(this).parent().remove();"><%= App.Local.data['drawing-model'].Delete || '删除' %></a>

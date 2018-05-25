@@ -1,0 +1,21 @@
+<!--<div class="commentNumberBox" id="commentNumberBox"></div>-->
+<div class="commentListBox">
+    <div class="commentListHeightBox">
+        <div class="commentScroll">
+            <ul id="commentComponentBox"></ul>
+        </div>
+        <div class="insert-view-here"></div>
+        <div class="pagingBox">
+            <div class="listPagination" id="listPagination"></div>
+        </div>
+    </div>
+</div>
+<div class="nullDataBox">
+    <div class="nullDataBoxImg"></div>
+    <div class="nullDataBoxText"><%= App.Local.data['drawing-model'].Npz || '暂时还没有任何评论！' %></div>
+</div>
+<p id="addCommentBox-p"><%= App.Local.data['system-module'].Reply||'我要回复'%></p>
+<div id="addCommentBox">
+    <div class="addCommentBox"></div>
+
+</div>

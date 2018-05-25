@@ -1,0 +1,18 @@
+<% var projectCount=obj.length,project; %>
+<%console.log(projectCount)%>
+<div class="projectBox">
+	<%if(projectCount>0){%>
+		<% for(var i=0;i<projectCount;i++){ %>
+			<% project=obj[i]; %>
+		   <div class="header"> <%= project.province %> </div> 
+		   <% var provinces=project.project,provinceCount=provinces.length,province; %>
+		   <% for(var j=0;j<provinceCount;j++){%>
+		   		<% province=provinces[j]; %>
+		    	<a href="#projects/<%=province.id%>/<%=province.version && province.version.id || 'noVersion' %>" class="item" title='<%= province.name%>'> <%= province.name%></a>
+		    <% }%>
+		<%}%> 
+	<%}else{%>
+		<a href="javascript:;" class="item" style="text-align: center;"><%= App.Local.data["drawing-model"].Npe || '暂无可访问项目' %></a>
+	<%} %>
+</div>
+ 

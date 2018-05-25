@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="pragma" content="no-cache">-->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <title>万达筑云项目管理平台</title>
+    <!--<link rel="styleSheet" href="./comm/css/treeView.less"/>-->
+    <link href="../../../favico.ico" rel="shortcut icon"/>
+
+    <link rel="styleSheet" href="/static/dist/libs/commLibCss.css" />
+    <link rel="styleSheet" href="/static/dist/libs/libsH5_20160313.css" />
+    <link rel="styleSheet" href="/static/dist/topNav/css/topNav.css" />
+    <link rel="stylesheet" href="/static/dist/bodyContent/bodyContent.css" />
+    <link type="text/css" rel="stylesheet" href="/static/dist/editer/themes/default/css/umeditor.css" />
+    <script src="//sso4pub.wanda-dev.cn/Scripts/common.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="topBar">
+    <ul class="navHeader">
+        <li class="item bodyConMenu"><a href="#bodyContent">首页</a></li>
+        <!--  <li class="item todo"> <a href="#todo">待办</a></li> -->
+        <li class="item projects"><a href="#projects">图纸模型</a></li>
+        <li class="item flow"><a href="#flow">业务流程</a></li>
+        <li class="item resources"><a href="#resources"><%= App.Local.data['source-model']['b-r'] || '基础资源' %></a></li>
+        <li class="item services"><a href="#services">在线服务</a></li>
+        <li class="user">
+            <img class="userBg hoverClass" src="/static/dist/images/topNav/images/user.png">
+            <span class="hoverClass">您好，</span> 
+            <span id="loginName" class="userName hoverClass"></span>&nbsp;
+            <i class="icon-angle-down hoverClass"></i>
+        </li>
+        <!--<li class="imbox"><a href="#inbox" target="_blank"><i></i><span id='messageCount'></span></a></li>-->
+        <li class="menuNav">
+            <i class="image-online-more hoverClass"></i>
+            <span class="edgeNum count"><span class="messageCounter">0</span></span>
+        </li>
+    </ul>
+    <div class="logo"><span class="text"></span></div>
+</div>
+<div id="contains"></div>
+<div id="pageLoading"></div>
+<div id="dataLoading"></div>
+<div id="modalWrapper"></div>
+<div class="userinfo">
+    <div class="conatiner">
+        <img id="uiLogo" src="" width="64px" height="85px">
+        <div class="info">
+            <table>
+                <tr>
+                    <td class="labelName">账号：</td>
+                    <td id="uiAccount" class="overflowEllipsis" style="max-width: 100px;"></td>
+                </tr>
+                <tr>
+                    <td class="labelName">职务：</td>
+                    <td id="uiPosition"></td>
+                </tr>
+                <tr>
+                    <td class="labelName">部门：</td>
+                    <td id="uiPartment"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="tool">
+        <a id="btn_modifyPassword" href="" target="_blank" style="float:left;margin-left:10px;">修改密码</a><a href="#/logout">退出</a>
+    </div>
+</div>
+<div class="onlineNav">
+    <ul>
+        <li>
+            <i class="osIcon pic_6"></i>
+            <span>
+                <a href="#inbox" target="_blank">我的消息(<span class='messageCounter'></span>)</a>
+            </span>
+        </li>
+        <li class="split">
+            <div></div>
+        </li>
+        <li id="indexSuggestItem">
+            <i class="osIcon pic_3"></i>
+            <span><%= App.Local.data['online-service'].Fk || '建议反馈' %>
+            </span>
+        </li>
+        <li>
+            <i class="osIcon pic_10"></i>
+            <span><a href="http://lms.wanda.cn/jsp/wandabim/bim.jsp" target="_blank">在线培训</a></span>
+        </li>
+        <li class="split">
+            <div></div>
+        </li>
+        <li id="auth-auth">
+            <i class="osIcon pic_4"></i>
+            <span>
+                <a href="#services/auth" target="_blank">
+                    <div class="text">权限管理</div>
+                </a>
+            </span>
+        </li>
+        <li id="auth-project">
+            <i class="osIcon pic_10"></i>
+            <span>
+                 <a href="#services/project" target="_blank">
+                     <div class="text">项目管理 </div>
+                 </a>
+            </span>
+        </li>
+        <li id="auth-app">
+            <i class="osIcon pic_11"></i>
+            <span>
+                 <a href="#services/application" target="_blank">
+                     <div class="text">应用管理 </div>
+                 </a>
+            </span>
+        </li>
+        <li id="auth-sys">
+            <i class="osIcon pic_8"></i>
+            <span>
+                <a href="#services/system" target="_blank">
+                    <div class="text">系统管理 </div>
+                </a>
+            </span>
+        </li>
+        <li id="auth-log">
+            <i class="osIcon pic_5"></i>
+            <span>
+                <a href="#services/log" target="_blank">
+                    <div class="text">日志管理 </div>
+                </a>
+            </span>
+        </li>
+    </ul>
+</div>
+
+
+<script type="text/javascript">
+        var App = {};
+        //缓存全局属性
+        App.Global = {
+            module: null
+        };
+        App.modules = {};
+        App.pkg = {};
+        App.time = +new Date();
+    
+        document.write('<link rel="styleSheet" href="/static/dist/comm/comm_20160313.css?t='+App.time+'"/>')
+    </script>
+<script type="text/javascript" src="/static/dist/login/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="/static/dist/libs/commLib.js"></script>
+<script type="text/javascript" src="/static/dist/api/api.js"></script>
+<script type="text/javascript" src="/static/dist/editer/third-party/template.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/dist/editer/umeditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/static/dist/editer/umeditor.min.js"></script>
+<script type="text/javascript" src="/static/dist/editer/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="/static/dist/commNew/commNew.js"></script>
+<script type="text/javascript" src="/static/dist/topNav/js/topNav.js"></script>
+<script type="text/javascript" src="/static/dist/commH5/commH5.js"></script>
+<script>
+    var x = new XMLHttpRequest();
+    x.open('GET', 'map.json?t=' + App.time, true);
+    x.send('bb');
+    x.onreadystatechange = function (s) {
+        if (x.readyState == 4) {
+            var r = x.response|| x.responseText,
+                    obj = JSON.parse(r),
+                    pkg = obj.pkg,
+                    index_js = document.createElement('script');
+
+            for (var i in pkg) {
+                if (pkg[i]['uri']) {
+                    //var url = pkg[i]['uri'].slice(0, pkg[i]['uri'].indexOf('_'));
+                    var url = pkg[i]['uri'].slice(0, pkg[i]['uri'].indexOf('.'));
+                    App.pkg[url + '.' + pkg[i]['type']] = pkg[i]['uri'];
+                }
+            }
+
+            index_js.setAttribute('src', '/static/dist/router/index.js');
+
+            document.body.appendChild(index_js);
+
+        }
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,600 @@
+
+<div class="consoleBox">
+  <div class="consoleHeader">6.1确定项目类型</div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputtext3" class="col-sm-2 control-label">流程标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="title" value="2016版项目研发指令审批单">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">项目编号</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="number" value="【BZZK201601】">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label"  data-i18n="data.drawing-model.PNe1">项目名称</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="famTitle" value="" placeholder="请输入项目名称" data-i18n="[placeholder]data.drawing-model.Pee">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">选择项目</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s00">
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.PTe">项目类型</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s01">
+            <option value="1">全标</option>
+            <option value="2">类标</option>
+            <option value="3">非标</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.PMe1">项目模式</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="projectModel">
+            <option value="1">创新模式</option>
+            <option value="2" selected>直投</option>
+            <option value="3">开发</option>
+            <option value="4">合作</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.OTe1">项目业态</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="projectFormat">
+            <option value="8">综合体</option>
+            <option value="16">纯酒店</option>
+            <option value="32">文化旅游</option>
+            <option value="64">独立物业</option>
+            <option value="128">非万影城</option>
+            <option value="130">境外</option>
+          </select>
+        </div>
+      </div>
+      <!-- <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">发起部门</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="launchDepartment" value="设计中心-BIM一体化组">
+        </div>
+      </div> -->
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.Province">省份</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="province">
+            <option value="1" selected>北京市</option>
+            <option value="2">天津市</option>
+            <option value="3">上海市</option>
+            <option value="4">重庆市</option>
+            <option value="5">河北省</option>
+            <option value="6">山西省</option>
+            <option value="7">辽宁省</option>
+            <option value="8">吉林省</option>
+            <option value="9">黑龙江省</option>
+            <option value="10">江苏省</option>
+            <option value="11">浙江省</option>
+            <option value="12">安徽省</option>
+            <option value="13">福建省</option>
+            <option value="14">江西省</option>
+            <option value="15">山东省</option>
+            <option value="16">河南省</option>
+            <option value="17">湖北省</option>
+            <option value="18">湖南省</option>
+            <option value="19">广东省</option>
+            <option value="20">海南省</option>
+            <option value="21">四川省</option>
+            <option value="22">贵州省</option>
+            <option value="23">云南省</option>
+            <option value="24">陕西省</option>
+            <option value="25">甘肃省</option>
+            <option value="26">青海省</option>
+            <option value="27">台湾省</option>
+            <option value="28">内蒙古自治区</option>
+            <option value="29">广西壮族自治区</option>
+            <option value="30">宁夏回族自治区</option>
+            <option value="31">西藏自治区</option>
+            <option value="32">新疆维吾尔族自治区</option>
+            <option value="33">香港特别行政区</option>
+            <option value="34">澳门特别行政区</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.MAa">管理分区</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="adminZone">
+            <option value="1">北区</option>
+            <option value="2">中区</option>
+            <option value="3">南区</option>
+            <option value="4">文旅</option>
+            <option value="5">境外</option>
+          </select>
+        </div>
+      </div>
+      <!-- <div class="form-group" style="display: none;">
+        <label for="inputPassword3" class="col-sm-2 control-label" >新版项目版本名称</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="versionName" value="2016版">
+        </div>
+      </div> -->
+      <!-- <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">研发完成日期</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="devDate">
+        </div>
+      </div> -->
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.DDd">摘牌日</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="delistDate">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.ODe">开业日</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="openDate">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">研发说明</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="devDesc" value="2016版项目">
+        </div>
+      </div>
+
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">第三方审核完成日期</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="thrdDate" value="2016-9-6">-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">发起人</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="thrdName" value="阳舒华">-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">发起部门</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="launchDepartment" value="设计中心-BIM一体化组">
+        </div>
+      </div>
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">发起人</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="p14" value='{"userId":"123","loginId":"gongcen"}'>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">审核人</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="p15" value='[{"userId":"123","loginId":"gongcen"}]'>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">确认人</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="p16" value='[{"userId":"123","loginId":"gongcen"}]'>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">接收人</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="p17" value='[{"userId":"123","loginId":"gongcen"}]'>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit0" class="btn btn-primary">提交</button>
+
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="consoleBox">
+  <div class="consoleHeader">6.2方案成果移交<span class="btn btn-primary" onclick="App.Console.fn['6.1']()">更新</span></div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">流程标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p13" value="流程标题">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">项目列表</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s1">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label"><%= App.Local.data['family-list'].Fy || '族库' %></label>
+          <div class="col-sm-10">
+              <select class="form-control" id="s12">
+                  <option value=""  data-i18n="data.drawing-model.Pst">请选择</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">标准模型</label>
+          <div class="col-sm-10">
+              <select class="form-control" id="s02">
+                  <option value=""  data-i18n="data.drawing-model.Pst">请选择</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">标准模型版本</label>
+          <div class="col-sm-10">
+
+              <select class="form-control" id="s03">
+                  <!--<option value="">请选择</option>-->
+              </select>
+          </div>
+      </div>
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">项目名称</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="p12" value="">-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">项目编码</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="p11" value="">-->
+        <!--</div>-->
+      <!--</div>-->
+        
+        
+      <div class="form-group">
+        <!--<label for="inputPassword3" class="col-sm-2 control-label"></label>-->
+        <div class="col-sm-10">
+                    <textarea name="" id="data1" cols="30" rows="30">
+        {
+        "auditFinishTime": 1461141269440,
+        "createTime": 1461141269440,
+        "description": "描述",
+        "familyCode": "BZZK-20160002",
+        "familyName": "族库名称",
+        "modelCode": "BZMX-B-2015",
+        "modelName": "B版标准模型",
+        "modelVersionId": 814182626430115,
+        "projectCode": "411a109141d6473c83a86aa0480d6610",
+        "projectName": "项目名称",
+        "status": 16,
+        "workflowId": "da276ee428064f609dd522d20cc932a4",
+        "title": "项目模型研发指令表单",
+            "initiator": {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+    }
+
+                    </textarea>
+                     <textarea name="" id="" cols="30" rows="30">
+title	流程标题	string
+workflowId	流程实例	guid
+projectCode	项目编码	long
+projectName	项目名称	string
+familyCode	族库code	string
+familyName	族库名称	string	族库编号+族库名称
+modelCode	标准模型code	long
+modelName	标准模型名称	string	标准模型编号+标准模型名称
+modelVersionId	标准模型版本Id	long
+description	研发指令说明	string
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+auditFinishTime	表单审核时间	long
+createTime	表单创建时间	long
+
+
+
+                          必填项：modelCode   modelName   modelVersionId
+                    </textarea>
+                                        <textarea name="" id="result1" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit1" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="consoleBox">
+  <div class="consoleHeader">6.3设计审核文件提交<span class="btn btn-primary" onclick="App.Console.fn['6.2']()">更新</span></div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">流程标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p21" value="流程标题">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">项目列表</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s21">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">描述</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p22" value="描述">
+        </div>
+      </div>
+      <div class="form-group">
+        <!--<label for="inputPassword3" class="col-sm-2 control-label"></label>-->
+        <div class="col-sm-10">
+                    <textarea name="" id="data2" cols="30" rows="30">
+            {
+        "createTime": 1461141269899,
+        "description": "描述",
+        "status": 8,
+        "workflowId": "47f445a925f44cdfb6c1b130f37466ee",
+        "projectModelInstructionsWorkflowId": "411a109141d6473c83a86aa0480d6610",
+        "title": "项目模型报审表单发起",
+           "initiator": {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+    }
+
+
+
+                    </textarea>
+                     <textarea name="" id="" cols="30" rows="30">
+title	流程标题	string
+workflowId	流程实例	guid
+projectModelInstructionsWorkflowId	项目模型研发指令表单workflowId	guid
+description	报审说明	string
+createTime	表单创建时间	long
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+
+
+                    </textarea>
+                                        <textarea name="" id="result2" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit2" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="consoleBox">
+  <div class="consoleHeader">6.4设计审核文件审核<span class="btn btn-primary" onclick="App.Console.fn['6.3']()">更新</span></div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">流程标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p30" value="流程标题">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">项目审批单</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s31">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <!--<label for="inputPassword3" class="col-sm-2 control-label"></label>-->
+        <div class="col-sm-10">
+                    <textarea name="" id="data3" cols="30" rows="30">
+            {
+        "auditFinishTime": 1461141269911,
+        "description": "描述",
+        "status": 16,
+        "workflowId": "a574a17300694600974e2bef4b8fcc4d",
+        "title": "项目模型报审表单状态变化",
+           "initiator": {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+    }
+
+
+                    </textarea>
+                     <textarea name="" id="" cols="30" rows="30">
+title	流程标题	string
+workflowId	项目模型报审表单workflowId	guid
+description	报审说明	string
+auditFinishTime	表单审核时间	long
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+
+                    </textarea>
+                                        <textarea name="" id="result3" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit3" class="btn btn-primary">通过</button>
+          <button type="button" id="submit33" class="btn btn-primary">驳回</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="consoleBox">
+  <div class="consoleHeader">6.5项目BIM模型及施工图审核<span class="btn btn-primary" onclick="App.Console.fn['6.4']()">更新</span></div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">流程标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p41" value="流程标题">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">项目列表</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s41">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">描述</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p42" value="描述">
+        </div>
+      </div>
+      <div class="form-group">
+        <!--<label for="inputPassword3" class="col-sm-2 control-label"></label>-->
+        <div class="col-sm-10">
+                    <textarea name="" id="data4" cols="30" rows="30">
+           {
+        "createTime": 1461141269923,
+        "description": "描述",
+        "projectModelAprovalWorkflowId": "3a23b6c0ddf040308eb84841699036e6",
+        "status": 8,
+        "workflowId": "6914fa7c6c4542ffa67741d1140d06d1",
+        "title": "项目模型移交表单发起",
+            "initiator": {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+    }
+
+
+
+                    </textarea>
+                     <textarea name="" id="" cols="30" rows="30">
+title	流程标题	string
+workflowId	流程实例	guid
+projectModelAprovalWorkflowId	项目模型报审表单workflowId	guid
+description	申请说明	string
+createTime	表单创建时间	long
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+
+
+                    </textarea>
+                                        <textarea name="" id="result4" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit4" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<div class="consoleBox"><div class="consoleHeader">6.6项目BIM模型及施工图移交<span class="btn btn-primary" onclick="App.Console.fn['6.5']()">更新</span></div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">流程标题</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p50" value="流程标题">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">项目审批单</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s51">
+            <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <!--<label for="inputPassword3" class="col-sm-2 control-label"></label>-->
+        <div class="col-sm-10">
+                    <textarea name="" id="data5" cols="30" rows="30">
+            {
+        "auditFinishTime": 1461141269937,
+        "description": "描述",
+        "status": 16,
+        "workflowId": "6f56e25884bc4233a4fce3f3490627f4",
+        "title": "项目模型移交表单状态变化",
+            "initiator": {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+    }
+
+
+                    </textarea>
+                     <textarea name="" id="" cols="30" rows="30">
+title	流程标题	string
+workflowId	项目模型移交表单workflowId	guid
+description	申请说明	string
+auditFinishTime	表单审核时间	long
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+
+                    </textarea>
+                                        <textarea name="" id="result5" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+
+
+
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit5" class="btn btn-primary">通过</button>
+          <button type="button" id="submit55" class="btn btn-primary">驳回</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+  var devDate = $("#devDate");
+  var delistDate = $("#delistDate");
+  var openDate = $("#openDate");
+  var myDate = new Date();
+  var myDates = myDate.getDate();
+  var day = myDate.setDate(myDates+14);
+  var newDay = new Date(day);
+  var newYear = newDay.getFullYear();
+  var newMonth = newDay.getMonth()+1;
+  var newDay = newDay.getDate();
+  var currentDate = newYear + '-' + newMonth + '-' + newDay;
+  devDate.val(currentDate)
+  delistDate.val(currentDate)
+  openDate.val(currentDate)
+</script>

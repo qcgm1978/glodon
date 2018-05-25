@@ -1,0 +1,11 @@
+{
+  "code":"0",
+  "message": "success",
+  "data":[
+      {"id":1, "title":"雅安万达广场 （四川，雅安）", "targetUrl" :"#","image" :"/static/dist/images/bodyContent/images/silder1.jpg"},
+      {"id":2, "title":"周浦万达广场","targetUrl" :"#","image" :"/static/dist/images/bodyContent/images/silder1.jpg"},
+      {"id":3, "title":"杨燕村","targetUrl" :"#","image" :"/static/dist/images/bodyContent/images/1683103954.jpg"},
+      {"id":4, "title":"广联达--服务新干线", "targetUrl" :"#","image" :"/static/dist/images/bodyContent/images/u83.jpg"},
+      {"id":5, "title":"上海张江", "targetUrl" :"#","image" :"/static/dist/images/bodyContent/images/1683103954.jpg"}
+    ]
+}

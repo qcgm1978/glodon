@@ -1,0 +1,28 @@
+<div class="suggestView">
+    <table id="suggestViewTable">
+        <tr>
+            <td>
+                <input type="text" id="sugTitle" placeholder="请输入标题" maxlength="100" data-i18n="[placeholder]data.online.title">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <textarea name="" id="sugDescr" cols="30" rows="10" placeholder="请输入您的建议与反馈(最多支持输入500字)" maxlength="500" data-i18n="[placeholder]data.online.prompt"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td class="textRow">
+                <span class="label" ><%= App.Local.data['system-module'].Attachments || '附件' %></span>
+                <a href="javascript:;" class="alink upload" data-i18n="data.online.u-a">上传附件</a>
+                <form id="uploadSuggestForm" action="/platform/advice/feedback/upload" method="post" target="upload-iframe-suggest" enctype="multipart/form-data" encoding="multipart/form-data">
+                    <input id="inputSuggestFile" name="file" type="file" style="display: none" onchange="return App.Services.SuggestView.checkFile(this)" />
+                </form>
+                <iframe id="uploadIframeSuggest" name="upload-iframe-suggest" border="0" width="0" height="0" style="width: 0;height: 0; display: none;"></iframe>
+            </td>
+        </tr>
+        <tr>
+            <td class="attachList">
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,38 @@
+<div class="servicesCateBox">
+	<div class="topBar">
+		<span class="textSum"><span data-i18n="data.system-module.ACt">业务类别</span>(<span class="count">0</span>)</span> 
+		<a href="javascript:void(0);" class="create" data-i18n="data.system-module.New">+ 新建</a> 
+	</div>
+
+	<ul class="categoryList categoryListHeader">
+		<li class="item">
+			<div class="code" data-i18n="data.system-module.Code">
+				 	业务代码
+			</div>
+
+			<div class="name" data-i18n="data.system-module.Name">
+				 	业务名称
+			</div>
+
+			<div class="desc" data-i18n="data.system-module.Description">
+				 	业务描述
+			</div>
+
+			<div class="op" data-i18n="data.system-module.Operation">
+				 	操作
+			</div>
+
+		</li>
+	</ul>
+
+	<div class="categoryListBodybox">
+		<div class="categoryListBodScroll">
+		<ul class="categoryList categoryListBody">
+			<li class="loading"><%= App.Local.data['system']['l-g'] || '正在加载，请稍候……' %></li>
+
+	</ul>
+	</div>
+	</div>
+	
+
+</div>

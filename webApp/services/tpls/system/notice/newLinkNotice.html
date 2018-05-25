@@ -1,0 +1,31 @@
+<table>
+	<thead>
+		<tr>
+			<td><%= App.Local.data['system-module'].Title || '标题' %></td>
+			<td>链接地址</td>
+			<td>发布时间</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>
+				<input type="text" id="noticeTitle" value="<%= title %>" placeholder="请输入公告标题">
+			</td>
+			<td>
+				<input type="text" id="noticeLink" title="<%= href %>" value="<%= href %>" placeholder="请输入公告链接地址">
+			</td>
+			<td>
+				<div class="firstDate dateBox newLinkInputBox" style="position: relative; display: inline-block;">
+				    <i class="iconCal add-on"></i>
+				    <input readonly="true" id="noticeTime" type="text" class="span2" value="<%=publishTime%>" placeholder="请输发布时间">
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<input type="text" id="hideVal" style="display: none;" data-editid="<%= id %>" data-editcontent="<%= content %>" data-editdepartment="<%= department %>" data-edittype="<%= type %>">
+<div class="newLinkNoticeFoot">
+	<button id="publishLinkBtn">发布</button>
+	<button id="saveLinkBtn"><%= App.Local.data['drawing-model'].Save || '保存' %></button>
+	<button id="cancelLinkBtn" ><%= App.Local.data['drawing-model'].Cancel || '取消' %></button>
+</div>

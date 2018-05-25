@@ -1,0 +1,24 @@
+<%if(obj.id){%>
+    <img class="img" src="<%=img%>" />
+<%}else{%>
+    <img class="img" src="data:image/png;base64,<%=img%>" />
+<%}%>
+
+<div class="form">
+
+<textarea placeholder="请输入描述"  class="name mHeight" data-i18n="[placeholder]data.drawing-model.Describe">
+<%=obj.name%></textarea>  
+
+<!--    <% if(cate=='viewPoint'){ %>
+    <div class="myDropDown viewPointType black">
+        <span class="myDropText"> 
+             <i class="m-unlock modelicon <%= obj.type==0?'m-lock':'m-unlock'%>"></i> <span class="text">
+             <%= obj.type==0?'个人批注':'项目批注'  %>
+             </span> <i class="myDropArrorw"></i> </span>
+        <ul class="myDropList" style="display: none;">
+            <li data-type="1" class="myItem">项目批注</li>
+            <li data-type="0" class="myItem">个人批注</li>
+        </ul>
+    </div>
+    <% } %> -->
+</div>

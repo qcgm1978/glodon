@@ -1,0 +1,142 @@
+<dt>
+	<%= buildingName || '新建楼层' %><span class="accordionDatail <% if(id) { %>accordOpen<% } %>">详情<i></i></span>
+</dt>
+<dd style='display:<% if(id) { %>none<% } %>'>
+	<form>
+		<div>
+			<div class="formColumn">
+				<label>楼号名称 : </label><input type="text" name="buildingName"  value="<%= buildingName|| '' %>" class="txtInput" />
+			</div>
+			<div class="formColumn"><label>高度(m):</label><input type="number" name="height"  value="<%= height|| 0 %>" class="txtInput floatInput" /></div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>面积(m<sup>3</sup>):</label><input type="number" name=""area  value="<%= area|| 0 %>" class="txtInput floatInput" />
+			</div>
+			<div class="formColumn"><label>地上层数:</label><input type="number" name="groundLayers"  value="<%= groundLayers|| 0 %>" class="txtInput intInput" /></div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>层高(m):</label><input type="number" name="layerHeight"  value="<%= layerHeight|| 0 %>" class="txtInput floatInput" />
+			</div>
+			<div class="formColumn"><label>地下层数:</label><input type="number" name="undergroundLayers"  value="<%= undergroundLayers || 0 %>" class="txtInput intInput" /></div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>抗震设防烈度:</label>
+				<div class="myDropDown intensity" name="seismicIntensityId">
+					<span class="myDropText">  <span class="text"><%= seismicIntensityId|| '6度' %></span> <i class="myDropArrorw"></i> </span>
+					<ul class="myDropList" style="display: none;">
+						<% _.each(App.Services.ProjectCollection.datas.intensity,function(i){%>
+						<li class="myItem"><%= i %></li>
+						<% }) %>
+					</ul>
+				</div>
+			</div>
+			<div class="formColumn">
+				<label>抗震等级:</label>
+				<div class="myDropDown seiGrade" name="seismicLevelId">
+					<span class="myDropText">  <span class="text"><%= seismicLevelId|| '一级' %></span> <i class="myDropArrorw"></i> </span>
+					<ul class="myDropList" style="display: none;">
+						<% _.each(App.Services.ProjectCollection.datas.seiGrade,function(i){%>
+						<li class="myItem"><%= i %></li>
+						<% }) %>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>屋面保温:</label><input type="text" name=""  value="<%= roofStayWarm || '' %>" class="txtInput" placeholder="<%= App.Local.data['drawing-model'].Describe || '请输入描述' %>" />
+			</div>
+			<div class="formColumn">
+				<label>屋面保温防火等级:</label>
+				<div class="myDropDown inDoorFireLevel" name="roofStayWarmLev">
+					<span class="myDropText">  <span class="text"><%= roofStayWarmLev|| 'A' %></span> <i class="myDropArrorw"></i> </span>
+					<ul class="myDropList" style="display: none;">
+						<% _.each(App.Services.ProjectCollection.datas.doorFireLevel,function(i){%>
+						<li class="myItem"><%= i %></li>
+						<% }) %>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>外墙保温:</label><input type="text" name=""  value="<%= outWallStayWarm || '' %>" class="txtInput" placeholder="<%= App.Local.data['drawing-model'].Describe || '请输入描述' %>" />
+			</div>
+			<div class="formColumn">
+				<label>外墙保温防火等级:</label>
+				<div class="myDropDown outDoorFireLevel" name="outWallStayWarmLev">
+					<span class="myDropText">  <span class="text"><%= outWallStayWarmLev || 'A' %></span> <i class="myDropArrorw"></i> </span>
+					<ul class="myDropList" style="display: none;">
+						<% _.each(App.Services.ProjectCollection.datas.doorFireLevel,function(i){%>
+						<li class="myItem"><%= i %></li>
+						<% }) %>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>低应变检测百分比(%):</label><input type="number" name="lowStrainPercentage"  value="<%= (lowStrainPercentage*100).toFixed(2) || 0 %>" class="txtInput floatInput rateInput" placeholder="<%= App.Local.data['drawing-model'].Describe || '请输入描述' %>" />
+			</div>
+			<div class="formColumn"><label>高应变检测百分比(%):</label><input type="number" name="highStrainPercentage"  value="<%= (highStrainPercentage*100).toFixed(2) || 0 %>" class="txtInput floatInput rateInput" placeholder="<%= App.Local.data['drawing-model'].Describe || '请输入描述' %>" /></div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>超声波检测百分比(%):</label><input type="number" name="ultrasonicPercentage"  value="<%= (ultrasonicPercentage*100).toFixed(2) || 0 %>" class="txtInput floatInput rateInput" placeholder="<%= App.Local.data['drawing-model'].Describe || '请输入描述' %>" />
+			</div>
+			<div class="formColumn"><label>钻心检测百分比(%):</label><input type="number" name="corebitPercentage"  value="<%= (corebitPercentage*100).toFixed(2) || 0 %>" class="txtInput floatInput rateInput" placeholder="<%= App.Local.data['drawing-model'].Describe || '请输入描述' %>" /></div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>外装方式:</label>
+				<div class="myDropDown outerInstall"  name="outSidedecorationType">
+					<span class="myDropText">  <span class="text"><%= (outSidedecorationType && outSidedecorationType!=0) ? outSidedecorationType :'请选择' %></span> <i class="myDropArrorw"></i> </span>
+					<ul class="myDropList" style="display: none;">
+						<% _.each(App.Services.ProjectCollection.datas.installType,function(i){%>
+						<li class="myItem"><%= i %></li>
+						<% }) %>
+					</ul>
+				</div>
+			</div>
+			<div class="formColumn"><label>结构形式:</label>
+				<div class="myDropDown structure" name="structureType">
+					<span class="myDropText">  <span class="text"><%=  (structureType && structureType!=0)? structureType :'剪力墙结构' %></span> <i class="myDropArrorw"></i> </span>
+					<ul class="myDropList" style="display: none;">
+						<% _.each(App.Services.ProjectCollection.datas.orgType,function(i){%>
+						<li class="myItem"><%= i %></li>
+						<% }) %>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>所属基坑:</label>
+				<div class="myDropDown pit" name="pitId">
+				<span class="myDropText">  <span class="text"><%= App.Services.ProjectCollection.methods.keyValue(pitId,'pitName',App.Services.ProjectCollection.datas.pitData)|| '请选择' %></span> <i class="myDropArrorw"></i> </span>
+					<ul class="myDropList" style="display: none;">
+						<% _.each(App.Services.ProjectCollection.datas.pitData,function(i){ %>
+						<li class="myItem" data-pitId="<%= i.id %>"><%= i.pitName %></li>
+						<% }) %>
+					</ul>
+				</div>
+			</div>
+			<div class="formColumn"></div>
+		</div>
+		<div>
+			<div class="formColumn" style="padding-left: 120px;">
+				<% if(id) {%>
+					<input type="button" class="myBtn myBtn-primary update"  value="<%= App.Local.data['drawing-model'].Save || '保存' %>"/>
+					<input type="button" class="myBtn myBtn-default delete"  value="<%= App.Local.data['drawing-model'].Delete || '删除' %>"/>
+				<% }else{ %>
+					<input type="button" class="myBtn myBtn-primary save"  value="<%= App.Local.data['drawing-model'].Save || '保存' %>"/>
+					<input type="button" class="myBtn myBtn-default cancel"  value="取消"/>
+				<% } %>
+			</div>
+			<div class="formColumn"></div>
+		</div>
+	</form>
+</dd>

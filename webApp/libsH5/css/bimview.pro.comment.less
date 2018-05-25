@@ -1,0 +1,143 @@
+#comment { height: 100%; overflow-y: hidden;
+	.fullLoading { display: none; position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; z-index: 1; background-color: #333; text-align: center; line-height: 100px; font-size: 16px; color: #ccc; }
+	.commentListBox { height: 100%; overflow: hidden; }
+	.commentList { height: 100%; position: relative; left: 0px;
+		.navBar { margin-left: 10px;
+			.item { float: left; height: 45px; line-height: 45px; color: #ccc; width: 80px; text-align: center; border-bottom: 2px transparent solid; cursor: pointer;
+				&.selected { color: #fff; border-bottom-color: #005BAC; }
+				&.save { width: 76px; border: 1px #959A94 solid; height: 25px; line-height: 24px; margin-top: 12px; float: right; margin-right: 10px;
+					.iconSave { font-family: "modelicon"; vertical-align: -3px; font-size: 18px; margin: 0; padding: 0; width: 18px; color: #b9b9b9; }
+				}
+			}
+		}
+		.listBox { position: absolute; top: 46px; bottom: 0px; left: 0px; right: 0px; border-top: 1px #666 solid;
+			.item { height: 80px; color: #ccc;
+				.thumbnailImg { float: left; width: 82px; height: 62px; margin: 10px 0px 0px 5px; }
+				.info { margin-left: 120px; padding-top: 9px; }
+				.title { width: 98%; height: 42px; font-size: 14px; color: #fff; }
+				.desc { margin: 6px 0px 4px 0px; }
+				.name { width: 42px; }
+				.date { margin-left: 5px; vertical-align: middle; }
+				.remarkCount { float: right; margin-right: 5px; margin-top: 3px;
+					.m-comment { font-family: "modelicon"; }
+					&:hover { .text { text-decoration: underline; color: #fff; }
+					cursor: pointer; }
+				}
+				&:hover { background-color: rgba(51, 51, 51, .8); }
+				&.selected { background-color: rgba(0, 110, 207, .8); }
+				.iconType { font-family: "modelicon"; float: left; margin-left: 10px; margin-top: 9px; color: #fff; }
+			}
+		}
+	}
+	.projectListBox, .userListBox { height: 100%; }
+	.commentRemark { position: absolute; top: 6px; left: 330px; right: 0px; bottom: 0px; overflow: hidden;
+		i { font-family: "modelicon"; }
+		.icon-trash { font-family: FontAwesome; }
+		.iconDel { margin-right: 5px; }
+		.iconType { color: #fff; float: left; margin-left: 5px; margin-right: -5px; margin-top: 9px; }
+		.header { height: 49px; border-bottom: 1px #666 solid; line-height: 48px; padding: 0px 10px; }
+		.talkReMark { position: absolute; bottom: 0px; background-color: #444;    width: 100%;padding-right: 10px;
+			&.hidden { display: none; }
+		}
+		.noLogin { position: absolute; bottom: 0px; color: #fff; padding: 15px; background-color: #444; left: 0px; right: 0px; z-index: 1;
+			.btnLogin { cursor: pointer;
+				&:hover { text-decoration: underline; }
+			}
+		}
+		.reMarkListBox { width: 328px; position: absolute; top: 49px; bottom: 100px; left: 0px; right: 0px; }
+		.viewPointInfo { color: #ccc; padding-bottom: 10px;
+			.thumbnailImg { float: left; width: 82px; height: 62px; margin: 10px 0px 0px 10px; }
+			.info { margin-left: 120px; padding-top: 9px; }
+			.title { width: 98%; height: 42px; font-size: 14px; color: #fff; }
+			.name { width: 42px; }
+			.date { margin-left: 5px; vertical-align: middle; }
+			&:hover { background-color: rgba(51, 51, 51, .8); }
+			&.selected { background-color: rgba(0, 110, 207, .8); }
+			.remarkCount { display: none; }
+		}
+		.remarkBox { margin-top: 4px; margin: 10px 10px; border: 1px #666 solid; border-width: 1px 0px; font-size: 14px; padding: 8px 0px; margin-top: 0px; }
+		.iconComment { font-family: "modelicon"; margin-right: 5px; color: #b9b9b9; font-size: 16px; }
+		.goList { color: #b9b9b9; cursor: pointer; }
+		.iconBack { font-size: 18px; width: 21px; margin: 0px; font-family: "modelicon"; vertical-align: -4px; display: inline-block; }
+		.operators { float: right; cursor: pointer; color: #fff; font-size: 16px;
+			.iconShare { margin-left: 5px; }
+			i { font-size: 16px; }
+		}
+		.inputBox { width: 310px; margin-left: 8px; color: #333; border-radius: 3px; background-color: #fff; }
+		.txtReMark { width: 100%; border: 0; height: 42px; outline: none; resize: none; padding: 5px;
+			&.input { height: 85px; }
+		}
+		.uploadImg { display: none; }
+		.btnEnter { float: right; margin: 10px 2px 10px 0px; width: 100px; height: 28px; background-color: transparent; outline: 0; border: 1px #fff solid; }
+		.btnIcon { margin-top: 10px; font-size: 16px; cursor: pointer; width: 24px; height: 24px; display: inline-block; text-align: center; background-color: #666; margin-right: 7px;
+			&.m-img { margin-left: 9px; }
+		}
+		.reMarkList { .item { border-bottom: 1px #666 solid; margin: 0px 10px 8px 20px; padding-bottom: 10px;
+				&:hover { .delTalkBox { .delTalk { display: inline; }
+					}
+				}
+				.userInfo { margin-top: 5px; }
+				.userImg { width: 16px; height: 16px; border-radius: 3px; }
+				.userName { margin-left: 5px; vertical-align: 3px; }
+				.date { float: right; color: #999; }
+				.content { margin: 5px 0px 0px 25px; }
+				.singleAttachment { margin: 8px 0px 8px 25px;
+					.linkImg:hover { color: #fff; text-decoration: none; }
+					.img { width: 42px; height: 32px; margin-right: 5px; }
+					.text { line-height: 32px; color: #fff; padding: 2px 5px; display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 210px; vertical-align: top;
+						&.selected { background-color: rgba(0, 110, 207, .8); }
+					}
+				}
+				.delTalkBox { height: 20px; text-align: right;
+					.delTalk { display: none; cursor: pointer;
+						&:hover { text-decoration: underline; }
+					}
+				}
+			}
+		}
+		.singleImg { height: 42px; line-height: 44px; background-color: #eee; color: #999; margin-bottom: 5px;
+			.talkImg { width: 42px; height: 30px; border: 1px #ccc solid; vertical-align: top; margin: 7px 0px 7px 7px; display: none; }
+			.imgName { margin-left: 7px; width: 220px;
+				&.upload { colro: #666; }
+			}
+			.delUploadImg { float: right; cursor: pointer; margin-right: 10px; display: none; }
+		}
+	}
+	.loading { position: static; background-color: transparent; color: #fff; font-size: 16px; text-align: center; height: 100px; }
+}
+#topSaveTip { float: left; /* background-color: #fff; */ height: 40px; line-height: 40px; padding-left: 1px; color: #fff;
+	.content { background-color: #333; padding-right: 15px; }
+	.btnSave { display: inline-block; background-color: #fff; color: #006ECF; width: 62px; height: 26px; line-height: 25px; text-align: center; border-radius: 3px; margin-left: 10px; margin-right: 15px; cursor: pointer; vertical-align: 1px; }
+	.btnCanel { cursor: pointer; }
+}
+.saveViewPoint.mod-dialog { .wrapper { .header, .content, .footer { background-color: #333; border-color: #5A5A5A; }
+		.header .title { color: #fff; font-weight: normal; }
+		.btnWhite { background-color: #333; border-color: #555; color: #EBEBEB; }
+		.img { width: 82px; height: 62px; background-color: #fff; float: left; }
+		.form { margin-left: 100px;
+			.name {color:#333; width: 360px; height: 31px; padding-left: 7px; padding-top: 7px; border: 0; outline: none; margin-bottom: 20px;
+				&.mHeight { height: 62px; }
+			}
+			.desc { resize: none; height: 60px; width: 360px; padding: 5px; margin-bottom: 20px; }
+			.modelicon { color: #ccc; font-size: 18px; vertical-align: -2px; margin-right: 5px; }
+		}
+		.info { color: #fff; margin-left: 104px; color: #b9b9b9;
+			.name { height: 42px; font-size: 14px; margin-bottom: 5px; width: 98%; color: #fff; }
+			.desc { margin-bottom: 5px; width: 98%; }
+			.userName { display: inline-block; width: 60px; margin-right: 10px; vertical-align: bottom; }
+		}
+		.shareLink { border-top: 1px #666 solid; margin-top: 15px;
+			.tipText { color: #fff; font-size: 14px; margin-top: 10px; margin-bottom: 15px; }
+			.linkUrl { border: 0; width: 351px; padding-left: 7px; font-size: 16px; padding: 4px 5px; outline: none;color:#333; }
+			.btnCopy { border: 1px #fff solid; background-color: transparent; color: #fff; height: 32px; vertical-align: top; width: 84px; margin-left: 18px; }
+		}
+	}
+}
+.viewPointContext.jqContextMenu { background-color: #333; color: #fff; width: 80px; border: 0;
+	li { padding-left: 15px; cursor: pointer;
+		&:hover { background-color: transparent; }
+	}
+}
+#viewPointContextPoint { display: none; }
+.jqContextMenu #viewPointContextPoint { display: block; }
+#comment .mCustomScrollbar .mCSB_scrollTools_vertical .mCSB_draggerContainer { background-color: transparent; }

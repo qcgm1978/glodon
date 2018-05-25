@@ -1,0 +1,91 @@
+<div class="feedBackContainerTop">
+	<span>反馈管理</span>
+</div>
+<div class="feedBackContainerSearch">
+	<div class="item">
+	    <span class="searchLabel">建议：</span>
+	    <input id="keyName" type="text" placeholder="请输入建议内容" style="width: 104px;" class="txtInput moreSeachText">
+	</div>
+	<div class="item">
+	    <span class="searchLabel">类别：</span>
+	    <div class="myDropDown pickProjectType">
+	    	<span class="myDropText">
+	    		<span class="text">全部</span> 
+	    		<i class="myDropArrorw"></i>
+	    	</span>
+	    	<ul class="myDropList">
+	    		<li class="myItem" data-val=''>全部</li>
+	    		<li class="myItem" data-val='1'>设计</li>
+	    		<li class="myItem" data-val='2'>计划</li>
+	    		<li class="myItem" data-val='3'>成本</li>
+	    		<li class="myItem" data-val='4'>质监</li>
+	    		<li class="myItem" data-val='5'>系统</li>
+	    	</ul>
+	    </div>
+	</div>
+	<div class="item">
+	    <span class="searchLabel">回复状态：</span>
+	    <div class="myDropDown feedBackState">
+	    	<span class="myDropText">
+	    		<span class="text">全部</span> 
+	    		<i class="myDropArrorw"></i>
+	    	</span>
+	    	<ul class="myDropList">
+	    		<li class="myItem" data-val='all'>全部</li>
+	    		<li class="myItem" data-val='true'>已回复</li>
+	    		<li class="myItem" data-val='false'>未回复</li>
+	    	</ul>
+	    </div>
+	</div>
+	<div id="showDateBox" class="showDateBox">
+	    <span class="searchLabel">建议时间：</span>
+	    <div class="firstDate dateBox" style="position: relative; display: inline-block;">
+	        <i class="iconCal add-on"></i>
+	        <input readonly="true" value="<%=startTime%>" placeholder="<%= App.Local.data['drawing-model'].STe || '开始时间' %>" id="dateStar" class="span2" type="text">
+	    </div>
+	    <span class="searchLabel">—<%= App.Local.data['drawing-model'].to || '至' %>—</span>
+	    <div class="firstDate dateBox" style="position: relative; display: inline-block;">
+	        <i class="iconCal"></i>
+	        <input readonly="true" value="<%=endTime%>" placeholder="<%= App.Local.data['drawing-model'].ETe || '结束时间' %>" id="dateEnd" class="span2" type="text">
+	    </div>
+	</div>
+	<div class="item">
+	    <span class="searchLabel">建议人：</span>
+	    <input id="feedBackPeople" type="text" placeholder="请输入建议人或账号" class="txtInput moreSeachText">
+	</div>
+	<div class="searchBtn">
+	    <span class="btnSearch">查询</span>
+	</div>
+</div>
+<div class="feedBackContainerOutPut">
+	<span>反馈列表</span>
+	<a href="javascript:;">导出建议列表</a>
+</div>
+<div class="feedBackContainerContent">
+	<div class="feedBackContentTop">
+	    <table>
+	        <tr>
+	            <td><input type="checkbox" id="checkboxAll"></td>
+	            <td>建议内容</td>
+	            <td>类别</td>
+	            <td>建议人</td>
+	            <td>人员分类</td>
+	            <td>建议时间</td>
+	            <td>回复状态</td>
+	            <td>操作</td>
+	        </tr>
+	    </table>
+	</div>
+	<div class="feedBackContentDown">
+	    <div class="scrollBox">
+	        <table>
+	            <tbody class="feedBackList">
+	            </tbody>
+	        </table>
+	    </div>
+	    <div class="pagingBox">
+	       <div class="sumDesc"></div><div class="listPagination"></div>
+	    </div>
+	</div>
+</div>
+<div class="insert-view-here"></div>

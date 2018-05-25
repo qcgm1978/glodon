@@ -1,0 +1,14 @@
+<div id="mapProjects">
+	<div class="header"><span class="mapProAddr">上海地区</span>  <span class="close">X</span> </div>
+	 
+
+ <% for(var i=0;i<10;i++){ %>
+	<div class="proInfo">
+		<img src="/projects/images/proDefault.png">
+		<a href="#projects/<%=i%>" onclick="$('#mapProjects').remove()">上海宝山广场<%=i%></a>
+	</div>
+<% } %>
+	 
+
+	 
+</div>

@@ -1,0 +1,12 @@
+
+<% $.each(obj.data,function(i,item){%> 
+
+		<li class="rootNode node">
+		  <% item.deep=1; %> 
+		  <%= treeNode(item) %> 
+		</li> 
+<% }) %>
+<% if(obj.data.length == 0){%>
+	<li><%=App.Project.NullPage.costList%></li>
+<% } %>
+

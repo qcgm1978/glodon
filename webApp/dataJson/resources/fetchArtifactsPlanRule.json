@@ -1,0 +1,67 @@
+{
+  "messageId": "7e87af87b7d84425bc51aee5fa2934f8",
+  "messageType": null,
+  "timestamp": 1464426306033,
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "id": 840358391030112,
+      "biz": 1,
+      "targetCode": "CB0001",
+      "targetName": "室内土方回填",
+      "type": 1,
+      "mappingCategory": {
+        "id": 840358391415136,
+        "categoryCode": "30.30.90",
+        "categoryName": "基础挖方",
+        "ruleId": 840358391030112,
+        "mappingPropertyList": [
+          {
+            "id": 840358391677280,
+            "propertyKey": "QY",
+            "operator": "==",
+            "propertyValue": "样板",
+            "categoryId": 840358391415136
+          },
+          {
+            "id": 840358391931232,
+            "propertyKey": "CY",
+            "operator": "<>",
+            "propertyValue": "(30,50]",
+            "categoryId": 840358391415136
+          }
+        ]
+      }
+    },
+    {
+      "id": 840358391030103,
+      "biz": 1,
+      "targetCode": "CB0002",
+      "targetName": "回填",
+      "type": 1,
+      "mappingCategory": {
+        "id": 840358391415136,
+        "categoryCode": "30.30.90",
+        "categoryName": "基础挖方",
+        "ruleId": 840358391030112,
+        "mappingPropertyList": [
+          {
+            "id": 840358391677280,
+            "propertyKey": "QY",
+            "operator": "==",
+            "propertyValue": "样板2",
+            "categoryId": 840358391415136
+          },
+          {
+            "id": 840358391931232,
+            "propertyKey": "XY",
+            "operator": "><",
+            "propertyValue": "(30,50]",
+            "categoryId": 840358391415136
+          }
+        ]
+      }
+    }
+  ]
+}

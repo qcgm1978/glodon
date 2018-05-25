@@ -1,0 +1,65 @@
+<h2><%=name%></h2>
+<fieldset>
+    <legend><label>
+        <span-i data-i18n="data.drawing-model.Discipline"><%= App.Local.data['drawing-model'].Discipline || "专业" %></span-i><a href="javascript:;" data-type="spe" class="newLabel">[新增]</a></label></legend>
+    <div class="specialRuleContainer">
+        <% _.each(data.specRule,function(rule){ %>
+        <div class="ruleItemWrap">
+            <select name="specail">
+                <option value="">请选择专业</option>
+                <% _.each(special,function(item){ %>
+                <option <%=rule.specCode==item.specialtyCode?'selected':''%> value="<%=item.specialtyCode%>"><%=item.specialty%></option>
+                <% }) %>
+            </select>
+            <select name="condition">
+                <option value="">请选择条件</option>
+                <% _.each(fileCondition,function(item){ %>
+                <option <%=rule.fileOperator==item.code?'selected':''%> value="<%=item.code%>"><%=item.name%></option>
+                <% }) %>
+            </select>
+            <input name="specialValue" value="<%=rule.filename%>" type="text" placeholder="请输入文件规则...">
+            <a href="javascript:;" onclick="$(this).parent().remove();"><%= App.Local.data['drawing-model'].Delete || '删除' %></a>
+        </div>
+        <% }) %>
+    </div>
+</fieldset>
+<fieldset>
+    <legend><label>
+       <%= App.Local.data['drawing-model'].Floor || "楼层" %><a href="javascript:;" data-type="flo" class="newLabel">[新增]</a></label></legend>
+    <div class="floorRuleContainer">
+        <% _.each(data.floorRule,function(rule){%>
+        <div class="ruleItemWrap">
+            <select name="condition">
+                <option value="">请选择条件</option>
+                <% _.each(floorCondition,function(item){ %>
+                <option <%=rule.floorOperator==item.code?'selected':''%> value="<%=item.code%>"><%=item.name%></option>
+                <% }) %>
+            </select>
+            <input name="floorValue" value="<%=rule.floor%>" type="text" placeholder="请输入楼层规则...">
+            <a href="javascript:;" onclick="$(this).parent().remove();">删除</a>
+        </div>
+        <% }) %>
+    </div>
+</fieldset>
+<fieldset>
+    <legend><label data-i18n="data.drawing-model.CCe">分类编码</label></legend>
+    <% _.each(data.codeRule,function(rule){%>
+    <div class="classCodeWrap">
+        <select name="condition">
+            <option <%= rule.visible === true?'selected':'' %> value=true>显示</option>
+            <option <%= rule.visible === false?'selected':'' %> value=false>隐藏</option>
+        </select>
+        <input name="ccodeValue" value="<%=rule.code?rule.code.join(','):''%>" type="text" placeholder="请输入文件编码规则...">
+    </div>
+    <% }) %>
+</fieldset>
+<fieldset>
+    <legend><label>模型显示比例</label></legend>
+    <div class="modelMarginWrap">
+        <input name="margin" value="<%= data.margin||'' %>" type="number" placeholder="请输入模型显示Margin比例..."><em>(注:请输入数字格式的数据,默认值:<%=processCategoryMR[name]?processCategoryMR[name].margin:'0.05'%>)</em><br><br>
+        <input name="ratio" value="<%= data.ratio||'' %>" type="number" placeholder="请输入模型Ratio比例..."><em>(注:请输入数字格式的数据,默认值:<%=processCategoryMR[name]?processCategoryMR[name].ratio:'1.0'%>)</em>
+    </div>
+</fieldset>
+<div class="btnBar">
+    <a href="javascript:;" class="mmh-btn confirm">应用规则</a>
+</div>

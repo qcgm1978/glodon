@@ -1,0 +1,27 @@
+<% if(data.length>0){ %>
+  <% _.each(data,function(item){ %>
+    <li class="itemNode">
+      <div class="itemContent">
+        <i class="nodeSwitch"></i>
+        <span class="tree-text"><%= item.specialty %></span>
+      </div>
+      <ul class="subTree">
+        <% _.each(item.files,function(file,key){ %>
+          <li class="itemNode file">
+            <div class="itemContent" data-id="<%= file.fileId %>" data-etag="<%= file.fileEtag %>">
+              <i class="nodeSwitch"></i>
+              <span class="tree-text"><%= file.fileName %></span>
+              <input type="checkbox"  class="inputCheckbox parentCheckbox">
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+    </li>
+  <% }) %>
+<% }else{ %>
+  <li class="itemNode">
+    <div class="itemContent">
+      <span class="tree-text">没有找到文件</span>
+    </div>
+  </li>
+<% } %>

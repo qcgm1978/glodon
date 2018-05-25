@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= App.Local.data['drawing-model'].Share || '分享' %></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+</head>
+<body>
+<script type="text/javascript">
+var ua = navigator.userAgent;
+var hash = location.hash;
+
+var Url = {
+	getParam : function(key){
+		var search = location.search;
+		search = search.replace("?","");
+		var items = search.split("&");
+		var item,i;
+		for(i=0;i<items.length;i++)
+		{
+			item = items[i].split("=");
+			if(item[0]==key)
+			{
+				return item[1];
+			}
+		}
+		return "";
+	}
+};
+var pcHref = "",
+	mobileHref = "";
+if(Url.getParam("commentId")){
+	pcHref = "/#/projects/{projectId}/{projectVersionId}?share=true&projectId={projectIds}&viewpointId={viewpointId}&commentId={commentId}";
+	mobileHref = "/#/notesDetails/{projectId}/{projectVersionId}/{projectName}//{viewpointId}/{fileVersionId}";
+}else{
+	pcHref = "/#/projects/{projectId}/{projectVersionId}?share=true&projectId={projectIds}&viewpointId={viewpointId}";
+	mobileHref = "/#/notesDetails/{projectId}/{projectVersionId}/{projectName}//{viewpointId}/{fileVersionId}";
+}
+if(ua.indexOf("Android")>0||ua.indexOf("iPhone")>0){
+	App.Storage.setData("viewPointId",Url.getParam("viewpointId"));
+	mobileHref = mobileHref.replace("{projectId}",Url.getParam("projectId"));
+	mobileHref = mobileHref.replace("{projectVersionId}",Url.getParam("projectVersionId"));
+	mobileHref = mobileHref.replace("{viewpointId}",Url.getParam("viewpointId"));
+	mobileHref = mobileHref.replace("{fileVersionId}",Url.getParam("fileVersionId"));
+	mobileHref = mobileHref.replace("{projectName}",decodeURI(Url.getParam("projectName")));
+	location.href = mobileHref;
+}else{
+	pcHref = pcHref.replace("{projectId}",Url.getParam("projectId"));
+	pcHref = pcHref.replace("{projectVersionId}",Url.getParam("projectVersionId"));
+	pcHref = pcHref.replace("{projectIds}",Url.getParam("projectId"));
+	pcHref = pcHref.replace("{viewpointId}",Url.getParam("viewpointId"));
+	if(Url.getParam("commentId")){
+		pcHref = pcHref.replace("{commentId}",Url.getParam("commentId"));
+	}
+	location.href = pcHref;
+}
+</script>
+</body>
+</html>

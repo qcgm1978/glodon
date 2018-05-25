@@ -1,0 +1,94 @@
+<div class="hedaerSearch">
+    <span class="searchToggle">选择筛选条件</span>
+    <span class="clearSearch">清除条件</span>
+    <span class="groupRadio">
+        <label class="btnCk"><i class="iconPic"></i>显示搜索结果对应位置</label>
+    </span>
+</div>
+<div class="searchDetail openingacceptance">
+    <div class="searchOptons">
+        <div class="optonLine zIndex13">
+            <div class="optonLine">
+                <div class="myDropDown categoryOption optionComm">
+                    <% if(ruleType) {%>
+                        <span class="myDropText">
+                        <span>类别：</span> <span class="text"><%=userData[ruleType]%></span> <i class="myDropArrorw"></i> </span>
+                        <ul class="myDropList">
+                            <li class="myItem" data-val='<%=ruleType%>'><%=userData[ruleType]%></li>
+                        </ul>
+                    <% }else{%>
+                         <span class="myDropText">
+                        <span>类别：</span> <span class="text">全部</span> <i class="myDropArrorw"></i> </span>
+                        <ul class="myDropList">
+                            <li class="myItem" data-val=''>全部</li>
+                            <% _.each(userData,function(item,index){ if(index!=0){%>
+                            <li class="myItem" data-val='<%=index%>'><%=item%></li>
+                            <% } }) %>
+                        </ul>
+                    <% } %>
+                    </div>
+                </div>
+                <div class="optonLine">
+                    <div class="myDropDown riskOption optionComm">
+                        <span class="myDropText">
+                            <span>状态：</span> <span class="text">全部</span> <i class="myDropArrorw"></i> </span>
+                            <ul class="myDropList">
+                                <li class="myItem" data-val=''>全部</li>
+                                <li class="myItem" data-val=''>合格</li>
+                                <li class="myItem" data-val=''>不合格</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        <div class="optonLine">
+            <div class="myDropDown floorOption optionComm">
+                <span class="myDropText">
+             <span>楼层：</span> <span class="text">全部</span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li class="myItem" data-val=''>全部</li>
+                    <% _.each(App.Project.Settings.Viewer.FloorsData,function(item,index){%>
+                    <li class="myItem" data-val='<%=item.code%>'><%=item.code%></li>
+                    <% }) %>
+                </ul>
+            </div>
+        </div>
+        <div class="optonLine">
+        <div class="searchName">
+            <span>位置：</span>
+            <input type="text" class="txtSearchName txtLocationName filterInputExtra" placeholder="请输入关键字"/>
+        </div>
+        </div>
+                <div class="optonLine btnOption">
+                    <input type="button" class="myBtn myBtn-primary btnFilter" value="筛选" />
+                </div>
+            </div>
+        </div>
+        <div class="tbContainer">
+            <table class="tbOpeningacceptanceHeader tbComm">
+                <thead>
+                    <tr>
+                        <th class="manifestIcon"></th>
+                        <th class="category">类别</th>
+                        <th class="positon">位置</th>
+                        <th class="ckResult">检查结果</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="materialequipmentList openingacceptanceList">
+                <div class="materialequipmentListScroll">
+                    <table class="tbOpeningacceptanceBody tbComm">
+                        <tbody>
+                        <tr class="noLoading"></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="paginationBottom">
+        <div class="pageInfo">
+            <span class="curr">0</span>/<span class="pageCount">0</span>页
+            <span class="prev">上一页</span> <span class="next">下一页</span>
+        </div>
+        <div class="sumCount">共<span class="count">0</span>条</div>
+        
+    </div>

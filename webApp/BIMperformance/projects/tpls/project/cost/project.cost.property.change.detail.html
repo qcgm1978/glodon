@@ -1,0 +1,23 @@
+
+ 
+
+
+<%  var data=obj.data,count=data.length;%>
+
+ <%for(var i=0;i<count;i++){%>
+
+  <tr class="<%= i%2==0 ?'odd' : '' %>">
+	   <td class="name">  <span class="nameText overflowEllipsis"><%=data[i].title%></span></td>
+	   <td class="date"><%=data[i].applyTime && new Date(data[i].applyTime).format('yyyy-MM-dd') || '--' %></td>
+	   <td class="diff"> 
+ 			<a href="/static/dist/app/project/projectChange/index.html?projectId=<%=App.Project.Settings.CurrentVersion.projectId%>&projectVersionId=<%=data[i].projectVersionId%>&referenceId=<%=data[i].referenceId%>&referenceVersionId=<%=data[i].referenceVersionId%>" target="_blank"><%= App.Local.data['drawing-model'].Check || '查看' %></a>
+	    </td> 
+ </tr>
+ <%}%> 
+
+
+<%if(count<=0){%>
+	<tr> <td  colspan="3" style="border:0;">
+		<%=App.Project.NullPage.costChange %>
+	</td></tr> 
+<%}%>

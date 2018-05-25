@@ -1,0 +1,43 @@
+<div class="header">
+    <span class="goList"> <i class=" m-goBack iconBack"></i>返回</span>
+    <span class="operators">  
+        <i class="icon-trash iconDel" title="删除"></i> 
+        <i class=" m-edit iconEdit" title="编辑"></i> 
+        <i class=" m-share iconShare" title="分享"></i>
+    </span>
+</div>
+<div class="reMarkListBox">
+    <div class="reMarkListScroll">
+
+        <div class="viewPointInfo">
+            
+        </div>
+
+        <div class="remarkBox">
+            <i class="m-comment iconComment"></i>评论（<span class="count">0</span>）
+        </div>
+
+        <ul class="reMarkList"></ul>
+    </div>
+</div>
+<!-- <%if(!App.Comm.getCookie("OUTSSO_AuthToken")){%>
+    <div class="noLogin">如需评论，请先<span class="btnLogin"> 登录</span></div>
+    <%}%>   <%=!App.Comm.getCookie('OUTSSO_AuthToken')?'hidden':''  %>-->
+        <div class="talkReMark ">
+            <div class="inputBox">
+                <textarea class="txtReMark" placeholder="<%= App.Local.data['drawing-model'].Pes || '请输入评论' %>"></textarea>
+                <div class="uploadImgs">
+                </div>
+            </div>
+            <div class="opReMark">
+                 <input type="button" class="btnEnter" value="评论" />
+                <form id="viewPointUploadImageForm" name="viewPointUploadImageForm" method="post" target="upload-iframe" enctype="multipart/form-data" encoding="multipart/form-data">
+                    <input type="file" name="uploadImg" value="上传图片" accept="image/*" class="uploadImg" />
+                  
+                    <i class="m-img btnUploadImg btnIcon" title="上传图片"></i>
+                      <i class="m-address btnAdress btnIcon" style="display:none;" title="位置"></i>
+                    <i class="m-camera btnCommViewPoint btnIcon" title="视点"></i> 
+                </form>              
+            </div>
+        </div>
+        <iframe id="viewPintUploadIframe" name="upload-iframe" style="display: none;"></iframe>

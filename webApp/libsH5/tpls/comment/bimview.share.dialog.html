@@ -1,0 +1,18 @@
+<img class="img" src="<%=pic%>" />
+
+
+<div class="info">
+    <div class="name overflowEllipsis">
+       <%=name%>
+    </div>    
+    <div class="userInfo">
+        <span class="userName overflow2"> <%=creatorName%></span> <span> <%=typeof(createTime)=='number'?new Date(createTime).format('yyyy-MM-dd') : createTime %></span>
+    </div>
+</div>
+
+<div class="shareLink">
+	<div class="tipText"><%= App.Local.data['drawing-model'].Ctt || '复制以下链接即可分享快照' %></div>
+  <input type="text" value="<%=url%>" class="linkUrl" disabled/>
+  <input data-clipboard-text="<%=url%>"  type="button" class="btnCopy" value="<%= App.Local.data['drawing-model'].Ctk || '复制链接' %>" />
+
+</div>

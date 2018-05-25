@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>清除插件缓存</title>
+</head>
+
+
+
+<body style="margin: 0;padding: 0;overflow: hidden;">
+ 
+
+    <script type="text/javascript"> 
+    	 
+	    var myWebView = document.createElement("object"),
+	    viewport = document.body;
+
+	    myWebView.classid = "CLSID:15A5F85D-A81B-45D1-A03A-6DBC69C891D1"; 
+	   
+	   
+	    viewport.appendChild(myWebView); 
+
+	    myWebView.html='<div>清除插件缓存</div>';   
+	    
+	    // myWebView.url="about:blank";
+	   
+
+	    myWebView.runCommand("clearCache"); 
+ 
+
+    </script>
+</body>
+
+</html>

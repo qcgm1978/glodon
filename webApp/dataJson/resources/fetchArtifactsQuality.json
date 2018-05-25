@@ -1,0 +1,3751 @@
+{
+  "messageId": "08f09e7abe6e49dca3b35d8fa4b2dfee",
+  "messageType": null,
+  "timestamp": 1466389330136,
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "code": "01",
+      "name": "施工过程",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01001",
+      "name": "地基与基础",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01001001",
+      "name": "桩基、地基处理及天然地基",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01001001001",
+      "name": "灌注桩",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001001",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001001002",
+      "name": "管桩、方桩",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001001",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001001003",
+      "name": "CFG地基处理",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001001",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001001004",
+      "name": "抗浮锚杆",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001001",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001001005",
+      "name": "天然地基",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001001",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001002",
+      "name": "基坑工程",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01001002006",
+      "name": "止水帷幕",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001002007",
+      "name": "降水",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001002008",
+      "name": "土方开挖",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001002009",
+      "name": "土钉",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001002010",
+      "name": "支护桩",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001002011",
+      "name": "锚索",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001002012",
+      "name": "内支撑",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001002013",
+      "name": "地下连续墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01001002014",
+      "name": "回填土",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01001002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002",
+      "name": "主体结构",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01002003",
+      "name": "钢筋",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01002003015",
+      "name": "钢筋加工",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002003016",
+      "name": "基础",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002003017",
+      "name": "柱",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002003018",
+      "name": "梁",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002003019",
+      "name": "墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002003020",
+      "name": "楼板",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002003021",
+      "name": "楼梯",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002003022",
+      "name": "悬挑构件",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002004",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002005",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002006",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002007",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01002008",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01002",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003",
+      "name": "建筑装饰装修",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01003009",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003010",
+      "name": "幕墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01003010023",
+      "name": "石材幕墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003010",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003010024",
+      "name": "铝板幕墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003010",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003010025",
+      "name": "玻璃幕墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003010",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003011",
+      "name": "墙地铺贴",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01003011026",
+      "name": "地面铺贴",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003011027",
+      "name": "墙面铺贴",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003012",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003013",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003014",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003015",
+      "name": "门窗安装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01003015028",
+      "name": "木质门",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003015",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003015029",
+      "name": "钢质防火门",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003015",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003015030",
+      "name": "主出入玻璃门",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003015",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003015031",
+      "name": "铝合金窗",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003015",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01003016",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01003",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01004",
+      "name": "屋面工程",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01004017",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01004",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01004018",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01004",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01004019",
+      "name": "细部构造",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01004",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01004019032",
+      "name": "变形缝",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01004019",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01004019033",
+      "name": "女儿墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01004019",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01004019034",
+      "name": "屋面出入口",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01004019",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01004019035",
+      "name": "出屋面管道、构筑物",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01004019",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01004019036",
+      "name": "设备基础",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01004019",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01004019037",
+      "name": "水落口",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01004019",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01004019038",
+      "name": "反梁过水孔",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01004019",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01005",
+      "name": "建筑给水排水及供暖",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01005020",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01005",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01005021",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01005",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01005022",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01005",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01005023",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01005",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01005024",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01005",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01006",
+      "name": "通风空调",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01006021",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01006",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01006025",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01006",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01006026",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01006",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01006027",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01006",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01006028",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01006",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01007",
+      "name": "建筑气电",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01007029",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01007",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01007030",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01007",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01007031",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01007",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01007032",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01007",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01007033",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01007",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008",
+      "name": "建筑智能化",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01008034",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035",
+      "name": "慧云系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01008035039",
+      "name": "消防系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035040",
+      "name": "信息发布",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035041",
+      "name": "背景音乐",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035042",
+      "name": "防盗系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035043",
+      "name": "门禁系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035044",
+      "name": "客流统计系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035045",
+      "name": "停车管理系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035046",
+      "name": "能源管理系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035047",
+      "name": "电梯监控",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035048",
+      "name": "视频监控",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035049",
+      "name": "暖通空调",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035050",
+      "name": "给水、排水",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035051",
+      "name": "变配电系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035052",
+      "name": "公共照明系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008035053",
+      "name": "夜景照明系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008035",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01008036",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01008",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01009",
+      "name": "建筑节能",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01009037",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01009",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01009038",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01009",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01010",
+      "name": "电梯",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "01010039",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01010",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "01010040",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "01010",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02",
+      "name": "开业过程",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02010",
+      "name": "电梯",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02010077",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02010",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02010078",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02010",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02010079",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02010",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02010080",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02010",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02010081",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02010",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02011",
+      "name": "外装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02011041",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02011042",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02011043",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02011044",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02011045",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02011046",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02011047",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02011048",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02011049",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02011050",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02011051",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02011",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012",
+      "name": "内装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02012052",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012053",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012054",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012055",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012056",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012057",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012058",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012059",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012060",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012061",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012062",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012063",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012064",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02012065",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02012",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02013",
+      "name": "强弱电井",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02013051",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02013",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02013066",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02013",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02013067",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02013",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02013068",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02013",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02013069",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02013",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02013070",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02013",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02014",
+      "name": "管道井",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02014020",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02014",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02014051",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02014",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02014068",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02014",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02014069",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02014",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02014070",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02014",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02015",
+      "name": "楼梯及前室",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02015070",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02015",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02015071",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02015",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02015072",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02015",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02015073",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02015",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02015074",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02015",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02015075",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02015",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02015076",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02015",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017",
+      "name": "屋面",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02017030",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017039",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017082",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017083",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017084",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017085",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017086",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017087",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017088",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017089",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017090",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017091",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017092",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017093",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017094",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017095",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02017096",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02017",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02018",
+      "name": "采光顶",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02018097",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02018",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02018098",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02018",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02018099",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02018",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02018100",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02018",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02018101",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02018",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02018102",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02018",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02018103",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02018",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02018104",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02018",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02018105",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02018",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02019",
+      "name": "慧云机房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02019106",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02019",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02019107",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02019",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02019108",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02019",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02019109",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02019",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02020",
+      "name": "冷冻机房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02020021",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02020",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02020029",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02020",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02020030",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02020",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02020051",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02020",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02020106",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02020",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02020108",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02020",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02020110",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02020",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02020111",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02020",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02020112",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02020",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02020113",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02020",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02021",
+      "name": "消防水泵房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02021021",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02021",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02021030",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02021",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02021051",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02021",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02021106",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02021",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02021111",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02021",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02021112",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02021",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02021113",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02021",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02022",
+      "name": "生活水泵房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02022021",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02022",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02022030",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02022",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02022051",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02022",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02022106",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02022",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02022108",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02022",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02022110",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02022",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02022111",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02022",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02022112",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02022",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02022114",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02022",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02023",
+      "name": "变配电机房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02023106",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02023",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02023108",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02023",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02023109",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02023",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02023110",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02023",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02023115",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02023",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02024",
+      "name": "发电机房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02024106",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02024",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02024108",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02024",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02024109",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02024",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02024110",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02024",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02025",
+      "name": "风机房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02025106",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02025",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02025108",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02025",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02025109",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02025",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02025110",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02025",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02026",
+      "name": "地下车库",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02026030",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02026",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02026051",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02026",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02026106",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02026",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02026110",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02026",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02026111",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02026",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02026116",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02026",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02026117",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02026",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02026118",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02026",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02026119",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02026",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02026120",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02026",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02026121",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02026",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02027",
+      "name": "室外工程",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02027122",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02027",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02027123",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02027",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02027124",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02027",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02028",
+      "name": "湿式报警阀间",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02",
+      "type": null,
+      "leaf": false
+    },
+    {
+      "code": "02028069",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02028",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "02028109",
+      "name": "",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "02028",
+      "type": null,
+      "leaf": true
+    },
+    {
+      "code": "GC01",
+      "name": "地基与基础",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC0101",
+      "name": "桩基、地基处理及天然地基",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC01",
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC010101",
+      "name": "灌注桩",
+      "count": 1,
+      "ruleContain": 0,
+      "ruleIds": [
+        853665915150528
+      ],
+      "parentCode": "GC0101",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010102",
+      "name": "后注浆",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0101",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010103",
+      "name": "管桩、方桩",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0101",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010104",
+      "name": "CFG地基处理",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0101",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010105",
+      "name": "抗浮锚杆",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0101",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010106",
+      "name": "天然地基",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0101",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0102",
+      "name": "基坑工程",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC01",
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC010201",
+      "name": "止水帷幕",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0102",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010202",
+      "name": "降水",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0102",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010203",
+      "name": "土方开挖",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0102",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010204",
+      "name": "土钉",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0102",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010205",
+      "name": "支护桩",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0102",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010206",
+      "name": "锚索",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0102",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010207",
+      "name": "内支撑",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0102",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010208",
+      "name": "地下连续墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0102",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010209",
+      "name": "回填土",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0102",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC02",
+      "name": "主体结构",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC0201",
+      "name": "钢筋",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC02",
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC020101",
+      "name": "钢筋加工",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0201",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC020102",
+      "name": "基础",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0201",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC020103",
+      "name": "柱",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0201",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC020104",
+      "name": "梁",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0201",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC020105",
+      "name": "墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0201",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC020106",
+      "name": "楼板",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0201",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC020107",
+      "name": "楼梯",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0201",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC020108",
+      "name": "悬挑构件",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0201",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0202",
+      "name": "混凝土",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC02",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0203",
+      "name": "砌筑",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC02",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0204",
+      "name": "钢结构",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC02",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0205",
+      "name": "地下防水",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC02",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0206",
+      "name": "梁柱节点",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC02",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC03",
+      "name": "建筑装饰装修",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC0301",
+      "name": "采光顶",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC03",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0302",
+      "name": "幕墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC03",
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC030201",
+      "name": "石材幕墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0302",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC030202",
+      "name": "铝板幕墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0302",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC030203",
+      "name": "玻璃幕墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0302",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0303",
+      "name": "墙地铺贴",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC03",
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC030301",
+      "name": "地面铺贴",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0303",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC030302",
+      "name": "墙面铺贴",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0303",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0304",
+      "name": "吊顶工程",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC03",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0305",
+      "name": "商铺玻璃隔断",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC03",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0306",
+      "name": "玻璃栏板",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC03",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0307",
+      "name": "门窗安装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC03",
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC030701",
+      "name": "木质门",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0307",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC030702",
+      "name": "钢质防火门",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0307",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC030703",
+      "name": "主出入玻璃门",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0307",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC030704",
+      "name": "铝合金窗",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0307",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0308",
+      "name": "卫生间防水",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC03",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC04",
+      "name": "屋面工程",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC0401",
+      "name": "屋面防水",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC04",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0402",
+      "name": "屋面排水",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC04",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0403",
+      "name": "细部构造",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC04",
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC040301",
+      "name": "变形缝",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0403",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC040302",
+      "name": "女儿墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0403",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC040303",
+      "name": "屋面出入口",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0403",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC040304",
+      "name": "出屋面管道、构筑物",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0403",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC040305",
+      "name": "设备基础",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0403",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC040306",
+      "name": "水落口",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0403",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC040307",
+      "name": "反梁过水孔",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0403",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC05",
+      "name": "建筑给水排水及供暖",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC0501",
+      "name": "管道安装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC05",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0502",
+      "name": "设备安装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC05",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0503",
+      "name": "消防泵房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC05",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0504",
+      "name": "给水泵房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC05",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0505",
+      "name": "湿式报警阀室",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC05",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC06",
+      "name": "通风空调",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC0601",
+      "name": "风管制作和安装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC06",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0602",
+      "name": "风口安装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC06",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0603",
+      "name": "设备安装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC06",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0604",
+      "name": "空调机房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC06",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0605",
+      "name": "冷冻机房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC06",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC07",
+      "name": "建筑气电",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC0701",
+      "name": "母线安装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC07",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0702",
+      "name": "桥架安装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC07",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0703",
+      "name": "变配电室",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC07",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0704",
+      "name": "发电机房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC07",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0705",
+      "name": "防雷及接地安装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC07",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC08",
+      "name": "建筑智能化",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC0801",
+      "name": "火灾报警及消防联动系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC08",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0802",
+      "name": "慧云系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC08",
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC080201",
+      "name": "消防系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080202",
+      "name": "信息发布",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080203",
+      "name": "背景音乐",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080204",
+      "name": "防盗系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080205",
+      "name": "门禁系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080206",
+      "name": "客流统计系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080207",
+      "name": "停车管理系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080208",
+      "name": "能源管理系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080209",
+      "name": "电梯监控",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080210",
+      "name": "视频监控",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080211",
+      "name": "暖通空调",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080212",
+      "name": "给水、排水",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080213",
+      "name": "变配电系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080214",
+      "name": "公共照明系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC080215",
+      "name": "夜景照明系统",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC0802",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0803",
+      "name": "慧云机房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC08",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC09",
+      "name": "建筑节能",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC0901",
+      "name": "涂料外墙保温",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC09",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC0902",
+      "name": "屋面保温",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC09",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC10",
+      "name": "电梯",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC1001",
+      "name": "电梯机房",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC10",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC1002",
+      "name": "电梯底坑",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "GC10",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "KY01",
+      "name": "外装",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": null,
+      "type": "KY",
+      "leaf": false
+    },
+    {
+      "code": "KY0101",
+      "name": "金属幕墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "KY01",
+      "type": "KY",
+      "leaf": true
+    },
+    {
+      "code": "KY0102",
+      "name": "石材幕墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "KY01",
+      "type": "KY",
+      "leaf": true
+    },
+    {
+      "code": "KY0103",
+      "name": "玻璃幕墙",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "KY01",
+      "type": "KY",
+      "leaf": true
+    },
+    {
+      "code": "KY0104",
+      "name": "橱窗",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "KY01",
+      "type": "KY",
+      "leaf": true
+    },
+    {
+      "code": "KY0105",
+      "name": "幕墙打胶",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "KY01",
+      "type": "KY",
+      "leaf": true
+    },
+    {
+      "code": "KY0106",
+      "name": "泛光照明",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "KY01",
+      "type": "KY",
+      "leaf": true
+    },
+    {
+      "code": "KY0107",
+      "name": "逃生窗及逃生通道",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "KY01",
+      "type": "KY",
+      "leaf": true
+    },
+    {
+      "code": "KY0108",
+      "name": "墙面与地面交接",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "KY01",
+      "type": "KY",
+      "leaf": true
+    },
+    {
+      "code": "KY0109",
+      "name": "出入口",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "KY01",
+      "type": "KY",
+      "leaf": true
+    },
+    {
+      "code": "KY0110",
+      "name": "广告位",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "KY01",
+      "type": "KY",
+      "leaf": true
+    },
+    {
+      "code": "KY0111",
+      "name": "防火封堵",
+      "count": 0,
+      "ruleContain": 0,
+      "ruleIds": [],
+      "parentCode": "KY01",
+      "type": "KY",
+      "leaf": true
+    }
+  ]
+}

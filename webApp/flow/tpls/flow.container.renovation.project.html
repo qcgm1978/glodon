@@ -1,0 +1,29 @@
+<div class="resourceCrumbsNav">
+	<div class="breadcrumbNav">
+		<span class="projectText">
+			<a href="#flow">
+				<%= App.Local.data['nav'].process || '业务流程' %>
+			</a>
+		</span>
+		<span class="breadItem project relative">
+			<i class="icon-angle-right"></i>
+			<span class="breadItemText">
+				<a href="javascript:;" class="text">
+					<%= App.Flow.Controller.type %>
+				</a>
+			</span>
+		</span>
+	</div>
+</div>
+<div class="gzProjectBox">
+	<div class="gzTabProjectBox" id="navListBox">
+	</div>
+	<a class="mkhjdBox first" target="_blank">
+		<%= App.Local.data.source.Items || '模块化节点' %>
+	</a>
+	<a class="mkhjdBox second" target="_blank">
+		<%= App.Local.data.source.MB || '管理依据' %>
+	</a>
+
+	<div class="gzContentProjectBox" id="itemListBox"></div>
+</div>

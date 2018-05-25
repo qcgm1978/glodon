@@ -1,0 +1,38 @@
+ <div class="planBox planAnalogContent">
+     <table cellspacing="0" class="tbPlanHeader">
+         <thead>
+             <tr>
+                 <th class="ckItem"></th>
+                 <th class="planId" data-i18n="data.drawing-model.SN">序号</th>
+                 <th class="operationalMatters" data-i18n="data.drawing-model.Activities">业务事项</th>
+                 <th class="start" data-i18n="[title]data.drawing-model.PInLS">                <%= App.Local.data['drawing-model'].PInS || '计划开始' %></th>
+                 <th class="end" data-i18n="[title]data.drawing-model.PInLE">                <%= App.Local.data['drawing-model'].PInLES || '计划结束' %></th>
+             </tr>
+         </thead>
+     </table>
+    <div class="planContent">
+        <table cellspacing="0" class="tbPlan">
+            <tbody>
+                 <tr class="noLoading"></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="actionAnalog">
+    <div class="progressAnalog">
+        <i class="myIcon-play playOrPause"></i>
+       <!--  <i class="myIcon-pause"></i> -->
+       
+        <div class="process">
+         <i class="myIcon-circle processPos"></i>
+         <div class="bg"></div>
+            <div class="processBg"></div>
+            
+        </div>
+    </div>
+    <div class="desctionAnalog">
+      
+        <span class="analogDate"></span>
+        <span class="analogTitle"></span>
+    </div>
+</div>

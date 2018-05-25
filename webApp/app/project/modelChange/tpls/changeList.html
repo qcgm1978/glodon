@@ -1,0 +1,20 @@
+<ul class="rightTreeView">
+  <% _.each(data,function(item){ %>
+    <li class="itemNode">
+      <div class="item-content open">
+        <i class="nodeSwitch"></i>
+        <span class="tree-text"><%= item.specialtyName %></span>
+      </div>
+      <ul class="treeViewSub">
+        <% _.each(item.comparisons,function(file){ %>
+          <li class="itemNode">
+            <div class="item-content" data-id="<%= file.comparisonId %>">
+              <i class="nodeSwitch"></i>
+              <span class="tree-text"><%= file.fileName %></span>
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+    </li>
+  <% }) %>
+</ul>

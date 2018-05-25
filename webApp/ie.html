@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>万达筑云项目管理平台</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="pragma" content="no-cache">-->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <style type="text/css">
+        html {
+            overflow: hidden;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        #newVersion {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            font-size: 50px;
+            color: red;
+            z-index: 9999;
+            background-color: #000;
+        }
+    </style>
+    <link href="favico.ico" rel="shortcut icon"/>
+    <!-- <script src="http://sso4pub.wanda-dev.cn/Scripts/common.js" type="text/javascript"></script> 测试-->
+    <script src="http://sso.wanda.cn/Scripts/common.js" type="text/javascript"></script>
+    <!-- <script src="http://sso4pub.wanda-dev.cn/Scripts/common.js" type="text/javascript"></script> -->
+</head>
+
+<body style="margin: 0;padding: 0;overflow: hidden;" onunload="unLoadEvent()">
+<script src="libs/jquery/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+    var hasDevicePixelRatio = true;
+    var myWebView;
+    var isShare = false;   //模型分享，执行一次
+    try {
+        myWebView = document.createElement("object"),
+            currentVersion = 5,
+            isCheckLogin = false,
+            viewport = document.body,
+            cookUrl = getCookie("path");
+        myWebView.classid = "CLSID:15A5F85D-A81B-45D1-A03A-6DBC69C891D1";
+        viewport.appendChild(myWebView);
+        if (myWebView.pluginVersion < currentVersion) {
+            if (confirm("发现新版本，是否更新？")) {
+                throw new error("version is old");
+            }
+        }
+        var url = cookUrl && cookUrl.lastIndexOf("/file/data") <= -1 && (new Date() - getCookie("pathDate")) / 1000 <= 2 &&
+            cookUrl.lastIndexOf("about:blank") <= -1 && cookUrl ||
+            window.location.href.substring(window.location.href.lastIndexOf("path") + 5) ||
+            window.location.host + "/#projects";
+        //外部没有cookie 登出
+        if (!getCookie("OUTSSO_AuthToken") && url.indexOf("appKey") < 0) {
+            url = location.protocol + "//" + location.host + "/login.html?t=" + (+new Date());
+            isCheckLogin = true;
+        }
+        var isPrview = location.href.indexOf('path=') > -1 && /filePreview\.html/.test(location.href);
+        if (isPrview) {
+            url = window.location.href.substring(window.location.href.lastIndexOf("path") + 5)
+        }
+        if (/#projects/.test(location.href)) {
+            url = window.location.href.substring(window.location.href.lastIndexOf("path") + 5)
+        }
+        myWebView.url = url;
+        myWebView.id = "webView";
+        myWebView.registerEvent('newWindow', navigateTo);
+        myWebView.registerEvent('urlChanged', function (url) {
+            if (myWebView.url == "about:blank") {
+                window.opener = null;
+                window.open("", "_self");
+                window.close();
+            }
+        });
+        //文件下载
+        myWebView.registerEvent('download', function (url) {
+            //未登录 没有token_cookie
+            if (getCookie("token_cookie") == null && (getCookie("OUTSSO_AuthToken") == null || getCookie("OUTSSO_AuthToken") == "null")) {
+                //获取 webview cookie
+                myWebView.runScript("document.cookie", function (cooks) {
+                    var token_cookie = getCookie("token_cookie", cooks);
+                    if (token_cookie) {
+                        setCookie("token_cookie", token_cookie);
+                        window.location.href = url;
+                    } else {
+                        throw new error("version is old");
+                    }
+                });
+            } else {
+                var bool = location.href.indexOf(".png") > 0 || location.href.indexOf(".jpg") > 0 || location.href.indexOf(".gif") > 0;
+                if (bool) {
+                    downLoadForIE.DownLoad(url);
+                    return;
+                } else if (url.indexOf('/export') > 0) {
+                    downLoadForIE.DownLoadFeedback(url);
+                    return;
+                }
+                window.location.href = url;
+            }
+        });
+        if (myWebView.url.indexOf("login.html") > -1 && !isCheckLogin) {
+            //两秒后 还为false 就认为 没触发check
+            var timer = setTimeout(function () {
+                clearTimeout(timer);
+                if (!isCheckLogin) {
+                    isCheckLogin = true;
+                    checkLogin();
+                }
+            }, 1);
+            myWebView.runScript('App.Comm.checkCookie("' + document.cookie + '")', function (cookie) {
+            });
+        }
+        var cookieClearInterval = setInterval(function () {
+            if (!getCookie("OUTSSO_AuthToken") && url.indexOf("appKey") < 0 && !isPrview) {
+                myWebView.runScript("App.Comm.clearCookie()", function () {
+                })
+            }
+        }, 2000)
+        myWebView.registerEvent('loadFinished', function (isReady) {
+            if (myWebView.url.indexOf("login.html") > -1 && !isCheckLogin) {
+                if (!isReady) {
+                    return;
+                }
+                isCheckLogin = true;
+                checkLogin();
+            }
+            if (myWebView.url.indexOf("login.html") <= -1 && url.indexOf("appKey") < 0) {
+                myWebView.runScript('App.Comm.checkCookie("' + document.cookie + '")', function (cookie) {
+                    console.log(cookie);
+                });
+            }
+            //SSO登录
+            try {
+                var cookies = document.cookie;
+                if (cookies.indexOf('"') > 0) {
+                    cookies = cookies.replace(/"/g, "");
+                }
+                setTimeout(function () {
+                    // alert(cookies)
+                    myWebView.runScript('Login.isSSO("' + cookies + '")', function (result) {
+                    });
+                }, 1);
+            }
+            catch (e) {
+            }
+        });
+        var isIE = function (ver) {
+            var b = document.createElement('b')
+            b.innerHTML = '<!--[if IE ' + ver + ']><i></i><![endif]-->'
+            return b.getElementsByTagName('i').length === 1
+        }
+        if (isIE(10) || isIE(9) || isIE(8) || isIE(7) || isIE(6)) {
+            document.attachEvent("onkeydown", function (e) {
+                if (e.ctrlKey == 1) {
+                    if (document.all) {
+                        k = e.keyCode
+                    }
+                    else {
+                        k = e.which
+                    }
+                    if (k == 86) {
+                        //WebView.runCommand('paste');
+                    }
+                    if (k == 67) {
+                        myWebView.runCommand('copy');
+                    }
+                }
+            })
+        } else {
+            document.onkeydown = function (e) {
+                if (e.ctrlKey == 1) {
+                    if (document.all) {
+                        k = e.keyCode
+                    }
+                    else {
+                        k = e.which
+                    }
+                    if (k == 86) {
+                        //WebView.runCommand('paste');
+                    }
+                    if (k == 67) {
+                        myWebView.runCommand('copy');
+                    }
+                }
+            }
+        }
+        window.onresize = resizeWebView;
+        delCookie("path");
+        resizeWebView();
+    } catch (e) {
+        if (!isIE()) {
+            var html = templateUrl("/app/oPage/tipIE.html");
+            $("body").html(html);
+        } else if (myWebView.pluginVersion != currentVersion) {
+            var html = templateUrl("/app/oPage/downloadIE.html");
+            $("body").html(html);
+        } else {
+            var html = templateUrl("/app/oPage/error.html");
+            $("body").html(html);
+        }
+    }
+
+    //检查登录
+    function checkLogin() {
+        console.log("login")
+        console.log(document.cookie)
+        myWebView.runScript('Login.checkLoginBefore("' + document.cookie + '")', function (cookie) {
+            myWebView.runScript('Login.checkLogin()', function (isLogin) {
+            });
+        });
+    }
+
+    //解析url
+    function GetRequest(url) {
+        var theRequest = new Object(),
+            pos = url.indexOf("?");
+        if (pos != -1) {
+            var str = url.substr(pos + 1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+
+    //登录
+    function commTypeExec(url) {
+        var Request = GetRequest(url);
+        if (Request.commType == "loginIn") {
+            //登录后设置ie的cookie
+            loginInSetCookieToIE();
+        } else if (Request.commType == "loginOut") {
+            cleanCookie();
+        } else if (Request.commType == "setCookieTime") {
+            //延时cookie
+            setCookieTime(120);
+        }
+    }
+
+    //登录后设置ie的cookie
+    function loginInSetCookieToIE(expire) {
+        myWebView.runScript("App.Comm.getCookAndStore()", function (cookStore) {
+            if (!cookStore) {
+                return;
+            }
+            cookStore = JSON.parse(cookStore);
+            var cookies = cookStore.cookie,
+                user = cookStore.user,
+                keys = cookieNames(cookies);
+            var key, value;
+            for (var i = 0; i < keys.length; i++) {
+                key = keys[i];
+                value = getCookie(keys[i], cookies);
+                value && setCookie(key, value,expire);
+            }
+            localStorage.user = user;
+        });
+    }
+
+    //清空cookie
+    function cleanCookie() {
+        var keys = cookieNames(document.cookie);
+        for (var i = 0; i < keys.length; i++) {
+            delCookie(keys[i]);
+        }
+        localStorage.removeItem("user");
+    }
+
+    //设置cookie 时间
+    function setCookieTime(min) {
+        var exp = new Date(),
+            keys = cookieNames(document.cookie);
+        exp.setTime(exp.getTime() + min * 60 * 1000);
+//            doMain = window.location.host.substring(window.location.host.indexOf("."));
+        var doMain = (/^(\d+\.?)+$/.test(location.host) ? window.location.host : (window.location.host.substring(window.location.host.indexOf("."))));
+        if (keys) {
+            for (var i = keys.length; i--;)
+                document.cookie = keys[i] + "=" + this.getCookie(keys[i]) + ";expires=" + exp.toGMTString() + ";domain=" + doMain + ";path=/";
+        }
+    }
+
+    function cookieNames(cookies) {
+        var items = cookies.split("; ");
+        var names = [],
+            len = items.length,
+            str, pos;
+        for (var i = 0; i < len; i++) {
+            str = items[i];
+            pos = str.indexOf('=');
+            names.push(str.substring(0, pos));
+        }
+        return names;
+    }
+
+    function templateUrl(url) {
+        var result;
+        $.ajax({
+            url: "/static/dist" + url,
+            type: 'GET',
+            async: false
+        }).done(function (tpl) {
+            result = tpl;
+        });
+        return result;
+    }
+
+    function isIE() {
+        if ("ActiveXObject" in window || window.ActiveXObject) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function navigateTo(url) {
+        if (!isShare) {
+            snapView();
+            isShare = true;
+        }
+        var pos = url.indexOf("commType");
+        if (pos > -1) {
+            //处理commtype
+            commTypeExec(url);
+            return;
+        }
+        if (url.indexOf('update-cookies') > -1) {
+            return loginInSetCookieToIE(url.split('?')[1]);
+        }
+        url = encodeURI(url);
+        if (document.createEvent !== undefined) {
+            var aLink = "<a href='" + url + "' target='_blank' >test</a>";
+            var a = $(aLink).get(0);
+            var e = document.createEvent('MouseEvents');
+            e.initEvent('click', true, true);
+            a.dispatchEvent(e);
+        } else {
+            window.open(url);
+        }
+    }
+
+    function resizeWebView() {
+        //重置
+        myWebView.width = "100";
+        myWebView.height = "100";
+        var $body = $(document);
+        myWebView.width = $body.width() + "";
+        myWebView.height = $body.height() + "";
+        if (!window.devicePixelRatio) {
+            myWebView.zoomFactor = screen.deviceXDPI / screen.logicalXDPI;
+        } else {
+            myWebView.zoomFactor = window.devicePixelRatio;
+        }
+    }
+
+    //刷新
+    function unLoadEvent() {
+        var url = myWebView.url;
+        if (!url) {
+            return;
+        }
+        //不是单页面
+        if (url.lastIndexOf("/static/dist/app/") <= -1) {
+            setCookie("path", url);
+            setCookie("pathDate", +new Date());
+        } else {
+        }
+    }
+
+    function setCookie(name, value,expires) {
+        var Days = 1,
+            exp = new Date();
+//        var domain = window.location.host.substring(window.location.host.indexOf("."));
+        var domain = (/^(\d+\.?)+$/.test(location.host) ? window.location.host : (window.location.host.substring(window.location.host.indexOf("."))));
+        var time = expires ? expires : exp.getTime() + Days * 24 * 60 * 60 * 1000;
+        exp.setTime(time);
+        document.cookie = name + "=" + value + ";domain=" + domain + ";expires=" + exp.toGMTString() + ";path=/";
+    }
+
+    //获取cookie
+    function getCookie(key, cookis) {
+        var cooks = cookis || document.cookie,
+            items = cooks.split("; "),
+            result,
+            len = items.length,
+            str, pos;
+        for (var i = 0; i < len; i++) {
+            str = items[i];
+            pos = str.indexOf('=');
+            name = str.substring(0, pos);
+            if (name == key) {
+                result = str.substring(pos + 1);
+                break;
+            }
+        }
+        return result;
+    }
+
+    //删除cookie
+    function delCookie(name) {
+        var exp = new Date();
+        exp.setTime(exp.getTime() - 31 * 24 * 60 * 60 * 1000);
+        var cval = this.getCookie(name);
+//        var domain = window.location.host.substring(window.location.host.indexOf("."));
+        var domain = (/^(\d+\.?)+$/.test(location.host) ? window.location.host : (window.location.host.substring(window.location.host.indexOf("."))));
+        if (cval != null)
+            document.cookie = name + "=" + cval + ";domain=" + domain + ";expires=" + exp.toGMTString() + ";path=/";
+    }
+
+    /*
+    add by wuweiwei
+    功能:未登录用户查看快照
+    */
+    var snapView = function () {
+        var reg = /path=.{1,}/;
+        var str = "", url, urlar;
+        try {
+            urlar = (reg.exec(location.href));
+            url = urlar[0].replace("path=", "");
+            if (url.indexOf("share") > 0) {
+                myWebView.url = url; //"http://bim.wanda-dev.cn/index.html?t=1478660027944#flow";
+            } else if (url.indexOf("/page") > 0) {
+                //secend trigger
+//                myWebView.url = url;
+            }
+        }
+        catch (e) {
+            ;
+        }
+    };
+    snapView();
+    /*
+    write by wuweiwei
+    功能:提供IE环境下下载图片
+    */
+    var downLoadForIE = {
+        frm: null,
+        timer: -1,
+        DownLoad: function (url) {
+            this.frm = document.createElement("IFRAME");
+            this.frm.style.display = "none";
+            document.body.appendChild(this.frm);
+            this.frm.contentWindow.location.href = url;
+            this.timer = setInterval(this.checkload, 200);
+        },
+        checkload: function () {
+            var frm = downLoadForIE.frm;
+            try {
+                if (frm.contentWindow.document.readyState == "complete") {
+                    frm.contentWindow.document.execCommand("SaveAs");
+                    clearInterval(this.timer)
+                }
+                document.body.removeChild(frm);
+            }
+            catch (e) {
+                ;
+            }
+        },
+        DownLoadFeedback: function (url) {
+            var option = "";
+            myWebView.runScript("App.Comm.getDownloadDatas()", function (options) {
+                optionParse = JSON.parse(options);
+                option = optionParse.downloadDatas;
+                var submitForm = $("#submitForm");
+                var submitIfrem = $("#submitIfrem");
+                if (submitForm) {
+                    submitForm.remove();
+                }
+                if (submitIfrem) {
+                    submitIfrem.remove();
+                }
+                var formIfrem = $('<iframe id="submitIfrem"></iframe>');
+                var formEle = $('<form name="afdb" enctype="multipart/form-data" encoding="multipart/form-data" action="' + url + '" id="submitForm">' +
+                    '<input type="hidden" name="title" value="' + option.title + '"/>' +
+                    '<input type="hidden" name="adviceType" value="' + option.adviceType + '"/>' +
+                    '<input type="hidden" name="createName" value="' + option.createName + '"/>' +
+                    '<input type="hidden" name="opTimeStart" value="' + option.opTimeStart + '"/>' +
+                    '<input type="hidden" name="opTimeEnd" value="' + option.opTimeEnd + '"/>' +
+                    '<input type="hidden" name="haveReply" value="' + option.haveReply + '"/>' +
+                    '<input type="hidden" name="ids" value="' + option.ids + '"/>' +
+                    '</form>');
+                formIfrem.attr("name", "outputIfrem");
+                formIfrem.css("display", "none");
+                $("body").append(formIfrem);
+                formEle.attr("method", "POST");
+                formEle.attr("target", "outputIfrem");
+                formEle.css('position', 'absolute');
+                formEle.css('top', '-1200px');
+                formEle.css('left', '-1200px');
+                $("body").append(formEle);
+                $("#submitForm").submit();
+            });
+        }
+    };
+
+</script>
+</body>
+
+</html>

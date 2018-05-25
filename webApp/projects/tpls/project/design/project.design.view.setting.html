@@ -1,0 +1,78 @@
+<form action="#" class="collForm">
+  <label class="collLabel">
+    <span class="labelName">任务名称:</span>
+    <span></span>
+  </label>
+  <div class="formTree">
+    <div class="panel">
+      <div class="panelHead">选择A</div>
+      <div class="tree">
+        <% _.each(_.sortBy(data.chooseA,"sort"),function(item,key){ %>
+          <ul class="treeView">
+            <li class="itemNode">
+              <div class="itemContent open">
+                <i class="nodeSwitch"></i>
+                <span class="tree-text"><%= item.specialty %></span>
+              </div>
+              <ul class="subTree">
+                <% _.each(item.files,function(file,key){ %>
+                  <li class="itemNode">
+                    <div class="itemContent open">
+                      <i class="nodeSwitch"></i>
+                      <span class="tree-text"><%= file.fileName %></span>
+                    </div>
+                    <ul class="subTree">
+                      <% _.each(file.categories,function(value,ky){ %>
+                        <li class="itemNode">
+                          <div class="itemContent open">
+                            <i class="fileIcon"></i>
+                            <span class="tree-text"><%= value %></span>
+                          </div>
+                        </li>
+                      <% }) %>
+                    </ul>
+                  </li>
+                <% }) %>
+              </ul>
+            </li>
+          </ul>
+        <% }) %>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panelHead">选择B</div>
+      <div class="tree">
+        <% _.each(_.sortBy(data.chooseB,"sort"),function(item){ %>
+          <ul class="treeView">
+            <li class="itemNode">
+              <div class="itemContent open">
+                <i class="nodeSwitch"></i>
+                <span class="tree-text"><%= item.specialty %></span>
+              </div>
+              <ul class="subTree">
+                <% _.each(item.files,function(file){ %>
+                  <li class="itemNode">
+                    <div class="itemContent open">
+                      <i class="nodeSwitch"></i>
+                      <span class="tree-text"><%= file.fileName %></span>
+                    </div>
+                    <ul class="subTree">
+                      <% _.each(file.categories,function(value){ %>
+                        <li class="itemNode">
+                          <div class="itemContent open">
+                            <i class="fileIcon"></i>
+                            <span class="tree-text"><%= value %></span>
+                          </div>
+                        </li>
+                      <% }) %>
+                    </ul>
+                  </li>
+                <% }) %>
+              </ul>
+            </li>
+          </ul>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</form>

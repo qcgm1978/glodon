@@ -1,0 +1,99 @@
+<div class="hedaerSearch">
+    <span class="searchToggle" data-i18n="data.drawing-model.SFnS">选择筛选条件</span>
+    <span class="clearSearch" data-i18n="data.drawing-model.Clear">清除条件</span>
+    <span class="groupRadio">
+            <label class="btnCk"><i class="iconPic"></i><%= App.Local.data['drawing-model'].Sts1 || '显示搜索结果对应位置' %></label>
+        </span>
+</div>
+<div class="searchDetail">
+    <div class="searchOptons">
+        <div class="optonLine zIndex10">
+            <div class="myDropDown specialitiesOption optionComm">
+                <span class="myDropText">
+             <span data-i18n="data.drawing-model.Discipline"><%= App.Local.data['drawing-model'].Discipline || "专业" %>：</span> <span class="text"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                    <% _.each(App.Project.mapData.designSpecial,function(item,index){ if(index!=0){%>
+                    <li class="myItem" data-val='<%=index%>'><%=item%></li>
+                    <% } }) %>
+                </ul>
+            </div>
+            <div class="myDropDown categoryOption optionComm">
+                <span class="myDropText">
+             <span><%= App.Local.data['drawing-model'].CAl1 || '类别：' %></span> <span class="text"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                    <% _.each(App.Project.mapData.designCategory,function(item,index){ if(index!=0){%>
+                    <li class="myItem" data-val='<%=index%>'><%=item%></li>
+                    <% } }) %>
+                </ul>
+            </div>
+        </div>
+        <div class="optonLine">
+            <div class="myDropDown materialEquipment statusOption optionComm">
+                <span class="myDropText">
+             <span><%= App.Local.data['drawing-model'].Ss1 || '状态：' %></span> <span class="text"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li data-status="" class="myItem"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                    <% _.each(App.Project.mapData.designStatus,function(item,index){ if(index!=0){%>
+                    <li class="myItem" data-val='<%=index%>'><%=item%></li>
+                    <% } }) %>
+                </ul>
+            </div>
+            <div class="myDropDown materialEquipment inspectionUnitOption optionComm">
+                <span class="myDropText">
+             <span>检查单位：</span> <span class="text"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                    <% _.each(App.Project.mapData.designUnit,function(item,index){ if(index!=0){%>
+                    <li class="myItem" data-val='<%=index%>'><%=item%></li>
+                    <% } }) %>
+                </ul>
+            </div>
+        </div>
+        <div class="optonLine">
+            <div class="firstDate dateBox" style="position: relative;">
+                <i class="iconCal add-on"></i>
+                <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].STe || '开始时间' %>" id="dateStar" class="span2" type="text">
+            </div>
+            <span>-</span>
+            <div class="firstDate dateBox" style="margin-left:0;">
+                <i class="iconCal"></i>
+                <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].ETe || '结束时间' %>" id="dateEnd" class="span2" type="text">
+            </div>
+        </div>
+        <div class="optonLine btnOption">
+            <input type="button" class="myBtn myBtn-primary btnFilter" value="<%= App.Local.data['drawing-model'].Filter || '筛选' %>" />
+        </div>
+    </div>
+</div>
+<div class="ckBox">
+    <table class="ckTable" cellpadding="0" cellspacing="0">
+        <thead class="ckHeader">
+            <tr>
+                <th class="issue">问题</th>
+                <th class="status">
+                    <%= App.Local.data['drawing-model'].Ss1 || '状态：' %>
+                </th>
+                <th class="category">
+                    <%= App.Local.data['drawing-model'].CAl1 || '类别：' %>
+                </th>
+                <th class="specialty" data-i18n="data.drawing-model.Discipline">
+                    <%= App.Local.data['drawing-model'].Discipline || "专业" %>
+                </th>
+                <th class="professional">
+                    检查单位
+                </th>
+            </tr>
+        </thead>
+    </table>
+    <div class="ckBody">
+        <div class="ckBodyScroll">
+            <table class="ckTable" cellpadding="0" cellspacing="0">
+                <tbody>
+                 <tr class="noLoading"></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

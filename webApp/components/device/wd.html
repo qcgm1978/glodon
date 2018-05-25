@@ -1,0 +1,37 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
+    <title></title>
+    <link type="text/css" rel="stylesheet" href="http://bim-uat.wanda-dev.cn/static/dist/components/device/css/device.css?v=20161125125221" media="screen" />
+</head>
+<body style="overflow: hidden">
+<input type="hidden" id="HFReadOnly" value="True"/>
+<script src="http://bim-uat.wanda-dev.cn/static/dist/components/device/js/device.js"></script>
+<script>
+
+
+    //初始化模型组件
+    new DeviceSelection({
+        data: [], //构件数据列表、必须的
+        //已选的构件列表[{fileName:'',uniqueId:''}]
+        selectedData: [],
+        height: "580px", //模型高度
+        width: "1300px", //模型宽度
+        projectCode: "4a254db7-a5e8-476d-b0c4-ebf3065876a9", //项目ProjectCode "36CAA07C-4C7D-4C95-84AE-FB56F53F0DC3"
+        token: "4aeba9fa8574d9a7e85e51f1f519bd7ba10de8ce6e42f3c13519d0ce683041b74f5ace63e065b4c710d0705ff4239702c3dc62500c095ec6",
+        appKey: "60e8a1d9fc1d44d7b6a4cf85ae2987ed",
+        isShowConfirm:true,
+        callback: function(res) {
+
+        }
+    });
+</script>
+
+
+</body>
+</html>

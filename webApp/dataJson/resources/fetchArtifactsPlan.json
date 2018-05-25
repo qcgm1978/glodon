@@ -1,0 +1,29 @@
+{
+  "messageId": "97d311ab37384bfd88bd57c9fccbaf9a",
+  "messageType": null,
+  "timestamp": 1464340931753,
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "code" : "GC0017",
+      "name" : "基坑支护止水帷幕",
+      "count" :1
+    },
+    {
+      "code" : "GC0018",
+      "name" : "基坑支护止水帷幕",
+      "count" :0
+    },
+    {
+      "code" : "GC0019",
+      "name" : "基坑支护止水帷幕",
+      "count" :1
+    },
+    {
+      "code" : "GC0020",
+      "name" : "基坑支护止水帷幕",
+      "count" :2
+    }
+  ]
+}

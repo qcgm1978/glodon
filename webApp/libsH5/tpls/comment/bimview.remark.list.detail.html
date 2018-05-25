@@ -1,0 +1,144 @@
+<div class="userInfo">
+	<img src="/platform/user/<%=creatorId%>/photo" class="userImg" />
+	<span class="userName">
+		<%=creatorName%>
+	</span>
+	<span class="date">
+		<%= new Date(createTime).format('yyyy-MM-dd hh:mm')%>
+	</span>
+</div>
+<div class="content">
+	<%= text%>
+</div>
+
+<%if(attachments && attachments.length>0){%>
+
+	<% $.each(attachments,function(i,item){%>
+
+		<%if(item.type==1){%>
+			<div class="singleAttachment">
+				<a class="linkImg" href="/<%=item.pictureUrl%>" title="<%=item.description%>" data-imbox="true" data-lightbox="example-1"
+				 data-viewpointid="<%= viewpointId%>" data-attachmentid="<%=item.id%>">
+					<img class="img" src="/<%=item.pictureUrl%>" alt="<%=item.description%>" />
+					<span class="text">
+						<%= item.description%>
+					</span>
+				</a>
+			</div>
+			<%}else if(item.type==2){%>
+				<div class="singleAttachment">
+					<a class="linkImg" href="/<%=item.pictureUrl%>" title="<%=item.description%>" data-imbox="true" data-lightbox="example-1"
+					 data-viewpointid="<%= viewpointId%>" data-attachmentid="<%=item.id%>">
+						<img class="img" src="/<%=item.pictureUrl%>" alt="<%=item.description%>" />
+					</a>
+					<span class="showPosition pointer text" data-camera="<%=item.data%>">位置：
+						<%= item.description%>
+					</span>
+
+				</div>
+				<%}else if(item.type==3){%>
+					<div class="singleAttachment">
+						<a class="linkImg" href="/<%=item.pictureUrl%>" title="<%=item.description%>" data-imbox="true" data-lightbox="example-1"
+						 data-viewpointid="<%= viewpointId%>" data-attachmentid="<%=item.id%>" data-type="<%=item.type%>">
+							<img class="img" src="/<%=item.pictureUrl%>" alt="<%=item.description%>" />
+						</a>
+						<span class="showCommentPoint pointer text" data-camera="<%=item.data%>" data-viewpointid="<%=item.id%>">快照：
+							<%= item.description%>
+						</span>
+
+					</div>
+
+					<%}else if(item.type==4){%>
+						<div class="singleAttachment">
+							<a class="linkImg downLoad" data-viewpointid="<%= viewpointId%>" data-attachmentid="<%=item.id%>" href="javascript:;">
+								<img class="img" src="../../images/word.png" alt="<%=item.description%>" />
+							</a>
+							<span class="showCommentPoint pointer text" data-camera="<%=item.data%>" data-viewpointid="">
+								<%= item.description%>
+							</span>
+
+						</div>
+
+						<%}else if(item.type==5){%>
+							<div class="singleAttachment">
+								<a class="linkImg downLoad" data-viewpointid="<%= viewpointId%>" data-attachmentid="<%=item.id%>" href="javascript:;">
+									<img class="img" src="../../images/ppt.png" alt="<%=item.description%>" />
+								</a>
+								<span class="showCommentPoint pointer text" data-camera="<%=item.data%>" data-viewpointid="<%=item.id%>">
+									<%= item.description%>
+								</span>
+
+							</div>
+
+							<%}else if(item.type==6){%>
+								<div class="singleAttachment">
+									<a class="linkImg downLoad" data-viewpointid="<%= viewpointId%>" data-attachmentid="<%=item.id%>" href="javascript:;">
+										<img class="img" src="../../images/excel.png" alt="<%=item.description%>" />
+									</a>
+									<span class="showCommentPoint pointer text" data-camera="<%=item.data%>" data-viewpointid="<%=item.id%>">
+										<%= item.description%>
+									</span>
+
+								</div>
+
+								<%}else if(item.type==7){%>
+									<div class="singleAttachment">
+										<a class="linkImg downLoad" data-viewpointid="<%= viewpointId%>" data-attachmentid="<%=item.id%>" href="javascript:;">
+											<img class="img" src="../../images/pdf.png" alt="<%=item.description%>" />
+										</a>
+										<span class="showCommentPoint pointer text" data-camera="<%=item.data%>" data-viewpointid="<%=item.id%>">
+											<%= item.description%>
+										</span>
+
+									</div>
+
+									<%}else if(item.type==8){%>
+										<div class="singleAttachment">
+											<a class="linkImg downLoad" data-viewpointid="<%= viewpointId%>" data-attachmentid="<%=item.id%>" href="javascript:;">
+												<img class="img" src="../../images/dwg.png" alt="<%=item.description%>" />
+											</a>
+											<span class="showCommentPoint pointer text" data-camera="<%=item.data%>" data-viewpointid="<%=item.id%>">
+												<%= item.description%>
+											</span>
+
+										</div>
+
+										<%}else if(item.type==9){%>
+											<div class="singleAttachment">
+												<a class="linkImg downLoad" data-viewpointid="<%= viewpointId%>" data-attachmentid="<%=item.id%>" href="javascript:;">
+													<img class="img" src="../../images/rvt.png" alt="<%=item.description%>" />
+												</a>
+												<span class="showCommentPoint pointer text" data-camera="<%=item.data%>" data-viewpointid="<%=item.id%>">
+													<%= item.description%>
+												</span>
+
+											</div>
+
+											<%}else if(item.type==10){%>
+												<div class="singleAttachment">
+													<a class="linkImg downLoad" data-viewpointid="<%= viewpointId%>" data-attachmentid="<%=item.id%>" href="javascript:;">
+														<img class="img" src="../../images/default.png" alt="<%=item.description%>" />
+													</a>
+													<span class="showCommentPoint pointer text" data-camera="<%=item.data%>" data-viewpointid="<%=item.id%>">
+														<%= item.description%>
+													</span>
+
+												</div>
+
+												<%}%>
+
+
+
+													<% }) %>
+
+
+														<%}%>
+
+															<% if(App.Global.User && creatorId==App.Global.User.userId){%>
+																<div class="delTalkBox">
+																	<i class="delTalk" data-id="<%=id%>" data-viewpointid="<%=viewpointId%>">
+																		<%= App.Local.data['drawing-model'].Delete || '删除' %>
+																	</i>
+
+																</div>
+																<%}%>

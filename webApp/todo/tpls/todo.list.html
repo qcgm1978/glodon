@@ -1,0 +1,23 @@
+<div id="todoContent">
+    <div class="commissionBox">
+        <ul class="headerRow">
+            <li><span class="title"><%= App.Local.data.todo['t-d-i'] || '待办事项' %></span><span class="operator"><%= App.Local.data['todo']['r-b'] || '发起人' %></span><span class="date"><%= App.Local.data['todo']['t-r'] || '接收时间' %></span></li>
+        </ul>
+        <ul class="commissionLists"><span class="noData"><i class="tip"></i><%= App.Local.data['drawing-model'].Ndd1 || '暂无数据' %></span></ul>
+    </div>
+    <div class="commissionBottom">
+        <div class="sumDesc"></div>
+        <div class="commissionListPagination"></div>
+    </div>
+
+    <div class="alreadyBox">
+        <ul class="headerRow">
+            <li><span class="title"><%= App.Local.data['todo'].DIm || '已办事项' %></span><span class="operator"><%= App.Local.data['todo']['r-b'] || '发起人' %></span><span class="date"><%= App.Local.data['todo']['t-r'] || '接收时间' %></span></li>
+        </ul>
+        <ul class="alreadyLists"><span class="noData"><i class="tip"></i><%= App.Local.data['drawing-model'].Ndd1 || '暂无数据' %></span></ul>
+    </div>
+    <div class="alreadyBottom">
+        <div class="sumDesc"></div>
+        <div class="alreadyListPagination"></div>
+    </div>
+</div>

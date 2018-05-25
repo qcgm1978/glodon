@@ -1,0 +1,74 @@
+<span data-isfolder="<%=folder%>" data-ismodularcreate="<%= isModularCreate%>"
+      data-modularflowstatus="<%= modularFlowStatus%>"
+      data-modelstatus="<%=modelStatus%>"
+      data-sizeData="<%=App.Comm.formatSize(length)%>"
+      data-fileversionid="<%=fileVersionId%>" class="filecKAll inlineBlock"><input type="checkbox"
+                                                                                   class="ckAll"/></span>
+
+<span class="fileName inlineBlock overflowEllipsis"> 
+<%if(folder){%>
+   <span class=" fileType folder"></span> 
+<%}else{%> 
+	<%if(thumbnail){%>
+		<img class="fileTypeImg" src="/model/<%=modelId%>/<%=thumbnail%>" alt=""/>
+	<%}else{%> 
+		<span class=" fileType <%=App.Comm.fileSuffix(suffix)%>"></span> 
+	<%}%> 
+<%}%>
+
+
+<% if(folder){%>
+	
+	 <span data-id="<%=id%>" data-isfolder="<%=folder%>" data-modularflowstatus="<%= modularFlowStatus%>"
+           data-modelstatus="<%=modelStatus%>"
+           title="<%=name%>"
+           class="text  overflowEllipsis <%= id=='createNew'?'hidden':'' %>">
+	   <%= App.Project.getName(name) %></span>
+    <% if(id=='createNew'){%>
+    	<input type="text" value="<%=name%>" class="txtEdit txtInput"/>
+    	<span class="btnEnter myIcon-enter createNewCls"></span>
+    	<span class="btnCalcel pointer myIcon-cancel"></span>
+    <%}%>
+<%}else{%>
+	<%if(suffix=='rvt' ||suffix=='rfa' ||suffix=='dwg'  || suffix=='rte'  ){%>
+    <%if(/\b-ALL\.\b/.test(App.Project.getName(name))||/\b-AXIS\.\b/.test(App.Project.getName(name))||modelStatus===null){%>
+    <span class="text" data-id="<%=id%>"> <%= App.Project.getName(name) %></span>
+    <%}else{%>
+		<a data-id="<%=id%>"
+           href="/static/dist/app/project/single/filePreview.html?id=<%=fileVersionId%>&projectId=<%=App.Project.Settings.projectId%>&projectVersionId=<%=App.Project.Settings.CurrentVersion.id%>&isBimControl=<%=App.Project.Settings.isBimControl%>"
+           target="_blank" title="<%=name%>" data-isfolder="<%=folder%>"
+           data-modularflowstatus="<%= modularFlowStatus%>"
+           data-modelstatus="<%=modelStatus%>"
+           class="text overflowEllipsis"> <%= App.Project.getName(name) %></a>
+
+    <%}%>
+	<%}else{%>
+		  <span data-id="<%=id%>" data-isfolder="false"
+                data-modularflowstatus="<%= modularFlowStatus%>"
+                data-modelstatus="<%=modelStatus%>"
+                title="<%=name%>"
+                class="text overflowEllipsis <%= folder ? '':'textFolder' %>"> <%= App.Project.getName(name) %></span>
+	<%}%>
+
+<%}%> 
+
+  </span>
+
+<%if(!folder && modificationId&&App.Project.Settings.CurrentVersion.txt&&App.Project.Settings.isBimControl){%>
+<a href="/static/dist/app/project/modelChange/index.html?id=<%=fileVersionId%>&projectId=<%=App.Project.Settings.projectId%>&projectVersionId=<%=App.Project.Settings.CurrentVersion.id%>&modificationId=<%=modificationId%>&type=<%=App.Project.Settings.projectId==App.Project.Settings.CurrentVersion.id?'std':'base'%>"
+   target="_blank" class="changeContrast inlineBlock" style="float:left;">有</a>
+<%}else if(App.Project.Settings.CurrentVersion.txt&&App.Project.Settings.isBimControl){%>
+<span class="changeContrast inlineBlock"></span>
+<%}%>
+<%if(!App.Project.Settings.isBimControl){%>
+<span class="fileStatus inlineBlock"><%= modularFlowStatus %></span>
+<%}else{%>
+<span class="fileStatus inlineBlock"><%= folder?'':App.Comm.formatStatus(status,1,lockUserId,locked) %></span>
+<%}%>
+<span class="fileOp inlineBlock"><%= creatorName %></span>
+<span class="fileSize inlineBlock"><%=App.Comm.formatSize(length)%></span>
+<span
+        class="text overflowEllipsis header-date">
+	<%= new Date(createTime).format("yyyy-MM-dd hh:mm:ss") %>
+</span>
+<span class="exception"><%=exception%></span>

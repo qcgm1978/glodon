@@ -1,0 +1,41 @@
+  <% _.each(data,function(item){ %>
+    <li class="itemNode">
+      <div class="item-content">
+        <i class="nodeSwitch"></i>
+        <span class="tree-text">
+          <% if(item.cateName){ %>
+            <%= item.cateName %>
+          <% }else{ %>
+            未命名
+          <% } %>
+          <span class="tips">(<%= item.results.length %>)</span>
+        </span>
+      </div>
+      <ul class="treeViewSub">
+        <% _.each(item.results,function(category){ %>
+          <li class="itemNode" data-id="<%= category.cateId %>" data-baseId="<%= category.baseElementId %>">
+            <div class="item-content">
+              <i class="noneSwitch"></i>
+              <span class="tree-text" data-id="<%= category.currentElementId %>" data-base="<%= category.baseElementId %>">
+                <span class="tips">[
+                  <% if(category.changeType == "1"){ %>
+                    新增
+                  <% }else if(category.changeType == "2"){ %>
+                    删除
+                  <% }else{ %>
+                    修改
+                  <% } %>
+                ]</span>
+                <% if(category.name){ %>
+                  <%= category.name %>
+                <% }else{ %>
+                  未命名
+                <% } %>
+              </span>
+              <span data-type="<%= category.changeType %>" class="link">查看详情</span>
+            </div>
+          </li>
+        <% }) %>
+      </ul>
+    </li>
+  <% }) %>

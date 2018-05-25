@@ -1,0 +1,35 @@
+<div class="suggestTitle">
+	<span><%= App.Local.data['online-service'].Fk || '建议反馈' %></span>
+</div>
+<div class="commissionBox">
+	<div class="listBoxFeedBox">
+		<!--<div class="listBoxFeedBoxTop">-->
+			<!--<table>-->
+				<!--<tr>-->
+					<!--<td>-->
+						<!--<div class="liTopBox">-->
+							<!--<dl>-->
+								<!--<dd><%= App.Local.data['system-module'].Title || '标题' %></dd>-->
+								<!--<dd class="ddTime"><%= App.Local.data['drawing-model'].Time || '时间' %></dd>-->
+								<!--<dd class="ddDownLoad"><%= App.Local.data['system-module'].Attachments || '附件' %></dd>-->
+							<!--</dl>-->
+						<!--</div>-->
+					<!--</td>-->
+				<!--</tr>-->
+			<!--</table>-->
+		<!--</div>-->
+		<div class="listBoxFeedBoxDown">
+			<div class="scrollBox">
+				<span class="noData" style="display: none;"><i class="tip"></i><%= App.Local.data.system.Nme || '没有消息' %></span>
+				<table>
+					<tbody id="commissionLists">
+						
+					</tbody>
+				</table>
+			</div>
+			<div class="pagingBox">
+		       <div class="sumDesc"></div><div class="listPagination"></div>
+		    </div>
+		</div>
+	</div>
+</div>

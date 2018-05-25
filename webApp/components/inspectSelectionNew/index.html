@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模型选择器</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://bim.wanda-dev.cn/static/dist/components/inspectSelectionNew/js/inspectSelection.js"></script>
+</head>
+<body>
+
+<div class="modelExtend">
+    <button mtype="1">啥也没</button>
+    <button mtype="2">绑定检查点</button>
+    <button mtype="3">绑定隐患</button>
+    <button mtype="4">解绑检查点</button>
+    <button mtype="5">解绑隐患</button>
+    <button mtype="6">确定</button>
+    <textarea name="" id="test" cols="30" rows="10"></textarea>
+</div>
+
+</body>
+<script>
+    jQuery.support.cors = true;
+    var viewer = new InspectModelSelection({
+        type: "process",//open process
+        ruleType: '',//构件分类
+        height: "580px",
+        width:"1200px",
+        //projectCode: '36caa07c-4c7d-4c95-84ae-fb56f53f0dc3',  //projectNo
+        //projectCode : "edbae83a-8a9f-4dfa-9588-18d7d33f71b6",
+        projectCode : "ZJMN1131233858486272",
+        /*
+        token:"4aeba9fa8574d9a7f5e6ff2fbc54cd5cf45d7f3949df6bdf1f5c49f4349baa01a76b19a3118007e98a2546f76a1e5c7c6dff6a0b87795a92",
+        appKey: "60e8a1d9fc1d44d7b6a4cf85ae2987ed",
+        */
+        appKey: "b35e9a6e29c94d55b9a671032fa1cacc",
+        token: "123",
+        callback: function (res) {
+            $('#test').val(JSON.stringify(res))
+        },
+        withCheckpoint : true
+        /*
+        withCheckpoint参数可选,默认为true
+        withCheckpoint = false 隐藏检查点页签
+        withCheckpoint = true  显示检查点页签
+        */
+    });
+
+
+    $(function () {
+
+        $("button").on("click", function () {
+
+            var t = $(this).attr("mtype");
+
+            //啥也没（同时解绑检查点、隐患）
+            if (t == 1) {
+                viewer.showInModel({});
+            }
+            //只绑定检查点（也等于解绑隐患）
+            if (t == 2) {
+                viewer.showInModel({presetId: '972653977486816'})
+            }
+            //绑定隐患(如果有检查点数据、要传回)
+            if (t == 3) {
+                viewer.showInModel({
+                    presetId: "972653965157858",
+                    componentId: "972045783590400.440486e4-4a1a-47df-99d1-bfad7c77533f-0011e290",
+                    location: {
+                        "id": "1",
+                        "userId": "972045783590400.440486e4-4a1a-47df-99d1-bfad7c77533f-0011e290",
+                        "shapeType": 1,
+                        "position" : {
+                            "x" : 200320.078125,
+                            "y" : 4000.06591796875,
+                            "z" : -2729.999755859375
+                        },
+                        "boundingBox" : {
+                            "min" : {
+                                "x" : 200570.09375,
+                                "y" : 4100.06591796875,
+                                "z" : -2729.999755859375
+                            },
+                            "max" : {
+                                "x" : 200070.09375,
+                                "y" : 3900.06591796875,
+                                "z" : -5479.99951171875
+                            }
+                        }
+                    }
+                })
+            }
+
+            //解绑检查点(如果有隐患数据、要传回)
+            if (t == 4) {
+                viewer.showInModel({
+                    presetId: "",
+                    componentId: "972045783590400.440486e4-4a1a-47df-99d1-bfad7c77533f-0011e290",
+                    location: {
+                        "id": "1",
+                        "userId": "972045783590400.440486e4-4a1a-47df-99d1-bfad7c77533f-0011e290",
+                        "shapeType": 1,
+                        "position" : {
+                            "x" : 200320.078125,
+                            "y" : 4000.06591796875,
+                            "z" : -2729.999755859375
+                        },
+                        "boundingBox" : {
+                            "min" : {
+                                "x" : 200570.09375,
+                                "y" : 4100.06591796875,
+                                "z" : -2729.999755859375
+                            },
+                            "max" : {
+                                "x" : 200070.09375,
+                                "y" : 3900.06591796875,
+                                "z" : -5479.99951171875
+                            }
+                        }
+                    }
+                })
+            }
+
+            //解绑隐患（同时保持检查点的数据）
+            if (t == 5) {
+                viewer.showInModel({
+                    presetId: "972653965157858",
+                    componentId: "",
+                    location: ""
+                })
+            }
+
+            if (t == 6) {
+                viewer.data();
+            }
+
+        })
+
+    })
+</script>
+</html>

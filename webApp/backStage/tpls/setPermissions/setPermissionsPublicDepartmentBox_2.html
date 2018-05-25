@@ -1,0 +1,18 @@
+<% (function(data){ %>
+<% if(data.length){ %>
+<% for(var i in data){ %>
+<% if(typeof data[i]=='string'){ %>
+<li class="member">
+  <i ></i><%= data[i] %>
+</li>
+<% }else if(data[i]['name']){ %>
+<li>
+<p  class="shut mulu" data-outer=<%= data[i]['outer'] %> data-name=<%= data[i]['name'] %> data-id=<%= data[i]['orgId'] %> data-canLoad=<%= data[i]['canLoad'] %> ><i ></i><span class="isspan"> <%= data[i]['name'] %></span></p>
+<ul class="shut">
+  <% if(data[i]['child']){arguments.callee(data[i]['child'])} %>
+</ul>
+</li>
+<% } %>
+<% } %>
+<% } %>
+<% })(direction) %>

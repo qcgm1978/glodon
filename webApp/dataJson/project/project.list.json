@@ -1,0 +1,31 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "items": [
+    {
+      "id": 1,
+      "projectNo": "prj-01",
+      "name": "测试项目",
+      "projectType": "1",
+      "estateType": "1",
+      "province": "上海市",
+      "region": "管理分区",
+      "longtude": 12.12312312,
+      "latitude": 123.1111111111,
+      "complete": false,
+      "openTime": null,
+      "open": false,
+      "logo": "http://www.baidu.com/logo.png",
+      "standard": true,
+      "standardId": 1,
+      "createTime": 1456070400000,
+      "endTime": 0
+    }
+  ],
+    "totalItemCount": 100,
+    "pageItemCount": 25,
+    "pageIndex": 1,
+    "pageCount": 1
+  }
+}

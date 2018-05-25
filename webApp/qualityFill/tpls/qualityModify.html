@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="pragma" content="no-cache"> -->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <title>隐患填报列表</title>
+    <link rel="styleSheet" href="/static/dist/qualityFill/css/quality.css" />
+    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/static/dist/qualityFill/js/template.min.js"></script>
+    <script src="/static/dist/qualityFill/js/wDialog.min.js"></script>
+    <style type="text/css">
+    .grid table td.chk{
+        width:70px;
+    }
+    </style>
+</head>
+<body>
+
+<div style="height:50px;line-height:50px;font-weight:bold;font-size:18px;">
+    <span  data-i18n="data.drawing-model.PNe1">项目名称：</span>
+    <span id="title"></span>
+    <span style="color: #A23400">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;隐患列表</span>
+</div>
+<div id="grid" class="grid">
+    <table border="0" cellpadding="0" cellspacing="0">
+        <thead>
+            <tr>
+                <td class="chk">隐患图片</td>
+                <td class="w-big">预设点</td>
+                <!--<td class="w-small">检查结果</td>-->
+                <td class="">隐患描述</td>
+                <td class="w-big">构件位置</td>
+                <td class="w-small">创建日期</td>
+                <td class="w-small">整改日期</td>
+                <td class="w-small">整改次数</td>
+                <td class="w-small">状态</td>
+                <td class="w-small">等级</td>
+                <td class="w-small">填报人</td>
+                <td class="w-small">打分类型</td>
+                <td class="w-small">操作</td>
+            </tr>
+        </thead>
+        <tbody id="gridContainer">
+            <tr id="Grid" style="display:none;" dataid="{{problemId}}" dataindex="{{dataIndex}}">
+                <td class="chk">
+                    <img src="{{imageUrl}}" style="width:60px;height:60px;" align="middle"/>
+                </td>
+                <td>{{presetPointName}}</td>
+                <!--
+                <td>
+                    <span class="passLabel">{{}}</span>
+                    <select class="pass" style="display:none;">
+                        <option value="1">合格</option>
+                        <option value="2">不合格</option>
+                    </select>
+                </td>
+                -->
+                <td>{{name}}</td>
+                <td>{{locationName}}</td>
+                <td>{{discoverDate}}</td>
+                <td>{{rectifyDate}}</td>
+                <td>{{rectifyCount}}</td>
+                <td>
+                    <span class="status">{{status}}</span>
+                    <select class="select-status" style="display:none;">
+                        <option value="1">待整改</option>
+                        <option value="2">已整改</option>
+                        <option value="3">已关闭</option>
+                    </select>
+                </td>
+                <td>{{levelId}}</td>
+                <td>{{organizationTypeId}}</td>
+                <td>{{ratingCategoryId}}</td>
+                <td class="w-small">
+                    <button class="btn_modify">修改</button>
+                    <button class="btn_save" style="display:none;">保存</button>
+                    <button class="btn_cancel" style="display:none;">取消</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div id="Dlg_content" style="display:block;">
+    <div class="dlg-content">
+        <div>
+            <div id="repeatContainer" class="projectItem" style="display:none;">
+                <span data-projectCode="{{projectCode}}" data-projectId="{{projectId}}">{{projectName}}</span>
+            </div>            
+        </div>
+
+    </div>
+    <div class="dlg-button">
+        <button id="DlgBtn_close">关闭</button>
+        <button id="DlgBtn_ok">确定</button>
+    </div>
+</div>
+
+<div id="loading" class="loading">
+    数据加载中...
+</div>
+<div id="noDataTip" class="noDataTip">
+    无数据！
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+
+
+Date.getDateFromMill = function(value){
+    var date = new Date(value);
+    return date.getFullYear() + "-" + (date.getMonth()+1) + "-" + date.getDate();
+}
+
+var Label = {
+    checkResult:['','合格','不合格'],
+    status:['','待整改','已整改','已关闭'],
+    level :['','一般','较大','重大','特大'],
+    person:['','质监中心','第三方','项目公司','监理单位'],
+    classic:['','实测实量','防水工程','施工质量','安全文明','总包内业资料','材料设备']
+};
+
+var Data = {
+    formData:{
+        "msgCreateTime": 1461727280227,
+        "msgId": "b2e5b467ef214f6196ac3f826017806e",
+        "msgSendTime": 0,
+        "srcMsgType": "QUALITY-BIM",
+        "retryTimes": 0,
+        "status": 0,
+        "sysCode": "1",
+        "msgContent":""
+        /*
+        "msgContent" : JSON.stringify({
+            "messageId": "411a109141d6473c83a86aa0480d6610",
+            "messageType": "QUALITY-1004",
+            "message": "是",
+            "timestamp": (new Date).getTime(),
+            "code": 0,
+            "data": []
+        })
+        */
+    },
+    listData : [],
+    listDataCrrentIndex:-1,
+    isEdit : false, /*是否已编辑*/
+    isSend : false  /*是否保存中*/
+};
+
+var Url = {
+    getParam : function(key){
+        var search = location.search;
+        search = search.replace("?","");
+        var items = search.split("&");
+        var item,i;
+        for(i=0;i<items.length;i++)
+        {
+            item = items[i].split("=");
+            if(item[0]==key)
+            {
+                return item[1];
+            }
+        }
+        return "";          
+    }   
+};
+
+var initDialog = function(){
+    overLayer.bgColor='#777';
+    overLayer.opacity=40;
+    var options={
+        id:'Dlg',
+        hasBar:true,
+        barOptions:
+        {
+            title:"请选择一个项目"
+        },
+        position:'fixed',
+        type:'center',
+        contentId:'Dlg_content',
+        className:'dialog',
+        width:800,
+        height:500,
+        isMove:false
+    };
+    window.Dlg = new wDialog(options);
+}
+
+var Event = {
+    initDialogEvent : function(){
+        var th = this;
+        $("#Dlg .wClose").hide();
+        window.Dlg.show();
+        $("#DlgBtn_close").on("click",function(){
+            window.Dlg.hide();
+            $("#projectName").html(Data.projectData.projectName);
+        });
+        $("#DlgBtn_ok").on("click",function(){
+            if(window.projectCode==undefined||window.projectCode=="")
+            {
+                alert("请选择一个项目");
+                return;
+            }
+            window.Dlg.hide();
+            th.getGridData(window.projectId);
+        });
+
+        var $Dlg_content = $("#Dlg .dlg-content");
+        $Dlg_content.on("click",".projectItem",function(){
+            var $dataDOM;
+            $Dlg_content.find("div").removeClass("select");
+            if(!$(this).hasClass("select"))
+            {
+                $(this).addClass("select");
+                $dataDOM = $(this).find("span");
+                window.projectCode = $dataDOM.data("projectcode");
+                window.projectId = $dataDOM.data("projectid");
+                window.projectName = $dataDOM.html();
+            }
+        });
+    },
+    initDialogData : function(){
+        $.ajax({
+            url:"/platform/project/list/all/quality",
+            type:"get",
+            dataType:"json",
+            success:function(data){
+                var list = data.data;
+                if(data.code!=0)
+                {
+                    list = [];
+                }
+                template.startSymbol("{{");
+                template.endSymbol("}}");
+                template.repeat({
+                    repeatElement:$("#repeatContainer")[0],
+                    data:list,
+                    type:"cover"
+                });
+            }
+        });
+    },
+
+    getGridData : function(projectId){
+        //var url = "/sixD/{projectId}/{projectId}/problem";
+        var url = "/sixD/{projectId}/{projectId}/problem/zjmn";
+        url = url.replace("{projectId}",projectId).replace("{projectId}",projectId);
+        $.ajax({
+            url:url,
+            type:"get",
+            dataType:"json",
+            success:function(data){
+                var list;
+                if(data.code!=0)
+                {
+                    list = [];
+                    $("#noDataTip").show();
+                }
+                else
+                {
+                    if(data.data==null)
+                    {
+                        list = [];
+                        $("#noDataTip").show();
+                    }
+                    else
+                    {
+                        list = data.data.items;
+                    }
+                    
+                    window.Data.listData = list;
+                }
+                $("#loading").hide();
+                template.startSymbol("{{");
+                template.endSymbol("}}");
+                template.repeat({
+                    repeatElement:$("#Grid")[0],
+                    data:list,
+                    type:"cover",
+                    process:function(dataRow){
+                        var item = dataRow.item;
+                        return{
+                            "discoverDate" : Date.getDateFromMill(item.discoverDate),
+                            "rectifyDate" : Date.getDateFromMill(item.rectifyDate),
+                            "status" : Label.status[item.status],
+                            "levelId" : Label.level[item.levelId],
+                            "organizationTypeId" : Label.person[item.organizationTypeId],
+                            "ratingCategoryId" : Label.classic[item.ratingCategoryId],
+                            "locationName" : item.locationName==null ? "" : item.locationName,
+                            "dataIndex" : dataRow.index,
+                            "presetPointName" : item.presetPointName==null ? "" : item.presetPointName,
+                            "rectifyCount" : item.rectifyCount==null ? "0" : item.rectifyCount
+                        }
+                    }
+                });
+            }
+        });        
+    },
+    
+    bindEvent : function(){
+        var th = this;
+        var projectId = Url.getParam("projectId");
+        if(projectId=="")
+        {
+            this.initDialogEvent();
+            this.initDialogData();
+        }
+        else
+        {
+            this.getGridData(projectId);
+        }
+
+        $("#gridContainer").on("click","button.btn_modify",function(){
+            var tr = this.parentNode.parentNode;
+            var status;
+            if(Data.isEdit)
+            {
+                return;
+            }
+            tr.style.backgroundColor = "#84C1FF";
+            Data.listDataCrrentIndex = $(tr).attr("dataindex");
+            status = Data.listData[Data.listDataCrrentIndex].status;
+            var $span = $(tr).find(".status");
+            var $select = $(tr).find(".select-status");
+            var $btnSave = $(tr).find("button.btn_save");
+            var $btnCancel = $(tr).find("button.btn_cancel");
+            $select[0].selectedIndex = status -1;
+            $select.show();
+            $span.hide();
+            this.style.display = "none";
+            $btnSave.show();
+            $btnCancel.show();
+            Data.isEdit = true;
+        });
+
+        $("#gridContainer").on("click","button.btn_cancel",function(){
+            var tr = this.parentNode.parentNode;
+            tr.style.backgroundColor = "#FFF";
+            Data.listDataCrrentIndex = -1;
+            var $span = $(tr).find(".status");
+            var $select = $(tr).find(".select-status");
+            var $btnSave = $(tr).find("button.btn_save");
+            var $btnCancel = $(tr).find("button.btn_cancel");
+            var $btnModify = $(tr).find("button.btn_modify");
+            $select.hide();
+            $span.show();
+            $btnSave.hide();
+            $btnCancel.hide();
+            $btnModify.show();
+            Data.isEdit = false;
+        });
+
+        $("#gridContainer").on("click","button.btn_save",function(){
+            var btnSave = this;
+            var tr = btnSave.parentNode.parentNode;
+            tr.style.backgroundColor = "#FFF";
+            $span = $(tr).find(".status");
+            $select = $(tr).find(".select-status");
+            $btnModify = $(tr).find("button.btn_modify");        
+            th.saveData($(tr));
+            Data.isEdit = false;
+        });
+    },
+
+    saveData:function($tr){
+        var dataAr=[];
+        var dataItem = {};
+        if(Data.isSend)/*是否正在发送*/
+        {
+            return;
+        }
+        $span = $tr.find(".status");
+        $select = $tr.find(".select-status");
+        $btnSave = $tr.find(".btn_save");
+        $btnCancel = $tr.find(".btn_cancel");
+        dataItem = Data.listData[Data.listDataCrrentIndex];
+        dataItem.id = dataItem.id.toString();
+        dataItem.projectId = dataItem.projectId.toString();
+        dataItem.status = $select.val();
+        dataItem.id = dataItem.problemId;
+        dataAr.push(dataItem);
+
+        Data.formData.msgContent = JSON.stringify({
+        "messageId": "411a109141d6473c83a86aa0480d6610",
+        "messageType": "QUALITY-1004",
+        "message": "是",
+        "timestamp": (new Date).getTime(),
+        "code": 0,
+        "data": dataAr
+        });
+
+        Data.isSend = true;
+
+        $.ajax({
+            url:"/sixD/internal/message",   /*MQ 隐患接口*/
+            //url:"http://192.168.79.56/sixD/internal/message",
+            type:"POST",
+            headers: {
+                    "Content-Type": "application/json"
+            },
+            data:JSON.stringify(Data.formData)
+        }).done(function(data){
+            if(data.code==0)
+            {
+                $span.show();
+                $span.html(Label.status[$select.val()]);
+                $select.hide();
+                $btnModify.show();
+                $btnSave.hide();
+                $btnCancel.hide();
+                Data.isSend = false;
+                alert("保存成功！");
+            }
+        });
+
+    }
+};
+
+
+var init = function(){
+    initDialog();
+    Event.bindEvent();
+    $("#title").html(decodeURI(Url.getParam("projectName")));
+};
+
+init();
+
+
+</script>

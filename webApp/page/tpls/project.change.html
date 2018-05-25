@@ -1,0 +1,62 @@
+ <div id="topBar">
+        <div class="logo"><span class="text"></span></div>
+    </div>
+    <div id="contains">
+        <div class="projectHeader">
+            <div class="breadcrumbNav">
+                <span class="projectText" data-i18n="data.drawing-model.Project">项目</span>
+                <span class="breadItem project relative"> <i class="icon-angle-right"></i>
+           <span class="breadItemText"> <span class="text">--</span> </span>
+                </span>
+                <span class="breadItem projectVersion relative"> <i class="icon-angle-right"></i>
+           <span class="breadItemText"> <span class="text">--</span> </span>
+                </span>
+            </div>
+        </div>
+        <div id="projectContainer"> 
+            <div class="rightProperty">
+                <div class="rightPropertyContentBox">
+                    <div class="rightPropertyContent">
+                        <div class="designPropetyBox">
+                            <ul class="projectPropetyHeader projectNav">
+                                <li data-type="chage" class="item selected"><%= App.Local.data['drawing-model'].Bill || '清单' %></li>
+                                <li data-type="attr" class="item" data-i18n="data.model-view.Ps">属性</li>
+                            </ul>
+                            <div class="projectPropetyContainer projectNavContentBox">
+                                <div class="designChange projectChangeListBox">
+                                    <div class="referenceSearch">
+                                        <i class=" btnSearch myIcon-search"></i>
+                                        <input class="txtInput txtSearch" placeholder="<%= App.Local.data['drawing-model'].Ped1 || '请输入搜索内容' %>">
+                                    </div>
+                                    <ul class="contrastTree">
+                                        <li class="node">
+                                            <div class="itemContent">
+                                                <div class="repertoireCode comm"><%= App.Local.data['drawing-model'].BNo || '清单编码' %></div>
+                                                <div class="repertoireName comm"><%= App.Local.data['drawing-model'].BNe || '清单名称' %></div>
+                                                <div class="beforeChange comm overflowEllipsis"><%=App.Local.data['drawing-model'].Bce||'变更前'%></div>
+                                                <div class="afterChange comm overflowEllipsis"><%=App.Local.data['drawing-model'].Ace||'变更后'%></div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div id="treeContainerBody">
+                                        <div class="loading"><%= App.Local.data['system']['l-g'] || '正在加载，请稍候……' %></div>
+                                    </div>
+                                    <div class="showChange">
+                                        <span class="groupRadio">
+                                            <label class="btnCk"><i class="iconPic"></i><%= App.Local.data['drawing-model'].Stml || '显示变更前模型' %></label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="designProperties" style="display: none;">
+                                    <div class="nullTip" ><%= App.Local.data['drawing-model'].SEt1 || '请选择构件' %></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dragSize"></div>
+                    <div class="slideBar"><i class="icon-caret-right"></i></div>
+                </div>
+            </div>
+            <div class="projectCotent"></div>
+        </div>
+    </div>

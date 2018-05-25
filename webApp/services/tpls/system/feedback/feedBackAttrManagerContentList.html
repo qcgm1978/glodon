@@ -1,0 +1,33 @@
+<% if(havaAttachment){%>
+	<td><a href="javascript:;" class="downLoadId" data-downloadid="<%= id%>"></a></td>
+<%}else{%>
+	<td></td>
+<%} %>
+<%if(haveReply){%>
+    <td class="feedBackTd" data-feedbackid="<%= id%>">
+        <div class="feedBackTdTop"><span>建议内容：</span><%=title%></div>
+        <%if(adviceReplys.length>0){%>
+            <div class="feedBackTdDown feedBackContentText">
+                <dl>
+                    <dt><%= App.Local.data['system-module'].Reply1 || '回复内容' %>：</dt>
+                    <dd><%= adviceReplys[0].content%> <%=createTime%></dd>
+                </dl>
+                <!-- <span>回复内容：</span><%= adviceReplys[0].content%> <%=createTime%> -->
+            </div>
+        <%}%>
+    </td>
+<%}else{%>
+    <td class="feedBackTd" data-feedbackid="<%= id%>">
+        <div><span>建议内容：</span><%=title%></div>
+    </td>
+<%}%>
+<td><%=createName%></td>
+<td><%=createTime%></td>
+<% if(haveReply){%>
+	<td>已回复</td>
+<%}else{%>
+	<td>未回复</td>
+<%}%>
+<td data-feedbackid="<%= id%>">
+	<a href="javascript:;" class="answerBtn">回复</a>
+</td>

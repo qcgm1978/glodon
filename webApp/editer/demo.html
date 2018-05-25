@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link href="themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="third-party/jquery.min.js"></script>
+    <script type="text/javascript" src="third-party/template.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="umeditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="umeditor.min.js"></script>
+    <script type="text/javascript" src="lang/zh-cn/zh-cn.js"></script>
+</head>
+<body>
+	<script type="text/plain" id="myEditor"><p>这里我可以写一些输入提示</p></script>
+	<script type="text/javascript">
+	    //实例化编辑器
+	    var um = UM.getEditor('myEditor',{
+		    toolbar:['bold', 'italic', 'underline', 'fontfamily', 'fontsize', 'justifyleft', 'justifycenter', 'justifyright', 'forecolor', 'backcolor', 'image'],
+		    initialFrameWidth:500,//宽度
+		    initialFrameHeight:300,//高度
+		    dropFileEnabled:false,//点击文件是否可以拖拽改变大小
+		    imageScaleEnabled:false,//是否可以拖拽改变图片大小
+		    pasteImageEnabled:false,//是否可以拖拽上传图片
+		});
+		console.log("um",um);
+    </script>
+</body>
+</html>

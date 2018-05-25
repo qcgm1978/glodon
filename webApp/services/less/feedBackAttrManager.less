@@ -1,0 +1,304 @@
+.feedBackAttrManager{
+	position: relative;
+	width: 100%;
+	.feedBackTopbarSearchBox{
+		height: 30px;
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		z-index: 10;
+		.item,.showDateBox{
+			float: left;
+			.moreSeachText{
+				width: 140px;
+			}
+			.feedBackState{
+				height: 30px;
+				line-height: 30px;
+				outline: none;
+				border: 1px solid #ccc;
+				color: #999;
+			}
+		}
+		.item{
+			margin-right: 16px;
+		}
+		.showDateBox{
+			position: relative;
+			margin-right: 16px;
+			span.searchLabel{
+				width: 66px;
+			    display: inline-block;
+			    text-align: center;
+			}
+			.iconCal{
+				background: url(/static/dist/images/comm/images/commIcon.png) no-repeat 6px -232px;
+				position: absolute;
+				right: 1px;
+				width: 28px;
+				height: 28px;
+				top: 1px;
+				background-color: #eee;
+				border-left: 1px #ccc solid;
+			}
+			input{
+				width: 180px;
+				height: 30px;
+			    line-height: 30px;
+			    padding-left: 8px;
+			    border:#ddd solid 1px;
+			    padding-right: 30px;
+			}
+			.btnSearch{
+				background-color: #117EE1;
+				display: inline-block;
+				width: 80px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				color: #fff;
+				margin-left:30px;
+				letter-spacing: 10px;
+				padding-left: 9px;
+				box-sizing: border-box;
+				cursor: pointer;
+			}
+		}
+		.searchBtn{
+			float: left;
+			.btnSearch{
+				background-color: #117EE1;
+				display: inline-block;
+				width: 80px;
+				height: 30px;
+				text-align: center;
+				line-height: 30px;
+				color: #fff;
+				margin-left: 30px;
+				letter-spacing: 10px;
+				padding-left: 9px;
+				box-sizing: border-box;
+				cursor: pointer;
+			}
+		}
+	}
+	.feedBackContent{
+		width: 100%;
+		height: 100%;
+		padding-top: 40px;
+		position: relative;
+		table{
+			width: 100%;
+			tr{
+				height: auto;
+			}
+		}
+		table td{
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			border-left: 1px #ccc solid;
+			border-bottom: 1px #ccc solid;
+			&:nth-child(1){
+				width: 2%;
+				border-left: 0;
+				position: relative;
+			}
+			&:nth-child(2){
+				width: 66%;
+			}
+			&:nth-child(3){
+				width: 8%;
+			}
+			&:nth-child(4){
+				width: 8%;
+			}
+			&:nth-child(5){
+				width: 8%;
+			}
+			&:nth-child(6){
+				width: 8%;
+			}
+		}
+		.feedBackContentTop{
+			width: 100%;
+			height: 40px;
+			position: absolute;
+			left: 0;
+			top: 40px;
+		    border: 1px #ccc solid;
+		    background-color: #eee;
+		    z-index: 10;
+		    td{
+		    	border-bottom:0;
+		    }
+		}
+		.feedBackContentDown{
+			width: 100%;
+			height: 100%;
+			padding-top: 39px;
+			border: 1px #ccc solid;
+			position: relative;
+			padding-bottom: 44px;
+			.scrollBox{
+				width: 100%;
+				height: 100%;
+				td{
+					height: auto;
+					min-height: 40px;
+					line-height: normal;
+					padding: 9px 0;
+					&:nth-child(2){
+						&.feedBackTd{
+							cursor: pointer;
+							div{
+								width: 100%;
+								height: auto;
+								float: left;
+								white-space: normal;
+								word-break: break-all;
+								&:nth-child(1){
+									margin-bottom: 8px;
+								}
+								span{
+									font-weight: bold;
+								}
+							}
+							.feedBackTdDown{
+								width: 100%;
+								height: auto;
+								dl{
+									width: 100%;
+									height: auto;
+									dt{
+										float: left;
+										color: #fbb165;
+									}
+									dd{
+										padding-left: 60px;
+									}
+								}
+							}
+						}
+						text-align: left;
+						padding-left: 16px;
+						p{
+							font-size: 12px;
+							line-height: 1.5em;
+						}
+					}
+					&>input{
+						margin: 0;
+						padding: 0;
+					}
+				}
+				.mCS-minimal-dark.mCSB_scrollTools_vertical {
+					right: -20px;
+				}
+				.downLoadId{
+					width: 100%;
+					height: 16px;
+					float: left;
+					background: url('../images/down_load.png') center no-repeat;
+					background-size: 16px 16px;
+					display: inline-block;
+					position: absolute;
+				    left: 0;
+				    top: 9px;
+				}
+			}
+			.pagingBox{position: absolute;bottom: 0px;left:20px;right: 20px;line-height: 40px;
+				.sumDesc { float: left; margin-left: 20px; }
+				.listPagination { float: right; margin-right: 20px; }
+				.pagination {margin: 0px;}
+			}
+		}
+	}
+}
+.feedBackDialog{
+	width: 100%;
+	height: 100%;
+	tr{
+		min-height: 30px;
+		height: auto;
+	}
+	input,textarea{
+		background: #ddd;
+		font-size: 14px!important;
+	}
+	#feedBackDesc{
+		background: #fff;
+	}
+	.feedBackTr{
+		border-top: #ccc solid 1px;
+	}
+	.dialogFooterButton{
+		text-align: right;
+		button{
+		    background-color: #117EE1;
+		    display: inline-block;
+		    width: 80px;
+		    height: 30px;
+		    text-align: center;
+		    line-height: 30px;
+		    color: #fff;
+		    box-sizing: border-box;
+		    cursor: pointer;
+		    border: 0;
+		}
+	    button.disabled{
+		    background: #eee;
+		    color: #ccc;
+		    border-color: #ccc;
+		    cursor: default;
+		    border: #ccc solid 1px;
+		    outline: none;
+		}
+	}
+}
+.attachList{
+	div{
+		a{
+			line-height: 24px;
+			display: inline-block;
+		}
+	}
+}
+.feedBackDl{
+	width: 100%;
+	min-height: 48px;
+	height: auto;
+	position: relative;
+	dt,dd{
+		min-height: 24px;
+		height: auto;
+		line-height: 24px;
+		padding-left: 8px;
+		padding-right: 40px;
+		color: #666;
+		font-weight: normal;
+		span{
+			display: inline-block;
+			&:nth-child(2){
+				float: right;
+			}
+		}
+	}
+	a{
+		display: inline-block;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		display: none;
+	}
+	&:hover{
+		a{
+			display: inline-block;
+		}
+	}
+}
+// .feedBackContentText{
+// 	span{
+// 		color: #fbb165;
+// 	}
+// }

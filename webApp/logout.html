@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+    <script language="javascript" type="text/javascript">
+        var ssoDomain=(/^(\d+\.?)+$/.test(location.host) ? window.location.host : (window.location.host.substring(window.location.host.indexOf("."))));
+        clearCookie(ssoDomain);
+
+        var intervalid = setInterval("fun()", 100);
+        function fun() {
+            clearInterval(intervalid);
+            window.location.href = "login.html"+window.location.search;
+        }
+
+        function clearCookie(ssoDomain){
+            var keys = cookieNames(document.cookie);
+            if (keys) {
+                for (var i = keys.length; i--;)
+                    document.cookie = keys[i] + "=0;expires=" + new Date(0).toUTCString() + ";domain=" + ssoDomain + ";path=/";
+            }
+        }
+
+
+        function cookieNames(cookies) {
+            var items = cookies.split("; ");
+            var names = [],
+                    len = items.length,
+                    str, pos;
+            for (var i = 0; i < len; i++) {
+                str = items[i];
+                pos = str.indexOf('=');
+                names.push(str.substring(0, pos));
+            }
+            return names;
+        }
+
+
+
+    </script>
+</head>
+<body>
+</body>
+</html>

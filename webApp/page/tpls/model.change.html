@@ -1,0 +1,53 @@
+   <div id="topBar">
+        <div class="logo"><span class="text"></span></div>
+    </div>
+    <div id="contains">
+        <div class="projectHeader">
+            <div class="breadcrumbNav">
+                <span class="projectText" data-i18n="data.drawing-model.Project">项目</span>
+                <span class="breadItem project relative"> <i class="icon-angle-right"></i>
+           <span class="breadItemText"> <span class="text">--</span> </span>
+                </span>
+                <span class="breadItem projectVersion relative"> <i class="icon-angle-right"></i>
+           <span class="breadItemText"> <span class="text">--</span> </span>
+                </span>
+            </div>
+        </div>
+        <div id="projectContainer">
+            <div class="rightProperty">
+                <div class="rightPropertyContentBox">
+                    <div class="rightPropertyContent">
+                        <div class="designPropetyBox">
+
+                            <ul class="projectPropetyHeader projectNav">
+                                <li data-type="chage" class="item selected">差异构件</li>
+                                <li data-type="attr" class="item" data-i18n="data.model-view.Ps">属性</li>
+                            </ul>
+
+                            <div class="projectPropetyContainer projectNavContentBox">
+                                <div class="designChange" >
+                                    <div class="dropList"></div>
+                                    <div class="listDetail"></div>
+                                    <div class="showChange">
+                                        <span class="groupRadio">
+                                            <label class="checkboxGroup">
+                                                <input type="checkbox">
+                                                <span class="lbl"><%= App.Local.data['drawing-model'].Stml || '显示变更前模型' %></span>
+                                            </label>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="designProperties" style="display: none;">
+                                   <div class="nullTip" ><%= App.Local.data['drawing-model'].SEt1 || '请选择构件' %></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="dragSize"></div>
+                    <div class="slideBar"><i class="icon-caret-right"></i></div>
+                </div>
+            </div>
+            <div class="projectCotent"></div>
+        </div>
+    </div>

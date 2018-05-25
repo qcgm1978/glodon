@@ -1,0 +1,34 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "id": 1,
+      "projectId": 10000001,
+      "name": "初始化版本",
+      "desc": "1",//描述
+      "createTime": 1456070400000,
+      "creatorId": 12000000,
+      "creatorName": "张三", 
+      "type": 1, 
+      "status": 9,
+      "lastest" :false, 
+      "modelId": "MODEL_ID-01",
+      "modelStatus": "***"
+    },
+    {
+      "id": 2,
+      "projectId": 10000001,
+      "name": "版本二",
+      "desc": "1",
+      "createTime": 1456070400000,
+      "creatorId": 12000000,
+      "creatorName": "张三", 
+      "type": 1, 
+      "status": 1,
+      "lastest": true, 
+      "modelId": "MODEL_ID-01",
+      "modelStatus": "***" 
+    }
+  ]
+}

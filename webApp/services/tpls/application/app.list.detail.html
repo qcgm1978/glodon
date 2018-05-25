@@ -1,0 +1,19 @@
+<div class="left name overflowEllipsis" title="<%=appName%>">
+    <%=appName%>
+</div>
+<div class="left desc overflowEllipsis">
+    <%=appDesc%>
+</div>
+<div class="left appKey">
+    <%=appKey%>
+</div>
+<div class="left appSecret"> <span class="text"><%=appSecret%></span> <a class="reset" href="javascript:void(0);"><%= App.Local.data['system-module'].Regenerate || "重新生成" %></a></div>
+<div class="left status">
+    <%=status==1?(App.Local.data['system-module'].Enabled || '已启用'):( App.Local.data['system-module'].Disabled || '已禁用')%>
+</div>
+<div class="left op">
+    <i class=" switchStatus <%= status==1?'myIcon-status-enable':'myIcon-status-disable' %>" title="<%=status==1?(App.Local.data['system-module'].Disabled || '禁用'):( App.Local.data['system-module'].Enabled || '启用')%>"></i>
+    <i class="myIcon-update" title="<%= App.Local.data['system-module'].Update || '更新'%>"></i>
+    <i class="myIcon-del-blue" title="<%= App.Local.data['system-module'].Delete || '删除'%>"></i>
+
+</div>

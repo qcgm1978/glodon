@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="styleSheet" href="/login/css/login.less" />
+	<style type="text/css">
+		div#error0{
+			height: 30px;
+			line-height: 30px;
+		}
+		div#error1{
+			height: 30px;
+			line-height: 30px;
+		}
+		div#error3{
+			height: 30px;
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+<div id="error0"></div>
+<p></p>
+<div id="error1"></div>
+<p></p>
+<div id="error3"></div>
+<div id="rightDragBox" class="rightDragBox">
+    <dl>
+        <dt id="operationId"><i></i><span>联系运维</span></dt>
+        <dd id="tplNum"></dd>
+        <dd id="qqNum"></dd>
+    </dl>
+</div>
+<script type="text/javascript" src="/static/dist/login/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="/login/js/login.es6"></script>
+<script type="text/javascript">
+	$(function(){
+		var userName = localStorage.getItem("userName");
+		var userPwd = localStorage.getItem("userPwd");
+		var error0 = $("#error0");
+		var error1 = $("#error1");
+		var error3 = $("#error3");
+		$.ajax({
+			url: '/platform/login',
+			type: 'post',
+			data: {
+				userid: userName,
+				password: userPwd
+			}
+		}).done(function(res){
+			if(res.code != 0){
+				error0.html("code:"+res.code);
+				error1.html("userid:"+res.userid);
+				error3.html("messageCN:"+res.messageCN);
+			}else{
+				$.ajax({
+					url: '/platform/user/current',
+				}).done(function(ress){
+					if(ress.code === 1000){
+						error1.html("userid: "+ress.data.userid);
+						error3.html("message: "+ress.message);
+					}
+				})
+			}
+		})
+		Login.loginDragOpenHandle();//登录页面右下区域运维拖动模块功能
+        Login.loginDragHandle();//登录页面右下区域运维拖动模块功能
+	})
+</script>
+</body>
+</html>

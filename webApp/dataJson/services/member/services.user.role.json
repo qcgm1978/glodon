@@ -1,0 +1,144 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "roleId": 999999,
+      "name": "测试角色1",
+      "inherit": false,
+      "functions": [
+        {
+          "id": 1,
+          "name": "设计",
+          "code": "design"
+        },
+        {
+          "id": 4,
+          "name": "质监",
+          "code": "quality"
+        },
+        {
+          "id": 3,
+          "name": "成本",
+          "code": "cost"
+        },
+        {
+          "id": 2,
+          "name": "模块化",
+          "code": "module"
+        },
+        {
+          "id": 5,
+          "name": "功能5",
+          "code": "design"
+        },
+        {
+          "id":6,
+          "name": "功能6",
+          "code": "quality"
+        },
+        {
+          "id": 7,
+          "name": "功能7",
+          "code": "cost"
+        },
+        {
+          "id":9,
+          "name": "功能9",
+          "code": "module"
+        },
+        {
+          "id":10,
+          "name": "功能6",
+          "code": "quality"
+        },
+        {
+          "id": 11,
+          "name": "功能7",
+          "code": "cost"
+        },
+        {
+          "id":13,
+          "name": "功能9",
+          "code": "module"
+        },
+        {
+          "id":12,
+          "name": "功能6",
+          "code": "quality"
+        },
+        {
+          "id": 15,
+          "name": "功能7",
+          "code": "cost"
+        },
+        {
+          "id":17,
+          "name": "功能9",
+          "code": "module"
+        }
+      ]
+    },
+    {
+      "roleId": 2,
+      "name": "测试角色2",
+      "inherit": false,
+      "functions": [
+        {
+          "id": 4,
+          "name": "质监",
+          "code": "quality"
+        },
+        {
+          "id": 3,
+          "name": "成本",
+          "code": "cost"
+        },
+        {
+          "id": 2,
+          "name": "模块化",
+          "code": "module"
+        }
+      ]
+    },
+    {
+      "roleId": 3,
+      "name": "测试角色3",
+      "inherit": false,
+      "functions": [
+        {
+          "id": 1,
+          "name": "设计",
+          "code": "design"
+        },
+        {
+          "id": 4,
+          "name": "质监",
+          "code": "quality"
+        },
+        {
+          "id": 2,
+          "name": "模块化",
+          "code": "module"
+        }
+      ]
+    },
+    {
+      "roleId": 4,
+      "name": "测试角色4",
+      "inherit": false,
+      "functions": [
+        {
+          "id": 4,
+          "name": "质监",
+          "code": "quality"
+        },
+        {
+          "id": 3,
+          "name": "成本",
+          "code": "cost"
+        }
+      ]
+    }
+  ]
+}

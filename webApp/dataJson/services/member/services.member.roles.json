@@ -1,0 +1,78 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "roleId": 804290442002464,
+      "name": "设计角色",
+      "functions": [
+        {
+          "id": 1,
+          "name": "设计",
+          "code": "design"
+        },
+        {
+          "id": 3,
+          "name": "成本",
+          "code": "cost"
+        },
+        {
+          "id": 2,
+          "name": "模块化",
+          "code": "module"
+        }
+      ]
+    },
+    {
+      "roleId": 807715914271904,
+      "name": "施工角色2",
+      "inherit": false,
+      "functions": [
+        {
+          "id": 1,
+          "name": "设计",
+          "code": "design"
+        }
+      ]
+    },
+    {
+      "roleId": 804293240381472,
+      "name": "施工角色",
+      "inherit": false,
+      "functions": [
+        {
+          "id": 1,
+          "name": "设计",
+          "code": "design"
+        }
+      ]
+    },
+    {
+      "roleId": 1,
+      "name": "测试角色",
+      "inherit": false,
+      "functions": [
+        {
+          "id": 3,
+          "name": "成本",
+          "code": "cost"
+        },
+        {
+          "id": 1,
+          "name": "设计",
+          "code": "design"
+        },
+        {
+          "id": 2,
+          "name": "模块化",
+          "code": "module"
+        },
+        {
+          "id": 4,
+          "name": "质监",
+          "code": "quality"
+        }
+      ]
+    }
+  ]
+}

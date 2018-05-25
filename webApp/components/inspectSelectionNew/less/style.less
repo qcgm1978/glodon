@@ -1,0 +1,155 @@
+.dialogContent{position: relative;
+	.rightProperty { width: 300px; border: 1px #ddd solid; position: absolute; right: 1px; top: 0px; bottom: 1px; background-color: #fff; z-index: 600;overflow: hidden;
+		.rightPropertyContentBox { height: 100%; position: relative;top:-12px;
+			.rightPropertyContent { height: 100%;
+				.rightPropertyContent { height: 100%;
+					.designPropetyBox { height: 100%; }
+				}
+			}
+			.slideBar { right: inherit; display: block; left: -15px; top: 40px; }
+			.dragSize { left: -5px; right: inherit; display: block; }
+			.projectPropetyContainer { height: 100%; margin-top: -40px; padding-top: 40px;
+				.designProperties { height: 100%; overflow: auto;
+					.attrPlanBox,.attrCostBox,.attrQualityBox{display: none;}
+					.nullTip { background: url(/projects/images/attrSel.png) no-repeat 50% 100%; padding-top: 200px; height: 50px; line-height: 50px; color: #ccc; font-size: 16px; text-align: center; }
+					.modleTitleBar {
+						height:24px;
+						.modleName {font-size: 14px; margin: 0;}
+					}
+					.modleName {font-size: 14px; margin: 0;}
+					.modleNameText{font-size: 12px;}
+				}
+			}
+			.modle { .modleShowHide { transition: all .5s; background: url(/comm/images/commIcon.png) no-repeat 0px -256px; float: right; margin-right: 12px; margin-top: 6px; height: 14px; width: 14px; cursor: pointer;
+					&.down { transform: rotate(180deg); -ms-transform: rotate(180deg); -moz-transform: rotate(180deg); -webkit-transform: rotate(180deg); -o-transform: rotate(180deg); }
+				}
+				.modleName { font-weight: bold; height: 24px; line-height: 24px; padding-left: 12px;
+					.modleNameText { vertical-align: top; width: 95%; }
+				}
+				.modleList { background-color: #eee; border-top: 1px #ccc solid;
+					.modleItem { border-bottom: 1px #ccc solid;
+						.modleName { width: 25%; display: inline-block; box-sizing: border-box; padding-left: 12px; border-right: 1px #ccc solid; }
+						.modleVal { display: inline-block; width: 72%; box-sizing: border-box; padding-left: 12px; margin-left: -3px; }
+						.modelLink { display: inline-block; padding-left: 12px; color: #3F8CDF; height: 24px; line-height: 24px; }
+					}
+				}
+			}
+		}
+	}
+	table { border-collapse: collapse; border-spacing: 0; }
+}
+.disabled{
+	color: #808080 !important;
+	&:hover{
+		border:none;
+		cursor: text;
+	}
+}
+/* 质量 */
+.qualityContainer { position: absolute; top: 40px; bottom: 0px; left: 0px; right: 0px;
+	.QualityProcessAcceptance, .QualityProcessCheck, .QualityOpeningAcceptance, .QualityConcerns, .QualityProperties { min-width: 398px; width: 100%; height: 100%; overflow: auto; }
+}
+.expandArrowIcon { background: url(/static/dist/images/comm/images/commIcon.png) no-repeat 87px -640px !important; }
+.rightProperty { .hedaerSearch { padding: 15px;  width: 288px; overflow: hidden;
+		.searchToggle { cursor: pointer; background: url(/comm/images/commIcon.png) no-repeat 87px -619px; padding-right: 32px; height: 18px; display: inline-block;line-height: 18px;margin-bottom: 5px; }
+		.clearSearch { cursor: pointer; color: #006ECF; }
+		.groupRadio { float: left; }
+	}
+	.searchDetail { display: none; position: absolute; height: 200px; background-color: #fff; top: 34px; width: 288px; z-index: 1; border-bottom: 1px #ccc solid;
+		&.processAcceptance { height: 126px; }
+		&.openingacceptance { height: 200px; }
+		&.concernSearch { height: 204px; }
+		&.concernList { width: 540px; }
+		.searchOptons { border-top: 1px #ccc solid; margin: 0; }
+		.optionComm { margin-left: 7px;
+			.myDropText { height: 24px; line-height: 21px; width: 270px; }
+			.myDropArrorw { margin-top: 10px; }
+			.myDropList { width: 100%; top: 23px; left: 0px; }
+		}
+		.optonLine { margin-top: 10px;  }
+		.materialEquipment.statusOption, .categoryOption, .specialitiesOption, .operatorOption, .typeOption, .firstDate, .inspectionUnitOption { margin-left: 7px; }
+		.zIndex13 { position: relative; z-index: 13; }
+		.zIndex10 { position: relative; z-index: 10; }
+		.zIndex11 { position: relative; z-index: 11; }
+		.searchName { width: 270px; margin-left: 7px; display: inline-block; border: 1px #ccc solid; height: 24px; vertical-align: top; line-height: 20px; padding-left: 12px; outline: none;
+			.txtSearchName { width: 200px; border: 0; outline: none; }
+		}
+		.dateBox { display: inline-block; position: relative;
+			input { height: 24px; line-height: 24px; padding-left: 8px; border: 1px #ccc solid; width: 178px; padding-right: 30px; box-sizing: border-box; }
+			#dateEnd { width: 178px; }
+		}
+		.btnOption { padding-right: 15px; text-align: right;
+			input { margin-top: 10px; }
+		}
+		.iconCal { background: url(/static/dist/images/comm/images/commIcon.png) no-repeat 6px -236px; position: absolute; right: 1px; width: 28px; height: 22px; top: 1px; background-color: #eee; border-left: 1px #ccc solid; }
+	}
+	.tbMaterialequipmentBody, .tbMaterialequipmentHeader { width: 100%; min-width: 580px;
+		.manifestIcon { width: 5%; text-align: center;
+			.myIcon-inventory { display: inline-block; width: 11px; }
+		}
+		.specialities { width: 12%; }
+		.category { width: 12%; }
+		.name { width: 19%; }
+		.batches { width: 6%; }
+		.status { width: 7%; }
+		.hasBeenCount { width: 9%; }
+		.sumCount { width: 9%; }
+		.lastDate { width: 20%; }
+	}
+	.tbContainer { position: absolute; top: 60px; bottom: 32px; left: 0px; right: 0px; overflow: auto;
+		.materialequipmentList { margin-top: -31px; padding-top: 30px; height: 100%; min-width: 580px; width: 100%; }
+		.processAccessList, .openingacceptanceList { min-width: 402px; position: relative; }
+		.concernList { min-width: 540px; }
+		& tr.selected,& tr:hover{background-color: #A8DBFD;cursor: pointer;}
+	}
+	.tbComm { td, th { border: 1px #ccc solid; text-align: center; }
+		th { height: 28px; line-height: 28px; }
+		td { height: 25px; line-height: 25px; word-wrap: break-word; word-break: break-all; }
+	}
+	.tbProcessAccessHeader, .tbProcessAccessBody { width: 100%; min-width: 398px;
+		.manifestIcon { width: 5%; }
+		.category { width: 16%; }
+		.positon { width: 29%; }
+		.ckResult { width: 10%; }
+	}
+	.tbOpeningacceptanceHeader, .tbOpeningacceptanceBody { width: 100%; min-width: 402px;
+		.manifestIcon { width: 5%; }
+		.specialities { width: 21%; }
+		.category { width: 31%; }
+		.positon { width: 47%; }
+		.ckResult { width: 15%; }
+	}
+	.tbConcernsHeader, .tbConcernsBody { width: 100%; min-width: 540px;
+		.concernInfo { width: 44%; }
+		.category { width: 12%; }
+		.status { width: 10%; }
+		.grade { width: 8%; }
+		.operator { width: 14%; }
+		.type { width: 11%; }
+		td { height: 98px; line-height: 98px; }
+	}
+	.tbConcernsBody { .concernInfo { line-height: 1.5; vertical-align: top; padding: 10px 0 0 10px; }
+		.ckImg { float: left; width: 68px; height: 68px; }
+		.ckHeader { margin-left: 80px; text-align: left;
+		  .detailicon{
+		  float: right;
+		  width: 15px;
+		  height: 15px;
+		  background:url(/comm/images/commIcon.png) no-repeat;background-position:0 -660px;
+		  }
+		}
+		.ckName { margin-bottom: 6px; }
+	}
+	.tbComm { .noDataTd, .loadingTd { height: 60px; line-height: 60px; text-align: center; color: #ccc; font-size: 16px; border: 0; }
+	}
+	.paginationBottom { position: absolute; bottom: 0px; height: 30px; left: 0px; right: 0px; line-height: 30px;
+		.pageInfo, .sumCount { display: inline; }
+		.sumCount { }
+		.prev { margin-left: 5px; }
+		.next { margin-right: 10px; margin-left: 6px; }
+		.prev, .next { cursor: pointer; color: #006ECF;
+			&:hover { text-decoration: underline; }
+			&.disable { color: #ccc; text-decoration: none; cursor: default; }
+		}
+	}
+}

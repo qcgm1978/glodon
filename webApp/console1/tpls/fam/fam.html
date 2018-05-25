@@ -1,0 +1,299 @@
+
+<div class="consoleBox"><div class="consoleHeader">
+    4.1	族库研发指令表单审批通过</div>
+<div class="consoleContainer">
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">新版族库编号</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="p13" value="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">新版族库名称</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="p12" value="族库报审表单">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">研发参考族库</label>
+            <div class="col-sm-10">
+                <select class="form-control referenceResources" id="p11">
+                  <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+                </select>
+            </div>
+        </div>
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">发起人</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="p14" value='{"userId":"123","loginId":"gongcen"}'>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">审核人</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="p15" value='[{"userId":"123","loginId":"gongcen"}]'>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">确认人</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="p16" value='[{"userId":"123","loginId":"gongcen"}]'>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">接收人</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<input type="text" class="form-control" id="p17" value='[{"userId":"123","loginId":"gongcen"}]'>-->
+        <!--</div>-->
+      <!--</div>-->
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" id="submit1" class="btn btn-primary">提交</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+
+
+<div class="consoleBox"><div class="consoleHeader">
+    4.2 族库报审表单发起<span class="btn btn-primary" onclick="App.Console.fn['4.2']()">更新</span></div>
+    <div class="consoleContainer">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">流程标题</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="p21" value="族库报审表单">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">描述</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="p22" value="申请说明">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">族库研发指令</label>
+            <div class="col-sm-10">
+              <select class="form-control referenceResources" id="s21">
+                <option value=null  data-i18n="data.drawing-model.Pst">请选择</option>
+              </select>
+            </div>
+          </div>
+            <div class="form-group">
+                <!--<label for="inputPassword3" class="col-sm-2 control-label"></label>-->
+                <div class="col-sm-10">
+                    <textarea name="" id="data1" cols="30" rows="30">
+        {
+            "createTime": 1461140797286,
+            "description": "描述",
+            "status": 8,
+            "workflowId": "a57b543d-81da-4721-8a34-6e5dbecef4b7",
+            "title": "族库报审表单",
+            "initiator":  {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+
+          }
+
+                    </textarea>
+                     <textarea name="" id="" cols="30" rows="30">
+ title	流程标题	string
+
+workflowId	流程实例	Guid
+familyDevelopWorkflowId	族库研发指令单WorkflowId	string
+description	申请说明	string
+createTime	表单创建时间	long
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+
+                    </textarea>
+                                        <textarea name="" id="result1" cols="30" rows="30">
+
+                    </textarea>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" id="submit2" class="btn btn-primary">提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="consoleBox"><div class="consoleHeader">
+    4.3	族库报审表单状态变化（审批通过、驳回等）<span class="btn btn-primary" onclick="App.Console.fn['4.3']()">更新</span></div>
+    <div class="consoleContainer">
+        <form class="form-horizontal">
+
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">族库审核审批单</label>
+            <div class="col-sm-10">
+              <select class="form-control referenceResources" id="s31">
+                <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+              </select>
+            </div>
+          </div>
+            <div class="form-group">
+                <!--<label for="inputPassword3" class="col-sm-2 control-label"></label>-->
+                <div class="col-sm-10">
+                    <textarea name="" id="data2" cols="30" rows="30">
+            {
+            "auditFinishTime": 1461140797765,
+            "description": "描述",
+            "status": 16,
+            "workflowId": "123",
+            "title": "族库报审表单",
+            "initiator":  {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+          }
+
+                    </textarea>
+                     <textarea name="" id="" cols="30" rows="30">
+title	流程标题	string
+workflowId	族库报审单workflowId	Guid
+description	申请说明	string
+auditFinishTime	表单审核时间	long
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+
+
+                    </textarea>
+                                        <textarea name="" id="result2" cols="30" rows="30">
+
+                    </textarea>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="button" id="submit3" class="btn btn-primary">通过</button>
+                  <button type="button" id="submit33" class="btn btn-primary">驳回</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="consoleBox"><div class="consoleHeader">
+    4.4	族库发布表单发起<span class="btn btn-primary" onclick="App.Console.fn['4.4']()">更新</span></div>
+    <div class="consoleContainer">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">流程标题</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="p41" value="族库发布表单">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">族库报审</label>
+            <div class="col-sm-10">
+              <select class="form-control referenceResources" id="s41">
+                <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+              </select>
+            </div>
+          </div>
+            <div class="form-group">
+                <!--<label for="inputPassword3" class="col-sm-2 control-label"></label>-->
+                <div class="col-sm-10">
+                    <textarea name="" id="data3" cols="30" rows="30">
+            {
+            "createTime": 1461140797779,
+            "description": "描述",
+            "familyAprovalWorkflowId": "7730d3f4-2efe-4e6f-9b13-b5caed740cdc",
+            "status": 8,
+            "workflowId": "89de41ec-c988-4aa1-82ed-aeb8b047d3bc",
+            "title": "族库发布表单",
+            "initiator":  {"userId":"123","loginId":"gongcen"},
+           "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+          }
+                    </textarea>
+                     <textarea name="" id="" cols="30" rows="30">
+workflowId	流程实例	Guid
+familyAprovalWorkflowId	族库报审标单ID	guid
+title	流程标题	string
+description	研发说明	string
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+createTime	表单创建时间	long
+
+                    </textarea>
+                                        <textarea name="" id="result3" cols="30" rows="30">
+
+                    </textarea>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" id="submit4" class="btn btn-primary">提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="consoleBox"><div class="consoleHeader">
+    4.5	族库发布表单状态变化（审批通过、驳回等）<span class="btn btn-primary" onclick="App.Console.fn['4.5']()">更新</span></div>
+    <div class="consoleContainer">
+        <form class="form-horizontal">
+          <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">族库发布表单</label>
+            <div class="col-sm-10">
+              <select class="form-control referenceResources" id="s51">
+                <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+              </select>
+            </div>
+          </div>
+            <div class="form-group">
+                <!--<label for="inputPassword3" class="col-sm-2 control-label"></label>-->
+                <div class="col-sm-10">
+                    <textarea name="" id="data4" cols="30" rows="30">
+           {
+            "auditFinishTime": 1461140797861,
+            "description": "描述",
+            "status": 16,
+            "workflowId": "123",
+            "title": "族库发布表单",
+            "initiator":  {"userId":"123","loginId":"gongcen"},
+            "auditor": [{"userId":"123","loginId":"gongcen"}],
+            "confirmor": [{"userId":"123","loginId":"gongcen"}],
+            "receiver": [{"userId":"123","loginId":"gongcen"}]
+    }
+
+                    </textarea>
+                     <textarea name="" id="" cols="30" rows="30">
+workflowId	族库发布表单workflowId	Guid
+title	流程标题	string
+description	研发说明	string
+status	审批状态	int	8发起；16审批通过；（4驳回；32撤销；128终止）
+auditFinishTime	表单审核时间	long
+
+                    </textarea>
+                                        <textarea name="" id="result4" cols="30" rows="30">
+
+                    </textarea>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="button" id="submit5" class="btn btn-primary">通过</button>
+                  <button type="button" id="submit55" class="btn btn-primary">驳回</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+
+<%if(obj.data && obj.data.length){%>
+<% $.each(data,function(i,item){ %>
+
+
+ <tr>
+    <td class="subData"> 
+        <span data-id="<%=item.id%>" class="code"><%=item.name%></span>
+    </td>
+   
+</tr>
+
+         <%})%>
+<%}else{%>
+	    <tr>
+        <td colspan="1" class="noDataTd subData">无构建</td>
+    </tr>
+<%}%>

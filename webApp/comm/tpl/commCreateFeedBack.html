@@ -1,0 +1,31 @@
+<div class="commFeedBackView">
+	<div class="entryBox">
+		<div class="myDropDown selectCategroy">
+            <span class="myDropText"><span class="text">请选择类别</span> <i class="myDropArrorw"></i> </span>
+            <ul class="myDropList">
+                <li class="myItem" data-val='1'>设计</li>
+                <li class="myItem" data-val='2'>计划</li>
+                <li class="myItem" data-val='3'>成本</li>
+                <li class="myItem" data-val='4'>质监</li>
+                <li class="myItem" data-val='5'>系统</li>
+            </ul>
+        </div>
+	</div>
+	<div class="entryBox">
+		<input type="text" id="sugTitle" placeholder="请输入标题" maxlength="100" data-i18n="[placeholder]data.online.title">
+	</div>
+	<div class="entryBox textareaEntry">
+		<textarea name="" id="sugDescr" cols="30" rows="10" placeholder="请输入您的建议与反馈(最多支持输入500字)" maxlength="500" data-i18n="[placeholder]data.online.prompt"></textarea>
+	</div>
+	<div class="entryBox">
+		<label><%= App.Local.data['system-module'].Attachments || '附件' %></label>
+		<a href="javascript:;" class="alink upload" data-i18n="data.online.u-a">上传附件</a>
+		<form id="uploadSuggestForm" action="/platform/advice/feedback/upload" method="post" target="upload-iframe-suggest" enctype="multipart/form-data" encoding="multipart/form-data">
+		    <input id="inputSuggestFile" name="file" type="file" style="display: none" />
+		</form>
+		<iframe id="uploadIframeSuggest" name="upload-iframe-suggest" border="0" width="0" height="0" style="width: 0;height: 0; display: none;"></iframe>
+	</div>
+	<div class="entryBox attachList">
+		
+	</div>
+</div>

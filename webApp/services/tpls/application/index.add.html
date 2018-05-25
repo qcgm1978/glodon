@@ -1,0 +1,22 @@
+<div>
+    应用名称
+</div>
+<input class="txtAppTitle txtInput" maxlength="200" value="<%=obj.name|| '' %>" placeholder="请输入应用名称" type="text" />
+<div>
+    应用描述
+</div>
+<textarea class="txtAppDesc txtInput" maxlength="2000" placeholder="请输入应用描述"><%=obj.desc || '' %></textarea>
+
+<%if(obj.isEdit){%>
+
+<div>
+    appkey
+</div>
+<input class="txtAppKey txtInput disabled" readonly="true" value="<%=obj.appKey %>" type="text" />
+
+<div>
+    appsecret
+</div>
+<input class="txtAppKey txtInput disabled"  readonly="true" value="<%=obj.appSecret%>" type="text" /> 
+
+<%}%>

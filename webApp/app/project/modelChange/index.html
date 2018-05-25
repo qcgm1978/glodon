@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>模型变更对比</title>
+    <script type="text/javascript">
+        var App = {};
+        App.time = +new Date();
+    </script>
+    <link rel="styleSheet" href="/topNav/css/topNav.less"/>
+    <!--<link rel="styleSheet" href="/comm/css/treeView.less" />-->
+    <script>
+        document.write('<link rel="styleSheet" href="/static/dist/comm/comm_20160313.css?t=' + App.time + '"/>')
+    </script>
+    <link rel="styleSheet" href="./less/index.less"/>
+</head>
+
+<body>
+<div id="topBar">
+    <div class="logo"><span class="text"></span></div>
+</div>
+<div id="contains">
+    <div class="projectHeader">
+        <div class="breadcrumbNav">
+            <span class="projectText" data-i18n="data.drawing-model.Project">项目</span>
+            <span class="breadItem project relative"> <i class="icon-angle-right"></i>
+           <span class="breadItemText"> <span class="text">--</span> </span>
+                </span>
+            <span class="breadItem projectVersion relative"> <i class="icon-angle-right"></i>
+           <span class="breadItemText"> <span class="text"> -- </span> </span>
+                </span>
+        </div>
+    </div>
+    <div id="projectContainer">
+        <div class="rightProperty">
+            <div class="rightPropertyContentBox">
+                <div class="rightPropertyContent">
+                    <div class="designPropetyBox">
+
+                        <ul class="projectPropetyHeader projectNav">
+                            <li data-type="chage" class="item selected" data-i18n="data.drawing-model.MDs">差异构件</li>
+                            <li data-type="attr" class="item" data-i18n="data.model-view.Ps">属性</li>
+                        </ul>
+
+                        <div class="projectPropetyContainer projectNavContentBox">
+                            <div class="designChange">
+                                <div class="dropList"></div>
+                                <div class="listDetail"></div>
+                                <div class="showChange">
+                                        <span class="groupRadio">
+                                            <label class="checkboxGroup">
+                                                <input type="checkbox">
+                                                <span class="lbl" data-i18n="data.drawing-model.Stml">显示变更前模型</span>
+                                            </label>
+                                        </span>
+                                </div>
+                            </div>
+                            <div class="designProperties" style="display: none;">
+                                <div class="nullTip" data-i18n="data.drawing-model.SEt1">请选择构件</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="dragSize"></div>
+                <div class="slideBar"><i class="icon-caret-right"></i></div>
+            </div>
+        </div>
+        <div class="projectCotent"></div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/libs/jquery/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="/libs/underscore.1.8.2.js"></script>
+<script>
+    var App = {}
+    App.Local = {
+        getTranslation: function getTranslation(fields) {
+            try {
+                return fields.split('.').reduce(function (cur, item) {
+                    return cur[item];
+                }, this.data);
+            } catch (e) {
+                return null;
+            }
+        },
+    };
+    App.Local.data = {
+        "login": {},
+        "nav": {},
+        "todo": {},
+        "announce": {},
+        "plan": {},
+        "source": {},
+        "system": {},
+        "footer": {},
+        "source-model": {},
+        "source-data": {},
+        "model-view": {},
+        "family-list": {},
+        "online-service": {},
+        "drawing-model": {},
+        "system-module": {},
+        "QuartetRegistration": {}
+    };
+</script>
+<script type="text/javascript" src="/comm/js/comm.es6"></script>
+<script type="text/javascript" src="/static/dist/libs/libsH5.js"></script>
+<!--<script type="text/javascript" src="/libsH5/js/libs/three.js"></script>-->
+<link rel="styleSheet" href="/libsH5/css/modelStyle.less"/>
+<script type="text/javascript" src="/api/api.js"></script>
+<script type="text/javascript" src="./js/index.es6"></script>
+<script type="text/javascript" src="/static/dist/router/demoEnv.js"></script>
+<script type="text/javascript">App.Index.init();</script>
+</body>
+
+</html>

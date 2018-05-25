@@ -1,0 +1,15 @@
+<div class="formLabelWrap">
+    <a href="javascript:;" id="recoveryRuleBtn">恢复</a>&nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="/sixD/checkPointRule/backup" target="_blank" class="mmh-btn confirm">备份</a>
+    <form id="filteRuleForm" action="/sixD/checkPointRule/restore" method="post" target="upload-iframe-filte-rule" enctype="multipart/form-data" encoding="multipart/form-data">
+        <input id="filteRuleFile" name="file" type="file" style="display: none"/>
+    </form>
+    <iframe id="uploadIframeFilteRule" name="upload-iframe-filte-rule" border="0" width="0" height="0" style="width: 0;height: 0; display: none;"></iframe>
+</div>
+<ul class="typelist">
+    <% _.each(type,function(item,index){ %>
+    <li class="ruleTypeItem" data-id="ruleType_<%=index%>"><%=item%></li>
+    <% }) %>
+</ul>
+<div class="formLabel">
+</div>

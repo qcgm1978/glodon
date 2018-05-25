@@ -1,0 +1,158 @@
+<div class="consoleBox">
+    <div class="consoleHeader">
+        2.4	隐患数据</div>
+    <div class="consoleContainer">
+        <form class="form-horizontal">
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">隐患Id</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="p11" value="">
+                </div>
+            </div>
+
+
+            <!--<div class="form-group">-->
+                <!--<label for="inputPassword3" class="col-sm-2 control-label">项目</label>-->
+                <!--<div class="col-sm-10">-->
+                    <!--<select class="form-control referenceResources" id="s11">-->
+                        <!--<option value="0">请选择</option>-->
+                    <!--</select>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">过程/开业验收ID</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="p12" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">隐患名称</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="p13" value="">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">隐患状态</label>
+                <div class="col-sm-10">
+                    <select class="form-control referenceResources" id="s12">
+                        <option value="1"><%= App.Local.data['drawing-model'].RLr || '待整改' %></option>
+                        <option value="2">已解决</option>
+                        <option value="3"><%= App.Local.data['drawing-model'].Closed || '已关闭' %></option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">隐患等级</label>
+                <div class="col-sm-10">
+                    <select class="form-control referenceResources" id="s13">
+                        <option value="1"><%= App.Local.data['drawing-model'].Small || '一般' %></option>
+                        <option value="2"><%= App.Local.data['drawing-model'].Medium || '较大' %></option>
+                        <option value="3"><%= App.Local.data['drawing-model'].Large || '重大' %></option>
+                        <option value="4"><%= App.Local.data['drawing-model'].ELe || '特大' %></option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">隐患提出方编码</label>
+                <div class="col-sm-10">
+                    <select class="form-control referenceResources" id="s14">
+                        <option value="1">质监</option>
+                        <option value="2"><%= App.Local.data['drawing-model'].TPy || '第三方' %></option>
+                        <option value="3"><%= App.Local.data['drawing-model'].Owner || '项目公司' %></option>
+                        <option value="4"><%= App.Local.data['drawing-model'].SIn || '监理单位' %></option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">打分类别</label>
+                <div class="col-sm-10">
+                    <select class="form-control referenceResources" id="s15">
+                        <option value="1">实测实量</option>
+                        <option value="2">防水工程</option>
+                        <option value="3">施工质量</option>
+                        <option value="4">安全文明</option>
+                        <option value="5">总包内页资料</option>
+                        <option value="6">材料设备</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <!--<label for="inputPassword3" class="col-sm-2 control-label"></label>-->
+                <div class="col-sm-10">
+                    <textarea name="" id="data" cols="40" rows="40">
+        {
+        "id": 1,
+        "projectCode": "2196E47F-FACC-45F4-B835-577C7BC65BEA",
+        "acceptanceType": 1,
+        "acceptanceId": 12345,
+        "name": "土建",
+        "discoverDate": 1398854587000,
+        "rectifyDate": 1398854587000,
+        "rectifyCount": 12,
+        "category": "钢筋",
+        "status": 1,
+        "levelId": 1,
+        "organizationTypeId": 1,
+        "dangerImageId": "9816a",
+        "ratingCategoryId": 1,
+        "presetPointComponentId": "be9bf30f15eb677b705b61c1b90599d2.997d11b5b901ef4e47e15fb095fcd948",
+        "componentId": "be9bf30f15eb677b705b61c1b90599d2.997d11b5b901ef4e47e15fb095fcd948",
+        "location": {
+            "x": 1000,
+            "y": 2000,
+            "z": 3000
+        },
+        "axis": {
+            "left ": "A",
+            "leftOffset": 200,
+            "right": "B",
+            "rightOffset": -310,
+            "front": "3",
+            "frontOffset": 300,
+            "back ": "4",
+            "backOffset": -300,
+            "top": "F03",
+            "topOffset": -3000,
+            "bottom": "F02",
+            "bottomOffset": 1200
+        }
+    }
+
+                    </textarea>
+                     <textarea name="" id="" cols="40" rows="40">
+            [{
+id	隐患Id	String	质监系统提供的唯一ID
+projectCode	项目代码	String	质监系统里的项目ID，同步之前需与BIM平台建立映射关系
+acceptanceType	隐患检查类别	int	0随机 1过程检查 2开业验收 3入伙验收
+acceptanceId	过程/开业验收ID	String
+name	隐患名称	String
+discoverDate	发现时间	Long	距离GMT 1970-01-01的毫秒数；
+rectifyDate	要求整改完成时间	Long	距离GMT 1970-01-01的毫秒数；
+rectifyCount	整改次数	int
+status	隐患状态	int	1：待整改；2：已解决；3：已关闭
+levelId	隐患等级	int	1：一般；2：较大；3：重大；4：特大
+organizationTypeId	隐患提出方编码	Int	1质监 2第三方 3项目公司 4.监理单位
+dangerImageId	隐患图片编码	String
+ratingCategoryId	打分类别	Int	1实测实量,2防水工程,3施工质量,4安全文明,5总包内业资料,6材料设备
+presetPointComponentId	预设点构件ID	String
+componentId	隐患构件Id	String
+location	位置	Location
+axis	轴网	Axis
+
+            }]
+                    </textarea>
+                                        <textarea name="" id="result" cols="30" rows="30">
+
+                    </textarea>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="button" id="submit" class="btn btn-primary">提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+<% $.each(data.items,function(i,item){%> 
+    <tr class="<%= i%2==0 && 'odd' %>" data-id="<%=item.id%>" data-code="<%=item.projectCode%>"    data-uuid="<%=item.componentId%>" data-location='<%= item.location %>' data-axis='<%= item.axis%>' data-color='<%=item.status%>' data-cat="<%=item.categoryName%>">
+
+        <td class="concernInfo">
+
+            <img class="ckImg mCS_img_loaded" src="<%=item.imageUrl%>" alt="">
+
+            <div class="ckHeader">
+                <div class="ckName"><%=item.name%></div> 
+                <div class="date">
+                    <span><%= App.Local.data['source-model'].dc || '创建日期' %>：</span><span><%= new Date(item.discoverDate).format('yyyy-MM-dd') %></span>
+                </div>
+                <div class="date">
+                    <span><%= App.Local.data['source-model'].Rte || '整改日期' %>：</span><span><%= new Date(item.rectifyDate).format('yyyy-MM-dd') %></span>
+                </div>
+                <div class="upCount">
+                    <span><%= App.Local.data['source-model'].Tnor || '整改次数' %>：</span><span><%=item.rectifyCount%></span><span><a class="detailFont" href="<%=item.url%>" target="_blank"></a></span>
+                </div>
+            </div>
+        </td>
+        <td class="category"><%=App.Project.disCategory(item)%></td>
+        <td class="status"><span class="status" style="color:<%=App.Project.mapData.statusColor[item.status]%>">
+        <%=App.Project.mapData.status[item.status]%>
+     </span> </td>
+        <td class="grade"><%= App.Project.mapData.concernsLevel[item.levelId]  %></td>
+        <td class="operator"><%=App.Projects.concernsData.report[item.organizationTypeId]%></td>
+        <td class="type"><%=App.Projects.concernsData.classic[item.ratingCategoryId]%></td>
+    </tr>
+<% }) %>  
+ 
+
+
+<% if(data.items.length<=0){%>
+    
+   <%=App.Project.NullPage.designVerification%>  
+    
+<%}%>

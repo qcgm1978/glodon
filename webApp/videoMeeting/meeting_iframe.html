@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<meta name="description" content="overview & stats" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	   	<meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+	</head>
+<body>
+	<!-- <div class="container meeting_meetingCss"><div class="row" style="margin-left:-55px;"><ul class=""><li class="col-md-2 jsPanelHeader showOrClose" style="width:8%;"><span class="list-group-item" style="background-color: #046dd0;"><a href="javascript:void(0)" id="meetingClose" title="收起"><img src="http://localhost:8080/api/wanda/jc/icon_right.png" style="margin-top:-20px;margin-left:-3px;"></a></span><span class="list-group-item" style="height:300px;"><a href="javascript:void(0)" class="myMeeting" style="color: rgb(255, 255, 255);" title="首页"><img src="http://localhost:8080/api/wanda/jc/icon_shouye1.png" style="margin-top:-10px;margin-left:-16px;"></a><br><hr style="width:47px;margin-left:-16px;margin-top:0px;border-top:1px double #B0B0B0;"><a href="javascript:void(0);" class=" addMeeting" title="创建会议" style="color: rgb(255, 255, 255);"><img src="http://localhost:8080/api/wanda/jc/icon_chuangjian2.png" style="margin-top:-20px;margin-left:-16px;"></a><br><hr style="width:47px;solid #000000;margin-left:-16px;margin-top:0px;border-top:1px double #B0B0B0;"><a href="javascript:void(0)" class="glyphicon-refresh1" title="刷新" style="color: rgb(255, 255, 255);"><img src="http://localhost:8080/api/wanda/jc/icon_shuaxin2.png" style="margin-top:-20px;margin-left:-16px;"></a><br><hr style="width:47px;solid #000000;margin-left:-16px;margin-top:0px;border-top:1px double #B0B0B0;"><br><br><br><a href="javascript:void(0)" class="" title="使用帮助" style="color: rgb(255, 255, 255);"><img src="http://localhost:8080/api/wanda/jc/icon_wenhao.png" width="20px" height="20px;" style="margin-top:-100px;margin-left:-3px;"></a><hr style="width:47px;solid #000000;margin-left:-16px;margin-top:-45px;border-top:1px double #B0B0B0;"></span><span class="list-group-item shipinhuiyi" style="height:165px;"><img src="http://localhost:8080/api/wanda/jc/icon_shipin.png" style="margin-left:-5px;"><p style="margin-top:-5px;margin-left:-5px;font-size:18px">视</p><p style="margin-top:-20px;margin-left:-5px;font-size:18px">频</p><p style="margin-top:-20px;margin-left:-5px;font-size:18px">会</p><p style="margin-top:-20px;margin-left:-5px;font-size:18px">议</p></span></li><a href="javascript:void(0)"><li class="col-md-5 jsPanelHeader myMeeting myMeetingImage" style="width:46%;color:#000000;">我的会议</li></a><a href="javascript:void(0)"><li class="col-md-5 jsPanelHeader endingMeeting endingMeetingImage" style="width:46%;color:#000000;">已结束会议</li></a></ul></div></div><div class="form-group meeting_meetingCss" style="margin-left:70px;margin-top:10px;"><label for="subject"></label><input type="text" class="form-control" maxlength="20" style="width:87%;float:left;" id="subject" value="" placeholder="请输入会议名称或参与人员查询"><a href="javascript:void(9)"></a><a href="javascript:void(9)"><img src="http://localhost:8080/api/wanda/jc/search_icon.png" class="searchMeeting" style="margin-top:10px; margin-left:20px; width:20px;height:20px;"></a></div><div style="overflow-y:auto;height:350px;" class="meeting_meetingCss"><div class="table-responsive" style="margin-left:70px;"><table class="table" frame="below"></table></div></div> -->
+ <script type="text/javascript">
+ 
+ 		
+		function meetingload(){
+
+		meetingloadJsCss("jquery-3.1.0.min.js","js");
+		var t=setTimeout(function(){
+		meetingloadJsCss("meeting1.js","js");
+		meetingloadJsCss("bootstrap.min.css","css");
+		meetingloadJsCss("meeting.css","css");
+		meetingloadJsCss("bootstrap.min.js","js");
+		meetingloadJsCss("zTreeStyle.css","css");
+		meetingloadJsCss("jquery.ztree.core.min.js","js");
+			},100)
+			
+		var t=setTimeout(function(){
+		meetingloadJsCss("jquery.ztree.excheck.min.js","js");
+		meetingloadJsCss("jquery.ztree.exedit.js","js");
+			},1000)
+		}
+		meetingload();
+		function meetingloadJsCss(filename, filetype){
+			var meeting_path= localStorage.getItem("meetingUrl");// "http://apptest.wanda.cn/prewanda3v/";//uat环境  
+			// var meeting_path="http://app.wanda.cn/webjs/";///生产环境
+			var targetelement=(filetype=="js")? "script" : (filetype=="css")? "link" : "none"
+			var targetattr=(filetype=="js")? "src" : (filetype=="css")? "href" : "none"
+			var allsuspects=document.getElementsByTagName(targetelement)
+			var mycars=new Array()
+			for (var i=allsuspects.length-1; i>=0; i--){
+				if (allsuspects[i] && allsuspects[i].getAttribute(targetattr)!=null && allsuspects[i].getAttribute(targetattr).indexOf(filename)!=-1){
+					//删除 存在的话就删除
+					mycars[i]=filename;
+				}
+			}
+			if(filetype=="css"){
+				 var link = document.createElement("link");
+				  link.type = "text/css";
+				  link.rel = "stylesheet";
+				  if(filename=="bootstrap.min.css"){
+					  link.href = meeting_path+"wanda/jc/bootstrap/css/"+filename;  
+				  }else if(filename=="zTreeStyle.css"){
+					  link.href = meeting_path+"wanda/jc/zTree/css/"+filename;  
+				  }else if(filename=="meeting.css"){
+					  link.href = meeting_path+"wanda/jc/"+filename;
+				  }
+				  document.getElementsByTagName("head")[0].appendChild(link)
+			}
+			if(filetype=="js"){
+				 var link = document.createElement("script");
+				  if(filename=="bootstrap.min.js"){
+					  link.src = meeting_path+"wanda/jc/bootstrap/js/"+filename;  
+				  }else if(filename=="layer.js"){
+					  link.src = meeting_path+"wanda/jc/"+filename;
+				  }else if(filename=="WdatePicker.js"){
+					  link.src = meeting_path+"wanda/jc/My97DatePicker/"+filename;
+				  }else if(filename=="jquery.ztree.core.min.js"){
+					  link.src = meeting_path+"wanda/jc/zTree/js/"+filename;
+				  }else if(filename=="jquery.ztree.excheck.min.js"){
+					  link.src = meeting_path+"wanda/jc/zTree/js/"+filename;
+				  }else if(filename=="jquery.ztree.exedit.js"){
+					  link.src = meeting_path+"wanda/jc/zTree/js/"+filename;
+				  }else if(filename=="clipboard.min.js"){
+					  link.src = meeting_path+"wanda/jc/"+filename;
+				  }else if(filename=="jquery-3.1.0.min.js"){
+					  link.src = meeting_path+"wanda/jc/vendor/jquery/"+filename;
+				  }else{
+					  link.src = meeting_path+"wanda/jc/"+filename;
+				  }
+				  document.getElementsByTagName("head")[0].appendChild(link);
+			}
+		
+		}
+</script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <title>BIM发包总管理平台</title>
+    <link rel="styleSheet" href="/libs/jquery/jquery.mCustomScrollbar.css" />
+    <link rel="styleSheet" href="/comm/css/treeView.less" />
+    <link rel="styleSheet" href="/topNav/css/topNav.less" />
+    <link rel="stylesheet" href="/bodyContent/css/bottomBar.less"/>
+    <link href="../../../favico.ico" rel="shortcut icon"/>
+</head>
+
+<body>
+    <div id="topBar">
+
+        <div class="logo"><span class="text"></span></div>
+    </div>
+    <div id="contains"></div>
+    <div id="pageLoading"></div>
+    <div id="dataLoading">
+    </div>
+    <div id="modalWrapper"></div>
+
+     <div class="userinfo">
+        <div class="conatiner">
+            <img id="uiLogo" src="" width="64px" height="85px">
+            <div class="info">
+                <table>
+                    <tr>
+                        <td class="labelName">账号：</td>
+                        <td id="uiAccount"></td>
+                    </tr>
+                    <tr>
+                        <td class="labelName">职务：</td>
+                        <td id="uiPosition"></td>
+                    </tr>
+                    <tr>
+                        <td class="labelName">部门：</td>
+                        <td id="uiPartment"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="tool">
+            <a href="#/logout">退出</a>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        var App = {};
+        //缓存全局属性
+        App.Global={
+            module:null
+        }
+        App.modules = {};
+        App.pkg = {};
+        App.time = +new Date();
+
+    </script>
+
+    <script type="text/javascript" src="/libs/underscore.1.8.2.js"></script>
+    <link rel="styleSheet" href="/libsH5/css/modelStyle.less" />
+    <script type="text/javascript" src="/api/api.js"></script>
+    <!--<script type="text/javascript" src="/comm/js/comm.es6"></script>-->
+    <script>
+        document.write('<script src="/static/dist/comm/comm_20160313.js?t='+App.time+'"><'+'/script>')
+    </script>
+    <!--<script type="text/javascript" src="/static/dist/comm/comm_20160313.js?t=123"></script>-->
+
+    <script type="text/javascript" src="/topNav/js/topNav.es6"></script>
+    <script type="text/javascript" src="/commH5/pluging/clipboard/clipboard.js"></script>
+    <!--<script type="text/javascript" src="/libsH5/js/libs/three.js"></script> -->
+    <script type="text/javascript" src="/static/dist/libs/libsH5.js"></script>
+    <script type="text/javascript" src="/static/dist/router/demoEnv.js"></script>
+
+    <!--<script type="text/javascript" src="/router/appkey.es6"></script>-->
+    <script>
+        var x                   = new XMLHttpRequest();
+        x.open('GET', '../map.json?t='+(+new Date()), true);
+        x.send('bb');
+        x.onreadystatechange    = function(s){
+            if(x.readyState == 4){
+                var r = x.response|| s.responseText,
+                    obj=JSON.parse(r),
+                    pkg = obj.pkg,
+                    index_js = document.createElement('script');
+
+                for(var i in pkg){
+                    if(pkg[i]['uri']){
+                        //var url = pkg[i]['uri'].slice(0,pkg[i]['uri'].indexOf('_'));
+                        var url = pkg[i]['uri'].slice(0,pkg[i]['uri'].indexOf('.'));
+                        App.pkg[url+'.'+pkg[i]['type']] = pkg[i]['uri'];
+                    }
+                }
+                console.log(App.pkg)
+
+                index_js.setAttribute('src',__uri('/router/appkey.es6'));
+
+                document.body.appendChild(index_js);
+
+            }
+        };
+    </script>
+</body>
+
+
+ 
+<!-- <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=osmP2eNEjPlvebAAIVhcDc6c"></script> -->
+
+</html>

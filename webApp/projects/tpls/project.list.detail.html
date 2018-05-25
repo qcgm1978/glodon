@@ -1,0 +1,30 @@
+<span class="proImg"><img src="<%= logoUrl.small%>" /></span>
+<span class="proName">
+	<% if(isBimControl==1){%>
+		<a class="aProName" title="<%=name%>" href="#projects/<%=id %>/<%= version && version.id || 'noVersion'  %>" data-id="<%=id %>">
+			<%=name%>
+		</a>
+	<%}else if(isBimControl==2){%>
+		<a class="aProName" title="<%=name%>" href="#projects/<%=id %>/<%= version && version.id || 'noVersion'  %>" data-id="<%=id %>">
+			<%=name%>
+		</a>
+	<%}else if(isBimControl==3){%>
+		<%=name%>
+	<%}%>
+</span>
+<% if(isBimControl==1){%>
+<span class="proType">BIM总发包</span>
+<%}else if(isBimControl==2){%>
+<span class="proType">总包交钥匙</span>
+<%}else if(isBimControl==3){%>
+<span class="proType">非总包交钥匙</span>
+<%}else{%>
+<span class="proType">--</span>
+<%}%>
+<span class="proType"><%=App.Projects.projectType[subType||0]%></span>
+<span class="proType"><%=App.Projects.projectModel[estateType]%></span>
+<span class="proRetailing"><%=App.Projects.proRetailing[projectType]%></span>
+<span class="proProvince overflowEllipsis" title="<%=province||city%>"><%=province||city%></span>
+<span class="proCity"><%=region%></span> 
+<span class="proStar"><%= delistingDate ? new Date(delistingDate).format("yyyy-MM-dd"): "" %></span>
+<span class="proEnd"><%= openTime ? new Date(openTime).format("yyyy-MM-dd"):"" %></span>

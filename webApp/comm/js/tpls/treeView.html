@@ -1,0 +1,46 @@
+
+
+
+ <% var trees=it.data.trees,treeCount=trees.length;%>
+
+ <ul class="tree-view">
+      
+	<% for(var i=0;i<treeCount;i++){ %>
+	 	 <li class="rootNode" > 
+			 {{#def.treeNode:{ item:trees[i] } }}
+			</li>
+	 <%}%>
+       
+  </ul>
+
+
+{{## def.treeNode:param:
+ 
+    <%var item=param.item;%> 
+
+	<%=item.title%> 
+	 
+
+
+<% if(item.children && item.children.length>0){ %>
+
+	<ul class="tree-view-sub">
+		 <% var treeSub=item.children,treeSubCount=treeSub.length;%>
+
+		 	<% for(var j=0;j<treeCount;j++){ %>
+
+		 		<% if(!treeSub[j]){ continue; }  %>
+
+	 	 		<li class="itemNode" > 
+			 		{{#def.treeNode:{ item:treeSub[j] } }}
+				</li>
+	 		<%}%> 
+	</ul>
+
+
+<%}%>
+
+
+
+
+#}}

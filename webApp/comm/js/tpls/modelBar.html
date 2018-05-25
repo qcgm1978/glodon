@@ -1,0 +1,53 @@
+<div class="modelTree">
+  <div class="modelFilter"></div>
+  <div class="modeSnapshot">
+    <div class="modelTab">
+      <span class="modelTabItem selected" data-target="#public">项目快照</span>
+      <span class="modelTabItem" data-target="#private">个人快照</span>
+      <button class="modelTabBtn">
+        <i class="modelIconView"></i>
+        <span>保存当前视口</span>
+      </button>
+    </div>
+    <div class="modelTabBox">
+      <div class="mobelTabContainer selected" id="public">
+        <ul class="viewpointList"></ul>
+      </div>
+      <div class="mobelTabContainer" id="private">
+        <ul class="viewpointList"></ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modelTools">
+  <div class="bar-group">
+    <i class="bar-item bar-filter" data-id="filter" data-type="filter" title="树"></i>
+    <i class="bar-item bar-viewpoint" data-id="eye" data-type="filter" title="<%= App.Local.getTranslation('drawing-model.Screenshot')||'快照'%>"></i>
+    <i class="bar-item bar-selected" data-id="selected" data-type="filter" title="<%= (App.Local.data['drawing-model'].SEt || '已选构件')%>"></i>
+  </div>
+  <div class="bar-group">
+    <i class="bar-item bar-home" data-type="none" data-id="home" title="home"></i>
+    <i class="bar-item bar-fit" data-type="none" data-id="fit" title="<%= App.Local.getTranslation('model-view.Fw')||'适应窗口'%>"></i>
+  </div>
+  <div class="bar-group">
+    <i class="bar-item bar-zoom" data-type="change" data-id="zoom" title="缩放"></i>
+    <i class="bar-item bar-fly" data-type="change" data-id="fly" title="漫游"></i>
+  </div>
+  <div class="bar-group">
+    <i class="bar-item bar-more" data-type="more" data-id="more" title="更多"></i>
+    <div class="subBar">
+      <i class="bar-item bar-opacity" data-type="change" data-id="setGlobalTransparent" title="透明"></i>
+    </div>
+  </div>
+</div>
+<div class="modelMap">
+  <div class="map"></div>
+  <div class="bar">
+    <div class="floors">
+      <span class="current-floor"></span>
+    </div>
+    <div class="axisGrid">
+      <span class="grid-position">--,--</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="uploadDialogClass">
+    <div class="uploadInputBox">
+        <label>资源类型：</label>
+        <input id="resourceType" type="text" name="resourceType" placeholder="请输入资源类型">
+        <div class="resourceTypeBox">
+            <ul id="ulBox">
+                <li>1234567489789</li>
+            </ul>
+        </div>
+    </div>
+    <div class="uploadInputBox">
+        <label>排序编号：</label>
+        <input id="resourceNum" type="text" name="resourceSort" placeholder="请输入排序编号">
+    </div>
+    <div class="uploadBox">
+        <label  data-i18n="data.drawing-model.Upload">上传：</label>
+        <a href="javascript:;" class="alink upload" style="margin-left: 10px;">上传文件</a>
+        <form id="uploadSuggestForm" action="platform/related/resources/upload" method="post" target="upload-iframe-suggest" enctype="multipart/form-data" encoding="multipart/form-data">
+            <input id="inputSuggestFile" name="file" type="file" style="display: none"/>
+        </form>
+        <iframe id="uploadIframeSuggest" name="upload-iframe-suggest" border="0" width="0" height="0" style="width: 0;height: 0; display: none;"></iframe>
+    </div>
+    <div class="uploadBox">
+        <ul class="attachList">
+            
+        </ul>
+    </div>
+    <div class="dialogFooter">
+        <button id="saveButton">确定</button>
+    </div>
+</div>

@@ -1,0 +1,310 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.pagination a {
+  text-decoration: none;
+  border: solid 1px #ccc;
+  color: #666;
+}
+
+.pagination a:hover {
+  border-color: #0075df;
+  color: #0075df;
+}
+
+.pagination a,
+.pagination span {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0px 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  min-width: 1em;
+  height: 25px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.pagination .current {
+  background: #418cdf;
+  color: #fff;
+  border: solid 1px #408cdf;
+}
+
+.pagination .current.prev,
+.pagination .current.next {
+  color: #ccc;
+  border-color: #ccc;
+  background: #eee;
+}
+
+.deviceSelector {
+  width: 1000px;
+  height: 500px;
+  position: relative;
+  border: 1px solid #cccccc;
+  overflow: hidden;
+  &.ieExtend {
+    border: none;
+  }
+  & #modelCanvas {
+    position: absolute;
+    top: 0;
+    right: 400px;
+    bottom: 0;
+    box-sizing: border-box;
+    border: 1px solid #cccccc;
+  }
+  & .rightSilderBar {
+    width: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    border-left: 1px solid #cccccc;
+    background-color: #FFF;
+    right: -400px;
+    .hedaerSearch {
+      padding: 15px;
+      min-width: 398px;
+      width: 100%;
+      overflow: hidden;
+      height: 48px;
+      .groupRadio {
+        float: right;
+      }
+      .searchToggle {
+        cursor: pointer;
+        background: url(/comm/images/commIcon.png) no-repeat 87px -619px;
+        padding-right: 32px;
+        height: 18px;
+        display: inline-block;
+      }
+      .expandArrowIcon {
+        background: url(/static/dist/images/comm/images/commIcon.png) no-repeat 87px -639px !important;
+      }
+      .clearSearch {
+        cursor: pointer;
+        color: #006ECF;
+      }
+      .groupRadio {
+        float: right;
+      }
+    }
+    .searchDetail {
+      display: none;
+      position: absolute;
+      height: 100px;
+      background-color: #fff;
+      top: 38px;
+      width: 100%;
+      min-width: 398px;
+      z-index: 1;
+      border-bottom: 1px #ccc solid;
+      .searchOptons {
+        border-top: 1px #ccc solid;
+        margin: 0 5px;
+      }
+      .optonLine {
+        .myDropDown {
+          .myDropText {
+            height: 24px;
+            line-height: 21px;
+            width: 178px;
+          }
+          .myDropArrorw {
+            margin-top: 10px;
+          }
+          .myDropList {
+            width: 100%;
+            top: 25px;
+            left: 0px;
+            .myItem {
+              height: 25px;
+              line-height: 25px;
+              padding: 0px 12px;
+              cursor: default;
+              &:hover {
+                background-color: #9fd8fd;
+              }
+            }
+          }
+        }
+        margin-top: 10px;
+        padding-left: 5px;
+        .searchName {
+          display: inline-block;
+          border: 1px #ccc solid;
+          height: 24px;
+          vertical-align: top;
+          line-height: 20px;
+          padding-left: 12px;
+          outline: none;
+          .txtSearchName {
+            width: 120px;
+            border: 0;
+            outline: none;
+          }
+        }
+      }
+      .btnOption {
+        padding-right: 5px;
+        text-align: right;
+        input {
+          margin-top: 10px;
+        }
+      }
+    }
+    & .before {
+      display: block;
+      position: absolute;
+      left: -22px;
+      top: 40px;
+      width: 22px;
+      height: 42px;
+      border: 1px solid #cccccc;
+      padding: 5px 4px;
+      color: #3399FF;
+      background: #FFF;
+      cursor: pointer;
+      &:hover {
+        background: #cccccc;
+      }
+    }
+    & .headerBar {
+      height: 40px;
+      background-color: #CCC;
+    }
+    & .contentbar {
+      position: absolute;
+      //top: 88px;
+      left: 0;
+      right: 0;
+      //bottom: 80px;
+      background-color: #f0f0f0;
+      height: 410px;
+      .contentbarBox {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        .listTheader {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 31px;
+          table > tbody {
+            .bg-c {
+              background-color: #CCC;
+            }
+            position: relative;
+          }
+        }
+        .listTBody {
+          width: 100%;
+          height: 100%;
+          padding-top: 30px;
+          .dataIsNull {
+            height: 100%;
+            line-height: 100px;
+            text-align: center;
+          }
+        }
+      }
+      & table {
+        width: 400px;
+        font-size: 12px;
+        font-family: "Microsoft YaHei";
+        padding: 0;
+        margin: 0;
+        & td {
+          height: 30px;
+          text-align: center;
+          border-top: 1px solid #ccc;
+          border-left: 1px solid #ccc;
+          &:nth-child(1) {
+            border-left: 0;
+          }
+        }
+        & tr {
+          &:nth-child(even) {
+            background: #E6E6FA;
+          }
+          &:nth-child(odd) {
+            background: #FFF
+          }
+          &:last-child {
+            border-bottom: 1px solid #ccc;
+          }
+        }
+        & tbody {
+          // position: absolute;
+          // bottom: 0;
+          // top: 30px;
+          // width: 400px;
+
+          & .selected {
+            background: #418cdf;
+          }
+          & .preview {
+            background: #81BEDF;
+          }
+        }
+        & .checkbox {
+          width: 30px;
+        }
+        & .colItem {
+          padding: 5px 10px;
+          width: 185px;
+        }
+      }
+    }
+
+    & .footBar {
+      position: absolute;
+      height: 80px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      line-height: 40px;
+      border-top: 1px solid #ccc;
+      & .footPage {
+        height: 40px;
+        padding-right: 10px;
+        padding-Left: 20px;
+      }
+      & .footTool {
+        height: 40px;
+        padding-right: 10px;
+        text-align: right;
+        border-top: 1px solid #F0F0F0;
+        .mmh-btn {
+          display: inline-block;
+          width: 80px;
+          height: 32px;
+          text-align: center;
+          line-height: 32px;
+          &:hover {
+            cursor: pointer;
+            background: inherit;
+            opacity: 0.5;
+          }
+
+          &.confirm {
+            background: #418cdf;
+            color: #FFF;
+          }
+
+          &.none {
+            border: 1px solid #CCC;
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+}

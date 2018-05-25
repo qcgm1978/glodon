@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>模型预览</title>
+    <script type="text/javascript">
+        var App = {};
+        App.time = +new Date();
+        document.write('<link rel="styleSheet" href="/static/dist/comm/comm_20160313.css?t=' + App.time + '"/>')
+    </script>
+    <link rel="styleSheet" href="/libsH5/css/modelStyle.less"/>
+    <link rel="styleSheet" href="./less/project.less"/>
+    <link href="../../../favico.ico" rel="shortcut icon"/>
+</head>
+<body>
+<div id="topBar">
+    <div class="logo"><span class="text"></span></div>
+</div>
+<div class="header">
+    <div class="breadcrumbNav" style="z-index: 10;">
+        <span class="breadItem projectVersion relative">
+           <span class="breadItemText"> 
+                <span class="text"></span>
+                <i class="myIcon-slanting-right"></i>
+            </span>
+            <div class="projectVersionList">
+                <div class="loading">正在加载，请稍候……</div>
+                <div class="listContent">
+                    <input class="txtSearch txtInput" data-i18n="[placeholder]data.drawing-model.SearchText" placeholder="请输入搜索条件" />
+                    <div class="container"></div>
+                </div>
+            </div>
+        </span>
+        <span class="name"></span>
+    </div>
+</div>
+<div id="projectContainer">
+    <div class="rightProperty">
+        <div class="rightPropertyContentBox">
+            <div class="rightPropertyContent">
+                <div class="rightPropertyContent">
+                    <div class="designPropetyBox">
+                        <ul class="projectPropetyHeader projectNav">
+                            <li data-type="attr" class="item selected" data-i18n="data.model-view.Ps">属性</li>
+                        </ul>
+                        <div class="projectPropetyContainer projectNavContentBox">
+                            <div class="designProperties">
+                                <div class="nullTip" data-i18n="data.drawing-model.SEt1">请选择构件</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dragSize"></div>
+            <div class="slideBar"><i class="icon-caret-right"></i></div>
+        </div>
+    </div>
+    <div id="modelBox"></div>
+</div>
+<script type="text/javascript" src="/libs/jquery/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="/libs/underscore.1.8.2.js"></script>
+<script type="text/javascript" src="/comm/js/comm.es6"></script>
+<script type="text/javascript" src="/static/dist/libs/libsH5.js"></script>
+<script type="text/javascript" src="/api/api.js"></script>
+<script type="text/javascript" src="./js/project.es6"></script>
+<script type="text/javascript" src="/static/dist/router/demoEnv.js"></script>
+<script type="text/javascript" src="/static/dist/jquery-i18next.js"></script>
+<script type="text/javascript" src="/static/dist/comm.i18n.js"></script>
+<script type="text/javascript" src="/commH5/pluging/clipboard/clipboard.js"></script>
+<!-- <script type="text/javascript" src="/static/dist/libs/commLib.js"></script> -->
+<script type="text/javascript">
+    App.Project.init();
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<div class="resourceContentTop">
+    <table>
+        <tr>
+            <td><input type="checkBox" name="allCheck" class="allCheck"></td>
+            <td>排序编号</td>
+            <td>文件名称</td>
+            <td>资源类型</td>
+            <td><%= App.Local.data['drawing-model'].Size || "大小" %></td>
+            <td>发布时间</td>
+        </tr>
+    </table>
+</div>
+<div class="resourceContentDown">
+    <div class="scrollBox">
+        <table>
+            <tbody class="resourceList"></tbody>
+        </table>
+    </div>
+    <div class="pagingBox">
+       <div class="sumDesc"></div><div class="listPagination"></div>
+    </div>
+</div>

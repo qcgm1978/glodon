@@ -1,0 +1,4121 @@
+{
+  "res": {
+    "api/api.js": {
+      "uri": "/api/api.js",
+      "type": "js",
+      "pkg": "p0"
+    },
+    "app/project/modelChange/js/collection.js": {
+      "uri": "/app/project/modelChange/js/collection.js",
+      "type": "js",
+      "deps": [
+        "/app/project/modelChange/js/comm.js"
+      ],
+      "pkg": "p1"
+    },
+    "app/project/modelChange/js/index.es6": {
+      "uri": "/static/dist/app/project/modelChange/js/index.js",
+      "type": "js",
+      "deps": [
+        "/app/project/modelChange/js/comm.js",
+        "app/project/modelChange/js/collection.js"
+      ],
+      "pkg": "p1"
+    },
+    "app/project/modelChange/less/index.less": {
+      "uri": "/static/dist/app/project/modelChange/less/index.css",
+      "type": "css",
+      "pkg": "p2"
+    },
+    "app/project/projectChange/es6/collection.es6": {
+      "uri": "/static/dist/app/project/projectChange/es6/collection.js",
+      "type": "js",
+      "pkg": "p3"
+    },
+    "app/project/projectChange/es6/index.es6": {
+      "uri": "/static/dist/app/project/projectChange/es6/index.js",
+      "type": "js",
+      "deps": [
+        "/app/project/modelChange/js/collection.es6"
+      ],
+      "pkg": "p3"
+    },
+    "app/project/projectChange/less/index.less": {
+      "uri": "/static/dist/app/project/projectChange/less/index.css",
+      "type": "css",
+      "pkg": "p4"
+    },
+    "app/project/single/js/comm.js": {
+      "uri": "/app/project/single/js/comm.js",
+      "type": "js",
+      "pkg": "p5"
+    },
+    "app/project/single/js/project.es6": {
+      "uri": "/static/dist/app/project/single/js/project.js",
+      "type": "js",
+      "pkg": "p5"
+    },
+    "app/project/single/less/project.less": {
+      "uri": "/static/dist/app/project/single/less/project.css",
+      "type": "css",
+      "pkg": "p6"
+    },
+    "backStage/collection/index.js": {
+      "uri": "/backStage/collection/index.js",
+      "type": "js",
+      "pkg": "p7"
+    },
+    "backStage/css/index.less": {
+      "uri": "/static/dist/backStage/css/index.css",
+      "type": "css",
+      "pkg": "p8"
+    },
+    "backStage/view/backStageIndexV.js": {
+      "uri": "/backStage/view/backStageIndexV.js",
+      "type": "js",
+      "pkg": "p7"
+    },
+    "backStage/view/setPermissionsAddDepartmentBoxV.js": {
+      "uri": "/backStage/view/setPermissionsAddDepartmentBoxV.js",
+      "type": "js",
+      "pkg": "p7"
+    },
+    "backStage/view/setPermissionsAddDepartmentStandard_1_BoxV.js": {
+      "uri": "/backStage/view/setPermissionsAddDepartmentStandard_1_BoxV.js",
+      "type": "js",
+      "pkg": "p7"
+    },
+    "backStage/view/setPermissionsAddDepartmentStandard_2_BoxV.js": {
+      "uri": "/backStage/view/setPermissionsAddDepartmentStandard_2_BoxV.js",
+      "type": "js",
+      "pkg": "p7"
+    },
+    "backStage/view/setPermissionsAddDepartmentStandard_3_BoxV.js": {
+      "uri": "/backStage/view/setPermissionsAddDepartmentStandard_3_BoxV.js",
+      "type": "js",
+      "pkg": "p7"
+    },
+    "backStage/view/setPermissionsIndexV.js": {
+      "uri": "/backStage/view/setPermissionsIndexV.js",
+      "type": "js",
+      "pkg": "p7"
+    },
+    "backStage/view/setPermissionsPublicBoxV.js": {
+      "uri": "/backStage/view/setPermissionsPublicBoxV.js",
+      "type": "js",
+      "pkg": "p7"
+    },
+    "backStage/view/setPermissionsPublicListBoxV.js": {
+      "uri": "/backStage/view/setPermissionsPublicListBoxV.js",
+      "type": "js",
+      "pkg": "p7"
+    },
+    "BIMperformance/libsH5/js/API.js": {
+      "uri": "/BIMperformance/libsH5/js/API.js",
+      "type": "js",
+      "deps": [
+        "BIMperformance/libsH5/js/bimView.js"
+      ],
+      "pkg": "p9"
+    },
+    "BIMperformance/libsH5/js/BIM.js": {
+      "uri": "/BIMperformance/libsH5/js/BIM.js",
+      "type": "js",
+      "deps": [
+        "BIMperformance/libsH5/js/bimView.js"
+      ],
+      "pkg": "p9"
+    },
+    "BIMperformance/libsH5/js/bimView.js": {
+      "uri": "/BIMperformance/libsH5/js/bimView.js",
+      "type": "js",
+      "pkg": "p9"
+    },
+    "BIMperformance/libsH5/js/bimview.pro.comment.es6": {
+      "uri": "/static/dist/BIMperformance/libsH5/js/bimview.pro.comment.js",
+      "type": "js",
+      "deps": [
+        "BIMperformance/libsH5/js/bimView.js",
+        "BIMperformance/libsH5/js/bimView.prototype.js"
+      ],
+      "pkg": "p9"
+    },
+    "BIMperformance/libsH5/js/bimView.prototype.js": {
+      "uri": "/BIMperformance/libsH5/js/bimView.prototype.js",
+      "type": "js",
+      "deps": [
+        "BIMperformance/libsH5/js/bimView.js"
+      ],
+      "pkg": "p9"
+    },
+    "BIMperformance/libsH5/js/bimView.sidebar.js": {
+      "uri": "/BIMperformance/libsH5/js/bimView.sidebar.js",
+      "type": "js",
+      "deps": [
+        "BIMperformance/libsH5/js/bimView.js"
+      ],
+      "pkg": "p9"
+    },
+    "BIMperformance/libsH5/js/comm.js": {
+      "uri": "/BIMperformance/libsH5/js/comm.js",
+      "type": "js",
+      "deps": [
+        "BIMperformance/libsH5/js/bimView.js"
+      ],
+      "pkg": "p9"
+    },
+    "BIMperformance/libsH5/js/dwg.js": {
+      "uri": "/BIMperformance/libsH5/js/dwg.js",
+      "type": "js",
+      "pkg": "p9"
+    },
+    "BIMperformance/libsH5/js/libs/three.js": {
+      "uri": "/BIMperformance/libsH5/js/libs/three.js",
+      "type": "js",
+      "pkg": "p9"
+    },
+    "BIMperformance/libsH5/js/libs/Web2d.js": {
+      "uri": "/BIMperformance/libsH5/js/libs/Web2d.js",
+      "type": "js",
+      "deps": [
+        "/libsH5/js/libs/three.js",
+        "/libsH5/js/libs/WebViewer.js"
+      ],
+      "pkg": "p9"
+    },
+    "BIMperformance/libsH5/js/libs/WebViewer.js": {
+      "uri": "/BIMperformance/libsH5/js/libs/WebViewer.js",
+      "type": "js",
+      "deps": [
+        "/libsH5/js/libs/three.min.js"
+      ],
+      "pkg": "p9"
+    },
+    "BIMperformance/projects/collections/index.js": {
+      "uri": "/BIMperformance/projects/collections/index.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/collections/project.cost.attr.js": {
+      "uri": "/BIMperformance/projects/collections/project.cost.attr.js",
+      "type": "js",
+      "deps": [
+        "BIMperformance/projects/collections/Project.es6"
+      ],
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/collections/project.design.attr.js": {
+      "uri": "/BIMperformance/projects/collections/project.design.attr.js",
+      "type": "js",
+      "deps": [
+        "BIMperformance/projects/collections/Project.es6"
+      ],
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/collections/Project.es6": {
+      "uri": "/static/dist/BIMperformance/projects/collections/Project.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/collections/project.plan.attr.es6": {
+      "uri": "/static/dist/BIMperformance/projects/collections/project.plan.attr.js",
+      "type": "js",
+      "deps": [
+        "BIMperformance/projects/collections/Project.es6"
+      ],
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/collections/project.quality.attr.js": {
+      "uri": "/BIMperformance/projects/collections/project.quality.attr.js",
+      "type": "js",
+      "deps": [
+        "/BIMperformance/projects/collections/Project.js"
+      ],
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/collections/project.share.es6": {
+      "uri": "/static/dist/BIMperformance/projects/collections/project.share.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/collections/project.viewpoint.attr.es6": {
+      "uri": "/static/dist/BIMperformance/projects/collections/project.viewpoint.attr.js",
+      "type": "js",
+      "deps": [
+        "/BIMperformance/projects/collections/Project.js"
+      ],
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/js/comm.docUpload.js": {
+      "uri": "/BIMperformance/projects/js/comm.docUpload.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/less/collision.less": {
+      "uri": "/static/dist/BIMperformance/projects/less/collision.css",
+      "type": "css",
+      "pkg": "p11"
+    },
+    "BIMperformance/projects/less/index.less": {
+      "uri": "/static/dist/BIMperformance/projects/less/index.css",
+      "type": "css",
+      "pkg": "p11"
+    },
+    "BIMperformance/projects/less/nullPage.less": {
+      "uri": "/static/dist/BIMperformance/projects/less/nullPage.css",
+      "type": "css",
+      "pkg": "p11"
+    },
+    "BIMperformance/projects/less/project.less": {
+      "uri": "/static/dist/BIMperformance/projects/less/project.css",
+      "type": "css",
+      "pkg": "p11"
+    },
+    "BIMperformance/projects/views/project.ContentMode.js": {
+      "uri": "/BIMperformance/projects/views/project.ContentMode.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project.displayMode.js": {
+      "uri": "/BIMperformance/projects/views/project.displayMode.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project.list.js": {
+      "uri": "/BIMperformance/projects/views/project.list.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project.map.js": {
+      "uri": "/BIMperformance/projects/views/project.map.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project.search.js": {
+      "uri": "/BIMperformance/projects/views/project.search.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/cost/project.cost.property.change.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/cost/project.cost.property.change.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/cost/project.cost.property.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/cost/project.cost.property.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/cost/project.cost.property.properties.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/cost/project.cost.property.properties.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/cost/project.cost.property.reference.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/cost/project.cost.property.reference.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/cost/project.cost.property.verification.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/cost/project.cost.property.verification.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/design/project.design.collision.detail.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/design/project.design.collision.detail.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/design/project.design.collision.taskList.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/design/project.design.collision.taskList.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/design/project.design.collison.files.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/design/project.design.collison.files.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/design/project.design.collison.setting.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/design/project.design.collison.setting.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/design/project.design.property.collision.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/design/project.design.property.collision.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/design/project.design.property.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/design/project.design.property.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/design/project.design.property.properties.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/design/project.design.property.properties.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/design/project.design.property.treeView.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/design/project.design.property.treeView.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/design/project.design.property.verification.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/design/project.design.property.verification.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/design/project.design.view.setting.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/design/project.design.view.setting.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/plan/project.plan.property.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/plan/project.plan.property.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/plan/project.plan.property.planAnalog.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/plan/project.plan.property.planAnalog.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/plan/project.plan.property.planInspection.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/plan/project.plan.property.planInspection.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/plan/project.plan.property.planModel.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/plan/project.plan.property.planModel.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/plan/project.plan.property.planProperties.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/plan/project.plan.property.planProperties.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/plan/project.plan.property.planPublicity.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/plan/project.plan.property.planPublicity.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/project.app.js": {
+      "uri": "/BIMperformance/projects/views/project/project.app.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/project.container.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/project.container.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/project.container.file.detail.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/project.container.file.detail.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/project.container.file.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/project.container.file.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/project.container.file.status.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/project.container.file.status.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/project.leftNav.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/project.leftNav.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/quality/project.quality.property.concerns.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/quality/project.quality.property.concerns.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/quality/project.quality.property.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/quality/project.quality.property.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/quality/project.quality.property.materialEquipment.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/quality/project.quality.property.materialEquipment.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/quality/project.quality.property.openingAcceptance.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/quality/project.quality.property.openingAcceptance.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/quality/project.quality.property.process.disease.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/quality/project.quality.property.process.disease.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/quality/project.quality.property.processAcceptance.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/quality/project.quality.property.processAcceptance.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "BIMperformance/projects/views/project/quality/project.quality.property.properties.es6": {
+      "uri": "/static/dist/BIMperformance/projects/views/project/quality/project.quality.property.properties.js",
+      "type": "js",
+      "pkg": "p10"
+    },
+    "bodyContent/css/bodyContent_ie8.less": {
+      "uri": "/static/dist/bodyContent/css/bodyContent_ie8.css",
+      "type": "css",
+      "pkg": "p12"
+    },
+    "bodyContent/css/bodyContent.less": {
+      "uri": "/static/dist/bodyContent/css/bodyContent.css",
+      "type": "css",
+      "pkg": "p12"
+    },
+    "bodyContent/css/bottomBar.less": {
+      "uri": "/static/dist/bodyContent/css/bottomBar.css",
+      "type": "css",
+      "pkg": "p12"
+    },
+    "bodyContent/css/layui.less": {
+      "uri": "/static/dist/bodyContent/css/layui.css",
+      "type": "css",
+      "pkg": "p12"
+    },
+    "bodyContent/js/app.js": {
+      "uri": "/bodyContent/js/app.js",
+      "type": "js",
+      "deps": [
+        "bodyContent/js/model/model.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/collections/index.js": {
+      "uri": "/bodyContent/js/collections/index.js",
+      "type": "js",
+      "deps": [
+        "bodyContent/js/views/todolist.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/model/model.js": {
+      "uri": "/bodyContent/js/model/model.js",
+      "type": "js",
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/body.content.tip.dialog.js": {
+      "uri": "/bodyContent/js/views/body.content.tip.dialog.js",
+      "type": "js",
+      "deps": [
+        "bodyContent/js/app.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/donelist.js": {
+      "uri": "/bodyContent/js/views/donelist.js",
+      "type": "js",
+      "deps": [
+        "/bodyContent/js/view/todos.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/monthEnd.js": {
+      "uri": "/bodyContent/js/views/monthEnd.js",
+      "type": "js",
+      "deps": [
+        "bodyContent/js/model/model.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/monthendlist.js": {
+      "uri": "/bodyContent/js/views/monthendlist.js",
+      "type": "js",
+      "deps": [
+        "/bodyContent/js/view/monthEnd.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/monthStart.js": {
+      "uri": "/bodyContent/js/views/monthStart.js",
+      "type": "js",
+      "deps": [
+        "bodyContent/js/model/model.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/monthstartlist.js": {
+      "uri": "/bodyContent/js/views/monthstartlist.js",
+      "type": "js",
+      "deps": [
+        "bodyContent/js/views/monthStart.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/post.detail.js": {
+      "uri": "/bodyContent/js/views/post.detail.js",
+      "type": "js",
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/proclamation.js": {
+      "uri": "/bodyContent/js/views/proclamation.js",
+      "type": "js",
+      "deps": [
+        "bodyContent/js/model/model.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/proclamationlist.js": {
+      "uri": "/bodyContent/js/views/proclamationlist.js",
+      "type": "js",
+      "deps": [
+        "/bodyContent/js/view/proclamation.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/slide.js": {
+      "uri": "/bodyContent/js/views/slide.js",
+      "type": "js",
+      "deps": [
+        "bodyContent/js/model/model.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/slidelist.js": {
+      "uri": "/bodyContent/js/views/slidelist.js",
+      "type": "js",
+      "deps": [
+        "/bodyContent/js/view/slide.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/todolist.js": {
+      "uri": "/bodyContent/js/views/todolist.js",
+      "type": "js",
+      "deps": [
+        "/bodyContent/js/view/todos.js"
+      ],
+      "pkg": "p13"
+    },
+    "bodyContent/js/views/todos.js": {
+      "uri": "/bodyContent/js/views/todos.js",
+      "type": "js",
+      "deps": [
+        "bodyContent/js/model/model.js"
+      ],
+      "pkg": "p13"
+    },
+    "comm/css/comm.less": {
+      "uri": "/static/dist/comm/css/comm.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/css/comment.less": {
+      "uri": "/static/dist/comm/css/comment.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/css/Font-Awesome-3.2.1/css/font-awesome-ie7.css": {
+      "uri": "/comm/css/Font-Awesome-3.2.1/css/font-awesome-ie7.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/css/Font-Awesome-3.2.1/css/font-awesome.css": {
+      "uri": "/comm/css/Font-Awesome-3.2.1/css/font-awesome.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/css/model.less": {
+      "uri": "/static/dist/comm/css/model.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/css/module.dialog.css": {
+      "uri": "/comm/css/module.dialog.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/css/myIcon.less": {
+      "uri": "/static/dist/comm/css/myIcon.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/css/reset.less": {
+      "uri": "/static/dist/comm/css/reset.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/css/treeView.less": {
+      "uri": "/static/dist/comm/css/treeView.css",
+      "type": "css",
+      "deps": [
+        "comm/css/reset.less"
+      ],
+      "pkg": "p14"
+    },
+    "comm/js/auth.config.es6": {
+      "uri": "/static/dist/comm/js/auth.config.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/js/collections/treeView.js": {
+      "uri": "/comm/js/collections/treeView.js",
+      "type": "js",
+      "deps": [
+        "comm/js/comm.es6"
+      ],
+      "pkg": "p15"
+    },
+    "comm/js/collections/treeViewMar.es6": {
+      "uri": "/static/dist/comm/js/collections/treeViewMar.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/js/comm.es6": {
+      "uri": "/static/dist/comm/js/comm.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/js/comm.extends.es6": {
+      "uri": "/static/dist/comm/js/comm.extends.js",
+      "type": "js",
+      "deps": [
+        "comm/js/comm.es6"
+      ],
+      "pkg": "p15"
+    },
+    "comm/js/comm.i18n.es6": {
+      "uri": "/static/dist/comm.i18n.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/js/comm.project.es6": {
+      "uri": "/static/dist/comm/js/comm.project.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/js/modules/comm.module.util.js": {
+      "uri": "/comm/js/modules/comm.module.util.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/js/modules/module.dialog.js": {
+      "uri": "/comm/js/modules/module.dialog.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/at/css/at.less": {
+      "uri": "/static/dist/comm/pluging/at/css/at.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/pluging/at/js/at.es6": {
+      "uri": "/static/dist/comm/pluging/at/js/at.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/confirm/confirm.es6": {
+      "uri": "/static/dist/comm/pluging/confirm/confirm.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/confirm/confirm.less": {
+      "uri": "/static/dist/comm/pluging/confirm/confirm.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/pluging/jcrop/css/jquery.Jcrop.min.css": {
+      "uri": "/comm/pluging/jcrop/css/jquery.Jcrop.min.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/pluging/jcrop/js/jquery.Jcrop.min.js": {
+      "uri": "/comm/pluging/jcrop/js/jquery.Jcrop.min.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/jquery/jquery.contextMenu .js": {
+      "uri": "/comm/pluging/jquery/jquery.contextMenu .js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/jqueryPluploadQueue/comm.upload.js": {
+      "uri": "/comm/pluging/jqueryPluploadQueue/comm.upload.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/jqueryPluploadQueue/css/jquery.plupload.queue.css": {
+      "uri": "/comm/pluging/jqueryPluploadQueue/css/jquery.plupload.queue.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/pluging/jqueryPluploadQueue/jquery.plupload.queue.js": {
+      "uri": "/comm/pluging/jqueryPluploadQueue/jquery.plupload.queue.js",
+      "type": "js",
+      "deps": [
+        "/libs/jquery-1.12.0.min.js"
+      ],
+      "pkg": "p15"
+    },
+    "comm/pluging/lightbox/css/lightbox.css": {
+      "uri": "/comm/pluging/lightbox/css/lightbox.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/pluging/lightbox/js/lightbox.js": {
+      "uri": "/comm/pluging/lightbox/js/lightbox.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/mmhMask/jquery.mmhmask.js": {
+      "uri": "/comm/pluging/mmhMask/jquery.mmhmask.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/mmhSlider/jquery.mmh.slider.css": {
+      "uri": "/comm/pluging/mmhSlider/jquery.mmh.slider.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/pluging/mmhSlider/jquery.mmh.slider.js": {
+      "uri": "/comm/pluging/mmhSlider/jquery.mmh.slider.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/myDropDown/js/myDropDown.es6": {
+      "uri": "/static/dist/comm/pluging/myDropDown/js/myDropDown.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/myDropDown/less/myDropDown.less": {
+      "uri": "/static/dist/comm/pluging/myDropDown/less/myDropDown.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/pluging/myRadioCk/myRadioCk.js": {
+      "uri": "/comm/pluging/myRadioCk/myRadioCk.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/tip.js": {
+      "uri": "/comm/pluging/tip.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/ZeroClipboard/ZeroClipboard.js": {
+      "uri": "/comm/pluging/ZeroClipboard/ZeroClipboard.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/ztree-3/css/metroStyle/metroStyle.css": {
+      "uri": "/comm/pluging/ztree-3/css/metroStyle/metroStyle.css",
+      "type": "css",
+      "pkg": "p14"
+    },
+    "comm/pluging/ztree-3/js/jquery.ztree.core.min.js": {
+      "uri": "/comm/pluging/ztree-3/js/jquery.ztree.core.min.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "comm/pluging/ztree-3/js/jquery.ztree.exedit.min.js": {
+      "uri": "/comm/pluging/ztree-3/js/jquery.ztree.exedit.min.js",
+      "type": "js",
+      "pkg": "p15"
+    },
+    "commH5/pluging/clipboard/clipboard.js": {
+      "uri": "/commH5/pluging/clipboard/clipboard.js",
+      "type": "js",
+      "pkg": "p16"
+    },
+    "commNew/css/comm.less": {
+      "uri": "/static/dist/commNew/css/comm.css",
+      "type": "css"
+    },
+    "commNew/css/comment.less": {
+      "uri": "/static/dist/commNew/css/comment.css",
+      "type": "css"
+    },
+    "commNew/css/Font-Awesome-3.2.1/css/font-awesome-ie7.css": {
+      "uri": "/commNew/css/Font-Awesome-3.2.1/css/font-awesome-ie7.css",
+      "type": "css"
+    },
+    "commNew/css/Font-Awesome-3.2.1/css/font-awesome.css": {
+      "uri": "/commNew/css/Font-Awesome-3.2.1/css/font-awesome.css",
+      "type": "css"
+    },
+    "commNew/css/model.less": {
+      "uri": "/static/dist/commNew/css/model.css",
+      "type": "css"
+    },
+    "commNew/css/module.dialog.css": {
+      "uri": "/commNew/css/module.dialog.css",
+      "type": "css"
+    },
+    "commNew/css/myIcon.less": {
+      "uri": "/static/dist/commNew/css/myIcon.css",
+      "type": "css"
+    },
+    "commNew/css/reset.less": {
+      "uri": "/static/dist/commNew/css/reset.css",
+      "type": "css"
+    },
+    "commNew/css/treeView.less": {
+      "uri": "/static/dist/commNew/css/treeView.css",
+      "type": "css",
+      "deps": [
+        "comm/css/reset.less"
+      ]
+    },
+    "commNew/js/auth.config.es6": {
+      "uri": "/static/dist/commNew/js/auth.config.js",
+      "type": "js",
+      "deps": [
+        "commNew/js/comm.es6"
+      ],
+      "pkg": "p17"
+    },
+    "commNew/js/collections/treeView.js": {
+      "uri": "/commNew/js/collections/treeView.js",
+      "type": "js",
+      "deps": [
+        "commNew/js/comm.es6"
+      ],
+      "pkg": "p17"
+    },
+    "commNew/js/collections/treeViewMar.es6": {
+      "uri": "/static/dist/commNew/js/collections/treeViewMar.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/js/comm.es6": {
+      "uri": "/static/dist/commNew/js/comm.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/js/comm.extends.es6": {
+      "uri": "/static/dist/commNew/js/comm.extends.js",
+      "type": "js",
+      "deps": [
+        "commNew/js/comm.es6"
+      ],
+      "pkg": "p17"
+    },
+    "commNew/js/comm.project.es6": {
+      "uri": "/static/dist/commNew/js/comm.project.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/js/modules/comm.module.util.js": {
+      "uri": "/commNew/js/modules/comm.module.util.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/js/modules/module.dialog.js": {
+      "uri": "/commNew/js/modules/module.dialog.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/at/css/at.less": {
+      "uri": "/static/dist/commNew/pluging/at/css/at.css",
+      "type": "css"
+    },
+    "commNew/pluging/at/js/at.es6": {
+      "uri": "/static/dist/commNew/pluging/at/js/at.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/confirm/confirm.es6": {
+      "uri": "/static/dist/commNew/pluging/confirm/confirm.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/confirm/confirm.less": {
+      "uri": "/static/dist/commNew/pluging/confirm/confirm.css",
+      "type": "css"
+    },
+    "commNew/pluging/jcrop/css/jquery.Jcrop.min.css": {
+      "uri": "/commNew/pluging/jcrop/css/jquery.Jcrop.min.css",
+      "type": "css"
+    },
+    "commNew/pluging/jcrop/js/jquery.Jcrop.min.js": {
+      "uri": "/commNew/pluging/jcrop/js/jquery.Jcrop.min.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/jquery/jquery.contextMenu .js": {
+      "uri": "/commNew/pluging/jquery/jquery.contextMenu .js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/jqueryPluploadQueue/comm.upload.js": {
+      "uri": "/commNew/pluging/jqueryPluploadQueue/comm.upload.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/jqueryPluploadQueue/css/jquery.plupload.queue.css": {
+      "uri": "/commNew/pluging/jqueryPluploadQueue/css/jquery.plupload.queue.css",
+      "type": "css"
+    },
+    "commNew/pluging/jqueryPluploadQueue/jquery.plupload.queue.js": {
+      "uri": "/commNew/pluging/jqueryPluploadQueue/jquery.plupload.queue.js",
+      "type": "js",
+      "deps": [
+        "/libs/jquery-1.12.0.min.js"
+      ],
+      "pkg": "p17"
+    },
+    "commNew/pluging/lightbox/css/lightbox.css": {
+      "uri": "/commNew/pluging/lightbox/css/lightbox.css",
+      "type": "css"
+    },
+    "commNew/pluging/lightbox/js/lightbox.js": {
+      "uri": "/commNew/pluging/lightbox/js/lightbox.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/mmhMask/jquery.mmhmask.js": {
+      "uri": "/commNew/pluging/mmhMask/jquery.mmhmask.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/mmhSlider/jquery.mmh.slider.css": {
+      "uri": "/commNew/pluging/mmhSlider/jquery.mmh.slider.css",
+      "type": "css"
+    },
+    "commNew/pluging/mmhSlider/jquery.mmh.slider.js": {
+      "uri": "/commNew/pluging/mmhSlider/jquery.mmh.slider.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/myDropDown/js/myDropDown.es6": {
+      "uri": "/static/dist/commNew/pluging/myDropDown/js/myDropDown.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/myDropDown/less/myDropDown.less": {
+      "uri": "/static/dist/commNew/pluging/myDropDown/less/myDropDown.css",
+      "type": "css"
+    },
+    "commNew/pluging/myRadioCk/myRadioCk.js": {
+      "uri": "/commNew/pluging/myRadioCk/myRadioCk.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/tip.js": {
+      "uri": "/commNew/pluging/tip.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/ZeroClipboard/ZeroClipboard.js": {
+      "uri": "/commNew/pluging/ZeroClipboard/ZeroClipboard.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/ztree-3/css/metroStyle/metroStyle.css": {
+      "uri": "/commNew/pluging/ztree-3/css/metroStyle/metroStyle.css",
+      "type": "css"
+    },
+    "commNew/pluging/ztree-3/js/jquery.ztree.core.min.js": {
+      "uri": "/commNew/pluging/ztree-3/js/jquery.ztree.core.min.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "commNew/pluging/ztree-3/js/jquery.ztree.exedit.min.js": {
+      "uri": "/commNew/pluging/ztree-3/js/jquery.ztree.exedit.min.js",
+      "type": "js",
+      "pkg": "p17"
+    },
+    "components/checkpoints/js/checkpoints.es6": {
+      "uri": "/static/dist/components/checkpoints/js/checkpoints.js",
+      "type": "js"
+    },
+    "components/checkpoints/less/style.less": {
+      "uri": "/static/dist/components/checkpoints/less/style.css",
+      "type": "css"
+    },
+    "components/checkpoints/libs/a_jquery-1.12.0.min.js": {
+      "uri": "/components/checkpoints/libs/a_jquery-1.12.0.min.js",
+      "type": "js"
+    },
+    "components/checkpoints/libs/b_underscore.1.8.2.js": {
+      "uri": "/components/checkpoints/libs/b_underscore.1.8.2.js",
+      "type": "js"
+    },
+    "components/checkpoints/libs/c_backbone.1.1.2.js": {
+      "uri": "/components/checkpoints/libs/c_backbone.1.1.2.js",
+      "type": "js"
+    },
+    "components/concerns/js/concerns.es6": {
+      "uri": "/static/dist/components/concerns/js/concerns.js",
+      "type": "js"
+    },
+    "components/concerns/less/style.less": {
+      "uri": "/static/dist/components/concerns/less/style.css",
+      "type": "css"
+    },
+    "components/concerns/libs/a_jquery-1.12.0.min.js": {
+      "uri": "/components/concerns/libs/a_jquery-1.12.0.min.js",
+      "type": "js"
+    },
+    "components/concerns/libs/b_underscore.1.8.2.js": {
+      "uri": "/components/concerns/libs/b_underscore.1.8.2.js",
+      "type": "js"
+    },
+    "components/concerns/libs/c_backbone.1.1.2.js": {
+      "uri": "/components/concerns/libs/c_backbone.1.1.2.js",
+      "type": "js"
+    },
+    "components/device/js/index.js": {
+      "uri": "/components/device/js/index.js",
+      "type": "js",
+      "deps": [
+        "components/device/libs/jquery-1.12.0.min.js",
+        "components/device/libs/underscore.1.8.2.js",
+        "components/device/libs/backbone.1.1.2.js",
+        "components/device/libs/mock-min.js",
+        "components/device/libs/jquery.pagination.js",
+        "components/device/libs/jquery.nicescroll.min.js"
+      ],
+      "pkg": "p18"
+    },
+    "components/device/less/comm.extend.less": {
+      "uri": "/static/dist/components/device/less/comm.extend.css",
+      "type": "css",
+      "pkg": "p19"
+    },
+    "components/device/less/index.less": {
+      "uri": "/static/dist/components/device/less/index.css",
+      "type": "css",
+      "pkg": "p19"
+    },
+    "components/device/libs/backbone.1.1.2.js": {
+      "uri": "/components/device/libs/backbone.1.1.2.js",
+      "type": "js",
+      "pkg": "p18"
+    },
+    "components/device/libs/jquery-1.12.0.min.js": {
+      "uri": "/components/device/libs/jquery-1.12.0.min.js",
+      "type": "js",
+      "pkg": "p18"
+    },
+    "components/device/libs/jquery.nicescroll.min.js": {
+      "uri": "/components/device/libs/jquery.nicescroll.min.js",
+      "type": "js",
+      "pkg": "p18"
+    },
+    "components/device/libs/jquery.pagination.js": {
+      "uri": "/components/device/libs/jquery.pagination.js",
+      "type": "js",
+      "pkg": "p18"
+    },
+    "components/device/libs/mock-min.js": {
+      "uri": "/components/device/libs/mock-min.js",
+      "type": "js",
+      "pkg": "p18"
+    },
+    "components/device/libs/pagination.css": {
+      "uri": "/components/device/libs/pagination.css",
+      "type": "css",
+      "pkg": "p19"
+    },
+    "components/device/libs/underscore.1.8.2.js": {
+      "uri": "/components/device/libs/underscore.1.8.2.js",
+      "type": "js",
+      "pkg": "p18"
+    },
+    "components/fileSelection/es6/fileSelection.es6": {
+      "uri": "/static/dist/components/fileSelection/es6/fileSelection.js",
+      "type": "js",
+      "pkg": "p20"
+    },
+    "components/fileSelection/less/fileSelection.less": {
+      "uri": "/static/dist/components/fileSelection/less/fileSelection.css",
+      "type": "css",
+      "deps": [
+        "/components/less/reset.less"
+      ],
+      "pkg": "p21"
+    },
+    "components/inspectSelectionNew/js/inspectSelection.js": {
+      "uri": "/components/inspectSelectionNew/js/inspectSelection.js",
+      "type": "js",
+      "deps": [
+        "components/inspectSelectionNew/libs/jquery-1.12.0.min.js",
+        "components/inspectSelectionNew/libs/underscore.1.8.2.js",
+        "components/inspectSelectionNew/libs/backbone.1.1.2.js"
+      ],
+      "pkg": "p22"
+    },
+    "components/inspectSelectionNew/less/comm.extend.less": {
+      "uri": "/static/dist/components/inspectSelectionNew/less/comm.extend.css",
+      "type": "css",
+      "pkg": "p23"
+    },
+    "components/inspectSelectionNew/less/style.less": {
+      "uri": "/static/dist/components/inspectSelectionNew/less/style.css",
+      "type": "css",
+      "pkg": "p23"
+    },
+    "components/inspectSelectionNew/libs/backbone.1.1.2.js": {
+      "uri": "/components/inspectSelectionNew/libs/backbone.1.1.2.js",
+      "type": "js",
+      "pkg": "p22"
+    },
+    "components/inspectSelectionNew/libs/jquery-1.12.0.min.js": {
+      "uri": "/components/inspectSelectionNew/libs/jquery-1.12.0.min.js",
+      "type": "js",
+      "pkg": "p22"
+    },
+    "components/inspectSelectionNew/libs/underscore.1.8.2.js": {
+      "uri": "/components/inspectSelectionNew/libs/underscore.1.8.2.js",
+      "type": "js",
+      "pkg": "p22"
+    },
+    "components/modelSelection/js/modelSelection.js": {
+      "uri": "/components/modelSelection/js/modelSelection.js",
+      "type": "js",
+      "pkg": "p24"
+    },
+    "components/modelSelection/libs/jquery-1.12.0.min.js": {
+      "uri": "/components/modelSelection/libs/jquery-1.12.0.min.js",
+      "type": "js",
+      "pkg": "p24"
+    },
+    "components/modelSelection/libs/underscore.1.8.2.js": {
+      "uri": "/components/modelSelection/libs/underscore.1.8.2.js",
+      "type": "js",
+      "pkg": "p24"
+    },
+    "components/points/js/points.es6": {
+      "uri": "/static/dist/components/points/js/points.js",
+      "type": "js"
+    },
+    "components/points/less/style.less": {
+      "uri": "/static/dist/components/points/less/style.css",
+      "type": "css",
+      "pkg": "p25"
+    },
+    "components/points/libs/a_jquery-1.12.0.min.js": {
+      "uri": "/components/points/libs/a_jquery-1.12.0.min.js",
+      "type": "js",
+      "pkg": "p26"
+    },
+    "components/points/libs/b_underscore.1.8.2.js": {
+      "uri": "/components/points/libs/b_underscore.1.8.2.js",
+      "type": "js",
+      "pkg": "p26"
+    },
+    "components/points/libs/c_backbone.1.1.2.js": {
+      "uri": "/components/points/libs/c_backbone.1.1.2.js",
+      "type": "js",
+      "pkg": "p26"
+    },
+    "console/css/console.less": {
+      "uri": "/static/dist/console/css/console.css",
+      "type": "css",
+      "pkg": "p27"
+    },
+    "console/js/console.es6": {
+      "uri": "/static/dist/console/js/console.js",
+      "type": "js",
+      "pkg": "p28"
+    },
+    "console1/css/console.less": {
+      "uri": "/static/dist/console1/css/console.css",
+      "type": "css",
+      "pkg": "p29"
+    },
+    "console1/js/console.es6": {
+      "uri": "/static/dist/console1/js/console.js",
+      "type": "js",
+      "pkg": "p30"
+    },
+    "console1/js/fileApi/FileApi.js": {
+      "uri": "/console1/js/fileApi/FileApi.js",
+      "type": "js",
+      "pkg": "p30"
+    },
+    "editer/dialogs/emotion/emotion.css": {
+      "uri": "/static/dist/editer/dialogs/emotion/emotion.css",
+      "type": "css"
+    },
+    "editer/dialogs/emotion/emotion.js": {
+      "uri": "/static/dist/editer/dialogs/emotion/emotion.js",
+      "type": "js"
+    },
+    "editer/dialogs/formula/formula.css": {
+      "uri": "/static/dist/editer/dialogs/formula/formula.css",
+      "type": "css"
+    },
+    "editer/dialogs/formula/formula.js": {
+      "uri": "/static/dist/editer/dialogs/formula/formula.js",
+      "type": "js"
+    },
+    "editer/dialogs/image/image.css": {
+      "uri": "/static/dist/editer/dialogs/image/image.css",
+      "type": "css"
+    },
+    "editer/dialogs/image/image.js": {
+      "uri": "/static/dist/editer/dialogs/image/image.js",
+      "type": "js"
+    },
+    "editer/dialogs/link/link.js": {
+      "uri": "/static/dist/editer/dialogs/link/link.js",
+      "type": "js"
+    },
+    "editer/dialogs/map/map.js": {
+      "uri": "/static/dist/editer/dialogs/map/map.js",
+      "type": "js"
+    },
+    "editer/dialogs/video/video.css": {
+      "uri": "/static/dist/editer/dialogs/video/video.css",
+      "type": "css"
+    },
+    "editer/dialogs/video/video.js": {
+      "uri": "/static/dist/editer/dialogs/video/video.js",
+      "type": "js"
+    },
+    "editer/lang/en/en.js": {
+      "uri": "/static/dist/editer/lang/en/en.js",
+      "type": "js"
+    },
+    "editer/lang/zh-cn/zh-cn.js": {
+      "uri": "/static/dist/editer/lang/zh-cn/zh-cn.js",
+      "type": "js"
+    },
+    "editer/themes/default/css/umeditor.css": {
+      "uri": "/static/dist/editer/themes/default/css/umeditor.css",
+      "type": "css"
+    },
+    "editer/themes/default/css/umeditor.min.css": {
+      "uri": "/static/dist/editer/themes/default/css/umeditor.min.css",
+      "type": "css"
+    },
+    "editer/third-party/jquery.min.js": {
+      "uri": "/static/dist/editer/third-party/jquery.min.js",
+      "type": "js"
+    },
+    "editer/third-party/mathquill/mathquill.css": {
+      "uri": "/static/dist/editer/third-party/mathquill/mathquill.css",
+      "type": "css"
+    },
+    "editer/third-party/mathquill/mathquill.js": {
+      "uri": "/static/dist/editer/third-party/mathquill/mathquill.js",
+      "type": "js"
+    },
+    "editer/third-party/mathquill/mathquill.min.js": {
+      "uri": "/static/dist/editer/third-party/mathquill/mathquill.min.js",
+      "type": "js"
+    },
+    "editer/third-party/template.min.js": {
+      "uri": "/static/dist/editer/third-party/template.min.js",
+      "type": "js"
+    },
+    "editer/umeditor.config.js": {
+      "uri": "/static/dist/editer/umeditor.config.js",
+      "type": "js"
+    },
+    "editer/umeditor.config1.js": {
+      "uri": "/static/dist/editer/umeditor.config1.js",
+      "type": "js"
+    },
+    "editer/umeditor.js": {
+      "uri": "/static/dist/editer/umeditor.js",
+      "type": "js"
+    },
+    "editer/umeditor.min.js": {
+      "uri": "/static/dist/editer/umeditor.min.js",
+      "type": "js"
+    },
+    "feedBackAdmin/collections/index.js": {
+      "uri": "/feedBackAdmin/collections/index.js",
+      "type": "js",
+      "pkg": "p31"
+    },
+    "feedBackAdmin/less/index.less": {
+      "uri": "/static/dist/feedBackAdmin/less/index.css",
+      "type": "css",
+      "pkg": "p32"
+    },
+    "feedBackAdmin/views/FeedBackContainer.ListDomV.js": {
+      "uri": "/feedBackAdmin/views/FeedBackContainer.ListDomV.js",
+      "type": "js",
+      "pkg": "p31"
+    },
+    "feedBackAdmin/views/FeedBackContainerV.js": {
+      "uri": "/feedBackAdmin/views/FeedBackContainerV.js",
+      "type": "js",
+      "pkg": "p31"
+    },
+    "flow/collections/index.es6": {
+      "uri": "/static/dist/flow/collections/index.js",
+      "type": "js",
+      "pkg": "p33"
+    },
+    "flow/less/flow.less": {
+      "uri": "/static/dist/flow/less/flow.css",
+      "type": "css",
+      "pkg": "p34"
+    },
+    "flow/views/flow.container.adminBasi.es6": {
+      "uri": "/static/dist/flow/views/flow.container.adminBasi.js",
+      "type": "js",
+      "pkg": "p33"
+    },
+    "flow/views/flow.container.adminBasi.page.es6": {
+      "uri": "/static/dist/flow/views/flow.container.adminBasi.page.js",
+      "type": "js",
+      "pkg": "p33"
+    },
+    "flow/views/flow.container.es6": {
+      "uri": "/static/dist/flow/views/flow.container.js",
+      "type": "js",
+      "pkg": "p33"
+    },
+    "flow/views/flow.container.key.detail.es6": {
+      "uri": "/static/dist/flow/views/flow.container.key.detail.js",
+      "type": "js",
+      "pkg": "p33"
+    },
+    "flow/views/flow.container.key.es6": {
+      "uri": "/static/dist/flow/views/flow.container.key.js",
+      "type": "js",
+      "pkg": "p33"
+    },
+    "flow/views/flow.content.es6": {
+      "uri": "/static/dist/flow/views/flow.content.js",
+      "type": "js",
+      "pkg": "p33"
+    },
+    "flow/views/flow.dialog.es6": {
+      "uri": "/static/dist/flow/views/flow.dialog.js",
+      "type": "js",
+      "pkg": "p33"
+    },
+    "flow/views/flow.nav.es6": {
+      "uri": "/static/dist/flow/views/flow.nav.js",
+      "type": "js",
+      "pkg": "p33"
+    },
+    "flow/views/flow.WelcomeView.es6": {
+      "uri": "/static/dist/flow/views/flow.WelcomeView.js",
+      "type": "js",
+      "pkg": "p33"
+    },
+    "imbox/collections/index.es6": {
+      "uri": "/static/dist/imbox/collections/index.js",
+      "type": "js",
+      "pkg": "p35"
+    },
+    "imbox/css/index.less": {
+      "uri": "/static/dist/imbox/css/index.css",
+      "type": "css",
+      "pkg": "p36"
+    },
+    "imbox/views/message.container.es6": {
+      "uri": "/static/dist/imbox/views/message.container.js",
+      "type": "js",
+      "pkg": "p35"
+    },
+    "imbox/views/message.list.es6": {
+      "uri": "/static/dist/imbox/views/message.list.js",
+      "type": "js",
+      "pkg": "p35"
+    },
+    "imbox/views/nav.js": {
+      "uri": "/imbox/views/nav.js",
+      "type": "js",
+      "pkg": "p35"
+    },
+    "index/collection/index.es6": {
+      "uri": "/static/dist/index/collection/index.js",
+      "type": "js"
+    },
+    "js/mpkWorker.min.js": {
+      "uri": "/static/dist/js/mpkWorker.min.js",
+      "type": "js"
+    },
+    "js/mpkWorker2.min.js": {
+      "uri": "/static/dist/js/mpkWorker2.min.js",
+      "type": "js"
+    },
+    "libs/backbone.1.1.2.js": {
+      "uri": "/libs/backbone.1.1.2.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/bootstrap/bootstrap-3.3.5/css/bootstrap-theme.css": {
+      "uri": "/libs/bootstrap/bootstrap-3.3.5/css/bootstrap-theme.css",
+      "type": "css",
+      "pkg": "p38"
+    },
+    "libs/bootstrap/bootstrap-3.3.5/css/bootstrap.css": {
+      "uri": "/libs/bootstrap/bootstrap-3.3.5/css/bootstrap.css",
+      "type": "css",
+      "pkg": "p38"
+    },
+    "libs/bootstrap/bootstrap-3.3.5/js/bootstrap.js": {
+      "uri": "/libs/bootstrap/bootstrap-3.3.5/js/bootstrap.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/bootstrap/datetimepicker/css/bootstrap-datetimepicker.css": {
+      "uri": "/libs/bootstrap/datetimepicker/css/bootstrap-datetimepicker.css",
+      "type": "css",
+      "pkg": "p38"
+    },
+    "libs/bootstrap/datetimepicker/js/bootstrap-datetimepicker.js": {
+      "uri": "/libs/bootstrap/datetimepicker/js/bootstrap-datetimepicker.js",
+      "type": "js",
+      "deps": [
+        "/libs/bootstrap/js/bootstrap.js"
+      ],
+      "pkg": "p37"
+    },
+    "libs/bootstrap/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js": {
+      "uri": "/libs/bootstrap/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/doT.js": {
+      "uri": "/libs/doT.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/jquery-i18next-master/i18n-en.less": {
+      "uri": "/static/dist/libs/jquery-i18next-master/i18n-en.css",
+      "type": "css",
+      "pkg": "p39"
+    },
+    "libs/jquery-i18next-master/i18next.min.js": {
+      "uri": "/static/dist/jquery-i18next.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/jquery-i18next-master/jquery-i18next.js": {
+      "uri": "/static/dist/jquery-i18next.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/jquery/base64.js": {
+      "uri": "/libs/jquery/base64.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/jquery/jquery-1.12.0.min.js": {
+      "uri": "/libs/jquery/jquery-1.12.0.min.js",
+      "type": "js",
+      "pkg": "p40"
+    },
+    "libs/jquery/jquery-ui.min.js": {
+      "uri": "/libs/jquery/jquery-ui.min.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/jquery/jquery.mCustomScrollbar.css": {
+      "uri": "/libs/jquery/jquery.mCustomScrollbar.css",
+      "type": "css",
+      "pkg": "p38"
+    },
+    "libs/jquery/jquery.mCustomScrollbar.js": {
+      "uri": "/libs/jquery/jquery.mCustomScrollbar.js",
+      "type": "js",
+      "deps": [
+        "libs/jquery/jquery-1.12.0.min.js",
+        "libs/jquery/jquery-ui.min.js"
+      ],
+      "pkg": "p37"
+    },
+    "libs/jquery/jquery.mousewheel.min.js": {
+      "uri": "/libs/jquery/jquery.mousewheel.min.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/json2.js": {
+      "uri": "/libs/json2.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/pagination/jquery.pagination.js": {
+      "uri": "/libs/pagination/jquery.pagination.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/pagination/pagination.css": {
+      "uri": "/libs/pagination/pagination.css",
+      "type": "css",
+      "pkg": "p38"
+    },
+    "libs/plupload/i18n/zh.js": {
+      "uri": "/libs/plupload/i18n/zh.js",
+      "type": "js",
+      "deps": [
+        "libs/plupload/plupload.js"
+      ],
+      "pkg": "p37"
+    },
+    "libs/plupload/plupload.flash.js": {
+      "uri": "/libs/plupload/plupload.flash.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/plupload/plupload.html5.js": {
+      "uri": "/libs/plupload/plupload.html5.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/plupload/plupload.js": {
+      "uri": "/libs/plupload/plupload.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/thirdparty/aes5-shim.min.js": {
+      "uri": "/libs/thirdparty/aes5-shim.min.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/thirdparty/console-polyfill.js": {
+      "uri": "/libs/thirdparty/console-polyfill.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libs/thirdparty/es5-sham.min.js": {
+      "uri": "/libs/thirdparty/es5-sham.min.js",
+      "type": "js",
+      "deps": [
+        "/libs/thirdparth/es5-shim.min.js"
+      ],
+      "pkg": "p37"
+    },
+    "libs/underscore.1.8.2.js": {
+      "uri": "/libs/underscore.1.8.2.js",
+      "type": "js",
+      "pkg": "p37"
+    },
+    "libsH5/css/bimview.pro.comment.less": {
+      "uri": "/static/dist/libsH5/css/bimview.pro.comment.css",
+      "type": "css",
+      "pkg": "p41"
+    },
+    "libsH5/css/dwg.comment.less": {
+      "uri": "/static/dist/libsH5/css/dwg.comment.css",
+      "type": "css",
+      "pkg": "p41"
+    },
+    "libsH5/css/fonts/iconfont.css": {
+      "uri": "/libsH5/css/fonts/iconfont.css",
+      "type": "css",
+      "pkg": "p41"
+    },
+    "libsH5/css/modelStyle.less": {
+      "uri": "/static/dist/libsH5/css/modelStyle.css",
+      "type": "css",
+      "pkg": "p41"
+    },
+    "login/css/login.less": {
+      "uri": "/static/dist/login/css/login.css",
+      "type": "css",
+      "pkg": "p42"
+    },
+    "login/js/jquery-1.12.0.min.js": {
+      "uri": "/login/js/jquery-1.12.0.min.js",
+      "type": "js",
+      "pkg": "p43"
+    },
+    "login/js/login.es6": {
+      "uri": "/static/dist/login/js/login.js",
+      "type": "js",
+      "pkg": "p43"
+    },
+    "meeting/meeting.js": {
+      "uri": "/meeting/meeting.js",
+      "type": "js",
+      "pkg": "p44"
+    },
+    "notice/collection/index.js": {
+      "uri": "/notice/collection/index.js",
+      "type": "js",
+      "pkg": "p45"
+    },
+    "notice/css/index.less": {
+      "uri": "/static/dist/notice/css/index.css",
+      "type": "css",
+      "pkg": "p46"
+    },
+    "notice/view/App.Notice.NoticeListDetailView.js": {
+      "uri": "/notice/view/App.Notice.NoticeListDetailView.js",
+      "type": "js",
+      "pkg": "p45"
+    },
+    "notice/view/App.Notice.NoticeListView.js": {
+      "uri": "/notice/view/App.Notice.NoticeListView.js",
+      "type": "js",
+      "pkg": "p45"
+    },
+    "projects/collections/index.js": {
+      "uri": "/projects/collections/index.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/collections/project.cost.attr.js": {
+      "uri": "/projects/collections/project.cost.attr.js",
+      "type": "js",
+      "deps": [
+        "projects/collections/Project.es6"
+      ],
+      "pkg": "p47"
+    },
+    "projects/collections/project.design.attr.js": {
+      "uri": "/projects/collections/project.design.attr.js",
+      "type": "js",
+      "deps": [
+        "projects/collections/Project.es6"
+      ],
+      "pkg": "p47"
+    },
+    "projects/collections/Project.es6": {
+      "uri": "/static/dist/projects/collections/Project.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/collections/project.notes.es6": {
+      "uri": "/static/dist/projects/collections/project.notes.js",
+      "type": "js",
+      "deps": [
+        "projects/collections/Project.es6"
+      ],
+      "pkg": "p47"
+    },
+    "projects/collections/project.plan.attr.es6": {
+      "uri": "/static/dist/projects/collections/project.plan.attr.js",
+      "type": "js",
+      "deps": [
+        "projects/collections/Project.es6"
+      ],
+      "pkg": "p47"
+    },
+    "projects/collections/project.quality.attr.js": {
+      "uri": "/projects/collections/project.quality.attr.js",
+      "type": "js",
+      "deps": [
+        "/projects/collections/Project.js"
+      ],
+      "pkg": "p47"
+    },
+    "projects/collections/project.share.es6": {
+      "uri": "/static/dist/projects/collections/project.share.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/collections/project.viewpoint.attr.es6": {
+      "uri": "/static/dist/projects/collections/project.viewpoint.attr.js",
+      "type": "js",
+      "deps": [
+        "/projects/collections/Project.js"
+      ],
+      "pkg": "p47"
+    },
+    "projects/js/comm.docUpload.js": {
+      "uri": "/projects/js/comm.docUpload.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/less/collision.less": {
+      "uri": "/static/dist/projects/less/collision.css",
+      "type": "css",
+      "pkg": "p48"
+    },
+    "projects/less/index.less": {
+      "uri": "/static/dist/projects/less/index.css",
+      "type": "css",
+      "pkg": "p48"
+    },
+    "projects/less/nullPage.less": {
+      "uri": "/static/dist/projects/less/nullPage.css",
+      "type": "css",
+      "pkg": "p48"
+    },
+    "projects/less/project.less": {
+      "uri": "/static/dist/projects/less/project.css",
+      "type": "css",
+      "pkg": "p48"
+    },
+    "projects/views/project.ContentMode.js": {
+      "uri": "/projects/views/project.ContentMode.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project.displayMode.js": {
+      "uri": "/projects/views/project.displayMode.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project.list.js": {
+      "uri": "/projects/views/project.list.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project.map.js": {
+      "uri": "/projects/views/project.map.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project.search.js": {
+      "uri": "/projects/views/project.search.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/cost/project.cost.property.change.es6": {
+      "uri": "/static/dist/projects/views/project/cost/project.cost.property.change.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/cost/project.cost.property.es6": {
+      "uri": "/static/dist/projects/views/project/cost/project.cost.property.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/cost/project.cost.property.properties.es6": {
+      "uri": "/static/dist/projects/views/project/cost/project.cost.property.properties.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/cost/project.cost.property.reference.es6": {
+      "uri": "/static/dist/projects/views/project/cost/project.cost.property.reference.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/cost/project.cost.property.verification.es6": {
+      "uri": "/static/dist/projects/views/project/cost/project.cost.property.verification.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/design/project.design.collision.detail.es6": {
+      "uri": "/static/dist/projects/views/project/design/project.design.collision.detail.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/design/project.design.collision.taskList.es6": {
+      "uri": "/static/dist/projects/views/project/design/project.design.collision.taskList.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/design/project.design.collison.files.es6": {
+      "uri": "/static/dist/projects/views/project/design/project.design.collison.files.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/design/project.design.collison.setting.es6": {
+      "uri": "/static/dist/projects/views/project/design/project.design.collison.setting.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/design/project.design.property.collision.es6": {
+      "uri": "/static/dist/projects/views/project/design/project.design.property.collision.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/design/project.design.property.es6": {
+      "uri": "/static/dist/projects/views/project/design/project.design.property.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/design/project.design.property.properties.es6": {
+      "uri": "/static/dist/projects/views/project/design/project.design.property.properties.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/design/project.design.property.treeView.es6": {
+      "uri": "/static/dist/projects/views/project/design/project.design.property.treeView.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/design/project.design.property.verification.es6": {
+      "uri": "/static/dist/projects/views/project/design/project.design.property.verification.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/design/project.design.view.setting.es6": {
+      "uri": "/static/dist/projects/views/project/design/project.design.view.setting.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/notes/notes.add.comment.view.es6": {
+      "uri": "/static/dist/projects/views/project/notes/notes.add.comment.view.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/notes/notes.comment.add.model.view.es6": {
+      "uri": "/static/dist/projects/views/project/notes/notes.comment.add.model.view.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/notes/notes.comment.list.component.view.es6": {
+      "uri": "/static/dist/projects/views/project/notes/notes.comment.list.component.view.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/notes/notes.comment.list.view.es6": {
+      "uri": "/static/dist/projects/views/project/notes/notes.comment.list.view.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/notes/notes.list.component.view.es6": {
+      "uri": "/static/dist/projects/views/project/notes/notes.list.component.view.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/notes/notes.list.dom.view.es6": {
+      "uri": "/static/dist/projects/views/project/notes/notes.list.dom.view.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/notes/notes.list.to.me.view.es6": {
+      "uri": "/static/dist/projects/views/project/notes/notes.list.to.me.view.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/notes/notes.list.view.es6": {
+      "uri": "/static/dist/projects/views/project/notes/notes.list.view.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/notes/notes.search.condition.js": {
+      "uri": "/projects/views/project/notes/notes.search.condition.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/plan/project.plan.property.es6": {
+      "uri": "/static/dist/projects/views/project/plan/project.plan.property.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/plan/project.plan.property.planAnalog.es6": {
+      "uri": "/static/dist/projects/views/project/plan/project.plan.property.planAnalog.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/plan/project.plan.property.planInspection.es6": {
+      "uri": "/static/dist/projects/views/project/plan/project.plan.property.planInspection.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/plan/project.plan.property.planModel.es6": {
+      "uri": "/static/dist/projects/views/project/plan/project.plan.property.planModel.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/plan/project.plan.property.planProperties.es6": {
+      "uri": "/static/dist/projects/views/project/plan/project.plan.property.planProperties.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/plan/project.plan.property.planPublicity.es6": {
+      "uri": "/static/dist/projects/views/project/plan/project.plan.property.planPublicity.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/project.app.js": {
+      "uri": "/projects/views/project/project.app.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/project.container.es6": {
+      "uri": "/static/dist/projects/views/project/project.container.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/project.container.file.detail.es6": {
+      "uri": "/static/dist/projects/views/project/project.container.file.detail.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/project.container.file.es6": {
+      "uri": "/static/dist/projects/views/project/project.container.file.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/project.container.file.status.es6": {
+      "uri": "/static/dist/projects/views/project/project.container.file.status.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/project.leftNav.es6": {
+      "uri": "/static/dist/projects/views/project/project.leftNav.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/quality/project.quality.property.concerns.es6": {
+      "uri": "/static/dist/projects/views/project/quality/project.quality.property.concerns.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/quality/project.quality.property.es6": {
+      "uri": "/static/dist/projects/views/project/quality/project.quality.property.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/quality/project.quality.property.materialEquipment.es6": {
+      "uri": "/static/dist/projects/views/project/quality/project.quality.property.materialEquipment.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/quality/project.quality.property.openingAcceptance.es6": {
+      "uri": "/static/dist/projects/views/project/quality/project.quality.property.openingAcceptance.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/quality/project.quality.property.process.disease.es6": {
+      "uri": "/static/dist/projects/views/project/quality/project.quality.property.process.disease.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/quality/project.quality.property.processAcceptance.es6": {
+      "uri": "/static/dist/projects/views/project/quality/project.quality.property.processAcceptance.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "projects/views/project/quality/project.quality.property.properties.es6": {
+      "uri": "/static/dist/projects/views/project/quality/project.quality.property.properties.js",
+      "type": "js",
+      "pkg": "p47"
+    },
+    "qualityFill/css/qualityFill.css": {
+      "uri": "/qualityFill/css/qualityFill.css",
+      "type": "css",
+      "pkg": "p49"
+    },
+    "qualityFill/js/jquery.jedate.js": {
+      "uri": "/qualityFill/js/jquery.jedate.js",
+      "type": "js",
+      "pkg": "p50"
+    },
+    "qualityFill/js/template.min.js": {
+      "uri": "/qualityFill/js/template.min.js",
+      "type": "js",
+      "pkg": "p51"
+    },
+    "qualityFill/js/wDialog.min.js": {
+      "uri": "/qualityFill/js/wDialog.min.js",
+      "type": "js",
+      "pkg": "p52"
+    },
+    "qualityFill/js/zebra_datepicker.js": {
+      "uri": "/qualityFill/js/zebra_datepicker.js",
+      "type": "js",
+      "pkg": "p53"
+    },
+    "resources/collection/index.es6": {
+      "uri": "/static/dist/resources/collection/index.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/collection/resource.artifacts.es6": {
+      "uri": "/static/dist/resources/collection/resource.artifacts.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/collection/resource.famlibs.es6": {
+      "uri": "/static/dist/resources/collection/resource.famlibs.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/collection/resource.model.es6": {
+      "uri": "/static/dist/resources/collection/resource.model.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/collection/resource.nav.es6": {
+      "uri": "/static/dist/resources/collection/resource.nav.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/collection/resource.upload.js": {
+      "uri": "/resources/collection/resource.upload.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/less/artifacts.less": {
+      "uri": "/static/dist/resources/less/artifacts.css",
+      "type": "css",
+      "pkg": "p55"
+    },
+    "resources/less/FamLibs.less": {
+      "uri": "/static/dist/resources/less/FamLibs.css",
+      "type": "css",
+      "pkg": "p55"
+    },
+    "resources/less/index.less": {
+      "uri": "/static/dist/resources/less/index.css",
+      "type": "css",
+      "pkg": "p55"
+    },
+    "resources/views/resoucesModel/resouces.model.app.es6": {
+      "uri": "/static/dist/resources/views/resoucesModel/resouces.model.app.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resoucesModel/resource.model.listNav.list.es6": {
+      "uri": "/static/dist/resources/views/resoucesModel/resource.model.listNav.list.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resoucesModel/resource.model.listNav.list.fileState.es6": {
+      "uri": "/static/dist/resources/views/resoucesModel/resource.model.listNav.list.fileState.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resoucesModel/resource.model.listNav.list.topBar.es6": {
+      "uri": "/static/dist/resources/views/resoucesModel/resource.model.listNav.list.topBar.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resoucesModel/resources.model.leftNav.es6": {
+      "uri": "/static/dist/resources/views/resoucesModel/resources.model.leftNav.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resoucesModel/resources.model.listNav.es6": {
+      "uri": "/static/dist/resources/views/resoucesModel/resources.model.listNav.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resoucesModel/resources.model.listNav.list.detail.es6": {
+      "uri": "/static/dist/resources/views/resoucesModel/resources.model.listNav.list.detail.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resourceFamLibs/resource.famlibs.leftNav.es6": {
+      "uri": "/static/dist/resources/views/resourceFamLibs/resource.famlibs.leftNav.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resourceFamLibs/resources.model.listNav.thum.detail.es6": {
+      "uri": "/static/dist/resources/views/resourceFamLibs/resources.model.listNav.thum.detail.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resourceFamLibs/resources.model.listNav.thum.es6": {
+      "uri": "/static/dist/resources/views/resourceFamLibs/resources.model.listNav.thum.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resources.app.es6": {
+      "uri": "/static/dist/resources/views/resources.app.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/index.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resources.crumbsNav.es6": {
+      "uri": "/static/dist/resources/views/resources.crumbsNav.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resources.nav.es6": {
+      "uri": "/static/dist/resources/views/resources.nav.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/mappingRule/resources.artifacts.qualitydetail.js": {
+      "uri": "/resources/views/resourcesArtifacts/mappingRule/resources.artifacts.qualitydetail.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/mappingRule/resources.artifacts.qualitylist.js": {
+      "uri": "/resources/views/resourcesArtifacts/mappingRule/resources.artifacts.qualitylist.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/resources.artifacts.indexnav.js": {
+      "uri": "/resources/views/resourcesArtifacts/resources.artifacts.indexnav.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/resources.artifacts.nav.js": {
+      "uri": "/resources/views/resourcesArtifacts/resources.artifacts.nav.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/resources.artifacts.projectbreadcrumb.js": {
+      "uri": "/resources/views/resourcesArtifacts/resources.artifacts.projectbreadcrumb.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/resources.tree.js": {
+      "uri": "/resources/views/resourcesArtifacts/resources.tree.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleModel/reources.artifacts.planrule.alert.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleModel/reources.artifacts.planrule.alert.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleModel/reources.artifacts.rule.legend.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleModel/reources.artifacts.rule.legend.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleModel/reources.artifacts.window.rule.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleModel/reources.artifacts.window.rule.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/member/services.member.ozDetail.js"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleModel/reources.artifacts.window.ruledetail.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleModel/reources.artifacts.window.ruledetail.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleModel/resources.artifacts.plandetail.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleModel/resources.artifacts.plandetail.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planlist.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planlist.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planrule.detail.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planrule.detail.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planrule.detailnew.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planrule.detailnew.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planrule.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planrule.js",
+      "type": "js",
+      "deps": [
+        "/resources/collection/resources.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planrule.title.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planrule.title.js",
+      "type": "js",
+      "deps": [
+        "/resources/collection/resources.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleTemplate/reources.artifacts.tempalte.alert.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleTemplate/reources.artifacts.tempalte.alert.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleTemplate/reources.artifacts.window.tpl.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleTemplate/reources.artifacts.window.tpl.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/member/services.member.ozDetail.js"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleTemplate/resources.artifacts.tpldetail.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleTemplate/resources.artifacts.tpldetail.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleTemplate/resources.artifacts.tplframe.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleTemplate/resources.artifacts.tplframe.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleTemplate/resources.artifacts.tpllist.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleTemplate/resources.artifacts.tpllist.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesArtifacts/ruleTemplate/resources.artifacts.tpllistitem.js": {
+      "uri": "/resources/views/resourcesArtifacts/ruleTemplate/resources.artifacts.tpllistitem.js",
+      "type": "js",
+      "deps": [
+        "resources/collection/resource.nav.es6"
+      ],
+      "pkg": "p54"
+    },
+    "resources/views/resourcesNav/resource.nav.famLibs.es6": {
+      "uri": "/static/dist/resources/views/resourcesNav/resource.nav.famLibs.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resourcesNav/resource.nav.qualityStandardLibs.es6": {
+      "uri": "/static/dist/resources/views/resourcesNav/resource.nav.qualityStandardLibs.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resourcesNav/resource.nav.standardlibs.es6": {
+      "uri": "/static/dist/resources/views/resourcesNav/resource.nav.standardlibs.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "resources/views/resourcesNav/resources.nav.manifestLibs.es6": {
+      "uri": "/static/dist/resources/views/resourcesNav/resources.nav.manifestLibs.js",
+      "type": "js",
+      "pkg": "p54"
+    },
+    "router/appkey.es6": {
+      "uri": "/static/dist/router/appkey.js",
+      "type": "js"
+    },
+    "router/demoEnv.js": {
+      "uri": "/static/dist/router/demoEnv.js",
+      "type": "js"
+    },
+    "router/index.js": {
+      "uri": "/static/dist/router/index.js",
+      "type": "js"
+    },
+    "services/collections/application/index.app.es6": {
+      "uri": "/static/dist/services/collections/application/index.app.js",
+      "type": "js",
+      "deps": [
+        "services/collections/index.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/collections/auth/keyUser/keyUser.js": {
+      "uri": "/services/collections/auth/keyUser/keyUser.js",
+      "type": "js",
+      "deps": [
+        "services/collections/index.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/collections/auth/member/member.list.js": {
+      "uri": "/services/collections/auth/member/member.list.js",
+      "type": "js",
+      "deps": [
+        "services/collections/index.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/collections/auth/member/services.role.fun.js": {
+      "uri": "/services/collections/auth/member/services.role.fun.js",
+      "type": "js",
+      "deps": [
+        "services/collections/index.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/collections/auth/member/services.role.js": {
+      "uri": "/services/collections/auth/member/services.role.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/role/services.role.list.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/collections/auth/projectMember/services.auth.projectMember.js": {
+      "uri": "/services/collections/auth/projectMember/services.auth.projectMember.js",
+      "type": "js",
+      "deps": [
+        "services/collections/index.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/collections/index.es6": {
+      "uri": "/static/dist/services/collections/index.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/collections/project/index.es6": {
+      "uri": "/static/dist/services/collections/project/index.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/collections/system/system.category.es6": {
+      "uri": "/static/dist/services/collections/system/system.category.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/js/alert.dialog.es6": {
+      "uri": "/static/dist/services/js/alert.dialog.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/less/application.less": {
+      "uri": "/static/dist/services/less/application.css",
+      "type": "css",
+      "pkg": "p57"
+    },
+    "services/less/auth.keyUser.less": {
+      "uri": "/static/dist/services/less/auth.keyUser.css",
+      "type": "css",
+      "pkg": "p57"
+    },
+    "services/less/auth.nav.less": {
+      "uri": "/static/dist/services/less/auth.nav.css",
+      "type": "css",
+      "pkg": "p57"
+    },
+    "services/less/auth.projectmember.less": {
+      "uri": "/static/dist/services/less/auth.projectmember.css",
+      "type": "css",
+      "pkg": "p57"
+    },
+    "services/less/feedBackAttrManager.less": {
+      "uri": "/static/dist/services/less/feedBackAttrManager.css",
+      "type": "css",
+      "pkg": "p57"
+    },
+    "services/less/index.less": {
+      "uri": "/static/dist/services/less/index.css",
+      "type": "css",
+      "pkg": "p57"
+    },
+    "services/less/log.less": {
+      "uri": "/static/dist/services/less/log.css",
+      "type": "css",
+      "pkg": "p57"
+    },
+    "services/less/noticeAttrManager.less": {
+      "uri": "/static/dist/services/less/noticeAttrManager.css",
+      "type": "css",
+      "pkg": "p57"
+    },
+    "services/less/project.less": {
+      "uri": "/static/dist/services/less/project.css",
+      "type": "css",
+      "pkg": "p57"
+    },
+    "services/less/resourceAttrManager.less": {
+      "uri": "/static/dist/services/less/resourceAttrManager.css",
+      "type": "css",
+      "pkg": "p57"
+    },
+    "services/less/system.less": {
+      "uri": "/static/dist/services/less/system.css",
+      "type": "css",
+      "pkg": "p57"
+    },
+    "services/model/model.js": {
+      "uri": "/services/model/model.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/application/index.es6": {
+      "uri": "/static/dist/services/views/application/index.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/application/index.list.detail.es6": {
+      "uri": "/static/dist/services/views/application/index.list.detail.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/application/suggest.history.js": {
+      "uri": "/services/views/application/suggest.history.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/application/suggest.view.es6": {
+      "uri": "/static/dist/services/views/application/suggest.view.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/auth/index.es6": {
+      "uri": "/static/dist/services/views/auth/index.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/index.nav.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/index.nav.es6": {
+      "uri": "/static/dist/services/views/auth/index.nav.js",
+      "type": "js",
+      "deps": [
+        "services/collections/auth/keyuser/keyuser.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/js/services.tree.js": {
+      "uri": "/services/views/auth/js/services.tree.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/member/services.member.list.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/keyUser/services.addKeyUser.fam.js": {
+      "uri": "/services/views/auth/keyUser/services.addKeyUser.fam.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/auth/keyUser/services.addKeyUser.js": {
+      "uri": "/services/views/auth/keyUser/services.addKeyUser.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/auth/keyUser/services.addKeyUser.standard.js": {
+      "uri": "/services/views/auth/keyUser/services.addKeyUser.standard.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/auth/keyUser/services.addKeyUser.step1.js": {
+      "uri": "/services/views/auth/keyUser/services.addKeyUser.step1.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/auth/keyUser/services.addKeyUser.step2.js": {
+      "uri": "/services/views/auth/keyUser/services.addKeyUser.step2.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/auth/keyUser/services.addKeyUser.step3.js": {
+      "uri": "/services/views/auth/keyUser/services.addKeyUser.step3.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/auth/keyUser/services.keyUserFrame.js": {
+      "uri": "/services/views/auth/keyUser/services.keyUserFrame.js",
+      "type": "js",
+      "deps": [
+        "services/collections/auth/keyuser/keyuser.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/keyUser/services.userinfo.js": {
+      "uri": "/services/views/auth/keyUser/services.userinfo.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/auth/member/services.member.detail.js": {
+      "uri": "/services/views/auth/member/services.member.detail.js",
+      "type": "js",
+      "deps": [
+        "services/collections/auth/member/member.list.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/member/services.member.list.js": {
+      "uri": "/services/views/auth/member/services.member.list.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/member/services.member.detail.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/member/services.member.nav.js": {
+      "uri": "/services/views/auth/member/services.member.nav.js",
+      "type": "js",
+      "deps": [
+        "/services/views/auth/member/services.member.ozList.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/member/services.member.ozdetail.js": {
+      "uri": "/services/views/auth/member/services.member.ozdetail.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/member/services.member.list.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/member/services.member.window.detail.js": {
+      "uri": "/services/views/auth/member/services.member.window.detail.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/member/services.member.detail.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/member/services.member.window.index.js": {
+      "uri": "/services/views/auth/member/services.member.window.index.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/index.nav.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/member/services.member.window.roledetail.js": {
+      "uri": "/services/views/auth/member/services.member.window.roledetail.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/index.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/member/services.member.window.rolelist.js": {
+      "uri": "/services/views/auth/member/services.member.window.rolelist.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/member/services.member.detail.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/projectMember/auth.projectMember.js": {
+      "uri": "/services/views/auth/projectMember/auth.projectMember.js",
+      "type": "js",
+      "deps": [
+        "services/collections/auth/projectMember/services.auth.projectMember.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/projectMember/auth.projectMember.members.js": {
+      "uri": "/services/views/auth/projectMember/auth.projectMember.members.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/auth/projectMember/auth.projectMember.projects.js": {
+      "uri": "/services/views/auth/projectMember/auth.projectMember.projects.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/auth/projectMember/view.comp.member.manager.js": {
+      "uri": "/services/views/auth/projectMember/view.comp.member.manager.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/auth/projectMember/view.comp.modal.js": {
+      "uri": "/services/views/auth/projectMember/view.comp.modal.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/auth/role/services.role.alert.js": {
+      "uri": "/services/views/auth/role/services.role.alert.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/member/services.member.ozDetail.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/role/services.role.detail.js": {
+      "uri": "/services/views/auth/role/services.role.detail.js",
+      "type": "js",
+      "deps": [
+        "/services/collections/auth/member/role.list.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/role/services.role.list.js": {
+      "uri": "/services/views/auth/role/services.role.list.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/role/services.role.window.index.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/role/services.role.window.fundetail.js": {
+      "uri": "/services/views/auth/role/services.role.window.fundetail.js",
+      "type": "js",
+      "deps": [
+        "/services/collections/auth/member/role.list.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/auth/role/services.role.window.index.js": {
+      "uri": "/services/views/auth/role/services.role.window.index.js",
+      "type": "js",
+      "deps": [
+        "/services/collections/auth/member/role.list.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/issue/index.es6": {
+      "uri": "/static/dist/services/views/issue/index.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/log/index.es6": {
+      "uri": "/static/dist/services/views/log/index.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/log/log.ContentMode.js": {
+      "uri": "/services/views/log/log.ContentMode.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/log/log.list.js": {
+      "uri": "/services/views/log/log.list.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/log/log.topbar.es6": {
+      "uri": "/static/dist/services/views/log/log.topbar.js",
+      "type": "js",
+      "deps": [
+        "services/views/log/index.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/log/search.js": {
+      "uri": "/services/views/log/search.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/more/services.more.detail.es6": {
+      "uri": "/static/dist/services/views/more/services.more.detail.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/more/services.more.es6": {
+      "uri": "/static/dist/services/views/more/services.more.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/more/services.moreIndex.detail.es6": {
+      "uri": "/static/dist/services/views/more/services.moreIndex.detail.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/more/services.moreIndex.es6": {
+      "uri": "/static/dist/services/views/more/services.moreIndex.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/detail.view.basehole.es6": {
+      "uri": "/static/dist/services/views/project/detail.view.basehole.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/detail.view.floor.es6": {
+      "uri": "/static/dist/services/views/project/detail.view.floor.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/detail.view.mappingrule.es6": {
+      "uri": "/static/dist/services/views/project/detail.view.mappingrule.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/detail.view.section.es6": {
+      "uri": "/static/dist/services/views/project/detail.view.section.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/image.jcrop.es6": {
+      "uri": "/static/dist/services/views/project/image.jcrop.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/index.base.es6": {
+      "uri": "/static/dist/services/views/project/index.base.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/index.detail.es6": {
+      "uri": "/static/dist/services/views/project/index.detail.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/index.es6": {
+      "uri": "/static/dist/services/views/project/index.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/index.mapping.es6": {
+      "uri": "/static/dist/services/views/project/index.mapping.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/index.project.link.es6": {
+      "uri": "/static/dist/services/views/project/index.project.link.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/project.detail.basehole.es6": {
+      "uri": "/static/dist/services/views/project/project.detail.basehole.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/project.detail.floor.es6": {
+      "uri": "/static/dist/services/views/project/project.detail.floor.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/project.detail.pile.es6": {
+      "uri": "/static/dist/services/views/project/project.detail.pile.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/project.detail.section.es6": {
+      "uri": "/static/dist/services/views/project/project.detail.section.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/project/projects.mappingrule.window.model.js": {
+      "uri": "/services/views/project/projects.mappingrule.window.model.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/member/services.member.ozDetail.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/project/projects.mappingrule.window.modeldetail.js": {
+      "uri": "/services/views/project/projects.mappingrule.window.modeldetail.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/member/services.member.ozDetail.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/system/announcement/index.es6": {
+      "uri": "/static/dist/services/views/system/announcement/index.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/announcement/NoticeAttrManagerContent.es6": {
+      "uri": "/static/dist/services/views/system/announcement/NoticeAttrManagerContent.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/announcement/NoticeAttrManagerContentDetail.es6": {
+      "uri": "/static/dist/services/views/system/announcement/NoticeAttrManagerContentDetail.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/announcement/NoticeAttrManagerTopbar.es6": {
+      "uri": "/static/dist/services/views/system/announcement/NoticeAttrManagerTopbar.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/announcement/NoticeAttrManagerTopbarNewLinkNotice.es6": {
+      "uri": "/static/dist/services/views/system/announcement/NoticeAttrManagerTopbarNewLinkNotice.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/announcement/NoticeAttrManagerTopbarNewTextNotice.es6": {
+      "uri": "/static/dist/services/views/system/announcement/NoticeAttrManagerTopbarNewTextNotice.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/announcement/previewNotice.js": {
+      "uri": "/services/views/system/announcement/previewNotice.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/announcement/previewNoticeContent.js": {
+      "uri": "/services/views/system/announcement/previewNoticeContent.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/announcement/previewNoticeTopBar.js": {
+      "uri": "/services/views/system/announcement/previewNoticeTopBar.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/category/system.category.index.es6": {
+      "uri": "/static/dist/services/views/system/category/system.category.index.js",
+      "type": "js",
+      "deps": [
+        "services/views/system/index.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/system/category/system.category.list.detail.es6": {
+      "uri": "/static/dist/services/views/system/category/system.category.list.detail.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/extendAttr/extendatrr.container.es6": {
+      "uri": "/static/dist/services/views/system/extendAttr/extendatrr.container.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/extendAttr/extendattr.container.detail.es6": {
+      "uri": "/static/dist/services/views/system/extendAttr/extendattr.container.detail.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/extendAttr/extendattr.slidebar.detail.es6": {
+      "uri": "/static/dist/services/views/system/extendAttr/extendattr.slidebar.detail.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/extendAttr/extendattr.slidebar.es6": {
+      "uri": "/static/dist/services/views/system/extendAttr/extendattr.slidebar.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/extendAttr/index.es6": {
+      "uri": "/static/dist/services/views/system/extendAttr/index.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/feedback/feedback.es6": {
+      "uri": "/static/dist/services/views/system/feedback/feedback.js",
+      "type": "js",
+      "deps": [
+        "services/views/system/index.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/system/feedback/feedBackAttrManagerContent.es6": {
+      "uri": "/static/dist/services/views/system/feedback/feedBackAttrManagerContent.js",
+      "type": "js",
+      "deps": [
+        "services/views/system/feedback/feedback.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/system/feedback/feedBackAttrManagerContentDialog.es6": {
+      "uri": "/static/dist/services/views/system/feedback/feedBackAttrManagerContentDialog.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/feedback/feedBackAttrManagerContentList.es6": {
+      "uri": "/static/dist/services/views/system/feedback/feedBackAttrManagerContentList.js",
+      "type": "js",
+      "deps": [
+        "services/views/system/feedback/feedBackAttrManagerContent.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/system/feedback/feedBackAttrManagerTopbar.es6": {
+      "uri": "/static/dist/services/views/system/feedback/feedBackAttrManagerTopbar.js",
+      "type": "js",
+      "deps": [
+        "services/views/system/feedback/feedback.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/system/flow/flow.container.es6": {
+      "uri": "/static/dist/services/views/system/flow/flow.container.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/flow/flow.container.list.detail.es6": {
+      "uri": "/static/dist/services/views/system/flow/flow.container.list.detail.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/flow/flow.index.es6": {
+      "uri": "/static/dist/services/views/system/flow/flow.index.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/flow/flow.slidebar.detail.es6": {
+      "uri": "/static/dist/services/views/system/flow/flow.slidebar.detail.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/flow/flow.slidebar.es6": {
+      "uri": "/static/dist/services/views/system/flow/flow.slidebar.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/index.es6": {
+      "uri": "/static/dist/services/views/system/index.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/resource/index.es6": {
+      "uri": "/static/dist/services/views/system/resource/index.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/resource/ResourceAttrManagerContent.es6": {
+      "uri": "/static/dist/services/views/system/resource/ResourceAttrManagerContent.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/resource/ResourceAttrManagerContentList.es6": {
+      "uri": "/static/dist/services/views/system/resource/ResourceAttrManagerContentList.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/resource/ResourceAttrManagerTopbar.es6": {
+      "uri": "/static/dist/services/views/system/resource/ResourceAttrManagerTopbar.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "services/views/system/system.topbar.es6": {
+      "uri": "/static/dist/services/views/system/system.topbar.js",
+      "type": "js",
+      "deps": [
+        "services/views/system/index.es6"
+      ],
+      "pkg": "p56"
+    },
+    "services/views/workbook/index.es6": {
+      "uri": "/static/dist/services/views/workbook/index.js",
+      "type": "js",
+      "pkg": "p56"
+    },
+    "suggest/collections/index.es6": {
+      "uri": "/static/dist/suggest/collections/index.js",
+      "type": "js",
+      "pkg": "p58"
+    },
+    "suggest/css/index.less": {
+      "uri": "/static/dist/suggest/css/index.css",
+      "type": "css",
+      "pkg": "p59"
+    },
+    "suggest/views/message.container.es6": {
+      "uri": "/static/dist/suggest/views/message.container.js",
+      "type": "js",
+      "pkg": "p58"
+    },
+    "suggest/views/message.list.es6": {
+      "uri": "/static/dist/suggest/views/message.list.js",
+      "type": "js",
+      "pkg": "p58"
+    },
+    "suggest/views/nav.js": {
+      "uri": "/suggest/views/nav.js",
+      "type": "js",
+      "pkg": "p58"
+    },
+    "todo/collections/index.js": {
+      "uri": "/todo/collections/index.js",
+      "type": "js",
+      "deps": [
+        "todo/module/todo.list.es6"
+      ],
+      "pkg": "p60"
+    },
+    "todo/css/index.less": {
+      "uri": "/static/dist/todo/css/index.css",
+      "type": "css",
+      "pkg": "p61"
+    },
+    "todo/module/todo.list.es6": {
+      "uri": "/static/dist/todo/module/todo.list.js",
+      "type": "js",
+      "pkg": "p60"
+    },
+    "todo/views/todo.list.detail.js": {
+      "uri": "/todo/views/todo.list.detail.js",
+      "type": "js",
+      "pkg": "p60"
+    },
+    "todo/views/todo.list.js": {
+      "uri": "/todo/views/todo.list.js",
+      "type": "js",
+      "pkg": "p60"
+    },
+    "todo/views/todo.Nav.js": {
+      "uri": "/todo/views/todo.Nav.js",
+      "type": "js",
+      "pkg": "p60"
+    },
+    "topNav/css/topNav.less": {
+      "uri": "/static/dist/topNav/css/topNav.css",
+      "type": "css",
+      "pkg": "p62"
+    },
+    "topNav/js/topNav.es6": {
+      "uri": "/static/dist/topNav/js/topNav.js",
+      "type": "js",
+      "pkg": "p63"
+    },
+    "userAdmin/collection/UserAdminIndexC.js": {
+      "uri": "/userAdmin/collection/UserAdminIndexC.js",
+      "type": "js",
+      "pkg": "p64"
+    },
+    "userAdmin/less/index.less": {
+      "uri": "/static/dist/userAdmin/less/index.css",
+      "type": "css",
+      "pkg": "p65"
+    },
+    "userAdmin/views/AddUserAdminDialogV.js": {
+      "uri": "/userAdmin/views/AddUserAdminDialogV.js",
+      "type": "js",
+      "pkg": "p64"
+    },
+    "userAdmin/views/AddUserAdminPrefixDialogV.js": {
+      "uri": "/userAdmin/views/AddUserAdminPrefixDialogV.js",
+      "type": "js",
+      "pkg": "p64"
+    },
+    "userAdmin/views/DeleteUserAdminListDialogV.js": {
+      "uri": "/userAdmin/views/DeleteUserAdminListDialogV.js",
+      "type": "js",
+      "pkg": "p64"
+    },
+    "userAdmin/views/DeleteUserAdminPrefixListDialogV.js": {
+      "uri": "/userAdmin/views/DeleteUserAdminPrefixListDialogV.js",
+      "type": "js",
+      "pkg": "p64"
+    },
+    "userAdmin/views/DialogProjectListV.js": {
+      "uri": "/userAdmin/views/DialogProjectListV.js",
+      "type": "js",
+      "pkg": "p64"
+    },
+    "userAdmin/views/DialogProjectPrefixListV.js": {
+      "uri": "/userAdmin/views/DialogProjectPrefixListV.js",
+      "type": "js",
+      "pkg": "p64"
+    },
+    "userAdmin/views/EditUserAdminListDialogV.js": {
+      "uri": "/userAdmin/views/EditUserAdminListDialogV.js",
+      "type": "js",
+      "pkg": "p64"
+    },
+    "userAdmin/views/EditUserAdminPrefixListDialogV.js": {
+      "uri": "/userAdmin/views/EditUserAdminPrefixListDialogV.js",
+      "type": "js",
+      "pkg": "p64"
+    },
+    "userAdmin/views/UserAdminIndexV.js": {
+      "uri": "/userAdmin/views/UserAdminIndexV.js",
+      "type": "js",
+      "pkg": "p64"
+    },
+    "userAdmin/views/UserAdminListV.js": {
+      "uri": "/userAdmin/views/UserAdminListV.js",
+      "type": "js",
+      "pkg": "p64"
+    },
+    "userAdmin/views/UserAdminPrefixListV.js": {
+      "uri": "/userAdmin/views/UserAdminPrefixListV.js",
+      "type": "js",
+      "pkg": "p64"
+    },
+    "services/views/auth/member/services.member.ozDetail.js": {
+      "uri": "/services/views/auth/member/services.member.ozDetail.js",
+      "type": "js",
+      "deps": [
+        "services/views/auth/member/services.member.list.js"
+      ],
+      "pkg": "p56"
+    },
+    "services/collections/auth/keyuser/keyuser.js": {
+      "uri": "/services/collections/auth/keyuser/keyuser.js",
+      "type": "js",
+      "deps": [
+        "services/collections/index.es6"
+      ],
+      "pkg": "p56"
+    }
+  },
+  "pkg": {
+    "p0": {
+      "uri": "/static/dist/api/api.js",
+      "type": "js",
+      "has": [
+        "api/api.js"
+      ]
+    },
+    "p1": {
+      "uri": "/static/dist/app/project/modelChange/index.js",
+      "type": "js",
+      "has": [
+        "app/project/modelChange/js/collection.js",
+        "app/project/modelChange/js/index.es6"
+      ],
+      "deps": [
+        "/app/project/modelChange/js/comm.js"
+      ]
+    },
+    "p2": {
+      "uri": "/static/dist/app/project/modelChange/index.css",
+      "type": "css",
+      "has": [
+        "app/project/modelChange/less/index.less"
+      ]
+    },
+    "p3": {
+      "uri": "/static/dist/app/project/projectChange/index.js",
+      "type": "js",
+      "has": [
+        "app/project/projectChange/es6/collection.es6",
+        "app/project/projectChange/es6/index.es6"
+      ],
+      "deps": [
+        "/app/project/modelChange/js/collection.es6"
+      ]
+    },
+    "p4": {
+      "uri": "/static/dist/app/project/projectChange/index.css",
+      "type": "css",
+      "has": [
+        "app/project/projectChange/less/index.less"
+      ]
+    },
+    "p5": {
+      "uri": "/static/dist/app/project/single/project.js",
+      "type": "js",
+      "has": [
+        "app/project/single/js/comm.js",
+        "app/project/single/js/project.es6"
+      ]
+    },
+    "p6": {
+      "uri": "/static/dist/app/project/single/project.css",
+      "type": "css",
+      "has": [
+        "app/project/single/less/project.less"
+      ]
+    },
+    "p7": {
+      "uri": "/static/dist/backStage/backStage.js",
+      "type": "js",
+      "has": [
+        "backStage/collection/index.js",
+        "backStage/view/backStageIndexV.js",
+        "backStage/view/setPermissionsAddDepartmentBoxV.js",
+        "backStage/view/setPermissionsAddDepartmentStandard_1_BoxV.js",
+        "backStage/view/setPermissionsAddDepartmentStandard_2_BoxV.js",
+        "backStage/view/setPermissionsAddDepartmentStandard_3_BoxV.js",
+        "backStage/view/setPermissionsIndexV.js",
+        "backStage/view/setPermissionsPublicBoxV.js",
+        "backStage/view/setPermissionsPublicListBoxV.js"
+      ]
+    },
+    "p8": {
+      "uri": "/static/dist/backStage/backStage.css",
+      "type": "css",
+      "has": [
+        "backStage/css/index.less"
+      ]
+    },
+    "p9": {
+      "uri": "/static/dist/libs/libsH5.js",
+      "type": "js",
+      "has": [
+        "BIMperformance/libsH5/js/bimView.js",
+        "BIMperformance/libsH5/js/API.js",
+        "BIMperformance/libsH5/js/BIM.js",
+        "BIMperformance/libsH5/js/bimView.prototype.js",
+        "BIMperformance/libsH5/js/bimview.pro.comment.es6",
+        "BIMperformance/libsH5/js/bimView.sidebar.js",
+        "BIMperformance/libsH5/js/comm.js",
+        "BIMperformance/libsH5/js/dwg.js",
+        "BIMperformance/libsH5/js/libs/three.js",
+        "BIMperformance/libsH5/js/libs/three.modify.js",
+        "BIMperformance/libsH5/js/libs/Web2d.js",
+        "BIMperformance/libsH5/js/libs/WebViewer.js"
+      ],
+      "deps": [
+        "/libsH5/js/libs/three.js",
+        "/libsH5/js/libs/WebViewer.js",
+        "/libsH5/js/libs/three.min.js"
+      ]
+    },
+    "p10": {
+      "uri": "/static/dist/BIMperformance/projects.js",
+      "type": "js",
+      "has": [
+        "BIMperformance/projects/views/project/project.container.es6",
+        "BIMperformance/projects/collections/index.js",
+        "BIMperformance/projects/collections/Project.es6",
+        "BIMperformance/projects/collections/project.cost.attr.js",
+        "BIMperformance/projects/collections/project.design.attr.js",
+        "BIMperformance/projects/collections/project.plan.attr.es6",
+        "BIMperformance/projects/collections/project.quality.attr.js",
+        "BIMperformance/projects/collections/project.share.es6",
+        "BIMperformance/projects/collections/project.viewpoint.attr.es6",
+        "BIMperformance/projects/js/comm.docUpload.js",
+        "BIMperformance/projects/views/project.ContentMode.js",
+        "BIMperformance/projects/views/project.displayMode.js",
+        "BIMperformance/projects/views/project.list.js",
+        "BIMperformance/projects/views/project.map.js",
+        "BIMperformance/projects/views/project.search.js",
+        "BIMperformance/projects/views/project/cost/project.cost.property.change.es6",
+        "BIMperformance/projects/views/project/cost/project.cost.property.es6",
+        "BIMperformance/projects/views/project/cost/project.cost.property.properties.es6",
+        "BIMperformance/projects/views/project/cost/project.cost.property.reference.es6",
+        "BIMperformance/projects/views/project/cost/project.cost.property.verification.es6",
+        "BIMperformance/projects/views/project/design/project.design.collision.detail.es6",
+        "BIMperformance/projects/views/project/design/project.design.collision.taskList.es6",
+        "BIMperformance/projects/views/project/design/project.design.collison.files.es6",
+        "BIMperformance/projects/views/project/design/project.design.collison.setting.es6",
+        "BIMperformance/projects/views/project/design/project.design.property.collision.es6",
+        "BIMperformance/projects/views/project/design/project.design.property.es6",
+        "BIMperformance/projects/views/project/design/project.design.property.properties.es6",
+        "BIMperformance/projects/views/project/design/project.design.property.treeView.es6",
+        "BIMperformance/projects/views/project/design/project.design.property.verification.es6",
+        "BIMperformance/projects/views/project/design/project.design.view.setting.es6",
+        "BIMperformance/projects/views/project/plan/project.plan.property.es6",
+        "BIMperformance/projects/views/project/plan/project.plan.property.planAnalog.es6",
+        "BIMperformance/projects/views/project/plan/project.plan.property.planInspection.es6",
+        "BIMperformance/projects/views/project/plan/project.plan.property.planModel.es6",
+        "BIMperformance/projects/views/project/plan/project.plan.property.planProperties.es6",
+        "BIMperformance/projects/views/project/plan/project.plan.property.planPublicity.es6",
+        "BIMperformance/projects/views/project/project.app.js",
+        "BIMperformance/projects/views/project/project.container.file.detail.es6",
+        "BIMperformance/projects/views/project/project.container.file.es6",
+        "BIMperformance/projects/views/project/project.container.file.status.es6",
+        "BIMperformance/projects/views/project/project.leftNav.es6",
+        "BIMperformance/projects/views/project/quality/project.quality.property.concerns.es6",
+        "BIMperformance/projects/views/project/quality/project.quality.property.es6",
+        "BIMperformance/projects/views/project/quality/project.quality.property.materialEquipment.es6",
+        "BIMperformance/projects/views/project/quality/project.quality.property.openingAcceptance.es6",
+        "BIMperformance/projects/views/project/quality/project.quality.property.process.disease.es6",
+        "BIMperformance/projects/views/project/quality/project.quality.property.processAcceptance.es6",
+        "BIMperformance/projects/views/project/quality/project.quality.property.properties.es6"
+      ],
+      "deps": [
+        "/BIMperformance/projects/collections/Project.js"
+      ]
+    },
+    "p11": {
+      "uri": "/static/dist/BIMperformance/projects.css",
+      "type": "css",
+      "has": [
+        "BIMperformance/projects/less/collision.less",
+        "BIMperformance/projects/less/index.less",
+        "BIMperformance/projects/less/nullPage.less",
+        "BIMperformance/projects/less/project.less"
+      ]
+    },
+    "p12": {
+      "uri": "/static/dist/bodyContent/bodyContent.css",
+      "type": "css",
+      "has": [
+        "bodyContent/css/bodyContent_ie8.less",
+        "bodyContent/css/bodyContent.less",
+        "bodyContent/css/bottomBar.less",
+        "bodyContent/css/layui.less"
+      ]
+    },
+    "p13": {
+      "uri": "/static/dist/bodyContent/bodyContent.js",
+      "type": "js",
+      "has": [
+        "bodyContent/js/model/model.js",
+        "bodyContent/js/app.js",
+        "bodyContent/js/views/todolist.js",
+        "bodyContent/js/collections/index.js",
+        "bodyContent/js/views/body.content.tip.dialog.js",
+        "bodyContent/js/views/donelist.js",
+        "bodyContent/js/views/monthEnd.js",
+        "bodyContent/js/views/monthendlist.js",
+        "bodyContent/js/views/monthStart.js",
+        "bodyContent/js/views/monthstartlist.js",
+        "bodyContent/js/views/post.detail.js",
+        "bodyContent/js/views/proclamation.js",
+        "bodyContent/js/views/proclamationlist.js",
+        "bodyContent/js/views/slide.js",
+        "bodyContent/js/views/slidelist.js",
+        "bodyContent/js/views/todos.js"
+      ],
+      "deps": [
+        "/bodyContent/js/view/todos.js",
+        "/bodyContent/js/view/monthEnd.js",
+        "/bodyContent/js/view/proclamation.js",
+        "/bodyContent/js/view/slide.js"
+      ]
+    },
+    "p14": {
+      "uri": "/static/dist/comm/comm_20160313.css",
+      "type": "css",
+      "has": [
+        "comm/css/comm.less",
+        "comm/css/comment.less",
+        "comm/css/Font-Awesome-3.2.1/css/font-awesome-ie7.css",
+        "comm/css/Font-Awesome-3.2.1/css/font-awesome.css",
+        "comm/css/model.less",
+        "comm/css/module.dialog.css",
+        "comm/css/myIcon.less",
+        "comm/css/reset.less",
+        "comm/css/treeView.less",
+        "comm/pluging/at/css/at.less",
+        "comm/pluging/confirm/confirm.less",
+        "comm/pluging/jcrop/css/jquery.Jcrop.min.css",
+        "comm/pluging/jqueryPluploadQueue/css/jquery.plupload.queue.css",
+        "comm/pluging/lightbox/css/lightbox.css",
+        "comm/pluging/mmhSlider/jquery.mmh.slider.css",
+        "comm/pluging/myDropDown/less/myDropDown.less",
+        "comm/pluging/ztree-3/css/metroStyle/metroStyle.css"
+      ]
+    },
+    "p15": {
+      "uri": "/static/dist/comm/comm_20160313.js",
+      "type": "js",
+      "has": [
+        "comm/js/comm.i18n.es6",
+        "comm/js/comm.es6",
+        "comm/js/auth.config.es6",
+        "comm/js/collections/treeView.js",
+        "comm/js/collections/treeViewMar.es6",
+        "comm/js/comm.extends.es6",
+        "comm/js/comm.project.es6",
+        "comm/js/modules/comm.module.util.js",
+        "comm/js/modules/module.dialog.js",
+        "comm/pluging/at/js/at.es6",
+        "comm/pluging/confirm/confirm.es6",
+        "comm/pluging/jcrop/js/jquery.Jcrop.min.js",
+        "comm/pluging/jquery/jquery.contextMenu .js",
+        "comm/pluging/jqueryPluploadQueue/comm.upload.js",
+        "comm/pluging/jqueryPluploadQueue/jquery.plupload.queue.js",
+        "comm/pluging/lightbox/js/lightbox.js",
+        "comm/pluging/mmhMask/jquery.mmhmask.js",
+        "comm/pluging/mmhSlider/jquery.mmh.slider.js",
+        "comm/pluging/myDropDown/js/myDropDown.es6",
+        "comm/pluging/myRadioCk/myRadioCk.js",
+        "comm/pluging/tip.js",
+        "comm/pluging/ZeroClipboard/ZeroClipboard.js",
+        "comm/pluging/ztree-3/js/jquery.ztree.core.min.js",
+        "comm/pluging/ztree-3/js/jquery.ztree.exedit.min.js"
+      ],
+      "deps": [
+        "/libs/jquery-1.12.0.min.js"
+      ]
+    },
+    "p16": {
+      "uri": "/static/dist/commH5/commH5.js",
+      "type": "js",
+      "has": [
+        "commH5/pluging/clipboard/clipboard.js"
+      ]
+    },
+    "p17": {
+      "uri": "/static/dist/commNew/commNew.js",
+      "type": "js",
+      "has": [
+        "commNew/js/comm.es6",
+        "commNew/js/auth.config.es6",
+        "commNew/js/collections/treeView.js",
+        "commNew/js/collections/treeViewMar.es6",
+        "commNew/js/comm.extends.es6",
+        "commNew/js/comm.project.es6",
+        "commNew/js/modules/comm.module.util.js",
+        "commNew/js/modules/module.dialog.js",
+        "commNew/pluging/at/js/at.es6",
+        "commNew/pluging/confirm/confirm.es6",
+        "commNew/pluging/jcrop/js/jquery.Jcrop.min.js",
+        "commNew/pluging/jquery/jquery.contextMenu .js",
+        "commNew/pluging/jqueryPluploadQueue/comm.upload.js",
+        "commNew/pluging/jqueryPluploadQueue/jquery.plupload.queue.js",
+        "commNew/pluging/lightbox/js/lightbox.js",
+        "commNew/pluging/mmhMask/jquery.mmhmask.js",
+        "commNew/pluging/mmhSlider/jquery.mmh.slider.js",
+        "commNew/pluging/myDropDown/js/myDropDown.es6",
+        "commNew/pluging/myRadioCk/myRadioCk.js",
+        "commNew/pluging/tip.js",
+        "commNew/pluging/ZeroClipboard/ZeroClipboard.js",
+        "commNew/pluging/ztree-3/js/jquery.ztree.core.min.js",
+        "commNew/pluging/ztree-3/js/jquery.ztree.exedit.min.js"
+      ],
+      "deps": [
+        "/libs/jquery-1.12.0.min.js"
+      ]
+    },
+    "p18": {
+      "uri": "/static/dist/components/device/js/device.js",
+      "type": "js",
+      "has": [
+        "components/device/libs/underscore.1.8.2.js",
+        "components/device/libs/jquery-1.12.0.min.js",
+        "components/device/libs/backbone.1.1.2.js",
+        "components/device/libs/mock-min.js",
+        "components/device/libs/jquery.pagination.js",
+        "components/device/libs/jquery.nicescroll.min.js",
+        "components/device/js/index.js"
+      ]
+    },
+    "p19": {
+      "uri": "/static/dist/components/device/css/device.css",
+      "type": "css",
+      "has": [
+        "components/device/less/comm.extend.less",
+        "components/device/less/index.less",
+        "components/device/libs/pagination.css"
+      ]
+    },
+    "p20": {
+      "uri": "/static/dist/components/fileSelection/js/fileSelection.js",
+      "type": "js",
+      "has": [
+        "components/fileSelection/es6/fileSelection.es6"
+      ]
+    },
+    "p21": {
+      "uri": "/static/dist/components/fileSelection/css/fileSelection.css",
+      "type": "css",
+      "has": [
+        "components/fileSelection/less/fileSelection.less"
+      ],
+      "deps": [
+        "/components/less/reset.less"
+      ]
+    },
+    "p22": {
+      "uri": "/static/dist/components/inspectSelectionNew/js/inspectSelection.js",
+      "type": "js",
+      "has": [
+        "components/inspectSelectionNew/libs/underscore.1.8.2.js",
+        "components/inspectSelectionNew/libs/jquery-1.12.0.min.js",
+        "components/inspectSelectionNew/libs/backbone.1.1.2.js",
+        "components/inspectSelectionNew/js/inspectSelection.js"
+      ]
+    },
+    "p23": {
+      "uri": "/static/dist/components/inspectSelectionNew/css/inspectSelection.css",
+      "type": "css",
+      "has": [
+        "components/inspectSelectionNew/less/comm.extend.less",
+        "components/inspectSelectionNew/less/style.less"
+      ]
+    },
+    "p24": {
+      "uri": "/static/dist/components/modelSelection/js/modelSelection.js",
+      "type": "js",
+      "has": [
+        "components/modelSelection/js/modelSelection.js",
+        "components/modelSelection/libs/jquery-1.12.0.min.js",
+        "components/modelSelection/libs/underscore.1.8.2.js"
+      ]
+    },
+    "p25": {
+      "uri": "/static/dist/components/points/less/index.css",
+      "type": "css",
+      "has": [
+        "components/points/less/style.less"
+      ]
+    },
+    "p26": {
+      "uri": "/static/dist/components/points/libs/libs.js",
+      "type": "js",
+      "has": [
+        "components/points/libs/a_jquery-1.12.0.min.js",
+        "components/points/libs/b_underscore.1.8.2.js",
+        "components/points/libs/c_backbone.1.1.2.js"
+      ]
+    },
+    "p27": {
+      "uri": "/static/dist/console/console.css",
+      "type": "css",
+      "has": [
+        "console/css/console.less"
+      ]
+    },
+    "p28": {
+      "uri": "/static/dist/console/console.js",
+      "type": "js",
+      "has": [
+        "console/js/console.es6"
+      ]
+    },
+    "p29": {
+      "uri": "/static/dist/console1/console.css",
+      "type": "css",
+      "has": [
+        "console1/css/console.less"
+      ]
+    },
+    "p30": {
+      "uri": "/static/dist/console1/console.js",
+      "type": "js",
+      "has": [
+        "console1/js/console.es6",
+        "console1/js/fileApi/FileApi.js"
+      ]
+    },
+    "p31": {
+      "uri": "/static/dist/feedBackAdmin/feedBackAdmin.js",
+      "type": "js",
+      "has": [
+        "feedBackAdmin/collections/index.js",
+        "feedBackAdmin/views/FeedBackContainer.ListDomV.js",
+        "feedBackAdmin/views/FeedBackContainerV.js"
+      ]
+    },
+    "p32": {
+      "uri": "/static/dist/feedBackAdmin/feedBackAdmin.css",
+      "type": "css",
+      "has": [
+        "feedBackAdmin/less/index.less"
+      ]
+    },
+    "p33": {
+      "uri": "/static/dist/flow/flow.js",
+      "type": "js",
+      "has": [
+        "flow/collections/index.es6",
+        "flow/views/flow.container.adminBasi.es6",
+        "flow/views/flow.container.adminBasi.page.es6",
+        "flow/views/flow.container.es6",
+        "flow/views/flow.container.key.detail.es6",
+        "flow/views/flow.container.key.es6",
+        "flow/views/flow.content.es6",
+        "flow/views/flow.dialog.es6",
+        "flow/views/flow.nav.es6",
+        "flow/views/flow.WelcomeView.es6"
+      ]
+    },
+    "p34": {
+      "uri": "/static/dist/flow/flow.css",
+      "type": "css",
+      "has": [
+        "flow/less/flow.less"
+      ]
+    },
+    "p35": {
+      "uri": "/static/dist/imbox/imbox.js",
+      "type": "js",
+      "has": [
+        "imbox/collections/index.es6",
+        "imbox/views/message.container.es6",
+        "imbox/views/message.list.es6",
+        "imbox/views/nav.js"
+      ]
+    },
+    "p36": {
+      "uri": "/static/dist/imbox/imbox.css",
+      "type": "css",
+      "has": [
+        "imbox/css/index.less"
+      ]
+    },
+    "p37": {
+      "uri": "/static/dist/libs/commLib.js",
+      "type": "js",
+      "has": [
+        "libs/underscore.1.8.2.js",
+        "libs/backbone.1.1.2.js",
+        "libs/bootstrap/bootstrap-3.3.5/js/bootstrap.js",
+        "libs/bootstrap/datetimepicker/js/bootstrap-datetimepicker.js",
+        "libs/bootstrap/datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js",
+        "libs/doT.js",
+        "libs/jquery-i18next-master/i18next.min.js",
+        "libs/jquery-i18next-master/jquery-i18next.js",
+        "libs/jquery/base64.js",
+        "libs/jquery/jquery-ui.min.js",
+        "libs/jquery/jquery.mCustomScrollbar.js",
+        "libs/jquery/jquery.mousewheel.min.js",
+        "libs/json2.js",
+        "libs/pagination/jquery.pagination.js",
+        "libs/plupload/plupload.js",
+        "libs/plupload/i18n/zh.js",
+        "libs/plupload/plupload.flash.js",
+        "libs/plupload/plupload.html5.js",
+        "libs/thirdparty/aes5-shim.min.js",
+        "libs/thirdparty/console-polyfill.js",
+        "libs/thirdparty/es5-sham.min.js"
+      ],
+      "deps": [
+        "/libs/bootstrap/js/bootstrap.js",
+        "libs/jquery/jquery-1.12.0.min.js",
+        "/libs/thirdparth/es5-shim.min.js"
+      ]
+    },
+    "p38": {
+      "uri": "/static/dist/libs/commLibCss.css",
+      "type": "css",
+      "has": [
+        "libs/bootstrap/bootstrap-3.3.5/css/bootstrap-theme.css",
+        "libs/bootstrap/bootstrap-3.3.5/css/bootstrap.css",
+        "libs/bootstrap/datetimepicker/css/bootstrap-datetimepicker.css",
+        "libs/jquery/jquery.mCustomScrollbar.css",
+        "libs/pagination/pagination.css"
+      ]
+    },
+    "p39": {
+      "uri": "/static/dist/libs/i18n-en.css",
+      "type": "css",
+      "has": [
+        "libs/jquery-i18next-master/i18n-en.less"
+      ]
+    },
+    "p40": {
+      "uri": "/static/dist/login/jquery-1.12.0.min.js",
+      "type": "js",
+      "has": [
+        "libs/jquery/jquery-1.12.0.min.js"
+      ]
+    },
+    "p41": {
+      "uri": "/static/dist/libs/libsH5_20160313.css",
+      "type": "css",
+      "has": [
+        "libsH5/css/bimview.pro.comment.less",
+        "libsH5/css/dwg.comment.less",
+        "libsH5/css/fonts/iconfont.css",
+        "libsH5/css/modelStyle.less"
+      ]
+    },
+    "p42": {
+      "uri": "/static/dist/login/login.css",
+      "type": "css",
+      "has": [
+        "login/css/login.less"
+      ]
+    },
+    "p43": {
+      "uri": "/static/dist/login/login.js",
+      "type": "js",
+      "has": [
+        "login/js/jquery-1.12.0.min.js",
+        "login/js/login.es6"
+      ]
+    },
+    "p44": {
+      "uri": "/static/dist/meeting/meeting.js",
+      "type": "js",
+      "has": [
+        "meeting/meeting.js"
+      ]
+    },
+    "p45": {
+      "uri": "/static/dist/notice/notice.js",
+      "type": "js",
+      "has": [
+        "notice/collection/index.js",
+        "notice/view/App.Notice.NoticeListDetailView.js",
+        "notice/view/App.Notice.NoticeListView.js"
+      ]
+    },
+    "p46": {
+      "uri": "/static/dist/notice/notice.css",
+      "type": "css",
+      "has": [
+        "notice/css/index.less"
+      ]
+    },
+    "p47": {
+      "uri": "/static/dist/projects/projects.js",
+      "type": "js",
+      "has": [
+        "projects/collections/index.js",
+        "projects/collections/Project.es6",
+        "projects/collections/project.cost.attr.js",
+        "projects/collections/project.design.attr.js",
+        "projects/collections/project.notes.es6",
+        "projects/collections/project.plan.attr.es6",
+        "projects/collections/project.quality.attr.js",
+        "projects/collections/project.share.es6",
+        "projects/collections/project.viewpoint.attr.es6",
+        "projects/js/comm.docUpload.js",
+        "projects/views/project.ContentMode.js",
+        "projects/views/project.displayMode.js",
+        "projects/views/project.list.js",
+        "projects/views/project.map.js",
+        "projects/views/project.search.js",
+        "projects/views/project/cost/project.cost.property.change.es6",
+        "projects/views/project/cost/project.cost.property.es6",
+        "projects/views/project/cost/project.cost.property.properties.es6",
+        "projects/views/project/cost/project.cost.property.reference.es6",
+        "projects/views/project/cost/project.cost.property.verification.es6",
+        "projects/views/project/design/project.design.collision.detail.es6",
+        "projects/views/project/design/project.design.collision.taskList.es6",
+        "projects/views/project/design/project.design.collison.files.es6",
+        "projects/views/project/design/project.design.collison.setting.es6",
+        "projects/views/project/design/project.design.property.collision.es6",
+        "projects/views/project/design/project.design.property.es6",
+        "projects/views/project/design/project.design.property.properties.es6",
+        "projects/views/project/design/project.design.property.treeView.es6",
+        "projects/views/project/design/project.design.property.verification.es6",
+        "projects/views/project/design/project.design.view.setting.es6",
+        "projects/views/project/notes/notes.add.comment.view.es6",
+        "projects/views/project/notes/notes.comment.add.model.view.es6",
+        "projects/views/project/notes/notes.comment.list.component.view.es6",
+        "projects/views/project/notes/notes.comment.list.view.es6",
+        "projects/views/project/notes/notes.list.component.view.es6",
+        "projects/views/project/notes/notes.list.dom.view.es6",
+        "projects/views/project/notes/notes.list.to.me.view.es6",
+        "projects/views/project/notes/notes.list.view.es6",
+        "projects/views/project/notes/notes.search.condition.js",
+        "projects/views/project/plan/project.plan.property.es6",
+        "projects/views/project/plan/project.plan.property.planAnalog.es6",
+        "projects/views/project/plan/project.plan.property.planInspection.es6",
+        "projects/views/project/plan/project.plan.property.planModel.es6",
+        "projects/views/project/plan/project.plan.property.planProperties.es6",
+        "projects/views/project/plan/project.plan.property.planPublicity.es6",
+        "projects/views/project/project.app.js",
+        "projects/views/project/project.container.es6",
+        "projects/views/project/project.container.file.detail.es6",
+        "projects/views/project/project.container.file.es6",
+        "projects/views/project/project.container.file.status.es6",
+        "projects/views/project/project.leftNav.es6",
+        "projects/views/project/quality/project.quality.property.concerns.es6",
+        "projects/views/project/quality/project.quality.property.es6",
+        "projects/views/project/quality/project.quality.property.materialEquipment.es6",
+        "projects/views/project/quality/project.quality.property.openingAcceptance.es6",
+        "projects/views/project/quality/project.quality.property.process.disease.es6",
+        "projects/views/project/quality/project.quality.property.processAcceptance.es6",
+        "projects/views/project/quality/project.quality.property.properties.es6"
+      ],
+      "deps": [
+        "/projects/collections/Project.js"
+      ]
+    },
+    "p48": {
+      "uri": "/static/dist/projects/projects.css",
+      "type": "css",
+      "has": [
+        "projects/less/collision.less",
+        "projects/less/index.less",
+        "projects/less/nullPage.less",
+        "projects/less/project.less"
+      ]
+    },
+    "p49": {
+      "uri": "/static/dist/qualityFill/css/quality.css",
+      "type": "css",
+      "has": [
+        "qualityFill/css/qualityFill.css"
+      ]
+    },
+    "p50": {
+      "uri": "/static/dist/qualityFill/js/jquery.jedate.js",
+      "type": "js",
+      "has": [
+        "qualityFill/js/jquery.jedate.js"
+      ]
+    },
+    "p51": {
+      "uri": "/static/dist/qualityFill/js/template.min.js",
+      "type": "js",
+      "has": [
+        "qualityFill/js/template.min.js"
+      ]
+    },
+    "p52": {
+      "uri": "/static/dist/qualityFill/js/wDialog.min.js",
+      "type": "js",
+      "has": [
+        "qualityFill/js/wDialog.min.js"
+      ]
+    },
+    "p53": {
+      "uri": "/static/dist/qualityFill/js/zebra_datepicker.js",
+      "type": "js",
+      "has": [
+        "qualityFill/js/zebra_datepicker.js"
+      ]
+    },
+    "p54": {
+      "uri": "/static/dist/resources/resources.js",
+      "type": "js",
+      "has": [
+        "resources/collection/index.es6",
+        "resources/collection/resource.artifacts.es6",
+        "resources/collection/resource.famlibs.es6",
+        "resources/collection/resource.model.es6",
+        "resources/collection/resource.nav.es6",
+        "resources/collection/resource.upload.js",
+        "resources/views/resoucesModel/resouces.model.app.es6",
+        "resources/views/resoucesModel/resource.model.listNav.list.es6",
+        "resources/views/resoucesModel/resource.model.listNav.list.fileState.es6",
+        "resources/views/resoucesModel/resource.model.listNav.list.topBar.es6",
+        "resources/views/resoucesModel/resources.model.leftNav.es6",
+        "resources/views/resoucesModel/resources.model.listNav.es6",
+        "resources/views/resoucesModel/resources.model.listNav.list.detail.es6",
+        "resources/views/resourceFamLibs/resource.famlibs.leftNav.es6",
+        "resources/views/resourceFamLibs/resources.model.listNav.thum.detail.es6",
+        "resources/views/resourceFamLibs/resources.model.listNav.thum.es6",
+        "resources/views/resources.app.es6",
+        "resources/views/resources.crumbsNav.es6",
+        "resources/views/resources.nav.es6",
+        "resources/views/resourcesArtifacts/mappingRule/resources.artifacts.qualitydetail.js",
+        "resources/views/resourcesArtifacts/mappingRule/resources.artifacts.qualitylist.js",
+        "resources/views/resourcesArtifacts/resources.artifacts.indexnav.js",
+        "resources/views/resourcesArtifacts/resources.artifacts.nav.js",
+        "resources/views/resourcesArtifacts/resources.artifacts.projectbreadcrumb.js",
+        "resources/views/resourcesArtifacts/resources.tree.js",
+        "resources/views/resourcesArtifacts/ruleModel/reources.artifacts.planrule.alert.js",
+        "resources/views/resourcesArtifacts/ruleModel/reources.artifacts.rule.legend.js",
+        "resources/views/resourcesArtifacts/ruleModel/reources.artifacts.window.rule.js",
+        "resources/views/resourcesArtifacts/ruleModel/reources.artifacts.window.ruledetail.js",
+        "resources/views/resourcesArtifacts/ruleModel/resources.artifacts.plandetail.js",
+        "resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planlist.js",
+        "resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planrule.detail.js",
+        "resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planrule.detailnew.js",
+        "resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planrule.js",
+        "resources/views/resourcesArtifacts/ruleModel/resources.artifacts.planrule.title.js",
+        "resources/views/resourcesArtifacts/ruleTemplate/reources.artifacts.tempalte.alert.js",
+        "resources/views/resourcesArtifacts/ruleTemplate/reources.artifacts.window.tpl.js",
+        "resources/views/resourcesArtifacts/ruleTemplate/resources.artifacts.tpldetail.js",
+        "resources/views/resourcesArtifacts/ruleTemplate/resources.artifacts.tplframe.js",
+        "resources/views/resourcesArtifacts/ruleTemplate/resources.artifacts.tpllist.js",
+        "resources/views/resourcesArtifacts/ruleTemplate/resources.artifacts.tpllistitem.js",
+        "resources/views/resourcesNav/resource.nav.famLibs.es6",
+        "resources/views/resourcesNav/resource.nav.qualityStandardLibs.es6",
+        "resources/views/resourcesNav/resource.nav.standardlibs.es6",
+        "resources/views/resourcesNav/resources.nav.manifestLibs.es6"
+      ],
+      "deps": [
+        "services/views/auth/member/services.member.ozDetail.js",
+        "/resources/collection/resources.nav.es6"
+      ]
+    },
+    "p55": {
+      "uri": "/static/dist/resources/resources.css",
+      "type": "css",
+      "has": [
+        "resources/less/artifacts.less",
+        "resources/less/FamLibs.less",
+        "resources/less/index.less"
+      ]
+    },
+    "p56": {
+      "uri": "/static/dist/services/services.js",
+      "type": "js",
+      "has": [
+        "services/collections/index.es6",
+        "services/collections/application/index.app.es6",
+        "services/collections/auth/keyUser/keyUser.js",
+        "services/collections/auth/member/member.list.js",
+        "services/collections/auth/member/services.role.fun.js",
+        "services/views/auth/role/services.role.window.index.js",
+        "services/views/auth/role/services.role.list.js",
+        "services/collections/auth/member/services.role.js",
+        "services/collections/auth/projectMember/services.auth.projectMember.js",
+        "services/collections/project/index.es6",
+        "services/collections/system/system.category.es6",
+        "services/js/alert.dialog.es6",
+        "services/model/model.js",
+        "services/views/application/index.es6",
+        "services/views/application/index.list.detail.es6",
+        "services/views/application/suggest.history.js",
+        "services/views/application/suggest.view.es6",
+        "services/collections/auth/keyuser/keyuser.js",
+        "services/views/auth/index.nav.es6",
+        "services/views/auth/index.es6",
+        "services/views/auth/member/services.member.detail.js",
+        "services/views/auth/member/services.member.list.js",
+        "services/views/auth/js/services.tree.js",
+        "services/views/auth/keyUser/services.addKeyUser.fam.js",
+        "services/views/auth/keyUser/services.addKeyUser.js",
+        "services/views/auth/keyUser/services.addKeyUser.standard.js",
+        "services/views/auth/keyUser/services.addKeyUser.step1.js",
+        "services/views/auth/keyUser/services.addKeyUser.step2.js",
+        "services/views/auth/keyUser/services.addKeyUser.step3.js",
+        "services/views/auth/keyUser/services.keyUserFrame.js",
+        "services/views/auth/keyUser/services.userinfo.js",
+        "services/views/auth/member/services.member.nav.js",
+        "services/views/auth/member/services.member.ozdetail.js",
+        "services/views/auth/member/services.member.window.detail.js",
+        "services/views/auth/member/services.member.window.index.js",
+        "services/views/auth/member/services.member.window.roledetail.js",
+        "services/views/auth/member/services.member.window.rolelist.js",
+        "services/views/auth/projectMember/auth.projectMember.js",
+        "services/views/auth/projectMember/auth.projectMember.members.js",
+        "services/views/auth/projectMember/auth.projectMember.projects.js",
+        "services/views/auth/projectMember/view.comp.member.manager.js",
+        "services/views/auth/projectMember/view.comp.modal.js",
+        "services/views/auth/member/services.member.ozDetail.js",
+        "services/views/auth/role/services.role.alert.js",
+        "services/views/auth/role/services.role.detail.js",
+        "services/views/auth/role/services.role.window.fundetail.js",
+        "services/views/issue/index.es6",
+        "services/views/log/index.es6",
+        "services/views/log/log.ContentMode.js",
+        "services/views/log/log.list.js",
+        "services/views/log/log.topbar.es6",
+        "services/views/log/search.js",
+        "services/views/more/services.more.detail.es6",
+        "services/views/more/services.more.es6",
+        "services/views/more/services.moreIndex.detail.es6",
+        "services/views/more/services.moreIndex.es6",
+        "services/views/project/detail.view.basehole.es6",
+        "services/views/project/detail.view.floor.es6",
+        "services/views/project/detail.view.mappingrule.es6",
+        "services/views/project/detail.view.section.es6",
+        "services/views/project/image.jcrop.es6",
+        "services/views/project/index.base.es6",
+        "services/views/project/index.detail.es6",
+        "services/views/project/index.es6",
+        "services/views/project/index.mapping.es6",
+        "services/views/project/index.project.link.es6",
+        "services/views/project/project.detail.basehole.es6",
+        "services/views/project/project.detail.floor.es6",
+        "services/views/project/project.detail.pile.es6",
+        "services/views/project/project.detail.section.es6",
+        "services/views/project/projects.mappingrule.window.model.js",
+        "services/views/project/projects.mappingrule.window.modeldetail.js",
+        "services/views/system/announcement/index.es6",
+        "services/views/system/announcement/NoticeAttrManagerContent.es6",
+        "services/views/system/announcement/NoticeAttrManagerContentDetail.es6",
+        "services/views/system/announcement/NoticeAttrManagerTopbar.es6",
+        "services/views/system/announcement/NoticeAttrManagerTopbarNewLinkNotice.es6",
+        "services/views/system/announcement/NoticeAttrManagerTopbarNewTextNotice.es6",
+        "services/views/system/announcement/previewNotice.js",
+        "services/views/system/announcement/previewNoticeContent.js",
+        "services/views/system/announcement/previewNoticeTopBar.js",
+        "services/views/system/index.es6",
+        "services/views/system/category/system.category.index.es6",
+        "services/views/system/category/system.category.list.detail.es6",
+        "services/views/system/extendAttr/extendatrr.container.es6",
+        "services/views/system/extendAttr/extendattr.container.detail.es6",
+        "services/views/system/extendAttr/extendattr.slidebar.detail.es6",
+        "services/views/system/extendAttr/extendattr.slidebar.es6",
+        "services/views/system/extendAttr/index.es6",
+        "services/views/system/feedback/feedback.es6",
+        "services/views/system/feedback/feedBackAttrManagerContent.es6",
+        "services/views/system/feedback/feedBackAttrManagerContentDialog.es6",
+        "services/views/system/feedback/feedBackAttrManagerContentList.es6",
+        "services/views/system/feedback/feedBackAttrManagerTopbar.es6",
+        "services/views/system/flow/flow.container.es6",
+        "services/views/system/flow/flow.container.list.detail.es6",
+        "services/views/system/flow/flow.index.es6",
+        "services/views/system/flow/flow.slidebar.detail.es6",
+        "services/views/system/flow/flow.slidebar.es6",
+        "services/views/system/resource/index.es6",
+        "services/views/system/resource/ResourceAttrManagerContent.es6",
+        "services/views/system/resource/ResourceAttrManagerContentList.es6",
+        "services/views/system/resource/ResourceAttrManagerTopbar.es6",
+        "services/views/system/system.topbar.es6",
+        "services/views/workbook/index.es6"
+      ],
+      "deps": [
+        "/services/collections/auth/member/role.list.js",
+        "/services/views/auth/member/services.member.ozList.js"
+      ]
+    },
+    "p57": {
+      "uri": "/static/dist/services/services.css",
+      "type": "css",
+      "has": [
+        "services/less/application.less",
+        "services/less/auth.keyUser.less",
+        "services/less/auth.nav.less",
+        "services/less/auth.projectmember.less",
+        "services/less/feedBackAttrManager.less",
+        "services/less/index.less",
+        "services/less/log.less",
+        "services/less/noticeAttrManager.less",
+        "services/less/project.less",
+        "services/less/resourceAttrManager.less",
+        "services/less/system.less"
+      ]
+    },
+    "p58": {
+      "uri": "/static/dist/suggest/suggest.js",
+      "type": "js",
+      "has": [
+        "suggest/collections/index.es6",
+        "suggest/views/message.container.es6",
+        "suggest/views/message.list.es6",
+        "suggest/views/nav.js"
+      ]
+    },
+    "p59": {
+      "uri": "/static/dist/suggest/suggest.css",
+      "type": "css",
+      "has": [
+        "suggest/css/index.less"
+      ]
+    },
+    "p60": {
+      "uri": "/static/dist/todo/todo.js",
+      "type": "js",
+      "has": [
+        "todo/module/todo.list.es6",
+        "todo/collections/index.js",
+        "todo/views/todo.list.detail.js",
+        "todo/views/todo.list.js",
+        "todo/views/todo.Nav.js"
+      ]
+    },
+    "p61": {
+      "uri": "/static/dist/todo/todo.css",
+      "type": "css",
+      "has": [
+        "todo/css/index.less"
+      ]
+    },
+    "p62": {
+      "uri": "/static/dist/topNav/css/topNav.css",
+      "type": "css",
+      "has": [
+        "topNav/css/topNav.less"
+      ]
+    },
+    "p63": {
+      "uri": "/static/dist/topNav/js/topNav.js",
+      "type": "js",
+      "has": [
+        "topNav/js/topNav.es6"
+      ]
+    },
+    "p64": {
+      "uri": "/static/dist/userAdmin/userAdmin.js",
+      "type": "js",
+      "has": [
+        "userAdmin/collection/UserAdminIndexC.js",
+        "userAdmin/views/AddUserAdminDialogV.js",
+        "userAdmin/views/AddUserAdminPrefixDialogV.js",
+        "userAdmin/views/DeleteUserAdminListDialogV.js",
+        "userAdmin/views/DeleteUserAdminPrefixListDialogV.js",
+        "userAdmin/views/DialogProjectListV.js",
+        "userAdmin/views/DialogProjectPrefixListV.js",
+        "userAdmin/views/EditUserAdminListDialogV.js",
+        "userAdmin/views/EditUserAdminPrefixListDialogV.js",
+        "userAdmin/views/UserAdminIndexV.js",
+        "userAdmin/views/UserAdminListV.js",
+        "userAdmin/views/UserAdminPrefixListV.js"
+      ]
+    },
+    "p65": {
+      "uri": "/static/dist/userAdmin/userAdmin.css",
+      "type": "css",
+      "has": [
+        "userAdmin/less/index.less"
+      ]
+    },
+    "p66": {
+      "uri": "/static/dist/suggest/Profile.js",
+      "type": "js"
+    },
+    "p67": {
+      "uri": "/static/dist/suggest/Profile.css",
+      "type": "css"
+    }
+  }
+}

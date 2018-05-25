@@ -1,0 +1,57 @@
+<div class="planBox planPlanPublicity">
+    <div class="planContent">
+        <div class="planGroup">
+            <select class="selDate">
+                <option value="4" data-i18n="data.drawing-model.ETk">本周到期</option>
+                <option value="2" data-i18n="data.drawing-model.ETh">本月到期</option>
+            </select>
+            <table cellspacing="0"  class="tbPlan tbPlanWeek">
+                <thead>
+                    <tr>
+                        <th class="ckItem"></th>
+                        <th class="planId" data-i18n="data.drawing-model.SN">序号</th>
+                        <th class="operationalMatters" data-i18n="data.drawing-model.Activities">业务事项</th>
+                        <th class="start" data-i18n="[title]data.drawing-model.PInLS">                <%= App.Local.data['drawing-model'].PInS || '计划开始' %></th>
+                        <th class="end" data-i18n="[title]data.drawing-model.PInLE">                <%= App.Local.data['drawing-model'].PInLES || '计划结束' %></th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="planBody">
+                <div class="planScroll tbBottomScroll">
+                    <table cellspacing="0"  class="tbPlan tbPlanWeek tbBottom">
+                        <tbody>
+                            <tr class="noLoading"></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="planGroup">
+            <select class="selDate">
+                <option value="3"><%= App.Local.data['drawing-model'].STk || '本周开始' %></option>
+                <option value="1"><%= App.Local.data['drawing-model'].STh || '本月开始' %></option>
+            </select>
+            <table cellspacing="0"  class="tbPlan tbPlanMonth">
+                <thead>
+                    <tr>
+                        <th class="ckItem"></th>
+                        <th class="planId" data-i18n="data.drawing-model.SN">序号</th>
+                        <th class="operationalMatters" data-i18n="data.drawing-model.Activities">业务事项</th>
+                        <th class="start" data-i18n="[title]data.drawing-model.PInLS">                <%= App.Local.data['drawing-model'].PInS || '计划开始' %></th>
+                        <th class="end" data-i18n="[title]data.drawing-model.PInLE">                <%= App.Local.data['drawing-model'].PInLES || '计划结束' %></th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="planBody">
+                <div class="planScroll tbTopScroll">
+                    <table cellspacing="0"  class="tbPlan tbPlanMonth tbTop">
+                        <tbody>
+                            <tr class="noLoading"></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

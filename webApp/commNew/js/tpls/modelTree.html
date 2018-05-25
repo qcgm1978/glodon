@@ -1,0 +1,40 @@
+<li class="itemNode" id="specialitys">
+  <div class="item-content" data-type="sceneId">
+    <i class="nodeSwitch"></i>
+    <label class="treeCheckbox">
+      <input type="checkbox" checked="checked" />
+      <span class="lbl"></span>
+    </label>
+    <span class="tree-text" data-i18n="data.drawing-model.Discipline"><%= App.Local.data['drawing-model'].Discipline || "专业" %></span>
+  </div>
+</li>
+<li class="itemNode" id="floors">
+  <div class="item-content" data-type="sceneId">
+    <i class="nodeSwitch"></i>
+    <label class="treeCheckbox">
+      <input type="checkbox" checked="checked" />
+      <span class="lbl"></span>
+    </label>
+    <span class="tree-text" ><%= App.Local.data['drawing-model'].Floor || "楼层" %></span>
+  </div>
+</li>
+<li class="itemNode" id="categorys">
+  <div class="item-content" data-type="categoryId">
+    <i class="nodeSwitch"></i>
+    <label class="treeCheckbox">
+      <input type="checkbox" checked="checked" />
+      <span class="lbl"></span>
+    </label>
+    <span class="tree-text" ><%= App.Local.data['drawing-model'].CTe || '构件类型' %></span>
+  </div>
+</li>
+<li class="itemNode" id="classCode">
+  <div class="item-content" data-type="classCode">
+    <i class="nodeSwitch"></i>
+    <label class="treeCheckbox">
+      <input type="checkbox" checked="checked" />
+      <span class="lbl"></span>
+    </label>
+    <span class="tree-text" data-i18n="data.drawing-model.CCe">分类编码</span>
+  </div>
+</li>

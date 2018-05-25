@@ -1,0 +1,12 @@
+<% (function(data){ %>
+<% if(data.length){ %>
+<% for(var i in data){ %>
+<% if(data[i]['name']){ %>
+<li class="project"  data-id=<%= data[i]['id'] %>>
+<h3  data-id=<%= data[i]['id'] %> title=<%= data[i]['name'] %> ><%= data[i]['name'] %></h3>
+  <p><%= data[i]['province'] %><span><%= new Date(data[i]['delistingDate']).Format("yyyy-MM-dd")%><%= data[i]['openTime']?"--"+new Date(data[i]['openTime']).Format("yyyy-MM-dd"):''%></span></p>
+</li>
+<% } %>
+<% } %>
+<% } %>
+<% })(direction) %>

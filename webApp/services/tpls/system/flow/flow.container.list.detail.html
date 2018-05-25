@@ -1,0 +1,26 @@
+<div class="code left">
+    <%=index%>
+</div>
+<div class="name left">
+     <%=busName%>
+</div>
+<div class="performance left  <%= busViewUrl && busSendUrl && 'lineH121' %> ">
+
+	<%if(busViewUrl){%>
+		 <div><%= App.Local.data['drawing-model'].Check || '查看' %>： <a href="<%=busViewUrl%>" class="aCk" target="_blank"><%=busViewUrl%></a>  </div>
+	<%}%>
+	<%if(busSendUrl){%>
+		<div>发起： <a href="<%=busSendUrl%>" class="aStar" target="_blank"><%=busSendUrl%></a></div>
+	<%}%>   
+
+	<%if(!busViewUrl && !busSendUrl ){%>
+			---
+	<%}%>
+    
+</div>
+<div class="op left">
+    <i class="<%=index!=1?'myIcon-up':'myIcon-up-disable'%>" title="上移"></i>
+    <i class="myIcon-down" title="下移"></i>
+    <i class="myIcon-update" title="<%= App.Local.data['drawing-model'].Edit || '编辑' %>"></i>
+    <i class="myIcon-del-blue" title="<%= App.Local.data['drawing-model'].Delete || '删除' %>"></i>
+</div>

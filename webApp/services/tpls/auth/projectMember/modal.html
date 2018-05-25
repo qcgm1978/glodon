@@ -1,0 +1,14 @@
+<div id="windowMask">
+	<div class="moduleWindow<% if(dialog) {%> moduleDialog<% } %>" style="<% if(width) { %>width:<%=width%>px;<% } %><% if(height) { %>height:<%=height%>px;<% } %>">
+		<div class="mwin-header">
+			<%= title %>
+			<i class="closeIcon"></i>
+		</div>
+		<div class="mwin-body">
+		</div>
+		<div class="mwin-foot">
+			<a class="modalBtn submit" href="javascript:;">确定</a>
+			<a class="modalBtn closeIcon" href="javascript:;" ><%= App.Local.data['drawing-model'].Cancel || '取消' %></a>
+		</div>
+	</div>
+</div>

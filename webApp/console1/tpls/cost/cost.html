@@ -1,0 +1,261 @@
+<div class="consoleBox">
+  <div class="consoleHeader">8.1主合同签订</div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">项目</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<select class="form-control versionList"id="s11" >-->
+            <!--<option value=null>请选择</option>-->
+          <!--</select>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label"><%= App.Local.data['system-module'].Title || '标题' %></label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p11" value="漳州碧湖工程设计合同">
+        </div>
+      </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.Project">项目</label>
+            <div class="col-sm-10">
+                <select class="form-control referenceResources" id="s11">
+                    <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.Upload">上传</label>
+            <div class="col-sm-10">
+                <input id="choose" name="file" type="file" multiple />
+                <input type="text" class="form-control" id="description" placeholder="上传文件描述" value="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">已上传的文件</label>
+            <div  class="col-sm-10 ready" id="form1">
+
+            </div>
+        </div>
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">合同类型</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<select class="form-control" id="s12">-->
+            <!--<option value=1>初始合同</option>-->
+            <!--<option value=2>变更合同</option>-->
+          <!--</select>-->
+
+        <!--</div>-->
+      <!--</div>-->
+      <div class="form-group">
+        <!--<label for="inputPassword3" class="col-sm-2 control-label"></label>-->
+        <div class="col-sm-10">
+                    <textarea name="" id="data1" cols="30" rows="30">
+           {
+        "projectCode": "JHWD",
+        "workflowCode": "",
+        "title": "漳州碧湖工程设计合同",
+        "status": 8,
+        "type": 1,
+        "costAttachments": [{
+            "type": 1,
+            "description": "计价文件",
+            "url": "http://wanda.cn/abc.zip"
+        }]
+    }
+
+
+
+                    </textarea>
+                     <textarea name="" id="" cols="30" rows="30">
+
+projectCode 项目代码 String 成本系统项目代码
+workflowCode 工作流代码 String 成本系统提供的表单工作流唯一ID
+title 标题 String 表单标题
+status 合同状态 Int 8发起；16审批通过；（4驳回；32撤销；128终止）
+
+
+
+                    </textarea>
+                                        <textarea name="" id="result1" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit1" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--2-->
+<div class="consoleBox">
+  <div class="consoleHeader">8.2成本变更审批</div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label"><%= App.Local.data['system-module'].Title || '标题' %></label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p21" value="漳州碧湖工程设计合同">
+        </div>
+      </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.Project">项目</label>
+            <div class="col-sm-10">
+                <select class="form-control referenceResources" id="s21">
+                    <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">项目审批单</label>
+            <div class="col-sm-10">
+                <select class="form-control referenceResources" id="projectList">
+                    <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.Upload">上传</label>
+            <div class="col-sm-10">
+                <input id="choose1" name="file" type="file" multiple />
+                <input type="text" class="form-control" id="description1" placeholder="上传文件描述" value="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">已上传的文件</label>
+            <div  class="col-sm-10 ready"id="form2">
+
+            </div>
+        </div>
+      <div class="form-group">
+
+        <div class="col-sm-10">
+                    <textarea name="" id="data2" cols="30" rows="30">
+           {
+        "projectCode": "JHWD",
+        "workflowCode": "",
+		    "designFlowCode": "",
+        "title": "漳州碧湖工程设计合同",
+        "status": 8,
+        "type": 2,
+        "costAttachments": [{
+            "type": 1,
+            "description": "计价文件",
+            "url": "http://wanda.cn/abc.zip"
+        }]
+    }
+
+
+
+                    </textarea>
+                     <textarea name="" id="" cols="30" rows="30">
+
+projectCode 项目代码 String 成本系统项目代码
+workflowCode 工作流代码 String 成本系统提供的表单工作流唯一ID
+title 标题 String 表单标题
+status 合同状态 Int 8发起；16审批通过；（4驳回；32撤销；128终止）
+
+
+
+                    </textarea>
+                                        <textarea name="" id="result2" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit2" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!--3-->
+<div class="consoleBox">
+  <div class="consoleHeader">8.3成本变更确认</div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label"><%= App.Local.data['system-module'].Title || '标题' %></label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="transfer_title" value="漳州碧湖工程设计合同">
+        </div>
+      </div>
+      <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.Project">项目</label>
+          <div class="col-sm-10">
+              <select class="form-control referenceResources" id="transferProject">
+                  <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">项目审批单</label>
+          <div class="col-sm-10">
+              <select class="form-control referenceResources" id="projectList_two">
+                  <option value="0"  data-i18n="data.drawing-model.Pst">请选择</option>
+              </select>
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label" data-i18n="data.drawing-model.Upload">上传</label>
+          <div class="col-sm-10">
+              <input id="choose2" name="file" type="file" multiple />
+              <input type="text" class="form-control" placeholder="上传文件描述" value="">
+          </div>
+      </div>
+      <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">已上传的文件</label>
+          <div  class="col-sm-10 ready" id="form3">
+          </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="transferSubmitBtn" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+            <div class="form-group">
+
+              <div class="col-sm-10">
+                          <textarea name="" id="data3" cols="30" rows="30">
+                 {
+              "projectCode": "JHWD",
+              "workflowCode": "",
+              "designFlowCode": "",
+              "title": "漳州碧湖工程设计合同",
+              "status": 8,
+              "type": 2,
+              "costAttachments": [{
+                  "type": 1,
+                  "description": "计价文件",
+                  "url": "http://wanda.cn/abc.zip"
+              }]
+          }
+
+
+
+                          </textarea>
+                           <textarea name="" id="" cols="30" rows="30">
+
+      projectCode 项目代码 String 成本系统项目代码
+      workflowCode 工作流代码 String 成本系统提供的表单工作流唯一ID
+      title 标题 String 表单标题
+      status 合同状态 Int 8发起；16审批通过；（4驳回；32撤销；128终止）
+
+
+
+                          </textarea>
+                                              <textarea name="" id="result3" cols="30" rows="30">
+
+                          </textarea>
+              </div>
+            </div>
+    </form>
+  </div>
+</div>

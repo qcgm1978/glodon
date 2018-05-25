@@ -1,0 +1,48 @@
+<span data-fileversionid="<%=fileVersionId%>" class="filecKAll inlineBlock"'>
+<input type="checkbox" class="ckAll"/>
+</span>
+<span class="fileName inlineBlock overflowEllipsis">  
+  <%if(folder){%>
+    <span class=" fileType folder"></span>
+    <span data-id="<%=id%>" data-isfolder="<%=folder%>" title="<%= name %>"
+          class="text overflowEllipsis <%= id=='createNew'?'hidden':'' %>">
+      <%= App.ResourceModel.getName(name)%>
+    </span>
+    <% if(id=='createNew'){%>
+      <input type="text" value="<%=name%>" class="txtEdit txtInput"/>
+      <span class="btnEnter myIcon-enter"></span>
+      <span class="btnCalcel pointer myIcon-cancel"></span>
+    <%}%>
+  <%}else{%>
+      <%if(thumbnail){%>
+        <img class="fileTypeImg" src="/model/<%=modelId%>/<%=thumbnail%>" alt=""/>
+      <%}else{%>
+        <span data-id="<%=id%>" class="fileType <%=App.Comm.fileSuffix(suffix)%>"></span>
+      <%}%>
+      <%if(suffix=='rvt' ||suffix=='rfa' ||suffix=='dwg' || suffix=='rte'){%>
+            <%if(/\b-ALL\.\b/.test(App.ResourceModel.getName(name))||/\b-AXIS\.\b/.test(App.ResourceModel.getName(name))){%>
+          <span data-id="<%=id%>" data-isfolder="false" title="<%=name%>" class="text overflowEllipsis textFolder">
+            <%= App.ResourceModel.getName(name) %>
+          </span>
+        <%}else{%>
+          <a data-id="<%=id%>"
+             href="/static/dist/app/project/single/filePreview.html?id=<%=fileVersionId%>&projectId=<%=projectId%>&projectVersionId=<%=App.ResourceModel.Settings.CurrentVersion.id%>&standardLibs=standardLibs"
+             target="_blank" data-isfolder="<%=folder%>" class="text overflowEllipsis">
+            <%= App.ResourceModel.getName(name)  %>
+          </a>
+
+        <%}%>
+      <%}else{%>
+        <span data-id="<%=id%>" data-isfolder="false" title="<%=name%>" class="text overflowEllipsis textFolder">
+          <%= App.ResourceModel.getName(name) %>
+        </span>
+      <%}%>
+  <%}%>
+</span>
+<span class="fileStatus inlineBlock">
+  <%= folder?'': App.Comm.formatStatus(status,2,lockUserId,locked)=="" ? App.Local.data['drawing-model'].NAd : App.Comm.formatStatus(status,2,lockUserId,locked) %></span>
+<span class="fileOp inlineBlock"><%= creatorName %></span>
+<span class="fileSize inlineBlock"><%=length?App.Comm.formatSize(length):""%></span>
+<span class="fileDate inlineBlock"><%= createTime?new Date(createTime).format("yyyy-MM-dd hh:mm:ss"):"" %></span>
+<span class="exception"><%=exception%></span>
+

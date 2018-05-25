@@ -1,0 +1,21 @@
+{
+    "code": 0,
+    "message": "success",
+    "data": [{
+        "specialty": "AR",
+        "specialtyName": "建筑",
+        "comparisons": [{
+            "comparisonId": 790126062053792,
+            "projectId": 784306105035936,
+            "projectVersionId": "785831774210240",
+            "specialty": "AR",
+            "fileId": 785831776807104,
+            "name": "WDGC-Q-SY-ST-F03.rvt",
+            "baseVersion": 785831776807104,
+            "currentVersion": 785831776807105,
+            "baseModel": "be9bf30f15eb677b705b61c1b90599d2",
+            "currentModel": "3aff941283dac8a762448e3726cfd7b6",
+            "output": "790126062053792_output"
+        }]
+    }]
+}

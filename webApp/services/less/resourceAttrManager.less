@@ -1,0 +1,304 @@
+//start 资源标签的样式
+.resourceAttrManager{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	.resourceTopbar{
+		height: 30px;
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		z-index: 10;
+		.opBox,.resourceTopbarSearchBox{
+			float: left;
+		}
+		.opBox{
+			.btnNormal{
+				height:30px;
+				line-height: 21px;
+			}
+		}
+		.resourceTopbarSearchBox{
+			margin-left: 30px;
+			.item{
+				float: left;
+				.moreSeachText{
+					width: 198px;
+				}
+			}
+			.showDateBox{
+				margin-left: 30px;
+				float: left;
+				position: relative;
+				span.searchLabel{
+					width: 66px;
+				    display: inline-block;
+				    text-align: center;
+				}
+				.iconCal{
+					background: url(/static/dist/images/comm/images/commIcon.png) no-repeat 6px -232px;
+					position: absolute;
+					right: 1px;
+					width: 28px;
+					height: 28px;
+					top: 1px;
+					background-color: #eee;
+					border-left: 1px #ccc solid;
+				}
+				input{
+					width: 180px;
+					height: 30px;
+				    line-height: 30px;
+				    padding-left: 8px;
+				    border:#ddd solid 1px;
+				    padding-right: 30px;
+				}
+				.btnSearch{
+					background-color: #117EE1;
+					display: inline-block;
+					width: 80px;
+					height: 30px;
+					text-align: center;
+					line-height: 30px;
+					color: #fff;
+					margin-left:30px;
+					letter-spacing: 10px;
+					padding-left: 9px;
+					box-sizing: border-box;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+	.resourceContent{
+		width: 100%;
+		height: 100%;
+		padding-top: 40px;
+		position: relative;
+		table{
+			width: 100%;
+		}
+		table td{
+			height: 40px;
+			line-height: 40px;
+			text-align: center;
+			border-left: 1px #ccc solid;
+			border-bottom: 1px #ccc solid;
+			word-break:break-all; /*支持IE，chrome，FF不支持*/
+			word-wrap:break-word;/*支持IE，chrome，FF*/
+			&:nth-child(1){
+				width: 5%;
+				border-left: 0;
+			}
+			&:nth-child(2){
+				width: 5%;
+			}
+			&:nth-child(3){
+				width: 35%;
+			}
+			&:nth-child(4){
+				width: 25%;
+			}
+			&:nth-child(5){
+				width: 15%;
+			}
+			&:nth-child(6){
+				width: 15%;
+			}
+		}
+		.resourceContentTop{
+			width: 100%;
+			height: 40px;
+			position: absolute;
+			left: 0;
+			top: 40px;
+		    border: 1px #ccc solid;
+		    background-color: #eee;
+		    z-index: 10;
+		    td{
+		    	border-bottom:0;
+		    }
+		}
+		.resourceContentDown{
+			width: 100%;
+			height: 100%;
+			padding-top: 39px;
+			border: 1px #ccc solid;
+			position: relative;
+			padding-bottom: 44px;
+			.scrollBox{
+				width: 100%;
+				height: 100%;
+				td{
+					&>input{
+						margin: 0;
+						padding: 0;
+					}
+				}
+				.mCS-minimal-dark.mCSB_scrollTools_vertical {
+					right: -20px;
+				}
+			}
+			.pagingBox{position: absolute;bottom: 0px;left:20px;right: 20px;line-height: 40px;
+				.sumDesc { float: left; margin-left: 20px; }
+				.listPagination { float: right; margin-right: 20px; }
+				.pagination {margin: 0px;}
+			}
+		}
+	}
+}
+.uploadDialogClass{
+	width: 100%;
+	height: 100%;
+	.uploadInputBox{
+		width: 100%;
+		height: 40px;
+		color: #666;
+		margin-top: 16px;
+		margin-bottom: 16px;
+		float: left;
+		position: relative;
+		label{
+			height: 40px;
+			line-height: 40px;
+			width: 80px;
+			text-align: right;
+			float: left;
+			font-size: 14px;
+		}
+		input{
+			width: 370px;
+			height: 40px;
+			line-height: 40px;
+			padding: 0 16px;
+			float: left;
+			margin-left: 10px;
+			font-size: 14px;
+		}
+		.resourceTypeBox{
+			display: none;
+			width: 370px;
+			max-height: 91px;
+			border: #999 solid 1px;
+			z-index: 10;
+			top: 39px;
+			left: 90px;
+			position: absolute;
+			background: #fff;
+			overflow-x: hidden;
+			overflow-y: auto;
+			ul{
+				width: 100%;
+				height: 100%;
+				li{
+					width: 100%;
+					height: 30px;
+					line-height: 30px;
+					padding: 0 16px;
+					cursor: pointer;
+					border-bottom: #999 solid 1px;
+					&:hover{
+						background: #ccc;
+					}
+					&:nth-last-child(1){
+						border-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+	.uploadBox{
+		width: 100%;
+		height: auto;
+		color: #666;
+		font-size: 16px;
+		float: left;
+		label{
+			height: 40px;
+			line-height: 40px;
+			width: 80px;
+			text-align: right;
+			float: left;
+			font-size: 14px;
+		}
+		a{
+			height: 40px;
+			line-height: 40px;
+			display: inline-block;
+		}
+		.attachList{
+			width: 100%;
+			height: 30px;
+			padding-left: 90px;
+			li{
+				height: 30px;
+				line-height: 30px;
+				overflow: hidden;
+				text-overflow:ellipsis;
+				white-space: nowrap;
+			}
+			.loading{
+				padding: 0;
+				text-align: left;
+				color: #999;
+				font-size: 12px;
+			}
+		}
+	}
+	.dialogFooter{
+		width: 100%;
+		height: 35px;
+		font-size: 12px;
+		float: left;
+		text-align: right;
+		border-top: 1px solid #ccc;
+		margin-top: 16px;
+		padding-top: 22px;
+		button{
+			width: 80px;
+		    height: 30px;
+		    line-height: 28px;
+		    display: inline-block;
+		    color: #fff;
+    		background-color: #208aee;
+    		border: 0;
+    		text-align: center;
+    		&:hover{
+    			background-color: #51a6f2;
+    		}
+		}
+	}
+}
+.deleteDialogClass{
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+	font-size: 16px;
+	text-align: center;
+}
+.content{
+	.dialogFooter{
+		width: 100%;
+		height: 35px;
+		font-size: 12px;
+		float: left;
+		text-align: right;
+		border-top: 1px solid #ccc;
+		margin-top: 22px;
+		padding-top: 18px;
+		button{
+			width: 80px;
+		    height: 30px;
+		    line-height: 28px;
+		    display: inline-block;
+		    color: #fff;
+    		background-color: #208aee;
+    		border: 0;
+    		text-align: center;
+    		&:hover{
+    			background-color: #51a6f2;
+    		}
+		}
+	}
+}
+//end 资源标签的样式

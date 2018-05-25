@@ -1,0 +1,98 @@
+<div class="hedaerSearch planSearch" style="margin-top: 0;">
+    <span class="searchToggle" data-i18n="data.drawing-model.SFnS">选择筛选条件</span>
+    <span class="clearSearch" data-i18n="data.drawing-model.Clear">清除条件</span>
+    <span class="groupRadio">
+            <label class="treeCheckbox"> <input type="checkbox" checked="true"> <span class="m-lbl"></span> </label>
+            <span class="treeText" data-i18n="data.drawing-model.Osl">仅显示此节点关联模型</span>
+        </span>
+</div>
+<div class="searchDetail planmodesearch" style="height: 240px;">
+    <div class="searchOptons">
+        <div class="optonLine zIndex10">
+            <div class="labelItem" data-i18n="[title]data.drawing-model.PInLS">
+                <%= App.Local.data['drawing-model'].PInS || '计划开始' %>:
+            </div>
+            <div class="firstDate dateBox" style="position: relative;">
+                <i class="iconCal add-on"></i>
+                <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].STe || '开始时间' %>" class="span2 dateStar1" type="text">
+            </div>
+            <span>&#45;&#45;</span>
+            <div class="firstDate dateBox">
+                <i class="iconCal"></i>
+                <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].ETe || '结束时间' %>" class="span2 dateEnd1" type="text">
+            </div>
+        </div>
+        <div class="optonLine">
+            <div class="labelItem" data-i18n="[title]data.drawing-model.PInLE">
+                <%= App.Local.data['drawing-model'].PInLES || '计划结束' %>:
+            </div>
+            <div class="firstDate dateBox" style="position: relative;">
+                <i class="iconCal add-on"></i>
+                <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].STe || '开始时间' %>" class="span2 dateStar2" type="text">
+            </div>
+            <span>&#45;&#45;</span>
+            <div class="firstDate dateBox">
+                <i class="iconCal"></i>
+                <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].ETe || '结束时间' %>" class="span2 dateEnd2" type="text">
+            </div>
+
+        </div>
+        <div class="optonLine">
+            <div class="labelItem" >
+                <%= App.Local.data['drawing-model'].Activities || '业务事项' %>:
+            </div>
+            <div class="searchName">
+                <span></span>
+                <input type="text" class="txtSearchName txtBusinessName filterInputExtra" placeholder="<%= App.Local.data['drawing-model'].Pey || '请输入您要查询的业务事项' %>"/>
+            </div>
+        </div>
+        <div class="optonLine btnOption">
+            <input type="button" class="myBtn myBtn-primary btnFilter" value="<%= App.Local.data['drawing-model'].Filter || '筛选' %>" />
+        </div>
+    </div>
+</div>
+<div class="planBox">
+    <table cellspacing="0" cellspacing="0" class="tbPlanHeader">
+        <thead>
+            <tr>
+                <th class="ckItem"><i class=""></i></th>
+                <th class="planId" data-i18n="data.drawing-model.SN">序号</th>
+                <th class="operationalMatters" data-i18n="data.drawing-model.Activities">业务事项</th>
+                <th class="start" data-i18n="[title]data.drawing-model.PInLS"><%= App.Local.data['drawing-model'].PInS || '计划开始' %></th>
+                <th class="end" data-i18n="[title]data.drawing-model.PInLE"><%= App.Local.data['drawing-model'].PInLES || '计划结束' %></th>
+            </tr>
+        </thead>
+    </table>
+    <div class="planContent">
+        <table cellspacing="0" cellspacing="0" class="tbPlan">
+            <tbody>
+                <tr class="noLoading"></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<!--
+<div class="planSearch ">
+
+    <div class="myDropDown planTimeType">
+     <span class="myDropText">
+     <span></span> <span class="text">计划开始</span> <i class="myDropArrorw"></i> </span>
+        <ul class="myDropList">
+            <li class="myItem" data-val='1'>计划开始</li>
+            <li class="myItem" data-val='2'>计划结束</li>
+        </ul>
+    </div>
+    <div class="firstDate dateBox" style="position: relative;">
+        <i class="iconCal add-on"></i>
+        <input readonly="true" placeholder="开始时间" class="span2 dateStar" type="text">
+    </div>
+    <span>&#45;&#45;</span>
+    <div class="firstDate dateBox">
+        <i class="iconCal"></i>
+        <input readonly="true" placeholder="结束时间" class="span2 dateEnd" type="text">
+    </div>
+    <a href="javascript:;" class="clearFormLink">清空条件</a>
+    <label class="treeCheckbox"> <input type="checkbox" checked="true"> <span class="m-lbl"></span> </label>
+    <span class="treeText">仅显示此节点关联模型</span>
+</div>-->

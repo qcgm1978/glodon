@@ -1,0 +1,312 @@
+.backStageListBox{
+	width: 1024px;
+	height: 100%;
+	margin: 0 auto;
+	padding: 20px;
+	ul li{
+		width: 100%;
+		height: 36px;
+		line-height: 36px;
+		font-size: 14px;
+		a{
+			color: #333;
+		}
+	}
+}
+.setPermissions{
+	width: 100%;
+	height: 100%;
+	padding-top: 16px;
+	position: relative;
+	.setPermissionsTab{
+		width: 100%;
+		height: 38px;
+	    background-color: #eee;
+	    border: 1px solid #ccc;
+	    border-width: 1px 0px;
+	    position: absolute;
+	    top: 16px;
+	    left: 0;
+	    padding: 8px 0 0 20px;
+	    z-index: 10;
+        & li{
+        	border-top: 2px solid #eee;
+    	    float: left;
+    	    line-height: 27px;
+    	    height: 29px;
+    	    width: 98px;
+    	    text-align: center;
+    	    cursor: pointer;
+    	    &.selected{
+    	    	border: 1px #ccc solid;
+    	    	border-top: 2px solid #006ecf;
+    	    	border-bottom-color: #fff;
+    	    	background-color: #fff;
+    	    }
+        }
+	}
+	.downContent{
+		width: 100%;
+	    height: 100%;
+	    padding-top: 36px;
+        .setPermissionsBox{
+            width: 100%;
+            height: 100%;
+            padding:20px;
+            display: none;
+            .setPermissionsPublicBox{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                .viewHeaderBox{
+                    width: 100%;
+                    height: 30px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 10;
+                    a{
+                        text-decoration: none;
+                        display: inline-block;
+                        cursor: pointer;
+                        border: 1px solid #ccc;
+                        color: #333;
+                        width: 100px;
+                        height: 30px;
+                        font-size: 14px;
+                        line-height: 30px;
+                        text-align: center;
+                        z-index: 10;
+                        &:hover{
+                         color: #333;
+                        }
+                        i{
+                         display: inline-block;
+                         width: 14px;
+                         height: 14px;
+                         margin: 0 8px 0 0;
+                         position: relative;
+                         top: 2px;
+                        }
+                    }
+                }
+                .viewListBox{
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    padding-top: 40px;
+                    table{
+                        width: 100%;
+                        height: 100%;
+                        border: #ccc solid 1px;
+                        td{
+                            text-align: center;
+                            border-left: 1px #ccc solid;
+                            height: 40px;
+                        }
+                        td:nth-child(1) {
+                            width: 4%;
+                        }
+                        td:nth-child(2) {
+                            width: 48%;
+                        }
+                        td:nth-child(3) {
+                            width: 48%;
+                        }
+                    }
+                    .viewListHeaderBox{
+                        width: 100%;
+                        height: 40px;
+                        position: absolute;
+                        left: 0;
+                        top: 40px;
+                        background: #eee;
+                    }
+                    .viewListBodyBox{
+                        width: 100%;
+                        height: 100%;
+                        padding-top: 40px;
+                        .scrollBox{
+                            width: 100%;
+                            height: auto;
+                            tr td{
+                                border-bottom: 1px #ccc solid;   
+                            }
+                            tr:nth-last-child(1){
+                                td{
+                                    border-bottom:0;   
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+	}
+}
+.setPermissionsAlert{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    .alertInfo{
+        width: 100%;
+        height: 32px;
+        line-height: 32px;
+        margin-top: 60px;
+        padding-left: 40px;
+        float: left;
+    }
+    .alertInfo:before {
+        content: '';
+        position: absolute;
+        background: transparent url(/static/dist/images/services/images/service_ico.png) 0 0 no-repeat;
+        vertical-align: middle;
+        width: 32px;
+        height: 32px;
+        background-position: 0 -300px;
+        left: 42px;
+        top: 70px;
+    }
+    .confirm{
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        float: left;
+        margin-top: 30px;
+        #servicesCancel{
+            margin-left: 16px;
+        }
+    }
+}
+.moduleWindow{
+    width: 100%;
+    height: auto;
+    .modalBtn { 
+        display: inline-block; 
+        vertical-align: middle; 
+        background: #117EE1; 
+        text-align: center; color: #FFF; 
+        text-decoration: none; 
+        font-family: "microsoft yahei"; 
+        line-height: 1.2; 
+        white-space: nowrap; 
+        padding: 5px 20px;
+        cursor: pointer;
+        &:hover { 
+            text-decoration: none; 
+        }
+        .btnIconSelect { 
+            background: url(../images/service_ico.png) no-repeat 4px -578px; 
+            width: 16px; 
+            height: 20px; 
+            display: inline-block; 
+            vertical-align: -7px; }
+    }
+    .icon { 
+        color: #333; 
+        background: #FFFFFF; 
+        border: 1px solid #ccc; 
+        width: 60px; 
+        height: 30px; 
+        line-height: 27px; 
+        padding: 0;
+    }
+    .mwin-body { 
+        display: inline-block; 
+        min-height: 100px; 
+        position: relative; 
+        margin: 0 auto; 
+        width: 100%;
+        .userSelecter { width: 100%;
+          & tr { width: 100%; }
+          & .columnHeader { height: 30px; line-height: 30px; padding-left: 5px;margin-bottom: 12px; color: #ABABAB;}
+          & .columnBody { height: 380px; border: 1px solid #CCC; overflow-y: auto; }
+          & .column1 { width: 50%; position: relative; background: #FAFAFA;max-width: 100px;
+            & .scrollWrap { border: 1px solid #CCC; height: 380px; overflow-y: auto; position: relative; }
+            & .loadwait { position: absolute; z-index: 9999; top: 0; bottom: 0; left: 0; right: 0; background: rgba(00, 00, 00, 0.3); display: none;
+              & img { position: absolute; top: 50%; left: 50%; margin-left: -8px; margin-top: -8px; }
+            }
+          }
+          & .column2 { padding: 10px; vertical-align: middle; }
+          & .column3 { vertical-align: top; width: 50%; background: #FAFAFA; max-width: 100px;}
+          & .ztree li span.button.switch { display: none; }
+          
+          .ztree { padding: 0; }
+          .ztree li{position: relative;}
+          .ztree li a { width: 100%; padding-left: 6px;
+            &:hover { text-decoration: none; }
+          }
+          .ztree li a.curSelectedNode { background-color: #A8DBFD; }
+          .ztree li a, .ztree li a.curSelectedNode { height: 34px; line-height: 34px; }
+          .ztree li span.button { width: 20px; height: 20px; }
+          .ztree li span.button.ico_docu, .ztree li span.button.user_ico_docu { background: url(../images/service_ico.png); background-position: 0 30px; vertical-align: -8px; }
+          .ztree li span.button.ico_open, .ztree li span.button.business_ico_open { vertical-align: -8px; background: url(../images/service_ico.png); background-position: -1px -80px; }
+          .ztree li span.button.ico_close, .ztree li span.button.business_ico_close, .ztree li span.button.business_ico_docu { vertical-align: -8px; background: url(../images/service_ico.png); background-position: 1px -100px; }
+          #selectedTree { padding: 0; }
+          #selectedTree.ztree li>a { 
+            border-bottom: 1px solid #CCC; 
+            padding-right: 16px; 
+            display: inline-block;
+            padding-top: 10px;
+            & span{
+              display: inline-block;
+              float: left;
+              line-height: 16px;
+              &.business_ico_docu{
+                margin-right: 2px;
+                background-position: 1px -99px;
+              }
+            }
+            &.curSelectedNode{
+              & span.remove{
+                display: none;
+              }
+            }
+          }
+          & #selectedTree li a span.node_name{
+            display: inline-block;
+            width: 190px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+          & #selectedTree li a span.button.remove{
+            float: right;
+            display: inline-block;
+            margin-left: 0px;
+            margin-top: 2px;
+            margin-right: 0;
+            width: 12px;
+            height: 13px;
+          }
+          & #selectedTree li:hover a {
+            &.curSelectedNode{
+              & span.remove{
+                display: block;
+              }
+            }
+          }
+          & #selectedTree li:hover a span.button.remove{
+            background: url(/static/dist/images/services/images/service_ico.png) no-repeat 0 -280px;
+          }
+        }
+    }
+    .mwin-foot { 
+        display: none; 
+        height: 50px; 
+        line-height: 50px;
+        vertical-align: middle; 
+        text-align: right; 
+        padding-right: 10px;
+        .modalBtn:last-child{ 
+            display: none; 
+            border: 1px solid #CCC; 
+        }
+    }
+    .columnSearch{height: 30px;  border: 1px solid #ccc;  position: relative;  margin-bottom: 12px;}
+    .columnSearch input{display: block;  width: 207px;  height: 100%;  float: left;  border: none;  padding-left: 10px;outline: none;}
+    .columnSearch b{display: block;  background: url(../../comm/images/commIcon.png) no-repeat -40px -438px;  width: 16px;  position: absolute;  height: 16px;  cursor: pointer;  right: 35px;  top: 6px;}
+    .columnSearch span{ display: block;  float: right;  width: 30px;  padding: 5px 0 0 7px;  height: 100%;  border-left: 1px solid #ccc;cursor: pointer;}
+    .columnSearch span i{background: url(../../comm/images/commIcon.png) no-repeat 1px -477px;  display: block;  width: 15px;  height: 17px;}
+
+}

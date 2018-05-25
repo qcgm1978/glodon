@@ -1,0 +1,31 @@
+<div class="item">
+    <span class="searchLabel">建议：</span>
+    <input id="keyName" type="text" placeholder="请输入建议内容" class="txtInput moreSeachText">
+</div>
+<div class="item">
+    <span class="searchLabel">回复状态：</span>
+    <select class="feedBackState" id="feedBackState">
+        <option data-feedbackstate="" selected><%= App.Local.data['drawing-model'].CAl1All || '全部' %></option>
+        <option data-feedbackstate="true">已回复</option>
+        <option data-feedbackstate="false">未回复</option>
+    </select>
+</div>
+<div id="showDateBox" class="showDateBox">
+    <span class="searchLabel">建议时间：</span>
+    <div class="firstDate dateBox" style="position: relative; display: inline-block;">
+        <i class="iconCal add-on"></i>
+        <input readonly="true" value="<%=startTime%>" placeholder="<%= App.Local.data['drawing-model'].STe || '开始时间' %>" id="dateStar" class="span2" type="text">
+    </div>
+    <span class="searchLabel">—<%= App.Local.data['drawing-model'].to || '至' %>—</span>
+    <div class="firstDate dateBox" style="position: relative; display: inline-block;">
+        <i class="iconCal"></i>
+        <input readonly="true" value="<%=endTime%>" placeholder="<%= App.Local.data['drawing-model'].ETe || '结束时间' %>" id="dateEnd" class="span2" type="text">
+    </div>
+</div>
+<div class="item">
+    <span class="searchLabel">建议人：</span>
+    <input id="feedBackPeople" type="text" placeholder="请输入建议人或账号" class="txtInput moreSeachText">
+</div>
+<div class="searchBtn">
+    <span class="btnSearch"><%= App.Local.data['drawing-model'].Query || '查询' %></span>
+</div>

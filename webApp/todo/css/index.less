@@ -1,0 +1,191 @@
+html, body {
+  overflow-y: hidden;
+  .todoNav {
+    min-width: 1000px;
+    height: 40px;
+    background-color: #f5f5f5;
+    border-bottom: 1px #ccc solid;
+    .todoSearch {
+      float: right;
+      margin-top: 5px;
+      margin-right: 20px;
+      .txtSearch {
+        width: 160px;
+        border: 1px #ccc solid;
+        outline: none;
+        border: 1px solid #ccc;
+        outline: none;
+        height: 25px;
+        padding: 0 12px;
+      }
+      .btnSearch {
+        width: 80px;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+        cursor: pointer;
+        display: inline-block;
+        border: 1px #ccc solid;
+        margin-left: 10px;
+      }
+    }
+    ul {
+      margin-left: 35px;
+      li {
+        float: left;
+        list-style-type: none;
+        font-size: 14px;
+        width: 130px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border: 1px #ccc solid;
+        margin-top: 10px;
+        cursor: pointer;
+        &.selected {
+          background-color: #fff;
+          border-bottom: 1px #fff solid;
+          border-top: 2px solid #06c;
+        }
+        &.last {
+          border-left: 0;
+        }
+      }
+    }
+  }
+  .todoList {
+    min-width: 1000px;
+    position: absolute;
+    top: 94px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    #todoContent {
+      height: 100%;
+      padding-bottom: 40px;
+      .alreadyBox {
+        display: none;
+      }
+      .headerRow {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        border-bottom: 1px solid #CCCCCC;
+        li {
+          margin: 10px 25px 0px 12px;
+          .title {
+            padding-left: 15px;
+            width: 59%;
+            float: left;
+            font-size: 14px;
+            color: #999;
+            height: 46px;
+            line-height: 46px;
+            a {
+              white-space: nowrap;
+              max-width: 100%;
+              display: inline-block;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+          }
+          .operator {
+            float: left;
+            width: 14%;
+            font-size: 14px;
+            color: #999;
+
+          }
+          .date {
+            float: left;
+            width: 26%;
+            padding-right: 30px;
+            font-size: 14px;
+            color: #999;
+            text-align: left;
+          }
+        }
+      }
+    }
+    .todoDetailView {
+      height: 48px;
+      line-height: 48px;
+      border: 1px #ccc solid;
+      margin: 10px 25px 0px 12px;
+      position: relative;
+      .title {
+        padding-left: 15px;
+        width: 59%;
+        float: left;
+        height: 46px;
+        line-height: 46px;
+        a {
+          white-space: nowrap;
+          max-width: 100%;
+          display: inline-block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .operator {
+        float: left;
+        width: 14%;
+        height: 46px;
+        position: relative;
+        & > span.text {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        & > span:nth-child(2) {
+          display: inline-block;
+          width: 100%;
+          height: 46px;
+          padding-left: 45px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+      .date {
+        float: left;
+        width: 26%;
+        text-align: left;
+        padding-right: 30px;
+      }
+      .newMsg {
+        position: absolute;
+        right: 0px;
+        top: 0px;
+        bottom: 0px;
+        width: 30px;
+        background: url(/todo/images/new.png) no-repeat;
+      }
+    }
+    .pagination {
+      float: right;
+      margin-right: 21px;
+    }
+    .sumDesc {
+      float: left;
+      margin-top: 20px;
+      margin-left: 13px;
+    }
+    & .noData {
+      width: 100%;
+      display: inline-block;
+      text-align: center;
+      padding-top: 80px;
+      color: #ccc;
+      font-size: 20px;
+      & .tip {
+        background: url('/imbox/images/icon.png') no-repeat -40px -260px;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        vertical-align: -17px;
+        margin-right: 10px;
+      }
+    }
+  }
+}

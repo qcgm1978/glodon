@@ -1,0 +1,113 @@
+     <% var lists=obj.data, count=lists.length,current; %> 
+
+               <%for(var i=0;i<count;i++){%>
+
+                    <%current=lists[i];%>
+                    <tr class="stepOne">    
+                        <td class="listCode">
+
+                            <%if(current.children){%>
+                                 <i class="nodeSwitch on"></i>
+                            <%}else{%>
+                                 <i class="nodeSwitch none"></i>
+                            <%}%> 
+
+                                 <% if(current.url){%>
+                                       <a href="<%= current.url%>" target="_blank">
+                                    <span class="text overflowEllipsis" style="left:<%=mLeft+13%>px;" title='<%= code %>'> <span class="code"><%=current.code%></span> </a>
+                                  <%}else{%>
+                                    <span class="code"><%=current.code%></span> 
+                                  <%}%>
+
+                        </td>
+                        <td class="listName"><%=current.name%></td>
+                     
+                    </tr>
+
+                     <% if(current.children){%>
+                         <% var lists2=current.children; count2=lists2.length; %>
+
+                          <%for(var j=0;j<count2;j++){%>
+
+                                 <%current=lists2[j];%>
+
+                                <tr  class="stepTwo">    
+                                    <td class="listCode">
+                                          <%if(current.children){%>
+                                                 <i class="nodeSwitch on step1"></i>
+                                            <%}else{%>
+                                                 <i class="nodeSwitch none step1"></i>
+                                            <%}%> 
+
+                                    <% if(current.url){%>
+                                       <a href="<%= current.url%>" target="_blank">
+                                         <span class="code code1"><%=current.code%></span>  </a>
+                                  <%}else{%>
+                                    <span class="code code1"><%=current.code%></span> 
+                                  <%}%>
+
+                                    </td>
+                                    <td class="listName"><%=current.name%></td>
+                                  
+                                </tr>
+
+                                 <% if(current.children){%>
+                                     <% var lists3=current.children; count3=lists3.length; %>
+                                     <%for(var k=0;k<count3;k++){%>
+                                        <%current=lists3[k];%>
+                                        <tr  class="stepThree">    
+                                            <td class="listCode">
+                                                <%if(current.children){%>
+                                                     <i class="nodeSwitch on step2"></i>
+                                                <%}else{%>
+                                                     <i class="nodeSwitch none step2"></i>
+                                                <%}%> 
+
+                                 <% if(current.url){%>
+                                       <a href="<%= current.url%>" target="_blank">
+                                         <span class="code code2"><%=current.code%></span>   </a>
+                                  <%}else{%>
+                                     <span class="code code2"><%=current.code%></span> 
+                                  <%}%>
+
+                                            </td>
+                                            <td class="listName"><%=current.name%></td>
+                                           
+                                        </tr>
+
+                                             <% if(current.children){%>
+                                                 <% var lists4=current.children; count4=lists4.length; %>
+                                                 <%for(var n=0;n<count4;n++){%>
+                                                    <%current=lists4[n];%>
+                                                    <tr  class="stepFour">    
+                                                        <td class="listCode">
+                                                             <%if(current.children){%>
+                                                                 <i class="nodeSwitch on step3"></i>
+                                                            <%}else{%>
+                                                                 <i class="nodeSwitch none step3"></i>
+                                                            <%}%>
+                                                            <a href="<%= current.url%>" target="_blank">
+                                                             <span class="code code3"><%=current.code%></span></a>
+                                                        </td>
+                                                        <td class="listName"><%=current.name%></td>
+                                                          
+                                                    </tr>  
+                                                 <%}%>
+
+                                             <%}%>
+
+
+                                     <%}%>
+
+                                 <%}%>
+
+
+                          <%}%>
+                          
+                    <%}%>
+
+                <%}%> 
+
+                      <%if(count<=0){%>
+                <tr> <td  colspan="2" class="noDataTd"><%= App.Local.data['drawing-model'].Ndd1 || '暂无数据' %></td></tr>
+        <%}%>

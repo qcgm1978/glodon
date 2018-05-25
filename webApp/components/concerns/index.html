@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>模型选择器</title>
+  <link rel="styleSheet" href="/topNav/css/topNav.less" />
+  <link rel="styleSheet" href="/comm/css/treeView.less" />
+  <link rel="styleSheet" href="./less/index.css" />
+  <link rel="stylesheet" type="text/css" href="./less/style.less">
+  <script src="http://bim.wanda-dev.cn/static/dist/components/concerns/libs/libs.js"></script>
+  <script src="http://bim.wanda-dev.cn/static/dist/components/concerns/js/concerns.js"></script>
+</head>
+<body>
+<div id="topBar">
+  <div class="logo"><span class="text"></span></div>
+</div>
+<div id="contains">
+  <div class="projectHeader">
+    <div class="breadcrumbNav">
+      <span class="projectText">项目</span>
+                <span class="breadItem project relative"> <i class="icon-angle-right"></i>
+           <span class="breadItemText"> <span class="text">--</span> </span>
+                </span>
+                <span class="breadItem projectVersion relative"> <i class="icon-angle-right"></i>
+           <span class="breadItemText"> <span class="text"> -- </span> </span>
+                </span>
+    </div>
+  </div>
+  <div id="projectContainer">
+    <div class="rightProperty">
+      <div class="rightPropertyContentBox">
+        <div class="rightPropertyContent">
+          <div class="designPropetyBox">
+            <ul class="projectPropetyHeader projectNav">
+              <li data-type="attr" class="item selected">检查结果</li>
+            </ul>
+            <div class="projectPropetyContainer projectNavContentBox">
+
+              <div class="designProperties" >
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dragSize"></div>
+        <div class="slideBar"><i class="icon-caret-right"></i></div>
+      </div>
+    </div>
+    <div class="projectCotent"></div>
+  </div>
+</div>
+<script>
+$(function(){
+  window.query = project.GetRequest();
+
+  //获取项目相关信息通过project code
+
+  $.ajax({
+    url: "/platform/api/project/"+query.projectcode+"/meta?token=123"
+  }).done(function(data){
+    if (data.code == 0) {
+
+      if (data.data) {
+        query.projectId = data.data.projectId;
+        query.projectVersionId = data.data.versionId;
+
+            var viewer = new ModelSelection({
+              sourceId: '848069790540000',
+              etag: "ca4863cf122ac55b5a8e845595aeb7ce",
+              projectId:data.data.projectId,
+              projectVersionId: data.data.versionId,
+              type: 1,//检查点类型
+              callback:function(ids){
+                console.log(ids);
+              }
+            });
+
+      }
+    }
+  });
+
+  App.Global || (App.Global = {} );
+  if (!("ActiveXObject" in window) && !window.ActiveXObject) {
+    //轮训
+    setInterval(function(){
+      App.Comm.checkOnlyCloseWindow();
+    },3000);
+  }
+
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<div>
+    流程名称
+</div>
+<input class="txtFlowTitle txtInput" value="<%= obj.busName || '' %>" placeholder="请输入流程名称"  type="text" />
+
+<div class="ckUrl">
+    <label class="btnCk  <%= obj.id && obj.busViewUrl && 'selected' || !obj.id && 'selected'  %> ">
+    <i class="iconPic"></i> <%= App.Local.data['drawing-model'].Check || '查看' %>
+    </label>
+</div>
+
+<%if(obj.id && obj.busViewUrl){%>
+	 
+	<input class="txtFlowCkUrl txtInput"  value="<%= obj.busViewUrl || '' %>"  placeholder="请输入查看URL"   type="text" /> 
+
+<%}else{%>
+	<%if(obj.id){%>
+		<input class="txtFlowCkUrl txtInput disabled" readonly="true"  placeholder="请输入查看URL"   type="text" />
+	<%}else{%>
+		<input class="txtFlowCkUrl txtInput"  placeholder="请输入查看URL"   type="text" />
+	<%}%>
+	
+<%}%>
+
+
+
+<div class="starUrl">
+    <label class="btnCk <%= obj.id && obj.busSendUrl && 'selected'   %> ">
+    <i class="iconPic"></i> 发起
+    </label>
+</div>
+
+<%if( obj.id && obj.busSendUrl){%>
+	<input class="txtFlowStarUrl txtInput" value="<%= obj.busSendUrl || '' %>" placeholder="请输入发起URL" type="text" />
+<%}else{%>
+	<input class="txtFlowStarUrl txtInput disabled"  readonly="true" placeholder="请输入发起URL" type="text" />
+<%}%>
+
+

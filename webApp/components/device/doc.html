@@ -1,0 +1,259 @@
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<style>html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ol,
+ul,
+li,
+img {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+html * {
+  font-family: "ff-din-web-pro-1", "ff-din-web-pro-2", sans-serif;
+  font-size: 16px;
+  line-height: 19.2px;
+  color-profile: sRGB;
+}
+body {
+  margin: 40px 70px;
+}
+p {
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+strong {
+  font-weight: bold;
+}
+ol,
+ul {
+  margin-left: 2em;
+  margin-bottom: 20px;
+}
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+  margin-top: 10px;
+}
+li {
+  margin-bottom: 10px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: lighter;
+  text-transform: capitalize;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h2 {
+  font-size: 24.624px;
+  line-height: 29.548799999999996px;
+}
+h3 {
+  font-size: 23.44px;
+  line-height: 28.128px;
+}
+h4 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h5 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+h6 {
+  font-size: 22.16px;
+  line-height: 26.592px;
+}
+img {
+  margin-bottom: 20px;
+}
+h1 img,
+h2 img,
+h3 img,
+h4 img,
+h5 img,
+h6 img,
+p img {
+  margin-bottom: 0;
+}
+pre {
+  margin-bottom: 20px;
+}
+pre,
+code {
+  font-family: monospace;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  padding: 15px;
+}
+blockquote {
+  border-left: 4px solid;
+  padding: 0 15px;
+}
+blockquote > :first-child {
+  margin-top: 0;
+}
+blockquote > :last-child {
+  margin-bottom: 15px;
+}
+h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+h2 {
+  border-bottom: 1px solid;
+}
+h3,
+h4,
+h5,
+h6 {
+  border-bottom: none;
+}
+html * {
+  color: #657b83;
+}
+html body {
+  background-color: #fdf6e3;
+}
+html h1,
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #586e75;
+  border-color: #657b83;
+}
+html a,
+html a:active,
+html a:visited {
+  color: #586e75;
+}
+html a:hover {
+  background-color: #eee8d5;
+}
+html pre {
+  color: #586e75;
+  background-color: #eee8d5;
+}
+html a,
+html a:active,
+html a:visited,
+html code.url {
+  color: #b58900;
+}
+html h1 {
+  color: #b58900;
+}
+html h2,
+html h3,
+html h4,
+html h5,
+html h6 {
+  color: #b58900;
+}
+
+@media print {
+  body {
+    margin: 0;
+  }
+  * {
+    color: #000 !important;
+  }
+}</style>
+</head>
+<body>
+<h3 id="L....................................">设备材料模型组件开发文档</h3>
+
+<p><em>2016-11-11 17:02:04</em></p>
+
+<hr />
+
+<h4 id="L......">引用</h4>
+
+<blockquote><p>页面引入脚本文件</p></blockquote>
+
+<pre><code> &lt;script src="http://bim.wanda-dev.cn/static/dist/components/device/js/device.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h4 id="L.........">初始化</h4>
+
+<blockquote><p>执行下面代码：</p></blockquote>
+
+<pre><code>    //初始化模型组件
+    new DeviceSelection({
+        data:data,//构件数据列表、必须的
+        height: "580px",//模型高度
+        width:"1200px",//模型宽度
+        projectCode: '20000305',//项目ProjectCode
+        token: "",
+        appKey: "",
+        callback: function (res) {
+            //回调函数
+            //用户点击确认时、执行的回调、传回数据
+            alert(JSON.stringify(res))
+        }
+    })
+</code></pre>
+
+<h4 id="L..................">数据字段说明</h4>
+
+<blockquote><p>data 类型：<code>Array[Object]</code> 例如：</p></blockquote>
+
+<pre><code>{
+        //文件名称
+        fileName:"WDGC-Q-PL-F02.rvt",
+        //文件ID
+        revitFileId:"ff0402f57d49241819fa245e3239777b",
+        //构件编码
+        uniqueId: "6c0fd922-7f0b-4c97-a77e-f35c72d33e7e-0023af3b",
+        //构件boundingBox
+        boundingbox: {
+            "min" : {
+                "x" : 119838.0703125,
+                "y" : 4144.0263671875,
+                "z" : 10800.0009765625
+            },
+            "max" : {
+                "x" : 119679.0625,
+                "y" : 3985.02197265625,
+                "z" : 10040.3125
+            }
+        }
+    }
+</code></pre>
+
+<h4 id="Demo......">Demo查看</h4>
+
+<blockquote><p><a href="http://bim.wanda-dev.cn/static/dist/components/device/index.html">点击查看-测试环境</a></p>
+
+<p><a href="http://bim-uat.wanda-dev.cn/static/dist/components/device/index.html">点击查看-UAT环境</a></p></blockquote>
+</body>
+</html>

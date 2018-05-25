@@ -1,0 +1,85 @@
+{
+    "code": 0,
+    "message": "success",
+    "data": [{
+        "code": "A104",
+        "name": "混凝土工程", 
+        "totalQuantity": 700,
+        "unit": "m³",
+        "price": 7000,
+        "baseTotalQuantity": 600,
+        "baseUnit": "m³",
+        "basePrice": 6000, 
+        "children": [{
+            "code": "A10421082",
+            "name": "C30砼有梁板、无梁板、平板",
+            "totalQuantity": 700,
+            "unit": "m³",
+            "price": 7000,
+            "baseTotalQuantity": 600,
+            "baseUnit": "m³",
+            "basePrice": 6000,
+            "children": [{
+                "code": "A10421082",
+                "name": "C30砼有梁板、无梁板、平板",
+                "totalQuantity": 700,
+                "unit": "m³",
+                "price": 7000,
+                "baseTotalQuantity": 600,
+                "baseUnit": "m³",
+                "basePrice": 6000,
+                "children": [{
+                    "code": "A10421082",
+                    "name": "C30砼有梁板、无梁板、平板",
+                    "totalQuantity": 700,
+                    "unit": "m³",
+                    "price": 7000,
+                    "baseTotalQuantity": 600,
+                    "baseUnit": "m³",
+                    "basePrice": 6000,
+                    "children": null
+                }]
+            }]
+        }]
+    }, {
+         "code": "A104",
+        "name": "混凝土工程", 
+        "totalQuantity": 700,
+        "unit": "m³",
+        "price": 7000,
+        "baseTotalQuantity": 600,
+        "baseUnit": "m³",
+        "basePrice": 6000, 
+        "children": [{
+            "code": "A10421082",
+            "name": "C30砼有梁板、无梁板、平板",
+            "totalQuantity": 700,
+            "unit": "m³",
+            "price": 7000,
+            "baseTotalQuantity": 600,
+            "baseUnit": "m³",
+            "basePrice": 6000,
+            "children": [{
+                "code": "A10421082",
+                "name": "C30砼有梁板、无梁板、平板",
+                "totalQuantity": 700,
+                "unit": "m³",
+                "price": 7000,
+                "baseTotalQuantity": 600,
+                "baseUnit": "m³",
+                "basePrice": 6000,
+                "children": [{
+                    "code": "A10421082",
+                    "name": "C30砼有梁板、无梁板、平板",
+                    "totalQuantity": 700,
+                    "unit": "m³",
+                    "price": 7000,
+                    "baseTotalQuantity": 600,
+                    "baseUnit": "m³",
+                    "basePrice": 6000,
+                    "children": null
+                }]
+            }]
+        }]
+    }]
+}

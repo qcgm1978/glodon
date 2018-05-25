@@ -1,0 +1,112 @@
+<div class="hedaerSearch">
+    <span class="searchToggle" data-i18n="data.drawing-model.SFnS">选择筛选条件</span>
+    <span class="clearSearch" data-i18n="data.drawing-model.Clear">清除条件</span>
+    <span class="groupRadio">
+            <label class="btnCk"><i class="iconPic"></i><%= App.Local.data['drawing-model'].Sts1 || '显示搜索结果对应位置' %></label>
+        </span>
+</div>
+<div class="searchDetail concernSearch">
+    <div class="searchOptons">
+        <div class="optonLine zIndex11">
+            <div class="myDropDown categoryOption optionComm">
+                <span class="myDropText">
+             <span><%= App.Local.data['drawing-model'].CAl1 || '类别：' %></span> <span class="text"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                    <% _.each(App.Project.mapData.concernsCategory,function(item,index){ if(index!=0){%>
+                    <li class="myItem" data-val='<%=index%>'><%=item%></li>
+                    <% } }) %>
+                </ul>
+            </div>
+            <div class="myDropDown statusOption optionComm">
+                <span class="myDropText">
+             <span><%= App.Local.data['drawing-model'].Ss1 || '状态：' %></span> <span class="text"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li data-status="" class="myItem"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                    <% _.each(App.Project.mapData.concernsStatus,function(item,index){ if(index!=0){%>
+                    <li class="myItem" data-val='<%=index%>'><%=item%></li>
+                    <% } }) %>
+                </ul>
+            </div>
+        </div>
+        <div class="optonLine zIndex10">
+            <div class="myDropDown operatorOption optionComm">
+                <span class="myDropText">
+             <span><%= App.Local.data['drawing-model'].Iby1 || '填报人' %>：</span> <span class="text"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                    <% _.each(App.Project.mapData.concernsReporter,function(item,index){ if(index!=0){%>
+                    <li class="myItem" data-val='<%=index%>'><%=item%></li>
+                    <% } }) %>
+                </ul>
+            </div>
+            <div class="myDropDown gradeOption optionComm">
+                <span class="myDropText">
+             <span><%= App.Local.data['drawing-model'].Scale || '等级' %>：</span> <span class="text"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li data-status="" class="myItem"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                    <% _.each(App.Project.mapData.concernsLevel,function(item,index){ if(index!=0){%>
+                    <li class="myItem" data-val='<%=index%>'><%=item%></li>
+                    <% } }) %>
+                </ul>
+            </div>
+        </div>
+        <div class="optonLine">
+            <div class="myDropDown typeOption optionComm">
+                <span class="myDropText">
+             <span><%= App.Local.data['drawing-model'].Type || '类型' %>：</span> <span class="text"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                    <% _.each(App.Project.mapData.concernsType,function(item,index){ if(index!=0){%>
+                    <li class="myItem" data-val='<%=index+1%>'><%=item%></li>
+                    <% } }) %>
+                </ul>
+            </div>
+        </div>
+        <div class="optonLine">
+            <div class="firstDate dateBox" style="position: relative;">
+                <i class="iconCal add-on"></i>
+                <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].DCd || '请选择创建时间' %>" id="dateStar2" class="span2" type="text">
+            </div>
+            <span>-</span>
+            <div class="firstDate dateBox" style="margin-left: 0;">
+                <i class="iconCal"></i>
+                <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].DCd || '请选择创建时间' %>" id="dateEnd2" class="span2" type="text">
+            </div>
+        </div>
+        <div class="optonLine btnOption">
+            <input type="button" class="myBtn myBtn-primary btnFilter" value="<%= App.Local.data['drawing-model'].Filter || '筛选' %>" />
+        </div>
+    </div>
+</div>
+<div class="tbContainer">
+    <table class="tbConcernsHeader tbComm">
+        <thead>
+            <tr>
+                <th class="concernInfo"><%= App.Local.data['drawing-model'].Hazards || '隐患' %></th>
+                <th class="category"><%= App.Local.data['drawing-model'].CAl2 || '类别' %></th>
+                <th class="status"><%= App.Local.data['drawing-model'].Ss1 || '状态：' %></th>
+                <th class="grade"><%= App.Local.data['drawing-model'].Scale || '等级' %></th>
+                <th class="operator"><%= App.Local.data['drawing-model'].Iby1 || '填报人' %></th>
+                <th class="type"><%= App.Local.data['drawing-model'].Type || '类型' %></th>
+            </tr>
+        </thead>
+    </table>
+    <div class="materialequipmentList concernList">
+        <div class="materialequipmentListScroll">
+            <table class="tbConcernsBody tbComm">
+                <tbody>
+                   <tr class="noLoading"></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="paginationBottom">
+  <div class="pageInfo">
+        <span class="curr">1</span>/<span class="pageCount">123</span><%= App.Local.currentIsEn?'': '页' %>
+        <span class="prev"><%= App.Local.data['system-module'].Back || '上一页' %></span> <span class="next"  data-i18n="data.drawing-model.Next">下一页</span>
+    </div>
+    <div class="sumCount"><%= App.Local.data.system.Total|| '共' %><span class="count">1</span><%= App.Local.data.system.Records || '条' %></div>
+  
+</div>

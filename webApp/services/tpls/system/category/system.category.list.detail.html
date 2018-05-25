@@ -1,0 +1,13 @@
+<div class="code">
+    <%=busCode%>
+</div>
+<div class="name">
+    <%=busName%>
+</div>
+<div class="desc">
+    <%=busDesc?busDesc:"无"%>
+</div>
+<div class="op">
+    <i class="myIcon-update btnUpdate pointer" data-id="<%=id%>"  title="<%= App.Local.data['system-module'].Edit || '编辑' %>"></i>
+    <i class="myIcon-del-blue btnDel pointer" data-id="<%=id%>" title="<%= App.Local.data['system-module'].Delete || '删除' %>"></i>
+</div>

@@ -1,0 +1,32 @@
+<div class="item" data-code="<%= code %>">
+     	<% var mLeft=deep*6;%>
+     <div class="listCode commItem">
+     	<% if(obj.children && obj.children.length>0){%>
+ 			<i class="nodeSwitch" style="margin-left:<%=mLeft%>px;"></i>
+     	<%}else{%>
+ 			<i class="noneSwitch none" style="margin-left:<%=mLeft%>px;"></i>
+     	<%}%>  
+
+      <% if(url){%>
+           <a href="<%= url%>" target="_blank">
+        <span class="text overflowEllipsis" style="left:<%=mLeft+13%>px;" title='<%= code %>'><%= code %></span> </a>
+      <%}else{%>
+        <span class="text overflowEllipsis" style="left:<%=mLeft+13%>px;" title='<%= code %>'><%= code %></span>
+      <%}%>
+      </div>
+       <span class="listName commItem overflowEllipsis"> <span title="<%= name %>" class="text"><%= name %></span></span>
+      <span class="listCount commItem overflowEllipsis"><span title="<%=totalQuantity && totalQuantity.toFixed(4) || '--'%><%=unit%>" class="text"><%=totalQuantity && totalQuantity.toFixed(4) || '--'%><%=unit%></span></span>
+</div>
+
+<% if(obj.children && obj.children.length>0){ %>
+<% var count= obj.children.length; %>
+	<ul class="contrastTree" style="display: none;">
+	<%for(var i=0;i<count;i++){%> 
+		<li class="node" > 
+		    <% obj.children[i].deep=deep+1; %>  
+			<%= arguments.callee(obj.children[i]) %>
+		</li> 
+	<% } %> 
+	</ul> 
+
+<% } %>

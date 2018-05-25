@@ -1,0 +1,42 @@
+<div>
+    属性名
+</div>
+<input class="txtAttrTitle txtInput" value="<%=obj.propertyName || '' %>" placeholder="请输入属性名称" type="text" />
+<div class="linkAttr">
+    <label class="btnCk  <%=obj.reference && 'selected' %>">
+        <i class="iconPic"></i> 关联属性
+    </label>
+</div>
+<div class="myDropDown linkAttrOption">
+    <span class="myDropText <%=obj.reference ?'' : 'disabled' %>">
+    <span> 
+
+    <span class="text"><%=obj.reference ? obj.reference : '无'  %></span>
+    <i class="myDropArrorw"> </i></span>
+    <ul class="myDropList" style="display: none;">
+        <li class="loading"><%= App.Local.data['system']['l-g'] || '正在加载，请稍候……' %></li>
+    </ul>
+</div>
+<div>
+    请选择属性的类型
+</div>
+<div class="myDropDown attrTypeOption" data-type="<%= obj.type=='字符' && 1 || obj.type=='链接' && 2　|| 3 %>">
+    <span class="myDropText <%=obj.reference ?'disabled' : '' %>" >
+        <span> 
+         <span class="text"><%=obj.type ? obj.type : '字符'  %></span>
+    <i class="myDropArrorw"> </i></span>
+    <ul class="myDropList" style="display: none;">
+        <li class="myItem" data-type="1">字符</li>
+        <li class="myItem" data-type="2">链接</li>
+        <li class="myItem" data-type="3">列表</li>
+    </ul>
+</div>
+
+<%if(obj.isEdit){%>
+    <div>
+    属性key
+</div>
+<input class="txtAttrTitle txtInput disabled" readonly="true" value="<%=obj.property %>" 
+    placeholder="请输入属性名称" type="text" />
+
+<%}%>

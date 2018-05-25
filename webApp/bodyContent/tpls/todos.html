@@ -1,0 +1,10 @@
+<td class="tableContent">
+	<a href="javascript:;" class="noReadTodo" data-todoid="<%= id%>" data-href="<%= pcUrl %>" target="_blank" title="<%= title %>" data-stat="<%= sysFromName %>"><span>【<%= sysFromName %>】</span><%= title %></a>
+	<% if(status == 1){%><span class="new"></span><%}%>
+</td>
+<td>
+<span class="name" title="<%= initiatorName||'--' %>"><%= initiatorName||'--' %></span>
+</td>
+<td>
+	<span class="time"><%= receiveTime?new Date(receiveTime).format("yyyy-MM-dd hh:mm:ss"):'--' %></span>
+</td>

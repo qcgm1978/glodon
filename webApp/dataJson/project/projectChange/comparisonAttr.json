@@ -1,0 +1,23 @@
+{   "code": 0,
+    "message": "success",
+    "data": [{
+        "group": "尺寸标注",
+        "items": [{
+            "name": "周长", 
+            "value": "453700.000", 
+            "unit": "㎡" ,
+            "baseValue": "45373.000", 
+            "baseUnit": "㎡"
+        }]
+    },
+    {
+        "group": "其他标注",
+        "items": [{
+            "name": "周长", 
+            "value": "4500.000", 
+            "unit": "㎡" ,
+            "baseValue": "453700.000", 
+            "baseUnit": "㎡"
+        }]
+    }]
+}

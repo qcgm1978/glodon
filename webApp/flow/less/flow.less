@@ -1,0 +1,1192 @@
+#flowContainer {
+  overflow-y: auto;
+  padding: 10px 30px 30px 30px;
+  position: absolute;
+  top: 130px;
+  // top: 180px;;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  & .micon {
+    font-family: "modelicon" !important;
+    font-size: 30px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .classify {
+    border: 1px #ddd solid;
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    position: relative;
+    border-radius: 5px;
+    .flowBg {
+      background: url('/flow/images/flowIcon.png') no-repeat;
+    }
+    .title {
+      position: absolute;
+      left: 0px;
+      top: -6px;
+      background-color: #fff;
+      text-align: right;
+      padding-right: 12px;
+      padding-left: 33px;
+    }
+    .item {
+      float: left;
+      width: 240px;
+      height: 50px;
+      margin-left: 15px;
+      line-height: 50px;
+      box-sizing: border-box;
+      padding-left: 15px;
+      border-radius: 4px;
+      padding-right: 12px;
+      margin-top: 8px;
+      cursor: pointer;
+      &:hover {
+        background-color: #D9F3FF;
+        a {
+          display: inline-block;
+        }
+      }
+      a {
+        color: #006ECF;
+        display: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .mRightCK {
+        margin-right: 7px;
+      }
+      .text {
+        color: #333;
+        font-size: 14px;
+        width: 100%;
+        overflow: hidden;
+        display: inline-block;
+        text-overflow: ellipsis;
+        height: inherit;
+        white-space: nowrap;
+        & span {
+          color: #ccc;
+          display: inline;
+        }
+      }
+      .commIcon {
+        display: inline-block;
+        width: 26px;
+        height: 27px;
+        vertical-align: -7px;
+        background-position: 0px -82px;
+      }
+      .modelTrial {
+      }
+      .modificationConfirmation {
+        background-position: 0px -108px;
+      }
+      .modelTransfer {
+        background-position: 0px -135px;
+      }
+      .changeRequest {
+        background-position: 0px -161px;
+        height: 25px;
+      }
+      .changeAuditing {
+        background-position: 0px -186px;
+        height: 21px;
+      }
+      .changeTransfer {
+        background-position: 0px -206px;
+      }
+      .designofInspection {
+        background-position: 0px -233px;
+      }
+      .nodeCk {
+        background-position: 0px -261px;
+        height: 23px;
+      }
+      .taskCk {
+        background-position: 0px -285px;
+      }
+      .signtheContract {
+        background-position: 0px -312px;
+      }
+      .contractRegistration {
+        background-position: 0px -338px;
+      }
+      .changetheVisa {
+        background-position: 0px -366px;
+        height: 24px;
+      }
+      .priceConfirmation {
+        background-position: 0px -390px;
+        height: 22px;
+      }
+      .contractPrice {
+        background-position: 0px -413px;
+        height: 24px;
+      }
+      .contractSettlement {
+        background-position: 0px -437px;
+      }
+      .keyPointSet {
+        background-position: 0px -465px;
+      }
+      .constructionInspectionReport {
+        background-position: 0px -492px;
+      }
+      .majorHazardReporting {
+        background-position: 0px -519px;
+      }
+      .rectificationNotice {
+        background-position: 0px -547px;
+        height: 28px;
+      }
+      .rectificationList {
+        background-position: 0px -575px;
+      }
+      .controlMaterialsEquipment {
+        background-position: 0px -603px;
+        height: 28px;
+      }
+      .queryStatistics {
+        background-position: 0px -631px;
+        height: 20px;
+      }
+      .todoTaskList {
+        background-position: 0px -650px;
+      }
+    }
+    .leftRadius {
+      height: 30px;
+      top: -1px;
+      position: absolute;
+      width: 30px;
+      z-index: 1;
+    }
+    .rightRadius {
+      .leftRadius;
+      right: 0px;
+      right: -1px;
+      background-position: 9px -42px;
+    }
+    & legend {
+      margin-left: 20px;
+      padding: 0 20px;
+      width: auto;
+      border-radius: 20px;
+      background: #F5F5F5;
+      height: 28px;
+      line-height: 28px;
+      font-size: 14px;
+      & i {
+        vertical-align: -6px;
+      }
+    }
+  }
+}
+
+.flowTabNav {
+  position: absolute;
+  top: 38px;
+  // top:88px;
+  left: 0;
+  right: 0;
+  min-width: 1270px;
+  height: 92px;
+  margin: 0;
+  border-bottom: 1px solid #DDDDDD;
+  padding-left: 70px;
+  font-family: "Microsoft Yahei";
+  & li {
+    text-align: center;
+    list-style: none;
+    & a {
+      font-size: 14px;
+      color: #666;
+      text-decoration: none;
+    }
+  }
+  & .flowTabItem {
+    float: left;
+    cursor: pointer;
+    & .numberFlag1 {
+      background-position: 0 -440px;
+    }
+    & .numberFlag2 {
+      background-position: 0 -550px;
+    }
+    & .numberFlag3 {
+      background-position: 0 -661px;
+    }
+    & .numberFlag4 {
+      background-position: 0 -771px;
+    }
+  }
+
+  & .tabNavItem {
+    width: 200px;
+    height: 36px;
+    position: relative;
+    & span {
+      display: inline-block;
+      margin-left: -70px;
+      vertical-align: -10px;
+      font-size: 14px;
+    }
+  }
+
+  & .itemSelected {
+    & .numberFlag1 {
+      background-position: 0 0;
+    }
+    & .numberFlag2 {
+      background-position: 0 -110px;
+    }
+    & .numberFlag3 {
+      background-position: 0 -220px;
+    }
+    & .numberFlag4 {
+      background-position: 0 -330px;
+    }
+  }
+
+  & .arrowHover {
+    background-position: 0 -50px;
+  }
+
+  & .numberFlag {
+    display: inline-block;
+    width: 190px;
+    height: 95px;
+    background: url("../images/flowIcon2.png") no-repeat;
+    float: left;
+    margin-left: 10px;
+  }
+
+  & .flowMoreBtn {
+    float: right;
+    width: 120px;
+    height: 40px;
+    margin-right: 40px;
+    margin-top: 71px;
+    border-radius: 6px;
+    border: 2px solid #DDD;
+    font-size: 14px;
+    background: #fff;
+    &:before {
+      content: "";
+      background: url("../images/icon.png") 0 0 no-repeat;
+      width: 24px;
+      height: 24px;
+      display: inline-block;
+      margin-top: 6px;
+      margin-left: 10px;
+      float: left;
+    }
+    & a {
+      width: 82px;
+      color: #ccc;
+      display: inline-block;
+      float: left;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+    }
+  }
+  & .adminAbsi {
+    &:before {
+      background: url("../images/icon.png") -69px 0 no-repeat;
+    }
+  }
+  & .adminAbsiOn {
+    border: 2px solid #1D86FB;
+    background-color: #D0E6FF;
+    &:before {
+      background: url("../images/icon.png") -69px -31px no-repeat;
+    }
+    & a {
+      color: #333;
+    }
+  }
+}
+
+.flowModal {
+  position: fixed;
+  z-index: 99999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(33, 33, 33, 0.3);
+  & .flowModalDialog {
+    position: absolute;
+    top: 50%;
+    margin-top: -270px;
+    left: 50%;
+    margin-left: -340px;
+    width: 680px;
+    height: 540px;
+    background: #FFF;
+    box-shadow: 3px 3px 8px -1px #5A5959;;
+    & .flowModalHeader {
+      position: absolute;
+      height: 48px;
+      line-height: 48px;
+      top: 0;
+      right: 0;
+      left: 0;
+      background: #117EE1;
+      padding: 0 20px;
+      color: #FFFFFF;
+      & .title {
+        font-family: "Microsoft Yahei";
+        font-size: 16px;
+        width: 600px;
+        display: inline-block;
+      }
+    }
+    & .dialogClose {
+      float: right;
+      cursor: pointer;
+      &:hover {
+        color: #CFCFCF;
+      }
+    }
+    & .flowModalBody {
+      top: 48px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      background: #FFF;
+      bottom: 48px;
+      padding: 16px;
+      overflow: auto;
+      &.multi {
+        bottom: 96px;
+      }
+      & table {
+        width: 100%;
+        border-width: 1px;
+        border-color: #666666;
+        border-collapse: collapse;
+        & td {
+          border: 1px solid #ddd;
+          word-wrap: break-word;
+          word-break: break-all;
+        }
+        & .title {
+          font-family: "Microsoft Yahei";
+          font-size: 12px;
+          color: #666;
+          text-align: center;
+          background: #EEE;
+          &.cols {
+            padding-left: 10px;
+            text-align: left;
+            height: 30px;
+          }
+          &.rows {
+            width: 60px;
+          }
+        }
+        & .content {
+          font-size: 12px;
+          padding: 10px;
+          vertical-align: top;
+          &.cols {
+            width: 142px;
+          }
+        }
+      }
+    }
+    & .flowModalBbar {
+      position: absolute;
+      height: 48px;
+      bottom: 0;
+      right: 0;
+      padding-right: 15px;
+      left: 0;
+      &.multi {
+        height: 96px;
+      }
+    }
+    & .flowModalBtn {
+      font-family: "Microsoft Yahei";
+      font-size: 14px;
+      background: #117EE1;
+      height: 30px;
+      color: #FFFFFF;
+      box-sizing: border-box;
+      display: inline-block;
+      line-height: 24px;
+      font-weight: normal;
+      text-align: center;
+      white-space: nowrap;
+      vertical-align: middle;
+      cursor: pointer;
+      border: 1px solid transparent;
+      width: 100px;
+      float: right;
+      padding: 0 5px;
+      margin: 10px 0 0 10px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-decoration: none;
+    }
+  }
+}
+
+//start 管理依据样式
+.adminBasiClassName {
+  width: 100%;
+  height: 100%;
+  dl {
+    width: 100%;
+    height: 250px;
+    border: #ddd solid 1px;
+    border-bottom: 0;
+    dt {
+      width: 30%;
+      height: 100%;
+      float: left;
+      text-align: center;
+      background-color: #eee;
+      border-right: #ddd solid 1px;
+      h2 {
+        line-height: 250px;
+        font-size: 20px;
+        color: #333;
+      }
+    }
+    dd {
+      width: 70%;
+      height: 100%;
+      float: left;
+      padding-left: 45px;
+      padding-top: 8px;
+      ul li {
+        height: 30px;
+        margin: 8px 0;
+        a {
+          display: inline-block;
+          line-height: 30px;
+          font-size: 16px;
+          color: #408cdf;
+          &.noClick {
+            color: #333;
+            &:hover {
+              text-decoration: none;
+            }
+          }
+          &:hover {
+            text-decoration: underline;
+
+          }
+        }
+        ul {
+          padding-left: 2em;
+        }
+      }
+    }
+    // border-radius: 5px;
+  }
+  & > dl:nth-child(2) {
+    height: 200px;
+    dt {
+      h2 {
+        line-height: 200px;
+      }
+    }
+    dd {
+      padding-top: 22px;
+    }
+  }
+  & > dl:nth-child(3) {
+    height: 180px;
+    border-bottom: #ddd solid 1px;
+    dt {
+      h2 {
+        line-height: 180px;
+      }
+    }
+    dd {
+      padding-top: 44px;
+    }
+  }
+}
+
+.adminBasiPage {
+  .header {
+    height: 40px;
+    border-bottom: 1px solid #ccc;
+    line-height: 40px;
+    padding-left: 20px;
+    background-color: #f5f5f5;
+    font-size: 14px;
+    color: #6E6E6E;
+    & > span > span {
+      cursor: default;
+      color: #408cdf;
+    }
+  }
+  .wrapper {
+    border: 1px solid #ccc;
+    padding: 20px;
+    padding-bottom: 80px;
+    width: 1002px;
+    margin: 0 auto;
+    margin-top: 20px;
+    .title {
+      height: 80px;
+      text-align: center;
+      width: 100%;
+      border-bottom: 1px solid #ccc;
+      h2 {
+        font-size: 20px;
+        height: 60px;
+        line-height: 60px;
+      }
+    }
+    .content {
+      width: 682px;
+      height: auto;
+      margin: 0 auto;
+      padding: 30px 0;
+      font-size: 14px;
+      color: #333;
+      & > p {
+        text-indent: 2em;
+        line-height: 40px;
+      }
+      & > h3, & > h4 {
+        text-align: left;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+      }
+      & > h3 {
+        font-weight: bold;
+        text-align: center;
+      }
+      .imgBox {
+        text-align: center;
+        width: 100%;
+      }
+      table {
+        width: 100%;
+        height: auto;
+        margin-top: 10px;
+        border: #000 solid 1px;
+        tr td {
+          p {
+            line-height: 30px;
+            padding: 0 20px;
+          }
+        }
+        tr td:nth-child(1) {
+          width: 146px;
+          text-align: center;
+          font-size: 16px;
+          font-weight: bold;
+          border-right: #000 solid 1px;
+        }
+        thead tr td {
+          height: 36px;
+          line-height: 36px;
+          font-weight: bold;
+          font-size: 16px;
+          text-align: center;
+          border-bottom: #000 solid 1px;
+        }
+        thead tr td:nth-child(1) {
+          border-right: #000 solid 1px;
+        }
+        tbody tr td {
+          border-bottom: #000 solid 1px;
+        }
+      }
+    }
+  }
+}
+
+//end 管理依据样式
+//start 总包交钥匙样式
+//
+.flowContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  padding-top: 38px;
+  .resourceCrumbsNav {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .flowContainerKey {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .flowListBox {
+      width: 100%;
+      height: auto;
+      padding-top: 30px;
+      position: relative;
+      .listTopBgBox {
+        width: 100%;
+        height: 1px;
+        padding-left: 30px;
+        margin-bottom: 10px;
+        .listTopBox {
+          position: relative;
+          width: 100%;
+          height: 1px;
+          background: #DDDDDD;
+          margin: 20px 0;
+          span {
+            position: absolute;
+            left: 0;
+            top: -18px;
+            font-size: 24px;
+            color: #666;
+            background-color: #fff;
+            padding-right: 10px;
+          }
+        }
+      }
+      .listContentBox {
+        width: 100%;
+        height: auto;
+        padding: 30px;
+        padding-top: 20px;
+        padding-bottom: 0;
+        .classify {
+          border: 1px #ddd solid;
+          padding-top: 20px;
+          padding-bottom: 30px;
+          position: relative;
+          border-radius: 5px;
+          & legend {
+            margin-left: 20px;
+            padding: 0 20px;
+            width: auto;
+            border-radius: 20px;
+            background: #F5F5F5;
+            height: 28px;
+            line-height: 28px;
+            font-size: 14px;
+            i.micon {
+              display: inline-block;
+              float: left;
+              width: 24px;
+              height: 28px;
+              margin-right: 10px;
+            }
+            i.htqd_icon {
+              background: url('/flow/images/htqd_icon.png') center no-repeat;
+            }
+            i.htjs_icon {
+              background: url('/flow/images/htjs_icon.png') center no-repeat;
+            }
+            i.htgc_icon {
+              background: url('/flow/images/htgc_icon.png') center no-repeat;
+            }
+            i.dxsdk_icon {
+              background: url('/flow/images/dxsdk_icon.png') center no-repeat;
+            }
+            i.ty_icon {
+              background: url('/flow/images/ty_icon.png') center no-repeat;
+            }
+            i.fjhrw_icon {
+              background: url('/flow/images/fjhrw_icon.png') center no-repeat;
+            }
+          }
+          & ul {
+            li.item {
+              float: left;
+              width: 240px;
+              height: 50px;
+              margin-left: 15px;
+              line-height: 50px;
+              box-sizing: border-box;
+              padding-left: 15px;
+              border-radius: 4px;
+              padding-right: 12px;
+              margin-top: 8px;
+              cursor: pointer;
+              span {
+                font-size: 14px;
+              }
+              .text {
+                color: #333;
+                font-size: 14px;
+                width: 100%;
+                overflow: hidden;
+                display: inline-block;
+                text-overflow: ellipsis;
+                height: inherit;
+                white-space: nowrap;
+                & span {
+                  // color: #ccc;
+                  display: inline;
+                }
+              }
+              a {
+                color: #006ECF;
+                display: inline-block;
+                width: 100%;
+                overflow: hidden;
+                display: inline-block;
+                text-overflow: ellipsis;
+                height: inherit;
+                white-space: nowrap;
+
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+              &:hover {
+                background-color: #D9F3FF;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .gzProjectBox{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 102px;
+    .gzTabProjectBox{
+      width: 100%;
+      height: 92px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      ul{
+        width: 100%;
+        height: 92px;
+        border-bottom: 1px solid #ddd;
+        padding-left: 70px;
+        li{
+          float: left;
+          width: 190px;
+          height: 95px;
+          background-position: center;
+          background-image: url(../images/flowIcon3.png);
+          background-repeat: no-repeat;
+          cursor: pointer;
+          &:nth-child(1){
+            background-position: 0 -441px;
+          }
+          &:nth-child(2){
+            background-position: 0 -551px;
+          }
+          &:nth-child(3){
+            background-position: 0 -662px;
+          }
+          &:nth-child(4){
+            background-position: 0 -772px;
+          }
+        }
+        li.activeClass{
+          &:nth-child(1){
+            background-position: 0 0;
+          }
+          &:nth-child(2){
+            background-position: 0 -110px;
+          }
+          &:nth-child(3){
+            background-position: 0 -220px;
+          }
+          &:nth-child(4){
+            background-position: 0 -330px;
+          }
+        }
+      }
+    }
+    a.mkhjdBox{
+      display: block;
+      position: absolute;
+      right: 30px;
+      top:70px;
+      // width: 120px;
+      padding-right: 10px;
+      height: 40px;
+      line-height: 36px;
+      border-radius: 6px;
+      border: 2px solid #DDD;
+      font-size: 14px;
+      background: #fff;
+      color: #ccc;
+      z-index: 100;
+      &.first{
+            right: 174px;
+      }
+      &:hover{
+        text-decoration: none;
+      }
+      &:before{
+        content: "";
+        background: url(/static/dist/images/flow/images/icon.png) 0 0 no-repeat;
+        width: 24px;
+        height: 24px;
+        display: inline-block;
+        margin-top: 6px;
+        margin-left: 10px;
+        float: left;
+        margin-right: 6px;
+      }
+          &.second:before{
+      background: url(/static/dist/images/flow/images/icon.png) -69px 0 no-repeat;
+            
+          }
+    }
+    .gzContentProjectBox{
+      width: 100%;
+      height: 100%;
+      .itemListBox{
+        width: 100%;
+        height: 100%;
+        padding: 0 30px;
+        padding-bottom: 30px;
+        overflow: hidden;
+        overflow-y: auto;
+        .classify {
+          border: 1px #ddd solid;
+          margin-top: 20px;
+          padding-top: 20px;
+          padding-bottom: 30px;
+          position: relative;
+          border-radius: 5px;
+          & legend {
+            i.micon {
+              display: inline-block;
+              float: left;
+              width: 24px;
+              height: 28px;
+              margin-right: 10px;
+            }
+            i.icon_sj {
+              background: url('/flow/images/icon_sj.png') center no-repeat;
+            }
+            i.icon_zs {
+              background: url('/flow/images/icon_zs.png') center no-repeat;
+            }
+            i.icon_gc {
+              background: url('/flow/images/icon_gc.png') center no-repeat;
+            }
+            i.icon_zb {
+              background: url('/flow/images/icon_zb.png') center no-repeat;
+            }
+            i.icon_cb {
+              background: url('/flow/images/icon_cb.png') center no-repeat;
+            }
+            i.icon_ys {
+              background: url('/flow/images/icon_ys.png') center no-repeat;
+            }
+            i.icon_ky {
+              background: url('/flow/images/icon_ky.png') center no-repeat;
+            }
+            i.icon_yj {
+              background: url('/flow/images/icon_yj.png') center no-repeat;
+            }
+          }
+          .flowBg {
+            background: url('/flow/images/flowIcon.png') no-repeat;
+          }
+          .title {
+            position: absolute;
+            left: 0px;
+            top: -6px;
+            background-color: #fff;
+            text-align: right;
+            padding-right: 12px;
+            padding-left: 33px;
+          }
+          .item {
+            float: left;
+            width: 240px;
+            height: 50px;
+            margin-left: 15px;
+            line-height: 50px;
+            box-sizing: border-box;
+            padding-left: 15px;
+            border-radius: 4px;
+            padding-right: 12px;
+            margin-top: 8px;
+            cursor: pointer;
+            &:hover {
+              background-color: #D9F3FF;
+              a {
+                display: inline-block;
+              }
+            }
+            a {
+              color: #006ECF;
+              display: none;
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+            .mRightCK {
+              margin-right: 7px;
+            }
+            .text {
+              color: #333;
+              font-size: 14px;
+              width: 100%;
+              overflow: hidden;
+              display: inline-block;
+              text-overflow: ellipsis;
+              height: inherit;
+              white-space: nowrap;
+              & span {
+                color: #ccc;
+                display: inline;
+              }
+            }
+            .commIcon {
+              display: inline-block;
+              width: 26px;
+              height: 27px;
+              vertical-align: -7px;
+              background-position: 0px -82px;
+            }
+            .modelTrial {
+            }
+            .modificationConfirmation {
+              background-position: 0px -108px;
+            }
+            .modelTransfer {
+              background-position: 0px -135px;
+            }
+            .changeRequest {
+              background-position: 0px -161px;
+              height: 25px;
+            }
+            .changeAuditing {
+              background-position: 0px -186px;
+              height: 21px;
+            }
+            .changeTransfer {
+              background-position: 0px -206px;
+            }
+            .designofInspection {
+              background-position: 0px -233px;
+            }
+            .nodeCk {
+              background-position: 0px -261px;
+              height: 23px;
+            }
+            .taskCk {
+              background-position: 0px -285px;
+            }
+            .signtheContract {
+              background-position: 0px -312px;
+            }
+            .contractRegistration {
+              background-position: 0px -338px;
+            }
+            .changetheVisa {
+              background-position: 0px -366px;
+              height: 24px;
+            }
+            .priceConfirmation {
+              background-position: 0px -390px;
+              height: 22px;
+            }
+            .contractPrice {
+              background-position: 0px -413px;
+              height: 24px;
+            }
+            .contractSettlement {
+              background-position: 0px -437px;
+            }
+            .keyPointSet {
+              background-position: 0px -465px;
+            }
+            .constructionInspectionReport {
+              background-position: 0px -492px;
+            }
+            .majorHazardReporting {
+              background-position: 0px -519px;
+            }
+            .rectificationNotice {
+              background-position: 0px -547px;
+              height: 28px;
+            }
+            .rectificationList {
+              background-position: 0px -575px;
+            }
+            .controlMaterialsEquipment {
+              background-position: 0px -603px;
+              height: 28px;
+            }
+            .queryStatistics {
+              background-position: 0px -631px;
+              height: 20px;
+            }
+            .todoTaskList {
+              background-position: 0px -650px;
+            }
+          }
+          .leftRadius {
+            height: 30px;
+            top: -1px;
+            position: absolute;
+            width: 30px;
+            z-index: 1;
+          }
+          .rightRadius {
+            .leftRadius;
+            right: 0px;
+            right: -1px;
+            background-position: 9px -42px;
+          }
+          & legend {
+            margin-left: 20px;
+            padding: 0 20px;
+            width: auto;
+            border-radius: 20px;
+            background: #F5F5F5;
+            height: 28px;
+            line-height: 28px;
+            font-size: 14px;
+            & i {
+              vertical-align: -6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.welComeBox {
+  width: 100%;
+  height: 100%;
+  background: #eee url(../images/zbjys_bg.png) center no-repeat;
+  position: relative;
+  .webContentBox {
+    width: 940px;
+    height: 380px;
+    margin: auto;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    position: absolute;
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 60px;
+    dl {
+      width: 260px;
+      height: 260px;
+      background-color: #fff;
+      border-radius: 50%;
+      float: left;
+      text-align: center;
+      a{
+        text-decoration: none;
+        display: block;
+        width: 260px;
+        height: 260px;
+        float: left;
+      }
+      dt {
+        width: 160px;
+        height: 160px;
+        margin-left: 50px;
+        margin-top: 35px;
+        text-align: center;
+      }
+      &:hover {
+        background-color: #f6fbff;
+      }
+      &:nth-child(2) {
+        margin:0 20px;
+      }
+      dd {
+        font-size: 24px;
+        color: #333;
+      }
+    }
+  }
+}
+
+.resourceCrumbsNav {
+  height: 38px;
+  background-color: #f5f5f5;
+  border-bottom: 1px #ccc solid;
+  position: relative;
+  z-index: 999;
+}
+
+.mkhjd_btn {
+  position: absolute;
+  top: 28px;
+  right: 30px;
+  width: 120px;
+  height: 40px;
+  font-family: "Microsoft Yahei";
+  border-radius: 6px;
+  border: 2px solid #DDD;
+  background: #fff;
+  a {
+    width: 82px;
+    color: #ccc;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    float: right;
+    font-size: 14px;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  &:before {
+    content: "";
+    display: inline-block;
+    background: url(/static/dist/images/flow/images/icon.png) 0 0 no-repeat;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-top: 6px;
+    margin-left: 10px;
+    float: left;
+  }
+}
+
+@media (max-width: 1300px) {
+  .flowTabNav .flowMoreBtn.less-1300 {
+    margin-right: 20px;
+  }
+
+  .flowTabNav .numberFlag {
+    width: 190px
+  }
+
+  #contains {
+    min-width: 1280px !important;
+  }
+
+  #topBar {
+    min-width: 1280px !important;
+  }
+}
+
+//end 总包交钥匙样式

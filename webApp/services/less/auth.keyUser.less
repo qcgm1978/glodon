@@ -1,0 +1,585 @@
+.ellipsis{overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+ul,li{list-style: none outside none;}
+.serviceOgList{padding-top: 10px;padding-left: 22px;}
+.serviceInput{outline: none;border: none;-webkit-appearance: none;width: 13px;height: 13px;background: transparent url("../images/service_ico.png") 0 -380px no-repeat;vertical-align: middle;margin: 0;}
+.background-ioc{background: transparent url("../images/service_ico.png") 0 0 no-repeat;vertical-align: middle;}
+.left{float: left;}
+.right{float: right;}
+.myh{font-family: "Microsoft Yahei"}
+.pdX20{padding-left: 20px;padding-right: 20px;}
+.keyUserMain {padding: 20px;height: 100%;}
+.keyUserList{
+  float: left;
+  height: 100%;
+  width: 286px;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+  background-color: #eeeeee;
+  position: relative;
+  padding-top: 52px;
+}
+.keyBody{margin-left: 306px;border:1px solid #cccccc;position: relative;overflow: auto; height: 100%;}
+.keyul-title{position: absolute;left: 0;top: 0; width: 100%;line-height: 50px;height: 51px;padding: 0 0 0 20px;font-size: 14px;color: #333333;border-bottom: 1px solid  #cccccc;}
+.keyUserList li{line-height: 50px;height: 51px;border-left: 3px solid #eeeeee;padding: 0 20px;position: relative;border-bottom: 1px solid #cccccc;cursor: pointer; }
+.keyUserList li.active{border-left-color:  #006ecf;background-color: #ffffff;}
+.keyUserList li:hover .delete{display: block;}
+.keyUserList li .delete{position: absolute;top: 0 ;right: 0 ;height: 100%;;width: 50px;z-index: 2;display: none;}
+.keyUserList li .delete:after{content: "";position: absolute;width: 12px ;height: 13px;left: 19px;top: 19px;background: transparent url("../images/service_ico.png") 0 -280px no-repeat;}
+.keyBody h2{padding: 0 20px;border-bottom: 1px solid #cccccc;line-height: 28px;height: 29px;background-color: #eeeeee;  font-size: 14px;  }
+.keyBody  .baseInfo{margin:  13px 20px 0  101px;padding-bottom: 20px;}
+.keyBody .head{position: absolute;left: 20px;top: 49px;width: 61px;height: 86px;overflow: hidden;background-position: right top;background-size: 100% auto;background-repeat: no-repeat;}
+.keyBody .baseInfo li{line-height: 25px;position: relative;padding-left: 42px;height: 25px;}
+.keyBody .baseInfo li span{position: absolute;left: 0;top: 0;}
+.keyBody .proe ul,{padding: 0 20px;}
+.keyBody  ul{
+  margin-bottom: -1px;
+  li{
+    height: 60px;
+  }
+}
+.keyBody .proe li{
+  height: 60px;
+  line-height: 60px; .bdB-c;font-size: 12px;color: #999999;clear: both;
+  .province{
+    width: 27%;
+    float: left;
+  }
+  .name{
+    width: 46%;
+  }
+  .time{
+    width: 27%;
+    text-align: right;
+  }
+}
+.keyBody {
+  .remindicon{
+    background: url('/comm/images/tip-icon.png') 0 81px repeat-y;
+    padding-left:28px;
+  }
+}
+.keyBody .proe li .name,.keyBody .oz li .name{.left}
+.keyBody .proe li .time{.right}
+.keyBody .proe .proImg{
+  float: left;
+  width: 60px;
+  height:60px;
+  //margin-top: 10px;
+  //line-height: 0;
+  overflow: hidden;
+  margin-right: 12px;
+
+  display: table-cell;
+
+  vertical-align:middle;
+
+  text-align:center;
+
+  *display: block;
+
+  *font-size: 52px;
+
+  *font-family:Arial;
+  img{
+    vertical-align: middle;
+  }
+}
+.bdB-c{
+  border-bottom: 1px solid #cccccc;
+  li{
+    text-align: left;
+    .link{
+      cursor: pointer;
+      color: #76B3EF;
+    }
+  }
+}
+.keyBody .oz li {
+  line-height: 60px;
+  clear: left;
+  color: #999;
+  .path{
+    float: right;
+    width: 54%;
+  }
+}
+.keyBody .oz ul{padding: 0 20px;}
+.keyBody .oz ul li:not(:last-child),.keyBody .proe ul li:not(:last-child){border-bottom: 1px solid #cccccc;}
+.keyBody .edit:after{position: absolute;content: "";.background-ioc;width: 13px;height: 13px;top: 5px;left: 5px;background-position: 0 -260px;}
+.keyBody .edit{position: relative;display: inline-block;width: 23px;height: 23px;vertical-align: middle; cursor: pointer;}
+.keyBody .oz li .name {position: relative;padding-left: 60px;}
+.keyBody .oz li .name:before{content:"";.background-ioc;width: 32px;height: 26px;left:7px;top: 15px;position: absolute;background-position: 0  0;}
+.newKeyUsers{
+  display: inline-block;
+  border: 1px solid #ccc;
+  color: #333;
+  width: 80px;
+  height: 30px;
+  line-height: 30px;
+  margin: 10px 20px 0 0;
+  float: right;
+  font-size: 12px;
+  padding:  0;
+  cursor: pointer;
+  i{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin: 0 8px 0 11px;
+    position: relative;
+    top: 2px;
+
+  }
+}
+.serviceWindow{
+  .righttitle{
+    margin-bottom: 12px;
+  }
+  .toselected{
+    &>p>span{
+      background: #A8DBFD;
+    }
+  }
+  .none{
+    display: none;
+  }
+  .icon-person{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: url("/static/dist/images/services/images/service_ico.png") 0 -39px no-repeat;
+  }
+  .keyU{
+    width: 100%;
+    height: 312px;
+    .closeicon{
+      display: block;
+      background: url(/comm/images/commIcon.png) no-repeat -40px -438px;
+      width: 16px;
+      position: absolute;
+      height: 16px;
+      cursor: pointer;
+      right: 35px;
+      top: 6px;
+    }
+    &>div{
+      margin-top: 20px;
+      float: left;
+      width: 240px;
+      height: 100%;
+      overflow: hidden;
+      border-bottom: 1px solid #ccc;
+      .search{
+        width: 240px;
+        height: 30px;
+        border: 1px solid #ccc;
+        position: relative;
+        margin-bottom: 12px;
+        input{
+          display: block;
+          width: 207px;
+          height: 100%;
+          float: left;
+          border: none;
+          padding-left: 10px;
+        }
+        span{
+          display: block;
+          float: right;
+          width: 30px;
+          padding: 5px 0 0 7px;
+          height: 100%;
+          border-left: 1px solid #ccc;
+          i{
+            background: url(../../comm/images/commIcon.png) no-repeat 1px -477px;
+            display: block;
+            width: 15px;
+            height: 17px;
+          }
+        }
+      }
+      p.title{
+        padding-left: 10px;
+        color: #999;
+        height: 30px;
+        background: #eee;
+        margin-bottom: 12px;
+        .myh;
+        font-size:14px;
+        line-height:30px;
+      }
+      &>ul{
+        border: 1px solid #ccc;
+        height: 270px;
+        overflow-y: auto;
+      }
+    }
+    div:first-child{
+
+    }
+    a{
+      display: block;
+      float: left;
+      width: 60px;
+      height: 30px;
+      margin: 90px 10px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+      line-height: 30px;
+      color: #666;
+      font-weight: 100;
+      .myh;
+      i{
+        color: #85B80D;
+        font-size: 14px;
+        margin: 0 4px 0 7px;
+      }
+    }
+  }
+  .leftWindow,.rightWindow{
+    li{
+      cursor: pointer;
+    }
+    h3{
+      max-width: 100%;
+      overflow:hidden;text-overflow:ellipsis;white-space:nowrap;
+    }
+    .proj-right{
+      padding: 8px 0px 0px 10px;
+      height: 50px;
+      border-bottom: 1px solid #CCC;
+      h3{
+        font-size: 14px;
+        .myh;
+        color: #333;
+        height: 18px;
+        line-height: 18px;
+        border: none;
+
+      }
+      &:hover{
+        i{
+          display: block;
+          cursor: pointer;
+        }
+      }
+      i{
+        background: url("../images/service_ico.png") 0 -280px no-repeat;
+        display: none;
+        position: absolute;
+        width: 14px;
+        height: 14px;
+        right: 9px;
+      }
+      p{
+        background: transparent;
+        color: #999;
+        font-size: 12px;
+        line-height: 20px;
+        span{
+          margin-left: 15px;
+
+        }
+      }
+    }
+    .step1{
+      .namepath{
+        //overflow:hidden;
+        //text-overflow:ellipsis;
+        //-o-text-overflow:ellipsis;
+        //white-space:nowrap;
+        //width:70%;
+        //display: inline-block;
+      }
+    }
+    .step2{
+      .selected-proj{
+        background: #A8DBFD;
+      }
+      .list{
+        h3{
+          line-height:31px ;
+          height: 100%;
+        }
+      }
+      li{
+        padding: 8px 0px 0px 10px;
+        height: 50px;
+        border-bottom: 1px solid #CCC;
+        h3{
+          font-size: 14px;
+          .myh;
+          color: #333;
+          height: 18px;
+          line-height: 18px;
+          border: none;
+        }
+        p{
+          background: transparent;
+          color: #999;
+          font-size: 12px;
+          line-height: 20px;
+          span{
+            margin-left: 15px;
+
+          }
+        }
+      }
+    }
+    ul.shut{
+      display: none;
+    }
+    p.shut{
+      i{
+        display: inline-block;
+        width: 20px;
+        height: 18px;
+        background:url("/static/dist/images/services/images/service_ico.png") 0 -99px no-repeat;
+      }
+    }
+    p.person{
+      i{
+        position: relative;
+        left: -4px;
+        top: 4px;
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        background:url("/static/dist/images/services/images/service_ico.png") 0 -620px no-repeat;
+      }
+    }
+    p.open{
+      i{
+        display: inline-block;
+        left: -3px;
+        width: 20px;
+        height: 18px;
+        background:url("/static/dist/images/services/images/service_ico.png") 0 -79px no-repeat;
+      }
+    }
+    p{
+      word-break: keep-all;
+      white-space: nowrap;
+      font-size: 12px;
+      color: #999;
+      background: #ffffff;
+      height: 25px;
+      padding-bottom: 4px;
+      cursor: pointer;
+      i{
+        position: relative;
+        top: 6px;
+      }
+    }
+    &>div>li{
+      padding-left: 12px;
+    }
+    li{
+      padding-left:23px;
+
+    }
+    &>div>li:first-child{
+
+    }
+    .lastLayer{
+      li{
+        color: #333;
+        padding-bottom:8px;
+      }
+
+    }
+  }
+  .rightWindow{
+    .namepath{
+      display: none;
+    }
+    .list{
+      h3{
+        line-height:31px ;
+        height: 100%;
+      }
+    }
+    li{
+      position: relative;
+      &:hover{
+        background: #A8DBFD;
+
+      }
+      p{
+        background: transparent;
+        cursor: auto;
+      }
+      &:hover{
+        .delete{
+          display: block;
+        }
+
+      }
+      .delete{
+        position: absolute;
+        top: 0 ;
+        right: 0 ;
+        height: 100%;
+        width: 50px;
+        z-index: 2;
+        display: none;
+        &:hover{
+          cursor: pointer;
+        }
+        &:after{
+          content: "";position: absolute;width: 17px ;height: 13px;right: 10px;top: 5px;background: transparent url("../images/service_ico.png") 0 -280px no-repeat;
+        }
+      }
+    }
+  }
+
+  .partition{
+    height: 40px;
+    display: none;
+    border: 1px solid #ccc;
+    margin: 10px 20px 0px;
+    font-size: 14px;
+    a{
+      line-height: 40px;
+      float: left;
+      color: #333;
+      text-decoration: none;
+      width: 33%;
+      span{
+        display: inline-block;
+        width: 16px;
+        position: relative;
+        top: 2px;
+        left: 0px;
+        height: 16px;
+        margin: 0px 4px 0 12px;
+        border-radius: 100%;
+        border: 1px solid #ccc;
+        text-align: center;
+        i{
+          display: none;
+          width: 6px;
+          position: absolute;
+          top: 4px;
+          
+          left: 4px;
+          height: 6px;
+          border-radius: 100%;
+          background: #1C84E3;
+        }
+
+      }
+    }
+    a.active{
+      i{
+        display: block;
+
+      }
+    }
+  }
+}
+
+.serviceWindow a:hover{text-decoration: none; cursor: pointer;}
+.windowSubmit{
+  font-size: 14px;
+  .myh;
+  &.up{
+    right: 110px;
+    background: #fff;
+    color: #666;
+    border: 1px solid #CCCCCC;
+  }
+}
+.keyUserBody{
+  height: 100%;
+  .needloading{
+    overflow: auto; height: 100%;
+  }
+}
+.smallLoading{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 60px;
+  img{
+    width: 20px;
+    height: 20px;
+  }
+}
+.keyListHead{
+  display: inline-block;
+  position: relative;
+  left: -3px;
+  top: 10px;
+  width: 32px;
+  margin-right: 14px;
+  height: 32px;
+  background: url("../images/service_ico.png") 0 -40px no-repeat;
+}
+.submitLoading{
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  img{
+    display: block;
+    margin-left: -32px;
+    margin-top: -32px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+  }
+}
+.keyBody .fam,.keyBody .standard{
+  .time{
+    text-align: right;
+    width: 27%;
+    float: right;
+  }
+  .name{
+    width: 46%;
+  }
+  .designunit{
+    width: 24%;
+  }
+  li{
+    line-height: 60px;
+    height: 60px;
+    div{
+
+      float: left;
+    }
+    .bdB-c;
+    font-size: 12px;
+    color: #999999;clear: both;
+
+  }
+  ul{padding: 0 20px;}
+
+}
+.fams,.standards{
+
+  .selected-proj{
+    background: #A8DBFD;
+  }
+  li{
+    border-bottom: 1px solid #ccc;
+    padding-right: 10px;
+    span{
+      float: right;
+    }
+  }
+  h3{
+    border-bottom: none!important;
+    color: #888 !important;
+    height: 24px !important;
+  }
+  p{
+    padding-bottom: 0px !important;
+    height: 20px!important;
+    background: transparent !important;
+  }
+}

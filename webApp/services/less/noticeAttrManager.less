@@ -1,0 +1,353 @@
+//start 公告标签的样式
+.noticeAttrManager{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	.noticeTopbar{
+		height: 28px;
+		position: absolute;
+		left: 20px;
+		top: 20px;
+		z-index: 10;
+		.buttonBox{
+			float: left;
+		    button{
+		    	float: left;
+		    	cursor: pointer;
+		    	background: none;
+		    	height: 28px;
+		    	line-height: 28px;
+		    	margin: 0;
+		    	padding:0 12px;
+		    	border: 1px #ccc solid;
+		    	margin-right: 16px;
+		    	outline: none;
+		    }
+		    .disable{
+			    background: #eee;
+			    color: #ccc;
+			    border-color: #ccc;
+			    cursor: default;
+			}
+		}
+		.noticeTopSearch{
+			height: 32px;
+			float: left;
+			input{
+				width: 200px;
+				height: 28px;
+				line-height: 28px;
+				border: 1px #ccc solid;
+				padding: 0 16px;
+				outline: none;
+			}
+		}
+	}
+	.noticeDownContent{
+		width: 100%;
+		height: 100%;
+		padding-top: 42px;
+		position: relative;
+		table{
+			width: 100%;
+			height: auto;
+			tr{
+				td{
+					text-align: center;
+					border-left: 1px #ccc solid;
+				}
+				td:nth-child(1){
+					border-left: 0;
+					width: 60%;
+				}
+				td:nth-child(2){
+					width: 20%;
+				}
+				td:nth-child(3){
+					width: 20%;
+				}
+			}
+		}
+		.noticeListTopBox{
+			width: 100%;
+			height: 32px;
+			position: absolute;
+			left: 0;
+			top: 42px;
+			z-index: 10;
+			border: 1px #ccc solid;
+			background: #eee;
+			tr{
+				height: 32px;
+			}
+		}
+		.noticeListDownBox{
+			width: 100%;
+			height: 100%;
+			padding-top: 32px;
+			position: relative;
+			padding-bottom: 44px;
+		    border: 1px #ccc solid;
+			.scrollBox{
+				width: 100%;
+				height: 100%;
+				td{
+					border-bottom: 1px #ccc solid;
+				}
+				tr.selectClass{
+					background: #a8dbfd;
+				}
+				.mCSB_scrollTools_vertical {
+					right: -20px;
+				}
+			}
+			.pagingBox{position: absolute;bottom: 0px;left:20px;right: 20px;line-height: 40px;
+				.sumDesc { float: left; margin-left: 20px; }
+				.listPagination { float: right; margin-right: 20px; }
+				.pagination {margin: 0px;}
+			}
+		}
+	}
+}
+.newLinkNoticeDialog{
+	width: 100%;
+	height: 100%;
+	padding-top: 20px;
+	table{
+		width: 100%;
+		border: #ccc solid 1px;
+		tr{
+			td{
+				width: 35%;
+				text-align: center;
+				border-right: #ccc solid 1px;
+				border-bottom: #ccc solid 1px;
+				vertical-align:inherit;
+				input{
+					width: 100%;
+					margin: 0;
+					padding: 0;
+					border:0;
+					height: 30px;
+					line-height: 30px;
+					outline: none;
+					padding: 0 8px;
+				}
+			}
+			td:nth-last-child(1){
+				border-right:0;
+				width: 30%;
+			}
+		}
+		thead{
+			background: #eee;
+			tr td{
+				height: 30px;
+				line-height: 30px;
+			}
+		}
+	}
+	.newLinkNoticeFoot{
+		width: 100%;
+		height: 30px;
+		margin-top: 24px;
+		text-align: right;
+		button{
+			cursor: pointer;
+	    	background: none;
+	    	height: 28px;
+	    	line-height: 27px;
+	    	margin: 0;
+	    	padding:0 12px;
+	    	border: 1px #ccc solid;
+	    	margin-right: 16px;
+	    	outline: none;
+		}
+	}
+}
+.newTextNoticeDialog{
+	width: 100%;
+	height: 100%;
+	float:left;
+	.newTextNitoceBox{
+		width: 100%;
+		height: 30px;
+		margin-bottom: 16px;
+		margin-top: 8px;
+		float: left;
+		label{
+			display:block;
+			width: 100px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 14px;
+			text-align: right;
+			float: left;
+		}
+		.newTextInputBox{
+			width: 504px;
+			height: 28px;
+			float: left;
+			input{
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				outline: none;
+				padding: 0 8px;
+			}
+			.iconCal {
+			    background: url(/static/dist/images/comm/images/commIcon.png) no-repeat 6px -232px;
+			    position: absolute;
+			    right: 1px;
+			    width: 28px;
+			    height: 28px;
+			    top: 1px;
+			    background-color: #eee;
+			    border-left: 1px #ccc solid;
+			}
+		}
+	}
+	.newTextTextareaBox{
+		width: 100%;
+		height: 320px;
+		float: left;
+		padding:10px 16px 10px 20px;
+		.edui-container{
+			height: 310px;
+			.edui-editor-body .edui-body-container p {
+			   line-height: normal!important;
+			}
+			.edui-dialog-image .edui-image-dragTip{
+				margin-left: -28px!important;
+			}
+			.edui-tab-nav{
+				height: 35px;
+			}
+		}
+	}
+	.newTextNoticeFoot{
+		width: 100%;
+		height: 30px;
+		margin-top: 16px;
+		text-align: right;
+		float: left;
+		button{
+			cursor: pointer;
+	    	background: none;
+	    	height: 28px;
+	    	line-height: 27px;
+	    	margin: 0;
+	    	padding:0 12px;
+	    	border: 1px #ccc solid;
+	    	margin-right: 16px;
+	    	outline: none;
+		}
+	}
+}
+.previewNoticeBox{
+	width: 100%;
+	height: 100%;
+	.previewNoticeTopBar{
+		line-height: 37px;
+		padding-left: 20px;
+		font-size: 14px;
+		position: relative;
+		border-bottom: 1px #ddd solid;
+	}
+	.previewNoticeContent{
+		padding: 20px;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		margin-top: -39px;
+		padding-top:68px; 
+		.wrapper{
+			width: 100%;
+			height: 100%;
+			border: 1px solid #ccc;
+			/* margin: 20px;
+			padding: 20px;
+			padding-bottom: 80px; */
+			overflow-y: auto;
+			overflow-x: hidden;
+			.title {
+			    height: 60px;
+			    line-height: 60px;
+			    text-align: center;
+			    width: 100%;
+			    span{
+		    	    font-size: 20px;
+			    }
+			    p {
+			        font-size: 14px;
+			        b {
+			            width: 10px;
+			            display: inline-block;
+			        }
+			    }
+			}
+			.content {
+			    font-size: 12px;
+			    p{
+			    	line-height: normal;	
+			    }
+			    
+			}
+		}
+
+	}
+}
+.deleteNoticeClass{
+	.dialogMessage{
+		width: 100%;
+		height: 100px;
+		line-height: 100px;
+		text-align: center;
+		font-size: 14px;
+	}
+	.dialogFooter{
+		width: 100%;
+		height: 35px;
+		font-size: 12px;
+		float: left;
+		text-align: right;
+		border-top: 1px solid #ccc;
+		margin-top: 16px;
+		padding-top: 22px;
+		button{
+			width: 80px;
+		    height: 30px;
+		    line-height: 28px;
+		    display: inline-block;
+		    color: #fff;
+    		background-color: #208aee;
+    		border: 0;
+    		text-align: center;
+    		&:hover{
+    			background-color: #51a6f2;
+    		}
+		}
+	}
+}
+.newLinkInputBox{
+	width: 100%;
+	height: 30px;
+	input{
+		width: 100%;
+		height: 30px;
+		line-height: 30px;
+		outline: none;
+		padding: 0 8px;
+	}
+	.iconCal {
+	    background: url(/static/dist/images/comm/images/commIcon.png) no-repeat 6px -232px;
+	    position: absolute;
+	    right: 1px;
+	    width: 28px;
+	    height: 28px;
+	    top: 1px;
+	    background-color: #eee;
+	    border-left: 1px #ccc solid;
+	}
+}
+//end 公告标签的样式

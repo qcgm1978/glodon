@@ -1,0 +1,2786 @@
+.nullDataBox {
+  width: 100%;
+  text-align: center;
+  line-height: 145px;
+  font-size: 14px;
+  color: #ccc;
+}
+.overflowY{
+  overflow-y:hidden;
+}
+.projectHeader {
+  height: 37px;
+  background-color: #f5f5f5;
+  border-bottom: 1px #ccc solid;
+  position: relative;
+  z-index: 999;
+  .projectTab {
+    float: right;
+    height: 37px;
+    position: relative;
+    z-index: 3000;
+    display: none;
+    .item {
+      float: left;
+      height: 100%;
+      line-height: 37px; /*width: 35px; */
+      font-size: 16px;
+      position: relative;
+      text-align: center;
+      margin-right: 40px;
+      cursor: pointer;
+      .line {
+        bottom: 0px;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        left: 0px;
+        text-align: center;
+      }
+      &.last {
+        margin-right: 20px
+      }
+      &.selected {
+        .line {
+          background-color: #06c;
+        }
+      }
+      &:hover {
+        .line {
+          background-color: #06c;
+        }
+      }
+    }
+  }
+}
+
+#projectContainer {
+  .ProjectPlanPropertyContainer {
+    .projectNav {
+      .item {
+        //width: 65px;
+      }
+    }
+  }
+  .ProjectQualityNavContainer {
+    .projectNav {
+      .item {
+        //width: 65px;
+      }
+    }
+  }
+}
+
+#projectDesignContent {
+  margin-left: 240px;
+  position: relative;
+  height: 100%;
+}
+
+.projectContainerApp {
+  height: 100%;
+  .projectContent {
+    height: 100%;
+    .leftNav {
+      float: left;
+      width: 238px;
+      border: 1px #ccc solid;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      background-color: #fff;
+      .leftNavContent {
+        height: 100%;
+      }
+      .projectNavContentBox {
+        margin-top: 1px;
+        position: absolute;
+        top: 40px;
+        width: 100%;
+        bottom: 0px;
+        .projectModelNavContent {
+          display: none;
+        }
+        .mCSB_container {
+        }
+      }
+    }
+    .rightProperty {
+      margin-right: -398px;
+      border: 1px #ddd solid;
+      display: none;
+      position: fixed;
+      right: 0px;
+      top: 87px;
+      bottom: 0px;
+      background-color: #fff;
+      z-index: 600;
+      .rightPropertyContentBox {
+        height: 100%;
+        position: relative;
+      }
+      &.showPropety {
+        display: block;
+      }
+    }
+    .projectCotent {
+      position: relative;
+      height: 100%;
+      margin-left: 240px;
+      //min-width: 1130px;
+      .containerHeader {
+        height: 27px;
+      }
+      .opBox {
+        float: left;
+      }
+      &.showPropety {
+        margin-left: 0px;
+      }
+      .fileContainer {
+        padding: 10px;
+        height: 100%;
+        box-sizing: border-box;
+        .fileContainerScroll {
+          position: absolute;
+          top: 75px;
+          bottom: 0px;
+          left: 10px;
+          right: 10px;
+        }
+        .modelContainer {
+          height: 500px;
+          position: relative;
+        }
+        .loading {
+          margin: 0px -1px;
+          background-color: #fff;
+        }
+        .returnBack {
+          margin-right: 10px;
+        }
+        .fileSearchBox {
+          float: right;
+          position: relative;
+        }
+        .clearSearch {
+          cursor: pointer;
+          display: none;
+          position: absolute;
+          width: 14px;
+          height: 14px;
+          left: 180px;
+          top: 8px;
+          background: url('/static/dist/images/comm/images/commIcon.png') no-repeat -40px -440px;
+        }
+        #txtFileSearch {
+          //width: 200px;
+          vertical-align: top;
+          margin-right: -5px;
+          outline: none;
+          position: relative;
+        }
+        .searchCount {
+          display: none;
+          height: 27px;
+          line-height: 26px;
+          .count {
+            color: #ff4c4c;
+          }
+        }
+        .fileContent {
+          .iconTip {
+            display: inline-block;
+            width: 22px;
+            vertical-align: top;
+            height: 20px;
+            background: url('/static/dist/images/projects/images/nullPage.png') no-repeat 0px -879px;
+          }
+        }
+      }
+      .modelContainer {
+        height: 100%;
+        display: none;
+        .modelContainerScroll {
+          height: 100%;
+          .modelContainerContent {
+            height: 100%;
+          }
+        }
+        .move {
+          height: 100%;
+        }
+      }
+    }
+    .notesBox {
+      width: 100%;
+      height: 100%;
+      padding-top: 20px;
+      position: relative;
+      display: none;
+      .searchConditionBox {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
+        .searchConditionBoxTop {
+          width: 100%;
+          height: 30px;
+          position: relative;
+          .modelLine {
+            position: absolute;
+            left: 60px;
+            right: 2px;
+            border-top: 1px #ddd solid;
+            top: 11px;
+          }
+          .searchTextBox {
+            line-height: 20px;
+            color: #8E8E8E;
+          }
+        }
+        .searchConditionBoxBottom {
+          width: 100%;
+          height: 32px;
+          .searchBoxS {
+            float: left;
+            height: 32px;
+            margin-right: 16px;
+            span {
+              display: inline-block;
+              line-height: 32px;
+              float: left;
+              margin-right: 10px;
+            }
+            .myDropDown {
+              span {
+                line-height: 28px;
+              }
+              .myDropText {
+                width: auto;
+                max-width: 182px;
+                .text {
+                  color: #aaa;
+                  height: 28px;
+                  max-width: 135px;
+                  overflow: hidden;
+                  white-space: nowrap;
+                  text-overflow: ellipsis;
+                }
+              }
+              .myDropList {
+                width: auto;
+                max-width: 182px;
+                li {
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
+              }
+            }
+            .dateBox {
+              display: inline-block;
+              position: relative;
+              width: 150px;
+              float: left;
+              margin-right: 10px;
+              #dateEnd {
+                width: 178px;
+              }
+              .iconCal {
+                background: url(../comm/images/commIcon.png) no-repeat 6px -232px;
+                position: absolute;
+                right: 1px;
+                width: 28px;
+                height: 28px;
+                top: 1px;
+                background-color: #eee;
+                border-left: 1px #ccc solid;
+              }
+              .icon-remove {
+                position: absolute;
+                right: 29px;
+                width: 28px;
+                height: 28px;
+                top: 1px;
+                border-left: 1px #ccc solid;
+                line-height: 28px;
+                text-align: center;
+                cursor: pointer;
+              }
+              input {
+                width: 150px;
+                height: 30px;
+                line-height: 30px;
+                padding-left: 8px;
+                padding-right: 30px;
+                box-sizing: border-box;
+              }
+            }
+            .keyTextInputBox {
+              float: left;
+              height: 32px;
+              input {
+                border: #ccc solid 1px;
+                height: 30px;
+                line-height: 30px;
+                padding: 0 10px;
+                outline: none;
+              }
+              select {
+                border: #ccc solid 1px;
+                height: 30px;
+                line-height: 30px;
+                outline: none;
+                max-width: 80px;
+              }
+            }
+            button {
+              border: 0;
+              background: none;
+              width: 120px;
+              height: 30px;
+              line-height: 30px;
+              background: #3E82F7;
+              font-size: 16px;
+              color: #fff;
+              border-radius: 2px;
+              outline: none;
+            }
+          }
+        }
+      }
+      .notesContentBox {
+        width: 100%;
+        height: 100%;
+        padding-top: 42px;
+        .notesContentContainerBox {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          .pagingBox {
+            position: absolute;
+            bottom: 0px;
+            left: 20px;
+            right: 20px;
+            line-height: 40px;
+            .sumDesc {
+              float: left;
+              margin-left: 20px;
+            }
+            .listPagination {
+              float: right;
+              margin-right: 20px;
+            }
+            .pagination {
+              margin: 0px;
+            }
+          }
+          .notesContentBoxTop {
+            height: 30px;
+            border-bottom: #ccc solid 1px;
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            top: 0;
+            font-size: 12px;
+            color: #8E8E8E;
+            span {
+              display: inline-block;
+              margin-right: 12px;
+              float: left;
+              margin-top: 4px;
+              cursor: pointer;
+            }
+            label {
+              display: inline-block;
+              float: left;
+              margin-top: 4px;
+              margin-left: 8px;
+              font-weight: normal;
+            }
+            input {
+              float: left;
+              margin-top: 6px;
+              outline: none;
+            }
+          }
+          .notesContentBoxBottom {
+            width: 100%;
+            height: 100%;
+            padding-top: 30px;
+            div.nullDataBox {
+              width: 100%;
+              height: 150px;
+              line-height: normal;
+              top: 50%;
+              margin-top: -75px;
+              text-align: center;
+              left: 0;
+              position: absolute;
+              display: none;
+              .nullDataBoxImg {
+                width: 120px;
+                height: 98px;
+                margin: 0 auto;
+                background: url("../images/project_notes_null_data.png") center no-repeat;
+                margin-bottom: 14px;
+              }
+              .nullDataBoxText {
+                width: 120px;
+                height: 18px;
+                font-size: 12px;
+                color: #B8B8B8;
+                text-align: center;
+                margin: 0 auto;
+              }
+            }
+            .leftNotesListBox {
+              width: 540px;
+              height: 100%;
+              float: left;
+              position: relative;
+              padding-bottom: 44px;
+              background: #F8F8F8;
+              .leftRightBorderBox {
+                width: 1px;
+                height: 100%;
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: #ccc;
+                z-index: 1;
+              }
+              .notesScrollBox {
+                width: 100%;
+                height: 100%;
+                overflow: hidden;
+                #mCSB_3_container {
+                  height: auto !important;
+                }
+                ul.leftUlNotesListBox {
+                  width: 100%;
+                  height: auto;
+                  background: #F8F8F8;
+                  li {
+                    width: 100%;
+                    min-height: 104px;
+                    height: auto;
+                    border-bottom: #ccc solid 1px;
+                    padding: 10px 0 4px 20px;
+                    position: relative;
+                    .notesListComponentTop {
+                      width: 100%;
+                      min-height: 64px;
+                      height: auto;
+                      .notesTypeIcon {
+                        display: block;
+                        float: left;
+                        width: 16px;
+                        height: 16px;
+                        background: #D8D8D8;
+                      }
+                      .icon_model_type {
+                        background: url("../images/icon_model.png") center no-repeat;
+                      }
+                      .icon_single_type {
+                        background: url("../images/icon_single.png") center no-repeat;
+                      }
+                      .icon_drawing_type {
+                        background: url("../images/icon_drawing.png") center no-repeat;
+                      }
+                      .notesThumbnailBox {
+                        float: left;
+                        width: 80px;
+                        height: 60px;
+                        margin: 0 20px 0 16px;
+                        //background: #D8D8D8;
+                        cursor: pointer;
+                        img {
+                          width: 100%;
+                          height: 100%;
+                        }
+                      }
+                      .notesDescBox {
+                        width: auto;
+                        min-height: 60px;
+                        height: auto;
+                        padding-left: 132px;
+                        padding-right: 32px;
+                        dt {
+                          width: 100%;
+                          height: auto;
+                          position: relative;
+                          .notesDescTextBox {
+                            font-size: 14px;
+                            color: #3A3A3A;
+                            height: 40px;
+                            line-height: 20px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 2;
+                            -webkit-box-orient: vertical;
+                            font-weight: normal;
+                            word-warp: break-word;
+                            word-break: break-all;
+                          }
+                          a {
+                            position: absolute;
+                            right: -16px;
+                            bottom: 0;
+                            width: 16px;
+                            height: 16px;
+                            background: url("../images/arrow_up.png") center no-repeat;
+                            display: none;
+                          }
+                          a.upIcon {
+                            background: url("../images/arrow_down.png") center no-repeat;
+                          }
+                        }
+                        dd {
+                          font-size: 12px;
+                          color: #8E8E8E;
+                          height: 28px;
+                          line-height: 28px;
+                        }
+                      }
+                      .notesDescBox:hover {
+                        a {
+                          display: inline-block;
+                        }
+                      }
+                    }
+                    .notesListComponentDown {
+                      width: 100%;
+                      height: 28px;
+                      padding-left: 132px;
+                      padding-right: 32px;
+                      .notesHandle {
+                        width: 100%;
+                        height: 28px;
+                        float: left;
+                        a {
+                          font-size: 12px;
+                          color: #208AEE;
+                          line-height: 28px;
+                          display: inline-block;
+                          float: left;
+                          &:hover {
+                            text-decoration: none;
+                          }
+                        }
+                        i {
+                          display: inline-block;
+                          font-size: 12px;
+                          background: #aaa;
+                          float: left;
+                          margin: 8px;
+                          width: 1px;
+                          height: 12px;
+                        }
+                        span.changeVersionBox {
+                          font-size: 12px;
+                          color: #8E8E8E;
+                          display: inline-block;
+                          float: right;
+                          margin-top: 6px;
+                          max-width: 120px;
+                          overflow: hidden;
+                          white-space: nowrap;
+                          text-overflow: ellipsis;
+                        }
+                        a.noCan {
+                          color: #ccc;
+                          cursor: default;
+                        }
+                      }
+
+                    }
+                  }
+                  li.notesSelectClass {
+                    width: 540px;
+                    z-index: 10;
+                    background: #fff;
+                  }
+                  li.loading {
+                    border: 0;
+                    line-height: 125px;
+                  }
+                }
+                .mCSB_9_scrollbar_vertical {
+                  right: -16px;
+                }
+                .mCSB_scrollTools_vertical {
+                  z-index: 10;
+                  .mCSB_draggerContainer {
+                    background: transparent !important;
+                  }
+                }
+              }
+              .mCS-autoHide:hover {
+                .mCSB_scrollTools {
+                  opacity: .3;
+                }
+              }
+            }
+            .rightNotesCommentListBox {
+              width: auto;
+              height: 100%;
+              padding-left: 540px;
+              .commentBox {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                div.nullDataBox {
+                  display: block;
+                }
+                .commentNumberBox {
+                  width: 100%;
+                  height: 32px;
+                  line-height: 32px;
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  z-index: 10;
+                  font-size: 12px;
+                  color: #8E8E8E;
+                  display: none;
+                  padding-left: 20px;
+                }
+                .commentListBox {
+                  width: 100%;
+                  height: 100%;
+                  //padding-bottom: 6%;
+                  padding: 10px 0 0 20px;
+                  display: none;
+                  position: absolute;
+                  //z-index: 20;
+                  .commentListHeightBox {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    padding-bottom: 8px;
+                    .commentScroll {
+                      width: 100%;
+                      height: 100%;
+                      //padding-bottom: 30px;
+                      ul {
+                        width: 100%;
+                        height: auto;
+                        li {
+                          width: 100%;
+                          padding-bottom: 8px;
+                          position: relative;
+                          margin-bottom: 8px;
+                          padding-right: 22px;
+                          &:nth-last-child(1) {
+                            margin-bottom: 0;
+                            border-bottom: 0;
+                          }
+                          .deleteNotesCommentBtn {
+                            color: #208AEE;
+                            margin-left: 12px;
+                          }
+                          &:hover .deleteNotesCommentBtn {
+                            display: inline-block;
+                            text-decoration: none;
+                          }
+                          .commentThumbnailBox {
+                            width: 40px;
+                            height: 40px;
+                            float: left;
+                            background: #D8D8D8;
+                            img {
+                              width: 100%;
+                              height: 100%;
+                            }
+                          }
+                          .commentDescBox {
+                            width: auto;
+                            height: auto;
+                            padding-left: 60px;
+                            > img {
+                              vertical-align: middle;
+                              float: left;
+                              margin-top: 8px;
+                            }
+                            button {
+                              margin-left: 7px;
+                              background-color: Transparent;
+                              background-repeat: no-repeat;
+                              border: none;
+                              overflow: hidden;
+                              outline: none;
+                              float: left;
+                              margin-top: 8px;
+                            }
+                            p {
+                              height: 18px;
+                              line-height: 18px;
+                              font-size: 12px;
+                              color: #999;
+                              margin-bottom: 8px;
+                            }
+                            .round {
+                              border-radius: 10px;
+                              border: 1px solid #cccccc;
+                            }
+
+                            .talk-bubble {
+                              display: inline-block;
+                              position: relative;
+                              height: auto;
+                              background-color: #f8f8f8;
+                            }
+                            .tri-right.right-in:before {
+                              content: ' ';
+                              position: absolute;
+                              left: -15px;
+                              top: 7px;
+                              border: 7px solid;
+                              border-color: #ccc #ccc transparent transparent;
+                            }
+                            .tri-right.right-in:after {
+                              content: ' ';
+                              position: absolute;
+                              left: -12px;
+                              top: 8px;
+                              border: 6px solid;
+                              border-color: #f8f8f8 #f8f8f8 transparent transparent;
+                            }
+                            h2 {
+                              min-height: 20px;
+                              font-size: 14px;
+                              color: #333;
+                              word-break: break-all;
+                              max-width: 1278px;
+                              display: inline-block;
+                              line-height: 24px;
+                              padding: 8px 12px 8px 18px;
+                              &.talktext {
+                                //padding: 1em;
+                                text-align: left;
+                                //line-height: 1.5em;
+                              }
+                            }
+                            .commentDescListBox {
+                              min-height: 90px;
+                              height: auto;
+                              margin-top: 14px;
+                              border: 0;
+                              position: static;
+                              clear: both;
+                              &:after {
+                                content: "";
+                                clear: both;
+                                display: table;
+                              }
+                              .commentDescComponentBox {
+                                min-width: 130px;
+                                height: 65px;
+                                margin: 10px;
+                                margin-bottom: 8px;
+                                background: #f8f8f8;
+                                padding: 10px;
+                                a.canDownloadFile:hover {
+                                  text-decoration: none;
+                                }
+
+                                .attachmentThumbnailBox {
+                                  width: 60px;
+                                  height: 45px;
+                                  float: left;
+                                  img {
+                                    width: 100%;
+                                    height: 100%;
+                                  }
+                                }
+                                .attachmentDescBox {
+                                  padding-left: 72px;
+
+                                  .attachmentDescNameBox {
+                                    min-height: 28px;
+                                    width: 100%;
+                                    height: auto;
+                                    font-size: 12px;
+                                    color: #3A3A3A;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    display: -webkit-box;
+                                    -webkit-line-clamp: 2;
+                                    -webkit-box-orient: vertical;
+                                  }
+                                  .attachmentDescSizeBox {
+                                    height: 18px;
+                                    line-height: 18px;
+                                    font-size: 12px;
+                                    color: #8E8E8E;
+                                  }
+                                }
+                                &:nth-child(odd) {
+                                  float: left;
+                                }
+                                &:nth-child(even) {
+                                  float: left;
+                                }
+                              }
+                              .commentDescComponentNullBox {
+                                min-width: 330px;
+                                height: 90px;
+                                text-align: center;
+                                font-size: 14px;
+                                line-height: 90px;
+                                color: #ccc;
+                              }
+                            }
+                          }
+                        }
+                      }
+                      .mCSB_scrollTools_vertical {
+                        right: 0 !important;
+                        margin: initial;
+                        .mCSB_draggerContainer {
+                          background: transparent !important;
+                        }
+                      }
+                    }
+                    .pagingBox {
+                      line-height: 30px;
+                      .pagination a, .pagination span {
+                        margin-bottom: 0;
+                        margin-right: 0;
+                      }
+                    }
+                  }
+                }
+                #addCommentBox-p {
+                  height: 40px;
+                  line-height: 40px;
+                  position: absolute;
+                  bottom: 0;
+                  text-align: center;
+                  width: 100%;
+                  font-weight: bold;
+                  color: #208AEE;
+                  cursor: pointer;
+                  box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.05);
+                }
+                .addCommentBox-close {
+                  position: absolute;
+                  right: 5px;
+                  top: 10px;
+                  cursor: pointer;
+                }
+                #addCommentBox {
+                  width: 100%;
+                  max-height: 100%;
+                  min-height: 150px;
+                  height: auto;
+                  position: absolute;
+                  left: 0;
+                  bottom: 0;
+                  z-index: 10;
+                  display: none;
+                  box-shadow: 0 -2px 6px 0 rgba(0, 0, 0, 0.05);
+                  background: #fff;
+                  .addCommentBox {
+                    padding-right: 22px;
+                    padding: 10px 22px 0 10px;
+                    .textareaBox {
+                      .atBox {
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+                        .atList {
+                          position: absolute !important;
+                          /* left: 50px!important;
+                          top: 30px!important; */
+                        }
+                        .atDiv {
+                          white-space: normal;
+                          word-break: break-all;
+                        }
+                        textarea {
+                          width: 100%;
+                          height: 100px;
+                          line-height: 16px;
+                          background: #FFFFFF;
+                          border: 1px solid #F2F2F2;
+                          border-radius: 2px;
+                          outline: none;
+                          padding: 10px;
+                          font-size: 14px;
+                          color: #3A3A3A;
+                          resize: none;
+                        }
+                      }
+
+                    }
+                    .uploadListBox {
+                      width: 100%;
+                      height: auto;
+                      ul {
+                        width: 100%;
+                        height: auto;
+                        li {
+                          width: 100%;
+                          height: 50px;
+                          line-height: 30px;
+                          position: relative;
+                          border-bottom: #ccc solid 1px;
+                          padding-right: 32px;
+                          padding-top: 10px;
+                          padding-bottom: 10px;
+                          span {
+                            display: inline-block;
+                          }
+                          .imgThumbnailBox {
+                            width: 30px;
+                            height: 30px;
+                            float: left;
+                            background: #D8D8D8;
+                            margin-right: 8px;
+                            img {
+                              width: 100%;
+                              height: 100%;
+                            }
+                          }
+                          .imgThumbnailType {
+                            float: left;
+                            width: 32px;
+                            margin: 0 8px;
+                          }
+                          .imgThumbnailName {
+                            float: left;
+                            width: auto;
+                            min-width: 220px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                          }
+                          .imgThumbnailSize {
+                            float: left;
+                            width: auto;
+                            margin: 0 8px;
+                          }
+                          .deleteUploadBtn {
+                            width: 16px;
+                            height: 16px;
+                            background: blue;
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            display: none;
+                          }
+                          a {
+                            display: inline-block;
+                            float: right;
+                          }
+                        }
+                        li.loading {
+                          color: #ccc;
+                          font-size: 14px;
+                        }
+                        li:hover {
+                          .deleteUploadBtn {
+                            display: block;
+                          }
+                        }
+                      }
+                    }
+                    .addCommentBottomBox {
+                      width: 100%;
+                      height: 45px;
+                      padding-top: 8px;
+                      .uploadTypeBtn {
+                        float: left;
+                        height: 30px;
+                        & > form {
+                          line-height: normal;
+                        }
+                        input {
+                          display: none;
+                        }
+                        a {
+                          display: inline-block;
+                          width: 30px;
+                          height: 30px;
+                        }
+                        a.uploadImg {
+                          background: url("../images/uploadimg.png") center no-repeat;
+                        }
+                        a.uploadFile {
+                          background: url("../images/uploadfile.png") center no-repeat;
+                          margin: 0 16px;
+                        }
+                        a.uploadsnapshot {
+                          display: none;
+                          background: url("../images/uploadsnapshot.png") center no-repeat;
+                        }
+                      }
+                      .uploadBtn {
+                        float: right;
+                        height: 30px;
+                        button {
+                          border: 0;
+                          background: none;
+                          width: 120px;
+                          height: 30px;
+                          line-height: 30px;
+                          background: #3E82F7;
+                          font-size: 16px;
+                          color: #fff;
+                          border-radius: 2px;
+                          outline: none;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #projectContainer {
+    height: 100%;
+    margin-top: -37px;
+    padding-top: 37px;
+    position: relative;
+    #projectDesignContainer {
+      height: 100%;
+      position: relative;
+    }
+    .dragSize {
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      width: 10px;
+      right: -6px;
+      cursor: col-resize;
+      z-index: 999;
+      display: none;
+    }
+    .slideBar {
+      width: 15px;
+      height: 32px;
+      right: -15px;
+      z-index: 99;
+      position: absolute;
+      display: none;
+      background-color: #fff;
+      border: 2px #ccc solid;
+      line-height: 26px;
+      box-sizing: border-box;
+      padding-left: 2px;
+      cursor: pointer;
+    }
+    .rightPropertyContentBox {
+      .dragSize {
+        left: -5px;
+        right: inherit;
+        display: block;
+      }
+      .slideBar {
+        right: inherit;
+        display: block;
+        left: -15px;
+        top: 40px;
+      }
+    }
+  }
+}
+
+.rightProperty {
+  .odd {
+    background-color: #eaeaea;
+  }
+  .selected {
+    background-color: #A8DBFD;
+  }
+  .btnCk.selected {
+    background-color: #fff;
+  }
+  .attrPlanBox, .attrCostBox, .attrQualityBox, .attrDwgBox {
+    display: none;
+  }
+  .designVerification {
+    height: 100%;
+  }
+  .modle {
+    & .modleTitleBar {
+      border-bottom: 1px #ccc solid;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    .modleShowHide {
+      transition: all .5s;
+      background: url(/comm/images/commIcon.png) no-repeat 0px -256px;
+      float: right;
+      margin-right: 12px;
+      margin-top: 6px;
+      height: 14px;
+      width: 14px;
+      cursor: pointer;
+      &.down {
+        margin-right: 14px;
+        transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+      }
+    }
+    .modleName {
+      font-weight: bold;
+      height: 24px;
+      line-height: 24px;
+      padding-left: 12px;
+      .modleNameText {
+        vertical-align: top;
+        width: 95%;
+      }
+    }
+    .modleList {
+      background-color: #eee;
+      border-top: none;
+      .modleItem {
+        border-bottom: 1px #ccc solid;
+        .modleName2 {
+          height: 25px;
+          line-height: 28px;
+          padding-left: 12px;
+          width: 95%;
+        }
+        .modleName {
+          width: 25%;
+          display: inline-block;
+          box-sizing: border-box;
+          padding-left: 12px;
+          border-right: 1px #ccc solid;
+        }
+        .modleVal {
+          display: inline-block;
+          width: 56%;
+          box-sizing: border-box;
+          padding-left: 12px;
+          margin-left: -3px;
+        }
+        .modelCostVal {
+          display: inline-block;
+          width: 16%;
+          text-align: right;
+          font-weight: bolder;
+          color: #333;
+        }
+        .modelLink {
+          display: inline-block;
+          padding-left: 12px;
+          color: #3F8CDF;
+          height: 24px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  .ckBox {
+    overflow: auto;
+    height: 100%;
+    margin-top: -50px;
+    padding-top: 50px;
+    .ckBody {
+      margin-top: -26px;
+      padding-top: 25px;
+      height: 100%;
+      min-width: 500px;
+      width: 100%;
+    }
+    .ckTable {
+      min-width: 500px;
+      width: 100%;
+      th {
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+      }
+      td, th {
+        border: 1px #ccc solid;
+      }
+      .issue {
+        width: 55%;
+      }
+      .status {
+        width: 11%;
+      }
+      .category {
+        width: 10%;
+      }
+      .specialty {
+        width: 12%;
+      }
+      .professional {
+        width: 12%;
+      }
+      & tr:hover {
+        cursor: pointer;
+        background: #A8DBFD;
+      }
+      & tr.selected {
+        background: #A8DBFD;
+      }
+    }
+    tbody {
+      td {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        vertical-align: middle;
+        text-align: center;
+      }
+      .issue {
+        text-align: left;
+        .ckImg {
+          float: left;
+          padding: 0px 10px;
+        }
+        .ckHeader {
+          margin-left: 84px;
+        }
+      }
+    }
+  }
+
+  .planmodesearch {
+    .myDropDown {
+      margin-left: 7px !important;
+      .myDropText {
+        width: 170px !important;
+      }
+      .myDropList {
+        top: 31px !important;
+        width: 170px !important;
+      }
+    }
+    .searchName {
+      width: 364px !important;
+      input {
+        width: 280px !important;
+      }
+    }
+
+    .dateBox {
+      input {
+        width: 170px !important;
+      }
+    }
+  }
+  .actionAnalog {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    min-width: 540px;
+    height: 80px;
+    background-color: #eee;
+    .progressAnalog {
+      height: 50px;
+      line-height: 55px;
+      vertical-align: top;
+      padding-left: 15px;
+      i {
+        cursor: pointer;
+      }
+      .process {
+        position: absolute;
+        top: 23px;
+        height: 30px;
+        left: 45px;
+        right: 0px;
+        .processPos {
+          position: absolute;
+          top: -3px;
+          left: 0px;
+        }
+        .processBg {
+          height: 8px;
+          width: 0px;
+          background-color: #36D900;
+          margin-top: -8px;
+        }
+        .bg {
+          height: 8px;
+          width: 97%;
+          background-color: #ccc;
+        }
+      }
+    }
+    .desctionAnalog {
+      height: 30px;
+      background-color: #ddd;
+      line-height: 33px;
+      padding-left: 15px;
+    }
+  }
+  .planBox {
+    position: absolute;
+    top: 45px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    &.planAnalogContent {
+      top: -1px;
+      bottom: 80px;
+    }
+    &.planPlanPublicity {
+      top: 0px;
+      .selDate {
+        margin-bottom: 7px;
+        margin-top: 7px;
+        margin-left: 7px;
+      }
+    }
+    .tbPlanHeader {
+      width: 100%;
+      min-width: 540px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      tr {
+        cursor: pointer;
+      }
+      th {
+        border: 1px #ccc solid;
+        text-align: center;
+        height: 28px;
+        line-height: 28px;
+        box-sizing: border-box;
+
+      }
+      .ckItem {
+        width: 7%;
+        border-left: none !important;
+        padding-left: 8px;
+      }
+      .planId {
+        width: 9%;
+
+      }
+      .operationalMatters {
+        width: 40%;
+        .overflowEllipsis {
+          width: 98%;
+          vertical-align: top;
+        }
+      }
+      .start {
+        width: 20%;
+      }
+      .end {
+        width: 20%;
+      }
+    }
+    .planContent {
+      height: 100%;
+      margin-top: -31px;
+      padding-top: 30px;
+      height: 100%;
+      min-width: 540px;
+      width: 100%;
+      .tbPlan {
+        width: 100%;
+        min-width: 398px;
+        border: none;
+        border-bottom: 1px solid #ccc;
+        tr {
+          cursor: pointer;
+        }
+        th, td {
+          border: 1px #ccc solid;
+        }
+        th {
+          text-align: center;
+          height: 28px;
+          line-height: 28px;
+        }
+        td {
+          height: 24px;
+          line-height: 24px;
+        }
+        tbody {
+          td {
+            box-sizing: border-box;
+            padding-left: 8px;
+          }
+        }
+        .selected {
+          background-color: #A8DBFD;
+        }
+        .noDataTd, .loadingTd {
+          height: 60px;
+          line-height: 60px;
+          text-align: center;
+          color: #ccc;
+          font-size: 16px;
+          border: 0;
+        }
+      }
+      .ckItem {
+        width: 7%;
+        border-left: none !important;
+      }
+      .planId {
+        width: 9%;
+      }
+      .operationalMatters {
+        width: 40%;
+        .overflowEllipsis {
+          width: 98%;
+          vertical-align: top;
+        }
+      }
+      .start {
+        width: 20%;
+      }
+      .end {
+        width: 20%;
+      }
+      .planGroup {
+        height: 49%;
+        overflow-y: hidden;
+        position: relative;
+      }
+      .planBody {
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 59px;
+        bottom: 0px;
+        & .overflowEllipsis {
+          white-space: normal;
+        }
+      }
+    }
+  }
+  .planSearch {
+    width: 100%;
+    min-width: 398px;
+    margin-top: 10px;
+    padding-left: 15px;
+    .dateBox {
+      display: inline-block;
+      position: relative;
+      width: 120px;
+      margin-top: -5px;
+      .iconCal {
+        background: url(../comm/images/commIcon.png) no-repeat 6px -232px;
+        position: absolute;
+        right: 1px;
+        width: 28px;
+        height: 28px;
+        top: 1px;
+        background-color: #eee;
+        border-left: 1px #ccc solid;
+      }
+      input {
+        height: 30px;
+        line-height: 30px;
+        padding-left: 8px;
+        broder: 1px #ddd solid;
+        width: 120px;
+        padding-right: 30px;
+        box-sizing: border-box;
+      }
+    }
+    & .planTimeType {
+      margin-right: 10px;
+      & .myDropText {
+        width: 100px;
+      }
+      & .myDropList {
+        left: 0;
+        top: 32px;
+        width: 120px;
+      }
+    }
+    & .clearFormLink {
+      float: right;
+      margin-right: 16px;
+      margin-top: 5px;
+    }
+    .treeText {
+      padding: 3px;
+      cursor: pointer;
+      position: relative;
+      top: 4px;
+    }
+    .treeCheckbox {
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: 5px;
+      font-size: 12px;
+      line-height: 12px;
+      height: 15px;
+      width: 15px;
+      border: 1px solid #ccc;
+      input {
+        display: none;
+        &:checked + .m-lbl:after {
+          content: "\e615";
+          color: #417ae6;
+          line-height: 12px;
+          margin-left: -15px;
+        }
+      }
+      .m-lbl {
+        display: block;
+        width: 16px;
+        overflow: hidden;
+        &:before {
+          content: '';
+          display: inline-block;
+          width: 13px;
+          height: 13px;
+          background: #fff;
+        }
+      }
+      [class^='m-'] {
+        font-family: "modelicon" !important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -webkit-text-stroke-width: 0.2px;
+        -moz-osx-font-smoothing: grayscale;
+      }
+    }
+  }
+}
+
+.planInterest {
+  .tbInspection {
+    td {
+      padding-left: 15px;
+    }
+    .listCode {
+      width: 25%;
+    }
+    .listName {
+      width: 56%;
+    }
+    .listCount {
+      width: 18%;
+    }
+    .nodeSwitch {
+      position: relative;
+      z-index: 1;
+    }
+    td.subData {
+      padding-left: 30px;
+    }
+  }
+  .contentBox {
+    height: 100%;
+    .inspectionOperator {
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+    }
+    .contentBody {
+      position: absolute;
+      top: 51px;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+      overflow-y: auto;
+    }
+  }
+  .title {
+    height: 28px;
+    line-height: 28px;
+    font-weight: bold;
+    padding-left: 15px;
+  }
+  .inspecId {
+    width: 10%;
+    text-align: center;
+  }
+  .businessMatters {
+    width: 88%;
+  }
+  table {
+    width: 100%;
+    th, td {
+      border: 1px #ccc solid;
+    }
+    thead {
+      background-color: #eee;
+      height: 28px;
+      line-height: 28px;
+      .businessMatters {
+        text-align: center;
+      }
+    }
+    tbody {
+      tr {
+        background-color: #ddd;
+        td {
+          height: 26px;
+          line-height: 26px;
+        }
+        .businessMatters {
+          padding-left: 5px;
+        }
+      }
+    }
+    td.loadingTd {
+      height: 100px;
+      text-align: center;
+      border: 0;
+      line-height: 100px;
+      font-size: 14px;
+      color: #ccc;
+    }
+  }
+}
+
+.rightPropertyContentBox {
+  .planContainer, .projectNavContentBox {
+    position: absolute;
+    top: 40px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    overflow: auto;
+  }
+  .nullTip {
+    background: url(/projects/images/attrSel.png) no-repeat 50% 100%;
+    padding-top: 200px;
+    height: 50px;
+    line-height: 50px;
+    color: #ccc;
+    font-size: 16px;
+    text-align: center;
+  }
+  .rightPropertyContent {
+    height: 100%;
+    .ProjectPlanPropertyContainer {
+      height: 100%;
+    }
+    .designPropetyBox {
+      height: 100%;
+    }
+  }
+}
+
+.CostReference {
+  .referenceContent {
+    position: absolute;
+    top: 50px;
+    bottom: 3px;
+    left: 0px;
+    right: 0px;
+  }
+  .referenceSearch {
+    position: relative;
+    padding: 12px;
+    .btnSearch {
+      position: absolute;
+      top: 20px;
+      font-size: 14px;
+      color: #ccc;
+      left: 20px;
+      cursor: pointer;
+    }
+    .txtSearch {
+      min-width: 373px;
+      padding-left: 30px;
+      width: 100%;
+    }
+  }
+  .tbReference {
+    width: 100%;
+    min-width: 398px;
+    margin-left: -1px;
+    .overWidth {
+      vertical-align: top;
+      width: 90%;
+      text-align: left;
+    }
+    th, td {
+      border: 1px #ccc solid;
+    }
+    thead {
+      height: 28px;
+      line-height: 28px;
+      th {
+        text-align: center;
+      }
+    }
+    .listCode {
+      width: 25%;
+    }
+    .listName {
+      width: 56%;
+    }
+    .listCount {
+      width: 18%;
+    }
+    tbody {
+      td {
+        height: 25px;
+        line-height: 25px;
+        padding-left: 5px;
+      }
+    }
+  }
+  .tbBodyContent {
+    text-align: center;
+    .item {
+      height: 26px;
+      line-height: 25px;
+      border: 1px #ccc solid;
+      border-width: 1px 0px;
+      .commItem {
+        float: left;
+      }
+      .listCode {
+        width: 25%;
+        border-right: 1px #ccc solid;
+        position: relative;
+      }
+      .listName {
+        width: 56%;
+        border-right: 1px #ccc solid;
+        .text {
+          padding-left: 5px;
+        }
+      }
+      .listCount {
+        width: 19%;
+        border-right: 1px #ccc solid;
+        .text {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+  .tbBody {
+    height: 100%;
+    margin-top: -28px;
+    padding-top: 28px;
+    .tbBodyContent {
+      text-align: left;
+      .item {
+        border-top: 0;
+        .listCode {
+          .text {
+            position: absolute;
+            right: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rightProperty {
+  .noneSwitch {
+    display: inline-block;
+  }
+  .nodeSwitch {
+    background: url(../images/comm/images/commIcon.png) no-repeat 0px -39px;
+    margin-top: 7px;
+    display: inline-block;
+    width: 12px;
+    height: 10px;
+    line-height: 8px;
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+    &.on {
+      background-position: 0px -49px;
+    }
+    &.none {
+      background-position: 0px 100px;
+    }
+  }
+  .step1 {
+    margin-left: 7px;
+  }
+  .step2 {
+    margin-left: 14px;
+  }
+  .step3 {
+    margin-left: 21px;
+  }
+  .nodeSwitch {
+    position: relative;
+    z-index: 1;
+  }
+  .code {
+    text-align: left;
+    box-sizing: border-box;
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    margin-left: -16px;
+    padding-left: 16px;
+    white-space: nowrap;
+  }
+  .code1 {
+    margin-left: -24px;
+    padding-left: 24px;
+  }
+  .code2 {
+    margin-left: -31px;
+    padding-left: 31px;
+  }
+  .code3 {
+    margin-left: -40px;
+    padding-left: 40px;
+  }
+  .CostChange, .CostVerification {
+    overflow: auto;
+    position: absolute;
+    top: 12px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  .tbCostChange {
+    width: 100%;
+    min-width: 395px;
+    td, th {
+      border: 1px #ccc solid;
+    }
+    thead {
+      th {
+        text-align: center;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+    tbody {
+      td {
+        height: 25px;
+        line-height: 25px;
+        padding-left: 8px;
+        &.diff {
+          padding-left: 0px;
+          text-align: center;
+        }
+      }
+      tr {
+        &.bg {
+          background-color: #eee;
+        }
+      }
+    }
+    .name {
+      width: 50%;
+      .nameText {
+        width: 95%;
+        vertical-align: middle;
+        text-align: left;
+      }
+    }
+    .date, .diff {
+      width: 24%;
+      text-align: center;
+      padding-left: 0px;
+    }
+    .diff {
+      width: 24%;
+    }
+  }
+  .CostVerification {
+    .title {
+      height: 28px;
+      line-height: 28px;
+      padding-left: 12px;
+      min-width: 395px;
+      width: 100%;
+    }
+  }
+  .tbVerification {
+    width: 100%;
+    min-width: 395px;
+    td, th {
+      border: 1px #ccc solid;
+      height: 25px;
+      line-height: 25px;
+      text-align: center;
+    }
+    .listCode {
+      width: 25%;
+    }
+    .listName {
+      width: 74%;
+    }
+    td {
+      padding-left: 7px;
+      text-align: left;
+    }
+    thead {
+      tr {
+        background-color: #eee;
+      }
+    }
+    tbody {
+      tr {
+        background-color: #ddd;
+        &.odd {
+          background-color: #ddd;
+        }
+      }
+      td.listName {
+        text-align: left;
+      }
+    }
+  }
+  .tbVerficationContent {
+    background-color: #ddd;
+    .commItem {
+      float: left;
+    }
+    .listCode {
+      width: 23%;
+      border-right: 1px #ccc solid;
+      position: relative;
+      .nodeSwitch {
+        margin-top: 8px;
+      }
+      .text {
+        position: absolute;
+        right: 3px;
+
+      }
+    }
+    .item {
+      height: 30px;
+      line-height: 29px;
+      border-bottom: 1px #ccc solid;
+      text-align: left;
+    }
+    .listName {
+      width: 70%;
+      padding-left: 8px;
+    }
+  }
+  .tbVerficationHeader {
+    .item {
+      border-top: 1px #ccc solid;
+      background-color: #eee;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      .listCode {
+        .text {
+          position: relative;
+        }
+      }
+    }
+  }
+}
+
+.designVerification {
+  select {
+    width: 98%;
+  }
+}
+
+.projectPropetyContainer {
+  .designProperties {
+    min-width: 398px;
+    width: 100%;
+  }
+}
+
+/* 质量 */
+.qualityContainer {
+  position: absolute;
+  top: 40px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  .QualityProcessAcceptance, .QualityProcessCheck, .QualityOpeningAcceptance, .QualityConcerns, .QualityProperties {
+    min-width: 398px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+  }
+}
+
+.expandArrowIcon {
+  background: url(/static/dist/images/comm/images/commIcon.png) no-repeat 87px -638px !important;
+}
+
+.rightProperty {
+  & .detailFont {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    background: url('/static/dist/images/comm/images/commIcon.png') no-repeat 0 -658px;
+    vertical-align: -5px;
+    float: right;
+  }
+  .hedaerSearch {
+    padding: 15px;
+    min-width: 398px;
+    width: 100%;
+    overflow: hidden;
+    .searchToggle {
+      cursor: pointer;
+      background: url(/comm/images/commIcon.png) no-repeat 87px -619px;
+      padding-right: 32px;
+      height: 18px;
+      display: inline-block;
+    }
+    .clearSearch {
+      cursor: pointer;
+      color: #006ECF;
+    }
+    .groupRadio {
+      float: right;
+    }
+  }
+  .searchDetail {
+    display: none;
+    position: absolute;
+    height: 182px;
+    background-color: #fff;
+    top: 38px;
+    width: 100%;
+    min-width: 398px;
+    z-index: 1;
+    border-bottom: 1px #ccc solid;
+    &.processAcceptance {
+      height: 126px;
+    }
+    &.openingacceptance {
+      height: 142px;
+    }
+    &.concernSearch {
+      height: 204px;
+    }
+    &.concernList {
+      width: 540px;
+    }
+    .searchOptons {
+      border-top: 1px #ccc solid;
+      margin: 0 5px;
+    }
+    .optionComm {
+      margin-left: 7px;
+      .myDropText {
+        height: 24px;
+        line-height: 21px;
+        width: 178px;
+      }
+      .myDropArrorw {
+        margin-top: 10px;
+      }
+      .myDropList {
+        width: 100%;
+        top: 25px;
+        left: 0px;
+      }
+    }
+    .optonLine {
+      margin-top: 10px;
+      padding-left: 5px;
+    }
+    .materialEquipment.statusOption, .categoryOption, .specialitiesOption, .operatorOption, .typeOption, .firstDate, .inspectionUnitOption {
+      margin-left: 7px;
+    }
+    .zIndex10 {
+      position: relative;
+      z-index: 10;
+    }
+    .zIndex11 {
+      position: relative;
+      z-index: 11;
+    }
+    .searchName {
+      width: 176px;
+      margin-left: 7px;
+      display: inline-block;
+      border: 1px #ccc solid;
+      height: 24px;
+      vertical-align: top;
+      line-height: 20px;
+      padding-left: 12px;
+      outline: none;
+      .txtSearchName {
+        width: 120px;
+        border: 0;
+        outline: none;
+      }
+    }
+    .dateBox {
+      display: inline-block;
+      position: relative;
+      input {
+        height: 24px;
+        line-height: 24px;
+        padding-left: 8px;
+        border: 1px #ccc solid;
+        width: 178px;
+        padding-right: 30px;
+        box-sizing: border-box;
+      }
+      #dateEnd {
+        width: 178px;
+      }
+    }
+    .btnOption {
+      padding-right: 5px;
+      text-align: right;
+      input {
+        margin-top: 10px;
+      }
+    }
+    .labelItem {
+      margin-left: 10px;
+      height: 22px;
+      line-height: 22px;
+      font-size: 12px;
+      color: #999;
+    }
+    .iconCal {
+      background: url(/static/dist/images/comm/images/commIcon.png) no-repeat 6px -236px;
+      position: absolute;
+      right: 1px;
+      width: 28px;
+      height: 22px;
+      top: 1px;
+      background-color: #eee;
+      border-left: 1px #ccc solid;
+    }
+  }
+  .tbMaterialequipmentBody, .tbMaterialequipmentHeader {
+    width: 100%;
+    min-width: 580px;
+    .manifestIcon {
+      width: 5%;
+      text-align: center;
+      .myIcon-inventory {
+        display: inline-block;
+        width: 11px;
+      }
+    }
+    .specialities {
+      width: 12%;
+    }
+    .category {
+      width: 12%;
+    }
+    .name {
+      width: 19%;
+    }
+    .batches {
+      width: 6%;
+    }
+    .status {
+      width: 7%;
+    }
+    .hasBeenCount {
+      width: 9%;
+    }
+    .sumCount {
+      width: 9%;
+    }
+    .lastDate {
+      width: 20%;
+    }
+  }
+  .tbContainer {
+    position: absolute;
+    top: 45px;
+    bottom: 32px;
+    left: 0px;
+    right: 0px;
+    overflow: auto;
+    .materialequipmentList {
+      margin-top: -31px;
+      padding-top: 30px;
+      height: 100%;
+      min-width: 580px;
+      width: 100%;
+    }
+    .processAccessList, .openingacceptanceList {
+      min-width: 398px;
+      position: relative;
+    }
+    .concernList {
+      min-width: 540px;
+    }
+  }
+  .tbComm {
+    td, th {
+      border: 1px #ccc solid;
+      text-align: center;
+    }
+    th {
+      height: 28px;
+      line-height: 28px;
+    }
+    td {
+      height: 25px;
+      line-height: 25px;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+  }
+  .tbProcessAccessHeader, .tbProcessAccessBody {
+    width: 100%;
+    min-width: 398px;
+    .manifestIcon {
+      width: 5%;
+    }
+    .category {
+      width: 12%;
+    }
+    .positon {
+      width: 21%;
+      position: relative;
+      & div {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: absolute;
+        left: 0;
+        top: 3px;
+        right: 0;
+      }
+    }
+    .ckResult {
+      width: 10%;
+    }
+  }
+  .tbOpeningacceptanceHeader, .tbOpeningacceptanceBody {
+    width: 100%;
+    min-width: 398px;
+    .manifestIcon {
+      width: 5%;
+    }
+    .specialities {
+      width: 21%;
+    }
+    .category {
+      width: 23%;
+    }
+    .positon {
+      width: 34%;
+    }
+    .ckResult {
+      width: 15%;
+    }
+  }
+  .tbConcernsHeader, .tbConcernsBody {
+    width: 100%;
+    min-width: 540px;
+    .concernInfo {
+      width: 44%;
+    }
+    .category {
+      width: 12%;
+    }
+    .status {
+      width: 10%;
+    }
+    .grade {
+      width: 8%;
+    }
+    .operator {
+      width: 14%;
+    }
+    .type {
+      width: 11%;
+    }
+    td {
+      height: 98px;
+      line-height: 98px;
+    }
+  }
+  .tbConcernsBody {
+    .concernInfo {
+      line-height: 1.5;
+      vertical-align: top;
+      padding: 10px 0 0 10px;
+    }
+    .ckImg {
+      float: left;
+      width: 68px;
+      height: 68px;
+    }
+    .ckHeader {
+      margin-left: 80px;
+      text-align: left;
+      .detailicon {
+        float: right;
+        width: 15px;
+        height: 15px;
+        background: url(/comm/images/commIcon.png) no-repeat;
+        background-position: 0 -660px;
+      }
+    }
+    .ckName {
+      margin-bottom: 6px;
+    }
+  }
+  .tbComm {
+    .noDataTd, .loadingTd {
+      height: 60px;
+      line-height: 60px;
+      text-align: center;
+      color: #ccc;
+      font-size: 16px;
+      border: 0;
+    }
+  }
+  .paginationBottom {
+    position: absolute;
+    bottom: 0px;
+    height: 30px;
+    left: 0px;
+    right: 0px;
+    line-height: 30px;
+    .pageInfo, .sumCount {
+      float: right;
+    }
+    .sumCount {
+      margin-right: 15px;
+    }
+    .prev {
+      margin-left: 10px;
+    }
+    .next {
+      margin-right: 15px;
+      margin-left: 6px;
+    }
+    .prev, .next {
+      cursor: pointer;
+      color: #006ECF;
+      &:hover {
+        text-decoration: underline;
+      }
+      &.disable {
+        color: #ccc;
+        text-decoration: none;
+        cursor: default;
+      }
+    }
+  }
+}
+
+#projectContainer {
+  .containerHeader {
+    .btnNormal {
+      height: 27px;
+      margin-right: 7px;
+      &#non-standard {
+        height: 30px;
+        line-height: 30px;
+        padding: 0 12px;
+        color: #006ECF;
+        float: left;
+      }
+    }
+    .myBtn em {
+      margin-top: 1px;
+      vertical-align: top;
+    }
+  }
+}
+
+.disease {
+  height: 270px;
+  min-width: 390px;
+  font-family: "microsoft yahei";
+  border: 1px solid #CCCCCC;
+  position: absolute;
+  right: 4px;
+  left: 4px;
+  background: #FFF;
+  box-shadow: 3px 3px 2px #555555;
+  & .scrollWrap {
+    height: 240px;
+  }
+  & .safter, & .sbefore {
+    width: 0;
+    height: 0;
+    border-bottom: 7px solid #CCC;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    content: "";
+    position: absolute;
+    top: -8px;
+    display: block;
+  }
+  & .dafter, & .dbefore {
+    width: 0;
+    height: 0;
+    border-top: 7px solid #CCC;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    display: block;
+  }
+  & .dbefore {
+    border-top: 7px solid #FFF;
+    bottom: -6px;
+  }
+  & .safter {
+    border-bottom: 7px solid #FFF;
+    top: -6px;
+  }
+  & span {
+    display: block;
+  }
+  & .header {
+    color: #666;
+    height: 30px;
+    border-bottom: 1px solid #CCC;
+    line-height: 30px;
+    padding-left: 10px;
+    & .closeBtn {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      background: url('../../comm/images/commIcon.png') no-repeat -40px -40px;
+      margin-top: 7px;
+      margin-right: 7px;
+      float: right
+    }
+  }
+  & ul {
+  }
+  & li {
+    padding: 8px;
+    height: 80px;
+    border-bottom: 1px solid #CCCCCC;
+    &:hover {
+      background: #B4E2FD;
+      cursor: pointer;
+    }
+  }
+  & .content > div {
+    float: left;
+    font-size: 14px;
+  }
+  & .content {
+    & .logo {
+      width: 70px;
+      height: 60px;
+    }
+    & .descr {
+      color: #333;
+      width: 140px;
+      height: 60px;
+      padding-left: 8px;
+      margin-top: -4px;
+    }
+    & .option {
+      width: 140px;
+      height: 60px;
+      padding-left: 5px;
+      margin-top: -1px;
+    }
+    & .title {
+      height: 29px;
+      line-height: 29px;
+      display: inline-block;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 200px;
+      overflow: hidden;
+      & i {
+        width: 18px;
+        height: 18px;
+        display: inline-block;
+        background: url('../../comm/images/commIcon.png') no-repeat 0 -658px;
+        vertical-align: -5px;
+      }
+    }
+    & .time {
+      color: #666;
+      font-size: 12px;
+    }
+    & .status {
+      margin-top: 29px;
+      font-size: 12px;
+    }
+    & .from {
+      color: #333;
+      font-size: 12px;
+    }
+  }
+}
+
+.loginDialog {
+  .txtInput {
+    padding: 20px 8px;
+    width: 258px;
+    border-radius: 5px;
+  }
+  .pwdBox {
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .btnLogin {
+    width: 258px;
+    height: 40px;
+    border-radius: 5px;
+  }
+}
+
+.fileStateDialogClass {
+  .fileStatus {
+    height: auto;
+    h2 {
+      font-size: 16px;
+      font-weight: normal;
+      height: 30px;
+      color: #333;
+      label {
+        font-size: 16px;
+        font-weight: normal;
+      }
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: normal;
+      height: 30px;
+      line-height: 30px;
+      margin-bottom: 8px;
+      margin-top: 16px;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border: solid 1px #ccc;
+      td {
+        border-right: solid 1px #ccc;
+        text-align: center;
+        height: 36px;
+        line-height: 36px;
+        width: 33%;
+        a {
+          display: inline-block;
+          width: 50%;
+          color: red;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      td:nth-child(":last") {
+        border-right: 0;
+      }
+      thead tr {
+        border-bottom: solid 1px #ccc;
+      }
+    }
+    .failItemBox {
+      width: 100%;
+      height: auto;
+      padding-top: 16px;
+      h2 {
+        margin-bottom: 8px;
+      }
+      table {
+        width: 100%;
+        thead tr {
+          border-bottom: 0;
+        }
+      }
+      .fileStateFail {
+        width: 100%;
+        height: auto;
+        table {
+          border-top: 0;
+          tr {
+            border-bottom: solid 1px #ccc;
+          }
+          tr:nth-child(":last") {
+            border-bottom: 0;
+          }
+          td {
+            text-align: left;
+            line-height: normal;
+            padding: 0 8px;
+          }
+        }
+      }
+    }
+    .rvtFailBox, .dwgFailBox {
+      display: none;
+    }
+  }
+}
+
+.myIcon-enter, .myIcon-cancel {
+  height: 14px !important;
+  line-height: normal !important;
+  //margin-top: 12px !important;
+  cursor: pointer !important;
+}
+
+//修改版本的展示效果
+.showContentList {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.versionNoheaderShow {
+  .showContentList {
+    display: block;
+  }
+}
+
+.addModelBgHtmlDom {
+  position: absolute;
+  z-index: 998;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.addModelHtmlDom {
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  .addModelHtmlDomBox {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background: #fff;
+    border-radius: 2px;
+    .addModelHtmlDomTitleBox {
+      width: 100%;
+      height: 40px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: #208AEE;
+      line-height: 40px;
+      padding: 0 16px;
+      span {
+        display: inline-block;
+        float: left;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #FFFFFF;
+      }
+      a {
+        display: inline-block;
+        float: right;
+        position: relative;
+        width: 14px;
+        height: 14px;
+        margin-top: 10px;
+        &::before, &::after {
+          content: '';
+          position: absolute;
+          width: 14px;
+          top: 6px;
+          right: 0;
+          height: 3px;
+          border-radius: 5px;
+          background: #ffffff;
+        }
+        &::before {
+          transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    .addModelHtmlDomContentBox {
+      width: 100%;
+      height: 100%;
+      padding-top: 40px;
+    }
+  }
+}
+
+.notesCommentAddModelDialogBox {
+  width: 100%;
+  height: 100%;
+  .dialogModelBox {
+    width: 100%;
+    height: 100%;
+    .projectCotent {
+      width: 100%;
+      height: 100%;
+      display: block !important;
+      .modelContainer {
+        width: 100%;
+        height: 100%;
+        .modelContainerScroll {
+          width: 100%;
+          height: 100%;
+          .modelContainerContent {
+            width: 100%;
+            height: 100%;
+            canvas {
+              width: 100%;
+              height: 100% !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#debugPickedInfo {
+  z-index: 500;
+}
+
+.loadingTd {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #ccc;
+  font-size: 16px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 1150px) {
+  #projectContainer .containerHeader .btnNormal#non-standard {
+    width: 80px;
+  }
+
+}
+
+@media (max-width: 1180px) {
+  .projectContainerApp .projectContent .projectCotent .fileContainer #txtFileSearch {
+    width: 130px;
+  }
+
+}
+
+@media (max-width: 1200px) {
+
+  .projectContainerApp .projectContent .projectCotent .fileContainer #txtFileSearch {
+    //width: 58px;
+  }
+}
+
+@media (max-height: 850px) {
+  .projectContainerApp .projectContent .notesBox .notesContentBox .notesContentContainerBox .notesContentBoxBottom .rightNotesCommentListBox .commentBox .commentListBox .commentListHeightBox .commentScroll {
+    height: 96%;
+  }
+}

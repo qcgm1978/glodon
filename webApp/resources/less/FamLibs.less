@@ -1,0 +1,254 @@
+#resourceFamlibsLeftNav {
+  z-index: 99;
+  background-color: #fff;
+  position: absolute;
+  top: 87px;
+  bottom: 0px;
+  left: 0px;
+  border: 1px #ccc solid;
+  border-width: 0px 1px;
+  width: 238px;
+  .projectNav {
+    .item {
+      cursor: default;
+      &:hover {
+        border-color: #ddd;
+        color: #666;
+      }
+    }
+  }
+  .mCSB_container {
+    height: 100%;
+  }
+  //.projectNavFileContainer { height: 100%; margin-top: -40px; padding-top: 40px; }
+  .projectNavFileContainer {
+    height: 100%;
+  }
+}
+
+#resourceThumContent {
+  margin-left: 10px;
+  border-top: 1px solid #ccc;
+  position: absolute;
+  bottom: 20px;
+  top: 134px;
+  right: 0;
+  left: 228px;
+  .thumBody {
+    height: 100%;
+  }
+  .hr {
+    border-color: #ccc;
+  }
+  .thumContent {
+    .fileName a {
+      word-break: break-all;
+    }
+    .item {
+      height: 160px;
+      padding: 15px;
+      text-align: center;
+      float: left;
+      width: 128px;
+      position: relative;
+      margin-right: 10px;
+      &:hover {
+        background-color: #EBFAFF;
+      }
+      .ckMe {
+        position: absolute;
+        left: 12px;
+        top: 0px;
+        display: none;
+        top: 7px;
+      }
+      &:hover .ckMe {
+        display: block;
+      }
+      .text {
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      .textFolder,.thumBg {
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      .txtEdit {
+        width: 98px;
+        margin-bottom: 10px;
+      }
+      .btnEnter {
+        float: right;
+        cursor: pointer;
+      }
+      .btnCalcel {
+        float: right;
+        margin-right: 10px;
+      }
+      &.selected {
+        background-color: #A8DBFD;
+        .ckMe {
+          display: block;
+        }
+      }
+      .thumbnailImg {
+        width: 105px;
+        height: 75px;
+        display: block;
+        margin-bottom: 8px;
+      }
+      .fileName .text {
+        word-break: break-all;
+        overflow: hidden;
+        display: block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.projectVersionList {
+  .listResource {
+    padding: 10px;
+    .itemA {
+      display: block;
+      height: 24px;
+      line-height: 24px;
+      padding-left: 15px;
+      font-size: 12px;
+      color: #333;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: middle;
+      width: 218px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &:hover {
+        background-color: #D8F3FF;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.resourceCrumbsNav {
+  .breadcrumbNav {
+    .breadItem {
+      .projectVersionList {
+        width: 250px;
+        overflow: auto;
+      }
+    }
+  }
+}
+
+.standardLibsVersion .projectVersionList {
+  padding: 10px;
+  .itemA {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    padding-left: 15px;
+    font-size: 12px;
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    &:hover {
+      background-color: #D8F3FF;
+      text-decoration: none;
+    }
+  }
+}
+
+.fileStateDialogClass {
+  .fileStatus {
+    height: auto;
+    h2 {
+      font-size: 16px;
+      font-weight: normal;
+      height: 30px;
+      color: #333;
+      label {
+        font-size: 16px;
+        font-weight: normal;
+      }
+    }
+    h3 {
+      font-size: 16px;
+      font-weight: normal;
+      height: 30px;
+      line-height: 30px;
+      margin-bottom: 8px;
+      margin-top: 16px;
+      color: #333;
+    }
+    table {
+      width: 100%;
+      border: solid 1px #ccc;
+      td {
+        width: 33%;
+        border-right: solid 1px #ccc;
+        text-align: center;
+        height: 36px;
+        line-height: 36px;
+        a {
+          display: inline-block;
+          width: 50%;
+          color: red;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+      td:nth-child(":last") {
+        border-right: 0;
+      }
+      thead tr {
+        border-bottom: solid 1px #ccc;
+      }
+    }
+    .failItemBox {
+      width: 100%;
+      height: auto;
+      padding-top: 16px;
+      h2 {
+        margin-bottom: 8px;
+      }
+      table {
+        width: 100%;
+        thead tr {
+          border-bottom: 0;
+        }
+      }
+      .fileStateFail {
+        width: 100%;
+        height: auto;
+        table {
+          border-top: 0;
+          tr {
+            border-bottom: solid 1px #ccc;
+          }
+          tr:nth-child(":last") {
+            border-bottom: 0;
+          }
+          td {
+            line-height: normal;
+            text-align: left;
+            padding: 0 8px;
+          }
+        }
+      }
+    }
+    .rvtFailBox, .dwgFailBox {
+      display: none;
+    }
+  }
+}

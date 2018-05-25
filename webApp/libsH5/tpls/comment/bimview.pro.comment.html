@@ -1,0 +1,29 @@
+<div class="fullLoading">
+    <%= App.Local.data['system']['l-g'] || '正在加载，请稍候……' %>
+</div>
+
+<div class="commentList">
+    <ul class="navBar">
+        <%if(App.Project&& App.Project.Settings&&App.Project.Settings.isShare){%>
+             <li data-type="project" class="item project selected"><%= App.Local.data['drawing-model'].Share || '分享快照' %></li>
+        <%}else{%>
+            <li data-type="project" class="item project selected">快照</li>
+            <li data-type="user" class="item user" style="display:none;">个人快照</li>
+            <li data-type="save" class="item save"><i class="m-camera iconSave"></i><%= App.Local.data.source.Screenshot || '创建快照' %></li>
+        <%}%>
+     
+    </ul>
+    <div class="listBox">
+        <div class="projectListBox">
+            <div class="projectListScroll">
+            </div>
+        </div>
+        <div class="userListBox">
+            <div class="userListScroll">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="commentRemark ">
+ 
+</div>

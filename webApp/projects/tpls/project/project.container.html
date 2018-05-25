@@ -1,0 +1,73 @@
+<div class="projectHeader">
+    <ul class="projectTab">
+        <li data-type="design" class="item design" data-i18n="[prepend]data.drawing-model.Design">
+            <i class="line"></i></li>
+        <li data-type="plan" class="item plan" data-i18n="[prepend]data.drawing-model.Plan"><i class="line"></i></li>
+    </ul>
+    <div class="breadcrumbNav">
+        <span class="projectText"><a href="#projects" data-i18n="data.drawing-model.Project" >项目</a></span>
+        <span class="breadItem project relative"> <i class="icon-angle-right"></i> 
+           <span class="breadItemText"> <span class="text textFlow" title="<%= App.Project.Settings.projectName %>"><%= App.Project.Settings.projectName %></span>
+        <i class="myIcon-slanting-right"></i></span>
+        <div class="projectList">
+            <div class="loading"><%=App.Local.getTranslation('system.l-g')%></div>
+            <div class="listContent">
+                <input class="txtSearch txtInput" placeholder="请输入搜索条件" data-i18n="[placeholder]data.drawing-model.Ped2"/>
+                <div class="container"></div>
+            </div>
+        </div>
+        </span>
+        <span class="breadItem projectVersion relative"> <i class="icon-angle-right"></i> 
+           <span class="breadItemText"> 
+                
+                <%if(App.Project.Settings.CurrentVersion.isBimControl==2){%>
+                    <span class="text textFlow" title="当前版本"><%=App.Project.Settings.CurrentVersion.name %></span>
+                <%}else{%>
+                    <span class="text textFlow" title="<%=App.Project.Settings.CurrentVersion.name %>"><%=App.Project.Settings.CurrentVersion.name %></span>
+                    <span class="text">(<%=App.Comm.versionStatus(App.Project.Settings.CurrentVersion.status)%>)</span>
+                <%}%>
+                <i class="myIcon-slanting-right"></i></span>
+        <div class="projectVersionList">
+            <div class="loading"><%=App.Local.getTranslation('system.l-g')||'正在加载，请稍候……'%></div>
+            <div class="listContent">
+                <ul class="nav">
+                    <li data-type="release" class="item selected" data-i18n="data.drawing.r-v">发布版本</li>
+                    <li data-type="change" class="item" data-i18n="data.drawing.v-v">变更版本</li>
+                </ul>
+                <input class="txtSearch txtInput" placeholder="请输入搜索条件" data-i18n="[placeholder]data.drawing-model.Ped2"/>
+                <div class="container">
+                </div>
+            </div>
+        </div>
+        </span>
+
+
+        <span class="fileNav">
+            <span  data-type="file" class="file selected commSpan" ><%= App.Local.data['drawing-model'].Document || '文档' %></span>
+            <span  data-type="model" class="model commSpan" ><%= App.Local.data['drawing-model'].Model || '模型' %></span>
+            <span  data-type="notes" class="notes commSpan" data-i18n="data.drawing-model.Comment1">批注</span>
+        </span>
+ 
+    </div>
+</div>
+<div id="projectContainer">
+    <div class="rightProperty">
+        <div class="rightPropertyContentBox">
+            <div class="rightPropertyContent">
+                <div class="designPropetyBox singlePropetyBox">
+                    <ul class="projectPropetyHeader projectNav">
+                        <li data-type="poperties" class="item selected" data-i18n="data.model-view.Ps">属性</li>
+                    </ul>
+                    <div class="projectPropetyContainer projectNavContentBox">
+                        <div class="designProperties">
+                            <div class="nullTip" ><%= App.Local.data['drawing-model'].SEt1 || '请选择构件' %></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="dragSize"></div>
+            <div class="slideBar"><i class="icon-caret-left"></i></div>
+        </div></div>
+    <div class="projectCotent"></div>
+    <div class="notesBox"></div>
+</div>

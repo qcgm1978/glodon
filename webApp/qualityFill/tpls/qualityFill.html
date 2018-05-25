@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="pragma" content="no-cache"> -->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <title>万达筑云项目管理平台- 隐患填报模拟</title>
+    <link rel="styleSheet" href="/static/dist/qualityFill/css/quality.css" />
+    <style type="text/css">
+        #Dlg,
+        #DlgAlert {
+            top: 510px !important;
+        }
+
+        .m-camera {
+            color: rgba(255, 255, 255, .2)!important;
+        }
+
+        .dialogBody .colorBar .bar-item:before {
+            transform: translate(3px, 3px);
+        }
+
+        .dialogBtn {
+            color: inherit;
+        }
+    </style>
+    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/static/dist/components/inspectSelectionNew/js/inspectSelection.js"></script>
+    <script src="/static/dist/qualityFill/js/template.min.js"></script>
+    <script src="/static/dist/qualityFill/js/wDialog.min.js"></script>
+    <script src="/static/dist/qualityFill/js/zebra_datepicker.js"></script>
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div style="height:30px;line-height:30px;font-weight:bold;font-size:14px;">
+            项目名称：
+            <span id="projectName"></span>&nbsp;&nbsp;&nbsp;&nbsp; 项目名称：
+            <span id="typeName"></span>
+        </div>
+        <div id="grid" class="grid">
+            <table border="0" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <td class="chk">
+                            <input type="checkbox" name="chk" class="chkAll" />
+                        </td>
+                        <td class="">预设点</td>
+                        <td class="w-small">检查结果</td>
+                        <td class="w-middle">隐患描述</td>
+                        <td class="w-big">构件位置</td>
+                        <td class="w-middle">创建日期</td>
+                        <td class="w-middle">整改日期</td>
+                        <td class="w-middle">整改次数</td>
+                        <td class="w-small">状态</td>
+                        <td class="w-small">等级</td>
+                        <td class="w-small">填报人</td>
+                        <td class="w-small">打分类型</td>
+                    </tr>
+                </thead>
+                <tbody id="gridContainer">
+                    <tr dataid="0">
+                        <td class="chk">
+                            <input type="checkbox" name="chk" class="checkbox" />
+                            <span class="spanBtn uploadBtn">上传图片</span>
+                            <img src="" style="width:60px;height:60px;" align="middle" />
+                        </td>
+                        <td>
+                            <span class="ready-pos" data-readypos=""></span>
+                            <span class="linkBtn-ready-pos"></span>
+                        </td>
+                        <td>
+                            <select class="select-result">
+                                <option value="1">不合格</option>
+                                <option value="2">合格</option>
+                            </select>
+                        </td>
+                        <td>
+                            <input type="text" name="part2" class="input_trouble" />
+                        </td>
+                        <td>
+                            <span class="pos" data-pos=""></span>
+                            <span class="linkBtn-pos"></span>
+                        </td>
+                        <td>
+                            <input type="" name="" class="input_date1 wicon" title="格式如:2017-01-02" />
+                        </td>
+                        <td>
+                            <input type="" name="" class="input_date2 wicon" title="格式如:2017-01-02" />
+                        </td>
+                        <td>
+                            <input type="" name="" class="input_counter" />
+                        </td>
+                        <td>
+                            <!--隐患状态-->
+                            <select class="select-state">
+                                <option value="1">待整改</option>
+                                <option value="2">已整改</option>
+                                <option value="3">已关闭</option>
+                            </select>
+                        </td>
+                        <td>
+                            <!--患等级级-->
+                            <select class="select-level">
+                                <option value="1">一般</option>
+                                <option value="2">较大</option>
+                                <option value="3">重大</option>
+                                <option value="4">特大</option>
+                            </select>
+                        </td>
+                        <td>
+                            <!--隐患提出方编码-->
+                            <select class="select-person">
+                                <option value="1">质监中心</option>
+                                <option value="2">第三方</option>
+                                <option value="3">项目公司</option>
+                                <option value="4">监理单位</option>
+                            </select>
+                        </td>
+                        <td>
+                            <!--打分类别-->
+                            <select class="select-type">
+                                <!--<option value="1">实测实量</option>-->
+                                <option value="2">防水工程</option>
+                                <option value="3">施工质量</option>
+                                <option value="4">安全文明</option>
+                                <!--<option value="5">总包内业资料</option>-->
+                                <option value="6">材料设备</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="options">
+            <button id="btn_add">添加</button>
+            <button id="btn_delete">删除</button>
+            <button id="btn_save">保存</button>
+            <button id="btn_unbind">解绑预设点</button>
+            <button id="btn_see" style="background-color:#D3FF93">查看隐患列表</button>
+        </div>
+    </div>
+
+    <!---->
+
+    <div id="Dlg_content" style="display:none;">
+        <div class="dlg-content-upload">
+            <div id="" class="">
+                <form actioin="" id="form1">
+                    <input type="file" name="fileField" id="fileField" />
+                </form>
+            </div>
+        </div>
+        <div class="dlg-button">
+            <!--<button id="DlgBtn_close">关闭</button>-->
+            <button id="DlgBtn_ok">确定</button>
+        </div>
+    </div>
+
+    <div id="Dlg_content_alert" style="display:none;">
+        <div class="dlg-content-upload" style="line-height:60px;">
+            数据保存成功！
+        </div>
+        <div class="dlg-button">
+            <!--<button id="DlgBtn_close">关闭</button>-->
+            <button id="DlgBtn_ok_alert">确定</button>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script type="text/javascript">
+    var Global = {
+        restfulType: {
+            "MQ2": "QUALITY-1004",
+            "MQ1": "QUALITY-1005"
+        },
+        restfulMessage: ""
+    };
+    var readyPosState = ["绑定预设点", "解绑"];
+    var posState = ["绑定构件位置", "解绑"];
+    Date.guid = function () {
+        var date = new Date(), dataid = "";
+        dataid = date.getFullYear().toString() +
+            date.getMonth().toString() +
+            date.getDate().toString() +
+            date.getHours().toString() +
+            date.getMinutes().toString() +
+            date.getSeconds().toString() +
+            date.getMilliseconds().toString();
+        return dataid;
+    }
+    Date.getLong = function (stringDate) {
+        var date = new Date(stringDate);
+        return date.getTime();
+    }
+    //Object.prototype.toString.call(obj) === '[object Array]'
+    var Data = {
+        projectData: {},
+        formData: {
+            "msgCreateTime": 1461727280227,
+            "msgId": "b2e5b467ef214f6196ac3f826017806e",
+            "msgSendTime": 0,
+            "srcMsgType": "QUALITY-BIM",
+            "retryTimes": 0,
+            //"message": "success",
+            "status": 0,
+            "sysCode": "1",
+            "msgContent": ""
+            /*
+            "msgContent" : JSON.stringify({
+                "messageId": "411a109141d6473c83a86aa0480d6610",
+                "messageType": "QUALITY-1004",
+                "message": "是",
+                "timestamp": (new Date).getTime(),
+                "code": 0,
+                "data": []
+            })
+            */
+        },
+        itemData: {
+            /*save into the formData > data*/
+            "id": "7a6bdcca-b0b4-41eb-92fd-e59a6f87d723",
+            "projectCode": "02aa76f5-59fe-47fb-af75-5fb736319f0d",
+            "projectId": "",
+            "acceptanceType": 1,
+            "name": "屋面二次开洞未补做蓄水试验",
+            "discoverDate": 1482721932000,
+            "rectifyDate": 1482940800000,
+            "rectifyCount": 0,
+            "status": 1,
+            "levelId": 2,
+            "organizationTypeID": 1,
+            "dangerImageID": "3e972410-0208-41fd-be0e-1f56308b209b",
+            "ratingCategoryID": 2,
+            "presetPointID": null,
+            "PresetPointCompoentID": null,
+            "componentID": null,
+            "location": null,
+            "axis": null
+        },
+        cacheData: {}/*save front end operating data*/
+    };
+    var Url = {
+        getParam: function (key) {
+            var search = location.search;
+            search = search.replace("?", "");
+            var items = search.split("&");
+            var item, i;
+            for (i = 0; i < items.length; i++) {
+                item = items[i].split("=");
+                if (item[0] == key) {
+                    return item[1];
+                }
+            }
+            return "";
+        }
+    };
+    var initDate = function ($tr) {
+        /*
+        $(".input_date1").jeDate({
+            isinitVal:false,
+            festival:true,
+            ishmsVal:false,
+            minDate: '2016-06-16 23:59:59',
+            //maxDate: $.nowDate(0),
+            format:"YYYY-MM-DD",
+            zIndex:3000,
+        });
+        $(".input_date2").jeDate({
+            isinitVal:false,
+            festival:true,
+            ishmsVal:false,
+            minDate: '2016-06-16 23:59:59',
+            //maxDate: $.nowDate(0),
+            format:"YYYY-MM-DD",
+            zIndex:3000,
+        });
+        */
+        $tr.find(".input_date1").Zebra_DatePicker();
+        $tr.find(".input_date2").Zebra_DatePicker();
+    }
+    var initComponent = function (projectCode, type) {
+        jQuery.support.cors = true;
+        window.viewer = new InspectModelSelection({
+            //type: "process",//open process
+            type: type,
+            ruleType: '',//构件分类
+            height: "420px",
+            width: "1100px",
+            //projectCode: '36caa07c-4c7d-4c95-84ae-fb56f53f0dc3',  //projectNo
+            //projectCode : "edbae83a-8a9f-4dfa-9588-18d7d33f71b6",
+            projectCode: projectCode,
+            /*
+            token:"4aeba9fa8574d9a7f5e6ff2fbc54cd5cf45d7f3949df6bdf1f5c49f4349baa01a76b19a3118007e98a2546f76a1e5c7c6dff6a0b87795a92",
+            appKey: "60e8a1d9fc1d44d7b6a4cf85ae2987ed",
+            */
+            appKey: "60e8a1d9fc1d44d7b6a4cf85ae2987ed",
+            //        appKey: "f0b7615f5b804476b429046d069235d1",//测试环境
+            token: "123",
+            callback: function (res) {
+                window.viewerData = res;
+            },
+            withCheckpoint: true
+        });
+    }
+    var initDialog = function () {
+        overLayer.bgColor = '#777';
+        overLayer.opacity = 40;
+        var options = {
+            id: 'Dlg',
+            hasBar: true,
+            barOptions:
+                {
+                    title: "上传图片"
+                },
+            position: 'fixed',
+            type: 'center',
+            contentId: 'Dlg_content',
+            className: 'dialog',
+            width: 500,
+            height: 150,
+            isMove: false,
+            top: 510
+        };
+        window.Dlg = new wDialog(options);
+        options = {
+            id: 'DlgAlert',
+            hasBar: true,
+            barOptions:
+                {
+                    title: "提示"
+                },
+            position: 'fixed',
+            type: 'center',
+            contentId: 'Dlg_content_alert',
+            className: 'dialog',
+            width: 500,
+            height: 150,
+            isMove: false,
+            top: 510
+        };
+        window.DlgAlert = new wDialog(options);
+    }
+    var Event = {
+        rowDOM: [],
+        initDialogEvent: function () {
+            $("#Dlg .wClose").hide();
+            $("#DlgBtn_close").on("click", function () {
+                window.Dlg.hide();
+            });
+            $("#DlgBtn_ok").on("click", function () {
+                window.Dlg.hide();
+            });
+            $("#DlgBtn_ok_alert").on("click", function () {
+                window.DlgAlert.hide();
+            });
+            var $Dlg_content = $("#Dlg .dlg-content-upload");
+            $Dlg_content.on("click", "div", function () {
+            });
+            /*选择文件开始上传*/
+            $("#fileField").on("change", function () {
+                var url = "/sixD/{projectId}/{projectVerionId}/problem/attachment/upload";
+                url = url.replace("{projectId}", Url.getParam("projectId"));
+                url = url.replace("{projectVerionId}", Url.getParam("projectId"));
+                var form = document.getElementById("form1");
+                var fd = new FormData(form);
+                $.ajax({
+                    url: url,
+                    type: "POST",
+                    data: fd,
+                    processData: false,  // 告诉jQuery不要去处理发送的数据
+                    contentType: false,  // 告诉jQuery不要去设置Content-Type请求头
+                    success: function (response, status, xhr) {
+                        window.Data.curTrDOM.setAttribute("imageId", response.data.imageId);
+                        $(window.Data.curTrDOM).find("img").attr("src", "/sixD" + response.data.imageUrl);
+                        alert("上传成功！");
+                    }
+                });
+            });
+        },
+        initDialogData: function () {
+            $.ajax({
+                url: "/platform/project/list/all/quality",
+                type: "get",
+                dataType: "json",
+                success: function (data) {
+                    var list = data.data;
+                    if (data.code != 0) {
+                        list = [];
+                    }
+                    template.startSymbol("{{");
+                    template.endSymbol("}}");
+                    template.repeat({
+                        repeatElement: $("#repeatContainer")[0],
+                        data: list,
+                        type: "cover"
+                    });
+                }
+            });
+        },
+        deleteRow: function () {
+            var i;
+            var $gridContainer = $("#gridContainer");
+            for (i = 0; i < this.rowDOM.length; i++) {
+                $gridContainer[0].removeChild(this.rowDOM[i]);
+            }
+            this.rowDOM = [];
+        },
+        checkRow: function (checkbox) {
+            var trDOM = checkbox.parentNode.parentNode;
+            this.rowDOM.push(trDOM);
+        },
+        checkAllRow: function () {
+            var i;
+            var $trs = $("#gridContainer tr");
+            for (i = 0; i < $trs.length; i++) {
+                this.checkRow($($trs[i]).find(".checkbox")[0]);
+            }
+        },
+        validate: function () {
+            /*
+            检查页面是否必填
+            通过验证返回true,未通过返回false
+            返回值:
+            */
+            var $trs = $("#gridContainer tr");
+            var $tr, result = { result: true };
+            $trs.each(function (index) {
+                $tr = $(this);
+                $input_trouble = $tr.find(".input_trouble");
+                $input_date1 = $tr.find(".input_date1");
+                $input_date2 = $tr.find(".input_date2");
+                $input_counter = $tr.find(".input_counter");
+                $image = $tr.find("img");
+                $result = $tr.find(".select-result");
+                if ($result.val() == "2") {
+                    return;
+                }
+                if ($input_trouble.val() == "" || $input_date1.val() == "" || $input_date2.val() == "" || $input_counter.val() == "") {
+                    result = {
+                        result: false,
+                        text: "隐患名称、创建日期、整改日期、整改次数必填！"
+                    };
+                    return;
+                }
+                if (Date.getLong($input_date1.val()) > Date.getLong($input_date2.val())) {
+                    result = {
+                        result: false,
+                        text: "创建日期 小于 整改日期！"
+                    };
+                    return;
+                }
+                if ($image.attr("src") == "") {
+                    result = {
+                        result: false,
+                        text: "图片未上传，请上传图片！"
+                    }
+                    return;
+                }
+            });
+            return result;
+        },
+        saveData: function () {
+            var $trs = $("#gridContainer tr");
+            var $this;
+            var itemData, itemDatas = [], itemDatas2 = [], $tr, componentData, presetPointData, dataid, imageId;
+            var point, pos;
+            var validate;
+            var itemIndex = 0;
+            /*用Date.Guid()+itemIndex*/
+            var isNotHeGe = false;
+            /*
+            isNotHeGe
+            判断 检查结果=“合格”的表格行数据是否都绑定预设点;
+            诺 检查结果=“合格” 的行没有绑定预设点就返回true ,然后提示不能保存
+            */
+            validate = this.validate();
+            if (!validate.result) {
+                alert(validate.text);
+                return;
+            }
+            /*便利所有表格行数据*/
+            $trs.each(function (index) {
+                itemIndex++;
+                $tr = $(this);
+                dataid = $tr.attr("dataid");
+                try {
+                    imageId = $tr.attr("imageid");
+                } catch (e) {
+                    imageId = "";
+                }
+                itemData = {};
+                pos = Data.cacheData[dataid + "pos"];
+                point = Data.cacheData[dataid + "point"];
+                if ($tr.find(".linkBtn-ready-pos").html() != readyPosState[1] && $tr.find(".select-result").val() == 2) {
+                    isNotHeGe = true;
+                    /*检查结果="合格" 情况下 没有绑定预设点*/
+                }
+                if ($tr.find(".linkBtn-ready-pos").html() == readyPosState[1] && $tr.find(".select-result").val() == 2) /*绑定预设点,就走MQ1(结构少),合格*/ {
+                    itemData.id = Date.guid() + itemIndex.toString();
+                    itemData.projectCode = Url.getParam("projectCode");
+                    itemData.acceptanceType = Url.getParam("type") == "process" ? 1 : 2;
+                    itemData.acceptanceId = null;
+                    itemData.presetPointID = itemData.presetPointID = point.id;
+                    itemDatas2.push(itemData);
+                    return;
+                }
+                if (pos != undefined) {
+                    itemData.componentID = pos.fileUniqueId;
+                    itemData.location = (pos.location);
+                }
+                else {
+                    itemData.componentID = "";
+                    itemData.location = null;
+                }
+                if (point != undefined) {
+                    //presetPointData = JSON.prase(presetPointData);
+                    itemData.presetPointID = point.id;
+                    itemData.axis = (point.axis);
+                }
+                else {
+                    itemData.presetPointID = "";
+                    itemData.axis = null;
+                }
+                itemData.PresetPointCompoentID = "";
+                itemData.dangerImageID = imageId == undefined ? "" : imageId;
+                /*上传图片后的ID*/
+                itemData.id = Date.guid() + itemIndex.toString();
+                itemData.projectId = Url.getParam("projectId");
+                itemData.projectCode = Url.getParam("projectCode");
+                itemData.acceptanceType = Url.getParam("type") == "process" ? 1 : 2;
+                itemData.name = $tr.find(".input_trouble").val();
+                itemData.discoverDate = Date.getLong($tr.find(".input_date1").val());
+                itemData.rectifyDate = Date.getLong($tr.find(".input_date2").val());
+                itemData.rectifyCount = $tr.find(".input_counter").val();
+                itemData.status = $tr.find(".select-state")[0].value;
+                itemData.levelId = $tr.find(".select-level")[0].value;
+                itemData.organizationTypeID = $tr.find(".select-person")[0].value;
+                itemData.ratingCategoryID = $tr.find(".select-type")[0].value;
+                itemData.locationName = $tr.find(".pos").html();
+                itemDatas.push(itemData);
+            });
+            if (isNotHeGe) {
+                alert("检查结果为“合格”的数据，必须绑定预设点！");
+                return;
+            }
+            if (itemDatas2.length > 0) /*MQ1接口,QUALITY-1005 结构少（合格）*/ {
+                Data.formData.msgContent = JSON.stringify({
+                    "messageId": "411a109141d6473c83a86aa0480d6610",
+                    "messageType": "QUALITY-1005",
+                    "message": "是",
+                    "timestamp": (new Date).getTime(),
+                    "code": 0,
+                    "data": itemDatas2
+                });
+                console.log("save-1005", Data.formData);
+                this.sendData();
+            }
+            if (itemDatas.length > 0) /*MQ2接口,QUALITY-1004 结构度（不合格）*/ {
+                Data.formData.msgContent = JSON.stringify({
+                    "messageId": "411a109141d6473c83a86aa0480d6610",
+                    "messageType": "QUALITY-1004",
+                    "message": "是",
+                    "timestamp": (new Date).getTime(),
+                    "code": 0,
+                    "data": itemDatas
+                });
+                console.log("save-1004", itemDatas);
+                this.sendData();
+            }
+            $("#gridContainer").html("");
+        },
+        sendData: function () {
+            console.log(JSON.stringify(Data.formData));
+            $.ajax({
+                url: "/sixD/internal/message", /*MQ 隐患接口*/
+                //url:"http://192.168.79.56/sixD/internal/message",
+                type: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                data: JSON.stringify(Data.formData)
+            }).done(function (data) {
+                if (data.code == 0) {
+                    window.DlgAlert.show();
+                }
+            });
+        },
+        bindYuSheDian: function (curDOM) {
+            var tr = curDOM.parentNode.parentNode, dataid;
+            dataid = tr.getAttribute("dataid");
+            window.viewer.data();
+            window.viewer.data();
+            try {
+                if (curDOM.innerHTML == readyPosState[0]) {
+                    window.viewer.showInModel({ presetId: window.viewerData.presetPoint.id });
+                    $(curDOM).prev().html(window.viewerData.presetPoint.locationName);
+                    //$(curDOM).attr("data",JSON.stringify(window.viewerData.presetPoint));
+                    /*window.viewerData.presetPoint.axis*/
+                    Data.cacheData[dataid + "point"] = window.viewerData.presetPoint;
+                    curDOM.innerHTML = readyPosState[1];
+                }
+                else {
+                    viewer.showInModel({});
+                    $(curDOM).prev().html("");
+                    curDOM.innerHTML = readyPosState[0];
+                }
+            }
+            catch (e) {
+                ;
+            }
+        },
+        bindGoJian: function (curDOM) {/*curDOM is td > span*/
+            var tr = curDOM.parentNode.parentNode, dataid;
+            dataid = tr.getAttribute("dataid");
+            window.viewer.data();
+            window.viewer.data();
+            try {
+                if (curDOM.innerHTML == posState[0]) {
+                    $(curDOM).prev().html(window.viewerData.risk.components.locationName);
+                    //$(curDOM).attr("data",JSON.stringify(window.viewerData.risk));
+                    /*window.viewerData.risk.components.location*/
+                    Data.cacheData[dataid + "pos"] = window.viewerData.risk.components;
+                    curDOM.innerHTML = posState[1];
+                }
+                else {
+                    $(curDOM).prev().html("");
+                    curDOM.innerHTML = posState[0];
+                    $(curDOM).attr("data", "");
+                }
+            }
+            catch (e) {
+                ;
+            }
+        },
+        bindEvent: function () {
+            /*事件入口*/
+            var th = this;
+            this.lineHTML = '<tr dataid="{dataid}"><td class="chk"><input type="checkbox" name="chk" class="checkbox"/><span class="spanBtn uploadBtn">上传图片</span><img src="" style="width:60px;height:60px;" align="middle"/></td>' +
+                '<td>{ready-pos}</td>' +
+                '<td>{select-result}</td>' +
+                '<td><input type="text" name="part2" class="input_trouble"/></td>' +
+                '<td>{pos}</td>' +
+                '<td><input type="" name="" class="input_date1 wicon" /></td>' +
+                '<td><input type="" name="" class="input_date2 wicon" /></td>' +
+                '<td><input type="" name="" class="input_counter"/></td>' +
+                '<td>' +
+                '<select class="select-state">' +
+                '<option value="1">待整改</option>' +
+                '<option value="2">已整改</option>' +
+                '<option value="3">已关闭</option>' +
+                '</select>' +
+                '</td>' +
+                '<td>' +
+                '<select class="select-level">' +
+                '<option value="1">一般</option>' +
+                '<option value="2">较大</option>' +
+                '<option value="3">重大</option>' +
+                '<option value="4">特大</option>' +
+                '</select>' +
+                '</td>' +
+                '<td>' +
+                '<select class="select-person">' +
+                '<option value="1">质检中心</option>' +
+                '<option value="2">第三方</option>' +
+                '<option value="3">项目公司</option>' +
+                '<option value="4">监理单位</option>' +
+                '</select>' +
+                '</td>' +
+                '<td>' +
+                '<select class="select-type">' +
+                '<option value="2">防水工程</option>' +
+                '<option value="3">施工质量</option>' +
+                '<option value="4">安全文明</option>' +
+                '<option value="6">材料设备</option>' +
+                '</select>' +
+                '</td>' +
+                '</tr>';
+            this.selectTypeHTML = '<select class="select-type">' +
+                '<option>工程桩</option>' +
+                '<option>基坑支护</option>' +
+                '<option>地下防水</option>' +
+                '<option>梁柱节点</option>' +
+                '<option>钢结构悬挑构件</option>' +
+                '<option>幕墙</option>' +
+                '<option>外保温</option>' +
+                '<option>采光顶</option>' +
+                '<option>步行街吊顶风口</option>' +
+                '<option>卫生间防水</option>' +
+                '<option>屋面防水</option>' +
+                '<option>屋面虹吸雨排</option>' +
+                '<option>消防泵房</option>' +
+                '<option>给水泵房</option>' +
+                '<option>湿式报警阀室</option>' +
+                '<option>空调机房</option>' +
+                '<option>冷冻机房</option>' +
+                '<option>变配电室</option>' +
+                '<option>发电机房</option>' +
+                '<option>慧云机房</option>' +
+                '<option>电梯机房</option>' +
+                '<option>电梯底坑</option>' +
+                '<option>吊顶</option>' +
+                '<option>地面</option>' +
+                '<option>中庭栏杆</option>' +
+                '<option>竖井</option>' +
+                '</select>';
+            this.selectResultHTML = '<select class="select-result"><option value="1">不合格</option><option value="2">合格</option></select>';
+            this.readyPosHTML = '<span class="ready-pos" data-readypos=""></span><span class="linkBtn-ready-pos">{ready-pos-state}</span>';
+            this.posHTML = '<span class="pos" data-pos=""></span><span class="linkBtn-pos">{pos-state}</span>';
+            $(".chkAll").on("click", function () {
+                if ($(this).prop("checked")) {
+                    $(".checkbox").prop("checked", true);
+                    th.checkAllRow();
+                }
+                else {
+                    $(".checkbox").prop("checked", false);
+                }
+            });
+            $("#btn_add").on("click", function () {
+                //th.lineHTML = th.lineHTML.replace("{select-type}",th.selectTypeHTML);
+                var date = new Date(), dataid = "";
+                dataid = date.getFullYear().toString() +
+                    date.getMonth().toString() +
+                    date.getDate().toString() +
+                    date.getHours().toString() +
+                    date.getMinutes().toString() +
+                    date.getSeconds().toString() +
+                    date.getMilliseconds().toString();
+                th.lineHTML = th.lineHTML.replace("{select-result}", th.selectResultHTML);
+                th.lineHTML = th.lineHTML.replace("{ready-pos}", th.readyPosHTML);
+                th.lineHTML = th.lineHTML.replace("{pos}", th.posHTML);
+                th.lineHTML = th.lineHTML.replace("{ready-pos-state}", readyPosState[0]);
+                th.lineHTML = th.lineHTML.replace("{pos-state}", posState[0]);
+                th.lineHTML = th.lineHTML.replace("{dataid}", dataid);
+                $("#gridContainer").append(th.lineHTML);
+                initDate($("#gridContainer tr:last"));
+                viewer.showInModel({});
+            });
+            $("#gridContainer").on("click", ".checkbox", function () {
+                th.checkRow(this);
+            });
+            $("#btn_delete").on("click", function () {
+                th.deleteRow();
+            });
+            $("#btn_save").on("click", function (e) {
+                th.saveData();
+            });
+            $("#btn_unbind").on("click", function (e) {
+                viewer.showInModel({});
+            });
+            /*绑定预设点*/
+            $("#gridContainer").on("click", ".linkBtn-ready-pos", function () {
+                th.bindYuSheDian(this);
+            });
+            /*绑定构建位置*/
+            $("#gridContainer").on("click", ".linkBtn-pos", function () {
+                th.bindGoJian(this);
+            });
+            /*上传图片*/
+            $("#gridContainer").on("click", ".uploadBtn", function () {
+                window.Data.curTrDOM = this.parentNode.parentNode;
+                window.Dlg.show();
+            });
+            /*查看隐患-列表,转到新页面qualityModify.html*/
+            $("#btn_see").on("click", function () {
+                var href = "/static/dist/qualityFill/qualityModify.html?projectId={projectId}&projectName={projectName}";
+                href = href.replace("{projectId}", Url.getParam("projectId"));
+                href = href.replace("{projectName}", (Url.getParam("projectName")));
+                //location.href = href;
+                window.open(href);
+            });
+            /*合格不合格select 事件*/
+            $("#gridContainer").on("change", ".select-result", function () {
+                var $tr = $(this.parentNode.parentNode);
+                var $input_trouble = $tr.find(".input_trouble");
+                var $linkBtn_pos = $tr.find(".linkBtn-pos");
+                var $pos = $tr.find(".pos");
+                var $input_date1 = $tr.find(".input_date1");
+                var $input_date2 = $tr.find(".input_date2");
+                var $input_counter = $tr.find(".input_counter");
+                var $select_state = $tr.find(".select-state");
+                var $select_level = $tr.find(".select-level");
+                var $select_person = $tr.find(".select-person");
+                var $select_type = $tr.find(".select-type");
+                if (this.value == "1")/*不合格*/ {
+                    $input_trouble.show();
+                    $linkBtn_pos.show();
+                    $pos.show();
+                    $input_date1.show();
+                    $input_date2.show();
+                    $input_counter.show();
+                    $select_state.show();
+                    $select_level.show();
+                    $select_person.show();
+                    $select_type.show();
+                }
+                else /*合格*/ {
+                    $input_trouble.hide();
+                    $linkBtn_pos.hide();
+                    $pos.hide();
+                    $input_date1.hide();
+                    $input_date2.hide();
+                    $input_counter.hide();
+                    $select_state.hide();
+                    $select_level.hide();
+                    $select_person.hide();
+                    $select_type.hide();
+                }
+            });
+            this.initDialogEvent();
+        }
+    };
+    var initOptions = function () {
+        var $tr = $("#gridContainer tr");
+        $tr.find(".linkBtn-ready-pos").html(readyPosState[0]);
+        $tr.find(".linkBtn-pos").html(posState[0]);
+        $("#projectName").html(decodeURI(Url.getParam("projectName")));
+        $("#typeName").html(decodeURI(Url.getParam("typeName")));
+    }
+    var init = function () {
+        initDate($("#gridContainer tr:last"));
+        initDialog();
+        initOptions();
+        initComponent(Url.getParam("projectCode"), Url.getParam("type"));
+        Event.bindEvent();
+    };
+    init();
+
+
+</script>

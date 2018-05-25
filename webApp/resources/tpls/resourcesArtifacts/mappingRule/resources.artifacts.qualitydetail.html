@@ -1,0 +1,10 @@
+<div class="item">
+    <div class="left mgR5">
+        <i class="ruleCheck <%= obj.ruleContain == 1 ? 'all' : (obj.ruleContain == 3 ? 'half' :  '')%>"></i>
+        <%= obj.code %></div> <% if (obj.leaf){%>
+    <div class="right count">(<%= obj.count ?  obj.count  : "0" %>)</div>
+    <%} else {%>
+    <div class="fold"></div>
+    <%}%>
+    <div class="name"><%= obj.name %></div>
+</div>

@@ -1,0 +1,31 @@
+<div class="titles">
+  <h3>详细信息</h3>
+  <span class="close">X</span>
+</div>
+<div  class="contents">
+  <table>
+    <tr class="title">
+      <td></td>
+      <td><%= versionname%></td>
+      <td><%= App.Index.Settings.comparisonType == "base" ? (App.Index.Settings.comparisonName?App.Index.Settings.comparisonName:"比对模型") :"标准模型"%></td>
+    </tr>
+    <!--<tr>-->
+      <!--<td>构件名称</td>-->
+      <!--<td><%= name.split(']')[1]%></td>-->
+      <!--<td><%= name.split(']')[1]%></td>-->
+    <!--</tr>-->
+    <% _.each(data,function(item){%>
+    <% _.each(item.items,function(it){%>
+
+    <tr>
+      <td><%= it.name %></td>
+      <td><%= (it.value||'-')+(item.unit||'') %></td>
+      <td><%= (it.baseValue||'-')+(item.baseUnit||'') %></td>
+    </tr>
+    <% })%>
+    <% })%>
+
+  </table>
+</div>
+
+<div class="close btn">关闭</div>

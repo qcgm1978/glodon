@@ -1,0 +1,3240 @@
+{
+    "code": 0,
+    "message": "success",
+    "data": [
+        {
+            "code": "10",
+            "parentCode": null,
+            "name": "建筑、结构与装饰工程",
+            "isChild": true
+        },
+        {
+            "code": "10.10",
+            "parentCode": "10",
+            "name": "建筑",
+            "isChild": true
+        },
+        {
+            "code": "10.10.10",
+            "parentCode": "10.10",
+            "name": "幕墙",
+            "isChild": true
+        },
+        {
+            "code": "10.10.10.05",
+            "parentCode": "10.10.10",
+            "name": "玻璃幕墙",
+            "isChild": false
+        },
+        {
+            "code": "10.10.10.15",
+            "parentCode": "10.10.10",
+            "name": "金属板幕墙",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20",
+            "parentCode": "10.10",
+            "name": "建筑构件",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.03",
+            "parentCode": "10.10.20",
+            "name": "建筑墙",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.03.03",
+            "parentCode": "10.10.20.03",
+            "name": "内墙",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.03.03.10",
+            "parentCode": "10.10.20.03.03",
+            "name": "内墙墙体",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.03.06",
+            "parentCode": "10.10.20.03",
+            "name": "外墙",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.03.06.10",
+            "parentCode": "10.10.20.03.06",
+            "name": "外墙墙体",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.03.06.20",
+            "parentCode": "10.10.20.03.06",
+            "name": "外墙外饰面",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.03.06.20.10",
+            "parentCode": "10.10.20.03.06.20",
+            "name": "外墙保温层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.03.06.40",
+            "parentCode": "10.10.20.03.06",
+            "name": "外墙防水",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09",
+            "parentCode": "10.10.20",
+            "name": "门",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.09.10",
+            "parentCode": "10.10.20.09",
+            "name": "普通门",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.09.10.10",
+            "parentCode": "10.10.20.09.10",
+            "name": "木门",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.09.10.10.10",
+            "parentCode": "10.10.20.09.10.10",
+            "name": "单开",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.10.10.20",
+            "parentCode": "10.10.20.09.10.10",
+            "name": "双开",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.10.20",
+            "parentCode": "10.10.20.09.10",
+            "name": "玻璃门",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.09.10.20.10",
+            "parentCode": "10.10.20.09.10.20",
+            "name": "双扇",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.10.20.30",
+            "parentCode": "10.10.20.09.10.20",
+            "name": "双扇带双固定亮子",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.20",
+            "parentCode": "10.10.20.09",
+            "name": "防火门",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.09.30",
+            "parentCode": "10.10.20.09",
+            "name": "卷帘",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.09.30.10",
+            "parentCode": "10.10.20.09.30",
+            "name": "防火卷帘",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.09.30.10.10",
+            "parentCode": "10.10.20.09.30.10",
+            "name": "侧装防火卷帘",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.30.20",
+            "parentCode": "10.10.20.09.30",
+            "name": "防盗卷帘",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.09.30.20.10",
+            "parentCode": "10.10.20.09.30.20",
+            "name": "侧装防盗卷帘",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.12",
+            "parentCode": "10.10.20",
+            "name": "窗",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.12.10",
+            "parentCode": "10.10.20.12",
+            "name": "普通窗",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.12.10.10",
+            "parentCode": "10.10.20.12.10",
+            "name": "铝合金窗",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.12.10.10.05",
+            "parentCode": "10.10.20.12.10.10",
+            "name": "铝合金外平开窗",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.12.10.10.05.05",
+            "parentCode": "10.10.20.12.10.10.05",
+            "name": "单扇铝合金外平开窗",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.12.10.10.20",
+            "parentCode": "10.10.20.12.10.10",
+            "name": "铝合金防雨百叶窗",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.12.10.10.20.05",
+            "parentCode": "10.10.20.12.10.10.20",
+            "name": "单樘铝合金防雨百叶窗",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.12.10.20",
+            "parentCode": "10.10.20.12.10",
+            "name": "塑钢窗",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.15",
+            "parentCode": "10.10.20",
+            "name": "屋顶",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.15.03",
+            "parentCode": "10.10.20.15",
+            "name": "平屋面",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.15.03.05",
+            "parentCode": "10.10.20.15.03",
+            "name": "平屋面面层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.15.03.15",
+            "parentCode": "10.10.20.15.03",
+            "name": "平屋面找平层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.15.06",
+            "parentCode": "10.10.20.15",
+            "name": "坡屋面",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.15.06.05",
+            "parentCode": "10.10.20.15.06",
+            "name": "坡屋面面层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.15.06.10",
+            "parentCode": "10.10.20.15.06",
+            "name": "坡屋面保温层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.15.06.15",
+            "parentCode": "10.10.20.15.06",
+            "name": "坡屋面找平层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.15.06.25",
+            "parentCode": "10.10.20.15.06",
+            "name": "坡屋面保护层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.15.06.30",
+            "parentCode": "10.10.20.15.06",
+            "name": "坡屋面防水层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.15.12",
+            "parentCode": "10.10.20.15",
+            "name": "屋顶辅助构件",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.15.12.06",
+            "parentCode": "10.10.20.15.12",
+            "name": "止水带",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.15.12.12",
+            "parentCode": "10.10.20.15.12",
+            "name": "天沟",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.15.15",
+            "parentCode": "10.10.20.15",
+            "name": "屋面构筑物",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.15.15.20",
+            "parentCode": "10.10.20.15.15",
+            "name": "女儿墙",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.18",
+            "parentCode": "10.10.20",
+            "name": "楼地面",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.18.10",
+            "parentCode": "10.10.20.18",
+            "name": "楼地面面层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.18.20",
+            "parentCode": "10.10.20.18",
+            "name": "楼地面找平层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.18.30",
+            "parentCode": "10.10.20.18",
+            "name": "楼地面粘结层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.18.40",
+            "parentCode": "10.10.20.18",
+            "name": "楼地面防水",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.18.50",
+            "parentCode": "10.10.20.18",
+            "name": "楼地面保温层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.24",
+            "parentCode": "10.10.20",
+            "name": "天花板",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.24.10",
+            "parentCode": "10.10.20.24",
+            "name": "天花板面层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.27",
+            "parentCode": "10.10.20",
+            "name": "楼梯",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.27.03",
+            "parentCode": "10.10.20.27",
+            "name": "楼梯构造",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.27.03.03",
+            "parentCode": "10.10.20.27.03",
+            "name": "地面",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.33",
+            "parentCode": "10.10.20",
+            "name": "坡道",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.36",
+            "parentCode": "10.10.20",
+            "name": "台阶",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.42",
+            "parentCode": "10.10.20",
+            "name": "栏杆、扶手、栏板",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.42.05",
+            "parentCode": "10.10.20.42",
+            "name": "栏杆扶手",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.42.05.10",
+            "parentCode": "10.10.20.42.05",
+            "name": "不锈钢扶手带不锈钢栏杆",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.42.10",
+            "parentCode": "10.10.20.42",
+            "name": "扶手",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.42.10.05",
+            "parentCode": "10.10.20.42.10",
+            "name": "靠墙不锈钢扶手",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.48",
+            "parentCode": "10.10.20",
+            "name": "雨蓬",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.48.10",
+            "parentCode": "10.10.20.48",
+            "name": "混凝土雨篷",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.54",
+            "parentCode": "10.10.20",
+            "name": "压顶",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.66",
+            "parentCode": "10.10.20",
+            "name": "防撞板",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.69",
+            "parentCode": "10.10.20",
+            "name": "沟、池",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.84",
+            "parentCode": "10.10.20",
+            "name": "垫层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.96",
+            "parentCode": "10.10.20",
+            "name": "广告位",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.99",
+            "parentCode": "10.10.20",
+            "name": "设备基础",
+            "isChild": false
+        },
+        {
+            "code": "10.10.30",
+            "parentCode": "10.10",
+            "name": "室内装饰",
+            "isChild": true
+        },
+        {
+            "code": "10.10.30.03",
+            "parentCode": "10.10.30",
+            "name": "室内构造",
+            "isChild": true
+        },
+        {
+            "code": "10.10.30.03.06",
+            "parentCode": "10.10.30.03",
+            "name": "地面装饰构造",
+            "isChild": true
+        },
+        {
+            "code": "10.10.30.03.06.03",
+            "parentCode": "10.10.30.03.06",
+            "name": "地面防水",
+            "isChild": false
+        },
+        {
+            "code": "10.10.30.03.06.09",
+            "parentCode": "10.10.30.03.06",
+            "name": "面层",
+            "isChild": false
+        },
+        {
+            "code": "10.10.30.03.06.12",
+            "parentCode": "10.10.30.03.06",
+            "name": "踢脚",
+            "isChild": false
+        },
+        {
+            "code": "10.10.30.03.06.15",
+            "parentCode": "10.10.30.03.06",
+            "name": "其他",
+            "isChild": false
+        },
+        {
+            "code": "10.10.30.03.09",
+            "parentCode": "10.10.30.03",
+            "name": "墙面装饰构造",
+            "isChild": true
+        },
+        {
+            "code": "10.10.30.03.09.06",
+            "parentCode": "10.10.30.03.09",
+            "name": "墙面粉刷",
+            "isChild": false
+        },
+        {
+            "code": "10.10.30.03.09.09",
+            "parentCode": "10.10.30.03.09",
+            "name": "墙面饰面",
+            "isChild": false
+        },
+        {
+            "code": "10.10.30.03.12",
+            "parentCode": "10.10.30.03",
+            "name": "隔墙与隔断构造",
+            "isChild": true
+        },
+        {
+            "code": "10.10.30.03.12.05",
+            "parentCode": "10.10.30.03.12",
+            "name": "隔墙",
+            "isChild": true
+        },
+        {
+            "code": "10.10.30.03.12.05.05",
+            "parentCode": "10.10.30.03.12.05",
+            "name": "玻璃隔断",
+            "isChild": false
+        },
+        {
+            "code": "10.10.30.03.15",
+            "parentCode": "10.10.30.03",
+            "name": "门窗装饰构造",
+            "isChild": true
+        },
+        {
+            "code": "10.10.30.03.15.06",
+            "parentCode": "10.10.30.03.15",
+            "name": "门套",
+            "isChild": false
+        },
+        {
+            "code": "10.10.30.03.21",
+            "parentCode": "10.10.30.03",
+            "name": "顶棚装饰构造",
+            "isChild": false
+        },
+        {
+            "code": "10.10.30.12",
+            "parentCode": "10.10.30",
+            "name": "家具",
+            "isChild": true
+        },
+        {
+            "code": "10.10.30.12.06",
+            "parentCode": "10.10.30.12",
+            "name": "固定家具",
+            "isChild": true
+        },
+        {
+            "code": "10.10.30.12.06.09",
+            "parentCode": "10.10.30.12.06",
+            "name": "影院座椅",
+            "isChild": false
+        },
+        {
+            "code": "10.10.40",
+            "parentCode": "10.10",
+            "name": "车库",
+            "isChild": true
+        },
+        {
+            "code": "10.10.40.10",
+            "parentCode": "10.10.40",
+            "name": "车库地面",
+            "isChild": true
+        },
+        {
+            "code": "10.10.40.10.10",
+            "parentCode": "10.10.40.10",
+            "name": "地面划线",
+            "isChild": true
+        },
+        {
+            "code": "10.10.40.10.10.20",
+            "parentCode": "10.10.40.10.10",
+            "name": "车库车位画线",
+            "isChild": false
+        },
+        {
+            "code": "10.10.40.10.10.35",
+            "parentCode": "10.10.40.10.10",
+            "name": "车库方向箭头",
+            "isChild": true
+        },
+        {
+            "code": "10.10.40.10.10.35.05",
+            "parentCode": "10.10.40.10.10.35",
+            "name": "直行车库方向箭头",
+            "isChild": false
+        },
+        {
+            "code": "10.10.40.10.20",
+            "parentCode": "10.10.40.10",
+            "name": "地面切缝",
+            "isChild": false
+        },
+        {
+            "code": "10.10.40.30",
+            "parentCode": "10.10.40",
+            "name": "车库附件",
+            "isChild": true
+        },
+        {
+            "code": "10.10.40.30.03",
+            "parentCode": "10.10.40.30",
+            "name": "车档",
+            "isChild": false
+        },
+        {
+            "code": "10.10.70",
+            "parentCode": "10.10",
+            "name": "标识",
+            "isChild": true
+        },
+        {
+            "code": "10.10.70.10",
+            "parentCode": "10.10.70",
+            "name": "室内标识",
+            "isChild": false
+        },
+        {
+            "code": "10.10.70.40",
+            "parentCode": "10.10.70",
+            "name": "室外标识",
+            "isChild": true
+        },
+        {
+            "code": "10.10.70.40.05",
+            "parentCode": "10.10.70.40",
+            "name": "室外导向标识",
+            "isChild": false
+        },
+        {
+            "code": "10.20",
+            "parentCode": "10",
+            "name": "结构",
+            "isChild": true
+        },
+        {
+            "code": "10.20.10",
+            "parentCode": "10.20",
+            "name": "地基基础",
+            "isChild": true
+        },
+        {
+            "code": "10.20.10.03",
+            "parentCode": "10.20.10",
+            "name": "基础",
+            "isChild": true
+        },
+        {
+            "code": "10.20.10.03.03",
+            "parentCode": "10.20.10.03",
+            "name": "独立基础",
+            "isChild": false
+        },
+        {
+            "code": "10.20.10.24",
+            "parentCode": "10.20.10",
+            "name": "电梯底坑",
+            "isChild": false
+        },
+        {
+            "code": "10.20.10.27",
+            "parentCode": "10.20.10",
+            "name": "集水坑",
+            "isChild": false
+        },
+        {
+            "code": "10.20.20",
+            "parentCode": "10.20",
+            "name": "混凝土结构",
+            "isChild": true
+        },
+        {
+            "code": "10.20.20.03",
+            "parentCode": "10.20.20",
+            "name": "板",
+            "isChild": false
+        },
+        {
+            "code": "10.20.20.06",
+            "parentCode": "10.20.20",
+            "name": "梁",
+            "isChild": true
+        },
+        {
+            "code": "10.20.20.06.30",
+            "parentCode": "10.20.20.06",
+            "name": "结构梁",
+            "isChild": true
+        },
+        {
+            "code": "10.20.20.06.30.05",
+            "parentCode": "10.20.20.06.30",
+            "name": "矩形梁",
+            "isChild": false
+        },
+        {
+            "code": "10.20.20.06.30.10",
+            "parentCode": "10.20.20.06.30",
+            "name": "矩形变截面梁",
+            "isChild": false
+        },
+        {
+            "code": "10.20.20.09",
+            "parentCode": "10.20.20",
+            "name": "柱",
+            "isChild": true
+        },
+        {
+            "code": "10.20.20.09.05",
+            "parentCode": "10.20.20.09",
+            "name": "混凝土矩形柱",
+            "isChild": false
+        },
+        {
+            "code": "10.20.20.15",
+            "parentCode": "10.20.20",
+            "name": "墙",
+            "isChild": false
+        },
+        {
+            "code": "10.20.20.24",
+            "parentCode": "10.20.20",
+            "name": "后浇带",
+            "isChild": false
+        },
+        {
+            "code": "10.20.30",
+            "parentCode": "10.20",
+            "name": "钢结构",
+            "isChild": true
+        },
+        {
+            "code": "10.20.30.39",
+            "parentCode": "10.20.30",
+            "name": "爬梯",
+            "isChild": false
+        },
+        {
+            "code": "20",
+            "parentCode": null,
+            "name": "机电工程",
+            "isChild": true
+        },
+        {
+            "code": "20.10",
+            "parentCode": "20",
+            "name": "给水排水工程",
+            "isChild": true
+        },
+        {
+            "code": "20.10.10",
+            "parentCode": "20.10",
+            "name": "给水、热水",
+            "isChild": true
+        },
+        {
+            "code": "20.10.10.10",
+            "parentCode": "20.10.10",
+            "name": "给水增压设备",
+            "isChild": true
+        },
+        {
+            "code": "20.10.10.10.10",
+            "parentCode": "20.10.10.10",
+            "name": "给水泵",
+            "isChild": false
+        },
+        {
+            "code": "20.10.10.10.20",
+            "parentCode": "20.10.10.10",
+            "name": "气压罐",
+            "isChild": false
+        },
+        {
+            "code": "20.10.10.20",
+            "parentCode": "20.10.10",
+            "name": "给水箱",
+            "isChild": false
+        },
+        {
+            "code": "20.10.10.30",
+            "parentCode": "20.10.10",
+            "name": "建筑给水处理设备",
+            "isChild": true
+        },
+        {
+            "code": "20.10.10.30.10",
+            "parentCode": "20.10.10.30",
+            "name": "软化水设备",
+            "isChild": false
+        },
+        {
+            "code": "20.10.10.30.40",
+            "parentCode": "20.10.10.30",
+            "name": "消毒设备",
+            "isChild": true
+        },
+        {
+            "code": "20.10.10.30.40.70",
+            "parentCode": "20.10.10.30.40",
+            "name": "紫外线消毒器",
+            "isChild": false
+        },
+        {
+            "code": "20.10.20",
+            "parentCode": "20.10",
+            "name": "建筑排水",
+            "isChild": true
+        },
+        {
+            "code": "20.10.20.10",
+            "parentCode": "20.10.20",
+            "name": "污水提升设备",
+            "isChild": true
+        },
+        {
+            "code": "20.10.20.10.35",
+            "parentCode": "20.10.20.10",
+            "name": "潜污泵",
+            "isChild": false
+        },
+        {
+            "code": "20.10.20.20",
+            "parentCode": "20.10.20",
+            "name": "建筑排水专用设备、部件",
+            "isChild": true
+        },
+        {
+            "code": "20.10.20.20.40",
+            "parentCode": "20.10.20.20",
+            "name": "排水沟",
+            "isChild": true
+        },
+        {
+            "code": "20.10.20.20.40.10",
+            "parentCode": "20.10.20.20.40",
+            "name": "排水篦子",
+            "isChild": false
+        },
+        {
+            "code": "20.10.20.30",
+            "parentCode": "20.10.20",
+            "name": "污水排水构筑物",
+            "isChild": true
+        },
+        {
+            "code": "20.10.20.30.10",
+            "parentCode": "20.10.20.30",
+            "name": "化粪池",
+            "isChild": false
+        },
+        {
+            "code": "20.10.20.30.20",
+            "parentCode": "20.10.20.30",
+            "name": "隔油池",
+            "isChild": false
+        },
+        {
+            "code": "20.10.30",
+            "parentCode": "20.10",
+            "name": "雨水工程",
+            "isChild": true
+        },
+        {
+            "code": "20.10.30.10",
+            "parentCode": "20.10.30",
+            "name": "建筑雨水收集设施",
+            "isChild": true
+        },
+        {
+            "code": "20.10.30.10.10",
+            "parentCode": "20.10.30.10",
+            "name": "雨水斗",
+            "isChild": false
+        },
+        {
+            "code": "20.10.30.10.60",
+            "parentCode": "20.10.30.10",
+            "name": "水簸箕",
+            "isChild": false
+        },
+        {
+            "code": "20.10.40",
+            "parentCode": "20.10",
+            "name": "卫浴装置",
+            "isChild": true
+        },
+        {
+            "code": "20.10.40.10",
+            "parentCode": "20.10.40",
+            "name": "便器",
+            "isChild": false
+        },
+        {
+            "code": "20.10.40.40",
+            "parentCode": "20.10.40",
+            "name": "卫生间家具",
+            "isChild": false
+        },
+        {
+            "code": "20.10.40.50",
+            "parentCode": "20.10.40",
+            "name": "卫浴配件",
+            "isChild": true
+        },
+        {
+            "code": "20.10.40.50.30",
+            "parentCode": "20.10.40.50",
+            "name": "卷纸器",
+            "isChild": false
+        },
+        {
+            "code": "20.10.40.50.40",
+            "parentCode": "20.10.40.50",
+            "name": "干手器",
+            "isChild": false
+        },
+        {
+            "code": "20.20",
+            "parentCode": "20",
+            "name": "采暖工程",
+            "isChild": true
+        },
+        {
+            "code": "20.20.10",
+            "parentCode": "20.20",
+            "name": "热媒输送设备",
+            "isChild": true
+        },
+        {
+            "code": "20.20.10.10",
+            "parentCode": "20.20.10",
+            "name": "补水、定压装置",
+            "isChild": true
+        },
+        {
+            "code": "20.20.10.10.20",
+            "parentCode": "20.20.10.10",
+            "name": "补水泵",
+            "isChild": false
+        },
+        {
+            "code": "20.20.10.20",
+            "parentCode": "20.20.10",
+            "name": "分、集水器",
+            "isChild": false
+        },
+        {
+            "code": "20.30",
+            "parentCode": "20",
+            "name": "通风与空调工程",
+            "isChild": true
+        },
+        {
+            "code": "20.30.10",
+            "parentCode": "20.30",
+            "name": "冷、热源",
+            "isChild": true
+        },
+        {
+            "code": "20.30.10.05",
+            "parentCode": "20.30.10",
+            "name": "锅炉",
+            "isChild": true
+        },
+        {
+            "code": "20.30.10.05.10",
+            "parentCode": "20.30.10.05",
+            "name": "燃油、燃气锅炉",
+            "isChild": false
+        },
+        {
+            "code": "20.30.10.20",
+            "parentCode": "20.30.10",
+            "name": "换热设备",
+            "isChild": true
+        },
+        {
+            "code": "20.30.10.20.10",
+            "parentCode": "20.30.10.20",
+            "name": "板式换热器",
+            "isChild": false
+        },
+        {
+            "code": "20.30.10.25",
+            "parentCode": "20.30.10",
+            "name": "冷水机组",
+            "isChild": true
+        },
+        {
+            "code": "20.30.10.25.10",
+            "parentCode": "20.30.10.25",
+            "name": "电动压缩式冷水机组",
+            "isChild": false
+        },
+        {
+            "code": "20.30.10.30",
+            "parentCode": "20.30.10",
+            "name": "热泵",
+            "isChild": true
+        },
+        {
+            "code": "20.30.10.30.30",
+            "parentCode": "20.30.10.30",
+            "name": "水环热泵",
+            "isChild": false
+        },
+        {
+            "code": "20.30.10.45",
+            "parentCode": "20.30.10",
+            "name": "循环水处理设备",
+            "isChild": true
+        },
+        {
+            "code": "20.30.10.45.20",
+            "parentCode": "20.30.10.45",
+            "name": "软化水箱",
+            "isChild": false
+        },
+        {
+            "code": "20.30.10.50",
+            "parentCode": "20.30.10",
+            "name": "太阳能供暖系统",
+            "isChild": true
+        },
+        {
+            "code": "20.30.10.50.10",
+            "parentCode": "20.30.10.50",
+            "name": "太阳能集热器",
+            "isChild": false
+        },
+        {
+            "code": "20.30.20",
+            "parentCode": "20.30",
+            "name": "冷却水系统",
+            "isChild": true
+        },
+        {
+            "code": "20.30.20.20",
+            "parentCode": "20.30.20",
+            "name": "空气冷却器",
+            "isChild": true
+        },
+        {
+            "code": "20.30.20.20.10",
+            "parentCode": "20.30.20.20",
+            "name": "冷冻水泵",
+            "isChild": false
+        },
+        {
+            "code": "20.30.20.20.20",
+            "parentCode": "20.30.20.20",
+            "name": "冷却水泵",
+            "isChild": false
+        },
+        {
+            "code": "20.30.20.30",
+            "parentCode": "20.30.20",
+            "name": "水处理设备",
+            "isChild": true
+        },
+        {
+            "code": "20.30.20.30.30",
+            "parentCode": "20.30.20.30",
+            "name": "软水器",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30",
+            "parentCode": "20.30",
+            "name": "通风系统",
+            "isChild": true
+        },
+        {
+            "code": "20.30.30.10",
+            "parentCode": "20.30.30",
+            "name": "通风机",
+            "isChild": true
+        },
+        {
+            "code": "20.30.30.10.05",
+            "parentCode": "20.30.30.10",
+            "name": "通风机",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.10.10",
+            "parentCode": "20.30.30.10",
+            "name": "轴流风机",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.10.35",
+            "parentCode": "20.30.30.10",
+            "name": "排烟风机",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.10.40",
+            "parentCode": "20.30.30.10",
+            "name": "加压送风机",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.10.45",
+            "parentCode": "20.30.30.10",
+            "name": "厨房排油烟专用风机",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.10.55",
+            "parentCode": "20.30.30.10",
+            "name": "换气扇",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.10.60",
+            "parentCode": "20.30.30.10",
+            "name": "空气幕",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.20",
+            "parentCode": "20.30.30",
+            "name": "通风管道",
+            "isChild": true
+        },
+        {
+            "code": "20.30.30.20.10",
+            "parentCode": "20.30.30.20",
+            "name": "加压送风系统管道",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.30",
+            "parentCode": "20.30.30",
+            "name": "通风口",
+            "isChild": true
+        },
+        {
+            "code": "20.30.30.30.05",
+            "parentCode": "20.30.30.30",
+            "name": "百叶风口",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.30.10",
+            "parentCode": "20.30.30.30",
+            "name": "散流器",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.30.15",
+            "parentCode": "20.30.30.30",
+            "name": "条形风口",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.30.20",
+            "parentCode": "20.30.30.30",
+            "name": "喷射式送风口",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.30.25",
+            "parentCode": "20.30.30.30",
+            "name": "旋流风口",
+            "isChild": false
+        },
+        {
+            "code": "20.30.30.30.40",
+            "parentCode": "20.30.30.30",
+            "name": "排烟风口",
+            "isChild": true
+        },
+        {
+            "code": "20.30.30.30.40.20",
+            "parentCode": "20.30.30.30.40",
+            "name": "多叶排烟口",
+            "isChild": false
+        },
+        {
+            "code": "20.30.40",
+            "parentCode": "20.30",
+            "name": "空调设备",
+            "isChild": true
+        },
+        {
+            "code": "20.30.40.05",
+            "parentCode": "20.30.40",
+            "name": "空调机组",
+            "isChild": true
+        },
+        {
+            "code": "20.30.40.05.10",
+            "parentCode": "20.30.40.05",
+            "name": "组合式空调机组",
+            "isChild": false
+        },
+        {
+            "code": "20.30.40.05.20",
+            "parentCode": "20.30.40.05",
+            "name": "吊装式空调机组",
+            "isChild": false
+        },
+        {
+            "code": "20.30.40.20",
+            "parentCode": "20.30.40",
+            "name": "多联式空调机",
+            "isChild": true
+        },
+        {
+            "code": "20.30.40.20.10",
+            "parentCode": "20.30.40.20",
+            "name": "变频多联式空调机",
+            "isChild": false
+        },
+        {
+            "code": "20.30.40.30",
+            "parentCode": "20.30.40",
+            "name": "风机盘管",
+            "isChild": true
+        },
+        {
+            "code": "20.30.40.30.10",
+            "parentCode": "20.30.40.30",
+            "name": "卧式风机盘管",
+            "isChild": false
+        },
+        {
+            "code": "20.30.40.30.50",
+            "parentCode": "20.30.40.30",
+            "name": "壁挂式风机盘管",
+            "isChild": false
+        },
+        {
+            "code": "20.30.50",
+            "parentCode": "20.30",
+            "name": "噪声与振动控制",
+            "isChild": true
+        },
+        {
+            "code": "20.30.50.10",
+            "parentCode": "20.30.50",
+            "name": "风系统消声器",
+            "isChild": false
+        },
+        {
+            "code": "20.30.50.10.10",
+            "parentCode": "20.30.50.10",
+            "name": "消声静压箱",
+            "isChild": false
+        },
+        {
+            "code": "20.30.50.10.40",
+            "parentCode": "20.30.50.10",
+            "name": "阻抗复合型消声器",
+            "isChild": false
+        },
+        {
+            "code": "20.40",
+            "parentCode": "20",
+            "name": "电气工程",
+            "isChild": true
+        },
+        {
+            "code": "20.40.10",
+            "parentCode": "20.40",
+            "name": "供配电设备",
+            "isChild": true
+        },
+        {
+            "code": "20.40.10.10",
+            "parentCode": "20.40.10",
+            "name": "变压器",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.20",
+            "parentCode": "20.40.10",
+            "name": "高压配电",
+            "isChild": true
+        },
+        {
+            "code": "20.40.10.20.10",
+            "parentCode": "20.40.10.20",
+            "name": "高压成套柜",
+            "isChild": true
+        },
+        {
+            "code": "20.40.10.20.10.10",
+            "parentCode": "20.40.10.20.10",
+            "name": "进线柜",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.20.10.20",
+            "parentCode": "20.40.10.20.10",
+            "name": "馈线柜",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.20.10.30",
+            "parentCode": "20.40.10.20.10",
+            "name": "联络柜",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.20.10.40",
+            "parentCode": "20.40.10.20.10",
+            "name": "计量柜",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.20.20",
+            "parentCode": "20.40.10.20",
+            "name": "辅助装置",
+            "isChild": true
+        },
+        {
+            "code": "20.40.10.20.20.20",
+            "parentCode": "20.40.10.20.20",
+            "name": "直流电流屏",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.30",
+            "parentCode": "20.40.10",
+            "name": "低压配电",
+            "isChild": true
+        },
+        {
+            "code": "20.40.10.30.10",
+            "parentCode": "20.40.10.30",
+            "name": "低压成套柜",
+            "isChild": true
+        },
+        {
+            "code": "20.40.10.30.10.10",
+            "parentCode": "20.40.10.30.10",
+            "name": "进线柜",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.30.10.20",
+            "parentCode": "20.40.10.30.10",
+            "name": "联络柜",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.30.10.40",
+            "parentCode": "20.40.10.30.10",
+            "name": "馈线柜",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.30.10.50",
+            "parentCode": "20.40.10.30.10",
+            "name": "补偿柜",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.30.20",
+            "parentCode": "20.40.10.30",
+            "name": "低压配电箱",
+            "isChild": true
+        },
+        {
+            "code": "20.40.10.30.20.10",
+            "parentCode": "20.40.10.30.20",
+            "name": "动力配电箱",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.30.20.20",
+            "parentCode": "20.40.10.30.20",
+            "name": "启动控制箱",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.30.20.30",
+            "parentCode": "20.40.10.30.20",
+            "name": "接线箱",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.30.20.40",
+            "parentCode": "20.40.10.30.20",
+            "name": "插接箱",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.40",
+            "parentCode": "20.40.10",
+            "name": "备用电源",
+            "isChild": true
+        },
+        {
+            "code": "20.40.10.40.10",
+            "parentCode": "20.40.10.40",
+            "name": "发电机组",
+            "isChild": true
+        },
+        {
+            "code": "20.40.10.40.10.10",
+            "parentCode": "20.40.10.40.10",
+            "name": "柴油发电机组",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20",
+            "parentCode": "20.40",
+            "name": "照明设备",
+            "isChild": true
+        },
+        {
+            "code": "20.40.20.10",
+            "parentCode": "20.40.20",
+            "name": "点光源",
+            "isChild": true
+        },
+        {
+            "code": "20.40.20.10.10",
+            "parentCode": "20.40.20.10",
+            "name": "LED装饰点灯",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.10.30",
+            "parentCode": "20.40.20.10",
+            "name": "LED像素点灯条",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.20",
+            "parentCode": "20.40.20",
+            "name": "室内照明灯具",
+            "isChild": true
+        },
+        {
+            "code": "20.40.20.20.04",
+            "parentCode": "20.40.20.20",
+            "name": "壁灯",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.20.08",
+            "parentCode": "20.40.20.20",
+            "name": "射灯",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.20.32",
+            "parentCode": "20.40.20.20",
+            "name": "灯带",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.20.36",
+            "parentCode": "20.40.20.20",
+            "name": "双头应急灯",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.20.38",
+            "parentCode": "20.40.20.20",
+            "name": "支架灯",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.20.40",
+            "parentCode": "20.40.20.20",
+            "name": "防水防尘灯",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.20.42",
+            "parentCode": "20.40.20.20",
+            "name": "灯盘",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.20.54",
+            "parentCode": "20.40.20.20",
+            "name": "模块灯",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.20.62",
+            "parentCode": "20.40.20.20",
+            "name": "洗墙灯",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.20.64",
+            "parentCode": "20.40.20.20",
+            "name": "防爆灯",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.30",
+            "parentCode": "20.40.20",
+            "name": "室外照明灯具",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.40",
+            "parentCode": "20.40.20",
+            "name": "照明附件",
+            "isChild": true
+        },
+        {
+            "code": "20.40.20.40.10",
+            "parentCode": "20.40.20.40",
+            "name": "开关",
+            "isChild": true
+        },
+        {
+            "code": "20.40.20.40.10.10",
+            "parentCode": "20.40.20.40.10",
+            "name": "单控开关",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.40.10.20",
+            "parentCode": "20.40.20.40.10",
+            "name": "双控开关",
+            "isChild": false
+        },
+        {
+            "code": "20.40.20.40.20",
+            "parentCode": "20.40.20.40",
+            "name": "插座",
+            "isChild": true
+        },
+        {
+            "code": "20.40.20.40.20.10",
+            "parentCode": "20.40.20.40.20",
+            "name": "普通插座",
+            "isChild": false
+        },
+        {
+            "code": "20.50",
+            "parentCode": "20",
+            "name": "电梯",
+            "isChild": true
+        },
+        {
+            "code": "20.50.20",
+            "parentCode": "20.50",
+            "name": "室外电梯",
+            "isChild": false
+        },
+        {
+            "code": "20.50.70",
+            "parentCode": "20.50",
+            "name": "电梯门",
+            "isChild": true
+        },
+        {
+            "code": "20.50.70.05",
+            "parentCode": "20.50.70",
+            "name": "双开电梯门",
+            "isChild": false
+        },
+        {
+            "code": "20.60",
+            "parentCode": "20",
+            "name": "消防工程",
+            "isChild": true
+        },
+        {
+            "code": "20.60.10",
+            "parentCode": "20.60",
+            "name": "消防水系统",
+            "isChild": true
+        },
+        {
+            "code": "20.60.10.10",
+            "parentCode": "20.60.10",
+            "name": "湿式报警阀",
+            "isChild": false
+        },
+        {
+            "code": "20.60.10.50",
+            "parentCode": "20.60.10",
+            "name": "水流指示器",
+            "isChild": false
+        },
+        {
+            "code": "20.60.10.60",
+            "parentCode": "20.60.10",
+            "name": "过滤器",
+            "isChild": false
+        },
+        {
+            "code": "20.60.20",
+            "parentCode": "20.60",
+            "name": "气体灭火系统",
+            "isChild": true
+        },
+        {
+            "code": "20.60.20.10",
+            "parentCode": "20.60.20",
+            "name": "气体灭火系统",
+            "isChild": true
+        },
+        {
+            "code": "20.60.20.10.10",
+            "parentCode": "20.60.20.10",
+            "name": "灭火装置",
+            "isChild": false
+        },
+        {
+            "code": "20.60.20.10.20",
+            "parentCode": "20.60.20.10",
+            "name": "灭火主机",
+            "isChild": false
+        },
+        {
+            "code": "20.60.20.50",
+            "parentCode": "20.60.20",
+            "name": "放气指示灯",
+            "isChild": false
+        },
+        {
+            "code": "20.60.40",
+            "parentCode": "20.60",
+            "name": "消防设备",
+            "isChild": true
+        },
+        {
+            "code": "20.60.40.10",
+            "parentCode": "20.60.40",
+            "name": "消防水泵接合器",
+            "isChild": false
+        },
+        {
+            "code": "20.60.40.20",
+            "parentCode": "20.60.40",
+            "name": "加压泵",
+            "isChild": false
+        },
+        {
+            "code": "20.60.40.30",
+            "parentCode": "20.60.40",
+            "name": "稳压泵",
+            "isChild": false
+        },
+        {
+            "code": "20.60.40.40",
+            "parentCode": "20.60.40",
+            "name": "压力表",
+            "isChild": false
+        },
+        {
+            "code": "20.60.40.60",
+            "parentCode": "20.60.40",
+            "name": "稳压气压罐",
+            "isChild": false
+        },
+        {
+            "code": "20.60.50",
+            "parentCode": "20.60",
+            "name": "消防器材",
+            "isChild": true
+        },
+        {
+            "code": "20.60.50.05",
+            "parentCode": "20.60.50",
+            "name": "室外消火栓",
+            "isChild": false
+        },
+        {
+            "code": "20.60.50.10",
+            "parentCode": "20.60.50",
+            "name": "消火栓按钮",
+            "isChild": false
+        },
+        {
+            "code": "20.60.50.15",
+            "parentCode": "20.60.50",
+            "name": "室内消火栓",
+            "isChild": false
+        },
+        {
+            "code": "20.60.50.35",
+            "parentCode": "20.60.50",
+            "name": "消防水炮",
+            "isChild": false
+        },
+        {
+            "code": "20.60.50.40",
+            "parentCode": "20.60.50",
+            "name": "喷头",
+            "isChild": false
+        },
+        {
+            "code": "20.60.60",
+            "parentCode": "20.60",
+            "name": "火灾自动报警及消防联动控制系统",
+            "isChild": true
+        },
+        {
+            "code": "20.60.60.10",
+            "parentCode": "20.60.60",
+            "name": "报警联动控制设备",
+            "isChild": true
+        },
+        {
+            "code": "20.60.60.10.05",
+            "parentCode": "20.60.60.10",
+            "name": "楼层火灾显示盘",
+            "isChild": false
+        },
+        {
+            "code": "20.60.60.10.10",
+            "parentCode": "20.60.60.10",
+            "name": "声光报警器",
+            "isChild": false
+        },
+        {
+            "code": "20.60.60.10.20",
+            "parentCode": "20.60.60.10",
+            "name": "紧急报警按钮",
+            "isChild": false
+        },
+        {
+            "code": "20.60.60.10.30",
+            "parentCode": "20.60.60.10",
+            "name": "模块",
+            "isChild": false
+        },
+        {
+            "code": "20.60.60.10.40",
+            "parentCode": "20.60.60.10",
+            "name": "报警模块箱",
+            "isChild": false
+        },
+        {
+            "code": "20.60.60.10.45",
+            "parentCode": "20.60.60.10",
+            "name": "消防端子箱",
+            "isChild": false
+        },
+        {
+            "code": "20.60.60.20",
+            "parentCode": "20.60.60",
+            "name": "消防广播设备",
+            "isChild": true
+        },
+        {
+            "code": "20.60.60.20.20",
+            "parentCode": "20.60.60.20",
+            "name": "消防扬声器",
+            "isChild": false
+        },
+        {
+            "code": "20.60.60.20.50",
+            "parentCode": "20.60.60.20",
+            "name": "消防电话",
+            "isChild": false
+        },
+        {
+            "code": "20.60.60.30",
+            "parentCode": "20.60.60",
+            "name": "消防中心设备",
+            "isChild": true
+        },
+        {
+            "code": "20.60.60.30.20",
+            "parentCode": "20.60.60.30",
+            "name": "联动控制机柜",
+            "isChild": false
+        },
+        {
+            "code": "20.60.60.60",
+            "parentCode": "20.60.60",
+            "name": "监控设备",
+            "isChild": false
+        },
+        {
+            "code": "20.60.60.60.05",
+            "parentCode": "20.60.60.60",
+            "name": "监控系统主机",
+            "isChild": false
+        },
+        {
+            "code": "20.60.60.60.25",
+            "parentCode": "20.60.60.60",
+            "name": "感烟探测器",
+            "isChild": false
+        },
+        {
+            "code": "20.70",
+            "parentCode": "20",
+            "name": "建筑智能化",
+            "isChild": true
+        },
+        {
+            "code": "20.70.10",
+            "parentCode": "20.70",
+            "name": "信息系统设备",
+            "isChild": true
+        },
+        {
+            "code": "20.70.10.05",
+            "parentCode": "20.70.10",
+            "name": "通讯接入设备",
+            "isChild": true
+        },
+        {
+            "code": "20.70.10.05.10",
+            "parentCode": "20.70.10.05",
+            "name": "配线机柜",
+            "isChild": false
+        },
+        {
+            "code": "20.70.10.20",
+            "parentCode": "20.70.10",
+            "name": "综合布线系统",
+            "isChild": true
+        },
+        {
+            "code": "20.70.10.20.05",
+            "parentCode": "20.70.10.20",
+            "name": "数据面板",
+            "isChild": true
+        },
+        {
+            "code": "20.70.10.20.05.10",
+            "parentCode": "20.70.10.20.05",
+            "name": "信息面板",
+            "isChild": false
+        },
+        {
+            "code": "20.70.10.20.05.20",
+            "parentCode": "20.70.10.20.05",
+            "name": "光纤面板",
+            "isChild": false
+        },
+        {
+            "code": "20.70.10.30",
+            "parentCode": "20.70.10",
+            "name": "无线对讲系统",
+            "isChild": true
+        },
+        {
+            "code": "20.70.10.30.40",
+            "parentCode": "20.70.10.30",
+            "name": "通信天线",
+            "isChild": false
+        },
+        {
+            "code": "20.70.10.35",
+            "parentCode": "20.70.10",
+            "name": "有线电视系统",
+            "isChild": true
+        },
+        {
+            "code": "20.70.10.35.25",
+            "parentCode": "20.70.10.35",
+            "name": "集中分配器箱",
+            "isChild": false
+        },
+        {
+            "code": "20.70.10.35.50",
+            "parentCode": "20.70.10.35",
+            "name": "电视信号面板",
+            "isChild": false
+        },
+        {
+            "code": "20.70.10.40",
+            "parentCode": "20.70.10",
+            "name": "扩声设备",
+            "isChild": true
+        },
+        {
+            "code": "20.70.10.40.10",
+            "parentCode": "20.70.10.40",
+            "name": "前置放大器",
+            "isChild": false
+        },
+        {
+            "code": "20.70.10.45",
+            "parentCode": "20.70.10",
+            "name": "背景音乐广播系统",
+            "isChild": true
+        },
+        {
+            "code": "20.70.10.45.20",
+            "parentCode": "20.70.10.45",
+            "name": "扬声器",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20",
+            "parentCode": "20.70",
+            "name": "公共安全系统设备",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.10",
+            "parentCode": "20.70.20",
+            "name": "视频监控系统",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.10.10",
+            "parentCode": "20.70.20.10",
+            "name": "视频矩阵主机及配件",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.10.10.10",
+            "parentCode": "20.70.20.10.10",
+            "name": "视频矩阵主机设备",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.10.20",
+            "parentCode": "20.70.20.10",
+            "name": "操作台",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.10.40",
+            "parentCode": "20.70.20.10",
+            "name": "视频监控设备",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.10.40.10",
+            "parentCode": "20.70.20.10.40",
+            "name": "球型摄像机",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.10.40.50",
+            "parentCode": "20.70.20.10.40",
+            "name": "监视器墙",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.10.50",
+            "parentCode": "20.70.20.10",
+            "name": "视频显示设备",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.10.50.20",
+            "parentCode": "20.70.20.10.50",
+            "name": "拼接处理控制器",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.20",
+            "parentCode": "20.70.20",
+            "name": "入侵报警系统",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.20.10",
+            "parentCode": "20.70.20.20",
+            "name": "入侵探测设备",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.20.10.10",
+            "parentCode": "20.70.20.20.10",
+            "name": "点型探测器",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.20.10.20",
+            "parentCode": "20.70.20.20.10",
+            "name": "感烟探测器",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.20.10.30",
+            "parentCode": "20.70.20.20.10",
+            "name": "红外双鉴入侵探测器",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.20.10.40",
+            "parentCode": "20.70.20.20.10",
+            "name": "可燃气体探测器",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.20.20",
+            "parentCode": "20.70.20.20",
+            "name": "报警信号传输设备",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.20.20.05",
+            "parentCode": "20.70.20.20.20",
+            "name": "报警按钮",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.20.20.40",
+            "parentCode": "20.70.20.20.20",
+            "name": "输入输出模块",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.20.30",
+            "parentCode": "20.70.20.20",
+            "name": "报警中心设备",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.20.30.20",
+            "parentCode": "20.70.20.20.30",
+            "name": "报警键盘",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.30",
+            "parentCode": "20.70.20",
+            "name": "门禁及可视对讲系统",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.30.20",
+            "parentCode": "20.70.20.30",
+            "name": "门禁及可视对讲设备",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.30.20.05",
+            "parentCode": "20.70.20.30.20",
+            "name": "出门按钮",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.30.20.10",
+            "parentCode": "20.70.20.30.20",
+            "name": "电磁锁",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.30.20.55",
+            "parentCode": "20.70.20.30.20",
+            "name": "门禁控制器",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.40",
+            "parentCode": "20.70.20",
+            "name": "电子巡查系统设备",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.40.25",
+            "parentCode": "20.70.20.40",
+            "name": "巡更点",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.50",
+            "parentCode": "20.70.20",
+            "name": "停车场管理系统",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.50.20",
+            "parentCode": "20.70.20.50",
+            "name": "数字式车辆检测器（含地感线圈）",
+            "isChild": true
+        },
+        {
+            "code": "20.70.20.50.40",
+            "parentCode": "20.70.20.50",
+            "name": "读卡器",
+            "isChild": true
+        },
+        {
+            "code": "20.70.30",
+            "parentCode": "20.70",
+            "name": "楼宇自控管理系统",
+            "isChild": true
+        },
+        {
+            "code": "20.70.30.30",
+            "parentCode": "20.70.30",
+            "name": "现场设备",
+            "isChild": true
+        },
+        {
+            "code": "20.70.30.30.10",
+            "parentCode": "20.70.30.30",
+            "name": "现场控制器",
+            "isChild": true
+        },
+        {
+            "code": "20.70.30.30.10.10",
+            "parentCode": "20.70.30.30.10",
+            "name": "DDC控制箱",
+            "isChild": false
+        },
+        {
+            "code": "20.70.30.30.40",
+            "parentCode": "20.70.30.30",
+            "name": "控制开关",
+            "isChild": false
+        },
+        {
+            "code": "20.70.50",
+            "parentCode": "20.70",
+            "name": "UPS电源工程",
+            "isChild": true
+        },
+        {
+            "code": "20.70.50.10",
+            "parentCode": "20.70.50",
+            "name": "UPS电源",
+            "isChild": false
+        },
+        {
+            "code": "20.70.70",
+            "parentCode": "20.70",
+            "name": "LED屏工程",
+            "isChild": true
+        },
+        {
+            "code": "20.70.70.08",
+            "parentCode": "20.70.70",
+            "name": "LED屏显示器",
+            "isChild": false
+        },
+        {
+            "code": "20.80",
+            "parentCode": "20",
+            "name": "通用构配件",
+            "isChild": true
+        },
+        {
+            "code": "20.80.05",
+            "parentCode": "20.80",
+            "name": "管及管件",
+            "isChild": true
+        },
+        {
+            "code": "20.80.05.10",
+            "parentCode": "20.80.05",
+            "name": "管材",
+            "isChild": true
+        },
+        {
+            "code": "20.80.05.10.10",
+            "parentCode": "20.80.05.10",
+            "name": "给排水管",
+            "isChild": true
+        },
+        {
+            "code": "20.80.05.10.10.40",
+            "parentCode": "20.80.05.10.10",
+            "name": "雨水管",
+            "isChild": false
+        },
+        {
+            "code": "20.80.05.20",
+            "parentCode": "20.80.05",
+            "name": "管件",
+            "isChild": true
+        },
+        {
+            "code": "20.80.05.20.10",
+            "parentCode": "20.80.05.20",
+            "name": "喷头",
+            "isChild": false
+        },
+        {
+            "code": "20.80.05.20.12",
+            "parentCode": "20.80.05.20",
+            "name": "防火封堵",
+            "isChild": false
+        },
+        {
+            "code": "20.80.05.20.20",
+            "parentCode": "20.80.05.20",
+            "name": "法兰",
+            "isChild": false
+        },
+        {
+            "code": "20.80.05.20.30",
+            "parentCode": "20.80.05.20",
+            "name": "套管",
+            "isChild": false
+        },
+        {
+            "code": "20.80.05.20.30.10",
+            "parentCode": "20.80.05.20.30",
+            "name": "防水套管",
+            "isChild": false
+        },
+        {
+            "code": "20.80.05.20.30.20",
+            "parentCode": "20.80.05.20.30",
+            "name": "穿墙套管",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10",
+            "parentCode": "20.80",
+            "name": "管道附件",
+            "isChild": true
+        },
+        {
+            "code": "20.80.10.05",
+            "parentCode": "20.80.10",
+            "name": "阀门",
+            "isChild": true
+        },
+        {
+            "code": "20.80.10.05.02",
+            "parentCode": "20.80.10.05",
+            "name": "取水阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.04",
+            "parentCode": "20.80.10.05",
+            "name": "闸阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.06",
+            "parentCode": "20.80.10.05",
+            "name": "蝶阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.08",
+            "parentCode": "20.80.10.05",
+            "name": "截止阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.18",
+            "parentCode": "20.80.10.05",
+            "name": "止回阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.22",
+            "parentCode": "20.80.10.05",
+            "name": "浮球液位阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.30",
+            "parentCode": "20.80.10.05",
+            "name": "减压阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.34",
+            "parentCode": "20.80.10.05",
+            "name": "调节阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.38",
+            "parentCode": "20.80.10.05",
+            "name": "平衡阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.42",
+            "parentCode": "20.80.10.05",
+            "name": "安全阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.52",
+            "parentCode": "20.80.10.05",
+            "name": "水锤消除器",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.54",
+            "parentCode": "20.80.10.05",
+            "name": "信号阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.56",
+            "parentCode": "20.80.10.05",
+            "name": "排气阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.58",
+            "parentCode": "20.80.10.05",
+            "name": "电磁阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.60",
+            "parentCode": "20.80.10.05",
+            "name": "电动阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.72",
+            "parentCode": "20.80.10.05",
+            "name": "两通阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.76",
+            "parentCode": "20.80.10.05",
+            "name": "Y型过滤器",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.05.80",
+            "parentCode": "20.80.10.05",
+            "name": "排烟防火阀",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.15",
+            "parentCode": "20.80.10",
+            "name": "计量、检测仪表",
+            "isChild": true
+        },
+        {
+            "code": "20.80.10.15.05",
+            "parentCode": "20.80.10.15",
+            "name": "水表",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.15.15",
+            "parentCode": "20.80.10.15",
+            "name": "流量计",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.15.20",
+            "parentCode": "20.80.10.15",
+            "name": "压力表",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.15.30",
+            "parentCode": "20.80.10.15",
+            "name": "温度计",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.15.35",
+            "parentCode": "20.80.10.15",
+            "name": "液位仪",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.15.45",
+            "parentCode": "20.80.10.15",
+            "name": "压力开关",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.25",
+            "parentCode": "20.80.10",
+            "name": "地漏",
+            "isChild": false
+        },
+        {
+            "code": "20.80.15",
+            "parentCode": "20.80",
+            "name": "支吊架",
+            "isChild": false
+        },
+        {
+            "code": "20.80.20",
+            "parentCode": "20.80",
+            "name": "管道与设备绝热、防腐、防火",
+            "isChild": true
+        },
+        {
+            "code": "20.80.20.10",
+            "parentCode": "20.80.20",
+            "name": "管道与设备绝热",
+            "isChild": false
+        },
+        {
+            "code": "20.80.25",
+            "parentCode": "20.80",
+            "name": "防雷及接地装置",
+            "isChild": true
+        },
+        {
+            "code": "20.80.25.20",
+            "parentCode": "20.80.25",
+            "name": "防雷接地装置",
+            "isChild": false
+        },
+        {
+            "code": "20.80.30",
+            "parentCode": "20.80",
+            "name": "输配电器材",
+            "isChild": true
+        },
+        {
+            "code": "20.80.30.10",
+            "parentCode": "20.80.30",
+            "name": "电线电缆",
+            "isChild": false
+        },
+        {
+            "code": "20.80.30.20",
+            "parentCode": "20.80.30",
+            "name": "敷设材料",
+            "isChild": true
+        },
+        {
+            "code": "20.80.30.20.10",
+            "parentCode": "20.80.30.20",
+            "name": "母线槽",
+            "isChild": false
+        },
+        {
+            "code": "20.80.30.20.20",
+            "parentCode": "20.80.30.20",
+            "name": "桥架",
+            "isChild": true
+        },
+        {
+            "code": "20.80.30.20.20.10",
+            "parentCode": "20.80.30.20.20",
+            "name": "槽式桥架",
+            "isChild": false
+        },
+        {
+            "code": "20.80.30.20.30",
+            "parentCode": "20.80.30.20",
+            "name": "配管",
+            "isChild": false
+        },
+        {
+            "code": "20.80.30.20.40",
+            "parentCode": "20.80.30.20",
+            "name": "进户套管",
+            "isChild": false
+        },
+        {
+            "code": "20.80.40",
+            "parentCode": "20.80",
+            "name": "检查井",
+            "isChild": false
+        },
+        {
+            "code": "30",
+            "parentCode": null,
+            "name": "市政园林",
+            "isChild": true
+        },
+        {
+            "code": "30.10",
+            "parentCode": "30",
+            "name": "苗木",
+            "isChild": true
+        },
+        {
+            "code": "30.10.10",
+            "parentCode": "30.10",
+            "name": "乔木",
+            "isChild": true
+        },
+        {
+            "code": "30.10.10.10",
+            "parentCode": "30.10.10",
+            "name": "凤尾竹球",
+            "isChild": false
+        },
+        {
+            "code": "30.10.10.20",
+            "parentCode": "30.10.10",
+            "name": "紫玉兰",
+            "isChild": false
+        },
+        {
+            "code": "30.10.20",
+            "parentCode": "30.10",
+            "name": "灌木",
+            "isChild": false
+        },
+        {
+            "code": "30.10.30",
+            "parentCode": "30.10",
+            "name": "地被、藤木、竹",
+            "isChild": false
+        },
+        {
+            "code": "30.10.50",
+            "parentCode": "30.10",
+            "name": "草本植物",
+            "isChild": false
+        },
+        {
+            "code": "30.20",
+            "parentCode": "30",
+            "name": "地面铺装",
+            "isChild": true
+        },
+        {
+            "code": "30.20.10",
+            "parentCode": "30.20",
+            "name": "道路基层",
+            "isChild": true
+        },
+        {
+            "code": "30.20.10.20",
+            "parentCode": "30.20.10",
+            "name": "垫层",
+            "isChild": false
+        },
+        {
+            "code": "30.20.20",
+            "parentCode": "30.20",
+            "name": "道路面层",
+            "isChild": true
+        },
+        {
+            "code": "30.20.20.05",
+            "parentCode": "30.20.20",
+            "name": "砖面层",
+            "isChild": false
+        },
+        {
+            "code": "30.20.20.15",
+            "parentCode": "30.20.20",
+            "name": "石材面层",
+            "isChild": false
+        },
+        {
+            "code": "30.30",
+            "parentCode": "30",
+            "name": "建筑小品",
+            "isChild": true
+        },
+        {
+            "code": "30.30.05",
+            "parentCode": "30.30",
+            "name": "雕塑",
+            "isChild": false
+        },
+        {
+            "code": "30.30.15",
+            "parentCode": "30.30",
+            "name": "座椅",
+            "isChild": false
+        },
+        {
+            "code": "30.30.20",
+            "parentCode": "30.30",
+            "name": "花钵、花箱",
+            "isChild": false
+        },
+        {
+            "code": "30.30.25",
+            "parentCode": "30.30",
+            "name": "垃圾箱",
+            "isChild": false
+        },
+        {
+            "code": "30.30.50",
+            "parentCode": "30.30",
+            "name": "树池",
+            "isChild": false
+        },
+        {
+            "code": "30.30.55",
+            "parentCode": "30.30",
+            "name": "旱喷",
+            "isChild": true
+        },
+        {
+            "code": "30.30.55.40",
+            "parentCode": "30.30.55",
+            "name": "篦子盖板",
+            "isChild": false
+        },
+        {
+            "code": "30.30.85",
+            "parentCode": "30.30",
+            "name": "其他小品",
+            "isChild": false
+        },
+        {
+            "code": "30.40",
+            "parentCode": "30",
+            "name": "景观照明灯具",
+            "isChild": true
+        },
+        {
+            "code": "30.40.05",
+            "parentCode": "30.40",
+            "name": "射灯",
+            "isChild": false
+        },
+        {
+            "code": "30.40.15",
+            "parentCode": "30.40",
+            "name": "灯带",
+            "isChild": false
+        },
+        {
+            "code": "30.40.20",
+            "parentCode": "30.40",
+            "name": "高杆灯",
+            "isChild": false
+        },
+        {
+            "code": "30.40.35",
+            "parentCode": "30.40",
+            "name": "草坪灯",
+            "isChild": false
+        },
+        {
+            "code": "30.40.45",
+            "parentCode": "30.40",
+            "name": "地埋灯",
+            "isChild": false
+        },
+        {
+            "code": "30.40.50",
+            "parentCode": "30.40",
+            "name": "泛光灯",
+            "isChild": false
+        },
+        {
+            "code": "30.40.55",
+            "parentCode": "30.40",
+            "name": "道旗灯",
+            "isChild": false
+        },
+        {
+            "code": "30.40.60",
+            "parentCode": "30.40",
+            "name": "景观灯",
+            "isChild": false
+        },
+        {
+            "code": "30.40.70",
+            "parentCode": "30.40",
+            "name": "台阶灯",
+            "isChild": false
+        },
+        {
+            "code": "30.50",
+            "parentCode": "30",
+            "name": "附属构件",
+            "isChild": false
+        },
+        {
+            "code": "30.50.10",
+            "parentCode": "30.50",
+            "name": "砌体构件",
+            "isChild": true
+        },
+        {
+            "code": "30.50.10.40",
+            "parentCode": "30.50.10",
+            "name": "面层",
+            "isChild": false
+        },
+        {
+            "code": "30.50.20",
+            "parentCode": "30.50",
+            "name": "混凝土构件",
+            "isChild": true
+        },
+        {
+            "code": "30.50.20.10",
+            "parentCode": "30.50.20",
+            "name": "构件本体",
+            "isChild": false
+        },
+        {
+            "code": "-1",
+            "parentCode": null,
+            "name": "其它",
+            "isChild": true
+        },
+        {
+            "code": "10.10.20.42.05.25",
+            "parentCode": "-1",
+            "name": "10.10.20.42.05.25",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.03",
+            "parentCode": "-1",
+            "name": "10.10.20.09.03",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.07",
+            "parentCode": "-1",
+            "name": "10.10.20.07",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.81",
+            "parentCode": "-1",
+            "name": "10.10.20.81",
+            "isChild": false
+        },
+        {
+            "code": "20.50.50",
+            "parentCode": "-1",
+            "name": "20.50.50",
+            "isChild": false
+        },
+        {
+            "code": "20.50.60",
+            "parentCode": "-1",
+            "name": "20.50.60",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.20.10",
+            "parentCode": "-1",
+            "name": "10.10.20.09.20.10",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.20.10.20",
+            "parentCode": "-1",
+            "name": "10.10.20.09.20.10.20",
+            "isChild": false
+        },
+        {
+            "code": "20.50.50",
+            "parentCode": "-1",
+            "name": "20.50.50",
+            "isChild": false
+        },
+        {
+            "code": "20.50.50.10",
+            "parentCode": "-1",
+            "name": "20.50.50.10",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.06",
+            "parentCode": "-1",
+            "name": "10.10.20.09.06",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.20.10",
+            "parentCode": "-1",
+            "name": "10.10.20.09.20.10",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.20.10.10",
+            "parentCode": "-1",
+            "name": "10.10.20.09.20.10.10",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.12.06",
+            "parentCode": "-1",
+            "name": "10.10.20.12.06",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.20.20",
+            "parentCode": "-1",
+            "name": "10.10.20.09.20.20",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.20.20.20",
+            "parentCode": "-1",
+            "name": "10.10.20.09.20.20.20",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.20.20",
+            "parentCode": "-1",
+            "name": "10.10.20.09.20.20",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.20.20.10",
+            "parentCode": "-1",
+            "name": "10.10.20.09.20.20.10",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.20.20",
+            "parentCode": "-1",
+            "name": "10.10.20.09.20.20",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.09.20.20.30",
+            "parentCode": "-1",
+            "name": "10.10.20.09.20.20.30",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.12.10.20.05",
+            "parentCode": "-1",
+            "name": "10.10.20.12.10.20.05",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.12.03",
+            "parentCode": "-1",
+            "name": "10.10.20.12.03",
+            "isChild": false
+        },
+        {
+            "code": "20.80.45",
+            "parentCode": "-1",
+            "name": "20.80.45",
+            "isChild": false
+        },
+        {
+            "code": "20.80.10.15.06",
+            "parentCode": "-1",
+            "name": "20.80.10.15.06",
+            "isChild": false
+        },
+        {
+            "code": "20.80..10.05.08",
+            "parentCode": "-1",
+            "name": "20.80..10.05.08",
+            "isChild": false
+        },
+        {
+            "code": "20.80.80",
+            "parentCode": "-1",
+            "name": "20.80.80",
+            "isChild": false
+        },
+        {
+            "code": "20.80.80.10",
+            "parentCode": "-1",
+            "name": "20.80.80.10",
+            "isChild": false
+        },
+        {
+            "code": "20.80.80.10.05",
+            "parentCode": "-1",
+            "name": "20.80.80.10.05",
+            "isChild": false
+        },
+        {
+            "code": "20.80.80.10.05.54",
+            "parentCode": "-1",
+            "name": "20.80.80.10.05.54",
+            "isChild": false
+        },
+        {
+            "code": "20.80.45",
+            "parentCode": "-1",
+            "name": "20.80.45",
+            "isChild": false
+        },
+        {
+            "code": "20.80.45.10",
+            "parentCode": "-1",
+            "name": "20.80.45.10",
+            "isChild": false
+        },
+        {
+            "code": "20.40.10.30.20.70",
+            "parentCode": "-1",
+            "name": "20.40.10.30.20.70",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.50.20.15",
+            "parentCode": "-1",
+            "name": "20.70.20.50.20.15",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.50.40.30",
+            "parentCode": "-1",
+            "name": "20.70.20.50.40.30",
+            "isChild": false
+        },
+        {
+            "code": "20.70.20.50.40.20",
+            "parentCode": "-1",
+            "name": "20.70.20.50.40.20",
+            "isChild": false
+        },
+        {
+            "code": "20.70.10.45.70",
+            "parentCode": "-1",
+            "name": "20.70.10.45.70",
+            "isChild": false
+        },
+        {
+            "code": "90",
+            "parentCode": "-1",
+            "name": "90",
+            "isChild": false
+        },
+        {
+            "code": "90.30",
+            "parentCode": "-1",
+            "name": "90.30",
+            "isChild": false
+        },
+        {
+            "code": "90.30.28",
+            "parentCode": "-1",
+            "name": "90.30.28",
+            "isChild": false
+        },
+        {
+            "code": "90",
+            "parentCode": "-1",
+            "name": "90",
+            "isChild": false
+        },
+        {
+            "code": "90.20",
+            "parentCode": "-1",
+            "name": "90.20",
+            "isChild": false
+        },
+        {
+            "code": "90.20.20",
+            "parentCode": "-1",
+            "name": "90.20.20",
+            "isChild": false
+        },
+        {
+            "code": "90",
+            "parentCode": "-1",
+            "name": "90",
+            "isChild": false
+        },
+        {
+            "code": "90.20",
+            "parentCode": "-1",
+            "name": "90.20",
+            "isChild": false
+        },
+        {
+            "code": "90.20.50",
+            "parentCode": "-1",
+            "name": "90.20.50",
+            "isChild": false
+        },
+        {
+            "code": "90.20.50.10",
+            "parentCode": "-1",
+            "name": "90.20.50.10",
+            "isChild": false
+        },
+        {
+            "code": "0",
+            "parentCode": "-1",
+            "name": "0",
+            "isChild": false
+        },
+        {
+            "code": "0.10",
+            "parentCode": "-1",
+            "name": "0.10",
+            "isChild": false
+        },
+        {
+            "code": "0.10.30",
+            "parentCode": "-1",
+            "name": "0.10.30",
+            "isChild": false
+        },
+        {
+            "code": "0.10.30.03",
+            "parentCode": "-1",
+            "name": "0.10.30.03",
+            "isChild": false
+        },
+        {
+            "code": "0.10.30.03.09",
+            "parentCode": "-1",
+            "name": "0.10.30.03.09",
+            "isChild": false
+        },
+        {
+            "code": "0.10.30.03.09.09",
+            "parentCode": "-1",
+            "name": "0.10.30.03.09.09",
+            "isChild": false
+        },
+        {
+            "code": "50",
+            "parentCode": "-1",
+            "name": "50",
+            "isChild": false
+        },
+        {
+            "code": "50.20",
+            "parentCode": "-1",
+            "name": "50.20",
+            "isChild": false
+        },
+        {
+            "code": "50.20.20",
+            "parentCode": "-1",
+            "name": "50.20.20",
+            "isChild": false
+        },
+        {
+            "code": "50.20.20.06",
+            "parentCode": "-1",
+            "name": "50.20.20.06",
+            "isChild": false
+        },
+        {
+            "code": "50",
+            "parentCode": "-1",
+            "name": "50",
+            "isChild": false
+        },
+        {
+            "code": "50.20",
+            "parentCode": "-1",
+            "name": "50.20",
+            "isChild": false
+        },
+        {
+            "code": "50.20.20",
+            "parentCode": "-1",
+            "name": "50.20.20",
+            "isChild": false
+        },
+        {
+            "code": "50.20.20.16",
+            "parentCode": "-1",
+            "name": "50.20.20.16",
+            "isChild": false
+        },
+        {
+            "code": "50",
+            "parentCode": "-1",
+            "name": "50",
+            "isChild": false
+        },
+        {
+            "code": "50.20",
+            "parentCode": "-1",
+            "name": "50.20",
+            "isChild": false
+        },
+        {
+            "code": "50.20.20",
+            "parentCode": "-1",
+            "name": "50.20.20",
+            "isChild": false
+        },
+        {
+            "code": "50.20.20.92",
+            "parentCode": "-1",
+            "name": "50.20.20.92",
+            "isChild": false
+        },
+        {
+            "code": "20.10.40.15",
+            "parentCode": "-1",
+            "name": "20.10.40.15",
+            "isChild": false
+        },
+        {
+            "code": "20.10.40.35",
+            "parentCode": "-1",
+            "name": "20.10.40.35",
+            "isChild": false
+        },
+        {
+            "code": "10.10.20.66.03",
+            "parentCode": "-1",
+            "name": "10.10.20.66.03",
+            "isChild": false
+        },
+        {
+            "code": "80",
+            "parentCode": "-1",
+            "name": "80",
+            "isChild": false
+        },
+        {
+            "code": "80.25",
+            "parentCode": "-1",
+            "name": "80.25",
+            "isChild": false
+        },
+        {
+            "code": "80.25.25",
+            "parentCode": "-1",
+            "name": "80.25.25",
+            "isChild": false
+        },
+        {
+            "code": "80.25.25.05",
+            "parentCode": "-1",
+            "name": "80.25.25.05",
+            "isChild": false
+        },
+        {
+            "code": "70",
+            "parentCode": "-1",
+            "name": "70",
+            "isChild": false
+        },
+        {
+            "code": "70.60",
+            "parentCode": "-1",
+            "name": "70.60",
+            "isChild": false
+        },
+        {
+            "code": "70.60.30",
+            "parentCode": "-1",
+            "name": "70.60.30",
+            "isChild": false
+        },
+        {
+            "code": "70.60.30.25",
+            "parentCode": "-1",
+            "name": "70.60.30.25",
+            "isChild": false
+        },
+        {
+            "code": "70",
+            "parentCode": "-1",
+            "name": "70",
+            "isChild": false
+        },
+        {
+            "code": "70.60",
+            "parentCode": "-1",
+            "name": "70.60",
+            "isChild": false
+        },
+        {
+            "code": "70.60.10",
+            "parentCode": "-1",
+            "name": "70.60.10",
+            "isChild": false
+        },
+        {
+            "code": "70",
+            "parentCode": "-1",
+            "name": "70",
+            "isChild": false
+        },
+        {
+            "code": "70.60",
+            "parentCode": "-1",
+            "name": "70.60",
+            "isChild": false
+        },
+        {
+            "code": "70.60.30",
+            "parentCode": "-1",
+            "name": "70.60.30",
+            "isChild": false
+        },
+        {
+            "code": "70.60.30.20",
+            "parentCode": "-1",
+            "name": "70.60.30.20",
+            "isChild": false
+        },
+        {
+            "code": "80",
+            "parentCode": "-1",
+            "name": "80",
+            "isChild": false
+        },
+        {
+            "code": "80.15",
+            "parentCode": "-1",
+            "name": "80.15",
+            "isChild": false
+        },
+        {
+            "code": "80.15.10",
+            "parentCode": "-1",
+            "name": "80.15.10",
+            "isChild": false
+        },
+        {
+            "code": "80.15.10.05",
+            "parentCode": "-1",
+            "name": "80.15.10.05",
+            "isChild": false
+        }
+    ]
+}

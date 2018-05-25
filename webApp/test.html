@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="libs/jquery/jquery-1.12.0.min.js"></script>
+    <script src="http://cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="//sso4pub.wanda-dev.cn/Scripts/common.js" type="text/javascript"></script>
+    <style>
+
+        ul,li{
+            list-style: none;
+            padding:0;
+            margin: 0;
+        }
+
+        li{
+            height: 40px;
+            line-height: 40px;
+            padding-left: 10px;
+            border-bottom: 1px solid #cccccc;
+        }
+
+        li:hover{
+            cursor: pointer;
+            background: #666666;
+            color:#cccccc;
+        }
+
+        .typelist{
+            float: left;
+            height: 100%;
+            width: 200px;
+            border:1px solid #666666;
+        }
+
+        .formLabel{
+            float: left;
+            height: 100%;
+            width: 600px;
+            border:1px solid #666666;
+            margin-left: 20px;
+            padding: 20px;
+        }
+        .newLabel{
+            color: #0000f6;
+            font-size: 12px;
+            margin-left: 20px;
+        }
+
+        fieldset{
+            padding: 20px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <ul class="typelist">
+        <li>工程桩</li>
+        <li>梁柱结构</li>
+        <li>地下防水</li>
+        <li>...</li>
+    </ul>
+    <div class="formLabel">
+        <fieldset>
+            <legend><label>
+                <span-i data-i18n="data.drawing-model.Discipline"><%= App.Local.data['drawing-model'].Discipline || "专业" %></span-i><a href="#" class="newLabel">[新增]</a></label></legend>
+            <div>
+                <select name="test">
+                    <option value="">请选择专业</option>
+                    <option value="ST">建筑</option>
+                    <option value="AR">结构</option>
+                    <option value="...">...</option>
+                </select>
+                <select>
+                    <option value="">请选择条件</option>
+                    <option value="saab">包含</option>
+                    <option value="opel">不包含</option>
+                    <option value="opel">只等于</option>
+                </select>
+                <input type="text" placeholder="请输入文件规则...">
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><label><%= App.Local.data['drawing-model'].Floor || "楼层" %></label></legend>
+            <div>
+                <div>
+                    <select>
+                        <option value="">请选择条件</option>
+                        <option value="saab">大于</option>
+                        <option value="opel">等于</option>
+                        <option value="opel">小于</option>
+                        <option value="opel">小于等于</option>
+                        <option value="opel">大于等于</option>
+                    </select>
+                    <input type="text" placeholder="请输入楼层规则...">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend><label data-i18n="data.drawing-model.CCe">分类编码</label></legend>
+            <div>
+                <select>
+                    <option value="">请选择条件</option>
+                    <option value="saab">显示</option>
+                    <option value="opel">隐藏</option>
+                </select>
+                <input type="text" placeholder="请输入文件编码规则...">
+            </div>
+        </fieldset>
+    </div>
+</div>
+
+</body>
+</html>

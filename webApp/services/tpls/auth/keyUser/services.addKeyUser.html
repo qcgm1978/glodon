@@ -1,0 +1,28 @@
+<span class="windowClose"></span>
+<h1 class="maintitle">新增关键用户</h1>
+<div class="winBody">
+  <div class="windowSubmit confirm">确定</div>
+
+  <div class="partition">
+    <a data-index="1" class="<%= App.Services.KeyUser.mode==1?'active':'' %>"><span><i></i></span>选择指定项目</a>
+    <a data-index="2" class="<%= App.Services.KeyUser.mode==2?'active':'' %>"><span><i></i></span>选择指定分区</a>
+    <a data-index="3" class="<%= App.Services.KeyUser.mode==3?'active':'' %>"><span><i></i></span>选择所有项目</a>
+  </div>
+  <div class="keyU pdX20">
+
+      <div>
+        <div class="search"><input type="text"placeholder="请输入要搜索的成员"><b class="closeicon"></b><span><i></i></span></div>
+        <p class="title none">请选择成员</p>
+        <ul class="leftWindow">
+
+        </ul>
+      </div>
+      <a id="select"><i>></i>选择</a>
+      <div>
+        <p class="righttitle title">已选成员 ( 0个 )</p>
+        <ul class="rightWindow">
+          <div></div>
+        </ul>
+      </div>
+  </div>
+</div>

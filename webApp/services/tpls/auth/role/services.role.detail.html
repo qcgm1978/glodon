@@ -1,0 +1,19 @@
+     <div class="roleEdit">
+        <span  class="explorer"><%= App.Local.data['drawing-model'].Check || '查看' %></span>
+        <% if (obj.editable) {%>
+        <span  class="modify">修改</span>
+        <span  class="delete"><%= App.Local.data['drawing-model'].Delete || '删除' %></span>
+        <% } %>
+    </div>
+
+<div class="sele" id="<%= obj.roleId %>">
+    <div class="left">
+            <span class="rohead"></span>
+            <span><%= name %></span>
+    </div>
+    <div class="fun">
+        <% if (obj.functions ) { for( var i = 0 ; i < obj.functions.length ; i++) {%>
+        <span class="<%= obj.functions[i].id==1 ?  'adm' : '' %>" title="<%= obj.functions[i].name %>"><%= obj.functions[i].name %></span>
+        <% } } else{ %><%= App.Local.data['drawing-model'].Ndd1 || '暂无数据' %><%}%>
+    </div>
+</div>

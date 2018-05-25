@@ -1,0 +1,16 @@
+<div>
+   业务名称
+</div> 
+<input maxlength="20" class="txtCategoryTitle txtInput" value="<%= obj.name ? obj.name:'' %>" type="text" />
+
+<div>
+   业务描述
+</div> 
+<textarea maxlength="64"   class="txtCategoryDesc txtInput"><%= obj.desc ? obj.desc:'' %></textarea>
+
+<%if(obj.isEdit){%>
+<div>
+   业务代码
+</div> 
+<input class="txtCategoryCode txtInput disabled" readonly="true" value="<%= obj.code ? obj.code:'' %>" type="text" />
+<%}%>

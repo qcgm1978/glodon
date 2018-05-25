@@ -1,0 +1,51 @@
+<div class="flowModalDialog">
+    <div class="flowModalHeader">
+        <span class="title ellipsis" title="<%=name%>"><%=name%></span>
+        <i class="modelicon m-close dialogClose"></i>
+    </div>
+    <div class="flowModalBody">
+        <table>
+            <tr>
+                <td class="title rows" rowspan="2">负责人</td>
+                <td class="title cols">主责单位</td>
+                <td class="title cols">配合单位</td>
+                <td class="title cols">接收单位</td>
+            </tr>
+            <tr>
+                <td class="content cols"><%=mainOrg%></td>
+                <td class="content cols"><%=subOrg%></td>
+                <td class="content cols"><%=receiveOrg%></td>
+            </tr>
+            <tr>
+                <td class="title rows" rowspan="2">时间</td>
+                <td class="title cols">开始</td>
+                <td class="title cols">周期</td>
+                <td class="title cols">结束</td>
+            </tr>
+            <tr>
+                <td class="content cols"><%=beginTime%></td>
+                <td class="content cols"><%=period%></td>
+                <td class="content cols"><%=endTime%></td>
+            </tr>
+            <tr>
+                <td class="title rows">工作成果</td>
+                <td colspan="3" class="content"><%=result%></td>
+            </tr>
+            <tr>
+                <td class="title rows">完成标准</td>
+                <td colspan="3" class="content"><%=standard%></td>
+            </tr>
+            <tr>
+                <td class="title rows">操作细则</td>
+                <td colspan="3" class="content"><%=deatilRule%></td>
+            </tr>
+        </table>
+    </div>
+    <div class="flowModalBbar">
+        <% _.each(operation.reverse(),function(item){ %>
+        <a class="flowModalBtn" target="_blank"
+           href="<%=item.buttonName=='下载'?'static/dist/app/oPage/download/'+ item.url:item.url%>"
+           title="<%=item.buttonName%>" data-id="<%=id%>"><%=item.buttonName%></a>
+        <% }) %>
+    </div>
+</div>

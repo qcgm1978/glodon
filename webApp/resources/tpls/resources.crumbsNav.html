@@ -1,0 +1,50 @@
+<div class="breadcrumbNav">
+    <span class="projectText"><a href="#resources"><%= App.Local.data['source-model']['b-r'] || '基础资源' %></a></span>
+    <span class="breadItem project relative"> 
+        <i class="icon-angle-right"></i> 
+        <% var obj=App.ResourcesNav.getNameByType(); %>
+        <span class="breadItemText"> <a href="<%=obj.href%>" class="text"><%= obj.name %></a> </span>
+        <div class="projectList">
+            <div class="loading"><%= App.Local.data['system']['l-g'] || '正在加载，请稍候……' %></div>
+            <div class="listContent"></div>
+        </div>
+    </span>
+    <span class="breadItem projectVersion resourcesList relative <%= App.ResourceModel.Settings.CurrentVersion.projectId ? '':'myHidden' %>"> 
+        <i class="icon-angle-right"></i> 
+        <span class="breadItemText">
+            <%if(App.ResourceModel.Settings.type=='famLibs'){%>
+                <span class="text textFlow" title="<%=App.ResourceModel.Settings.CurrentVersion.projectName%>"><%=App.ResourceModel.Settings.CurrentVersion.projectName%></span>
+            <%}else{%>
+                <span class="text textFlow" title="<%=App.ResourceModel.Settings.CurrentVersion.projectName%>"><%=App.ResourceModel.Settings.CurrentVersion.projectName%></span>
+            <%}%>
+        </span>
+        <%if(App.ResourceModel.Settings.type=='famLibs'){%>
+            <span class="text textFlow" title="<%= App.Comm.modelStatus[App.ResourceModel.Settings.CurrentVersion.status] %>">
+                (<%= App.Comm.modelStatus[App.ResourceModel.Settings.CurrentVersion.status] %>)
+            </span>
+        <%}%>
+        <i class="myIcon-slanting-right"></i>
+        <div class="projectVersionList">
+            <div class="listResource"></div>
+        </div>
+    </span>
+    <span class="breadItem projectVersion standardLibsVersion relative <%= App.ResourceModel.Settings.CurrentVersion.id &&App.ResourceModel.Settings.type!='famLibs'  ? '':'myHidden' %>"> 
+        <i class="icon-angle-right"></i> 
+        <span class="breadItemText"> 
+            <span class="text textFlow" title="<%=App.ResourceModel.Settings.CurrentVersion.name%>"><%=App.ResourceModel.Settings.CurrentVersion.name%></span>
+            <span class="text">( <%= App.Comm.modelStatus[App.ResourceModel.Settings.CurrentVersion.status]%>) </span>
+            <i class="myIcon-slanting-right"></i>
+        </span>
+        <div class="projectVersionList">
+            <div class="listContent"></div>
+        </div>
+    </span>
+    <span class="fileNav <%=App.ResourceModel.Settings.type=='famLibs'||App.ResourceModel.Settings.type==''?'myHidden':'' %>">
+        <span  data-type="file" class="file selected commSpan">
+            <%= App.Local.data['drawing-model'].Document || '文档' %>
+        </span>
+        <span  data-type="model" class="model commSpan" style="border-radius: 0 3px 3px 0 !important;" >
+            <%= App.Local.data['drawing-model'].Model || '模型' %>
+        </span>
+    </span>
+</div>

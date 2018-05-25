@@ -1,0 +1,27 @@
+{
+  "messageId": "c84ddde53a3a4b84ad14e5cabcbe8c3b",
+  "messageType": null,
+  "timestamp": 1472807291925,
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "parentname": "集团领导",
+      "name": "王健林",
+      "id": "403850",
+      "type": "1"
+    },
+    {
+      "parentname": "集团领导",
+      "name": "王宇男",
+      "id": "403983",
+      "type": "1"
+    },
+    {
+      "parentname": "公司领导",
+      "name": "王志彬",
+      "id": "614815",
+      "type": "1"
+    }
+  ]
+}

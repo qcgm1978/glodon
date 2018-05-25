@@ -1,0 +1,64 @@
+{
+	"code": 0,
+	"message": "success",
+	"data": [{
+		"code": "A104",
+		"name": "混凝土工程",
+		"totalQuantity": null,
+		"unit": null,
+		"price": null,
+		"children": [{
+			"code": "A10421082",
+			"name": "C30砼有梁板、无梁板、平板",
+			"quantity": 700,
+			"unit": "m³",
+			"price": 9900,
+			"children": [{
+				"code": "A10421082",
+				"name": "C30砼有梁板、无梁板、平板",
+				"quantity": 700,
+				"unit": "m³",
+				"price": 9900,
+				"children": [{
+					"code": "A10421082",
+					"name": "C30砼有梁板、无梁板、平板",
+					"quantity": 700,
+					"unit": "m³",
+					"price": 9900,
+					"children": null
+				},
+				{
+					"code": "A10421082",
+					"name": "C30砼有梁板、无梁板、平板",
+					"quantity": 700,
+					"unit": "m³",
+					"price": 9900,
+					"children": null
+				},{
+					"code": "A10421082",
+					"name": "C30砼有梁板、无梁板、平板",
+					"quantity": 700,
+					"unit": "m³",
+					"price": 9900,
+					"children": null
+				},{
+					"code": "A10421082",
+					"name": "C30砼有梁板、无梁板、平板",
+					"quantity": 700,
+					"unit": "m³",
+					"price": 9900,
+					"children": null
+				},{
+					"code": "A10421082",
+					"name": "C30砼有梁板、无梁板、平板",
+					"quantity": 700,
+					"unit": "m³",
+					"price": 9900,
+					"children": null
+				}
+
+				]
+			}]
+		}]
+	}]
+}

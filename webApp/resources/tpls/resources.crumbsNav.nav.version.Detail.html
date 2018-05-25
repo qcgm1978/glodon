@@ -1,0 +1,7 @@
+ 
+<% var lists=obj.data,item,count=lists.length; %>
+
+<%for(var i=0;i<count;i++){%>
+	<% item=lists[i];%> 
+		<a class="itemA" title="<%=item.name%>" href="/#resources/<%=App.ResourceModel.Settings.type=='famLibs'?'famLibs':'standardLibs'%>/<%=item.projectId%>/<%=item.id%>"> <%=item.name%> </a>  
+<%}%>

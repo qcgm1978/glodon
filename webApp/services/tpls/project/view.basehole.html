@@ -1,0 +1,72 @@
+<dt>
+	<%= pitName || '新建基坑' %><span class="accordionDatail <% if(id) { %>accordOpen<% } %>">详情<i></i></span>
+</dt>
+<dd style='display:<% if(id) { %>none<% } %>'>
+	<form>
+		<div>
+			<div class="formColumn">
+				<label>基坑名称 : </label><input type="text" name="pitName"  value="<%= pitName %>" class="txtInput" />
+			</div>
+			<div class="formColumn"><label>基坑深度(m):</label><input type="number" name="pitDepth"  value="<%= pitDepth %>" class="txtInput floatInput" /></div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>基坑等级:</label>
+				<div class="myDropDown baseholeLevel" name='pitLevel'>
+					<span class="myDropText">  <span class="text"><%= pitLevel||'一级' %></span> <i class="myDropArrorw"></i> </span>
+					<ul class="myDropList" style="display: none;">
+						<li class="myItem">一级</li>
+						<li class="myItem">二级</li>
+					</ul>
+				</div>
+			</div>
+			<div class="formColumn"><label>基坑等级说明:</label><input type="text" name="pitLevelRemark" value="<%= pitLevelRemark %>" class="txtInput"  placeholder="<%= App.Local.data['drawing-model'].Describe || '请输入描述' %>" /></div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>支护桩检测百分比(%):</label><input type="number" name="soldierPilePercentage"  value="<%= Number(soldierPilePercentage)*100 %>" class="txtInput rateInput" />
+			</div>
+			<div class="formColumn"><label>锚素检测百分比(%):</label><input type="number" name="anchorCablePercentage"  value="<%= Number(anchorCablePercentage)*100 %>" class="txtInput  rateInput" /></div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>土钉墙检测百分比(%):</label><input type="number" name="soilNailWallPercentage"  value="<%= Number(soilnailwallPercentage)*100 %>" class="txtInput rateInput" />
+			</div>
+			<div class="formColumn">
+				<label>是否需要支护:</label>
+				<div class="myDropDown isSupport" name='isHaveBracingType'>
+					<span class="myDropText">  <span class="text"><%= isHaveBracingType||'否' %></span> <i class="myDropArrorw"></i> </span>
+					<ul class="myDropList" style="display: none;">
+						<li class="myItem">是</li>
+						<li class="myItem">否</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>是否锚杆土钉:</label>
+				<div class="myDropDown isAnchor" name='isAnchorrodSoilnail'>
+					<span class="myDropText">  <span class="text"><%= isAnchorrodSoilnail||'否' %></span> <i class="myDropArrorw"></i> </span>
+					<ul class="myDropList" style="display: none;">
+						<li class="myItem">是</li>
+						<li class="myItem">否</li>
+					</ul>
+				</div>
+			</div>
+			<div class="formColumn"></div>
+		</div>
+		<div>
+			<div class="formColumn" style="padding-left: 120px;">
+				<% if(id) {%>
+					<input type="button" class="myBtn myBtn-primary update"  value="<%= App.Local.data['drawing-model'].Save || '保存' %>"/>
+					<input type="button" class="myBtn myBtn-default delete"  value="<%= App.Local.data['drawing-model'].Delete || '删除' %>"/>
+				<% }else{ %>
+					<input type="button" class="myBtn myBtn-primary save"  value="<%= App.Local.data['drawing-model'].Save || '保存' %>"/>
+					<input type="button" class="myBtn myBtn-default cancel"  value="取消"/>
+				<% } %>
+			</div>
+			<div class="formColumn"></div>
+		</div>
+	</form>
+</dd>

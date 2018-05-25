@@ -1,0 +1,20 @@
+// 20160505203127
+// http://bim.wanda-dev.cn/sixD/1/viewPoint/824884282114304/comment?projectId=1&viewPointId=824884282114304
+
+{
+  "messageId": null,
+  "messageType": null,
+  "timestamp": 1462451504650,
+  "code": 0,
+  "message": "success",
+  "data": {
+    "viewPointId": 824884282114304,
+    "comments": [
+      "{\"type\":\"rect\",\"startX\":261,\"startY\":181,\"endX\":659,\"endY\":441}",
+      "{\"type\":\"rect\",\"startX\":494,\"startY\":232,\"endX\":1003,\"endY\":463}",
+      "{\"type\":\"ellipse\",\"startX\":403,\"startY\":286,\"endX\":767,\"endY\":619}",
+      "{\"type\":\"arrow\",\"startX\":728,\"startY\":702,\"endX\":627,\"endY\":413}"
+      "{\"type\":\"text\",\"startX\":728,\"startY\":702,\"endX\":627,\"endY\":413}"
+    ]
+  }
+}

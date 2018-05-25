@@ -1,0 +1,163 @@
+.projectHeader { height: 37px; background-color: #f5f5f5; border-bottom: 1px #ccc solid; position: relative; z-index: 999; }
+#projectContainer { height: 100%; margin-top: -37px; padding-top: 37px; position: relative;
+	.leftNav { float: left; width: 238px; border: 1px #ccc solid; position: absolute; top: 36px; bottom: 0px; background-color: #fff;
+		.leftNavContent { height: 100%; }
+		.projectNavContentBox { margin-top: 1px; position: absolute; top: 40px; width: 100%; bottom: 0px;
+			.projectModelNavContent { display: none; }
+		}
+		.projectNav .item { cursor: default; }
+		.projectNav .item:hover { border-color: #ddd; color: #666; }
+		.slideBar { display: block; }
+		.dragSize { display: block; }
+	}
+	.attrPlanBox, .attrCostBox, .attrQualityBox,.attrDwgBox { display: none; }
+	.rightProperty { width: 398px; border: 1px #ddd solid; position: fixed; right: 0px; top: 86px; bottom: 0px; background-color: #fff; z-index: 600;
+		.rightPropertyContentBox { height: 100%; position: relative;
+			.rightPropertyContent { height: 100%;
+				.designPropetyBox { height: 100%;
+					.projectPropetyContainer { height: 100%; margin-top: -40px; padding-top: 40px; }
+					.designChange{height:100%;overflow-x:hidden;overflow-y:auto;}
+				}
+			}
+			.slideBar { right: inherit; display: block; left: -15px; top: 40px; }
+			.dragSize { left: -5px; right: inherit; display: block; }
+		}
+		.designProperties { height: 100%; overflow: auto;
+			.nullTip { background: url(/projects/images/attrSel.png) no-repeat 50% 100%; padding-top: 200px; height: 50px; line-height: 50px; color: #ccc; font-size: 16px; text-align: center; }
+		}
+		.modle { .modleShowHide { transition: all .5s; background: url(/comm/images/commIcon.png) no-repeat 0px -256px; float: right; margin-right: 12px; margin-top: 6px; height: 14px; width: 14px; cursor: pointer;
+				&.down { transform: rotate(180deg); -ms-transform: rotate(180deg); -moz-transform: rotate(180deg); -webkit-transform: rotate(180deg); -o-transform: rotate(180deg); margin-right:14px}
+			}
+			.modleName { font-weight: bold; height: 24px; line-height: 24px; padding-left: 12px;
+				.modleNameText { vertical-align: top; width: 95%; }
+			}
+			.modleList { background-color: #eee; border-top: 1px #ccc solid;
+				.modleItem { border-bottom: 1px #ccc solid;
+					.modleName { width: 25%; display: inline-block; box-sizing: border-box; padding-left: 12px; border-right: 1px #ccc solid; }
+					.modleVal { display: inline-block; width: 72%; box-sizing: border-box; padding-left: 12px; margin-left: -3px; }
+					.modelLink { display: inline-block; padding-left: 12px; color: #3F8CDF; height: 24px; line-height: 24px; }
+				}
+			}
+		}
+	}
+	.projectCotent { position: relative; height: 100%;
+		.fileContainer { padding: 10px; height: 100%; box-sizing: border-box;
+			.fileContainerScroll { position: absolute; top: 75px; bottom: 0px; left: 10px; right: 10px; }
+			.modelContainer { height: 500px; position: relative; }
+		}
+		.modelContainer { height: 100%; display: none;
+			.modelContainerScroll { height: 100%;
+				.modelContainerContent { height: 100%; }
+			}
+			.move { height: 100%; }
+		}
+	}
+}
+.rightTree { padding: 10px 8px;
+	.rightTreeView { padding-left: 0; }
+}
+.designChange{
+	.myDropDown{width:100%;padding:10px;
+		.myDropText{width:100%;padding:0 12px;display:inline-block;box-sizing:border-box;line-height:28px;border:1px solid #ccc;cursor:pointer;}
+		.myDropList{display:block;width:auto;left:10px;right:10px;}
+		.myItem{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+	}
+	.listDetail{height:100%;padding:51px 0 36px;margin:-51px 0 -36px;overflow-x:hidden;overflow-y:auto;border-top:1px solid #ccc;}
+	.showChange{position:absolute;width:100%;bottom:0;padding:10px;border-top:1px solid #ccc;background:#fff;}
+	.rightTreeView{
+		.tips{color:#999;}
+		.link{color:#0063cf;vertical-align:2px;margin-left:5px;display:none;cursor:pointer;}
+		.item-content:hover{
+			.link{display:inline;}
+		}
+	}
+}
+/* treeView  */
+.tree-view { padding: 12px 12px 0; list-style: none; font-size: 12px; -webkit-user-select: none; -moz-user-select: none; user-select: none; position: relative; }
+.tree-view + .tree-view { padding: 0 12px; }
+.tree-view ul { margin: 0; padding: 0; list-style: none; padding-left: 18px; }
+.tree-view .rootNode,
+.tree-view .tree-view .itemNode { position: relative; list-style-type: none; }
+.tree-view .item-content { padding: 3px; }
+.tree-view .context-menu { display: none; position: absolute; background: #fafafa; border: 1px solid #ccc; }
+.tree-view .context-menu .item-menu { display: block; width: 50px; height: 24px; line-height: 24px; color: #000; font-size: 12px; padding: 0 5px; border-bottom: 1px solid #ccc; cursor: pointer; }
+.tree-view .context-menu .item-menu:last-child { border: none; }
+.tree-view .context-menu .item-menu:hover { background: #f2f2f2; text-decoration: none; }
+.tree-view .current { background: #a8dbfd; }
+.tree-view .nodeSwitch { width: 9px; height: 9px; display: inline-block; cursor: pointer; vertical-align: 2px; color: #333; background: url(../images/tree.png) no-repeat; background-position: 0 0; }
+.viewpoint { display: inline-block; width: 12px; height: 11px; margin: 0 3px; background: url(./images/tree.png) no-repeat; background-position: 0 -80px; }
+.tree-view .open .nodeSwitch { background-position: 0 -20px; }
+.tree-view .open + .treeViewSub { display: block; }
+.tree-view .noneSwitch { float: left; width: 14px; height: 12px; }
+.treeViewSub { display: none; }
+.tree-checkbox { display: inline-block; width: 13px; height: 13px; margin: 0 3px; }
+.tree-checkbox input { display: none; }
+.tree-text { vertical-align: 2px; padding: 2px 3px; cursor: pointer; }
+.tree-checkbox .box { display: inline-block; width: 13px; height: 13px; background: url(./images/tree.png) no-repeat; background-position: 0 -60px; }
+.tree-checkbox input:checked + .box { background-position: 0 -40px; }
+.contrastInfo{
+	color: #333;
+  .close{
+	cursor: pointer;
+  }
+  .titles{
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 40px;
+	font-size: 15px;
+	line-height: 40px;
+	width: 100%;
+	padding: 0 13px;
+	border-bottom: 1px solid #ccc;
+	& h3{
+		font-size: inherit;
+		line-height: inherit;
+	}
+	.close{
+	  width: 18px;
+	  height: 18px;
+	  font-size: 18px;
+	  line-height: 18px;
+	  color: #333;
+	  position: absolute;
+	  top: 13px;
+	  right: 13px;
+	}
+  }
+  .btn{
+	width: 80px;
+	height: 30px;
+	border: 1px solid #CCCCCC;
+	font-size: 16px;
+	text-align: center;
+	position: absolute;
+	bottom: 14px;
+	right: 22px;
+	color: #888;
+	opacity: 1;
+	font-weight: normal;
+  }
+  .contents{
+	width: 100%;
+	padding: 20px;
+	height: 201px;
+	overflow: auto;
+	.title{
+	  background: #eee;
+	}
+	table{
+	  width: 100%;
+	  tr{
+		height: 30px;
+	  }
+	  td{
+		width: 33%;
+		text-align: center;
+		font-size: 12px;
+		border: 1px solid #CCCCCC;
+	  }
+	}
+
+  }
+}

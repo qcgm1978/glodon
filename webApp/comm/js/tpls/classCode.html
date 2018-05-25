@@ -1,0 +1,16 @@
+<% _.forEach(data,function(item){ %>
+  <li class="itemNode">
+    <div class="item-content" data-type="classCode" data-parent="<%= item.code %>">
+      <% if(item.isChild){ %>
+        <i class="nodeSwitch"></i>
+      <% }else{ %>
+        <i class="noneSwitch"></i>
+      <% } %>
+      <label class="treeCheckbox">
+        <input type="checkbox" <% if(isChecked){ %>checked="checked"<% } %> data-etag="<%=item.code%>" />
+        <span class="lbl"></span>
+      </label>
+      <span class="tree-text<% if(isSelected){ %> selected<% } %>" title="<%= item.code %>"><%= item.name %></span>
+    </div>
+  </li>
+<% }) %>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>模型选择器</title>
+    <style>
+        .m-camera {
+            color: rgba(255, 255, 255, .2)!important;
+        }
+
+        .dialogBody .colorBar .bar-item:before {
+            transform: translate(3px, 3px);
+        }
+
+        .dialogBtn {
+            color: inherit;
+        }
+    </style>
+    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/static/dist/components/inspectSelectionNew/js/inspectSelection.js"></script>
+</head>
+
+<body>
+    <script>
+
+        function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+
+        var Request = GetRequest();
+        var viewer = null;
+        var _host = 'http://' + location.host;
+        $.ajax({
+            url: _host + '/doc/' + Request.projectId + '/' + Request.projectVersionId + '/project/fileList?appKey=' + Request.appKey + "&token=" + Request.token,
+            success: function (res) {
+                if (res.code == 0) {
+                    viewer = new InspectModelSelection({
+                        type: Request.type,//open process
+                        sourceId: Request.sourceId,
+                        etag: Request.etag,
+                        projectId: Request.projectId,
+                        projectVersionId: Request.projectVersionId,
+                        ruleType: Request.ruleType,
+                        token: Request.token,
+                        appKey: Request.appKey,
+                        host: _host,
+                        height: Request.height,
+                        width: Request.width,
+                        fileData: res.data,
+                        withCheckpoint: Request.withCheckpoint,
+                        callback: function (res) {
+                        }
+                    });
+                    //                alert(JSON.stringify(viewer))
+                }
+            },
+            error: function () {
+                alert('模型加载失败');
+            }
+        })
+
+        function getData() {
+            var userId = viewer.Project.currentUserId,
+                fileId = viewer.Project.fileIds[userId] || "";
+            var result = {
+                presetPoint: viewer.Project.presetPoint,
+                risk: {}
+            }
+            if (userId) {
+                result.risk = {
+                    components: {
+                        id: userId,
+                        fileUniqueId: fileId + userId.slice(userId.indexOf('.')),
+                        axis: viewer.Project.axis[userId],
+                        location: viewer.Project.location[userId],
+                        locationName: viewer.Project.locationName[userId]
+                    },
+                    markers: viewer.Project.Settings.markers
+                }
+            } else {
+                if (viewer.Project.currentRiskShowData) {
+                    result.risk = {
+                        components: {
+                            id: viewer.Project.currentRiskShowData.id,
+                            markers: viewer.Project.currentRiskShowData.marker
+                        }
+                    }
+                }
+            }
+            return JSON.stringify(result);
+        }
+
+        function debugLog(param) {
+            $.ajax({
+                type: 'post',
+                url: '/index.api',
+                data: param
+            })
+        }
+
+        function allIn(param) {
+            debugLog(param)
+            clearCache();
+            var view = viewer.Project.Viewer,
+                type = "readOnly";
+            param = JSON.parse(param);
+            param = param || {};
+            viewer.Project.mode = type;
+            view.loadMarkers(null);
+            if (param.presetId && (!param.componentId && !param.location)) {
+                type = "preset";
+                viewer.Project.mode = type;
+                viewer.Project.isSelect = 'once';
+                view.viewer.getFilters().setSelectedIds();
+                showPresetPoint(param.presetId, true);
+            }
+            if (!param.presetId && (param.componentId && param.location)) {
+                type = "risk";
+                viewer.Project.mode = type;
+                viewer.Project.isSelect = 'open';
+                viewer.Project.presetPointShowData = null;
+                viewer.Project.presetPoint = null;
+                $(".tbOpeningacceptanceBody tr").removeClass('selected');
+                view.highlight({
+                    type: "userId",
+                    ids: undefined
+                })
+                getModelId(param.componentId, function (id, sid) {
+                    showRiskComponent(id, param.location, sid);
+                })
+                // showRiskComponent(param.componentId, param.location);
+            }
+            if (param.presetId && param.componentId && param.location) {
+                viewer.Project.isSelect = 'once';
+                getModelId(param.componentId, function (id) {
+                    showRiskComponent(id, param.location);
+                    showPresetPoint(param.presetId);
+                })
+            }
+            if (!param.presetId && !param.componentId && !param.location) {
+                type = "edit";
+                /*$(".tbOpeningacceptanceBody tr").removeClass('selected');
+                view.highlight({
+                    type: "userId",
+                    ids: undefined
+                });
+    
+                view.viewer.getFilters().setSelectedIds();
+                viewer.Project.presetPointShowData=null;
+                viewer.Project.presetPoint=null;
+                viewer.Project.currentRiskShowData=null;
+                viewer.Project.currentUserId=null;
+                viewer.Project.isSelect = 'open';
+                viewer.Project.mode = type;*/
+                clearCache();
+            }
+            debugLog(type)
+            return type;
+        }
+
+        function clearCache() {
+            var view = viewer.Project.Viewer;
+            $(".tbOpeningacceptanceBody tr").removeClass('selected');
+            view.highlight({
+                type: "userId",
+                ids: undefined
+            });
+            view.viewer.getFilters().setSelectedIds();
+            viewer.Project.presetPointShowData = null;
+            viewer.Project.presetPoint = null;
+            viewer.Project.currentRiskShowData = null;
+            viewer.Project.currentUserId = null;
+            viewer.Project.isSelect = 'open';
+            viewer.Project.mode = 'edit';
+        }
+
+        function clearRisk() {
+            var view = viewer.Project.Viewer;
+            view.highlight({
+                type: "userId",
+                ids: undefined
+            })
+            view.loadMarkers(null);
+        }
+
+        function showRiskComponent(componentId, location, sid) {
+            var view = viewer.Project.Viewer;
+            if (typeof location === 'string') {
+                location = JSON.parse(location);
+            }
+            var box = viewer.Project.formatBBox(location.boundingBox);
+            view.setTopView(box);
+            location.userId = componentId;
+            location = JSON.stringify(location);
+            view.highlight({
+                type: "userId",
+                ids: [componentId]
+            });
+            viewer.Project.currentRiskShowData = {
+                id: componentId,
+                marker: location
+            }
+            view.viewer.getFilters().setSelectedIds([componentId]);
+            view.zoomToSelection();
+            view.loadMarkers([location]);
+            if (viewer.Project.mode == 'risk') {
+                viewer.Project.ModelFilter.fileFilter(sid);
+            }
+        }
+
+        function getModelId(componentId, callback) {
+            var ids = componentId.split('.');
+            var _fileId = ids[0],
+                userId = ids[1];
+            $.ajax({
+                url: _host + "/doc/api/" + Request.projectId + '/' + Request.projectVersionId + "?fileId=" + _fileId + '&appKey=' + Request.appKey + "&token=" + Request.token,
+            }).done(function (data) {
+                if (data.code == 0) {
+                    var modelId = data.data && data.data.modelId;
+                    if (modelId) {
+                        componentId = modelId + '.' + userId;
+                        callback(componentId, modelId);
+                    }
+                } else {
+                    alert('获取构件ID失败');
+                }
+            });
+        }
+
+        function showPresetPoint(presetId, isClearRisk) {
+            if (isClearRisk) {
+                viewer.Project.currentRiskShowData = null;
+            }
+            var data = viewer.Project.catchPageData(null, {
+                id: presetId
+            }, true);
+            if (viewer.Project.presetPointShowData && viewer.Project.presetPointShowData.marker) {
+                viewer.Project.Viewer.loadMarkers([viewer.Project.presetPointShowData.marker]);
+            }
+            debugLog(presetId)
+            viewer.Project.OpeningAcceptanceCollection.push({ data: data });
+            viewer.Project.pageInfo(data, true);
+            var t = $("tr[data-id='" + presetId + "']");
+            t.trigger('click');
+        }
+
+        function clearPresetPoint() {
+            var view = viewer.Project.Viewer;
+            view.highlight({
+                type: "userId",
+                ids: undefined
+            })
+            view.loadMarkers(null);
+            view.fit();
+        }
+
+        function fromCache(id) {
+            var _temp, loc, item;
+            _.each(viewer.Project.currentPageListData, function (i) {
+                if (i.id == id) {
+                    _temp = i.location;
+                    loc = i.location;
+                    item = i;
+                }
+            })
+            alert(item)
+            if (item) {
+                viewer.Project.presetPoint = {
+                    location: loc,
+                    id: id,
+                    fileUniqueId: item.fileId + item.componentId.slice(item.componentId.indexOf('.')),
+                    axis: item.axis,
+                    locationName: item.locationName
+                }
+                viewer.Project.presetPointShowData = {
+                    id: item.componentId,
+                    marker: viewer.Project.formatMark(loc, color, id)
+                }
+            }
+        }
+
+        function abcd(marker) {
+            var id = marker ? marker.id : "",
+                userId = marker ? marker.userId : "",
+                data = {},
+                Project = viewer.Project;
+            if (Project.isSelect == 'close') {
+                return
+            }
+            $(".tbOpeningacceptanceBody tr").removeClass('selected');
+            if (id) {
+                var tr = $("tr[data-id='" + id + "']");
+                if (tr.length > 0) {
+                    tr.addClass('selected');
+                } else {
+                    data = Project.catchPageData('process', { id: id });
+                    Project.OpeningAcceptanceCollection.reset();
+                    Project.OpeningAcceptanceCollection.push({ data: data });
+                    Project.pageInfo(data, true);
+                    tr = $("tr[data-id='" + id + "']");
+                    tr.addClass("selected");
+                }
+            }
+            var array = [];
+            if (Project.currentRiskShowData) {
+                array.push(Project.currentRiskShowData.id);
+            }
+            if (Project.presetPointShowData && Project.isSelect == 'close') {
+                array.push(Project.presetPointShowData.id);
+            }
+            if (userId) {
+                array.push(userId);
+                Project.Viewer.highlight({
+                    type: 'userId',
+                    ids: array
+                });
+            } else {
+                Project.Viewer.highlight({
+                    type: 'userId',
+                    ids: array
+                });
+            }
+        }
+    </script>
+</body>
+
+</html>

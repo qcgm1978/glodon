@@ -1,0 +1,32 @@
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    
+    <style type="text/css">
+     
+      #container{
+        width:600px;
+        height: 400px;
+      } 
+    </style>
+    <title>快速入门</title>
+  </head>
+  <body>
+  <div>
+     <div id="container"  ></div>
+     <span>new</span>
+  </div>
+
+   
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=2ca906059ad9100c1fd78cf804b4cf02"></script>
+
+   <script type="text/javascript">
+    var map = new AMap.Map('container',{
+            resizeEnable: true,
+            zoom: 10,
+            center: [116.480983, 40.0958]
+    });
+   </script>
+  </body>
+</html>

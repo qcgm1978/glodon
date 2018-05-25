@@ -1,0 +1,38 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "id": 1,
+      "name": "四川雅安万达广场",
+      "address": "四川雅安",
+      "startTime":"2016-4-29",
+      "endTime":"2018-4-29",
+      "image":"/static/dist/images/services/images/demoProject.png"
+    },
+    {
+      "id": 2,
+      "name": "四川雅安万达广场",
+      "address": "四川雅安",
+      "startTime":"2016-4-29",
+      "endTime":"2018-4-29",
+      "image":"/static/dist/images/services/images/demoProject.png"
+    },
+    {
+      "id": 3,
+      "name": "四川雅安万达广场",
+      "address": "四川雅安",
+      "startTime":"2016-4-29",
+      "endTime":"2018-4-29",
+      "image":"/static/dist/images/services/images/demoProject.png"
+    },
+    {
+      "id": 4,
+      "name": "四川雅安万达广场",
+      "address": "四川雅安",
+      "startTime":"2016-4-29",
+      "endTime":"2018-4-29",
+      "image":"/static/dist/images/services/images/demoProject.png"
+    }
+  ]
+}

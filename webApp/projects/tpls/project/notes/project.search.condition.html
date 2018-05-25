@@ -1,0 +1,51 @@
+<!--<div class="searchConditionBoxTop">-->
+	<!--<div class="modelLine"></div>-->
+	<!--<div class="searchTextBox" ><%= App.Local.data['drawing-model'].QCn || '查询条件' %></div>-->
+<!--</div>-->
+<div class="searchConditionBoxBottom">
+	<div class="searchBoxS">
+		<span><%= App.Local.data['drawing-model'].Keyword || '关键词' %></span>
+		<div class="keyTextInputBox">
+			<input type="text" placeholder="<%= App.Local.data['drawing-model'].Cbt || '批注人/批注内容' %>">
+		</div>
+	</div>
+	<%if(App.Project.Settings.isBimControl){%>
+		<div class="searchBoxS">
+			<span><%= App.Local.data['drawing-model'].Version || '版本名称' %></span>
+			<div class="myDropDown versionName">
+				<span class="myDropText">
+					<span class="text">全部</span> 
+					<i class="myDropArrorw"></i>
+				</span>
+				<ul class="myDropList">
+					<li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+					<%if(obj.default.versionIds.length>0){ %>
+						<%for(var i=0,len=obj.default.versionIds.length;i<len;i++){%>
+							<li title="<%= obj.default.versionIds[i].name %>&nbsp;&nbsp;<%= App.Project.versionType[obj.default.versionIds[i].type] %>" class="myItem" data-versionId="<%= obj.default.versionIds[i].id %>">
+								<%= obj.default.versionIds[i].name %>
+								&nbsp;&nbsp;<%= App.Project.versionType[obj.default.versionIds[i].type] %>
+							</li>
+						<%}%>
+					<%}%>
+				</ul>
+			</div>
+		</div>
+	<%}%>
+	<div class="searchBoxS">
+		<span class="searchLabel"><%= App.Local.data['drawing-model'].Time || '时间' %>：</span>
+		<div class="firstDate dateBox data" style="position: relative;">
+			<i class="icon-remove add-on clearStartTime"></i>
+		    <i class="iconCal add-on"></i>
+		    <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].STe || '开始时间' %>" id="notesDateStar" type="text" value="">
+		</div>
+		<span class="searchLabel">—<%= App.Local.data['drawing-model'].to || '至' %>—</span>
+		<div class="firstDate dateBox data">
+		    <i class="icon-remove add-on clearEndTime"></i>
+		    <i class="iconCal add-on"></i>
+		    <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].ETe || '结束时间' %>" id="notesDateEnd" type="text" value="">
+		</div>
+	</div>
+	<div class="searchBoxS">
+		<button><%= App.Local.data['drawing-model'].Query || '查询' %></button>
+	</div>
+</div>

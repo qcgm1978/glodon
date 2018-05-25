@@ -1,0 +1,19 @@
+<div class="projectLinkTitle">
+	请选择关联项目 <input id="inputProjectSerach" type="text" placeholder="请输入需要查询的项目名称"/>
+</div>
+<div class="projectLinkContent">
+	<table>
+		<% _.each(data.data,function(item){%>
+		<tr data-code='<%= item.projectCode %>' class='<%= obj.codeId==item.projectCode?"selected":"" %>'>
+			<td>
+				<i class="checkClass"></i>
+			</td>
+			<td class="projectTitle"><%= item.projectName %></td>
+			<td class="projectNo"><%= item.projectCode %></td>
+		</tr>
+		<% }) %>
+	</table>
+</div>
+<div class="projectLinkTool">
+	<button id="linkBtn" class="myBtn myBtn-primary" style="display: none;">确定</button>
+</div>

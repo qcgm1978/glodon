@@ -1,0 +1,41 @@
+{
+  "messageId": "c59b22b2dee84c82bb1d1186c8355172",
+  "messageType": null,
+  "timestamp": 1464589549917,
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "code": "GC01",
+      "name": "地基与基础",
+      "count": 0,
+      "parentCode": null,
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC0101",
+      "name": "桩基、地基处理及天然地基",
+      "count": 0,
+      "parentCode": "GC01",
+      "type": "GC",
+      "leaf": false
+    },
+    {
+      "code": "GC010101",
+      "name": "灌注桩",
+      "count": 1,
+      "parentCode": "GC0101",
+      "type": "GC",
+      "leaf": true
+    },
+    {
+      "code": "GC010102",
+      "name": "后注浆",
+      "count": 0,
+      "parentCode": "GC0101",
+      "type": "GC",
+      "leaf": true
+    }
+  ]
+}

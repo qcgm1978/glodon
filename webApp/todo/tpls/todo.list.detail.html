@@ -1,0 +1,20 @@
+ 
+ 
+
+<div class="title">
+	<a data-todoId="<%= id %>" data-pcUrl="<%= pcUrl %>" href="javascript:;" title="<%= title %>" target="_blank">
+		<span>【<%= sysFromName %>】</span> <%= title %> </a>
+</div>
+
+ <div class="operator">
+ 	 <span class="text"><%= App.Local.data['todo']['r-b'] || '发起人' %>:</span>  <span title="<%= initiatorName|| '--' %>"><%= initiatorName|| '--' %> </span>
+ </div>
+
+<div class="date">
+	
+	<span class="text receiveTime"><%= type=='commission'?((App.Local.data.todo['t-r'] || '接收时间')+'：'):((App.Local.data.todo['t-r'] ||'更新时间')+'：') %></span> <span><%= receiveTime?new Date(receiveTime).format("yyyy-MM-dd hh:mm:ss"):'----/--/--' %> </span>
+</div>
+
+ <% if(!read){%>
+ 	<span class="newMsg"></span>
+ <% } %>

@@ -1,0 +1,24 @@
+<div class="myDropDown specialitiesOption optionComm" style="z-index: 9;">
+                <span class="myDropText">
+             <span><%=obj[0].specialtyName%>：</span> <span class="text"><%=obj[0].comparisons[0].fileName%></span> <i class="myDropArrorw"></i> </span>
+
+
+	        <ul class="myDropList" style="display: none;">
+	        	<% $.each(obj,function(i,item){ %>
+	        		 <li class="myItemGroup"><span><%=item.specialtyName%></span></li>
+	        		 	<ul class="groups">
+	        		 		 
+	                   		<% $.each(item.comparisons,function(i,item){ %>
+	                   			<li class="myItem"  
+	                   			data-basemodelid="<%=item.output.replace('_output','')%>"
+	                   			data-differmodelid="<%=item.currentModel%>"
+	                   			data-differFileVersionId="<%=item.currentVersion%>"
+	                   			data-baseFileVersionId="<%=item.baseVersion%>">
+	                   			<%=item.fileName%></li>
+	                   		<% }) %>
+	            		</ul>
+
+	            <% }) %>
+	        </ul>
+
+</div>

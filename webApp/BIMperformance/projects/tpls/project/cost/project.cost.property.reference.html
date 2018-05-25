@@ -1,0 +1,27 @@
+<div class="referenceSearch">
+    <i class="glyphicon glyphicon-search btnSearch"></i>
+    <input class="txtInput txtSearch" placeholder="<%= App.Local.data['drawing-model'].Ped1 || '请输入搜索内容' %>" />
+</div>
+<div class="referenceContent">
+
+
+    <ul class="tbBodyContent">
+        <li class="node">
+            <div class="item" data-code="A">
+                <div class="listCode commItem"> 
+                    <span class="text"><%= App.Local.data['drawing-model'].BNo || '清单编码' %></span>
+                </div>
+                <span class="listName commItem"> <span class="text"><%= App.Local.data['drawing-model'].BNe || '清单名称' %></span></span>
+                <span class="listCount commItem"><span class="text"><%= App.Local.data['drawing-model'].Quantity || '工程量' %></span></span>
+            </div>
+        </li>
+    </ul>
+    
+    <div class="tbBody">
+        <div class="tbBodyScroll">
+            <ul class="tbBodyContent">
+                <li class="noLoading"></li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+{   "code": 0, 
+    "message": "success",
+    "data": {
+        "totalItemCount":200,
+        "pageIndex":1,
+        "pageCount":2,
+        "items":[
+        {
+ 
+           "id":1,
+           "projectId": 12345, 
+           "specialty": "土建", 
+           "category": "钢筋",
+           "name":"aa",
+           "batch":"1",
+           "status":"1",
+           "arrival":"12",
+           "total":"100",
+           "latestArrivalTime": 1398854587000, 
+           "url": "", 
+         }]
+    }
+}

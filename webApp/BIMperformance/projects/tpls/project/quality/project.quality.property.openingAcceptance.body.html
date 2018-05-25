@@ -1,0 +1,22 @@
+<% $.each(data.items,function(i,item){%> 
+    <tr class="<%= i%2==0 && 'odd' %>" data-uuid="<%=item.componentId%>"  data-id="<%=item.id%>" data-location='<%= item.location %>'  data-color='<%=item.colorStatus%>' data-cat="<%=item.catetoryName%>">
+        <td class="manifestIcon"><a class="myIcon-inventory"  href="<%=item.url%>" target="_blank"></a></td>
+        <td class="category"><%=item.catetoryName%></td>
+        <td class="positon"><div title="<%=item.locationName%>"><%=item.locationName%></div></td>
+        <td class="ckResult">
+         <i data-id="<%= item.id %>"  data-total="<%=item.problemCount%>" class="resultStatusIcon <%=App.Project.checkStatus(item.colorStatus)%>"></i>
+            <%=App.Project.formatPointPlace(item.problemCount,item.checkCount)%></td>
+    </tr>
+<% }) %> 
+
+
+ 
+
+
+<% if(data.items.length<=0){%>
+    
+    <tr>
+        <td colspan="9" class="noDataTd"><%= App.Local.data['drawing-model'].Ndd1 || '暂无数据' %></td>
+    </tr>
+    
+<%}%>

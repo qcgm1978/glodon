@@ -1,0 +1,40 @@
+<div class="mwin-body">
+  <table class="userSelecter">
+    <tr>
+      <td class="column1">
+        <div class="columnSearch">
+          <input id="searchContent"  placeholder="请输入要搜索的成员">
+          <b class="closeicon"></b>
+          <span class="searchBtn"><i></i></span>
+        </div>
+        <div class="scrollWrap">
+          <ul id="selectTree" class="ztree"></ul>
+        </div>
+        <div id="loadwait" class="loadwait"><img src="../../../images/load.gif" /> </div>
+      </td>
+      <td class="column2">
+        <a class="modalBtn icon" name="selectBtn"><i class="btnIconSelect"></i>选择</a>
+      </td>
+      <td class="column3">
+        <div class="columnHeader">
+          已选成员/部门
+        </div>
+        <div class="columnBody">
+          <ul id="selectedTree" class="ztree"></ul>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td></td>
+      <td></td>
+      <td style="vertical-align: bottom;text-align: right;padding-top: 10px;">
+        <a id="grandBtn" class="modalBtn submit" href="javascript:;">确定</a>
+      </td>
+    </tr>
+
+  </table>
+</div>
+<div class="mwin-foot">
+  <a class="modalBtn submit" href="javascript:;">确定</a>
+  <a class="modalBtn closeIcon" href="javascript:;"> <%= App.Local.data['drawing-model'].Cancel || '取消' %></a>
+</div>

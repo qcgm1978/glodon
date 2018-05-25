@@ -1,0 +1,77 @@
+.comment{position:absolute;width:100%;height:100%;left:0;top:0;-webkit-user-select:none;user-select:none;
+  .viewCanvas{position:absolute;left:0;top:6px;}
+  .textView{position:absolute;display:block;border:1px solid #03c;padding:3px 5px;overflow:hidden;
+    .textContext{min-width:50px;min-height:24px;line-height:1.5;position:relative;left:0;top:0;padding:3px 5px;opacity:0;}
+    &:focus{cursor:text;}
+    .input{position:absolute;left:0;top:0;padding:3px 5px;
+      textarea{border:none;background-color:transparent;resize:none;outline:none;line-height:1.5;width:100%;height:100%;}
+    }
+  }
+  .topBar{position:absolute;left:0;top:0;right:0;border-top:6px solid #456C8D;z-index:9;
+    .context{margin:0 auto;width:360px;height:35px;padding:5px 0;line-height:20px;color:#fff;background:#456C8D;border-radius:0 0 3px 3px;font-size:14px;text-align:center;}
+    .saveBtn{padding:5px 6px;background:#fff;margin:0 15px;border-radius:3px;color:#006ECF;line-height:14px;cursor:pointer;}
+    .cancelBtn{cursor:pointer;}
+    .iconOk{display:inline-block;width:16px;height:12px;margin-right:3px;background:url(../images/commIcon.png) -40px -21px no-repeat;}
+  }
+  .footBar{position:absolute;background:#333;height:40px;padding:0 5px;left:50%;bottom:10px;transform:translateX(-50%);border-radius:3px;z-index:9;
+    &:after{content:'';display:table;clear:both;}
+    i{display:block;width:34px;height:34px;float:left;margin:3px;border:1px solid #333;background:url(../images/bar.png) no-repeat;
+      &.selected{background-color:#000;border:1px solid #000;}
+      &:hover{border:1px solid #666;}
+    }
+    .iconArrow{background-position:0 -672px;
+      &.selected{background-position:-32px -672px;}
+    }
+    .iconRect{background-position:0 -704px;
+      &.selected{background-position:-32px -704px;}
+    }
+    .iconEllipse{background-position:0 -736px;
+      &.selected{background-position:-32px -736px;}
+    }
+    .iconMark{background-position:0 -768px;
+      &.selected{background-position:-32px -768px;}
+    }
+    .iconText{background-position:0 -800px;
+      &.selected{background-position:-32px -800px;}
+    }
+    .selected + .fontSize{display:block;}
+    .fontSize{position:absolute;display:none;width:60px;height:30px;padding:5px;background:#333;border-radius:3px;right:0;bottom:48px;
+      &:after{display:block;content:'';border-top:8px solid #333;border-left:6px solid transparent;border-right:6px solid transparent;position:absolute;bottom:-8px;left:24px;}
+      select{width:100%;height:20px;line-height:20px;outline:none;}
+    }
+  }
+}
+.commentDialog{position:fixed;width:100%;height:100%;background-color:rgba(0,0,0,.5);left:0;top:0;z-index:999;
+  .content{width:500px;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:#333;color:#fff;
+    .header{height:51px;padding:10px 20px;line-height:30px;border-bottom:1px solid #666;font-size:14px;position:relative;
+      .dialogClose{position:absolute;width:15px;height:15px;right:20px;top:16px;background:url(../images/tree.png) 0 -200px no-repeat;cursor:pointer;}
+    }
+    .body{padding:20px;
+      &:after{content:'';clear:both;display:table;}
+      .img{float:left;width:80px;background:#fff;}
+      .context{margin-left:100px;}
+      .input{margin-bottom:15px;
+        input,textarea{border:none;font-size:14px;background:#fff;resize:none;width:100%;line-height:30px;padding:0 10px;outline:none;color:#333;}
+        .error{border:1px solid #f00;}
+      }
+      .type{width:120px;height:30px;position:relative;line-height:30px;
+        .cur{display:block;width:100%;height:100%;border:1px solid #666;position:relative;cursor:pointer;
+          &:after{content:'';display:block;position:absolute;right:6px;top:11px;border-top:5px solid #fff;border-left:5px solid transparent;border-right:5px solid transparent;}
+          &.open:after{transform: rotate(-180deg);}
+        }
+        .iconUser,.iconPublic{display:inline-block;height:11px;background:url(../images/tree.png) no-repeat;}
+        .iconPublic{width:12px;margin:0 10px;background-position:0 -240px;}
+        .iconUser{width:8px;margin:0 12px;background-position:0 -260px;}
+        .typeList{position:absolute;display:none;width:100%;top:100%;left:0;border:1px solid #666;border-top:none;background:#333;
+          li{height:30px;border-bottom:1px solid #666;cursor:pointer;
+            &:hover{background:#666;}
+          }
+        }
+        .open + .typeList{display:block;}
+      }
+    }
+    .footer{padding:20px;border-top:1px solid #666;text-align:right;
+      .saveBtn{width:80px;height:30px;border:1px solid #ccc;text-align:center;line-height:28px;margin-left:10px;background:none;outline:none;}
+    }
+  }
+}

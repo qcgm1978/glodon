@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>组件</title>
+	<link rel="stylesheet" href="./less/fileSelection.less">
+</head>
+<body>
+	
+ <button id="show">show</button>
+ <button id="show2">show2 </button>
+
+	<script type="text/javascript" src="http://cdn.bootcss.com/jquery/1.6.1/jquery.min.js"></script>
+	<script type="text/javascript" src="./es6/fileSelection.es6"></script>
+
+	<script type="text/javascript">
+	var Files,Files2;
+		$("#show").click(function(){
+			Files=FileSelection({
+				appKey:"99a3d82442594d3e8446108e21f6fb61",
+				token:"123",
+				isDrag:true,
+				//isEnable:false,
+				projectId:894182440723040,
+				projectVersionId:894182440723040,
+				closeCallback:function(){
+					console.log(1)
+				},
+				fileIds:"", //逗号隔开
+				callback:function(a){
+					debugger
+				}
+				
+			});
+		});
+
+	$("#show2").click(function(){
+		Files2=FileSelection({
+			appKey:"99a3d82442594d3e8446108e21f6fb61",
+			token:"123",
+			isDrag:true,
+			//isEnable:false,
+			projectId:894182440723040,
+			projectVersionId:894182440723040,
+			closeCallback:function(){
+				console.log(1)
+			},
+			fileIds:"894824520786272", //逗号隔开
+			callback:function(a){
+				debugger
+			}
+
+		});
+	});
+	</script>
+</body>
+</html>

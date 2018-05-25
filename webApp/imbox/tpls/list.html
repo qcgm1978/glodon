@@ -1,0 +1,36 @@
+<% _.each(data,function(item){%>
+	<% if(item.targetUrl == "adviceFeedback"){ %>
+		<li>
+			<span class="title">
+				<% if(item.status !== 1) {%>
+					<i></i>
+					<% } %>
+						<a onclick="App.INBox.dialogHandle(this,event)" data-isdelete="<%= item.isDeleted %>" data-status="<%= item.status %>" data-idinfo="<%= item.id %>"
+						 data-id="<%= item.shareId %>" href='javascript:;' title="<%=_.escape(item.content)%>">
+							<%=_.escape(item.ellipsisStr)%>
+						</a>
+			</span>
+			<span class="time">
+				<%=item.createStmp?new Date(item.createStmp).format('yyyy-MM-dd hh:mm:ss'):'--'%>
+			</span>
+		</li>
+		<%}else{%>
+			<% var url=item.targetUrl.split('/'),projectId=url[url.length-3], version=url[url.length-2] %>
+				<li>
+					<span class="title">
+						<% if(item.status !== 1) {%>
+							<i></i>
+							<% } %>
+								<a data-status="<%= item.status %>" href='javascript:;' target='_blank' data-url="<%= item.targetUrl %>" data-isDeleted="<%=item.isDeleted%>"
+								 data-id="<%= item.id %>" data-projectId="<%= projectId %>" data-version="<%= version %>" data-shareId="<%= item.shareId %>"
+								 data-type="<%= item.type %>" title="<%=_.escape(item.content)%>">
+									<%=_.escape(item.ellipsisStr)%>
+
+								</a>
+					</span>
+					<span class="time">
+						<%=item.createStmp?new Date(item.createStmp).format('yyyy-MM-dd hh:mm:ss'):'--'%>
+					</span>
+				</li>
+				<%}%>
+					<%})%>

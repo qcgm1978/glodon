@@ -1,0 +1,23 @@
+<div class="opBox">
+    <span class="btnFileUpload btnNormal"><em class="myIcon-upload"></em><%= App.Local.data['drawing-model'].Upload || '上传' %></span>
+    <span class="btnFileDel btnNormal"><em class="myIcon-del"></em><%= App.Local.data['drawing-model'].Delete || '删除' %></span>
+</div>
+<div class="resourceTopbarSearchBox">
+    <div class="item">
+        <span class="searchLabel">关键字：</span>
+        <input id="keyName" type="text" placeholder="请输入文件名称或者资源类型搜索" class="txtInput moreSeachText">
+    </div>
+    <div id="showDateBox" class="showDateBox">
+        <span class="searchLabel">发布时间：</span>
+        <div class="firstDate dateBox" style="position: relative; display: inline-block;">
+            <i class="iconCal add-on"></i>
+            <input readonly="true" value="<%=startTime%>" placeholder="<%= App.Local.data['drawing-model'].STe || '开始时间' %>" id="dateStar" class="span2" type="text">
+        </div>
+        <span class="searchLabel">—<%= App.Local.data['drawing-model'].to || '至' %>—</span>
+        <div class="firstDate dateBox" style="position: relative; display: inline-block;">
+            <i class="iconCal"></i>
+            <input readonly="true" value="<%=endTime%>" placeholder="<%= App.Local.data['drawing-model'].ETe || '结束时间' %>" id="dateEnd" class="span2" type="text">
+        </div>
+        <span class="btnSearch"><%= App.Local.data['drawing-model'].Query || '查询' %></span>
+    </div>
+</div>

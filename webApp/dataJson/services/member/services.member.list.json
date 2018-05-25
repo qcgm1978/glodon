@@ -1,0 +1,94 @@
+{
+  "messageId": "864b9bc728324b33ab0a2a5ef6944cbb",
+  "messageType": null,
+  "timestamp": 1463023407442,
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "roleId": 828369428340928,
+      "name": "4",
+      "inherit": false,
+      "functions": [
+        {
+          "id": 2,
+          "name": "模块化",
+          "code": "plan"
+        },
+        {
+          "id": 3,
+          "name": "成本",
+          "code": "cost"
+        }
+      ]
+    },
+    {
+      "roleId": 828363166630080,
+      "name": "3",
+      "inherit": false,
+      "functions": [
+        {
+          "id": 4,
+          "name": "质监",
+          "code": "quality"
+        },
+        {
+          "id": 3,
+          "name": "成本",
+          "code": "cost"
+        }
+      ]
+    },
+    {
+      "roleId": 828362618699968,
+      "name": "1",
+      "inherit": false,
+      "functions": [
+        {
+          "id": 4,
+          "name": "质监",
+          "code": "quality"
+        }
+      ]
+    },
+    {
+      "roleId": 999999,
+      "name": "总包",
+      "inherit": false,
+      "functions": [
+        {
+          "id": 3,
+          "name": "成本",
+          "code": "cost"
+        },
+        {
+          "id": 4,
+          "name": "质监",
+          "code": "quality"
+        },
+        {
+          "id": 1,
+          "name": "设计",
+          "code": "design"
+        },
+        {
+          "id": 2,
+          "name": "模块化",
+          "code": "plan"
+        }
+      ]
+    },
+    {
+      "roleId": 829522567954624,
+      "name": "2",
+      "inherit": false,
+      "functions": [
+        {
+          "id": 1,
+          "name": "设计",
+          "code": "design"
+        }
+      ]
+    }
+  ]
+}

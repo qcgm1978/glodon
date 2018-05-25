@@ -1,0 +1,104 @@
+.projectHeader { height: 37px; background-color: #f5f5f5; border-bottom: 1px #ccc solid; position: relative; z-index: 999; }
+#projectContainer { height: 100%; margin-top: -37px; padding-top: 37px; position: relative;
+	.leftNav { float: left; width: 238px; border: 1px #ccc solid; position: absolute; top: 36px; bottom: 0px; background-color: #fff;
+		.leftNavContent { height: 100%; }
+		.projectNavContentBox { margin-top: 1px; position: absolute; top: 40px; width: 100%; bottom: 0px;
+			.projectModelNavContent { display: none; }
+		}
+		.projectNav .item { cursor: default; }
+		.projectNav .item:hover { border-color: #ddd; color: #666; }
+		.slideBar { display: block; }
+		.dragSize { display: block; }
+	}
+	.rightProperty { width: 398px; border: 1px #ddd solid; position: fixed; right: 0px; top: 86px; bottom: 0px; background-color: #fff; z-index: 600;
+		.rightPropertyContentBox { height: 100%; position: relative;
+			.rightPropertyContent { height: 100%;
+				.designPropetyBox { height: 100%;
+					.projectPropetyContainer { height: 100%; margin-top: -40px; padding-top: 40px; }
+					.designChange { height: 100%; overflow-x: hidden; overflow-y: auto; }
+				}
+			}
+			.slideBar { right: inherit; display: block; left: -15px; top: 40px; }
+			.dragSize { left: -5px; right: inherit; display: block; }
+		}
+		.designProperties { height: 100%; overflow: auto;
+			.nullTip { background: url(/projects/images/attrSel.png) no-repeat 50% 100%; padding-top: 200px; height: 50px; line-height: 50px; color: #ccc; font-size: 16px; text-align: center; }
+		}
+		.modle { .modleShowHide { transition: all .5s; background: url(/comm/images/commIcon.png) no-repeat 0px -256px; float: right; margin-right: 12px; margin-top: 6px; height: 14px; width: 14px; cursor: pointer;
+				&.down { transform: rotate(180deg); -ms-transform: rotate(180deg); -moz-transform: rotate(180deg); -webkit-transform: rotate(180deg); -o-transform: rotate(180deg); }
+			}
+			.modleName { font-weight: bold; height: 24px; line-height: 24px; padding-left: 12px;
+				.modleNameText { vertical-align: top; width: 95%; }
+			}
+			.modleList { background-color: #eee; border-top: 1px #ccc solid;
+				.modleItem { border-bottom: 1px #ccc solid;
+					.modleName { width: 25%; display: inline-block; box-sizing: border-box; padding-left: 12px; border-right: 1px #ccc solid; }
+					.modleVal { display: inline-block; width: 72%; box-sizing: border-box; padding-left: 12px; margin-left: -3px; }
+					.modelLink { display: inline-block; padding-left: 12px; color: #3F8CDF; height: 24px; line-height: 24px; }
+				}
+			}
+		}
+	}
+	.projectCotent { position: relative; height: 100%;
+		.noChange { text-align: center; font-size: 21px; color: #ccc; padding-top: 150px; }
+		.fileContainer { padding: 10px; height: 100%; box-sizing: border-box;
+			.fileContainerScroll { position: absolute; top: 75px; bottom: 0px; left: 10px; right: 10px; }
+			.modelContainer { height: 500px; position: relative; }
+		}
+		.modelContainer { height: 100%; display: none;
+			.modelContainerScroll { height: 100%;
+				.modelContainerContent { height: 100%; }
+			}
+			.move { height: 100%; }
+		}
+	}
+}
+.rightTree { padding: 10px 8px;
+	.rightTreeView { padding-left: 0; }
+}
+#treeContainerBody { position: absolute; top: 171px; left: 0px; right: 0px; bottom: 50px; overflow-y: auto; }
+.changeListBox { .loadings { height: 300px; line-height: 300px; text-align: center; font-size: 16px; color: #ccc; }
+}
+.projectChangeListBox { .referenceSearch { padding: 11px; position: relative; padding-right: 8px; }
+	.loading { padding-top: 150px; font-size: 16px; text-align: center; color: #ccc; }
+	.txtSearch { width: 100%; min-width: 376px; padding-left: 30px; }
+	.btnSearch { position: absolute; top: 21px; left: 20px; }
+	.contrastTree { .nodeSwitch { background: url(/comm/images/commIcon.png) no-repeat 0px -39px; display: inline-block; width: 12px; height: 10px; line-height: 8px; vertical-align: top; text-align: center; cursor: pointer; margin-top: 8px; margin-right: 2px;
+			&.on { background-position: 0px -49px; }
+		}
+		.nullChange { height: 50px; line-height: 50px; text-align: center; color: #ccc; font-size: 16px; }
+		.odd { background-color: #eee; }
+		.noneSwitch { display: inline-block; width: 11px; }
+		.node { .itemContent { height: 28px; border: 1px #ccc solid; line-height: 26px;
+				&.selected { background-color: #A8DBFD; }
+			}
+			.comm { float: left; text-align: center; position: relative;
+				.text { left: 6px; position: absolute; right: 2px; display: inline-block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+			}
+			.repertoireCode { width: 25%; border-right: 1px #ccc solid; }
+			.repertoireName { width: 42%; border-right: 1px #ccc solid; }
+			.beforeChange { width: 16%; border-right: 1px #ccc solid; }
+			.afterChange { width: 16%; }
+		}
+	}
+	.contrastTreeSub { display: none; }
+	.treeContent { .node { .itemContent { border-top: 0px; }
+			.comm { text-align: left; height: 25px; }
+		}
+	}
+	.showChange { position: absolute; left: 0px; right: 0px; bottom: 0px; height: 50px; line-height: 48px; background-color: #ddd; padding-left: 20px; }
+}
+#projectContainer .rightProperty .modleItem { .changeValue { height: 24px; line-height: 24px; display: inline-block; box-sizing: border-box; padding-left: 12px; margin-left: -3px;
+		.modleNameText { vertical-align: top; }
+	}
+	.beforeChange { width: 40%; border-right: 1px #ccc solid; }
+	.afterChange { width: 34%; }
+}
+#projectContainer .rightProperty  .changeColor { color: #CE566F; }
+.projectChangeListBox { .specialitiesOption { width: 100%; min-width: 398px; padding: 10px; border-bottom: 1px #ccc solid;
+		.myDropText { width: 100%; }
+		.myDropList { display: block; width: auto; left: 10px; right: 10px;
+			.myItem { height: 28px; line-height: 28px; }
+		}
+	}
+}

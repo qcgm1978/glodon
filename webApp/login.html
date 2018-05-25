@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="pragma" content="no-cache"> -->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <META HTTP-EQUIV="expires" CONTENT="Wed, 26 Feb 1997 08:21:57 GMT">
+    <META HTTP-EQUIV="expires" CONTENT="0">
+    <title>万达筑云项目管理平台-登录</title>
+    <link rel="styleSheet" href="/login/css/login.less"/>
+    <link href="favico.ico" rel="shortcut icon"/>
+</head>
+<body>
+<div class="layout">
+    <form class="loginForm">
+        <div id="loginBox">
+            <div id="mainBox">
+                <div class="logo">
+                </div>
+                <div class="headTitle">
+                    <h1 id="messageTitle">万达筑云项目管理平台</h1>
+                    <ul class="introduction">
+                        <li class="item first" id="messageList_1">管理前置</li>
+                        <li class="item" id="messageList_2">协调同步</li>
+                        <li class="item" id="messageList_3">模式统一</li>
+                    </ul>
+                </div>
+                <div class="loginDialog">
+                    <div class="header" id="userLogin">用户登录</div>
+                    <div class="errorMSG"><span class="iconWarning"></span> <span class="tip"
+                                                                                  id="errorTip">用户名或密码错误</span><a
+                            class="errorDesc" href="/errorPage.html" target="_blank" id="logBox">详情</a></div>
+                    <div class="relative">
+                        <input type="text" id="userName" class="txtInput" placeholder="请输入用户名"/>
+                        <span class="txtIcon"></span>
+                    </div>
+                    <div class="relative">
+                        <input type="password" id="userPwd" class="txtInput" placeholder="请输入密码"/>
+                        <span class="txtIcon userPwd"></span>
+                    </div>
+                    <div class="loginHelper">
+                        <div class="forgotPwd">
+                            <a target="_blank" id="forgetPassword"
+                               href="https://vendor.wanda.cn/sso/ForgetPassword.aspx">忘记密码</a>
+                        </div>
+                        <div class="remember" style="display:none;">一周内自动登录</div>
+                    </div>
+                    <input class="btnLogin" id="btnLogin" type="button" value="登录"/>
+                    <div class="login_demo" id="login_demo">
+                        <a href="javascript:;" class="" id="tipId">温馨提示</a>
+                        <span>|</span>
+                        <a href="javascript:;">登录演示系统</a>
+                    </div>
+                    <div class="tipBox" id="tipBox">
+                        <dl>
+                            <dt>为了您的体验更加友好：</dt>
+                            <dd>1.筑云平台推荐使用谷歌或IE11浏览器；</dd>
+                            <dd>2.请核验个人信息；如不正确，请单位负责人到招采平台更新人员备案信息。</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="footerWrap">
+        <div class="footer">
+            <ul>
+                <li class="item">
+                    <div class="iconBg iconPlanning"></div>
+                    <div class="introduction">
+                        <div class="title" id="footer_1">规划设计</div>
+                        <div class="desc" id="footer_1_desc">
+                            多专业模型的集成浏览和碰撞检查，提升规划设计的效率。
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="iconBg iconPlan"></div>
+                    <div class="introduction">
+                        <div class="title" id="footer_2">计划管理</div>
+                        <div class="desc" id="footer_2_desc">
+                            将进度计划与BIM模型挂接，实现了可视化的进度管理。
+                        </div>
+                    </div>
+                </li>
+                <li class="item">
+                    <div class="iconBg iconCost"></div>
+                    <div class="introduction">
+                        <div class="title" id="footer_3">成本管理</div>
+                        <div class="desc" id="footer_3_desc">
+                            将工程量和成本数据与BIM模型挂接，实现成本的有效控制。
+                        </div>
+                    </div>
+                </li>
+                <li class="item last">
+                    <div class="iconBg iconQuality"></div>
+                    <div class="introduction">
+                        <div class="title" id="footer_4">质量管理</div>
+                        <div class="desc" id="footer_4_desc">
+                            在BIM模型中预置检查点，方便质量管理人员进行质量管理。
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div class="copyrightBox">
+        <a target="_blank" id="footer_text" href="/static/dist/app/todo/instruction.html">大连万达商业地产股份有限公司 © 2016
+            WANDA版权所有</a>
+    </div>
+</div>
+<div class="bodyBgDialog" id="bodyBgDialog"></div>
+<div class="dialogAlertBox" id="dialogAlertZnBox">
+    <div class="dialogAlertBox_header">
+        <a href="javascript:;" class="closeDialog" id="closeZhDialog"></a>
+    </div>
+    <div class="dialogAlertBox_content">
+        <h1>演示账号申请流程</h1>
+        <p>“BIM演示系统”是万达集团部署的，用于展示万达筑云项目管理平台操作功能的模拟系统。主要目的用于向广大万达集团合作伙伴提供模拟操作环境，以熟悉万达集团万达筑云项目管理平台的功能及操作。</p>
+        <p>“BIM演示系统”的登录权限由万达集团统一控制，如各合作伙伴有登录演示系统熟悉操作的需要，可通过电子邮件的方式联系与贵方对接的万达集团内部业务部门进行申请，并统一开通。账号开通后15日内有效，过期后自动失效。</p>
+        <p>欢迎大家使用并提出您的宝贵意见！</p>
+        <h2>万达集团业务部门演示系统账号开通申请邮箱</h2>
+        <p class="center">设计总包人员请联系万达商业规划院<br/>邮箱地址：149316239@qq.com</p>
+        <p class="center">工程总包人员请联系万达商业地产成本部<br/>邮箱地址：bimocc@wanda.com.cn</p>
+        <p class="center">监理及第三发实测实量单位人员请联系质量监管中心<br/>邮箱地址：zhijianzhongxin@wanda.com.cn</p>
+        <p class="center downLoad"><a href="javascript:;" id="downLoad"
+                                      data-id="static/dist/login/down/BIM演示系统账号申请表.docx"
+                                      data-i18n="data.drawing-model.Download">下载“BIM演示系统”的账号申请表</a></p>
+    </div>
+    <div class="dialogAlertBox_footer">
+        <button id="openDemoPage">进入演示系统</button>
+    </div>
+</div>
+<div class="dialogAlertBox" id="dialogAlertEnBox">
+    <div class="dialogAlertBox_header">
+        <a href="javascript:;" class="closeDialog" id="closeEnDialog"></a>
+    </div>
+    <div class="dialogAlertBox_content">
+        <h1>Account Application for Demo System</h1>
+        <p>Developed by Wanda Group, BIM Demo System simulates Wanda BIM General Contracting Management Platform where
+            main contractors split contracts and manage subcontracts. We aim at providing the virtual operating
+            environment for our mass group of partners to get familiar with the functions and operation of Wanda BIM
+            General Contracting Management Platform.</p>
+        <p>Wanda Group is the only manager and owner of the permissions to log in the demo system. To open the accounts
+            for logging, please contact our related business departments which are responsible for communicating with
+            you via email. The accounts will be valid within 15 days pending their opening and expire automatically
+            afterwards. </p>
+        <p>You are welcome to use the system and send your constructive opinions.</p>
+        <h2>Emails of the related departments for opening accountsDesign Center</h2>
+        <p class="center">Dalian Wanda Commercial Properties Co., Ltd for main contractors of designing business:<br/>Email:
+            liwanshun@wanda.com.cn</p>
+        <p class="center">Cost Control Department, Dalian Wanda Commercial Properties Co., Ltd for main contractors of
+            construction projects<br/>Email: bimocc@wanda.com.cn</p>
+        <p class="center">Quality Supervision Center for supervision institutions and third party surveying and
+            inspection organizations:<br/>Email: zhijianzhongxin@wanda.com.cn</p>
+        <p class="center downLoad"><a href="javascript:;" id="downEnLoad"
+                                      data-id="static/dist/login/down/BIM演示系统账号申请表.docx"
+                                      data-i18n="data.drawing-model.Download">Download Account Application Form for BIM
+            Demo System</a></p>
+    </div>
+    <div class="dialogAlertBox_footer">
+        <button id="openEnDemoPage">BIM Demo System</button>
+    </div>
+</div>
+<div id="rightDragBox" class="rightDragBox">
+    <dl>
+        <dt id="operationId"><i></i><span>联系运维</span></dt>
+        <dd id="tplNum"></dd>
+        <dd id="qqNum"></dd>
+    </dl>
+</div>
+<!-- <div class="tipBox" id="tipBox">
+    <div class="tipContentBox">
+        <dl>
+            <dt>温馨提示：</dt>
+            <dd>1.为了您的体验更加友好，平台推荐使用谷歌或IE11浏览器；</dd>
+            <dd>2.请检查您的身份证号码、手机号码等个人信息是否正确；如不正确，请单位负责人在招采平台更新人员备案信息。</dd>
+        </dl>
+        <i></i>
+    </div>
+</div> -->
+<script type="text/javascript" src="/login/js/jquery-1.12.0.min.js"></script>
+<script type="text/javascript" src="/login/js/login.es6"></script>
+<script type="text/javascript">
+    if ("ActiveXObject" in window || window.ActiveXObject) {
+        window.location.href = '/ie.html?path=' + window.location.href;
+    } else {
+        Login.init();
+    }
+//    if logined from http://vendor.wanda-dev.cn, auto login by getUserInfo
+    if (Login.getCookie("OUTSSO_AuthToken")) {
+        Login.getUserInfo();
+    }
+    $(function () {
+        Login.loginMoreMessage();//登录页面处理多语言方法
+        Login.getForgetPwdHandle();//登录页面获取忘记密码地址的方法
+        Login.loginDragOpenHandle();//登录页面右下区域运维拖动模块功能
+        Login.loginDragHandle();//登录页面右下区域运维拖动模块功能
+        Login.loginTipHandle();//登录页面温馨提示模块功能
+    })
+</script>
+</body>
+</html>

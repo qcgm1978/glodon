@@ -1,0 +1,20 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "orgId": "786714377",
+      "name": "万达旅业-各地公司-深圳国旅-信息中心",
+      "namePath": null,
+      "outer": false,
+      "parentId": "782132832"
+    },
+    {
+      "orgId": "936401373",
+      "name": "旅游控股公司-万达旅业-各地公司-深圳万达国旅-深圳新景界航空服务有限公司",
+      "namePath": null,
+      "outer": false,
+      "parentId": "782132832"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+
+ 
+
+<% obj.data && $.each(data,function(i,item){%>
+           
+    <tr  class="itemClick <%=item.relateModel?'odd':''%>" data-code="<%=item.code%>">
+
+        <td class="ckItem"><i class="<%=App.Project.planStatus[item.progress]%>"></i></td>
+        <td class="planId"> <a href="<%=item.url%>" target="_blank"> <%= item.no %> </a> </td>
+        <td class="operationalMatters">  <%= item.businessItem %>  </td>
+        <td class="start"><%= item.planStartTime?new Date(item.planStartTime).format('yyyy-MM-dd'):''  %></td>
+        <td class="end"><%= item.planEndTime?new Date(item.planEndTime).format('yyyy-MM-dd'):''  %></td>
+        
+    </tr>
+<% }) %>
+               
+
+<% if(!obj.data || data.length<=0){%>
+    <tr><td colspan="8" style="border:0;">
+    <%= App.Project.NullPage.planModel %>
+    </td>
+    <tr>
+    
+<%}%>

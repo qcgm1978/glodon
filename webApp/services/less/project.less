@@ -1,0 +1,450 @@
+html, body {
+    overflow-y: hidden;
+}
+#projectManger { height: 100%;min-height:620px;
+	& .txtInput { padding: 6px 13px; }
+	.serviceHeader { border-bottom: 1px #ccc solid; padding-bottom: 5px; }
+	#systemContainer { margin-top: -40px; padding-top: 40px; }
+	.serviceNav { height: 40px; background-color: #eee; border-bottom: 1px #ccc solid; padding-left: 20px; position: relative; z-index: 1;padding-top: 10px;
+		.item { cursor: pointer; float: left; height: 30px; line-height: 30px; width: 100px; text-align: center; border-top: 2px transparent solid;
+			&.selected { border: 1px #ccc solid; border-top: 2px solid #006ecf; border-bottom-color: #fff; background-color: #fff; }
+		}
+	}
+	.projectContainer { height: 100%; margin-top: -40px; padding-top: 40px;
+		.projectBase, .projectFloor,.projectBaseHole,.projectSection,.projectPile { display: none; height: 100%;min-height:620px;}
+	}
+	.folwSlideBar { .header {height: 38px; line-height: 38px; padding-left: 15px; font-size: 16px; border-bottom: 1px #ccc solid;}
+		.slideBarContainer { height: 100%; margin-top: -39px; padding-top: 39px; }
+	}
+	#systemContainer .folwManager{
+		position: relative;
+		padding-top: 40px;
+	}
+	#systemContainer .folwManager .flowSliderUl .item { height: 60px; line-height: 1.2; color: #999;
+		&.selected { .name { color: #333; }
+		}
+		.name { font-size: 14px; margin-top: 6px; margin-bottom: 9px; width: 95%; }
+		.address{width: 60px;display: inline-block;}
+		.date { margin-top: 5px; margin-left: 20px; }
+		.content { margin-left: 15px; margin-top: 5px;}
+	}
+	.projectBase {
+		& .baseInfoWrap { display: inline-block; width: 400px; padding-left: 48px; padding-top: 16px; }
+		& .baseItem { height: 240px; }
+		& .mapItem { & .header { height: 40px; border-top: 1px solid #ccc; border-bottom: 1px solid #ccc; line-height: 40px; font-size: 14px; color: #666; font-weight: bold; padding-left: 15px; }
+			& .listHeader { background: #EEE; color: #666; }
+		}
+		.projectBg { margin: 20px 0px 20px 20px; float: left; padding-bottom: 20px;
+			img { height: 118px; }
+			& .projectLogo{
+				width: 200px;
+				height: 150px;
+				position: relative;
+				overflow-y: hidden;
+				
+				& img{
+					width: 100%;
+					height:100%;
+				}				
+				
+				& label{
+					position: absolute;
+					bottom: -26px;
+					left: 0;
+					right: 0;
+					line-height: 26px;
+					height: 26px;
+					width: 100%;
+					text-align: center;
+					color: #0470CF;
+					background: rgba(209,209,211,0.9);
+					cursor: pointer;
+					font-weight: normal;
+				}
+			}
+		}
+		.item { font-size: 14px; margin-bottom: 2px; }
+		.key { color: #a0a0a0; }
+		.value { color: #333; }
+	}
+	.projectMapping {
+	  .list { height: 38px; line-height: 38px;
+			.item{
+				height: 40px;
+				border-bottom: 1px #ccc solid;
+			}
+			.modules { width: 21%; padding-left: 15px; }
+			.name { width: 35%; }
+			.code { width: 31%; }
+			.op { width: 12%; }
+		}
+		.listHeader{    color: #ccc;}
+		.listBody{font-size: 14px;}
+	}
+	
+	
+	.projectDetail{
+		width: 100%;
+		height: 100%;
+		font-size: 14px;
+		position: relative;
+		
+		& .errorInput{
+			border:1px solid #FF0000;
+		}
+
+		& .myDropList{
+			max-height: 120px;
+		}
+		
+		& .header,dt{
+			border-bottom:1px solid #ccc;
+			height: 40px;
+			line-height:40px;
+			padding-left: 10px;
+			& i{
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				background: url(../../comm/images/commIcon.png) no-repeat 0 -260px;
+				vertical-align: -12px;
+			}
+		}
+		
+		& .header{
+			color: #666;
+		}
+		& .detailContainer{
+			position: absolute;
+			top: 40px;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		& dt{
+			position: relative;
+			color: #333;
+			& .accordionDatail{
+				float: right;
+			    /* margin-right: 20px; */
+			    font-size: 12px;
+			    color: #666;
+			    text-decoration: none;
+			    /* width: 100%; */
+			    /* display: inline-block; */
+			    position: absolute;
+			    left: 0;
+			    top: 0;
+			    right: 0;
+			    bottom: 0;
+			    text-align: right;
+				&:hover{
+					cursor: pointer;
+				}
+				& i{
+					margin-left: 5px;
+				}
+			}
+		}
+		& dd{
+			background: #EEE;
+			width: 100%;
+			border-bottom: 1px solid #ccc;
+			margin-left: 0;
+			box-sizing: border-box;
+			padding: 10px 10px 50px;
+			height: 100%;
+			height: auto;
+			clear: both;
+			display: inline-block;
+		}
+		
+		& form{
+			width: 680px;
+		}
+		& .formColumn{
+				height: 40px;
+				line-height: 40px;
+				width: 50%;
+				float: left;
+				& label{
+					height: 40px;
+					width: 124px;
+					display: inline-block;
+					text-align: right;
+					margin-right: 5px;
+					font-size: 12px;
+					color: #666666;
+				}
+				
+				& input{
+					width: 210px;
+				}
+				
+				& .myDropDown{
+					height: 30px;
+    				line-height: 30px;
+					width: 210px;
+					margin-left: -4px;
+					& .myDropList{
+						left: 0;
+						top: 31px;
+						width: 210px;
+					}
+					& .myDropText{
+						width: 210px;
+					}
+				}
+				
+				& .myBtn {
+					margin: 5px;
+					border:1px solid #ccc; 
+					width: 80px;
+				}
+				& .myBtn-primary{
+					border: none;
+				}
+		}
+		
+		& .pileContainer{
+			padding-top: 20px;
+			border: none;
+			& .formColumn{
+				width:80%;
+				
+				& label{
+					width: 160px;
+				}
+			}
+		}
+	}
+}
+
+.projectLinkList{
+	margin: 0 20px;
+	height: 100%;
+	position: relative;
+	& .projectLinkTitle {
+		width: 100%;
+		height: 40px;
+		& input{
+			height: 28px;
+		    border: 1px solid #CCC;
+		    width: 240px;
+		    float: right;
+		    padding: 8px;
+		}
+	}
+	& .projectLinkTool {
+		margin-top: 10px;
+    	float: right;
+	}
+	& .projectLinkContent {
+		position: absolute;
+		top: 40px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow: auto;
+		border: 1px solid #CCC;
+	}
+	
+	& table{
+		width: 100%;
+	}
+	& tr{
+		width: 100%;
+		&:hover{
+			background: #A8DBFD;
+		}
+		& td{
+			vertical-align: middle;
+			height: 32px;
+			color: #666;
+		}
+		& td:first-child{
+			& .checkClass{
+				width: 20px;
+			    height: 27px;
+			    display: none;
+			    margin-left: 16px;
+			    background: url(/static/dist/images/comm/images/commIcon.png) no-repeat -40px -13px;
+			}
+			& .unCheckClass{
+			    display: block;
+			}
+		}
+		& td:nth-child(2){
+			width: 45%;
+		}
+		& td:last-child{
+			width: 45%;
+		}
+		&.selected td:first-child i.checkClass{//张延凯修改 
+			display: block;
+		}
+	}
+}
+
+.imageJcrop{
+	width: 580px;
+	height: 300px;
+	
+	& .previewImage{
+		width: 320px;
+		height: 260px;
+		margin: 20px;
+		float: left;
+		text-align: center;
+		overflow-y: hidden;
+		background: #EEEEEE;
+		border: 1px solid #cfcfcf;
+		 
+		& input[type='button']{
+			position: absolute;
+		    top: 186px;
+		    left: 160px;
+		    height: 40px;
+		    width: 80px;
+		}
+		
+		& input[type='file']{
+			    position: absolute;
+			    top: 186px;
+			    left: 160px;
+			    height: 40px;
+			    width: 80px;
+			    opacity: 0;
+		}
+		
+		& p {
+			 position: absolute;
+			    top: 246px;
+			    height: 40px;
+			    left: 52px;
+			    font-size: 12px;
+			    color:#CCC;
+		}
+		
+	}
+	& .cutImage{
+		width: 200px;
+		height: 150px;
+		margin:20px 20px 20px 0;
+		float: right;
+		overflow: hidden;
+		border: 1px solid #cfcfcf;
+	}
+	
+	#cutImageBtn {
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		margin-left: -40px;
+	}
+}
+.projectMappingRule{
+  padding: 12px 13px;
+  font-size: 12px;
+  .mappingHeader{
+	padding-bottom: 20px;
+	h2{line-height: 38px;}
+	.nameBox{
+	  float: left;
+	  width: 360px;
+	  height: 30px;
+	  border: 1px solid #cccccc;
+	  line-height: 30px;
+	  padding-left: 14px;
+	}
+	.changeTpl{
+	  padding: 0 15px;
+	  color: #0470CF;
+	  line-height: 30px;
+	  cursor: pointer;
+	}
+
+  }
+  .mappingContainer{
+	border: solid #cccccc;
+	border-width: 1px 0 1px 0;
+	 padding: 15px 15px;
+	 line-height: 30px;
+	 .editSelf{
+	   line-height: 29px;
+	   color: #117ee1;
+	   cursor: pointer;
+	 }
+   }
+}
+.projectMappingRuleWindow{
+  position: absolute;left: 20px;right:20px;top:65px;bottom:60px;border: 1px solid #cccccc;;
+	.projectMappingModelList{
+	  li{
+		padding: 0 14px ;
+		font-size: 14px;line-height: 29px;border-bottom: 1px solid #cccccc;
+		cursor: pointer;
+		&.active{background-color:#A8DBFD; }
+	  }
+	}
+}
+.mappingFooter{
+  padding-top: 15px;
+  p{
+	font-size: 12px;
+	line-height: 21px;
+	color: #777777;
+  }
+  .resetMappingRule {
+	margin-bottom: 10px;
+	background-color: #0572d0;
+	color: #ffffff;
+	width: 80px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+  }
+}
+.prejectAdminSearch{
+	width: 282px;
+	position: absolute;
+	left:20px;
+	top: 6px;
+	height: 30px;
+	line-height: normal;
+	z-index: 10;
+	&>input{
+		width: 282px;
+		&:focus{
+			border:#ccc solid 1px;
+		}
+	}
+	.searchDataListBox{
+		width: 100%;
+		min-height: 30px;
+		height: auto;
+		background-color: #fff;
+		border:#ccc solid 1px;
+		border-top: 0;
+		display: none;
+		&>ul li{
+			width: 100%;
+			height: 30px;
+			line-height: 30px;
+			padding: 0 8px;
+			cursor: pointer;
+			border-bottom: #ccc solid 1px;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow:ellipsis;
+			te
+			&:nth-last-child(1){
+				border-bottom: 0;
+			}
+			&:hover{
+				color: #006ecf;
+			}
+		}
+	}
+}

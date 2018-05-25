@@ -1,0 +1,13 @@
+<%if(type == 1){%>
+<td data-href="<%= href %>" data-publishState="<%= status%>" data-noticeid="<%= id %>" data-sticestate="<%= orderType%>" data-edittype="<%= type%>"><%= title %></td>
+<%}else if(type == 2){%>
+<td data-publishState="<%= status%>" data-noticeid="<%= id %>" data-sticestate="<%= orderType%>" data-edittype="<%= type%>"><%= title %></td>
+<%}%>
+<td><%= publishTime %></td>
+<% if(status == 1){%>
+<td><%= App.Local.data['source-data'].rd || '已发布' %></td>
+<%}else if(status == 2){%>
+	<td>已撤回</td>
+<%}else if(status == 3){%>
+	<td>未发布</td>
+<%} %>

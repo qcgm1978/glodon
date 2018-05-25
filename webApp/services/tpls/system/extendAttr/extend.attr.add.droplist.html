@@ -1,0 +1,9 @@
+ <%for(var item in data){%> 
+ <li class="myItemGroup"><%= item %></li> 
+ 	<ul class="groups">
+ 		<%$.each(data[item],function(i,item2){%> 
+   			<li class="myItem"><%=item2%></li> 
+ 		<% }) %> 
+   	</ul> 
+ <%}%>
+

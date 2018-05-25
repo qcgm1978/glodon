@@ -1,0 +1,83 @@
+<% if(message == "success"){ %>
+    <table class="ckTable" cellpadding="0" cellspacing="0">
+        <tbody>
+            <% _.each(data.items,function(item){ %>
+            <tr>
+                <td class="collList">
+                    <div class="ckImg">
+                        <img src="<%= item.image %>" alt="" />
+                    </div>
+                    <div class="ckHeader">
+                        <div class="ckName"><%= item.name %></div>
+                        <div class="date"><%= item.createTime %></div>
+                    </div>
+                </td>
+            </tr>
+            <% }) %>
+        </tbody>
+
+    </table>
+    <div class="tfoot">
+        <div class="tr">
+            <div class="th">
+                <span class="pointTotal">碰撞点:<%= data.totalItemCount %></span>
+                <a href="javascript:;" class="nextPage <% if(data.pageIndex == data.pageCount){ %>disabled<% } %>"
+                   data-i18n="data.drawing-model.Next">下一页</a>
+                <a href="javascript:;" class="prePage <% if(data.pageIndex == 1){ %> disabled <% } %>"><%= App.Local.data['system-module'].Back || '上一页' %></a>
+                <span class="pages">/<%= data.pageCount %><%= App.Local.currentIsEn?'': '页' %></span>
+                <span class="cur"><%= data.pageIndex %></span>
+
+            </div>
+        </div>
+    </div>
+    <div class="collFooter">
+        <a href="javascript:;" class="viewSetting">
+            <i class="settingIcon"></i>
+            <span>查看碰撞设置</span>
+        </a>
+        <a href="javascript:;" class="export">
+            <i class="exportIcon"></i>
+            <span>导出报表</span>
+        </a>
+    </div>
+<% }else if(message == "failed"){ %>
+    <div class="collTips">
+        <i class="failedIcon"></i>
+        <p>碰撞检测失败,请重试</p>
+        <a href="javascript:;" class="newColl">点此重新碰撞</a>
+    </div>
+    <div class="collFooter">
+        <a href="javascript:;" class="viewSetting">
+            <i class="settingIcon"></i>
+            <span>查看碰撞设置</span>
+        </a>
+    </div>
+<% }else if(message == "running"){ %>
+    <div class="collTips">
+        <i class="runningIcon"></i>
+        <p>碰撞检测进行中,请稍候...</p>
+    </div>
+    <div class="collFooter">
+        <a href="javascript:;" class="viewSetting">
+            <i class="settingIcon"></i>
+            <span>查看碰撞设置</span>
+        </a>
+    </div>
+<% }else if(message == "none"){ %>
+    <div class="collTips">
+        <i class="nothingIcon"></i>
+        <p>您还没有进行碰撞检测</p>
+        <a href="javascript:;" class="newColl">点此新建碰撞检测</a>
+    </div>
+<% }else{ %>
+    <div class="collTips">
+        <i class="nothingIcon"></i>
+        <p>没有碰撞点</p>
+    </div>
+    <div class="collFooter">
+        <a href="javascript:;" class="viewSetting">
+            <i class="settingIcon"></i>
+            <span>查看碰撞设置</span>
+        </a>
+    </div>
+<% } %>

@@ -1,0 +1,15 @@
+<div class="fileSearchBox">
+    <input type="text" class="txtInput" placeholder="<%= App.Local.data['source']['s-p-e'] || '请输入要搜索的文件/文件夹名' %>" id="txtFileSearch"> <i class="clearSearch" title="清除搜索"></i>
+    <span class="btnFileSearch myBtn myBtn-default" ><%= App.Local.data['drawing-model'].Find || '搜索' %></span>
+</div>
+<div class="opBox">
+    <a href="javascript:;" class="returnBack theEnd" isReturn='0' ><%= App.Local.data['drawing-model'].AFs || '全部文件' %></a>
+    <span class="btnNewFolder btnNormal"><em class="myIcon-createFolder"></em><%= App.Local.data['drawing-model'].New || '+ 新建' %></span>
+    <span class="btnFileUpload btnNormal" id="file-upload-btn" style="position: relative; z-index: 0;"  ><em class="myIcon-upload"></em><%= App.Local.data['drawing-model'].Upload || '+ 上传' %></span>
+    <span class="btnFileDownLoad btnNormal"  ><em class="myIcon-download"></em><%= App.Local.data['drawing-model'].Download || '+ 下载' %></span>
+    <span class=" btnNormal btnFileDel"><em class="myIcon-del"></em><%= App.Local.data['drawing-model'].Delete || '删除' %></span>
+    <% if(obj.type!=="family"){%>
+    	<span class="btnFileState btnNormal ellipsisI18n" style="vertical-align: bottom;"><%= App.Local.data['drawing-model'].CPs || "平台文件处理结果" %></span>
+    <%}%>
+</div>
+<div class="searchCount"><%= App.Local.data.system.Total|| '共搜索到' %> <span class="count">-</span> <%= App.Local.data.system.rfd || '个相关结果' %></div>

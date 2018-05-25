@@ -1,0 +1,137 @@
+<div class="bodyContent">
+	
+	<div id="layoutTodo" class="indexLayout">
+		<!-- 代办-->
+	    <div class="conMonth">
+	        <div class="conHeader">
+				<a  href="#todo" target="_blank"  title="更多" data-i18n="data.announce.more"><%= App.Local.data['drawing-model'].More || "更多" %></a>
+				<span style="min-width: 120px;" class="active" data-type="todoTab" ><%= App.Local.data.todo.todo|| '待办' %>(<label id="todoCounter">0</label>)</span>
+				<span  style="min-width: 120px;" data-type="doneTab" ><%= App.Local.data.todo.done || '已办' %><label id="doneCounter"></label></span>
+						<!--<span data-type="doneTab">已办</span>-->
+			</div><!--数量需写入-->
+	        <div class="article" id="todoContainer">
+                <table id="todos">
+                    <thead class="listHeader">
+                        <td ><%= App.Local.data.todo['t-d-i'] || '待办事项' %></td>
+                        <td width="68px" data-i18n="data.todo.r-b" class="i18n-home-td"></td>
+                        <td width="155px" data-i18n="data.todo.t-r"></td>
+                    </thead>
+                    <tbody  class="conBody">
+						<div class="loading1" style="top:40%;width:100px;height: 100px; background: #ffffff url('/static/dist/images/comm/images/load.gif') no-repeat center;position: absolute;left: 44%;"></div>
+                    </tbody>
+                </table>
+			    <table style="display: none;" id="dones">
+				    <thead class="listHeader">
+                    <td><%= App.Local.data['todo'].DIm || '已办事项' %></td>
+				    <td width="68px"><%= App.Local.data['todo']['r-b'] || '发起人' %></td>
+				    <td width="155px"><%= App.Local.data['todo']['t-r'] || '接收时间' %></td>
+				    </thead>
+				    <tbody  class="conBody">
+
+				    </tbody>
+			    </table>
+	        </div>
+	    </div>
+	</div>
+	<div id="layoutSlide" class="indexLayout">
+		<div>
+			<div class="conHeader"><i></i><span id="slideTitle"></span></div>
+			<div class="mmhSlider">
+		    </div>
+		</div>		
+	</div>
+	<div id="layoutMonth" class="indexLayout">
+		<div class="conMonth">
+            <div class="conHeader">
+              	<a id="monthMore" target="_blank"  title="更多" data-i18n="data.announce.more"><%= App.Local.data['drawing-model'].More || "更多" %></a>
+                <span class="active" data-type="end" ><i class="planEndIcon"></i>
+                <%= App.Local.data['drawing-model'].ETh || '本月到期' %>
+                </span>
+                <span data-type="start" ><i class="planStartIcon"></i><%= App.Local.data['drawing-model'].STh || '本月开始' %></span>
+            </div>
+            <div class="article"  id="endTaskContainer">
+                <table>
+                    <thead>
+                        <tr>
+                            <td><span class="title" data-i18n="data.plan.plan"></span></td>
+                            <td data-i18n="data.drawing-model.Activities"></td>
+                            <td><span class="level" data-i18n="data.plan.rank"></span></td>
+                            <td><span class="startTime" data-i18n="[title]data.drawing-model.PInLE"><%= App.Local.data['drawing-model'].PInLES || '计划结束日期' %></span></td>
+
+                        </tr>
+                    </thead>
+                </table>
+							<div  class="loading2" style="top:40%;width:100px;height: 100px; background: #ffffff url('/static/dist/images/comm/images/load.gif') no-repeat center;position: absolute;left: 44%;"></div>
+
+						</div>
+        </div>
+	</div>
+	<div id="layoutPost" class="indexLayout">
+		 <!--公告-->
+        <div class="conPro">
+            <div class="conHeader">
+                <a href="#notice" target="_blank" class="notice_more" title="更多" data-i18n="data.announce.more"><%= App.Local.data['drawing-model'].More || "更多" %></a>
+                <i></i>
+                <span data-i18n="data.announce.announcement"></span>
+            </div>
+            <div class="article"  id="postContainer">
+                 <table>
+                    <thead class="listHeader">
+                        <td data-i18n="data.announce.title"></th>
+                        <td width="100px" data-i18n="data.announce.time"></th>
+                    </thead>
+                    <tbody  class="conBody pro" id="proclamation">
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+	</div>
+	<div id="bottomBar">
+    	<div class="linkBar">
+    		<ul>
+    			<li>
+    				<a  href="javascript:;" class="link" data-i18n="data.footer.link"></a>
+    			</li>
+    			<li>
+    				<a  href="javascript:;" target="_blank" murl="http://www.wanda.cn" class="link linkNavItem"
+                        data-i18n="data.footer.group"  data-type="group"></a>
+    			</li>
+    			<li>
+    				<!-- <i class="linkBarIcon module"></i> -->
+    				<a  href="javascript:;" id="jhmkhId"  target="_blank" murl="http://mkh.wanda.cn" class="link linkNavItem" data-i18n="data.footer.module"  data-type="module">计划模块化</a>
+    			</li>
+    			<!--<li>
+    				&lt;!&ndash; <i class="linkBarIcon book"></i> &ndash;&gt;
+    				<a  href="javascript:;" target="_blank" class="link linkNavItem">图文档系统</a>
+    			</li>-->
+    			<li>
+    				<!-- <i class="linkBarIcon money"></i> -->
+    				<a  href="javascript:;" id="cbglxtId" target="_blank" murl="http://cb.wanda.cn" class="link linkNavItem" data-i18n="data.footer.system"  data-type="cost">成本管理系统</a>
+    			</li>
+    			<li>
+    				<!-- <i class="linkBarIcon check"></i> -->
+    				<a  href="javascript:;" id="zlglxtId" target="_blank" murl="http://quality.wanda.cn/" class="link linkNavItem" data-i18n="data.footer.system1"  data-type="quality">质量管理系统</a>
+    			</li>
+                <li>
+                    <!-- <i class="linkBarIcon plat"></i> -->
+                    <a href="javascript:;" target="_blank" murl="https://vendor.wanda.cn" class="link linkNavItem"
+                       data-i18n="data.footer.platform" data-type="platform"></a>
+                </li>
+                <!--
+                <li>
+                    <a href="/page/startApp.html" target="_blank" class="link linkNavItem">测试启动应用</a>
+                </li>
+                -->
+                <!-- <li>
+                    <a href="http://meetnow.quanshi.com/wanda/conference/email_join/ADuQWk7E2wQ" target="_blank" class="link linkNavItem" style="background-color:#15a;color:#fff;border-radius:3px;">
+                    启动视频会议
+                    </a>
+                </li>      -->           
+    		</ul>
+    	</div>
+    	<div class="info">
+    		<a target="_blank" href="/static/dist/app/todo/instruction.html" data-i18n="data.footer.copyright"></a>
+    	</div>
+    </div>
+</div>

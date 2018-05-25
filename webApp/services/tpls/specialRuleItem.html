@@ -1,0 +1,14 @@
+<select name="specail">
+    <option value="">请选择专业</option>
+    <% _.each(special,function(item){ %>
+    <option value="<%=item.specialtyCode%>"><%=item.specialty%></option>
+    <% }) %>
+</select>
+<select name="condition">
+    <option value="">请选择条件</option>
+    <% _.each(fileCondition,function(item){ %>
+    <option value="<%=item.code%>"><%=item.name%></option>
+    <% }) %>
+</select>
+<input name="specialValue" type="text" placeholder="请输入文件规则...">
+<a href="javascript:;" onclick="$(this).parent().remove();"><%= App.Local.data['drawing-model'].Delete || '删除' %></a>

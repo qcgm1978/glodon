@@ -1,0 +1,37 @@
+<div class="contentBox">
+    <div class="inspectionOperator">
+        <!--<span class="myBtn myBtn-default"><em class="myIcon-link-check"></em>关联校验</span>-->
+        <span class="myBtn myBtn-default exportList" style="display: none;"><em class="myIcon-download" ></em><%= App.Local.data['drawing-model'].Export || '导出列表' %></span>
+    </div>
+    <div class="contentBody">
+        <div class="contentScroll">
+            <div class="title"><%= App.Local.data['drawing-model'].Nps || '计划节点未关联图元' %>（<span class="count">4</span>）</div>
+            <table class="tbTop">
+                <thead>
+                    <tr>
+                        <th class="inspecId" data-i18n="data.drawing-model.SN">序号</th>
+                        <th class="businessMatters" data-i18n="data.drawing-model.Activities">业务事项</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="noLoading"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="title"><%= App.Local.data['drawing-model'].Nes1 || '图元未关联计划节点' %>（<span class="count">6</span>）</div>
+            <table class="tbInspection tbBottom">
+                <tbody>
+                    <tr class="noLoading"></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="nullLinkData">
+        <div class="iconLinkBg"></div>
+        <br>
+        <span>您还没有进行关联校验</span>
+        <br>
+        <a href="javascript:;">点击进行关联校验</a>
+    </div>
+</div>

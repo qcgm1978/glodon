@@ -1,0 +1,142 @@
+.mod-dialog-masklayer,
+.mod-dialog-masklayer-iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.7;
+    z-index: 1000;
+    display: none;
+    background-color: #2D2E31;
+    background: -webkit-radial-gradient(center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 80%);
+    background: -moz-radial-gradient(center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 80%);
+    background: radial-gradient(center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1) 80%);
+    filter: alpha(opacity=70);
+    *position: absolute;
+    _position: absolute;
+    _width: 100%;
+    _height: expression(function() {return Math.max(document.documentElement.clientHeight, document.documentElement.scrollHeight);}());
+}
+
+.mod-dialog-masklayer-iframe {
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=100);
+    opacity: 1;
+    z-index: 1001;
+}
+
+.mod-dialog {
+    position: fixed;
+    *position: absolute;
+    _position: absolute;
+    z-index: 2000;
+    box-shadow: 0px 0px 8px #333;
+    top: 0;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+
+.mod-dialog .wrapper {
+    background: #fff;
+}
+
+.mod-dialog .wrapper .header {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+
+}
+
+.mod-dialog .header .title {
+    font-size: 16px;
+    max-width: 400px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    float: left;
+    line-height: 45px;
+    _width: 350px;
+    color: #666;
+    font-weight: bold;
+    line-height: 45px;
+}
+
+.mod-dialog .header .close {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    background: url(../images/dialogs/close.png) no-repeat;
+    cursor: pointer;
+    opacity: .8;
+}
+
+.mod-dialog .header .close:hover {
+    background: url(../images/dialogs/close-hover.png) no-repeat;
+}
+
+.mod-dialog .wrapper .content {
+    padding: 10px;
+    /*background-color: #FFFFFF;*/
+    box-sizing: content-box;
+
+    /*color: #fff;*/
+}
+
+.mod-dialog .wrapper .content .upload-path {
+
+    margin-top: 10px;
+    color: #ccc;
+}
+
+.box .content {
+    background-color: #333;
+}
+
+.mod-dialog .wrapper .footer {
+    padding: 0 20px;
+    border-top: 1px solid #ccc;
+    text-align: right;
+    height: 65px;
+    line-height: 65px;
+    min-width: inherit;
+    background: none;
+    position: static;
+    margin: 0;
+    width: auto;
+}
+
+.mod-dialog .wrapper .footer .cancel {
+    margin-left: 15px;
+    margin-right: 3px;
+}
+
+.mod-dialog .wrapper .footer .dialog-error {
+    background: url(../images/dialogs/error.png) no-repeat;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.mod-dialog .wrapper .footer .error {
+    float: left;
+    color: #ff6600;
+}
+
+.mod-dialog .button-small {
+    height: 30px;
+    font-size: 14px;
+    padding: 0 8px;
+    line-height: 28px;
+    *margin-top: 15px;
+}

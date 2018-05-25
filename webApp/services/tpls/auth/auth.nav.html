@@ -1,0 +1,31 @@
+<div class="serviceHeader">
+    <div class="bcService">
+        <!--
+        <span class="arr-r"><a href="#services">在线服务</a></span>
+        <i class="myIcon-left-arr iconLeft"></i> <span>权限管理</span>
+        -->
+        <i class="iconLeft"></i> <span data-i18n="data.system-module.PMt2">权限管理</span>
+    </div>
+
+
+    <ul class="serviceNav">
+        <% if(isadmin ){ %>
+        <li class="memCtrl active" data-i18n="data.system-module.MMt">成员管理</li>
+        <li class="roleManager" data-i18n="data.system-module.RMt1">角色管理</li>
+        <li class="keyUser" data-i18n="data.system-module.VUr">关键用户</li>
+
+        <% if(iskeyuser ){ %>
+
+        <li class="projectMember" data-i18n="data.system-module.DPn">数据权限</li>
+
+        <% }%>
+
+        <% }else if(iskeyuser){%>
+
+        <li class="projectMember active" data-i18n="data.system-module.DPn">数据权限</li>
+
+        <% }%>
+
+    </ul>
+</div>
+<div class="serviceBody"></div>

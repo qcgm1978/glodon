@@ -1,0 +1,68 @@
+<tr>
+    <td>
+        <%if(data.haveReply){%>
+        <div class="liTopBox">
+            <dl>
+                <dt><img src="<%= data.iconSrc %>" width="40px" height="40px"></dt>
+                <dd class="f14">
+                    <span class="service-title"><%= data.type%><%= data.title%></span>
+
+                    <span class="service-feedback">
+                    <%= data.content?('<br>'+data.content):''%></span>
+                    <br>
+                    <span class="ddTime service-create-time"><%= data.createTime?new Date(data.createTime).format("yyyy-MM-dd"):'--'
+                    %>
+                    <span class="ddDownLoad">
+                    <%if(data.havaAttachment){%>
+                    <span class="downLoad" data-downloadid="<%= data.id%>"></span>
+                    <%}%>
+                </span>
+                </span>
+                </dd>
+                <span class="feedback-fr J_feedback_del" data-id="<%= data.id%>"><%= App.Local.data['drawing-model'].Delete || '删除' %></span>
+            </dl>
+        </div>
+        <div class="liDownBox">
+            <dl>
+                <%if(data.adviceReplys.length>0){%>
+                <% _.each(data.adviceReplys, function(acs,i) { %>
+                <dt class="reply-content">[回复]：</dt>
+                <dd class="reply-content <%=i?'replay-content-txt' :''%>">
+                    <span class="service-reply-content"> <%= acs.content%></span>
+                    <span class="ddTime service-reply-time">
+                        <span class="service-reply-name overflowEllipsis" title="<%= acs.replyName %>"><%= acs.replyName %></span>
+                     <%= (data.createTime?new
+                    Date(acs.replyTime).format("yyyy-MM-dd"):'--') %>
+                </span>
+                </dd>
+
+                <% }); %>
+                <%}%>
+            </dl>
+        </div>
+        <%}else{%>
+        <div class="liTopBox">
+            <dl>
+                <dt><img src="<%= data.iconSrc %>" width="40px" height="40px"></dt>
+                <dd class="f14">
+                    <span class="service-title"><%= data.type%><%= data.title%></span>
+
+                    <span class="service-feedback">
+                    <%= data.content?('<br>'+data.content):''%></span>
+                    <br>
+                    <span class="ddTime service-create-time"><%= data.createTime?new
+                    Date(data.createTime).format("yyyy-MM-dd"):'--'
+                    %>
+                    <span class="ddDownLoad">
+                    <%if(data.havaAttachment){%>
+                    <span class="downLoad" data-downloadid="<%= data.id%>"></span>
+                    <%}%>
+                </span>
+                </span>
+                </dd>
+                <span class="feedback-fr J_feedback_del" data-id="<%= data.id%>"><%= App.Local.data['drawing-model'].Delete || '删除' %></span>
+            </dl>
+        </div>
+        <%}%>
+    </td>
+</tr>

@@ -1,0 +1,26 @@
+<% _.forEach(_.sortBy(data,"sort"),function(item){ %>
+<li class="itemNode">
+  <div class="item-content" data-type="sceneId">
+    <i class="nodeSwitch"></i>
+    <label class="treeCheckbox">
+      <input type="checkbox" checked="checked" data-type="sceneId" />
+      <span class="lbl"></span>
+    </label>
+    <span class="tree-text"><%= item.specialty %></span>
+  </div>
+  <ul class="subTree">
+    <% _.forEach(_.sortBy(item.files,function(num){return num.sort}),function(file){ %>
+      <li class="itemNode">
+        <div class="item-content" data-type="sceneId">
+          <i class="noneSwitch"></i>
+          <label class="treeCheckbox">
+            <input type="checkbox" checked="checked" data-etag="<%= file.fileEtag %>" />
+            <span class="lbl"></span>
+          </label>
+          <span class="tree-text"><%= file.fileName %></span>
+        </div>
+      </li>
+    <% }) %>
+  </ul>
+</li>
+<% }) %>

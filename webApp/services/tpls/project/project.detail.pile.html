@@ -1,0 +1,43 @@
+<div class="pileContainer">
+	<form>
+		<% _.each(soilNails,function(pile){ %>
+			<div>
+				<div class="formColumn">
+					<label><%=pile.pileName%>: </label><input type="number" min=0 data-code="<%=pile.pileCode%>" data-label="<%=pile.pileName%>" data-id="<%=pile.id%>" name="" id="" value="<%=pile.pileNumber%>" class="txtInput userPile intInput" />
+				</div>
+			</div>
+		<% }) %>
+		<!--<div>
+			<div class="formColumn">
+				<label>人工挖孔桩数量 : </label><input type="number" name="" id="" value="" class="txtInput userPile" />
+			</div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>钻孔灌注桩数量 : </label><input type="number" name="" id="" value="" class="txtInput drillPile" />
+			</div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>钻孔灌注桩(后注浆)数量:</label><input type="number" name="" id="" value="" class="txtInput drillPileThen" />
+			</div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>管桩数量 : </label><input type="number" name="" id="" value="" class="txtInput pipePile" />
+			</div>
+		</div>-->
+		
+		<div>
+			<div class="formColumn" style="padding-left: 160px;">
+				<% if(isCreate) { %>
+					<input type="button" class="myBtn myBtn-primary save"  value="<%= App.Local.data['drawing-model'].Save || '保存' %>"/>
+				<% }else{ %>
+					<input type="button" class="myBtn myBtn-primary update"  value="<%= App.Local.data['drawing-model'].Save || '保存' %>"/>
+				<% } %>
+			</div>
+			<div class="formColumn"></div>
+		</div>
+	</form>
+</div>
+

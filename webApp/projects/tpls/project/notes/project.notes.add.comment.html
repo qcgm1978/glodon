@@ -1,0 +1,18 @@
+<span class="glyphicon glyphicon-remove addCommentBox-close" aria-hidden="true"></span>
+<div class="textareaBox">
+	<textarea id="addCommentTextarea" maxlength="1000" placeholder="<%= App.Local.data['drawing-model'].Pes || '请输入评论内容' %>"></textarea>
+</div>
+<div class="uploadListBox" id="uploadListBox">
+	<ul id="commentAttachmentListBox"></ul>
+</div>
+<div class="addCommentBottomBox">
+	<div class="uploadTypeBtn">
+		<form id="commentUploadImageForm" name="commentUploadImageForm" method="post" target="upload-iframe" enctype="multipart/form-data" encoding="multipart/form-data">
+		    <a href="javascript:;" class="uploadImg"></a>
+		    <a href="javascript:;" class="uploadFile"></a>
+		    <a href="javascript:;" class="uploadsnapshot"></a>
+		</form>
+		<iframe id="commentUploadIframe" name="upload-iframe" style="display: none;"></iframe>
+	</div>
+	<div class="uploadBtn"><button><%= App.Local.data['drawing-model'].Comment || '评论' %></button></div>
+</div>

@@ -1,0 +1,73 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "province": "上海市",
+      "project": [
+        {
+          "id": 1,
+          "projectNo": "PROJ_NO-01",
+          "name": "周浦万达项目",
+          "projectType": "1",
+          "estateType": "1",
+          "province": "上海市",
+          "region": "管理区域",
+          "longtude": 12.1231123112,
+          "latitude": 112.1231123112,
+          "complete": false,
+          "openTime": null,
+          "open": false,
+          "logo": "https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png",
+          "standard": false,
+          "standardId": null,
+          "createTime": 1457536342000,
+          "endTime": 0
+        },
+        {
+          "id": 784306105035936,
+          "projectNo": "PROJ_100",
+          "name": "宝山万达项目",
+          "projectType": "1",
+          "estateType": "1",
+          "province": "上海市",
+          "region": "管理分区",
+          "longtude": 12.1122333333,
+          "latitude": 123.1122333333,
+          "complete": false,
+          "openTime": 1457494233000,
+          "open": false,
+          "logo": "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1457501211&di=2e945039ac78c989d19",
+          "standard": false,
+          "standardId": null,
+          "createTime": 1457494233000,
+          "endTime": 0
+        }
+      ]
+    },
+    {
+      "province": "北京市",
+      "project": [
+        {
+          "id": 2,
+          "projectNo": "PROJ_NO-02",
+          "name": "国贸万达项目",
+          "projectType": "1",
+          "estateType": "1",
+          "province": "北京市",
+          "region": "管理区域2",
+          "longtude": 12.1231123112,
+          "latitude": 112.1231123112,
+          "complete": false,
+          "openTime": null,
+          "open": false,
+          "logo": "https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1457501211&di=2e945039ac78c989d19",
+          "standard": false,
+          "standardId": null,
+          "createTime": 1457536342000,
+          "endTime": 0
+        }
+      ]
+    }
+  ]
+}

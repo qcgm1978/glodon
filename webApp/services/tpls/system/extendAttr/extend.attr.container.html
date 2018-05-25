@@ -1,0 +1,30 @@
+<div class="topBar">
+    <span class="textSum"><span><%= App.Local.data['system-module'].Properties || '属性列表' %></span>(<span class="count">0</span>)</span>
+    <a href="javascript:void(0);" class="create"><%= App.Local.data['system-module'].New || '+ 新建' %></a>
+</div>
+<ul class="extendAttrList extendAttrListHeader">
+    <li class="item">
+        <div class="key left">
+            <%= App.Local.data['system-module'].Properties || '属性' %>key
+        </div>
+        <div class="attr left">
+            <%= App.Local.data['system-module'].Name || '属性名' %>
+        </div>
+        <div class="type left">
+            <%= App.Local.data['system-module'].Type || '类型' %>
+        </div>
+        <div class="linkAttr left">
+            <%= App.Local.data['system-module'].APs || '关联属性' %>
+        </div>
+        <div class="op left">
+            <%= App.Local.data['system-module'].Operation || '操作' %>
+        </div>
+    </li>
+</ul>
+<div class="extendAttrListBodybox">
+    <div class="extendAttrListBodScroll">
+        <ul class="extendAttrList extendAttrListBody">
+          
+        </ul>
+    </div>
+</div>

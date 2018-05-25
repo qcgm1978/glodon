@@ -1,0 +1,25 @@
+
+
+
+<% $.each(data.items,function(i,item){%> 
+    <tr class="<%= i%2==0 && 'odd' %>">
+        <td class="manifestIcon"> <i class="myIcon-inventory"></i> </td>
+        <td class="specialities"><%=item.specialty%></td>
+        <td class="category"><%=item.category%></td>
+        <td class="name"><%=item.name%></td>
+        <td class="batches"><%=item.batch%></td>
+        <td class="status"> <i class="statusIcon <%=item.status==1 && 'myIcon-circle-green' || 'myIcon-circle-red-border'   %>"></i></td>
+        <td class="hasBeenCount"><%=item.arrival%></td>
+        <td class="sumCount"><%=item.total%></td>
+        <td class="lastDate"><%=  new Date(item.latestArrivalTime).format('yyyy-MM-dd')  %></td>
+    </tr>
+<% }) %>
+
+
+<% if(data.items.length<=0){%>
+    
+    <tr>
+        <td colspan="9" class="noDataTd"><%= App.Local.data['drawing-model'].Ndd1 || '暂无数据' %></td>
+    </tr>
+    
+<%}%>

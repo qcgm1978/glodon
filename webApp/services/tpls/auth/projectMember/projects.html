@@ -1,0 +1,27 @@
+<div class="header">
+<div class="myDropDown projectDropDown" >
+	<span class="myDropText">  <span class="text"><%= App.Services.projectMember.selectData(data) %></span> <i class="myDropArrorw"></i> </span>
+		<ul class="myDropList" style="display: none;">
+			<li data-type='3' class="myItem">我管理的项目(<%=data.projectCount%>)</li>
+			<li data-type='1' class="myItem">我管理的标准模型(<%=data.modelCount%>)</li>
+			<li data-type='2' class="myItem">我管理的族库(<%=data.familyCount%>)</li>
+		</ul> 
+	</div>
+</div>
+
+<ul class="projectListWrap">
+<% _.each(data.items,function(item,index){ %>
+		<li class="project" data-pid="<%= item.id %>">
+			<div><% if(item.logoUrl) {%><img src="<%= item.logoUrl['small'] %>"> <%}%></div>
+			<div>
+				<h4 title="<%= item.name %>"><%= item.name %></h4>
+				<p>
+					<%= item.province %><%= item.city %>
+						<%= new Date(item.startTime).format("yyyy-MM-dd") %>—
+							<%= new Date(item.endTime).format("yyyy-MM-dd") %>
+				</p>
+			</div>
+		</li>
+	<% }) %>
+</ul>
+

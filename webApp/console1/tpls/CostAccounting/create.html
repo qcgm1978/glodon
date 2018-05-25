@@ -1,0 +1,41 @@
+<div class="consoleBox"><div class="consoleHeader">
+    算量上传</div>
+<div class="consoleContainer">
+    <form class="form-horizontal">
+        <!-- <div class="form-group">
+            <label for="inputtext3" class="col-sm-2 control-label"><%= App.Local.data['system-module'].Title || '标题' %></label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="title" value="2016版族库研发指令审批单">
+            </div>
+        </div> -->
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">项目ID</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="projectId">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">项目版本ID</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="projectVersionId" >
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">文件ID(多个用 ， 隔开)</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="filesId" >
+            </div>
+        </div>
+       
+        
+       
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" id="submit" class="btn btn-primary">提交</button>
+                 <button type="button" id="save" class="btn btn-primary"><%= App.Local.data['drawing-model'].Save || '保存' %></button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>

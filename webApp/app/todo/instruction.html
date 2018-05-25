@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>BIM平台说明</title>
+  <link rel="styleSheet" href="/topNav/css/topNav.less" />
+  <style type="text/css" media="screen">
+    body,
+    html,
+    div {
+      padding: 0;
+      margin: 0;
+    }
+
+    .text {
+      text-align: center;
+      font-size: 40px;
+      margin-top: 100px;
+      font-weight: bold;
+      color: #005BAC;
+    }
+    .micro-ie-tips{
+      background-image: none!important;
+      font:12px/1.5 tahoma,arial,宋体;
+      margin-bottom: 20px!important;
+      height: auto !important;
+      text-indent: 24px;
+    }
+  </style>
+</head>
+
+<body>
+<div id="topBar">
+  <div class="logo"><span class="text"></span></div>
+</div>
+<div class="browser-main" id="zhCNBox">
+  <p class="micro-ie-tips">  1、	登录平台后接触的一切资料、数据、信息、文档、模型、图片、造型、阶段性技术成果等均由【大连万达商业地产股份有限公司】享有完整的知识产权，【大连万达商业地产股份有限公司】有权针对泄露、披露前述技术秘密和商业秘密的行为或其他侵权行为依法追究侵权人的法律责任。
+  </p>
+  <p class="micro-ie-tips">  2、	登录者应当严格遵守所属单位与【大连万达商业地产股份有限公司】签订的项目合作协议和相关保密协议，绝对禁止将登录后接触到的万达集团享有知识产权的资料、数据、信息、文档、模型、图片、造型等一切事宜披露、泄露给第三方，包括非登录者本人以外的所属单位员工。
+  </p>
+  <p class="micro-ie-tips">  3、	未经【大连万达商业地产股份有限公司】许可，登录者不得对登录平台后接触的任何资料、数据、信息、文档、模型、图片、造型、阶段性技术成果等擅自复制、拷贝、拍照、截屏、录像。
+  </p>
+  <p class="micro-ie-tips">  4、	登录者不得将其专属的平台用户名和密码透露给任何第三方，承诺最大限度地保护登录数据不被泄露、披露。
+  </p>
+  <p class="micro-ie-tips">  5、	登录者应当确保登录平台运行环境的安全性，适时增加和完善必要的安全防卫措施，最大限度地防止登录平台被攻击、被盗用。
+  </p>
+  <p class="micro-ie-tips">  6、	必要时，登录者应当按照【大连万达商业地产股份有限公司】的书面要求，在【大连万达商业地产股份有限公司】与所属公司书面确定的、具有唯一识别码的计算机上进行登录操作，对于此类秘密，严禁复制、拷贝、拍照、截屏、录像及类似行为。
+  </p>
+</div>
+<div class="browser-main" id="enUsBox">
+  <p class="micro-ie-tips">  1、 登录平台后接触的一切资料、数据、信息、文档、模型、图片、造型、阶段性技术成果等均由【大连万达商业地产股份有限公司】享有完整的知识产权，【大连万达商业地产股份有限公司】有权针对泄露、披露前述技术秘密和商业秘密的行为或其他侵权行为依法追究侵权人的法律责任。
+  </p>
+  <p class="micro-ie-tips">  2、 登录者应当严格遵守所属单位与【大连万达商业地产股份有限公司】签订的项目合作协议和相关保密协议，绝对禁止将登录后接触到的万达集团享有知识产权的资料、数据、信息、文档、模型、图片、造型等一切事宜披露、泄露给第三方，包括非登录者本人以外的所属单位员工。
+  </p>
+  <p class="micro-ie-tips">  3、 未经【大连万达商业地产股份有限公司】许可，登录者不得对登录平台后接触的任何资料、数据、信息、文档、模型、图片、造型、阶段性技术成果等擅自复制、拷贝、拍照、截屏、录像。
+  </p>
+  <p class="micro-ie-tips">  4、 登录者不得将其专属的平台用户名和密码透露给任何第三方，承诺最大限度地保护登录数据不被泄露、披露。
+  </p>
+  <p class="micro-ie-tips">  5、 登录者应当确保登录平台运行环境的安全性，适时增加和完善必要的安全防卫措施，最大限度地防止登录平台被攻击、被盗用。
+  </p>
+  <p class="micro-ie-tips">  6、 必要时，登录者应当按照【大连万达商业地产股份有限公司】的书面要求，在【大连万达商业地产股份有限公司】与所属公司书面确定的、具有唯一识别码的计算机上进行登录操作，对于此类秘密，严禁复制、拷贝、拍照、截屏、录像及类似行为。
+  </p>
+
+</div>
+</body>
+<script type="text/javascript" src="../login/js/jquery-1.12.0.min.js"></script>
+<script type="text/javascript">
+  $(function(){
+    var language = navigator.language || navigator.userLanguage;
+    var zhCNBox = $("#zhCNBox");
+    var enUsBox = $("#enUsBox");
+    var title = $("title");
+    var topBar = $("#topBar");
+    var titleTxt = "万达筑云项目管理平台";
+    if(localStorage.getItem("isEnglish")=="true"){
+      language = "en-US";
+    }else if(localStorage.getItem("isEnglish")=="false"){
+      language = "zh-CN";
+    }
+    topBar.find(".logo").css("background","url(/static/dist/images/topNav/images/logo_en.png) no-repeat 0 10px")
+    if(language === "fr-FR"){
+        enUsBox.css("display","none");
+        zhCNBox.css("display","block");
+        titleTxt = "万达筑云项目管理平台";
+        topBar.find(".logo").css("background","url(/static/dist/images/topNav/images/logo.png) no-repeat 0 10px")
+    }else if(language === "en-US" || language === "en-GB"){
+        zhCNBox.css("display","none");
+        enUsBox.css("display","block");
+        titleTxt = "WBIM Project Managment Platform Description";
+        topBar.find(".logo").css("background","url(/static/dist/images/topNav/images/logo_en.png) no-repeat 0 10px")
+    }else if(language === "zh-CN"||language === "zh"){
+        enUsBox.css("display","none");
+        zhCNBox.css("display","block");
+        titleTxt = "万达筑云项目管理平台";
+        topBar.find(".logo").css("background","url(/static/dist/images/topNav/images/logo.png) no-repeat 0 10px")
+    }
+    title.html(titleTxt);
+  })
+</script>
+</html>

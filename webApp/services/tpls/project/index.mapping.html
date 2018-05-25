@@ -1,0 +1,25 @@
+<div class="header" data-i18n="data.system-module.PMg">
+    <%= App.Local.data['system-module'].PMg ||'项目映射' %>
+</div>
+<ul class="list listHeader">
+    <li class="item">
+        <div class="modules left"><%= App.Local.data['system-module'].Module ||'模块' %></div>
+        <div class="name left"><%= App.Local.data['system-module'].Name ||'项目名称' %></div>
+        <div class="code left"><%= App.Local.data['system-module'].Code ||'项目代码' %></div>
+        <div class="op left"><%= App.Local.data['system-module'].Operation ||'操作' %></div>
+    </li>
+</ul>
+<div class="mappingContainer">
+    <div class="mappingScroll">
+        <ul class="list listBody">
+            <% _.each(items,function(i){ %>
+            	<li class="item">
+	                <div class="modules left"><%= i.module %></div>
+	                <div class="name left"><%= i.projectName||'--' %></div>
+	                <div class="code left"><%= i.code||'--' %></div>
+	                <div class="op left"><%=i.op||'--' %></div>
+	            </li>
+            <% }) %>
+        </ul>
+    </div>
+</div>

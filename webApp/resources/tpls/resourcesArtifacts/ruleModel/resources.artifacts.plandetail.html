@@ -1,0 +1,7 @@
+<div class="item">
+    <div class="left">
+        <i class="ruleCheck <%= obj.ruleContain == 1 ? 'all' : (obj.ruleContain == 3 ? 'half' : '')%>"></i>
+        <%= obj.code %></div>
+    <div class="right count">(<%= obj.count ?  obj.count  : "0" %>)</div>
+    <div class="name"><%= obj.name %></div>
+</div>

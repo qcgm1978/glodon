@@ -1,0 +1,14 @@
+<% if(obj.state.length>0) {%>
+	<% _.each(obj.state,function(item){%>
+		<li class="liItem">
+			<span title="<%= item.name %>">
+				<% if(item.selected){ %>
+					<label data-projectId="<%= item.projectId %>" class="selectCheckBox"></label>
+				<% }else{ %>
+					<label data-projectId="<%= item.projectId %>"></label>
+				<% }%>
+				<%= item.name %>
+			</span>
+		</li>
+	<%})%>
+<%}%>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/dist/components/device/css/device.css">
+    <script src="/static/dist/components/device/js/device.js"></script>
+</head>
+<body>
+<div id="deviceSelector" class="deviceSelector ieExtend">
+    <!-- <div id="modelView" class="model"></div> -->
+    <div class="rightSilderBar">
+        <div class="before">展开</div>
+        <div class="hedaerSearch">
+          <span class="searchToggle">选择筛选条件</span>
+          <span class="clearSearch">清除条件</span>
+          <span class="groupRadio">
+            <label class="btnCk"><i class="iconPic"></i>显示搜索结果对应位置</label>
+          </span>
+        </div>
+        <div class="searchDetail">
+          <div class="searchOptons">
+            <div class="optonLine">
+              <div class="myDropDown floorOption">
+                  <span class="myDropText">
+                  <span>楼层：</span> <span class="text">全部</span> <i class="myDropArrorw"></i> </span>
+                  <ul class="myDropList">
+                  </ul>
+              </div>
+              <div class="searchName">
+                  <span>位置：</span>
+                  <input type="text" class="txtSearchName" placeholder="请输入关键字"/>
+              </div>
+            </div>
+            <div class="optonLine btnOption">
+              <input type="button" class="myBtn myBtn-primary btnFilter" value="筛选" />
+            </div>
+          </div>
+        </div>
+        <div class="headerBar"></div>
+        <div class="contentbar">
+            <div class="contentbarBox">
+              <div class="listTheader">
+                <table>
+                  <tr>
+                    <td class="checkbox"><input class="checkAllBox" type="checkbox"></td>
+                    <td>楼层</td>
+                    <td>位置</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="listTBody">
+                <table  cellspacing="0">
+                  <tbody class="contentList">
+                  </tbody>
+                </table>
+              </div>
+        </div>
+        <div class="footBar">
+            <div class="footPage">
+                <div class="sumDesc"></div>
+                <div class="listPagination">正在加载...</div>
+            </div>
+            <div class="footTool">
+                <a class="mmh-btn confirm">确认</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function GetRequest() {
+        var url = location.search; //获取url中"?"符后的字串
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
+    }
+    var Request = GetRequest();
+
+    var _host='http://' + location.host;
+
+    $("#deviceSelector").css({
+        height:Request.height,
+        width:Request.width
+    })
+    var viewer=null;
+    function init(data){
+        data=JSON.parse(data);
+        viewer = new DeviceSelection({
+            sourceId: Request.sourceId,
+            etag: Request.etag,
+            projectId: Request.projectId,
+            projectVersionId: Request.projectVersionId,
+            token: Request.token,
+            appKey: Request.appKey,
+            host: _host,
+            height:Request.height,
+            width:Request.width,
+            data:data.data,
+            isShowConfirm:data.setting.isShowConfirm,
+            selectedData:data.selectedData,
+            //res 选择的检查点数据
+            callback: function (res) {
+            }
+        });
+    }
+
+    function getData(){
+        return JSON.stringify(viewer.getData());
+    }
+    window.onload=function(){
+        if (navigator.userAgent.indexOf("QtWebEngine/5.7.0") > -1) {
+            window.open("/?commType=onLoad");
+        }
+    }
+</script>
+</body>
+</html>

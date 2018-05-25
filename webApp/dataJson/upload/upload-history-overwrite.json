@@ -1,0 +1,35 @@
+{
+  "code": 1,
+  "message": "success",
+  "data": {
+    "list": [
+      {
+        "id": "p1budd58sipt78tbkv15gvl3u6",
+        "name": "服务（建议反馈）@1x.png",
+        "size": 233450,
+        "fullPath": "/服务（建议反馈）@1x.png",
+        "loaded": 0,
+        "percent": 0,
+        "status": 1
+      },
+      {
+        "id": "p1budgeuat18o1eq2mn7l8p1jej5",
+        "name": "wanda.jpg",
+        "size": 38474,
+        "fullPath": "/t1/t2/t3/wanda.jpg",
+        "loaded": 0,
+        "percent": 0,
+        "status": 1
+      },
+      {
+        "id": "p1budgeuauv0n27n54p1aeb1bet6",
+        "name": "wanda - 副本.jpg",
+        "size": 38474,
+        "fullPath": "/t1/t2/t3/wanda - 副本.jpg",
+        "loaded": 0,
+        "percent": 0,
+        "status": 1
+      }
+    ]
+  }
+}

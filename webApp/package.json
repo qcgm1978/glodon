@@ -1,0 +1,39 @@
+{
+  "name": "wanda",
+  "version": "1.0.0",
+  "description": "backbone for wanda project",
+  "main": "fis-conf.js",
+  "devDependencies": {
+    "fis-parser-babel-6.x": "^1.0.0",
+    "fis-parser-less": "^0.1.3",
+    "fis3": "^3.3.29",
+    "fis3-postpackager-loader": "^1.3.13"
+  },
+  "watch": {
+    "test": "test/*.js"
+  },
+  "scripts": {
+    "start": "fis3 release -wL",
+    "release": "fis3 release",
+    "nginx": "d:&&cd nginx-1.8.0&&echo 'begin nginx' && nginx",
+    "macSN": "sudo brew services start nginx",
+    "macStopN": "sudo nginx -s stop",
+    "macRN": "sudo brew services restart nginx",
+    "nginxR": "d:&&cd nginx-1.8.0&&echo 'begin nginx' && nginx -s reload",
+    "stop": "d:&&cd nginx-1.8.0&&echo 'begin stop'&&nginx -s stop",
+    "build": "fis3 release && fis3 server open",
+    "open": "fis3 server open",
+    "test-server": "d:&&cd nginx-1.8.0\\conf&&del bim.conf&&copy bim-test.conf bim.conf",
+    "uat": "d:&&cd nginx-1.8.0\\conf&&del bim.conf&&copy bim-uat.conf bim.conf",
+    "host": "ipconfig /flushdns",
+    "reset-last": "git reset --hard HEAD@{1}",
+    "test": "mocha test/**/**.spec.js",
+    "watch": "npm-watch"
+  },
+  "keywords": [
+    "backbone",
+    "wanda"
+  ],
+  "author": "zp",
+  "license": "ISC"
+}

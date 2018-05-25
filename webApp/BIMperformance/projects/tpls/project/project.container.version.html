@@ -1,0 +1,62 @@
+ 
+<%
+	var VersionGroups = obj,
+				gCount = VersionGroups.length,
+				cVersionGroup;
+%>
+
+<% for (var i = 0; i < gCount; i++) { %>
+	
+	<% cVersionGroup = VersionGroups[i]; %>
+		 
+		<% if(cVersionGroup.versionType==1){%>
+			<div class="releaseVersionBox">
+		<%}else if(cVersionGroup.versionType==2){%> 
+			<div class="changeVersionBox">
+		<%}else{%>
+			<% continue; %>
+		<%}%>
+
+	<%	var cVersionDate, VersionsDates = cVersionGroup.item,
+					dateCount = VersionsDates.length; %> 
+		<%for (var j = 0; j < dateCount; j++) { %>		
+			<% if(j === 0){%>
+				<% cVersionDate = VersionsDates[j]; %>
+				<div class="versionNoheader versionNoheaderShow">
+					<div class="header"><%= new Date(cVersionDate.date).shortFormat() %></div>
+					<%var Versions = cVersionDate.version,
+						vCount = Versions.length,
+						cVersion; %>
+					<div class="showContentList">
+						<% for (var k = 0; k < vCount; k++) { %>
+							<% cVersion = Versions[k]; %>  
+						  	<a class="item" href="#projects/<%= cVersion.projectId %>/<%= cVersion.id %>" projectId >
+						      <span class="vName overflowEllipsis"><%=cVersion.name%></span>
+					          <span class="vStatus overflowEllipsis"><%= App.Comm.formatStatus(cVersion.status,1) %></span>
+					          <span class="vDate overflowEllipsis"><%= new Date(cVersion.createTime).format("yyyy-MM-dd") %></span> 
+					        </a>
+			    		<% }%>
+			    	</div>
+		    	</div>
+			<%}else{%>
+				<% cVersionDate = VersionsDates[j]; %>
+				<div class="versionNoheader">
+					<div class="header"><%= new Date(cVersionDate.date).shortFormat() %></div>
+					<%var Versions = cVersionDate.version,
+						vCount = Versions.length,
+						cVersion; %>
+					<div class="showContentList">
+						<% for (var k = 0; k < vCount; k++) { %>
+							<% cVersion = Versions[k]; %>  
+						  	<a class="item" href="#projects/<%= cVersion.projectId %>/<%= cVersion.id %>" projectId >
+						      <span class="vName overflowEllipsis"><%=cVersion.name%></span>
+					          <span class="vStatus overflowEllipsis"><%= App.Comm.formatStatus(cVersion.status,1) %></span>
+					          <span class="vDate overflowEllipsis"><%= new Date(cVersion.createTime).format("yyyy-MM-dd") %></span> 
+					        </a>
+			    		<% }%>
+			    	</div>
+		    	</div>
+			<% }%>
+		<% }%>
+		</div>
+<% }%>

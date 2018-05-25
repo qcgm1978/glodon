@@ -1,0 +1,103 @@
+#logContainer{
+  border-top: 1px solid #ccc;
+}
+.logSearch { margin-left: 20px;
+  .searchHeadText { position: relative; height: 24px; margin-right: 105px;
+    & span { position: absolute; margin-top: -4px; }
+    .vLine { position: absolute; left: 52px; right: 2px; border-top: 1px #ddd solid; top: 6px; }
+  }
+  & input{border: 1px solid #ccc;}
+  .txtSearch { width: 165px; }
+  .btnSearch {
+    border: 1px solid #ccc; display: inline-block; width: 80px; height: 30px; text-align: center; line-height: 30px; color: #595959;  letter-spacing: 10px; padding-left: 9px; box-sizing: border-box; cursor: pointer;
+    &:hover {  }
+    i{
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      margin-right: 4px;
+      top: 3px;
+      position: relative;
+      background: url(../images/comm/images/commIcon.png) no-repeat -40px -459px;
+    }
+  }
+  .btnClear { cursor: pointer;  }
+  .seniorSearch { float: right; margin-right: 19px; width: 78px; cursor: pointer; margin-top: -58px;
+    i { font-size: 16px; margin-left: 5px; vertical-align: -2px; }
+    &.down { margin-top: -228px; }
+  }
+  .advancedQueryConditions {
+    .item { height: 50px; line-height: 50px;
+      & .searchLabel { width:auto; margin: 0 10px 0 0; display: inline-block; }
+      >*{
+        margin-right: 10px;
+      }
+    }
+  }
+  .dateBox { display: inline-block; position: relative;
+    .iconCal {
+      cursor: pointer; background: url(../images/comm/images/commIcon.png) no-repeat 6px -232px; position: absolute; right: 1px; width: 28px; height: 28px; top: 11px; background-color: #eee; border-left: 1px #ccc solid; }
+    input { height: 30px; line-height: 30px; padding-left: 8px; broder: 1px #ddd solid; width: 115px; padding-right: 30px;background:transparent; }
+  }
+  & .moreSeachText, & .myDropText { width: 126px; }
+  & .myDropList { width: 180px; }
+  .pickProjectType{
+    .text{
+      color: #aaa;
+    }
+  }
+  .typeItem{
+    .text{
+      color: #aaa;
+    }
+  }
+}
+
+#logModes { position: absolute; left: 0px; right: 0px; top: 152px; bottom: 0px;
+  .proListSite { position: relative; height: 100%; }
+  .proListContent { position: absolute; top: 40px; left: 20px; right: 20px; bottom: 40px; }
+  .pagingBox{position: absolute;bottom: 0px;left:20px;right: 20px;line-height: 40px;
+    .sumDesc { float: left; margin-left: 20px; }
+    .listPagination { float: right; margin-right: 20px; }
+    .pagination {margin: 0px;}
+  }
+  .proListBox, .proListBoxHeader { .loading { font-size: 14px; color: #ccc; text-align: center;
+    & div { margin-top: 20px; }
+  }
+    span { display: inline-block; vertical-align: top;font-size: 14px; a{font-size: 14px;}}
+    .header, .item { height: 36px; border: 1px #ddd solid; border-width: 1px 0px; background-color: #EEE; line-height: 36px; margin: 0px 20px;color: #999;
+      .logTime { width: 15%; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;  padding-left: 15px; }
+      .logType { width: 10%; white-space:nowrap;overflow:hidden;text-overflow:ellipsis; }
+      .logName { width: 26%; white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+      .operator { width: 10%; white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+      .action { width: 34%;  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+      i{
+        display: inline-block;
+        width: 8px;
+        height: 14px;
+        vertical-align: middle;
+        margin-left: 6px;
+        cursor: pointer;
+        background:url(../images/arrowDown.png) center no-repeat;
+        &.descClass{//降序
+          background:url(../images/arrowUp.png) center no-repeat;
+        }
+      }
+    }
+    .item { margin-right: 0;margin-left: 0px; background-color: #fff; border-bottom: 1px #ddd solid; height: 46px; line-height: 46px; border-top: 0;margin:0;color: #666;
+      .proImg { text-align: center;
+        img { margin-top: 4px; }
+      }
+      .proOp { a { color: #006CCD; }
+      }
+    }
+  }
+
+  &.projectModesDown { top: 355px; }
+}
+#account,#name{
+  line-height: 18px;
+}
+.item .myDropDown .myDropText,.item .myDropDown .myDropList{
+  //width: 95px!important;
+}

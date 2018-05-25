@@ -1,0 +1,43 @@
+<div class="projectBg">
+	<div class="projectLogo">
+		<img src="<%= logo %>"/>
+		<label data-image='<%= logo %>'><%= App.Local.data['system-module'].MPe ||修改图片 %></label>
+	</div>
+</div>
+
+<div class="baseInfoWrap">
+	<div class="item"> 
+	<span class="key"  data-i18n="data.drawing-model.PNe1"><%= (App.Local.data['system-module'].PNe1 ||项目名称) %></span><span class="value"><%= name %></span>
+</div>
+
+<div class="item"> 
+	<span class="key"><%= (App.Local.data['system-module'].PRo || 项目代码) %></span><span class="value"><%= projectNo %></span>
+</div>
+
+<div class="item"> 
+	<span class="key" data-i18n="data.drawing-model.PMe1"><%= (App.Local.data['system-module'].PMe || 项目模式) %></span><span class="value"><%= App.Services.ProjectCollection.methods.projectMode(estateType) %></span>
+</div>
+
+<div class="item"> 
+	<span class="key" data-i18n="data.drawing-model.PTe"><%= (App.Local.data['system-module'].PTe || 项目类型) %></span><span class="value"><%= App.Services.ProjectCollection.methods.projectType(subType) %></span>
+</div>
+
+
+<div class="item"> 
+	<span class="key" data-i18n="data.drawing-model.Province"><%= (App.Local.data['system-module'].PCy || 省份) %></span><span class="value"><%= province %></span>
+</div>
+
+
+<div class="item"> 
+	<span class="key"><%= (App.Local.data['system-module'].City || 城市) %></span><span class="value"><%= region %></span>
+</div>
+
+
+<div class="item"> 
+	<span class="key" data-i18n="data.drawing-model.DDd"><%= (App.Local.data['system-module'].DDd || 摘牌日) %></span><span class="value"><%= delistingDate?new Date(delistingDate).format("yyyy-MM-dd"):'--' %></span>
+</div>
+
+<div class="item"> 
+	<span class="key" data-i18n="data.drawing-model.ODe"><%= (App.Local.data['system-module'].ODe || 开业日) %></span><span class="value"><%=  openTime?new Date(openTime).format("yyyy-MM-dd"):'--' %></span>
+</div>
+</div>

@@ -1,0 +1,14 @@
+<div class="name">
+    <span class="memCheck"></span>
+    <i class="rohead <%= obj.orgId ? 'oz' : '' %>"></i>
+    <span><%= obj.name %></span>
+</div>
+<div class="fun">
+    <% if (obj.functions ) { for( var i = 0 ; i < obj.functions.length ; i++) {%>
+    <span class="<%= obj.functions[i].id==1 ?  'adm' : '' %>"><%= obj.functions[i].name %></span>
+    <% } } else if(obj.namePath){ %>
+    <i title="<%= obj.namePath %>"><%= obj.namePath %></i>
+    <%}else{%>
+    <%= '-' %>
+    <%} %>
+</div>

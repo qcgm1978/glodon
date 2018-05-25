@@ -1,0 +1,34 @@
+<div class="serviceHeader">
+    <ul class="crumbs">
+        <!--
+        <li class="item"> <a href="#services">在线服务</a></li>
+        <li class="item"><i class="myIcon-left-arr iconLeft"></i>应用管理</li>
+        -->
+        <li class="item" data-i18n="data.system-module.AMt1"><i class="iconLeft"></i>应用管理</li>
+    </ul>
+</div>
+<div class="appContainer">
+    <div class="appContent">
+        <div class="topBar">
+            <span class="textSum"><span data-i18n="data.system-module.ALt">应用列表</span>(<span class="count">0</span>)</span>
+            <a href="javascript:void(0);" class="create" data-i18n="data.system-module.New">+ 新建</a>
+        </div>
+        <ul class="appList listHeader">
+            <li class="item">
+                <div class="left name" data-i18n="data.system-module.Name">应用名称</div>
+                <div class="left desc" data-i18n="data.system-module.Details">详情</div>
+                <div class="left appKey">appkey</div>
+                <div class="left appSecret">appsecret</div>
+                <div class="left status" data-i18n="data.system-module.Status"><%= App.Local.data['drawing-model'].Ss1 || '状态：' %></div>
+                <div class="left op" data-i18n="data.system-module.Operation">操作</div>
+            </li>
+        </ul>
+        <div class="appListContainer">
+            <div class="appListScroll">
+                <ul class="appList listBody"> 
+                      
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

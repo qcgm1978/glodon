@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+<meta http-equiv="cache-control" content="max-age=7200" />
+<head>
+	
+</head>
+<body>
+<img src="1.png"/>
+<button id="btn">ffff</button>
+<a href="ms-word://aaa">我的应用</a>
+</body>
+</html>
+<script type="text/javascript">
+
+  var frm = null;
+  var timer = null
+
+function DownLoad(url)
+{
+    frm = document.createElement("IFRAME");
+    frm.style.display = "none";
+    document.body.appendChild(frm);
+    frm.contentWindow.location.href = url
+    timer =  setInterval(checkload,200);
+}
+function checkload(){
+    if( frm.contentWindow.document.readyState =="complete")
+    {
+        frm.contentWindow.document.execCommand("SaveAs");
+       clearInterval(timer)
+    }
+    document.body.removeChild(frm);
+}
+
+//DownLoad("1.png");
+
+
+/*
+function openwin(){
+	var OpenWindow;
+　　OpenWindow = window.open('','','width=200,height=100')
+　　//写成一行
+　　OpenWindow.document.write("<TITLE>例子</TITLE>");
+	OpenWindow.document.write("<head>");
+	OpenWindow.document.write("<meta name='KEYWORDS' content='Content-Type image/png'>");
+	OpenWindow.document.write("</head>");
+　　OpenWindow.document.write("<BODY BGCOLOR=#ffffff>");
+　　OpenWindow.document.write("<h1>Hello!</h1>");
+　　OpenWindow.document.write("New window opened!");
+　　OpenWindow.document.write("</BODY>");
+　　OpenWindow.document.write("</HTML>");
+　　OpenWindow.document.close();
+}
+*/
+/*
+function openwin(){
+document.write("<TITLE>例子</TITLE>");
+document.write("<head>");
+document.write('<meta http-equiv="Content-Type" Content="application/msword; Charset=gb2312"/>');
+document.write("</head>");
+document.write("<BODY BGCOLOR=#ffffff>");
+document.write("<h1>Hello!</h1>");
+document.write("<img src='1.png' />");
+document.write("</BODY>");
+document.write("</HTML>");
+document.close();
+}
+
+document.getElementById("btn").onclick = function(){
+	openwin();
+
+}
+*/
+
+var array = ['武汉', '北京', '上海', '天津'];
+resultValue = array.sort(
+    function compareFunction(param1, param2) {
+        return param1.localeCompare(param2);
+    }
+);
+console.log(resultValue);
+
+
+function setCookie(name, value) {
+
+    var Days = 0.002,
+      exp = new Date();
+    //exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+    exp.setTime(exp.getTime() + 5000);
+
+    doMain = location.host;
+    alert(doMain);
+    document.cookie = name + "=" + value + ";expires=" + exp.toGMTString() + ";domain=" + doMain + ";path=/";
+    console.log(document.cookie);
+}
+
+
+//setCookie("aaa","bbb");
+
+</script>

@@ -1,0 +1,19 @@
+{
+    "code": 0,
+    "message": "success",
+    "data": {
+        "page": {
+            "pageNo": 1,
+            "pageSize": 2,
+            "totalCount": -1
+        },
+        "list": [{
+            "floor": "floor1",
+            "depth": 15,
+            "leftID": "36B4D91F-9A58-4016-B608-C070E661A9FA",
+            "rightID": "F510B43C-D2CC-4A00-BDDE-CA4FDCC5ED84",
+            "intBoxMax": [128.40000000000001, 129.88, 899.5],
+            "intBoxMin": [125.40000000000001, 125.54000000000001, 879.5]
+        }]
+    }
+}

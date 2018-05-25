@@ -1,0 +1,74 @@
+<div class="consoleBox">
+  <div class="consoleHeader">
+    2.5	验收合格数据</div>
+  <div class="consoleContainer">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">隐患Id</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p11" value="">
+        </div>
+      </div>
+
+
+      <!--<div class="form-group">-->
+        <!--<label for="inputPassword3" class="col-sm-2 control-label">项目</label>-->
+        <!--<div class="col-sm-10">-->
+          <!--<select class="form-control referenceResources" id="s11">-->
+            <!--<option value="0">请选择</option>-->
+          <!--</select>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">过程/开业验收ID</label>
+        <div class="col-sm-10">
+          <input type="text" class="form-control" id="p12" value="">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword3" class="col-sm-2 control-label">隐患检查类别</label>
+        <div class="col-sm-10">
+          <select class="form-control referenceResources" id="s12">
+            <option value="0">随机</option>
+            <option value="1">过程检查</option>
+            <option value="2" title="<%= App.Local.data['drawing-model'].PAe || '开业验收' %>"><%= App.Local.data['drawing-model'].PIe || '开业验收' %></option>
+            <option value="3">入伙验收</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <!--<label for="inputPassword3" class="col-sm-2 control-label"></label>-->
+        <div class="col-sm-10">
+                    <textarea name="" id="data" cols="30" rows="30">
+        {
+        "id": 1,
+        "projectCode": "2196E47F-FACC-45F4-B835-577C7BC65BEA",
+        "acceptanceType": 1,
+        "acceptanceId": 12345,
+        "presetPointComponentId": "be9bf30f15eb677b705b61c1b90599d2.997d11b5b901ef4e47e15fb095fcd948"
+    }
+
+                    </textarea>
+                     <textarea name="" id="" cols="30" rows="30">
+            [{
+id	隐患Id	String	质监系统提供的唯一ID
+projectCode	项目代码	String	质监系统里的项目ID，同步之前需与BIM平台建立映射关系
+acceptanceType	隐患检查类别	int	0随机 1过程检查 2开业验收 3入伙验收
+acceptanceId	过程/开业验收ID	String
+presetPointComponentId	预设点构件ID	String
+
+            }]
+                    </textarea>
+                                        <textarea name="" id="result" cols="30" rows="30">
+
+                    </textarea>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="button" id="submit" class="btn btn-primary">提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

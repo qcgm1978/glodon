@@ -1,0 +1,79 @@
+
+
+            <div class="bdB-c">
+                <h2>基本信息</h2>
+                <div class="head" style="background-image: url(<%= info.user.photoUrl%>) ;"></div>
+                <ul class="baseInfo">
+                    <li><span>姓名：</span><%= info.user.name %></li>
+                    <li><span>账号：</span><%= info.user.loginName %></li>
+                    <li><span>职务：</span><%= info.user.position %></li>
+                    <li><span>部门：</span><%= info.user.org[0]['name'] %></li>
+                </ul>
+            </div>
+            <div class="bdB-c proe ">
+                <h2>项目权限<span class="edit"></span></h2>
+                <ul>
+                    <% if(info.authType==2 && info.area.length){ %>
+                    <% for(var i=0;i<info.area.length;i++){ %>
+                    <li><div class="name"><%= info.area[i] %></div><div class="time"> &nbsp </div><div> &nbsp </div></li>
+
+                    <% }}else if(info.authType==1 && info.project.length){ %>
+                    <% for(var i=0;i<info.project.length;i++){ %>
+                    <li><div class="name"><a href="#projects/<%= info.project[i]['id'] %>/<%= info.project[i]['version']!=null?info.project[i]['version']['id']:0 %>"><%= info.project[i]['name'] %></a></div><div class="time"><%= new Date(info.project[i]['startTime'] || 0).Format("yyyy-MM-dd")%><%= info.project[i]['openTime']?"--"+new Date(info.project[i]['endTime']).Format("yyyy-MM-dd"):''%></div><div class="province"><%= info.project[i]['province']||'无' %></div></li>
+
+                   <% }}else if(info.authType==3){ %>
+                    <li><div class="name">所有项目</div><div class="time"> &nbsp </div><div> &nbsp </div></li>
+
+                  <% }else { %>
+                    <li><span>该用户还没有项目权限,<b class="link">点此可添加项目</b></span></li>
+                  <% } %>
+
+                </ul>
+            </div>
+
+            <div class="bdB-c standard">
+              <h2>标准模型库权限<span class="edit"></span></h2>
+              <ul>
+                <% if(info.model.length){ %>
+
+                <% for(var i=0;i<info.model.length;i++){ %>
+                <li><div class="name"><%= info.model[i]['name'] %></div><div class="designunit"><%= info.model[i]['designUnit']||"无" %></div><div class="time"><%= new Date(info.model[i]['createTime']).Format("yyyy-MM-dd") %></div></li>
+
+                <% }}else{ %>
+                <li><span>该用户还没有标准模型权限,<b class="link">点此可添加标准模型</b></span></li>
+                <% } %>
+
+              </ul>
+            </div>
+
+            <div class="bdB-c fam">
+              <h2>族库权限<span class="edit"></span></h2>
+              <ul>
+                <% if(info.family.length){ %>
+
+                <% for(var i=0;i<info.family.length;i++){ %>
+                <li><div class="name"><%= info.family[i]['name'] %></div><div  class="designunit"><%= info.family[i]['designUnit']||"无" %></div><div  class="time"><%= new Date(info.family[i]['createTime']).Format("yyyy-MM-dd") %></div></li>
+
+                <% }}else{ %>
+
+                <li><span>该用户还没有族库权限,<b class="link">点此可添加族库</b></span></li>
+                <% } %>
+
+              </ul>
+            </div>
+            <div class="bdB-c oz">
+                <h2>部门权限<span class="edit"></span></h2>
+                <div class="keyHead"></div>
+                <ul>
+                  <% if(info.org.length){ %>
+
+                    <% _.each(info.org,function(org){ %>
+                      <li><div class="name"><%= org.name %></div><div class="path"><%= org.namePath %></div></li>
+                      <% }) %>
+                  <% }else { %>
+                  <li><span>该用户还没有可以管理的部门,<b class="link">点此可添加部门</b></span></li>
+                  <% } %>
+                </ul>
+            </div>
+
+

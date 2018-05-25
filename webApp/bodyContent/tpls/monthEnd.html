@@ -1,0 +1,4 @@
+<td width="40%" ><span class="title" title="<%= planName||'--' %>"><%= planName||"--" %></span></td>
+<td width="40%"><a href="<%=App.API.vendor()+itemUrl%>"  target="_blank" class="desc" title="<%= taskName||'--' %>"><%= taskName||"--" %></a></td>
+<td class="lev"  width="25px"><span class="level"><%= taskLevel||"0" %></span></td>
+<td class="time"  width="100px"><span class="receivedTime"><%= planFinishDate?new Date(planFinishDate).format("yyyy-MM-dd"):'--' %></span></td>

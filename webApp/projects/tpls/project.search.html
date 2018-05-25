@@ -1,0 +1,124 @@
+<div class="searchHeadText">
+    <div class="vLine"></div>
+    <span ><%= App.Local.data['drawing-model'].QCn || '查询条件' %></span>
+</div>
+<div class="quickSearch">
+    <span class="textSearch searchLabel"  data-i18n="data.drawing-model.PNe1">项目名称：</span>
+    <input type="text" placeholder="请输入项目名称" class="txtSearch txtInput" data-i18n="[placeholder]data.drawing-model.Pee"/>
+    <span class="btnSearch"><%= App.Local.data['drawing-model'].Query || '查询' %></span>
+</div>
+<div class="advancedQueryConditions">
+    <div class="item">
+        <span class="searchLabel" data-i18n="data.drawing-model.PTe">项目类型：</span>
+        <div class="myDropDown pickProjectType">
+            <span class="myDropText">  <span class="text"  ><%= App.Local.data['drawing-model'].Pst || '请选择' %></span> <i class="myDropArrorw"></i> </span>
+            <ul class="myDropList">
+                <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                 <% _.each(App.Projects.projectType,function(item,i){ if(i!=0) { %>
+                    <li class="myItem" data-val='<%= i %>'><%=item%></li>
+                <% }}) %>
+            </ul>
+        </div>
+        <span class="searchLabel i18n-ie-margin" data-i18n="data.drawing-model.PMe1">项目模式：</span>
+        <div class="myDropDown pickCategory">
+            <span class="myDropText">  <span class="text"  ><%= App.Local.data['drawing-model'].Pst || '请选择' %></span> <i class="myDropArrorw"></i> </span>
+            <ul class="myDropList">
+                <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                <% _.each(App.Projects.projectModel,function(item,i){ if(i!=0) { %>
+                    <li class="myItem" data-val='<%= i %>'><%=item%></li>
+                <% }}) %>
+            </ul>
+        </div>
+        <span class="searchLabel" data-i18n="data.drawing-model.OTe1">项目业态：</span>
+        <div class="myDropDown projectStatus">
+            <span class="myDropText">  <span class="text"  ><%= App.Local.data['drawing-model'].Pst || '请选择' %></span> <i class="myDropArrorw"></i> </span>
+            <ul class="myDropList">
+                <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                <li class="myItem" data-val='8'>综合体</li>
+                <li class="myItem" data-val='16'>酒店</li>
+                <li class="myItem" data-val='32'>文化旅游</li>
+            </ul>
+        </div>
+        <span class="searchLabel" data-i18n="data.drawing-model.MAa">管理分区：</span>
+        <div class="myDropDown pickManager">
+            <span class="myDropText">  <span class="text"  ><%= App.Local.data['drawing-model'].Pst || '请选择' %></span> <i class="myDropArrorw"></i> </span>
+            <ul class="myDropList">
+                <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                <li class="myItem" data-val='北区'>北区</li>
+                <li class="myItem" data-val='中区'>中区</li>
+                <li class="myItem" data-val='南区'>南区</li>
+                <li class="myItem" data-val='文旅'>文旅</li>
+                <li class="myItem" data-val='境外'>境外</li>
+            </ul>
+        </div>
+        <!-- <span class="searchLabel">是否完成：</span>
+        <span class="groupRadio">
+            <label class="btnRadio" data-val='true'><i class="iconPic"></i>
+             是</label>
+               <label class="btnRadio" data-val='false'><i class="iconPic"></i>
+             否</label>
+        
+        </span> -->
+
+       <!--  <span class="groupRadio2">
+            <label class="btnCk">
+            是</label>
+       <label class="btnCk">
+             否</label> 
+        </span> -->
+
+
+    </div>
+    <div class="item">
+        <span class="searchLabel  i18n-ie"><%= App.Local.data['drawing-model'].Province || '所属省份' %>:</span>
+        <div class="myDropDown pickProvince  i18n-ie">
+            <span class="myDropText">  <span class="text"  ><%= App.Local.data['drawing-model'].Pst || '请选择' %></span> <i class="myDropArrorw"></i> </span>
+            <ul class="myDropList" id="pickProvince">
+            </ul>
+        </div>
+        <span class="searchLabel  i18n-ie-margin" data-i18n="data.drawing-model.Ofs">是否开业：</span>
+        <div class="myDropDown pickOpening">
+            <span class="myDropText">  <span class="text"  ><%= App.Local.data['drawing-model'].Pst || '请选择' %></span> <i class="myDropArrorw"></i> </span>
+            <ul class="myDropList">
+                <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                <li class="myItem" data-val='true'>是</li>
+                <li class="myItem" data-val='false'>否</li>
+            </ul>
+        </div>
+        <div id="showDateBox" style="display: none">
+            <span class="searchLabel"><%= App.Local.data['drawing-model'].OpenTime || '开业时间：' %></span>
+            <div class="firstDate dateBox" style="position: relative;">
+                <i class="iconCal add-on"></i>
+                <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].STe || '开始时间' %>" id="dateStar" class="span2" type="text">
+                <!--  <div class="input-append date" id="dateStar" data-date-format="yyyy-mm-dd">
+                    <input readonly="true" placeholder="开始时间" class="span2" type="text">
+                    <span class="add-on"><i class="icon-th"></i></span>
+                </div> -->
+            </div>
+            <span class="searchLabel searchLabelEn">—<%= App.Local.data['drawing-model'].to || '至' %>—</span>
+            <div class="firstDate dateBox">
+                <i class="iconCal"></i>
+                <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].ETe || '结束时间' %>" id="dateEnd" class="span2" type="text">
+            </div>
+        </div>
+        <span class="searchLabel" data-i18n="data.drawing-model.MMe">管理模式：</span>
+        <div class="myDropDown management">
+            <span class="myDropText">  <span class="text"  ><%= App.Local.data['drawing-model'].Pst || '请选择' %></span> <i class="myDropArrorw"></i> </span>
+            <ul class="myDropList">
+                <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                <li class="myItem" data-val='1'>BIM总发包</li>
+                <li class="myItem" data-val='2'>总包交钥匙</li>
+                <li class="myItem" data-val='3'>非总包交钥匙</li>
+            </ul><span class="proType">
+        </div>
+    </div>
+    <div class="item">
+        <span class="searchLabel"  data-i18n="data.drawing-model.PNe1">项目名称：</span>
+        <input type="text" placeholder="请输入项目名称" class="txtInput moreSeachText" data-i18n="[placeholder]data.drawing-model.Pee"/>
+    </div>
+    <div class="item">
+        <span class="btnSearch"><%= App.Local.data['drawing-model'].Query || '查询' %></span>
+        <a class="btnClear"><%= App.Local.data['drawing-model'].Clear || '清空查询条件' %></a>
+    </div>
+</div>
+<span class="seniorSearch"  data-i18n="[prepend]data.drawing-model.AQy"><i class="icon-angle-down"></i></span>

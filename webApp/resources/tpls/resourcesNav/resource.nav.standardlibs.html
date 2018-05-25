@@ -1,0 +1,22 @@
+
+<ul class="standarHeader standar">
+    <li class="item">
+        <span class="title overflowEllipsis"> <span class="text">
+         <%= App.ResourcesNav.Settings.type=='famLibs'?(App.Local.data['family-list'].Vn || '族库版本'):(App.Local.data['source-model'].ne || '标准模型名称') %></span> </span>
+        <span class="designUnit"><%= App.Local.data['source-model'].db || '设计单位' %></span>
+        <span class="createDate"><%= App.Local.data['source-model'].dc || '创建日期' %></span>
+        <span class="lastModifiedDate"><%= App.Local.data['source-model'].lud || '最后修改日期' %></span>
+        <!--<span class="introduction">版本说明</span>-->
+    </li>
+</ul>
+
+<div class="standarBody"> 
+    <div class="standarBodyScroll">
+    <ul class="standar">
+    <li class="loading"><%= App.Local.data['system']['l-g'] || '正在加载，请稍候……' %></li>
+    </ul>
+   
+    <div class="standarPagination"></div>
+     <div class="sumDesc"></div>
+     </div>
+</div>

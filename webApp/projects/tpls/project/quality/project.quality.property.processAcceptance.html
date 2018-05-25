@@ -1,0 +1,84 @@
+<div class="hedaerSearch">
+    <span class="searchToggle" data-i18n="data.drawing-model.SFnS">选择筛选条件</span>
+    <span class="clearSearch" data-i18n="data.drawing-model.Clear">清除条件</span>
+    <span class="groupRadio">
+            <label class="btnCk"><i class="iconPic"></i><%= App.Local.data['drawing-model'].Sts1 || '显示搜索结果对应位置' %></label>
+        </span>  
+</div>
+<div class="searchDetail processAcceptance">
+    <div class="searchOptons">
+        <div class="optonLine  zIndex10">
+            <div class="myDropDown categoryOption optionComm">
+                <span class="myDropText">
+             <span><%= App.Local.data['drawing-model'].CAl1 || '类别：' %></span> <span class="text"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                    <% _.each(App.Project.mapData.processCategory,function(item,index){ if(index!=0){%>
+                    <li class="myItem" data-val='<%=item.value%>'><%=item.text%></li>
+                    <% } }) %>
+                </ul>
+            </div>
+            <div class="myDropDown riskOption optionComm">
+                <span class="myDropText">
+             <span><%= App.Local.data['drawing-model'].Ss1 || '状态：' %></span> <span class="text"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                    <li class="myItem" data-val='0'><%= App.Local.data['drawing-model'].Qualified || '合格' %></li>
+                    <li class="myItem" data-val='1'><%= App.Local.data['drawing-model'].Unqualified || '不合格' %></li>
+                    <li class="myItem" data-val='2'><%= App.Local.data['drawing-model'].Inspected || '已检查' %></li>
+                    <li class="myItem" data-val='3'><%= App.Local.data['drawing-model'].Uninspected || '未检查' %></li>
+                </ul>
+            </div>
+        </div>
+        <div class="optonLine">
+            <div class="myDropDown floorOption optionComm">
+                <span class="myDropText">
+             <span><%= App.Local.data['drawing-model'].Floor || "楼层" %>：</span> <span class="text"><%= App.Local.data['drawing-model'].CAl1All || '全部' %></span> <i class="myDropArrorw"></i> </span>
+                <ul class="myDropList">
+                    <li class="myItem" data-val=''><%= App.Local.data['drawing-model'].CAl1All || '全部' %></li>
+                    <% _.each(App.Project.Settings.Viewer.FloorsData,function(item,index){%>
+                    <li class="myItem" data-val="<%=item.code=='OT'?'其它':item.code%>"><%=item.code=='OT'?'其它':item.code%></li>
+                    <% }) %>
+                </ul>
+            </div>
+            <div class="searchName">
+                <span><%= App.Local.data['drawing-model'].LPs1 || '位置：' %></span>
+                <input type="text" class="txtSearchName txtLocationName filterInputExtra" placeholder="<%= App.Local.data['drawing-model'].LPs1WordsS || '请输入关键字' %>"/>
+            </div>
+        </div>
+
+        <div class="optonLine btnOption">
+            <input type="button" class="myBtn myBtn-primary btnFilter" value="<%= App.Local.data['drawing-model'].Filter || '筛选' %>" />
+        </div>
+
+    </div>
+</div>
+<div class="tbContainer">
+    <table class="tbProcessAccessHeader tbComm">
+        <thead>
+            <tr>
+                <th class="manifestIcon"></th> 
+                <th class="category"><%= App.Local.data['drawing-model'].CAl2 || '类别' %></th>
+                <th class="positon"><%= App.Local.data['drawing-model'].Location || '位置' %></th>
+                <th class="ckResult"><%= App.Local.data['drawing-model'].CLt || '检查结果' %></th>
+            </tr>
+        </thead>
+    </table>
+    <div class="materialequipmentList processAccessList">
+        <div class="materialequipmentListScroll">
+            <table class="tbProcessAccessBody tbComm">
+                <tbody>
+                	<tr class="noLoading"></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="paginationBottom">
+  <div class="pageInfo">
+        <span class="curr">1</span>/<span class="pageCount">0</span><%= App.Local.currentIsEn?'': '页' %>
+        <span class="prev"><%= App.Local.data['system-module'].Back || '上一页' %></span> <span class="next"  data-i18n="data.drawing-model.Next">下一页</span>
+    </div>
+    <div class="sumCount"><%= App.Local.data.system.Total|| '共' %><span class="count">1</span><%= App.Local.data.system.Records || '条' %></div>
+  
+</div>

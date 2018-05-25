@@ -1,0 +1,62 @@
+<%if(hasSelect){%>
+<td><input type="checkbox" data-id="<%= id%>" checked class="checkboxCls"></td>
+<%}else{%>
+<td><input type="checkbox" data-id="<%= id%>" class="checkboxCls"></td>
+<%}%>
+<td data-feedbackid="<%= id%>">
+	<div class="feedbackUser">
+		<% if(havaAttachment){%><i data-downloadid="<%= id%>"></i><%}%>
+		<dl>
+			<dt><%=title%></dt>
+			<dd>
+				<%if(adviceReplys&&adviceReplys.length>0){%>
+					<%if(adviceReplys.length>1){%>
+						<span class="showMoreBtn"><em>展开</em><%=adviceReplys.length%>条回复</span>
+						<ul style="height: 110px;overflow: hidden; display: none;">
+							<% _.each(adviceReplys,function(item){ %>
+							    <li>
+		    						<label>[回复]：<%= item.content%></label>
+		    						<span class="replayName">
+		    							<span class="replayNameBox" title="<%=item.replyName%>"><%=item.replyName%></span>
+		    							<em><%= App.Comm.changeTimeHandle(item.replyTime)%></em>
+		    						</span>
+		    					</li>
+							<%})%>
+						</ul>
+					<%}else{%>
+						<ul>
+							<% _.each(adviceReplys,function(item){ %>
+							    <li>
+		    						<label>[回复]：<%= item.content%></label>
+		    						<span class="replayName">
+		    							<span class="replayNameBox" title="<%=item.replyName%>"><%=item.replyName%></span>
+		    							<em><%= App.Comm.changeTimeHandle(item.replyTime)%></em>
+		    						</span>
+		    					</li>
+							<%})%>
+						</ul>
+					<%}%>
+				<%}%>
+			</dd>
+		</dl>
+	</div>
+</td>
+<td>
+	<%if(App.AdminFeedBack.default.adviceTypeArr[adviceType]){%>
+		<%= App.AdminFeedBack.default.adviceTypeArr[adviceType]%>
+	<%}else{%>
+		--
+	<%}%>
+</td>
+<td><span class="user_name" data-userid="<%= createId%>"><%=createName%></span></td>
+<td><%= personType%></td>
+<td><%=createTime%></td>
+<% if(haveReply){%>
+	<td>已回复</td>
+<%}else{%>
+	<td>未回复</td>
+<%}%>
+<td data-feedbackid="<%= id%>">
+	<a href="javascript:;" class="answerBtn">回复</a>
+    <a href="javascript:;" class="answerDel">删除</a>
+</td>

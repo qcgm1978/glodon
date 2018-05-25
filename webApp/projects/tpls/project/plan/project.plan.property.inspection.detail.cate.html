@@ -1,0 +1,20 @@
+
+<%if(obj.data){%>
+<% $.each(data,function(i,item){ %>
+
+ <% if(item.cateName){%> 
+ <tr class="odd">
+    <td>
+        <i data-cateid="<%=item.cateId%>" class="nodeSwitch"></i>
+        <span class="code"><%=item.cateName%></span>
+    </td>
+   
+</tr>
+<%}%>
+
+         <%})%>
+<%}else{%>
+	    <tr>
+        <td colspan="1" class="noDataTd"><%= App.Local.data['drawing-model'].Ndd1 || '暂无数据' %></td>
+    </tr>
+<%}%>

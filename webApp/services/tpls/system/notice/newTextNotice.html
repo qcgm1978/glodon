@@ -1,0 +1,29 @@
+<div class="newTextNitoceBox">
+	<label><%= App.Local.data['system-module'].Title || '标题' %>：</label>
+	<div class="newTextInputBox">
+		<input id="noticeTitle" type="text" value="<%=title%>" placeholder="请输入公告标题">
+	</div>
+</div>
+<div class="newTextNitoceBox">
+	<label>发布时间：</label>
+	<div class="firstDate dateBox newTextInputBox" style="position: relative; display: inline-block;">
+	    <i class="iconCal add-on"></i>
+	    <input readonly="true" id="noticeTime" type="text" class="span2" value="<%=publishTime%>" placeholder="请输发布时间">
+	</div>
+</div>
+<div class="newTextNitoceBox">
+	<label>部门：</label>
+	<div class="newTextInputBox">
+		<input id="noticeDepartement" type="text" value="<%=department%>" placeholder="请输入公告部门">
+	</div>
+</div>
+<div class="newTextTextareaBox">
+	<script type="text/plain" id="myEditor"></script>
+</div>
+<div class="newTextNoticeFoot">
+	<button id="previewNotice"><%= App.Local.data['system-module'].Preview || '预览' %></button>
+	<button id="publishBtn">发布</button>
+	<button id="saveBtn"><%= App.Local.data['drawing-model'].Save || '保存' %></button>
+	<button id="cancelBtn" ><%= App.Local.data['drawing-model'].Cancel || '取消' %></button>
+</div>
+<input type="text" id="hideVal" style="display: none;" data-noticeLink="<%=href%>" data-type="<%=type%>" data-id="<%=id%>">

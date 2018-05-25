@@ -1,0 +1,92 @@
+<div class="notesListComponentTop">
+	<%if(obj.hostType == 0){%>
+		<i class="notesTypeIcon icon_model_type"></i>
+		<div class="notesThumbnailBox">
+			<a data-type='3' href="/<%= obj.pic %>" data-openurl="/static/dist/app/project/single/filePreview.html?id=<%= obj.fileVersionId%>&projectId=<%=App.Project.Settings.projectId%>&projectVersionId=<%=App.Project.Settings.CurrentVersion.id%>&viewpointid=<%=obj.viewPoint%>"
+			 data-notestype="<%= obj.hostType %>" title="<%= obj.name %>" data-lightbox="example-1">
+				<img src="/<%= obj.pic %>">
+			</a>
+		</div>
+		<%}else if(obj.hostType == 1){%>
+			<i class="notesTypeIcon icon_single_type"></i>
+			<div class="notesThumbnailBox">
+				<a data-type='3' href="/<%= obj.pic %>" data-openurl="/static/dist/app/project/single/filePreview.html?id=<%= obj.fileVersionId%>&projectId=<%=App.Project.Settings.projectId%>&projectVersionId=<%=App.Project.Settings.CurrentVersion.id%>&viewpointid=<%=obj.viewPoint%>"
+				 data-notestype="<%= obj.hostType %>" title="<%= obj.name %>" data-lightbox="example-1">
+					<img src="/<%= obj.pic %>">
+				</a>
+			</div>
+			<%}else if(obj.hostType == 2){%>
+				<i class="notesTypeIcon icon_drawing_type"></i>
+				<div class="notesThumbnailBox">
+					<a data-type='3' href="/<%= obj.pic %>" data-openurl="/static/dist/app/project/single/filePreview.html?id=<%= obj.fileVersionId%>&projectId=<%=App.Project.Settings.projectId%>&projectVersionId=<%=App.Project.Settings.CurrentVersion.id%>&viewpointId=<%= obj.id %>&isBimControl=<%=App.Project.Settings.isBimControl%>"
+					 data-notestype="<%= obj.hostType %>" title="<%= obj.name %>" data-lightbox="example-1">
+						<img src="/<%= obj.pic %>">
+					</a>
+				</div>
+				<%}%>
+
+					<dl class="notesDescBox">
+						<dt>
+							<div class="notesDescTextBox">
+								<%= obj.name %>
+							</div>
+							<%if(obj.name.length>50){%>
+								<a href="javascript:;" class="openMore"></a>
+								<%}%>
+						</dt>
+						<dd>
+							<%= obj.creatorName %>
+								<%= new Date(createTime).format("yyyy-MM-dd hh:mm") %>
+						</dd>
+					</dl>
+</div>
+<div class="notesListComponentDown">
+	<div class="notesHandle">
+		<%if(obj.hostType == 0){%>
+			<a href="javascript:;">
+				<%= App.Local.data['drawing-model'].CMl || '查看模型' %>
+			</a>
+			<%}else if(obj.hostType == 1){%>
+				<a href="/static/dist/app/project/single/filePreview.html?id=<%= obj.fileVersionId%>&projectId=<%=App.Project.Settings.projectId%>&projectVersionId=<%=App.Project.Settings.CurrentVersion.id%>&viewpointid=<%=obj.viewPoint%>"
+				 data-hosttype="<%=obj.type%>" target="_blank">
+					<%= App.Local.data['drawing-model'].CMl || '查看模型' %>
+				</a>
+				<%}else if(obj.hostType == 2){%>
+					<a href="/static/dist/app/project/single/filePreview.html?id=<%= obj.fileVersionId%>&projectId=<%=App.Project.Settings.projectId%>&projectVersionId=<%=App.Project.Settings.CurrentVersion.id%>&viewpointId=<%= obj.id %>&isBimControl=<%=App.Project.Settings.isBimControl%>"
+					 target="_blank">
+						<%= App.Local.data['drawing-model'].CDg || '查看图纸' %>
+					</a>
+					<%}%>
+						<i></i>
+						<%if(obj.editDeleteBool){%>
+							<a href="javascript:;" class="iconEdit">
+								<%= App.Local.data['drawing-model'].Edit || '编辑' %>
+							</a>
+							<i></i>
+							<a href="javascript:;" class="iconDel">
+								<%= App.Local.data['drawing-model'].Delete || '删除' %>
+							</a>
+							<i></i>
+							<%}else{%>
+								<a href="javascript:;" class="iconEdit noCan">
+									<%= App.Local.data['drawing-model'].Edit || '编辑' %>
+								</a>
+								<i></i>
+								<a href="javascript:;" class="iconDel noCan">
+									<%= App.Local.data['drawing-model'].Delete || '删除' %>
+								</a>
+								<i></i>
+								<%}%>
+									<a href="javascript:;" class="iconShare">
+										<%= App.Local.data['drawing-model'].Share || '分享' %>
+									</a>
+									<%if(App.Project.Settings.isBimControl){%>
+										<span class="changeVersionBox" title="<%= obj.versionName%>">
+											<%= obj.versionName%>
+										</span>
+										<%}%>
+	</div>
+</div>
+<input type="hidden" data-fileversionid="<%= obj.fileVersionId %>" data-hosttype="<%= obj.hostType %>" data-projectversionid="<%= obj.projectVersionId %>"
+ data-notestype="<%= obj.type %>" data-notesname="<%= obj.name %>" data-notescretorname="<%= obj.creatorName %>" data-notescretortime="<%= obj.createTime %>"
+ data-notesimgsrc="/<%= obj.pic %>" data-notesid="<%= obj.id %>" data-viewpointid="<%= obj.viewPoint %>">

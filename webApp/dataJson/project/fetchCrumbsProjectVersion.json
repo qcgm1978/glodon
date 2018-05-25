@@ -1,0 +1,71 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "versionType": 1,
+      "item": [
+        {
+          "date": 1456761600000,
+          "version": [
+            {
+              "id": 784306105035936,
+              "projectId": 784306105035936,
+              "projectName": "宝山万达项目",
+              "name": "初始版本",
+              "desc": null,
+              "createTime": 1457494233000,
+              "creatorId": "99999",
+              "creatorName": "创建者姓名",
+              "type": 1,
+              "status": 1,
+              "latest": true,
+              "modelId": null,
+              "modelStatus": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "versionType": 3,
+      "item": [
+        {
+          "date": 1454256000000,
+          "version": [
+            {
+              "id": 784306105035938,
+              "projectId": 784306105035938,
+              "projectName": "宝山万达项目",
+              "name": "审核版本",
+              "desc": null,
+              "createTime": 1454947202000,
+              "creatorId": "99999",
+              "creatorName": "创建者姓名",
+              "type": 3,
+              "status": 1,
+              "latest": false,
+              "modelId": null,
+              "modelStatus": -1
+            },
+            {
+              "id": 784306105035911,
+              "projectId": 784306105035911,
+              "projectName": "宝山万达项目",
+              "name": "审核版本2",
+              "desc": null,
+              "createTime": 1454947201000,
+              "creatorId": "99999",
+              "creatorName": "创建者姓名",
+              "type": 3,
+              "status": 4,
+              "lastest": false,
+              "modelId": null,
+              "modelStatus": -1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

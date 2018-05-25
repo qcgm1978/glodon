@@ -1,0 +1,36 @@
+<% $.each(data.items,function(i,item){%> 
+    <tr class="<%= i%2==0 && 'odd' %>" data-id="<%=item.id%>">
+
+        <td class="concernInfo">
+
+            <img class="ckImg mCS_img_loaded" src="/static/dist/images/projects/images/proDefault.png" alt="">
+
+            <div class="ckHeader">
+                <div class="ckName"><%=item.name%></div> 
+                <div class="date">
+                    <span>创建日期：</span><span><%= new Date(item.discoverDate).format('yyyy-MM-dd') %></span>
+                </div>
+                <div class="date">
+                    <span>整改日期：</span><span><%= new Date(item.rectifyDate).format('yyyy-MM-dd') %></span>
+                </div>
+                <div class="upCount">
+                    <span>整改次数：</span><span><%=item.rectifyCount%></span>
+                </div>
+            </div>
+        </td>
+        <td class="status"><span class="status" style="color:<%=project.mapData.statusColor[item.status]%>">
+        <%=project.mapData.status[item.status]%>
+     </span> </td>
+        <td class="grade"><%= item.levelId==1 && '一般' ||item.levelId==2 && '较大' ||item.levelId==3 && '重大' || '特大'  %></td>
+        <td class="operator"><%=project.concernsData.report[item.organizationTypeId]%></td>
+        <td class="type"><%=project.concernsData.classic[item.ratingCategoryId]%></td>
+    </tr>
+<% }) %>  
+ 
+
+
+<% if(data.items.length<=0){%>
+    
+   <%=project.NullPage.designVerification%>
+    
+<%}%>

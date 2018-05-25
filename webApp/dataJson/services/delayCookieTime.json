@@ -1,0 +1,13 @@
+{
+  "messageId": "d015ea928ee5468d93f2575f0c61f398",
+  "messageType": null,
+  "timestamp": 1482807548862,
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "OUTSSO_AuthMAC": "c832fa9310a6de36608dec53a50ec959ae5ac0cf6fe0647eefd693844f904d57",
+      "OUTSSO_AuthToken": "EAAYCBCMajlvvzI3cCM5eTh0enioWR4sNmpvNGNqcjV5bvGwREr5DYRaqIlfPPT9AAAAAAAAAAAAAABhYzGkYw=="
+    }
+  ]
+}

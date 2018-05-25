@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模型选择器</title>
+    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://bim.wanda-dev.cn/static/dist/components/inspectSelectionNew/js/inspectSelection.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+
+<div class="modelExtend">
+    <button mtype="1">啥也没</button>
+    <button mtype="2">绑定检查点</button>
+    <button mtype="3">绑定隐患</button>
+    <button mtype="4">解绑检查点</button>
+    <button mtype="5">解绑隐患</button>
+    <button mtype="6">确定</button>
+    <!--
+    <button mtype="7">显示检查点页签</button>
+    <button mtype="8">隐藏检查点页签</button>
+    -->
+    <textarea name="" id="test" cols="30" rows="10"></textarea>
+</div>
+
+</body>
+<script>
+    jQuery.support.cors = true;
+    var viewer = new InspectModelSelection({
+        type: "process",//open process
+        ruleType: '',//构件分类
+        height:"580px",
+        //projectCode:"184df75d-244f-434e-b16c-b8a3f27874c4",
+        projectCode:"36caa07c-4c7d-4c95-84ae-fb56f53f0dc3",//"@ViewData["ProjectCode"]", //项目ProjectCode
+        token: "4aeba9fa8574d9a704453d760171a1fde94812671e2f2a37ca0d26f91c63d001e7b42a4a1ad4aaff0cd0e360cb0f60fa650833130c13f2056d9fce17a9569a4942b39cec528fac5785bcfe9cf6cb03910ed2bd605c5863ce85b2b57b32eb8744c9645dc78be2e3b7cb1b4530efb538c85438a67e0db6069e",
+        appKey: "60e8a1d9fc1d44d7b6a4cf85ae2987ed",
+        callback: function (res) {
+            $('#test').val(JSON.stringify(res))
+        },
+        withCheckpoint : true
+        /*
+        withCheckpoint参数可选,默认为true
+        withCheckpoint = false 隐藏检查点页签
+        withCheckpoint = true  显示检查点页签
+        */
+    });
+
+
+
+    $(function () {
+
+        $("button").on("click", function () {
+
+            var t = $(this).attr("mtype");
+
+            if(t==1){
+                viewer.allIn({});
+            }
+            if(t==2){
+                viewer.allIn({presetId: '936062989484321'})
+            }
+
+            if(t==3){
+                viewer.allIn({
+                    presetId: "936062989484321",
+                    componentId: "6fd298fd9534b2f8fa81fc4c9c4de027.0d9d7d7c-1653-41d2-992b-405a02cbd02d-0003121c",
+                    location: {"id":"1","userId":"6fd298fd9534b2f8fa81fc4c9c4de027.0d9d7d7c-1653-41d2-992b-405a02cbd02d-0003121c","shapeType":1,"position":{"x":-5786.177826889158,"y":17389.052775642333,"z":-10793.108887104183},"boundingBox":{"min":{"x":-5925.93017578125,"y":17043.36921875,"z":-22480},"max":{"x":-4325.93017578125,"y":18615.02921875,"z":-9380}}}
+                })
+            }
+
+            if(t==4){
+                viewer.allIn({
+                    presetId: "",
+                    componentId: "6fd298fd9534b2f8fa81fc4c9c4de027.0d9d7d7c-1653-41d2-992b-405a02cbd02d-0003121c",
+                    location: {"id":"1","userId":"6fd298fd9534b2f8fa81fc4c9c4de027.0d9d7d7c-1653-41d2-992b-405a02cbd02d-0003121c","shapeType":1,"position":{"x":-5786.177826889158,"y":17389.052775642333,"z":-10793.108887104183},"boundingBox":{"min":{"x":-5925.93017578125,"y":17043.36921875,"z":-22480},"max":{"x":-4325.93017578125,"y":18615.02921875,"z":-9380}}}
+                })
+            }
+
+            if(t==5){
+                viewer.allIn({
+                    presetId: "936062989484321",
+                    componentId:"",
+                    location:""
+                }) 
+            }
+
+            if (t == 6) {
+                viewer.data();
+            }
+
+            if(t == 7)
+            {
+                
+            }
+
+            if(t == 8)
+            {
+               
+            }
+
+        })
+
+    })
+</script>
+</html>

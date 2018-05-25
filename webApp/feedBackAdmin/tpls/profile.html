@@ -1,0 +1,30 @@
+<div class="userInfoBox" id="userInfoBox">
+	<div class="loading">加载中...</div>
+	<dl>
+		<dt><img src=""></dt>
+		<dd>
+			<div class="userName">
+				<label><%= App.Local.data.system.Name || '姓名' %>：</label>
+				<span></span>
+			</div>
+			<div class="accountNumber">
+				<label><%= App.Local.data.system.account || '账号' %>：</label>
+				<span></span>
+			</div>
+			<div class="cellphone">
+				<label><%= App.Local.data.nav.labelPhone || '手机' %>：</label>
+				<span></span>
+			</div>
+			<div class="department_info">
+				<label></label>
+				<span title=""></span>
+			</div>
+            <% if(hasDuty){%>
+			<div class="duties">
+				<label><%= App.Local.data.nav.title || '职务' %>：</label>
+				<span></span>
+			</div>
+            <%}%>
+		</dd>
+	</dl>
+</div>

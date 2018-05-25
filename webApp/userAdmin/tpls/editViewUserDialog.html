@@ -1,0 +1,46 @@
+<div class="addViewUserBox">
+	<div class="addViewUserInput">
+		<label>前缀选择</label>
+		<div class="inputBox">
+			<input readOnly type="text" id="accrentName" value="<%= obj.state.prefix %>"/>
+		</div>
+	</div>
+	<div class="addViewUserInput">
+		<label>登录账号</label>
+		<div class="inputBox">
+			<input readOnly type="text" id="accrentName" value="<%= obj.state.loginid %>"/>
+		</div>
+	</div>
+	<div class="addViewUserInput">
+		<label>用户名称</label>
+		<div class="inputBox">
+			<input type="text" id="userName" value="<%= obj.state.username %>" placeholder="请输入用户名称" />
+			<div class="errorBox"></div>
+		</div>
+	</div>
+	<div class="addViewUserInput">
+		<label>账号密码</label>
+		<div class="inputBox">
+			<input type="text" id="accrentPassWord" value="<%= obj.state.pwd %>" placeholder="请输入账号密码" />
+			<div class="errorBox"></div>
+		</div>
+	</div>
+	<div class="addViewUserInput">
+		<label>到期日</label>
+		<div class="inputBox firstDate dateBox" style="position: relative; display: inline-block;">
+		    <i class="iconCal add-on"></i>
+		    <input readonly="true" value="<%= obj.state.valid_time %>" placeholder="到期日" id="endDateEdit" class="span2" type="text">
+		</div>
+	</div>
+	<div class="addViewUserInput">
+		<label  data-i18n="data.drawing-model.PNe1">项目名称</label>
+		<div class="inputBox dialogProjectList">
+			<div class="loading">加载中，请稍后...</div>
+		</div>
+		<div class="projectErrorBox"></div>
+	</div>
+	<div class="addViewUserInput last_addViewUserInput">
+		<label></label>
+		<button class="button">确定</button>
+	</div>
+</div>

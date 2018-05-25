@@ -1,0 +1,25 @@
+<a class="linkImg" href="/<%= pic %>" title="<%=name%>" data-lightbox="example-1">
+	<i class="<%= App.Comm.hostType[obj.hostType] || 'm-single-model' %> iconType"></i>
+	<img data-type="<%=type%>" class="thumbnailImg" src="/<%= pic %>" data-viewpoint="<%=viewPoint%>" />
+</a>
+<div class="info">
+	<div class="title overflow2">
+		<%=name%>
+	</div>
+
+	<div class="other">
+		<span class="name overflowEllipsis" data-creatorid="<%=creatorId%>">
+			<%=creatorName%>
+		</span>
+		<span class="date">
+			<%= new Date(createTime).format("yyyy-MM-dd")%>
+		</span>
+		<span class="remarkCount <%='remarkCount_'+id%>" data-id="<%=id%>">
+			<i class=" m-comment"></i>（
+			<span class="count">
+				<%=commentCount>99? '99+' :commentCount %>
+			</span>）
+			<span class="text">详情</span>
+		</span>
+	</div>
+</div>

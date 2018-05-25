@@ -1,0 +1,23 @@
+<%  if(obj.state.length>0) {%>
+	<table>
+		<thead>
+			<tr>
+				<td>前缀名称</td>
+				<td>操作</td>
+			</tr>
+		</thead>
+		<tbody>
+			<% _.each(obj.state,function(item){%>
+				<tr>
+					<td><%= item.prefix %></td>
+					<td>
+						<a href="javascript:;" data-prefixName='<%= item.prefix %>' class="viewUserItem viewUserEdite"><%= App.Local.data['drawing-model'].Edit || '编辑' %></a>
+						<a href="javascript:;" data-prefixName='<%= item.prefix %>' class="viewUserItem viewUserDelete">删除</a>
+					</td>
+				</tr>
+			<% }) %>
+		</tbody>
+	</table>
+<% }else{ %>
+	<div class="nullViewUserList">还没有浏览用户，请点击添加按钮添加</div>
+<% } %>

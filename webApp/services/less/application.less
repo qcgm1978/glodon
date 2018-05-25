@@ -1,0 +1,30 @@
+#applicationManager { height: 100%;
+	.serviceHeader { border-bottom: 1px #ccc solid; }
+	.appContainer { height: 100%; margin-top: -42px; padding: 62px 20px 20px 20px;
+		.topBar { height: 38px; line-height: 38px; font-size: 14px; padding-left: 15px;
+			.create { margin-left: 25px; }
+		}
+	}
+	.appContent { height: 100%; border: 1px #ccc solid; }
+	.appList { .name { width: 8%; border-right: 1px #ccc solid; }
+		.desc { width: 10%; border-right: 1px #ccc solid; }
+		.appKey { width: 29%; border-right: 1px #ccc solid; }
+		.appSecret { width: 35%; border-right: 1px #ccc solid; }
+		.status { width: 6%; border-right: 1px #ccc solid; }
+		.op { width: 11%;
+			i { cursor: pointer; }
+		}
+		.left { padding-left: 15px; }
+	}
+	.listHeader { background-color: #eee; height: 28px; line-height: 27px; border: 1px #ccc solid; border-width: 1px 0px; }
+	.appListContainer { height: 100%; margin-top: -66px; padding-top: 66px; }
+	.reset { float: right; margin-right: 10px; display: none; }
+	.listBody { .item { height: 38px; line-height: 38px; border-bottom: 1px #ccc solid;
+			&:hover .reset { display: block; }
+			&.disabled{color:#ccc;}
+		}
+	}
+}
+.addNewApp { .txtAppTitle, .txtAppDesc, .txtAppKey { width: 558px; margin: 10px 0px 20px 0px; }
+	.txtAppDesc { height: 85px;resize: none }
+}

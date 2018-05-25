@@ -1,0 +1,50 @@
+<dt>
+	<%= profileName || '新建剖面' %><span class="accordionDatail <% if(id) { %>accordOpen<% } %>">详情<i></i></span>
+</dt>
+<dd style='display:<% if(id) { %>none<% } %>'>
+	<form>
+		<div>
+			<div class="formColumn">
+				<label>剖面名称 : </label><input type="text" name="profileName" id="" value="<%= profileName %>" class="txtInput" />
+			</div>
+			<div class="formColumn">
+				<label>所属基坑:</label>
+				<div class="myDropDown pit" name="pitId">
+				<span class="myDropText">  <span class="text"><%= App.Services.ProjectCollection.methods.keyValue(pitId,'pitName',App.Services.ProjectCollection.datas.pitData)|| '请选择' %></span> <i class="myDropArrorw"></i> </span>
+					<ul class="myDropList" style="display: none;">
+						<% _.each(App.Services.ProjectCollection.datas.pitData,function(i){ %>
+						<li class="myItem" data-pitId="<%= i.id %>"><%= i.pitName %></li>
+						<% }) %>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div>
+			<div class="formColumn">
+				<label>支护类型:</label>
+				<div class="myDropDown supportType" name='bracingType'>
+					<span class="myDropText supportType">  <span class="text"><%= bracingType|| App.Services.ProjectCollection.datas.bracingType[0] %></span> <i class="myDropArrorw"></i> </span>
+					<ul class="myDropList" style="display: none;">
+						<% _.each(App.Services.ProjectCollection.datas.bracingType,function(i){ %>
+						<li class="myItem"><%= i %></li>
+						<% }) %>
+					</ul>
+				</div>
+			</div>
+			<div class="formColumn"></div>
+		</div>
+		
+		<div>
+			<div class="formColumn" style="padding-left: 120px;">
+				<% if(id) {%>
+					<input type="button" class="myBtn myBtn-primary update"  value="<%= App.Local.data['drawing-model'].Save || '保存' %>"/>
+					<input type="button" class="myBtn myBtn-default delete"  value="<%= App.Local.data['drawing-model'].Delete || '删除' %>"/>
+				<% }else{ %>
+					<input type="button" class="myBtn myBtn-primary save"  value="<%= App.Local.data['drawing-model'].Save || '保存' %>"/>
+					<input type="button" class="myBtn myBtn-default cancel"  value="取消"/>
+				<% } %>
+			</div>
+			<div class="formColumn"></div>
+		</div>
+	</form>
+</dd>

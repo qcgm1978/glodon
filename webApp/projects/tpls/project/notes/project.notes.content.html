@@ -1,0 +1,17 @@
+<div class="notesContentContainerBox">
+	<div id="notesContentBoxTop"></div>
+	<div class="notesContentBoxBottom">
+		<div class="leftNotesListBox" id="leftNotesListBox">
+			<div class="pagingBox">
+			   <div class="sumDesc"></div><div class="listPagination"></div>
+			</div>
+			<div class="nullDataBox">
+				<div class="nullDataBoxImg"></div>
+				<div class="nullDataBoxText"><%= App.Local.data['drawing-model'].Npz || '暂时还没有任何批注！' %></div>
+			</div>
+			<div class="leftRightBorderBox"></div>
+		</div>
+		<div class="rightNotesCommentListBox" id="rightNotesCommentListBox"></div>
+	</div>
+</div>
+<input type="hidden" id="viewpointInput">

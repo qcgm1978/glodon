@@ -1,0 +1,24 @@
+<div class="keyUserMain">
+        <div class="keyUserList">
+            <div class="keyul-title">
+                <span class="newKeyUsers"><i style="background:url('/static/dist/images/services/images/service_ico.png')no-repeat 0 -220px"></i>新增</span>
+                关键用户（<span class="usernum"><%= (keyUser[0] && keyUser[0]['name'])?keyUser.length:0 %></span>）
+            </div>
+            <ul class="needloading">
+
+              <% console.log(keyUser),_.each(keyUser,function(user,index){ %>
+                <% if(user && user.userId){%>
+                <li data-index=<%= index %> data-uid=<%= user.userId %>>
+                    <span data-uid=<%= user.userId %> data-name=<%= user.name %>  class="delete"></span>
+                    <i class="keyListHead"></i><%= user.name %>
+                </li>
+                <% }%>
+                <% })%>
+
+
+            </ul>
+        </div>
+        <div class="keyBody" >
+              <h1 class="remindicon" style="margin:100px auto;font-size:18px;width:371px;color: #ccc;">暂无信息,请点击选择左侧的关键用户!</h1>
+        </div>
+    </div>

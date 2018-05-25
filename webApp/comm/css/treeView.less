@@ -1,0 +1,71 @@
+/**
+ * @require /comm/css/reset.less
+ */
+
+/* treeView  */
+.projectContainerApp{
+  .projectNavFileContainer{
+	overflow-x: scroll;
+	height: 100%;
+	.overflowEllipsis{
+	  // overflow: visible;
+	  overflow: hidden;
+	}
+  }
+}
+#resourceFamlibsLeftNav{
+  .projectNavFileContainer{
+	height: 100%;
+	.overflowEllipsis{
+		// overflow: visible;
+	  overflow: hidden;
+	}
+  }
+  .mCSB_container{
+	overflow: scroll;
+  }
+}
+
+
+
+#resourceModelLeftNav {
+  .mCSB_container{
+	overflow-x: scroll!important;
+	overflow-y: auto!important;
+	height: 100%;
+  }
+}
+.mCustomScrollBox,.mCSB_container{
+ // height: 100%;
+}
+.projectNavFileContainer,.projectChangeListBox { // .tree-view { .tliLine { position: absolute; border-left: 1px #ccc solid; left: 6px; z-index: 1; top: 0px; bottom: 0px; }
+		// 	.rootNode, .tree-view .itemNode { position: relative; list-style-type: none; }
+		// 	.vsLine { margin-right: -6px; display: inline-block; width: 8px; border-bottom: 1px #ccc solid; height: 10px; vertical-align: top; }
+		// 	.vsLineSub { margin-left: -1px; }
+		// 	.item-content { height: 20px; line-height: 20px; }
+		// 	.item-content .check-box { margin: 0; padding: 0; vertical-align: -4px; }
+		// 	.hsLine { border-left: 1px #ccc solid; height: 11px; display: inline-block; vertical-align: top; float: left; margin-left: 22px; }
+		// 	.hsLineSub { margin-left: -2px; }
+		// 	.item-content:hover { background-color: #06c; color: #fff; }
+		// 	.nodeSwitch { height: 11px; line-height: 12px; display: inline-block; padding: 0px 2px; border: 1px dashed #ccc; background-color: #fff; position: relative; z-index: 1; cursor: pointer; text-align: center; vertical-align: top; margin-top: 6px; }
+		// 	.noneSwitch { float: left; border-bottom: 1px #ccc solid; width: 13px; height: 10px; }
+	// }
+	.treeViewMar { margin-top: 15px; margin-left: 15px;
+		.nodeSwitch { background: url(../images/comm/images/commIcon.png) no-repeat 0px -39px; margin-top: 1px; display: inline-block; width: 12px; height: 10px; line-height: 8px; vertical-align: top; text-align: center; cursor: pointer;
+			&.on { background-position: 0px -49px; }
+		}
+		.noneSwitch { display: inline-block; width: 11px;     background-position: 0px -22px;}
+		.item-content { height: 22px; position: relative; min-width: 236px;
+			.folderIcon { display: inline-block; width: 23px; height: 16px; background: url('/comm/images/folderIcon.png') no-repeat 2px -2px; vertical-align: top; }
+		}
+		.treeViewSub { margin-left: 20px; display: none;
+			&.noneIcon { margin-left: 8px; }
+			&.mIconAndCk { margin-left: 30px; }
+		}
+		.text-field { cursor: default;max-width:130px;/* max-width:115px; */line-height: 1.2;vertical-align: top;
+			&.selected { background-color: #A8DBFD; }
+			&.over { position: absolute; left: 40px; right: 11px; }
+		}
+		.ckSelect { vertical-align: top; width: 16px; height: 14px; margin-top: -2px; }
+	}
+}

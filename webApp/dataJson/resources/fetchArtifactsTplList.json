@@ -1,0 +1,23 @@
+{
+  "messageId": "cb86c4d786cb4a65999a696b75fae54c",
+  "messageType": null,
+  "timestamp": 1464677236758,
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "id": 843145935954272,
+      "name": "全标项目模板",
+      "descr": "",
+      "biz": 1,
+      "createTime": 1464676829000
+    },
+    {
+      "id": 843148603580768,
+      "name": "非标项目模板",
+      "descr": "",
+      "biz": 1,
+      "createTime": 1464677155000
+    }
+  ]
+}

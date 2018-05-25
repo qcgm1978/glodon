@@ -1,0 +1,10 @@
+<li class="item">
+    <span class="title overflowEllipsis">
+        <img src="/projects/images/proDefault.png"/>
+        <a href="<%= App.ResourcesNav.getNavUrl(id,obj.version) %>" class="name" title="<%= name%>"><%= name%></a>
+    </span>
+    <span class="designUnit"><%= designUnit || '--' %>	</span>
+    <span class="createDate"><%=  new Date(createTime).format("yyyy-MM-dd")%>	</span>
+    <span class="lastModifiedDate"><%=  lastModifyTime?new Date(lastModifyTime).format("yyyy-MM-dd"):'--'%>	</span>
+</li>
+ 

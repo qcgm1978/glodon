@@ -1,0 +1,13 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "exceptionCount": 2,
+    "exceptionFileList": [
+      "WDGC-Q-ST-F01.rvt",
+      "WDGC-Q-PL-F01.rvt"
+    ],
+    "successCount": 108,
+    "totalCount": 108
+  }
+}

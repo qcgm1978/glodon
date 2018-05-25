@@ -1,0 +1,103 @@
+a:hover{
+	color:#408cdf;cursor: pointer;
+}
+.transparent_class(@opacity:0.6) { @ie_value: (@opacity * 100); filter: alpha(opacity=@ie_value); -moz-opacity: @opacity; -khtml-opacity: @opacity; opacity: @opacity; }
+.projectSearch { margin-top: 20px; margin-left: 20px;
+	.searchHeadText { position: relative; height: 24px; margin-right: 105px;
+		& span { position: absolute; margin-top: -4px; }
+		.vLine { position: absolute; left: 52px; right: 2px; border-top: 1px #ddd solid; top: 6px; }
+	}
+	& input{border: 1px solid #ccc;}
+	.txtSearch { width: 165px; }
+	.btnSearch { background-color: #117EE1; display: inline-block; width: 80px; height: 30px; text-align: center; line-height: 30px; color: #fff; margin-left: 80px; letter-spacing: 10px; padding-left: 9px; box-sizing: border-box; cursor: pointer;
+		&:hover { background-color: #439EF1; }
+	}
+	.btnClear {  margin-left: 20px; }
+	.seniorSearch { float: right; margin-right: 19px; width: 78px; cursor: pointer; margin-top: -58px;
+		i { font-size: 16px; margin-left: 5px; vertical-align: -2px; }
+		&.down { margin-top: -228px; }
+	}
+	.advancedQueryConditions { display: none;
+		.item { height: 50px; line-height: 50px;
+			& .searchLabel { width: 66px; margin-left: 10px; display: inline-block; }
+		}
+	}
+	.dateBox { display: inline-block; position: relative;
+		.iconCal { background: url(../comm/images/commIcon.png) no-repeat 6px -232px; position: absolute; right: 1px; width: 28px; height: 28px; top: 11px; background-color: #eee; border-left: 1px #ccc solid; }
+		input { height: 30px; line-height: 30px; padding-left: 8px; broder: 1px #ddd solid; width: 180px; padding-right: 30px; }
+	}
+	& .moreSeachText, & .myDropText { width: 180px; }
+	& .myDropList { width: 180px; }
+}
+.displayModeBox { position: relative; margin-left: 20px; margin-right: 20px; height: 30px; margin-top: 20px;
+	.vLine { position: absolute; left: 52px; right: 2px; border-top: 1px #ddd solid; top: 11px; }
+	.proText { line-height: 20px; }
+	.model { float: right; width: auto;
+		.item { float: left; padding: 5px 7px; border: 1px #ddd solid; cursor: pointer; background-color: #F2F2F2; color: #333;
+			&.selected { background-color: #DADADA; }
+		}
+		.list { border-bottom-left-radius: 3px; border-top-left-radius: 3px; border-right-width: 0; }
+		.map { border-top-right-radius: 3px; border-bottom-right-radius: 3px; }
+	}
+}
+#projectModes { position: absolute; left: 0px; right: 0px; top: 184px; bottom: 0px;
+	.proListSite { position: relative; height: 100%; }
+	.proListContent { 
+		position: absolute; top: 40px; left: 20px; right: 20px; bottom: 40px; 
+		.proListBoxScroll{
+			.mCSB_scrollTools_vertical{
+				right: -16px!important;
+			}
+		}
+	}
+	.pagingBox{position: absolute;bottom: 0px;left:20px;right: 20px;line-height: 40px;
+		.sumDesc { float: left; margin-left: 20px; }
+		.listPagination { float: right; margin-right: 20px; }
+		.pagination {margin: 0px;}
+	}
+	.proListBox, .proListBoxHeader { .loading { font-size: 14px; color: #ccc; text-align: center;
+			& div { margin-top: 20px; }
+		}
+		span { display: inline-block; vertical-align: top;font-size: 14px; a{font-size: 14px;}}
+		.header, .item { height: 36px; border: 1px #ddd solid; border-width: 1px 0px; background-color: #EEE; line-height: 36px; margin: 0px 20px;color: #999;
+			.proImg { width: 7%; }
+			.proName { width: 24%; }
+			.proType { width: 10%; }
+			.proRetailing { width: 11%; }
+			.proProvince { width: 6%; }
+			.proCity { width: 6%; }
+			.proStar { width: 11%; }
+			.proEnd { width: 11%; }
+		}
+		.item { margin-right: 0;margin-left: 0px; background-color: #fff; border-bottom: 1px #ddd solid; height: 46px; line-height: 46px; border-top: 0;margin:0;color: #666;
+			.proImg { text-align: center;
+				img { margin-top: 4px; }
+			}
+			.proOp { a { color: #006CCD; }
+			}
+		}
+	}
+	 
+	&.projectModesDown { top: 355px; }
+}
+.proMapBox { height: 100%; overflow: hidden;
+	.proMapScroll { height: 100%; height: 600PX; }
+}
+#container { height: 600px; width: 80%; margin-left: 20px;
+	.potitionControl { width: 20px; height: 20px; background-color: red; border-radius: 50%; cursor: pointer; }
+}
+#mapProjects { position: absolute; width: 398px; background-color: #fff; border: 1px #ddd solid; z-index: 10;
+	a { color: #006CCD; }
+	.proInfo { height: 48px; margin-top: 10px; padding-left: 10px; border-bottom: 1px #ddd solid; }
+	.header { height: 30px; padding-left: 10px; line-height: 30px;
+		.close { float: right; margin-right: 10px; cursor: pointer; }
+	}
+}
+
+#listContext{display: none;}
+.jqContextMenu #listContext{display: block;}
+
+#listContextProject{display: none;}
+.jqContextMenu #listContextProject{display: block;}
+
+ 

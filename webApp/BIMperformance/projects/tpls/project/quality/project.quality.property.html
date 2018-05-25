@@ -1,0 +1,9 @@
+<ul class="projectQualityNav projectNav">
+  <!--<li data-type="materialequipment" class="item selected">材料设备</li>-->
+  <li data-type="processacceptance" class="item" title="<%= App.Local.data['drawing-model'].PAe2 || '过程验收' %>"><%= App.Local.data['drawing-model'].PAe1 || '过程验收' %></li>
+  <li data-type="openingacceptance" class="item" title="<%= App.Local.data['drawing-model'].PAe || '开业验收' %>"><%= App.Local.data['drawing-model'].PIe || '开业验收' %></li>
+  <li data-type="concerns" class="item"><%= App.Local.data['drawing-model'].Hazards || '隐患' %></li>
+  <li data-type="poperties" class="item" data-i18n="data.model-view.Ps">属性</li>
+</ul>
+<div class="qualityContainer">
+</div>

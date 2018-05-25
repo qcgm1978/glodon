@@ -1,0 +1,97 @@
+/* 公用 抽取 */
+.bRight { border-right: 1px #ccc solid; }
+.headerListComm { height: 28px; line-height: 27px; border: 1px #ccc solid; border-width: 1px 0px; }
+.headerListCommBg { background-color: #eee; .headerListComm; }
+
+/* 样式 */
+.systemContainerBox, .systemContaine { height: 100%; }
+.systemContainer { height: 100%; }
+#systemContainer { height: 100%; margin-top: -80px; padding-top: 80px; position: relative; }
+.categoryManager { height: 100%; padding: 20px;
+	.servicesCateBox { border: 1px #ccc solid; height: 100%; position: relative; }
+	.categoryList { .item { .headerListComm;
+			div { float: left; padding-left: 15px; height: 38px; }
+			.code { width: 22%; .bRight; }
+			.name { width: 22%; .bRight; }
+			.desc { width: 45%; .bRight; }
+			.op { width: 10%; }
+		}
+	}
+	.categoryListHeader { .item { background-color: #eee; color: #ccc; }
+	}
+	.categoryListBodybox { position: absolute; top: 65px; width: 100%; bottom: 0px;
+		.item { border-top: 0; height: 38px; line-height: 37px;
+			.op { line-height: 39px; }
+		}
+		.btnDel { margin-left: 5px; }
+	}
+}
+.addNewCategoryDialog { .txtCategoryTitle, .txtCategoryDesc, .txtCategoryCode { width: 558px; margin: 10px 0px 20px 0px; }
+	.txtCategoryDesc { height: 158px; }
+	.txtCategoryTitle { }
+}
+.delConfirm { .delContainer { margin-top: 25px; }
+	.iconTip { float: left; width: 35px; height: 35px; margin-top: 3px; }
+	.tipText { margin-left: 50px; font-size: 16px; width: 172px;word-break: break-all; }
+	.bottomOp { margin-top: 40px; text-align: center;
+		.btnCanel { margin-left: 8px; }
+	}
+}
+
+/* 流程 */
+#systemContainer { .loading { text-align: center; color: #ccc; font-size: 14px; line-height: 50px; }
+	.topBar { height: 38px; line-height: 38px; font-size: 14px; padding-left: 15px;
+		.create { margin-left: 25px; }
+	}
+	.folwManager { height: 100%; padding: 20px;
+		.folwSlideBar { width: 282px; float: left; border: 1px #ccc solid; height: 100%; background-color: #eee; }
+		.flowSliderUl { .item { height: 38px; border-bottom: 1px #ccc solid; line-height: 38px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; padding-right: 8px;
+				.border { border-left: 4px solid transparent; margin-right: 12px; float: left; height: 100%; }
+				&.selected { background-color: #fff;
+					.border { border-left-color: #006ecf; }
+				}
+			}
+		}
+		.folwContainer { margin-left: 306px; height: 100%; border: 1px #ccc solid; }
+		.flowList { .code { width: 6%; .bRight; }
+			.name { width: 21%; .bRight; }
+			.performance { width: 52%; .bRight;
+				&.lineH121 { line-height: 21px; padding-top: 8px; height: 58px; }
+			}
+			.op { width: 20%; }
+			.left { padding-left: 15px; }
+		}
+		.flowListHeader { .item { .headerListCommBg; }
+			.code { text-indent: -9999px; }
+		}
+		.flowListBodybox { height: 100%; margin-top: -66px; padding-top: 66px; }
+		.flowListBody { .item { height: 58px; line-height: 57px; border-bottom: 1px #ccc solid;
+				.code { padding-left: 0px; text-align: center; }
+				.op { i { vertical-align: top; margin-top: 24px; cursor: pointer; }
+				}
+			}
+		}
+	}
+}
+.flowAddDialog { .txtFlowTitle, .txtFlowCkUrl, .txtFlowStarUrl { width: 558px; margin: 10px 0px 20px 0px; }
+}
+
+/* 扩展属性 */
+.extendAttrContainer { .extendAttrList { .left { padding-left: 12px; }
+		.key { width: 14%; white-space: nowrap;overflow: hidden;text-overflow: ellipsis; .bRight; }
+		.attr { width: 30%; .bRight; }
+		.type { width: 12%; .bRight; }
+		.linkAttr { width: 31%; .bRight; }
+		.op { width: 12%;
+			i { cursor: pointer; }
+		}
+	}
+	.extendAttrListHeader { .headerListCommBg; }
+	.extendAttrListBodybox { height: 100%; margin-top: -66px; padding-top: 66px; }
+	.extendAttrListBody { .item { height: 48px; line-height: 47px; border-bottom: 1px #ccc solid; }
+	}
+}
+.extendAttrAddDialog { .txtAttrTitle, .linkAttrOption .myDropText, .attrTypeOption .myDropText { width: 558px; margin: 10px 0px 20px 0px; }
+	.linkAttrOption .myDropList, .attrTypeOption .myDropList { width: 558px; left: 0px; height: 142px; }
+	.attrTypeOption .myDropList { height: 78px; }
+}

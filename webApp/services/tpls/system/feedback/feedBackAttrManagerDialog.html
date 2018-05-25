@@ -1,0 +1,63 @@
+<table>
+    <tr>
+        <td>
+            <input value="<%= title%>" readonly type="text" id="sugTitle" placeholder="请输入标题">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <textarea readonly id="sugDescr" placeholder="请输入您的建议与反馈(最多支持输入500字)" maxlength="500"><%= content%></textarea>
+        </td>
+    </tr>
+    <tr>
+        <td class="textRow">
+            <span class="label"><%= App.Local.data['system-module'].Attachments || '附件' %></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="attachList">
+            <%if(havaAttachment){%>
+                <% _.each(attachmentList,function(item){ %>
+                    <div>
+                        <a href="javascript:;" data-downloadid="<%= item.id%>" class="alink listItem">
+                            <%= item.attachmentName%>
+                        </a>
+                    </div>
+                <%})%>
+            <%}%>
+        </td>
+    </tr>
+     <tr>
+        <td class="textRow feedBackTr">
+            <span class="label"><%= App.Local.data['system-module'].Reply || '回复' %></span>
+        </td>
+    </tr>
+    <tr>
+        <td class="feedBackTrList">
+        <% if(haveReply){%>
+            <dl class="feedBackDl">
+                <%if(adviceReplys.length>0){%>
+                    <dt>
+                        <span><%= adviceReplys[0].replyName%></span>
+                        <span><%= adviceReplys[0].replyTimeStr%></span>
+                    </dt>
+                    <dd><%= adviceReplys[0].content%></dd>
+                    <a href="javascript:;" data-id="<%= adviceReplys[0].id%>" data-adviceid="<%= adviceReplys[0].adviceId%>">删除</a>
+                <%}%>
+            </dl>
+        <%}%>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <textarea name="" id="feedBackDesc" cols="30" rows="5" placeholder="请输入回复内容(最多支持输入500字)" maxlength="500"></textarea>
+        </td>
+    </tr>
+</table>
+<div class="dialogFooterButton">
+    <%if(haveReply){%>
+       <button id="saveButton" class="disabled">确定</button>
+    <%}else{%>
+        <button id="saveButton" data-adviceid="<%= id%>">确定</button>
+    <%}%>
+</div>

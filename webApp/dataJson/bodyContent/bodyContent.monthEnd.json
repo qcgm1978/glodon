@@ -1,0 +1,11 @@
+{
+  "code":0,
+  "message": "success",
+  "data": [
+    {"id":1, "title":"title0", "desc":"对该脑图没有权限哦。…", "receivedTime":1137859200000, "level":"1", "targetUrl" :"blank"},
+    {"id":2, "title":"title0", "desc":"1", "receivedTime":1137859200000, "level":"1", "targetUrl" :"blank"},
+    {"id":3, "title":"title0", "desc":"2", "receivedTime":1137853200000, "level":"1", "targetUrl" :"blank"},
+    {"id":4, "title":"title0", "desc":"3…", "receivedTime":1137859200000, "level":"1", "targetUrl" :"blank"},
+    {"id":5, "title":"title0", "desc":"4…", "receivedTime":1137849200000, "level":"1", "targetUrl" :"blank"}
+  ]
+}

@@ -1,0 +1,54 @@
+<div class="containerHeader">
+    <div class="fileSearchBox">
+        <%if(App.Project.Settings.CurrentVersion.subType===3){%>
+        <a href="#flow/non-standard" target="_blank">
+        <span id="non-standard" class="btnNormal ellipsis" title='<%= App.Local.data["drawing-model"].Npsn || "非标项目文件规范" %>'>
+            <em class="myIcon-standard"></em>
+            <%= App.Local.data["drawing-model"].Npsn || '非标项目文件规范' %>
+        </span>
+        </a>
+        <%}%>
+        <input type="text" class="txtInput ellipsis" placeholder="<%= App.Local.data['source']['s-p-e'] || '请输入要搜索的文件/文件夹名' %>"
+               title="<%= App.Local.data['source']['s-p-e'] || '请输入要搜索的文件/文件夹名' %>"
+               id="txtFileSearch"/> <i class="clearSearch" title="清除搜索" style="    right: 85px;left: initial;"></i>
+        <span class="btnFileSearch myBtn myBtn-default" data-i18n="data.source.s-f"><%= App.Local.data['drawing-model'].Find || '搜索' %></span>
+    </div>
+    <div class="opBox">
+        <a href="javascript:;" class="returnBack theEnd" isReturn='0'><%= App.Local.data['drawing-model'].AFs || '全部文件'
+            %></a>
+        <span class="btnNewFolder btnNormal"><em class="myIcon-createFolder"></em><span-i
+                data-i18n="data.source.s-n"></span-i></span>
+        <span class="btnFileUpload btnNormal" id="file-upload-btn"><em class="myIcon-upload"></em><span-i
+                data-i18n="data.source.s-u"></span-i></span>
+        <span class="btnFileDownLoad btnNormal"><em class="myIcon-download"></em><span
+                data-i18n="data.source.s-d"></span></span>
+        <span class="btnFileDel btnNormal"><em class="myIcon-del"></em><span-i
+                data-i18n="data.source.s-d-e"></span-i></span>
+        <span class="btnFileState btnNormal ellipsisI18n"><%= App.Local.data['drawing-model'].CPs || "平台文件处理结果" %></span>
+    </div>
+    <div class="searchCount"><%= App.Local.data.system.Total|| '共搜索到' %> <span class="count">-</span> <%=
+        App.Local.data.system.rfd || '个相关结果' %>
+    </div>
+</div>
+<ul class="fileContentHeader zIndex changeContrastBox">
+    <li class="header">
+        <span class="filecKAll inlineBlock"><input type="checkbox" class="ckAll"/></span>
+        <span class="fileBg inlineBlock"></span>
+        <span class="fileName inlineBlock overflowEllipsis" data-i18n="data.drawing.d-n"><%= App.Local.data['drawing-model'].Name || '名称' %></span>
+        <%if(App.Project.Settings.isBimControl){%>
+            <span class="changeContrast inlineBlock">
+                  <%=App.Project.Settings.CurrentVersion.txt%>  </span>
+        <%}%>
+        <span class="fileStatus inlineBlock"><%= App.Local.data['drawing-model'].Ss1 || '状态' %></span>
+        <span class="fileOp inlineBlock" data-i18n="data.drawing.d-o"><%= App.Local.data['drawing-model'].Operator || "操作人" %></span>
+        <span class="fileSize inlineBlock"><%= App.Local.data['drawing-model'].Size || "大小" %></span>
+        <span class="fileDate inlineBlock" data-i18n="data.drawing.d-l-u-t"><%= App.Local.data['drawing-model'].LUe || "最后修改时间" %></span>
+        <span class="inlineBlock"><%= App.Local.data.system.notes || '备注' %></span>
+    </li>
+</ul>
+<div class="fileContainerScroll">
+    <div class="fileContainerScrollContent">
+        <ul class="fileContent changeContrastBox">
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+<div class="advancedQueryConditions">
+    <div class="item">
+        <!--<span class="searchLabel">开业时间：</span>-->
+        <div class="firstDate dateBox start" style="position: relative;">
+            <i class="iconCal calendar add-on"></i>
+            <input  readonly="true" placeholder="<%= App.Local.data['drawing-model'].STe || '开始时间' %>" id="dateStar" class="span2" type="text">
+        </div>
+        <span class="searchLabel">—至—</span>
+        <div class="firstDate dateBox">
+            <i class="iconCal calendar end"></i>
+            <input readonly="true" placeholder="<%= App.Local.data['drawing-model'].ETe || '结束时间' %>" id="dateEnd" class="span2" type="text">
+        </div>
+
+        <div  class="myDropDown pickProjectType">
+            <span class="myDropText">  <span class="text"><%= App.Local.data['system-module'].Pss || '类别' %></span> <i class="myDropArrorw"></i> </span>
+            <ul class="myDropList">
+                <% _.each(App.Services.Log.chooseTypes,function(item,i){ if(item==App.Local.data['drawing-model'].CAl1All) { %>
+                <li class="myItem" data-val=''><%=item%></li>
+                <% }else{ %>
+                <li class="myItem" data-val='<%= App.Services.logData.moduleType.indexOf(item)+1 %>'><%=item%></li>
+
+                <% }}) %>
+            </ul>
+        </div>
+            <input id="name" type="text" placeholder="请输入项目名称" class="txtInput moreSeachText" data-i18n="[placeholder]data.drawing-model.Pee"/>
+
+            <input id="account" type="text" placeholder="<%= App.Local.data['system-module'].Pet || '请输入用户名或账号' %>" class="txtInput moreSeachText" />
+
+            <input id="keyWord" type="text" placeholder="请输入行为关键字" class="txtInput moreSeachText" />
+        <span class="btnSearch"><i></i><%= App.Local.data['drawing-model'].Filter || '筛选' %></span>
+        <a class="btnClear">清空筛选条件</a>
+
+    </div>
+</div>
+<!-- <div  class="myDropDown typeItem">
+    <span class="myDropText">  <span class="text">类别项</span> <i class="myDropArrorw"></i> </span>
+    <ul class="myDropList">
+        <% _.each(App.Services.Log.leibiexiangTypes,function(item,i){ if(item==App.Local.data['drawing-model'].CAl1All) { %>
+        <li class="myItem" data-val=''><%=item%></li>
+        <% }else{ %>
+        <li class="myItem" data-val='<%= App.Services.logData.leibiexiangType.indexOf(item)+1 %>'><%=item%></li>
+        <% }}) %>
+    </ul>
+</div> -->

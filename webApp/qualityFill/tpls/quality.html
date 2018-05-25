@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta http-equiv="pragma" content="no-cache"> -->
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, must-revalidate">
+    <title>万达筑云项目管理平台- 隐患填报模拟</title>
+    <link rel="styleSheet" href="/static/dist/qualityFill/css/quality.css" />
+    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/static/dist/components/inspectSelectionNew/js/inspectSelection.js"></script>
+    <script src="/static/dist/qualityFill/js/template.min.js"></script>
+    <script src="/static/dist/qualityFill/js/wDialog.min.js"></script>
+</head>
+<body>
+
+<div id="Dlg_content" style="display:block;">
+    <div class="dlg-content">
+        <div class="dlg-content-type">
+            <label>验收类型：</label><span data-type="process">过程验收</span><span data-type="open">开业验收</span>
+        </div>
+        <div>
+            <div id="repeatContainer" class="projectItem" style="display:none;">
+                <span data-projectCode="{{projectCode}}" data-projectId="{{projectId}}">{{projectName}}</span>
+            </div>
+        </div>
+
+    </div>
+    <div class="dlg-button">
+        <button id="DlgBtn_close">关闭</button>
+        <button id="DlgBtn_ok">确定</button>
+    </div>
+</div>
+
+</body>
+</html>
+<script type="text/javascript">
+
+var initDialog = function(){
+    overLayer.bgColor='#777';
+    overLayer.opacity=40;
+    var options={
+        id:'Dlg',
+        hasBar:true,
+        barOptions:
+        {
+            title:"请选择一个项目"
+        },
+        position:'fixed',
+        type:'center',
+        contentId:'Dlg_content',
+        className:'dialog',
+        width:800,
+        height:500,
+        isMove:false
+    };
+    window.Dlg = new wDialog(options);
+}
+
+var Event = {
+    initDialogEvent : function(){
+        var url = "/sixD/{projectId}/{projectVerionId}/problem/code/zjmn?projectCode={projectCode}";
+        $("#Dlg .wClose").hide();
+        window.Dlg.show();
+        
+        $("#DlgBtn_close").on("click",function(){
+            window.Dlg.hide();
+            $("#projectName").html(Data.projectData.projectName);
+        });
+
+        $("#DlgBtn_ok").on("click",function(){
+            if(window.projectCode==undefined||window.projectCode=="")
+            {
+                alert("请选择一个项目");
+                return;
+            }
+            if(window.type==undefined||window.type=="")
+            {
+                alert("请选择验收类型");
+                return;
+            }
+
+            if(window.projectCode == "consoleCode")
+            {
+                url = url.replace("{projectId}",window.projectId).replace("{projectVerionId}",window.projectId).replace("{projectCode}",window.projectCode);
+                $.ajax({
+                    url:url,
+                    type:"get",
+                    success:function(data){
+                        var href = "/static/dist/qualityFill/qualityFill.html?projectCode={projectCode}&projectId={projectId}&projectName={projectName}&type={type}&typeName={typeName}";
+                        var link = href.replace("{projectCode}",data.data.projectCode).replace("{projectId}",window.projectId).replace("{projectName}",encodeURI(window.projectName)).replace("{type}",window.type).replace("{typeName}",window.typeName);
+                        window.location.href = link;
+                    }
+                });
+                window.Dlg.hide();
+                return;            
+            }
+
+            window.Dlg.hide();
+            var href = "/static/dist/qualityFill/qualityFill.html?projectCode={projectCode}&projectId={projectId}&projectName={projectName}&type={type}&typeName={typeName}";
+            var link = href.replace("{projectCode}",window.projectCode).replace("{projectId}",window.projectId).replace("{projectName}",encodeURI(window.projectName)).replace("{type}",window.type).replace("{typeName}",window.typeName);
+            window.location.href = link;
+        });
+
+        var $Dlg_content = $("#Dlg .dlg-content");
+        $Dlg_content.on("click",".projectItem",function(){
+            var $dataDOM;
+            $Dlg_content.find("div").removeClass("select");
+            if(!$(this).hasClass("select"))
+            {
+                $(this).addClass("select");
+                $dataDOM = $(this).find("span");
+                window.projectCode = $dataDOM.data("projectcode");
+                window.projectId = $dataDOM.data("projectid");
+                window.projectName = $dataDOM.html();
+            }
+        });
+
+        $(".dlg-content-type").on("click","span",function(){
+            window.type = $(this).data("type");
+            window.typeName = $(this).html();
+            $(".dlg-content-type").find("span").removeClass("select");
+            $(this).addClass("select");
+        });
+    },
+    initDialogData : function(){
+        $.ajax({
+            url:"/platform/project/list/all/quality",
+            type:"get",
+            dataType:"json",
+            success:function(data){
+                var list = data.data;
+                if(data.code!=0)
+                {
+                    list = [];
+                }
+                template.startSymbol("{{");
+                template.endSymbol("}}");
+                template.repeat({
+                    repeatElement:$("#repeatContainer")[0],
+                    data:list,
+                    type:"cover"
+                });
+            }
+        });
+    },
+    bindEvent : function(){
+        this.initDialogEvent();
+        this.initDialogData();
+    }
+};
+
+
+var init = function(){
+    initDialog();
+    Event.bindEvent();
+};
+
+init();
+
+
+</script>

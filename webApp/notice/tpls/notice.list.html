@@ -1,0 +1,26 @@
+<div class="noticeTopSearch">
+    <input type="text" placeholder="<%= App.Local.data.nav.SBT || '按标题搜索' %>">
+</div>
+<div class="noticeDownList">
+    <div class="noticeDownTopTitle">
+        <table>
+            <tr>
+                <td><%= App.Local.data['system-module'].Title || '标题' %></td>
+                <td><%= App.Local.data['drawing-model'].Time || '时间' %></td>
+            </tr>
+        </table>
+    </div>
+    <div class="noticeDownListBox">
+        <div class="scrollBox">
+            <table>
+                <tbody id="listDomBox">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="commissionBottom">
+    <div class="sumDesc"></div>
+    <div class="commissionListPagination"></div>
+</div>

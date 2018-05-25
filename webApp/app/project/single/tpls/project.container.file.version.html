@@ -1,0 +1,45 @@
+<div class="releaseVersionBox">
+	<%if(obj.length>0){%>
+		<% for(let i=0,iLen=obj.length;i<iLen;i++){ %>
+			<% var fileId = obj[i].fileId; %>
+			<% if(i === 0){%>
+				<div class="versionNoheader versionNoheaderShow">
+					<div class="header">
+						<%= new Date(obj[i].date).shortFormat() %>
+					</div>
+					<div class="showContentList">
+						<%var fileVersionArr = obj[i].version;%>
+						<% for (let j = 0,jLen=fileVersionArr.length; j < jLen; j++) { %>
+							<% var versionItem = fileVersionArr[j];console.log(App.Project.isBimControl) %>  
+
+							<a class="item" href="/static/dist/app/project/single/filePreview.html?id=<%=fileId%>&fileVersionId=<%=versionItem.fileVersionId%>&projectId=<%=versionItem.projectId%>&projectVersionId=<%=versionItem.projectVersionId%>&fileVersionHistory=<%= encodeURI(encodeURI(versionItem.fileVersionHistory)) %>&fileName=<%= encodeURI(encodeURI(versionItem.fileName)) %>&isBimControl=<%=App.Project.isBimControl%>">
+								<span class="vName overflowEllipsis" style="width: 100%; margin-right: 0; padding-right: 8px;" title="<%=versionItem.fileVersionHistory%>">
+									<%=versionItem.fileVersionHistory%>
+								</span>
+							</a>
+						<%}%>
+					</div>
+				</div>
+			<%}else{ %>
+				<div class="versionNoheader">
+					<div class="header">
+						<%= new Date(obj[i].date).shortFormat() %>
+					</div>
+					<div class="showContentList">
+						<% var fileVersionArr = obj[i].version%>
+						<% for (let j = 0,jLen=fileVersionArr.length; j < jLen; j++) { %>
+							<% var versionItem = fileVersionArr[j]; %>  
+							<a class="item" href="/static/dist/app/project/single/filePreview.html?id=<%=fileId%>&fileVersionId=<%=versionItem.fileVersionId%>&projectId=<%=versionItem.projectId%>&projectVersionId=<%=versionItem.projectVersionId%>&fileVersionHistory=<%= encodeURI(encodeURI(versionItem.fileVersionHistory)) %>&fileName=<%= encodeURI(encodeURI(versionItem.fileName)) %>&isBimControl=<%=App.Project.isBimControl%>">
+								<span class="vName overflowEllipsis" style="width: 100%; margin-right: 0; padding-right: 8px;" title="<%=versionItem.fileVersionHistory%>">
+									<%=versionItem.fileVersionHistory%>
+								</span>
+							</a>
+						<%}%>
+					</div>
+				</div>
+			<% } %>
+		<% } %>
+	<%}else{%>
+		<a href="javascript:;" class="item" style="text-align: center;"><%= App.Local.data["drawing-model"].NFileVersion || '暂无访问的版本' %></a>
+	<%}%>
+</div>

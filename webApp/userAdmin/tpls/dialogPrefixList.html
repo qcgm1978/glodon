@@ -1,0 +1,9 @@
+<% if(obj.state.length>0) {%>
+	<% _.each(obj.state,function(item){%>
+		<% if(item.selected){ %>
+			<option selected value=<%= item.prefix %>><%= item.prefix %></option>
+		<% }else{ %> 
+			<option value=<%= item.prefix %>><%= item.prefix %></option>
+		<%} %>
+	<%})%>
+<%}%>

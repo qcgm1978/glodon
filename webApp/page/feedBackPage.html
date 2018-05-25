@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title><%= App.Local.data['drawing-model'].Share || '分享' %></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+</head>
+<body>
+<script type="text/javascript">
+var ua = navigator.userAgent;
+var hash = location.href;
+var Url = {
+	getParam : function(key){
+		var search = location.search;
+		search = search.replace("?","");
+		var items = search.split("&");
+		var item,i;
+		for(i=0;i<items.length;i++){
+			item = items[i].split("=");
+			if(item[0]==key){
+				return item[1];
+			}
+		}
+		return "";
+	}
+};
+var feedbackId = Url.getParam("id")||"";
+var replyId = Url.getParam("replyId")||"";
+var pcHref = "/#suggest?feedbackId="+feedbackId+"&replyId="+replyId;
+var mobileHref = "/mobile/#/newsFeedBack/"+feedbackId+"/"+replyId+"?message=1";
+if(ua.indexOf("Android")>0||ua.indexOf("iPhone")>0){
+	location.href = mobileHref;
+}else{
+	location.href = pcHref;
+}
+</script>
+</body>
+</html>
